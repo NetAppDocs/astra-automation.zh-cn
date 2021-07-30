@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_app_control.html 
+keywords:  
+summary:  
+---
+= 应用程序控制
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+通过这些工作流，您可以控制受管应用程序和非受管应用程序。您可以列出应用程序以及创建和删除受管应用程序。

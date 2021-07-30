@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: get-started/before_get_started.html 
+keywords:  
+summary:  
+---
+= 开始之前
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+准备使用 Astra REST API 时，应执行几个步骤。
+
+
+
+===== 查看 REST 概念和实施
+
+请务必查看 link:../rest-core/rest_implementation.html["核心 REST 实施"] 有关 REST 概念的信息以及有关如何设计 Astra REST API 的详细信息。
+
+
+
+===== 拥有 Cloud Central 帐户凭据
+
+您需要使用 * Auth0* 帐户凭据登录到 Astra Web 用户界面并生成 API 令牌。
+
+
+
+===== 获取更多信息
+
+您应了解中建议的追加信息资源 link:../information/additional_resources.html["其他资源"]。

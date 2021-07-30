@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_app_protection.html 
+keywords:  
+summary:  
+---
+= 应用程序保护
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用这些工作流通过快照和备份保护受管应用程序。

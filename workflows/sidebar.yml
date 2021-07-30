@@ -1,0 +1,51 @@
+---
+section: workflows
+title: 工作流
+url: "/workflows/workflows.html"
+entries:
+- title: 应用程序控制
+  url: "/workflows/wf_app_control.html"
+  entries:
+  - title: 列出非受管应用程序
+    url: "/workflows/wf_list_unman_apps.html"
+  - title: 列出受管应用程序
+    url: "/workflows/wf_list_man_apps.html"
+  - title: 获取托管应用程序
+    url: "/workflows/wf_get_man_app.html"
+  - title: 管理应用程序
+    url: "/workflows/wf_manage_app.html"
+  - title: 取消管理应用程序
+    url: "/workflows/wf_unmanage_app.html"
+- title: 应用程序保护
+  url: "/workflows/wf_app_protection.html"
+  entries:
+  - title: 列出快照
+    url: "/workflows/wf_list_snapshots.html"
+  - title: 列出备份
+    url: "/workflows/wf_list_backups.html"
+  - title: 创建快照
+    url: "/workflows/wf_create_snapshot.html"
+  - title: 创建备份
+    url: "/workflows/wf_create_backup.html"
+  - title: 删除快照
+    url: "/workflows/wf_delete_snapshot.html"
+  - title: 删除备份
+    url: "/workflows/wf_delete_backup.html"
+- title: 克隆和还原应用程序
+  url: "/workflows/wf_app_cloning.html"
+  entries:
+  - title: 克隆应用程序
+    url: "/workflows/wf_clone_app.html"
+  - title: 从快照克隆应用程序
+    url: "/workflows/wf_clone_app_snapshot.html"
+  - title: 从备份克隆应用程序
+    url: "/workflows/wf_clone_app_backup.html"
+  - title: 从备份还原应用程序
+    url: "/workflows/wf_restore_app_backup.html"
+- title: 支持
+  url: "/workflows/wf_support.html"
+  entries:
+  - title: 列出通知
+    url: "/workflows/wf_list_notifications.html"
+  - title: 删除失败的应用程序
+    url: "/workflows/wf_delete_failed_app.html"

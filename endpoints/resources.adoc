@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: endpoints/resources.html 
+keywords:  
+summary:  
+---
+= Resources
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用通过 REST API 提供的资源自动管理 Astra 部署。每个资源都通过一个或多个端点进行访问。本节介绍了这些资源，这些资源在规划自动化部署时非常有用。
+
+请参见 link:../reference/api_reference.html["API 参考"] 有关详细信息 ...
+
+
+
+== Astra REST API 资源摘要
+
+Astra REST API 中提供的资源端点分为三类
+
+
+
+===== 核心资源
+
+核心资源端点可提供建立和维护 Astra 运行时环境所需的基础服务。这些端点包括：
+
+* 凭据
+* 事件
+* 通知
+* 角色绑定
+* 令牌
+* 未读通知
+* 用户
+
+
+
+
+===== 受管应用程序资源
+
+通过受管应用程序资源端点，可以访问受管 Kubernetes 应用程序。这些端点包括：
+
+* 应用程序资产
+* 应用程序备份
+* 应用程序快照
+* 受管应用程序
+* 计划
+
+
+
+
+===== 拓扑资源
+
+通过拓扑资源端点可以访问非受管应用程序和存储资源。这些端点包括：
+
+* 应用程序
+* Volume
+
+
+
+
+== 访问路径和 URL 的格式
+
+用于访问 Astra 资源的路径和完整 URL 的格式基于多个值。请参见 link:../rest-core/url_format.html["URL 格式"] 有关详细信息 ...

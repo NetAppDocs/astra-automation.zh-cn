@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: intro/introduction.html 
+keywords: introduction, Astra REST API 
+summary:  
+---
+= Astra REST API 简介
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Astra 服务提供了一个 REST API ，您可以通过编程语言或实用程序（如 Curl ）直接访问此 API 。下面介绍了 API 的主要亮点和优势。
+
+
+NOTE: 要访问 REST API ，您需要先登录到 Astra Web 用户界面并生成 API 令牌。您必须在每个 API 请求中包含令牌。
+
+
+
+==== 基于 REST 技术构建
+
+Astra API 是使用 REST 技术和当前最佳实践创建的。核心技术包括 HTTP ， JSON 和 RBAC 。
+
+
+
+==== 清晰地映射 REST 端点资源和对象模型
+
+用于访问资源的外部 REST 端点映射到由 Astra 服务在内部维护的一致对象模型。对象模型采用实体关系（ ential-Relationship ， ER ）建模设计，有助于明确定义 API 操作和响应。
+
+
+
+==== 丰富的查询参数集
+
+REST API 提供了一组丰富的查询参数，可用于访问资源集合。支持的部分操作包括筛选，排序和分页。
+
+
+
+==== 与 Astra Web UI 对齐
+
+Astra Web 用户界面的设计与 REST API 一致，因此两个访问路径和用户体验之间保持一致。
+
+
+
+==== 强大的调试和问题确定数据
+
+Astra REST API 可提供强大的调试和问题确定功能，包括在内部生成的事件和通知。
+
+
+
+==== 高级自动化技术的基础
+
+除了直接访问 REST API 之外，您还可以使用基于 REST API 的其他自动化技术。

@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: python/python_before.html 
+keywords:  
+summary:  
+---
+= 开始之前
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在运行示例 Python 脚本之前，您必须准备环境和所需的输入文件。
+
+
+
+== 准备环境
+
+下面介绍了运行 Python 脚本的基本配置要求。
+
+
+
+===== Python 3.
+
+您需要安装最新版本的 Python 3 。
+
+
+
+===== 其他库
+
+必须安装 * 请求 * 和 * urllib3* 库。您可以根据环境需要使用 pip 或其他 Python 管理工具。
+
+
+
+===== 网络访问
+
+运行脚本的客户端工作站必须能够通过网络访问 Internet ，并且能够访问位于 `https://astra.netapp.io` 的 Astra 站点。
+
+
+
+===== 身份信息
+
+您需要一个具有帐户标识符和 API 令牌的有效 Astra 帐户。请参见 link:../get-started/get_api_token.html["获取 API 令牌"] 有关详细信息 ...
+
+
+
+== 创建 JSON 输入文件
+
+Python 脚本依赖于 JSON 输入文件中包含的配置信息。下面提供了示例文件。
+
+
+NOTE: 您需要根据环境的具体情况更新这些示例。
+
+
+
+===== 身份信息
+
+以下文件包含 API 令牌和 Astra 帐户。您需要使用 ` -i` （或 ` -identity` ） CLI 参数将此文件传递到 Python 脚本。
+
+[source, json]
+----
+{
+  "api_token": "kH4CA_uVIa8q9UuPzhJaAHaGlaR7-no901DkkrVjIXk=",
+  "account_id": "5131dfdf-03a4-5218-ad4b-fe84442b9786"
+}
+----

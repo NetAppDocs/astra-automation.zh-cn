@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_manage_app.html 
+keywords:  
+summary:  
+---
+= 管理应用程序
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以基于 Astra 已知的应用程序创建托管应用程序。管理应用程序时，您可以通过定期备份和快照来对其进行保护。
+
+
+
+=== 开始之前
+
+您必须具有要管理的已发现应用程序的 ID 。如果需要，您可以使用此工作流 link:wf_list_unman_apps.html["列出非受管应用程序"] 以查找应用程序。
+
+
+
+=== 1. 管理应用程序
+
+执行以下 REST API 调用。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 发布 | /account/ ｛ accountID ｝ /K8s/v1/managedApps 
+|===
+
+
+===== 其他输入参数
+
+除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。
+
+[cols="25,10,10,55"]
+|===
+| 参数 | Type | Required | Description 
+
+
+| JSON | body | 是的。 | 提供确定要管理的应用程序所需的参数。请参见以下示例。 
+|===
+
+
+===== JSON 输入示例
+
+[source, json]
+----
+{
+  "type": "application/astra-managedApp",
+  "version": "1.1",
+  "id": "7da20fff-c69d-4270-bb0d-a4f91c5a1333"
+}
+----
+
+
+===== curl 示例：管理应用程序
+
+[source, curl]
+----
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps' --header 'Content-Type: application/astra-managedApp+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'  --d @JSONinput
+----

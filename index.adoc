@@ -1,0 +1,15 @@
+---
+layout: astra 
+sidebar: sidebar 
+permalink: index.html 
+lead: Astra is a NetApp service that provides data lifecycle management for your Kubernetes applications. In addition to the web browser interface, there is a REST API allowing software developers to directly access the Astra functionality. You can also manage Astra deployments using Ansible and other automation technologies. 
+summary: 这是 Astra Automation 的总结。 
+---
+= Astra 自动化文档
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+

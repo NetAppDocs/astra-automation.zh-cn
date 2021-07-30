@@ -1,0 +1,72 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_create_snapshot.html 
+keywords:  
+summary:  
+---
+= 为受管应用程序创建快照
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以为特定受管应用程序创建快照。
+
+
+
+=== 开始之前
+
+您必须具有要为其创建快照的受管应用程序的 ID 。如果需要，您可以使用此工作流 link:wf_list_man_apps.html["列出受管应用程序"] 以查找应用程序。
+
+
+
+=== 1. 创建快照
+
+执行以下 REST API 调用。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 发布 | /accouns/ ｛ account_id ｝ /K8s/v1/managedApps/ ｛ managedApp_id ｝ /appSaps 
+|===
+
+
+===== 其他输入参数
+
+除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。
+
+[cols="25,10,10,55"]
+|===
+| 参数 | Type | Required | Description 
+
+
+| 受管应用程序 ID | 路径 | 是的。 | 标识要创建快照的受管应用程序。 
+
+
+| JSON | body | 是的。 | 提供快照的参数。请参见以下示例。 
+|===
+
+
+===== JSON 输入示例
+
+[source, json]
+----
+{
+  "type": "application/astra-appSnap",
+  "version": "1.0",
+  "name": "snapshot-david-1"
+}
+----
+
+
+===== curl 示例：为应用程序创建快照
+
+[source, curl]
+----
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>/appSnaps' --header 'Content-Type: application/astra-appSnap+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput
+----

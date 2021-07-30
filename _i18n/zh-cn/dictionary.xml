@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律声明提供对版权声明、商标、专利等的访问。</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版权</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link"></block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商标</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp 徽标和 NetApp 商标页面上列出的标记是 NetApp 、 Inc. 的商标。其他公司和产品名称可能是其各自所有者的商标。</block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">专利</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">有关 NetApp 拥有的专利的最新列表，请访问：</block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隐私政策</block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="095c5c108494764107cc19d59aa10a7b" category="section-title">Astra API 许可证</block>
+  <block id="f7c79ca7f13fd9da78390d5a97db7042" category="paragraph"><block ref="f7c79ca7f13fd9da78390d5a97db7042" category="inline-link-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
+  <block id="fbd3ad11889bebf7ba34d30c64465dc9" category="inline-link">有关 Astra 的通知</block>
+  <block id="b571cab532f203c4ad9f53bdd8a27935" category="paragraph"><block ref="b571cab532f203c4ad9f53bdd8a27935" category="inline-link-rx"></block></block>
+  <block id="68f3bee395b27d2cbfdf4b021846dcca" category="doc">诊断和支持</block>
+  <block id="13823f61a2b25f14cec93b1b1ab8b44e" category="paragraph">Astra REST API 提供了多种支持功能，可用于诊断和调试。</block>
+  <block id="ccfae33112eaa095d6943fef30aeb1c6" category="section-title">API resources</block>
+  <block id="519b3b4f6c348f4c18db7639e52ec355" category="paragraph">API 资源提供了多种可提供诊断信息和支持的 Astra 功能。</block>
+  <block id="a1fa27779242b4902f7ae3bdd5c6d508" category="cell">Type</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">Description</block>
+  <block id="a4ecfc70574394990cf17bd83df499f7" category="cell">事件</block>
+  <block id="621e2d44fe17dda8434e1747939506fc" category="cell">在 Astra 处理过程中记录的系统活动。</block>
+  <block id="96d008db67fc0b5551a926842bbb6a71" category="cell">通知</block>
+  <block id="b9df3bfca1810fb5992aadc53d6c5f6e" category="cell">被视为足够重要的一小部分事件，可提供给用户。</block>
+  <block id="3d74270bce6df5c461068acd3992d1bd" category="cell">未读通知</block>
+  <block id="0f15555c27239decf2cb19f7c4f55045" category="cell">用户尚未读取或检索的通知。</block>
+  <block id="7fec4843ebac2572cb7aba56b67d7ddb" category="doc">使用收集</block>
+  <block id="4f264ccb69597a47c9d5e4473c7f14f5" category="paragraph">Astra REST API 提供了多种不同的方法来通过定义的查询参数访问资源收集。</block>
+  <block id="bf14a6bb5484aa858662864c8b0d062f" category="section-title">选择值</block>
+  <block id="70aa5e2062c38998b012ec6ad0a58b47" category="paragraph">您可以使用 `include` 参数为每个资源实例指定应返回的键值对。所有实例都会在响应正文中返回。</block>
+  <block id="9a588db8471730dbfebac65cd5467ad8" category="section-title">筛选</block>
+  <block id="9ef1f99668081dc49f2b7578a58a3eb0" category="paragraph">通过收集资源筛选， API 用户可以指定条件，以确定是否在响应正文中返回资源。`filter` 参数用于指示筛选条件。</block>
+  <block id="2808a34767e19b842d906ab8ab6264c6" category="section-title">排序</block>
+  <block id="46a94c0bcecf335769bbfabb72514b44" category="paragraph">通过收集资源排序， API 用户可以在响应正文中指定资源的返回顺序。`ordersBy` 参数用于指示筛选条件。</block>
+  <block id="cbb81506a7fe3ef03f7a89c76c52131a" category="section-title">分页</block>
+  <block id="b4a49af66f4e673d029ee977129248ee" category="paragraph">您可以通过使用 `limit` 参数限制为请求返回的资源实例数来强制分页。</block>
+  <block id="e93f994f01c537c4e2f7d8528c3eb5e9" category="section-title">计数</block>
+  <block id="6a7d4ae9b8c0f0a303422357fd399580" category="paragraph">如果包括布尔参数 `count` set to `true` ，则元数据部分将提供给定响应返回数组中的资源数。</block>
+  <block id="2fae32629d4ef4fc6341f1751b405e45" category="doc">安全性</block>
+  <block id="0645502a7748a9db6bb6a8ddef4632e1" category="paragraph">Astra REST API 提供多个安全层。</block>
+  <block id="e9fd08421726dfc597425b72cb749048" category="admonition">所有 HTTP 网络流量均使用传输层安全（ Transport Layer Security ， TLS ）标准进行保护。</block>
+  <block id="020fc1c1709865f47cf581e3063ef365" category="section-title">Astra API 令牌</block>
+  <block id="558b6d9605e16df13ffe6fe1cd2501ef" category="paragraph">要使用 Astra REST API ，您必须在 `Authorization` Request 标头中为每个请求提供一个 API 令牌。请注意以下事项：</block>
+  <block id="4c24942ab40abc662728ad39b3e7853f" category="list-text">您可以在 Astra Web 用户界面上生成 API 令牌。</block>
+  <block id="261bfb4842abd90ac7080375e1e3a342" category="list-text">令牌创建后永不过期。</block>
+  <block id="0e8786f274c7ef1712747fb88e9cd3b3" category="list-text">您可以随时在 Astra Web 用户界面上撤消令牌。</block>
+  <block id="216b50531ce45ba886f78a4006d3dd90" category="inline-link-macro">获取 API 访问令牌</block>
+  <block id="613076db8ec372269ec6046b7c49f0fb" category="paragraph">请参见 <block ref="e1c2c843bee4d58e226812ad96b90f89" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="d0d1091dbfd376acefa9234b27bf00d3" category="section-title">撤消 API 访问令牌</block>
+  <block id="0f20f78dc9e61210d9143c555c8e2db8" category="paragraph">您可以在 Astra Web 界面上撤消不再需要的 API 令牌。</block>
+  <block id="68a90746d8aa2fddfaf501b26970b07b" category="paragraph">您需要一个 Astra 服务帐户。您还应确定要撤消的令牌。</block>
+  <block id="c4f78d9edffd445c660b4325747b976a" category="paragraph">令牌撤消后，它将立即永久不可用。</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步骤</block>
+  <block id="940e4111dbb79474f7048d9b471f279e" category="list-text">使用您的帐户凭据登录到 Astra 服务。</block>
+  <block id="c3cd4b6e8352817aeaab7114fc20ee4d" category="inline-link"><block ref="c3cd4b6e8352817aeaab7114fc20ee4d" category="inline-link-rx"></block></block>
+  <block id="763ed6db627abb9ce72f8cb6ef352e12" category="paragraph"><block ref="763ed6db627abb9ce72f8cb6ef352e12" category="inline-link-rx"></block></block>
+  <block id="7d88293618d45c51062ebb23f7a5777d" category="list-text">单击页面右上角的图图标并选择 * API access* 。</block>
+  <block id="6aec476981db1f529613506dbaf170dd" category="list-text">选择要撤消的一个或多个令牌。</block>
+  <block id="ae4a6c751a5ef4ed21296977cde2b309" category="list-text">在 * 操作 * 下拉框下，单击 * 撤消令牌 * 。</block>
+  <block id="0ca5961f07dff9845784a6a15a8010d0" category="section-title">角色和访问控制</block>
+  <block id="ff2df36e339c8a98d108db45c54619c6" category="paragraph">每个 Astra 用户都分配有一个角色。此角色用于限制对 API 调用的访问。定义的角色包括：</block>
+  <block id="b6f4a2ec6356bbd56d49f2096bf9d3d3" category="list-text">所有者</block>
+  <block id="e3afed0047b08059d0fada10f400c1e5" category="list-text">管理员</block>
+  <block id="858ba4765e53c712ef672a9570474b1d" category="list-text">成员</block>
+  <block id="fb15c53f22336982a182b84aeb2f42eb" category="list-text">查看器</block>
+  <block id="6466e024da1551df00c27d6d57939447" category="doc">使用 REST API 时的其他注意事项</block>
+  <block id="3642737ac6ad02de64dfd10f0ffd65c6" category="paragraph">Astra REST API 还有几个其他特性会影响其操作和使用。在发出 API 调用之前，您应了解这些注意事项。</block>
+  <block id="ddcf50c29294d4414f3f7c1bbc892cb5" category="doc">Resources</block>
+  <block id="68dc033e0ac0ef450a3c0d48e45dbf0e" category="paragraph">您可以使用通过 REST API 提供的资源自动管理 Astra 部署。每个资源都通过一个或多个端点进行访问。本节介绍了这些资源，这些资源在规划自动化部署时非常有用。</block>
+  <block id="19ec08da81a826d919d64ab860845c04" category="inline-link-macro">API 参考</block>
+  <block id="a70fb35574c094eecdd54a03a8548ae1" category="paragraph">请参见 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="408ac0c1076f3a47bed5895f6f3a8289" category="section-title">Astra REST API 资源摘要</block>
+  <block id="3c2c1b87deb98e189336acaf6c4eb9eb" category="paragraph">Astra REST API 中提供的资源端点分为三类</block>
+  <block id="7dbea29c80effd84223267932eaa1d82" category="section-title">核心资源</block>
+  <block id="03cb84eb3b5c05aa0e6fb2f3d1584511" category="paragraph">核心资源端点可提供建立和维护 Astra 运行时环境所需的基础服务。这些端点包括：</block>
+  <block id="03bc142e6422dbb9b288ad2cabee08c7" category="list-text">凭据</block>
+  <block id="31539113d1f24f50fd650a5084e246e7" category="list-text">角色绑定</block>
+  <block id="459a6f79ad9b13cbcb5f692d2cc7a94d" category="list-text">令牌</block>
+  <block id="8f9bfe9d1345237cb3b2b205864da075" category="list-text">用户</block>
+  <block id="cc32566cda71be962f99357b3002c8db" category="section-title">受管应用程序资源</block>
+  <block id="982d758d688a1126dee198407710690d" category="paragraph">通过受管应用程序资源端点，可以访问受管 Kubernetes 应用程序。这些端点包括：</block>
+  <block id="79018ac7f72b136dcb6a5f9e125d4c2b" category="list-text">应用程序资产</block>
+  <block id="639d7e9624e068b9cb919e6476673916" category="list-text">应用程序备份</block>
+  <block id="1fd2b9909603c282becde555a00d5699" category="list-text">应用程序快照</block>
+  <block id="1d1de1a5cacebf8dae3ee084e7af3eaf" category="list-text">受管应用程序</block>
+  <block id="25f7347236b51a5eae4ba01a7862cb55" category="list-text">计划</block>
+  <block id="67c58d2de17edb43efeda54f12292dd2" category="section-title">拓扑资源</block>
+  <block id="b2f35242806203d577859173534dd04e" category="paragraph">通过拓扑资源端点可以访问非受管应用程序和存储资源。这些端点包括：</block>
+  <block id="ac863f346e618f9a959b5c95d5d28941" category="list-text">应用程序</block>
+  <block id="bd7a9717d29c5ddcab1bc175eda1e298" category="list-text">Volume</block>
+  <block id="3b79dc64c90bd6580070cd38762889ea" category="section-title">访问路径和 URL 的格式</block>
+  <block id="916bff7b68625feaff0fa92152a8c4f0" category="inline-link-macro">URL 格式</block>
+  <block id="933949f580f8e03481cfd6377476ebc2" category="paragraph">用于访问 Astra 资源的路径和完整 URL 的格式基于多个值。请参见 <block ref="d30352e41f8ff3b0c022e188e6d650e9" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="doc">开始之前</block>
+  <block id="59383d938f04b6f751c1efc7912f057b" category="paragraph">准备使用 Astra REST API 时，应执行几个步骤。</block>
+  <block id="0182974655f974e8429fb64bb3d15eb2" category="section-title">查看 REST 概念和实施</block>
+  <block id="67d003f4d71c424d95442bd22e4d9b35" category="inline-link-macro">核心 REST 实施</block>
+  <block id="fb41b868adeac131ab0ae7d9867182a6" category="paragraph">请务必查看 <block ref="c26a9f88bafefa1ad48ed3b31483dd1a" category="inline-link-macro-rx"></block> 有关 REST 概念的信息以及有关如何设计 Astra REST API 的详细信息。</block>
+  <block id="88de085d80f3fb333652e63625e44c64" category="section-title">拥有 Cloud Central 帐户凭据</block>
+  <block id="654c4e91c9e7e777b0ea78ded9d2bb13" category="paragraph">您需要使用 * Auth0* 帐户凭据登录到 Astra Web 用户界面并生成 API 令牌。</block>
+  <block id="bf07f432276ee2fe7e55f9ea12c2ba5a" category="section-title">获取更多信息</block>
+  <block id="8cd58c89ff3d51a256ecfe3fe8bab20f" category="inline-link-macro">其他资源</block>
+  <block id="1975d27c17bd745494bde5176f3687d2" category="paragraph">您应了解中建议的追加信息资源 <block ref="d9232e9ba333ee728d29f8228e038c57" category="inline-link-macro-rx"></block>。</block>
+  <block id="6e567afb3c0582569592264335e77063" category="doc">获取 API 令牌</block>
+  <block id="5693ceff603cc2792f7b812be4185454" category="paragraph">要访问 Astra REST API ，您必须具有 API 访问令牌。</block>
+  <block id="3831398789fa13daf694eec5e5b8b586" category="admonition">Astra API 令牌永不过期，但是您可以在不再需要某个令牌时将其撤消。</block>
+  <block id="be7d764c89431cdf45921a632c6688bd" category="paragraph">您需要一个 Astra 服务帐户。</block>
+  <block id="d9352fe040e235c5ce4a41b1ec07a5e6" category="paragraph">此任务会在 Astra Web 界面上生成 API 令牌。您还应检索帐户 ID 。</block>
+  <block id="b329e0b224bc672c7032902e91459644" category="list-text">单击页面上的 * 生成 API 令牌 * ，然后在弹出窗口中单击 * 生成 API 令牌 * 。</block>
+  <block id="3040c02566f3d35a3b86a6ca9472dadd" category="list-text">单击图标将令牌字符串复制到剪贴板并将其保存在编辑器中。</block>
+  <block id="df98c0b39730eeb3f14749ea1c0684c2" category="list-text">复制并保存同一页面上提供的帐户 ID 。</block>
+  <block id="effd68bde57986d91bf68d04c79e291e" category="paragraph">通过 Curl 或编程语言访问 Astra REST API 时，您必须在 `Authorization` Request 标头的 API 承载令牌中包含。要撤消令牌，请参见 <block ref="63fd24300d4159b871bba5cd675e33b6" category="inline-link-macro-rx"></block>。</block>
+  <block id="1b18b55a054bdd1b04a8c8f5c862bc4f" category="doc">准备使用这些工作流</block>
+  <block id="736214fe7532e2fc83d855d2d8a1cc51" category="paragraph">在将 Astra 工作流用于实时部署之前，您应熟悉这些工作流的组织和格式。</block>
+  <block id="0b79795d3efc95b9976c7c5b933afce2" category="section-title">简介</block>
+  <block id="2cec8b39f97fa21b221d09444b094399" category="paragraph">_Workflow _ 是完成特定管理任务或目标所需的一个或多个步骤的序列。Astra 工作流中的每个步骤都是以下步骤之一：</block>
+  <block id="6f01c5142da7df41a4b71dc3f7570bda" category="list-text">REST API 调用（包含 curl 和 JSON 示例等详细信息）</block>
+  <block id="78fa555cbbf5cfea76fb1b1f6ee2dd29" category="list-text">调用另一个 Astra 工作流</block>
+  <block id="0250c1a44d81b589b5b4f427275ac9f1" category="list-text">其他相关任务（例如做出必要的设计决策）</block>
+  <block id="b4ad63a307b10645d3f05daf2a68fd69" category="paragraph">这些工作流包括完成每个任务所需的核心步骤和参数。它们为自定义自动化环境提供了一个起点。</block>
+  <block id="3791b7d0d91a2238c40dbbfefa886cc7" category="section-title">通用输入参数</block>
+  <block id="4793f7e43c0b614d9436bdc916a53132" category="paragraph">以下所述的输入参数对于用于说明 REST API 调用的所有 curl 示例通用。</block>
+  <block id="accb68848ca657de52fbb603de5210a7" category="admonition">由于这些输入参数是通用的要求，因此在各个工作流中不会对其进行进一步说明。如果在特定的 curl 示例中使用了其他输入参数，则会在 * 其他输入参数 * 一节中进行介绍。</block>
+  <block id="18a5eb10fa0d3a464702a4b8daac4266" category="section-title">路径参数</block>
+  <block id="503c8aae9452b9959d308d3f2d3096fe" category="paragraph">每次 REST API 调用使用的端点路径都包括以下参数。另请参见 <block ref="d30352e41f8ff3b0c022e188e6d650e9" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="351a2eb8764e19b9e565e8a355469e70" category="list-text">帐户 ID</block>
+  <block id="1f6e2f2cfb847644b16a490ce41ebd8b" category="list-text">这是用于标识运行 API 操作的 Astra 帐户的 UUIDv4 值。请参见 <block ref="949977ec887dbf77cf703083221524dc" category="inline-link-macro-rx"></block> 有关查找帐户 ID 的详细信息，请参见。</block>
+  <block id="736943e80c16e2be98d8595e6376e4ee" category="section-title">请求标题</block>
+  <block id="60a612c6fb7649fb73c8bba8ecc92e3e" category="paragraph">根据 REST API 调用，您可能需要包含多个请求标头。</block>
+  <block id="9cd8a2455b1839ff98ef70c05b9b5983" category="list-text">Authorization</block>
+  <block id="9a536be7255d1442830c11bda56d6752" category="list-text">工作流中的所有 API 调用都需要 API 令牌来标识用户。您必须在 `Authorization` Request 标题中包含令牌。请参见 <block ref="949977ec887dbf77cf703083221524dc" category="inline-link-macro-rx"></block> 有关生成 API 令牌的详细信息。</block>
+  <block id="266ba14af58a3dfa4b9e1c90a8879dfb" category="list-text">内容类型</block>
+  <block id="d3372edb76427cc513c6612948a1009a" category="list-text">对于请求正文中包含 JSON 的 HTTP POST 和 PUT 请求，您应根据 Astra 资源声明介质类型。例如，在为受管应用程序创建快照时，可以包括标题 `Content-Type ： application/Astra-appsnap+json` 。</block>
+  <block id="c4408d335012a56ff58937d78050efad" category="list-text">接受</block>
+  <block id="06aaa274f211af6567a97cd2601245c4" category="list-text">您可以根据 Astra 资源声明响应中预期内容的特定介质类型。例如，在列出受管应用程序的备份时，您可以包括标题 `accept ： application/Astra-appBackup+json` 。但是，为了简单起见，工作流中的 curl 样本接受所有介质类型。</block>
+  <block id="e61e133d4cfd72503fe6ac169a680fab" category="section-title">表示令牌和标识符</block>
+  <block id="89b2bf9f7f0100dcd9717a9f846c1938" category="paragraph">在 curl 示例中使用的 API 令牌和其他 ID 值是不透明的，没有明显的含义。因此，为了提高示例的可读性，不会使用实际令牌和 ID 值。而是使用较小的保留关键字，它具有以下几个优势：</block>
+  <block id="4358f6bef945b7769bf5d4ac6e199f45" category="list-text">curl 和 JSON 示例更清晰，更易于理解。</block>
+  <block id="f18d64be11866478e05d45955bbf2455" category="list-text">由于所有关键字都使用相同的格式以及括号和大写字母，因此您可以快速确定要插入或提取的位置和内容。</block>
+  <block id="ae8a59dcfdfdb01ea66130c76c50f0a7" category="list-text">不会丢失任何值，因为无法复制原始参数并将其用于实际部署。</block>
+  <block id="a5fa758a804c6e775ad8c0643a197329" category="paragraph">以下是在 curl 示例中使用的一些常见保留关键字。此列表并非详尽无遗，我们会根据需要使用其他关键字。根据具体情况，其含义应该是显而易见的。</block>
+  <block id="220f3d3750583b9db48568a0b5b9a5f1" category="cell">关键字</block>
+  <block id="901931235afef62a62e9ee2657e55eaf" category="cell">&lt;account_ID&gt;</block>
+  <block id="ac70412e939d72a9234cdebb1af5867b" category="cell">路径</block>
+  <block id="7b5c2e331dadd94a7f2f3c331d308424" category="cell">用于标识运行 API 操作的帐户的 UUIDv4 值。</block>
+  <block id="4a66fdca0794b65eaa799aa5ead36fb1" category="cell">&lt;api_token&gt;</block>
+  <block id="bf50d5e661106d0abe925af3c2e6f7e7" category="cell">标题</block>
+  <block id="14ce98600753e7afda082ba76ce94155" category="cell">标识和授权调用方的令牌。</block>
+  <block id="ef388075ecc9c993b3b3b5dd15b487de" category="cell">&lt;managed_app_ID&gt;</block>
+  <block id="478387b91feafb83455f33de88aa26eb" category="cell">用于标识 API 调用的受管应用程序的 UUIDv4 值。</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="doc">入门</block>
+  <block id="39d6e9517b008491ab0ebb909b4ee6f8" category="paragraph">您可以先查看 _before you begum_ 中的基本准备要求，快速开始使用 Astra REST API 。之后，您需要在 Astra Web 界面上生成 API 令牌，并将其与 _Hello world_ 中的基本 Curl 示例结合使用。</block>
+  <block id="3e25960a79dbc69b674cd4ec67a72c62" category="doc">大家好</block>
+  <block id="751d53aabe6f9f754578c2eeb820e4cb" category="paragraph">您可以在工作站的命令行界面上通过问题描述执行一个简单的 Curl 命令来开始使用 Astra REST API 并确认其可用性。</block>
+  <block id="24f478b555f11b5a6bbd9376f090b31b" category="paragraph">本地工作站必须提供 Curl 实用程序。您还必须具有 API 令牌和关联的帐户标识符。请参见 <block ref="606218727ee9303039527ba89a369585" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="cbd2fd368381db0d8cdbdead253cf132" category="paragraph">以下 Curl 命令将检索 Astra 用户列表。按指示提供相应的 &lt;account_ID&gt; 和 &lt;api_token&gt; 。</block>
+  <block id="efb44cfe1d5b8d9954ea045385675c66" category="doc">删除快照</block>
+  <block id="482aff56a1c2140c6b17c288f13f98d1" category="paragraph">您可以删除与受管应用程序关联的快照。</block>
+  <block id="a08d0039b6defc60dd0db0aebca289d8" category="paragraph">您必须具备以下条件：</block>
+  <block id="a50be7a834c95319089495cab34dcc3a" category="inline-link-macro">列出受管应用程序</block>
+  <block id="d2feaf779ccf544c3e1d8746f06f8b6c" category="list-text">拥有快照的受管应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
+  <block id="020ac174aad4268a50eed3705447b327" category="inline-link-macro">列出快照</block>
+  <block id="8228d21d4972f0a8ed1a2129680b70b2" category="list-text">要删除的快照的 ID 。如果需要，您可以使用此工作流 <block ref="ec07e92ba8186e37075c19b8ee786603" category="inline-link-macro-rx"></block> 以查找快照。</block>
+  <block id="860aa2c08f5183e7dd18366105498ef2" category="section-title">1. 删除快照</block>
+  <block id="0ded27ebd95eb2dcf0ec2ac7f61b926c" category="paragraph">执行以下 REST API 调用。</block>
+  <block id="3ded167f4ad4afb85c6ace5862e27ba0" category="cell">HTTP 方法</block>
+  <block id="32f68a60cef40faedbc6af20298c1a1e" category="cell">删除</block>
+  <block id="c673742e49a29363ba7d2d773a12101f" category="cell">/accounts-｛ account_id ｝ /K8s/v1/managedApps/ ｛ managedApp_id ｝ /appSnaps/ ｛ appsnap_id ｝</block>
+  <block id="c24b0224d3b54e6b4e908019f2447f30" category="section-title">其他输入参数</block>
+  <block id="8ad1007adda12ebaacc83f24d677e5e6" category="paragraph">除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。</block>
+  <block id="83f499a540b1323009c200d6f8cc9396" category="cell">参数</block>
+  <block id="b651efdb98a5d6bd2b3935d0c3f4a5e2" category="cell">Required</block>
+  <block id="f5cd5a00af0952558b2b1674f802d0f8" category="cell">受管应用程序 ID</block>
+  <block id="93cba07454f06a4a960172bbd6e2a435" category="cell">是的。</block>
+  <block id="151b82a6507e2eebe2f879130b46a783" category="cell">标识拥有快照的受管应用程序。</block>
+  <block id="79e04f95eeac07344faa5b56bab83760" category="cell">Snapshot ID</block>
+  <block id="49a137437654fc49a3099dbd628c1484" category="cell">标识要删除的快照。</block>
+  <block id="c60d917b462a557b73224bd3194b4cf6" category="section-title">curl 示例：删除应用程序的单个快照</block>
+  <block id="f33f60a3b5c95e8659ec5a992f0f055c" category="doc">取消管理应用程序</block>
+  <block id="2b194b9170143eb845c618e13f34e5fb" category="paragraph">您可以删除不再需要的受管应用程序。删除受管应用程序也会删除关联的计划。</block>
+  <block id="3e1039dbfbb34cea04f6e9ad984e888d" category="paragraph">您必须具有要取消管理的受管应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
+  <block id="1fa9ca676a71f70d29ff65963febbf34" category="paragraph">删除应用程序时，不会自动删除其备份和快照。如果您不再需要备份和快照，应在删除应用程序之前将其删除。</block>
+  <block id="ba058813d4014443679bdc5bad08e6da" category="section-title">1. 非受管应用程序</block>
+  <block id="3901599d0fd96520d6bf312cf8f94bf4" category="cell">/accouns/ ｛ account_id ｝ /K8s/v1/managedApps/ ｛ managedApp_id ｝</block>
+  <block id="659ce686d2a2b1df0facd830a74cdc4a" category="cell">标识要删除的受管应用程序。</block>
+  <block id="0be694be5856c81608913372d1359b00" category="section-title">curl 示例：删除受管应用程序</block>
+  <block id="3ae4faabc8d186416cb233eb7c276c1f" category="doc">从备份克隆受管应用程序</block>
+  <block id="bcb874876569db1f62920ea72a96e0ed" category="paragraph">您可以通过从应用程序备份克隆新的托管应用程序来创建该应用程序。</block>
+  <block id="f9af5d61179519ce2b27f22348ea2c5b" category="paragraph">请注意以下有关此工作流的信息：</block>
+  <block id="6a3f7086385ab02e213a4864a905e1e5" category="list-text">使用应用程序备份</block>
+  <block id="8b442400420c3b7121c9e031882bcf48" category="list-text">克隆操作在同一集群中执行</block>
+  <block id="e1d39bdee6b9663d35dc3845e9dd04e5" category="admonition">要将应用程序克隆到其他集群，您需要根据环境需要更新 JSON 输入中的 `clusterid` 参数。</block>
+  <block id="537000f9a14aec12548122fc358faea9" category="section-title">选择要克隆的受管应用程序</block>
+  <block id="99155ec73c71b392b5b5511fca5b8697" category="paragraph">执行工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 并选择要克隆的应用程序。用于克隆应用程序的 REST 调用需要多个资源值。</block>
+  <block id="a873d81cfc688902e71d08400f93684a" category="section-title">2. 选择要使用的备份</block>
+  <block id="8aa0f7001085d2ffdad3efbc0e9de159" category="inline-link-macro">列出备份</block>
+  <block id="d40d66b0e6d970d00db3de547260af68" category="paragraph">执行工作流 <block ref="e6b45b76c52a9dd27daf9fa3d915439e" category="inline-link-macro-rx"></block> 并选择要使用的备份。</block>
+  <block id="a2e167678135121b44df9d3e6c7a8d2d" category="section-title">3. 克隆应用程序</block>
+  <block id="a02439ec229d8be0e74b0c1602392310" category="cell">发布</block>
+  <block id="cbe7fc9bb59d104e00843a80a446088a" category="cell">/account/ ｛ accountID ｝ /K8s/v1/managedApps</block>
+  <block id="0ecd11c1d7a287401d148a23bbd7a2f8" category="cell">JSON</block>
+  <block id="ac101b32dda4448cf13a93fe283dddd8" category="cell">body</block>
+  <block id="5a77a315cc422da89819194837af885d" category="cell">提供克隆应用程序的参数。请参见以下示例。</block>
+  <block id="0577bbabd0439eea401a8ec18491d1a6" category="section-title">JSON 输入示例</block>
+  <block id="b8622ecf971d21371a3ba9d07a233300" category="section-title">curl 示例：从备份克隆应用程序</block>
+  <block id="e6b088db24ebe67ed0e9567d309387ec" category="doc">工作流</block>
+  <block id="07995ab62abfc37e840bd45b6e598067" category="paragraph">Astra 工作流按不同类别进行组织，以便更容易找到所需的工作流。</block>
+  <block id="9dd5094cd4b02afa1de3376dbd381a85" category="admonition">在使用任何 Astra REST API 工作流之前，请务必查看 <block ref="1d4e486ef41d26d87e2c5a1c939d4914" category="inline-link-macro-rx"></block>。</block>
+  <block id="82d9e1423b1fe50e0e9afcb47255d25a" category="paragraph">您可以列出当前由 Astra 管理的应用程序。您可以在查找特定应用程序的快照或备份时执行此操作。</block>
+  <block id="48db3210f5486202c6926aa7551be0bd" category="section-title">1. 列出应用程序</block>
+  <block id="7528035a93ee69cedb1dbddb2f0bfcc8" category="cell">获取</block>
+  <block id="d436eb0fd9de10b54a828ce6435f7e81" category="cell">包括</block>
+  <block id="66c1b4c7f3dc385b68a9fa903ccd016d" category="cell">查询</block>
+  <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="cell">否</block>
+  <block id="17539f6f1332e8e1eec67098e0601a06" category="cell">也可以选择要在响应中返回的值。</block>
+  <block id="6ca58aed53ac62d5749597600edbbdff" category="section-title">curl 示例：返回所有应用程序的所有数据</block>
+  <block id="68c53a357a1ff35f5aa8ba654aab4362" category="section-title">curl 示例：返回所有应用程序的名称， ID 和状态</block>
+  <block id="bff6b273561ec6570215c14bdba13a26" category="section-title">JSON 输出示例</block>
+  <block id="5ad1db1f03ff165972b0c70619a75ba3" category="doc">从备份还原受管应用程序</block>
+  <block id="ce134f7334fe009ec211cc92e1c0b79d" category="paragraph">您可以通过从备份创建新应用程序来还原受管应用程序。</block>
+  <block id="88164f3abe33a2d7cadd994093364280" category="section-title">1. 选择要还原的受管应用程序</block>
+  <block id="dac907b900763815cd0dab3692a0ccb9" category="section-title">3. 还原应用程序</block>
+  <block id="04a20f97156c327fa56ba3a250089cba" category="doc">克隆受管应用程序</block>
+  <block id="4ff0a0de39ae6f53c4831148ad61fcef" category="paragraph">您可以通过克隆现有受管应用程序来创建新应用程序。</block>
+  <block id="c16473b0d0e0a369510a4772f6a13523" category="list-text">未使用应用程序备份或快照</block>
+  <block id="91e9ad87c32b1417c98a1c8a57d14d21" category="section-title">2. 克隆应用程序</block>
+  <block id="812ae8a5c2b12f97ec673b1ed61bab86" category="section-title">curl 示例：克隆应用程序</block>
+  <block id="db5eb84117d06047c97c9a0191b5fffe" category="doc">支持</block>
+  <block id="e24800f8fa54848c57ec9b63af6231d3" category="paragraph">有多个工作流可用于调试和支持您的应用程序以及常规 Kubernetes 环境。</block>
+  <block id="eadfe8388f5ebf45cdfeff23f0e39899" category="doc">应用程序控制</block>
+  <block id="9de4b07ae6319c45521f7ab9180fa62e" category="paragraph">通过这些工作流，您可以控制受管应用程序和非受管应用程序。您可以列出应用程序以及创建和删除受管应用程序。</block>
+  <block id="5a040e0212028f4e1b11cb1ca4c1f6b3" category="paragraph">您可以列出为特定受管应用程序创建的快照。</block>
+  <block id="abd4e0354b71e6e1bbb5728e6b5ef675" category="paragraph">您必须具有要列出其快照的受管应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
+  <block id="f09394ee48f57bbe80f0a951776c3439" category="section-title">1. 列出快照</block>
+  <block id="d07095366fb3f7a5563f836aeaace3bf" category="cell">/accouns/ ｛ account_id ｝ /K8s/v1/managedApps/ ｛ managedApp_id ｝ /appSaps</block>
+  <block id="07b981f0108ccf7265702dde8bd01e8e" category="cell">标识拥有列出快照的受管应用程序。</block>
+  <block id="e2942a04780e223b215eb8b663cf5353" category="cell">count</block>
+  <block id="5aeb23b435f0d586a0493bb8c70b8fc5" category="cell">如果为 `count=true` ，则快照数包含在响应的元数据部分中。</block>
+  <block id="f51493699b1a1513a7a2e95212bdc3da" category="section-title">curl 示例：返回应用程序的所有快照</block>
+  <block id="a6678bfaa94621c04bacbb0514f6d9d4" category="section-title">curl 示例：返回应用程序和计数的所有快照</block>
+  <block id="3d8174b7a5e7e2c2f19aa676ce494658" category="doc">列出非受管应用程序</block>
+  <block id="563a0b5f6c4efcacd5b8847d1eee9649" category="paragraph">您可以列出当前不受 Astra 管理的应用程序。您可以在选择要管理的应用程序时执行此操作。</block>
+  <block id="eb646550499781d051cdd47a82fd97de" category="admonition">此工作流将列出所有 Astra 应用程序。您可以通过检查 `managedState` 字段查看输出以确定哪些应用程序不受管理。</block>
+  <block id="5a7e60861a502dc956f007273373ee29" category="cell">/account/ ｛ accountID ｝ /topology/v1/apps</block>
+  <block id="e2c473c218d9b4c045f316cd4af94e1c" category="section-title">curl 示例：返回所有应用程序的名称， ID 和 managedState</block>
+  <block id="d12275e5ed9a0bebaad289f16e74c1e3" category="doc">从快照克隆受管应用程序</block>
+  <block id="50e826b69d89371f5df994a8efc1fa9a" category="paragraph">您可以通过从应用程序快照克隆新应用程序来创建该应用程序。</block>
+  <block id="38395f100e712c841ca6c8a613f86abc" category="list-text">使用应用程序快照</block>
+  <block id="da88fe405a2037d8a9476bbfc8f6cf7f" category="section-title">2. 选择要使用的快照</block>
+  <block id="176ae10d2b65c2e741fef4d23fc66fe5" category="paragraph">执行工作流 <block ref="ec07e92ba8186e37075c19b8ee786603" category="inline-link-macro-rx"></block> 并选择要使用的快照。</block>
+  <block id="601c2032f11a3d99c3889b1faf260874" category="section-title">curl 示例：从快照克隆应用程序</block>
+  <block id="44d23b5c3f8571e7bb4294d0b82f7497" category="doc">管理应用程序</block>
+  <block id="d3475627a9245c69f16195dc1b7e76c6" category="paragraph">您可以基于 Astra 已知的应用程序创建托管应用程序。管理应用程序时，您可以通过定期备份和快照来对其进行保护。</block>
+  <block id="e998c93727ba4b42fb21ab7eb5b2a36d" category="paragraph">您必须具有要管理的已发现应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="ad26acc8f05568b58fadc6a01e36de64" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
+  <block id="146e5b45541ec01c95f3c39d17e6cb56" category="section-title">1. 管理应用程序</block>
+  <block id="f211caf53405c1c7a730894c76845b78" category="cell">提供确定要管理的应用程序所需的参数。请参见以下示例。</block>
+  <block id="6a476923d36b27fb8d2ff2da1e18c322" category="section-title">curl 示例：管理应用程序</block>
+  <block id="9c041cca5c70493333f8bd4912e37e70" category="doc">应用程序保护</block>
+  <block id="166cbd4582aeac28601a128615e486a3" category="paragraph">您可以使用这些工作流通过快照和备份保护受管应用程序。</block>
+  <block id="a6fe5f717c07a456c15f8f2af8c1c7b7" category="doc">列出通知</block>
+  <block id="28e5da4816b7e4821438045e6ed86d2b" category="paragraph">您可以列出特定 Astra 帐户的通知。您可以在监控系统活动或调试问题描述时执行此操作。</block>
+  <block id="9d9ee088d3dd8f7e21041745a8cf259f" category="section-title">1. 列出通知</block>
+  <block id="92ad0efa758f9a5fc8bbf60f72e9dc6f" category="cell">/account/ ｛ accountID ｝ /core/v1/notifications</block>
+  <block id="b2c97ae425dd751b0e48a3acae79cf4a" category="cell">筛选器</block>
+  <block id="0aaaa617845874504df6c76a750325da" category="cell">也可以筛选要在响应中返回的通知。</block>
+  <block id="f921030431759c9c846d8a3fd7d84ca2" category="section-title">curl 示例：返回所有通知</block>
+  <block id="943e5258980784703a84c31110cf2eec" category="section-title">curl 示例：返回严重性为警告的通知的问题描述</block>
+  <block id="14ead4573d59a3fd24fd074f4279a1ce" category="doc">为受管应用程序创建快照</block>
+  <block id="e3187f556451d0afc040d8d2882a9cf8" category="paragraph">您可以为特定受管应用程序创建快照。</block>
+  <block id="aabc01843e9612eddd27f0ccdd01a0cf" category="paragraph">您必须具有要为其创建快照的受管应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
+  <block id="18c7420f03313eb33044afb6b943cb43" category="section-title">1. 创建快照</block>
+  <block id="ca88d296d98d8a63f103fe3b0b63d819" category="cell">标识要创建快照的受管应用程序。</block>
+  <block id="97edc5e90d2062e191a3eae330d2afa0" category="cell">提供快照的参数。请参见以下示例。</block>
+  <block id="c681a34970e8e1b61eddc5718f0627e9" category="section-title">curl 示例：为应用程序创建快照</block>
+  <block id="c315f2255bd42f6e4eec1a748ed0acba" category="doc">克隆和还原应用程序</block>
+  <block id="dcacef3fb7dda1b3246ea19ce71d84fc" category="paragraph">这些工作流介绍了如何克隆和还原受管应用程序。</block>
+  <block id="3dd9fa89c534831c942fd3c706deca44" category="section-title">克隆应用程序</block>
+  <block id="a57b678b3c69fd3c728e36cee34836d0" category="paragraph">以下是克隆应用程序时需要考虑的几个事项。以下所述参数是 JSON 输入的一部分。</block>
+  <block id="a7eed35cf4f7cd555c34dd8d3e496a35" category="list-text">源集群标识符</block>
+  <block id="5b7d7363c3d7d36aacb94acf0c5c3971" category="list-text">值 `sClusterID` 始终表示安装原始应用程序的集群。</block>
+  <block id="83226168f6703173a6f41521f74e5e6d" category="list-text">集群标识符</block>
+  <block id="766d0712a291d8165795e09add3367ff" category="list-text">值 `clusterID` 用于标识要安装新应用程序的集群。</block>
+  <block id="512b5d7fd1ded773db988e422913ed99" category="list-text">在同一集群中克隆时， `clusterID` 和 `sClusterID` 具有相同的值。</block>
+  <block id="80401ca31e505d9762ac5fcfda80ae2b" category="list-text">在集群间克隆时，这两个值不同，并且 `clusterID` 应为目标集群的 ID 。</block>
+  <block id="13d28e8dfc702e3456e0767dff9a128a" category="list-text">命名空间</block>
+  <block id="3f21870e9b4a671a888e440f450398fc" category="list-text">`namespace` 值必须与原始源应用程序不同。此外，克隆的命名空间不存在， Astra 将创建它。</block>
+  <block id="a283a1d894f9805dcaa0a49b701fdb84" category="list-text">备份和快照</block>
+  <block id="97f3e02c94643c10592e0ad5805ec40c" category="list-text">您可以选择使用 `backupID` 或 `snapshotID` 参数从现有备份或快照克隆应用程序。如果不提供备份或快照，则 Astra 将首先创建应用程序的备份，然后从备份中克隆。</block>
+  <block id="d287ccc97c319b0bc115d2d1ff777c0c" category="section-title">还原应用程序</block>
+  <block id="bc75de9e075d82274edd026fd05fd01f" category="paragraph">以下是还原应用程序时需要考虑的几个事项。</block>
+  <block id="2d49337d583eac8056d564e348f43744" category="list-text">还原应用程序与克隆操作非常相似。</block>
+  <block id="af5cd1844721ca591969375d08152b0e" category="list-text">还原应用程序时，您必须提供备份或快照。</block>
+  <block id="3e1ffa4f0f56cc64320d9813031ed226" category="doc">为受管应用程序创建备份</block>
+  <block id="dd4ad95efd478c84cdb33460b84c4a9e" category="paragraph">您可以为特定受管应用程序创建备份。您可以使用备份还原或克隆应用程序。</block>
+  <block id="98f7c990eb05a7e5b5e449e8808c1ba0" category="paragraph">您必须具有要创建备份的受管应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
+  <block id="15d4d7ada9bf77d46154e409388ea743" category="section-title">1. 创建备份</block>
+  <block id="de8116e7a1571e52baf8e636aca38f81" category="cell">/accouns/ ｛ account_id ｝ /K8s/v1/managedApps/ ｛ managedApp_id ｝ /appBackups</block>
+  <block id="0cb7b7e0036252a8d2ac816a0e9ce6dc" category="cell">标识要创建备份的受管应用程序。</block>
+  <block id="6f3183b7efdec0553f8a26ad8a42bd12" category="cell">提供备份的参数。请参见以下示例。</block>
+  <block id="eaa80d521faeae22624528a6ab4291dc" category="section-title">curl 示例：为应用程序创建备份</block>
+  <block id="73dc919e6ecbb6cad3d9d9ba9392aee2" category="paragraph">您可以列出为特定受管应用程序创建的备份。</block>
+  <block id="85c7807d3ea7259393890e092ea20eea" category="paragraph">您必须具有要列出备份的受管应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
+  <block id="4cd1e59d794feeee43e7cd32844ec8ec" category="section-title">1. 列出备份</block>
+  <block id="0254dd3f84d764f594f8490729e7c196" category="cell">标识拥有列出备份的受管应用程序。</block>
+  <block id="53c07d76a2f4ca060d727cd96fd24eeb" category="section-title">curl 示例：返回应用程序的所有备份</block>
+  <block id="eacfebc40e4c5274fcf9a4f5c191753f" category="doc">获取托管应用程序</block>
+  <block id="e3045f9e9da6edc5411efe234eb8d7a0" category="paragraph">您可以检索描述单个受管应用程序的所有资源变量。</block>
+  <block id="4c9466a5ebb832e841259b6ff45eb3f3" category="paragraph">您必须具有要检索的受管应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
+  <block id="d822b85cd89777748e1bd6b0a8fd0a46" category="section-title">1. 获取应用程序</block>
+  <block id="aeb049f425f4d71edb3a5580d5a2155d" category="cell">要检索的受管应用程序的 ID 值。</block>
+  <block id="036e9ec4ee01123ffae8afd3dab3ff9f" category="section-title">curl 示例：返回应用程序的所有数据</block>
+  <block id="cb2cecbd9776fc0c17c7929541fe9404" category="doc">删除备份</block>
+  <block id="245b889f170a1caa3c38b6933fe09e9f" category="paragraph">您可以删除与受管应用程序关联的备份。</block>
+  <block id="b17b8f6ccac7f28b3e6293a447fd1fb1" category="list-text">拥有备份的受管应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
+  <block id="9332cf683c594f797fdb3d0a19819c01" category="list-text">要删除的备份的 ID 。如果需要，您可以使用此工作流 <block ref="e6b45b76c52a9dd27daf9fa3d915439e" category="inline-link-macro-rx"></block> 以查找快照。</block>
+  <block id="9764b72f7f4c0e5ee3e7e8350c8ccd00" category="section-title">1. 删除备份</block>
+  <block id="5ceeae484264e7fdea333c9b933670e6" category="cell">/accouns/ ｛ account_id ｝ /K8s/v1/managedApps/ ｛ managedApp_id ｝ /appBackups/ ｛ appBackup_id ｝</block>
+  <block id="bd5f8c5e1797c9b7450b0fcd4de20d28" category="cell">标识拥有备份的受管应用程序。</block>
+  <block id="deed7df33f535761651277671dff8ecd" category="cell">备份 ID</block>
+  <block id="31bed42d29869473ab52c27108626330" category="cell">标识要删除的备份。</block>
+  <block id="97b9689d8a4aef28c756533c3e3bca1d" category="section-title">curl 示例：删除应用程序的单个备份</block>
+  <block id="6a94b76b128da4767ce7885cb84ec799" category="doc">删除失败的应用程序</block>
+  <block id="90c78af3e4fa9a4298b9bc66f86d06a6" category="paragraph">如果某个受管应用程序的备份或快照处于故障状态，您可能无法将其删除。在这种情况下，您可以使用下面所述的工作流手动删除此应用程序。</block>
+  <block id="5a58a2434bb85bcdb2f88f89a54856e8" category="section-title">1. 选择要删除的受管应用程序</block>
+  <block id="1718c6712c2030f412e9494b4d22c89f" category="paragraph">执行工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 并选择要删除的应用程序。</block>
+  <block id="c776475c27b1d7a554d7f110559479d9" category="section-title">2. 列出应用程序的现有备份</block>
+  <block id="03697ae46f1d2d1002ffcb19e1ebbd04" category="paragraph">执行工作流 <block ref="e6b45b76c52a9dd27daf9fa3d915439e" category="inline-link-macro-rx"></block>。</block>
+  <block id="dcefcc8de5a7541a95d041f4943c300d" category="section-title">3. 删除所有备份</block>
+  <block id="198a14532624e3324770ded326a70a0d" category="paragraph">通过执行此工作流删除所有应用程序备份 <block ref="4f0b12c4d7b6e38cbd2c51245afded1c" category="inline-link-macro-rx"></block> 列表中的每个备份。</block>
+  <block id="dbda08e56067649f1ab59eea05bc44db" category="section-title">4. 列出应用程序的现有快照</block>
+  <block id="431b5bf2b0c89bff5ce71c6d5a42c4be" category="paragraph">执行工作流 <block ref="ec07e92ba8186e37075c19b8ee786603" category="inline-link-macro-rx"></block>。</block>
+  <block id="2d29043fd95ac713b9b4c9b91db9d11b" category="section-title">5. 删除所有快照</block>
+  <block id="97153f849dc1e17ce221b1aecaa1b827" category="paragraph">执行工作流 <block ref="9716569143d126579035607ebd1a1120" category="inline-link-macro-rx"></block> 列表中的每个快照。</block>
+  <block id="af9ef9bb2e7c334105bad0aa17ad5d28" category="section-title">6. 删除应用程序</block>
+  <block id="08a28b071946cc1515702440ff6582d8" category="paragraph">执行工作流 <block ref="a7ef8d5c47daed312bb700c375f9019c" category="inline-link-macro-rx"></block> 删除应用程序。</block>
+  <block id="37a00acafce20479c2292dcee38f2d5b" category="paragraph">您可以访问所有 Astra REST API 调用的详细信息，包括 HTTP 方法，输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。</block>
+  <block id="2ad1058f63e4e52070e51ca34c815ccd" category="admonition">目前，可通过 Astra 服务在线获取 REST API 参考文档。</block>
+  <block id="a7c1946d9e83ca7cb364e2283d9c1bfa" category="paragraph"><block ref="a7c1946d9e83ca7cb364e2283d9c1bfa" category="inline-link-macro-rx"></block></block>
+  <block id="a242cf3d90ad638fe0e23d9477b74175" category="list-text">在页面顶部，单击 * API Documentage* 下显示的 URL 。</block>
+  <block id="1cafd580155ad918d6c525c18cc8e5e6" category="list-text">如果出现提示，请重新提供您的帐户凭据。</block>
+  <block id="3dc5f8d0880e03a9a4a02c94ebba7980" category="paragraph">REST 可建立一组通用的技术和最佳实践，但每个 API 的详细信息可能因开发期间所做的选择而异。在将 Astra REST API 用于实时云部署之前，您应了解其设计特征。</block>
+  <block id="015f8c34f52b6ef8a3361958660f5e88" category="inline-link-macro">其他注意事项</block>
+  <block id="fa880ddba568f56dc73314d7ab5d63bb" category="admonition">另请参见 <block ref="b0d624384cd4e85bf832d041d6768592" category="inline-link-macro-rx"></block> 有关使用 Astra REST API 的更多详细信息。</block>
+  <block id="7ab91fd48b58ce1ea4cada1f1a4e1808" category="doc">HTTP 详细信息</block>
+  <block id="b8bdbe00d0559f330eb4e1d8e9d6e189" category="paragraph">Astra REST API 使用 HTTP 和相关参数对资源和集合执行操作。下面详细介绍了 Astra HTTP 实施。</block>
+  <block id="deaf360f123e9392f769c7ceb4e01747" category="section-title">API 事务和 CRUD 模型</block>
+  <block id="b651f2842bdaa12d7835f941096f336b" category="paragraph">Astra REST API 可实施一个事务模式，其中包含定义明确的操作和状态过渡。</block>
+  <block id="fc068ae597c9019f5d61b19badc39991" category="section-title">请求和响应 API 事务</block>
+  <block id="1f5760bedf7c68291dfd4d306c189bc8" category="paragraph">每次 REST API 调用都是作为对 Astra 服务的 HTTP 请求执行的。每个请求都会向客户端生成关联的响应。此请求响应对可视为 API 事务。</block>
+  <block id="54ba5d4469f49d79d837dd2472a96c36" category="section-title">支持 CRUD 操作模式</block>
+  <block id="bdbd723fc560c8593dedcc9cd87da82a" category="paragraph">通过 Astra REST API 提供的每个资源实例和集合均根据 * CRU* 模型进行访问。有四个操作，每个操作都映射到一个 HTTP 方法。这些操作包括：</block>
+  <block id="686e697538050e4664636337cc3b834f" category="list-text">创建</block>
+  <block id="7a1a5f3e79fdc91edf2f5ead9d66abb4" category="list-text">读取</block>
+  <block id="06933067aafd48425d67bcb01bba5cb6" category="list-text">更新</block>
+  <block id="f2a6c498fb90ee345d997f888fce3b18" category="list-text">删除</block>
+  <block id="fde59e3cd820ea0be7c3ed5c4be3f292" category="paragraph">对于某些 Astra 资源，仅支持其中一部分操作。您应查看 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关特定 API 调用的详细信息。</block>
+  <block id="957a8c35c28e967701ff975f1d7182d5" category="section-title">HTTP 方法</block>
+  <block id="63d1169901437c6f9acfc445cee3a4ba" category="paragraph">下表显示了 API 支持的 HTTP 方法或动词。</block>
+  <block id="4c3880bb027f159e801041b1021e88e8" category="cell">方法</block>
+  <block id="8ecfde6cfb333d8f81de0672a75b159c" category="cell">CRUD</block>
+  <block id="79666eb3555d2ff3385526690b29f173" category="cell">检索资源实例或集合的对象属性。在与集合结合使用时，此操作被视为 * 列表 * 操作。</block>
+  <block id="109ca1b43f20cf704cb82d1e60d1dfd5" category="cell">根据输入参数创建新的资源实例。长期 URL 会在 `Location` 响应标头中返回。</block>
+  <block id="3e75383a5992a6d15fb81e872e46e256" category="cell">PUT</block>
+  <block id="8fe6ec01587dacf444e7eeb72caaed1b" category="cell">使用提供的 JSON 请求正文更新整个资源实例。系统会保留用户不可修改的密钥值。</block>
+  <block id="eef129331314d2c9f4c4a5b0fdde3c7e" category="cell">删除现有资源实例。</block>
+  <block id="61967c09828f8562a1a95fc9f6fd0151" category="section-title">请求和响应标头</block>
+  <block id="554641b8c281d9f925a44f7b4a499d7e" category="paragraph">下表汇总了与 Astra REST API 一起使用的 HTTP 标头。</block>
+  <block id="b0e56909c3a57b0d8dbf0222bd347ceb" category="inline-link">RFC 7232</block>
+  <block id="29e389ad4bb7b567cc956b0b4089f88e" category="inline-link">RFC 7233</block>
+  <block id="443369a4b9d28a4c4d185bde530f0a78" category="admonition">请参见<block ref="3f1bb67bc2b98a20cf2c87c4fe0c3ca6" category="inline-link-rx"></block> 和<block ref="085309009337d32266cee2ab4ba9f174" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="81098f701c45e252a078b3eee62f0dab" category="cell">使用说明</block>
+  <block id="15c2d85f1fae22a3c3a0594510a1f611" category="cell">请求</block>
+  <block id="f230b5adb8a23c24f7900d2a94c7f069" category="cell">如果值为 "*/*" 或未提供，则在内容类型响应标题中返回 `application/json` 。如果此值设置为 Astra 资源的介质类型，则内容类型标题中将返回相同的介质类型。</block>
+  <block id="59e52e38bb9acc4d18bd31669b92507e" category="cell">包含用户 API 密钥的承载令牌。</block>
+  <block id="dc105ac52c237f9f09c74b0767f64f74" category="cell">内容类型</block>
+  <block id="d64ed3e9c10229648e069f56e32f4c8e" category="cell">响应</block>
+  <block id="440093e664bc9325d3ee55442e0e1a2c" category="cell">根据 `accept` request 标头返回。</block>
+  <block id="16ddf21b3f21fcb2433e28cd2e3b33d8" category="cell">ETAG</block>
+  <block id="7cb86e69c4338a43e1a5427a78eb80a7" category="cell">随 RFC 7232 中定义的成功附带。该值是整个 JSON 资源的 MD5 值的十六进制表示形式。</block>
+  <block id="71e1f368d893f92df0ad4a838a3bbbd9" category="cell">如果匹配</block>
+  <block id="556a98dd71f4adebd0bbb3b105ab8ddd" category="cell">一个前提条件请求标头，如第 3.1 节 RFC 7232 中所述实施，并支持 * PUT * 请求。</block>
+  <block id="3c092637f114ffbf533ef4426b84a1bd" category="cell">if-Modified-since</block>
+  <block id="9e69ea9561f904c53fa87d91042d2982" category="cell">一个前提条件请求标头，如第 3.4 节 RFC 7232 中所述实施，并支持 * PUT * 请求。</block>
+  <block id="ea7192f5dc601974605b32a2334c1769" category="cell">如果未修改，则从</block>
+  <block id="ce5bf551379459c1c61d2a204061c455" category="cell">位置</block>
+  <block id="cea5f66f37995fb196323018a31600fc" category="cell">包含新创建资源的完整 URL 。</block>
+  <block id="6e2102ce7d7573c8b221194a86f7a48b" category="section-title">查询参数</block>
+  <block id="b206801753ef0a6abfae5904e5c68a57" category="paragraph">以下查询参数可用于资源收集。请参见 <block ref="114f30b2f00431234237350f516a01cf" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="ce73e1ed10f91fd167ae3d5803ce8dff" category="cell">查询参数</block>
+  <block id="4d0d3b0c69167fef7204e14c4e946c15" category="cell">包含读取收集时应返回的字段。</block>
+  <block id="c6960e489ca14167f9bd9ace657e6790" category="cell">指示读取收集时要返回的资源必须匹配的字段。</block>
+  <block id="4294376261299ba2cafafdb77ca4deeb" category="cell">订单</block>
+  <block id="cef5a79ac183c2043267cf9b8a6fde0b" category="cell">确定读取收集时返回的资源的排序顺序。</block>
+  <block id="aa9f73eea60a006820d0f8768bc8a3fc" category="cell">limit</block>
+  <block id="0233c5525461d7223c11d45dc1c590ab" category="cell">限制读取集合时返回的最大资源数。</block>
+  <block id="08b43519a7e36ee4c6c5615d1663bcfd" category="cell">跳过</block>
+  <block id="58eeca9906af37123daca426979fbe90" category="cell">设置读取集合时要传递和跳过的资源数量。</block>
+  <block id="16bd6f56e0279353c2bf47e3b1d13c41" category="cell">指示是否应在元数据对象中返回资源总数。</block>
+  <block id="2974f783f17d54a41f4040c8daa90545" category="section-title">HTTP status codes</block>
+  <block id="92393e88b742256fa34debb884786069" category="paragraph">下面介绍了 Astra REST API 使用的 HTTP 状态代码。</block>
+  <block id="93a91202a6310bf1ac84de3e96b701dc" category="admonition">Astra REST API 还使用 * HTTP APIs* 标准的问题详细信息。请参见 <block ref="d9c154af7dec160f41ead610ccb970e9" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="ca0dbad92a874b2f69b549293387925e" category="cell">代码</block>
+  <block id="7277de5f2ed6f17c61f1f25594591a82" category="cell">含义</block>
+  <block id="3644a684f98ea8fe223c713b77189a77" category="cell">200</block>
+  <block id="e0aa021e21dddbd6d8cecec71e9cf564" category="cell">确定</block>
+  <block id="ebe8cd0cd7287699e570e52e72202209" category="cell">表示未创建新资源实例的调用成功。</block>
+  <block id="757b505cfd34c64c85ca5b5690ee5293" category="cell">201</block>
+  <block id="0eceeb45861f9585dd7a97a3e36f85c6" category="cell">已创建</block>
+  <block id="257e32e339ab2841c4fa5590926cbb5d" category="cell">已成功创建对象，并且位置响应标头包含该对象的唯一标识符。</block>
+  <block id="274ad4786c3abca69fa097b85867d9a4" category="cell">204</block>
+  <block id="8386bf720b8b55126f9551c6678647f9" category="cell">No Content</block>
+  <block id="aae60f64e8a8cfaba50bb2292348bc3c" category="cell">尽管未返回任何内容，但请求成功。</block>
+  <block id="18d8042386b79e2c279fd162df0205c8" category="cell">400</block>
+  <block id="0fc30646d5cf22910283967bf24ebf66" category="cell">请求错误</block>
+  <block id="d61713af1a9c56d51f7fb3873bed7e92" category="cell">此请求输入无法识别或不适当。</block>
+  <block id="816b112c6105b3ebd537828a39af4818" category="cell">401</block>
+  <block id="e06d1ba70f1331e9f9a113cc2f887d3f" category="cell">未授权</block>
+  <block id="046b13999cd7e3b5a519e3f6c564f5b9" category="cell">用户未获得授权，必须进行身份验证。</block>
+  <block id="bbf94b34eb32268ada57a3be5062fe7d" category="cell">403</block>
+  <block id="722969577a96ca3953e84e3d949dee81" category="cell">已禁止</block>
+  <block id="8df9e8f24b204c91ad0a9031f9c09a16" category="cell">由于授权错误，访问被拒绝。</block>
+  <block id="4f4adcbf8c6f66dcfc8a3282ac2bf10a" category="cell">404</block>
+  <block id="9e076f5885f5cc16a4b5aeb8de4adff5" category="cell">未找到</block>
+  <block id="24ff0a9484d837d82e7f8f8218e196b6" category="cell">请求中引用的资源不存在。</block>
+  <block id="a96b65a721e561e1e3de768ac819ffbb" category="cell">409</block>
+  <block id="f1d4ac54357cc0932f385d56814ba7e4" category="cell">冲突</block>
+  <block id="47a99fc0005eeb289896eda4eb4b708a" category="cell">尝试创建对象失败，因为此对象已存在。</block>
+  <block id="cee631121c2ec9232f3a2f028ad5c89b" category="cell">500</block>
+  <block id="8f8913c1f755436db84ae169e37c61f9" category="cell">内部错误</block>
+  <block id="03f0e0f686ebd5f796ca9febd1723676" category="cell">服务器发生一般内部错误。</block>
+  <block id="285e19f20beded7d215102b49d5c09a0" category="cell">503</block>
+  <block id="9ed1d9418efab93ff8b4b1793913fabe" category="cell">服务不可用</block>
+  <block id="a6613dcc5c4d971acabeae88baf14cb7" category="cell">由于某种原因，此服务尚未准备好处理此请求。</block>
+  <block id="94fd56b370187429c8fbd312f50f5c1b" category="paragraph">用于通过 REST API 访问资源实例或集合的 URL 的常规结构由多个值组成。此结构反映了底层对象模型和系统设计。</block>
+  <block id="04af7c5cae35340b12ac2ff18f2993fb" category="section-title">URL 的格式</block>
+  <block id="3e0ab85384ebe4f846202e772b341dc5" category="paragraph">下面显示了 URL 的格式以及一个示例。</block>
+  <block id="6e84a7dae5ae82dd22a0ec6f456dbc8d" category="section-title">帐户作为 root</block>
+  <block id="e166d573b25ce4160633b91145d1eae5" category="paragraph">指向每个 REST 端点的资源路径的根是 Astra 帐户。因此， URL 中的所有路径均以 ` /account/ ｛ account_id ｝` 开头，其中 `account_id` 是帐户的唯一 UUIDv4 值。内部结构这反映了一种设计，其中所有资源访问都基于特定帐户。</block>
+  <block id="faf17fd8415851163c880ffe0eee8b37" category="section-title">端点资源类别</block>
+  <block id="c96943fca3fb4769805adeaadbfa2a4c" category="paragraph">Astra 资源端点分为三类：</block>
+  <block id="f5eee40efb177a56f7f47f4e9ae88fc0" category="list-text">核心（` / 核心` ）</block>
+  <block id="e82590686de294a35499703d86b3864d" category="list-text">受管应用程序（` /K8s` ）</block>
+  <block id="339ca9edd021d342e12ce488d3083b7b" category="list-text">拓扑（` / 拓扑` ）</block>
+  <block id="2598572d1690c4e8c484f3411842c6ed" category="paragraph">请参见 <block ref="f79c22f30a5c9f960ce998adee5739fa" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="1a13e0be61ce3aab0376745ec89773a0" category="section-title">类别版本</block>
+  <block id="807911da3f02747e900f1cbb28978d93" category="paragraph">这三个资源类别中的每一个都有一个全局版本，用于控制所访问资源的版本。按照约定和定义，迁移到资源类别的新主要版本（例如，从 ` /v1` 到 ` /v2` ）将会导致 API 发生中断更改。</block>
+  <block id="b59579c5294990b3465d2a6e5a853fc0" category="section-title">资源实例或集合</block>
+  <block id="a759694558fdad138d8e71cc88a58b5b" category="paragraph">根据是否访问资源实例或集合，可以在路径中使用资源类型和标识符的组合。</block>
+  <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="section-title">示例</block>
+  <block id="2fc537b9f7b2c95f698a1e045c1ca8c7" category="list-text">资源路径</block>
+  <block id="4c1c10477ca13145352fd9a92f9744f6" category="paragraph">根据上述结构，端点的典型路径为： ` /accouns/ ｛ account_id ｝ /core/v1/users` 。</block>
+  <block id="8a95104150e07b745de96037e7eb15b4" category="list-text">完整的 URL</block>
+  <block id="f39323c9cdd9d851595dba08fa974f82" category="paragraph">相应端点的完整 URL 为： `https://astra.netapp.io/accounts/{account_id}/core/v1/users` 。</block>
+  <block id="0ef9d205b3c12ed04d4b22391e87afc8" category="doc">资源和集合</block>
+  <block id="1538755fc0c3d4c74bc51b90e99c49d0" category="paragraph">通过 Astra REST API ，可以访问资源实例和资源实例集合。</block>
+  <block id="a1da6a69dc3621a153be0d63ad955397" category="admonition">从概念上讲， REST * 资源 * 类似于使用面向对象的编程（ OOP ）语言和系统定义的 * 对象 * 。有时，这些术语可以互换使用。但一般来说，在外部 REST API 环境中使用时，首选使用 "resource" ，而在服务器上存储的相应有状态实例数据中使用 "object" 。</block>
+  <block id="10522d991ba47cf052332e37b93638f3" category="section-title">Astra 资源的属性</block>
+  <block id="f5be6575ab16e6d2e433ab7e2ab99e35" category="paragraph">Astra REST API 符合 RESTful 设计原则。每个 Astra 资源实例都是根据定义明确的资源类型创建的。一组相同类型的资源实例称为 * 集合 * 。API 调用会对单个资源或资源集合执行操作。</block>
+  <block id="b6af2b8fdca63591236d48930018b8db" category="section-title">资源类型</block>
+  <block id="5a8b7b262ddb67a1a1cc2afa0a36d996" category="paragraph">Astra REST API 附带的资源类型具有以下特征：</block>
+  <block id="1462bc4396a7f92c2a40fdb70353c11b" category="list-text">每个资源类型均使用模式定义（通常在 JSON 中）</block>
+  <block id="6a7693b24adc0a8f49972d3c9fa44aa7" category="list-text">每个资源架构都包括资源类型和版本</block>
+  <block id="3a5bb03daf09a5f9ee7c38abedb79438" category="list-text">资源类型在全局范围内是唯一的</block>
+  <block id="515fc3276bd3187a4917ddf7d57db2be" category="section-title">资源实例</block>
+  <block id="7c377f8ac6890a1705576b7591e83476" category="paragraph">通过 Astra REST API 提供的资源实例具有以下特征：</block>
+  <block id="ad12b03bd967f6232973db6e1e8d54e8" category="list-text">资源实例是根据单个资源类型创建的</block>
+  <block id="a8ae0ec6707984a7a25ae5d6d872a26e" category="list-text">资源类型使用介质类型值来指示</block>
+  <block id="32add7a750dbbb025d0ec6c3b8058890" category="list-text">实例由由 Astra 服务维护的有状态数据组成</block>
+  <block id="e53d478a862931c0d5d839bc35228be1" category="list-text">每个实例均可通过一个唯一且长期存在的 URL 进行访问</block>
+  <block id="60c8f94b742e229bdac6f65b26abd188" category="list-text">如果某个资源实例可以具有多个表示形式，则可以使用不同的介质类型来请求所需的表示形式</block>
+  <block id="c63467857ced87bca573cc84332ea38e" category="section-title">资源收集</block>
+  <block id="2ad1eaecf17d3e71fd954281e0673993" category="paragraph">通过 Astra REST API 提供的资源收集具有以下特征：</block>
+  <block id="4ed370961773751cbf665ad3ec9bbe7d" category="list-text">一种资源类型的一组资源实例称为集合</block>
+  <block id="8bb3319f4df785fb5e6ac6a323cc692e" category="list-text">资源集合具有一个唯一且长期存在的 URL</block>
+  <block id="55920bcaefa36a6964fdc7020a835d5f" category="section-title">实例标识符</block>
+  <block id="7b37fb297bfca9ad91bb761c9ecdb3e0" category="paragraph">创建每个资源实例时，系统都会为其分配一个标识符。此标识符是一个 128 位 UUIDv4 值。分配的 UUIDv4 值是全局唯一且不可变的。发出创建新实例的 API 调用后， HTTP 响应的 `Location` 标头中会将具有关联 ID 的 URL 返回给调用方。在引用资源实例时，您可以提取此标识符并在后续调用中使用它。</block>
+  <block id="bf5096ce255d57836c10f7a02fbd117d" category="admonition">资源标识符是用于收集的主密钥。</block>
+  <block id="052550c93dde25614a02e3e525606762" category="section-title">Astra 资源的通用结构</block>
+  <block id="2f131a21fc9b2d944b9c59cea72e5579" category="paragraph">每个 Astra 资源都使用一个通用结构进行定义。</block>
+  <block id="2ed6f74fc82a2206a6fa7ea55363656c" category="section-title">通用数据</block>
+  <block id="d691a99f89ba35430c2ae2930698e2f3" category="paragraph">每个 Astra 资源都包含下表所示的键值。</block>
+  <block id="897356954c2cd3d41b221e3f24f99bba" category="cell">密钥</block>
+  <block id="599dcce2998a6b40b1e38e8c6006cb0a" category="cell">type</block>
+  <block id="531bacc74686bf6c0c3c06dc14ba8ac4" category="cell">一种全局唯一资源类型，称为 * 资源类型 * 。</block>
+  <block id="2af72f100c356273d46284f6fd1dfc08" category="cell">version</block>
+  <block id="e8677f33e0fa58029ec381a961def5e0" category="cell">一种称为 * 资源版本 * 的版本标识符。</block>
+  <block id="b80bb7740288fda1f201890375a60c8f" category="cell">id</block>
+  <block id="679eeb2f006a684ca3bde51d5ee04c65" category="cell">一种全局唯一标识符，称为 * 资源标识符 * 。</block>
+  <block id="9f81f3c07476a0d97f6793673dd8e475" category="cell">元数据</block>
+  <block id="e4cf899c2773024506ffc1cf5118b130" category="cell">一个 JSON 对象，包含各种信息，包括用户和系统标签。</block>
+  <block id="647f6448e005296f7ac5b882aa71a868" category="section-title">元数据对象</block>
+  <block id="743dff21ad3d768ffb79a4dc0d853b4a" category="paragraph">每个 Astra 资源附带的元数据 JSON 对象包含下表所示的键值。</block>
+  <block id="42cecfeff00cc916fef4f64e7b921079" category="cell">labels</block>
+  <block id="d7aefd81a0396b4a6170af899b6ba156" category="cell">与资源关联的客户端指定标签的 JSON 数组。</block>
+  <block id="b3473b191865b146062fdca327dc1e0f" category="cell">creationTimestamp</block>
+  <block id="d53343f1e86eb9c74de3507e65e51df0" category="cell">JSON 字符串，其中包含指示资源创建时间的时间戳。</block>
+  <block id="f30264e4e420a038d09448da6fd0a440" category="cell">modificationTimestamp</block>
+  <block id="a2a12fff7c0c1ad7aa7d6ec9894d7dfd" category="cell">JSON 字符串，其中包含 ISO-8601 格式的时间戳，用于指示资源上次更改的时间。</block>
+  <block id="34998857f537140306898d54d4b970dc" category="cell">已创建</block>
+  <block id="af7c4c7bd30238dcb53e639cf7a50996" category="cell">JSON 字符串，其中包含创建资源的用户 ID 的 UIDv4 标识符。如果资源是由内部系统组件创建的，并且没有与创建实体关联的 UUID ，则使用 * 空 * UUID 。</block>
+  <block id="6cb8b958a36383ed1b7bacc626d0a5dd" category="section-title">资源状态</block>
+  <block id="b7aa38141b9dd3f7e78cd09e7f60ce0c" category="paragraph">选定资源 A `state` 值，用于编排生命周期过渡和控制访问。</block>
+  <block id="c0471368cdc5da09455ecd80f16c96c7" category="doc">REST Web 服务</block>
+  <block id="1925b8e4351445100abc8afd248d6bad" category="paragraph">表述性状态传输（ Representational State Transfer ， REST ）是一种用于创建分布式 Web 应用程序的模式。在设计 Web 服务 API 时，它会建立一组技术和最佳实践，用于公开基于服务器的资源并管理其状态。它使用主流协议和标准为管理 Astra 部署提供了灵活的基础。</block>
+  <block id="b0fcdfb2c58efafaace08609d3e95f6d" category="section-title">资源和状态表示</block>
+  <block id="d2d07b32aecf22c6a25dc91e4b898e5e" category="paragraph">资源是基于 Web 的系统的基本组件。创建 REST Web 服务应用程序时，早期设计任务包括：</block>
+  <block id="c73e999111ecc4cc9c48709542105db9" category="list-text">识别系统或基于服务器的资源</block>
+  <block id="0400993c35912a6c4e281a903a66400e" category="paragraph">每个系统都使用和维护资源。资源可以是文件，业务事务，流程或管理实体。在设计基于 REST Web 服务的应用程序时，首先要完成的任务之一是识别资源。</block>
+  <block id="082f61fd927dc840d6a4c2daa3a8d76d" category="list-text">资源状态和关联状态操作的定义</block>
+  <block id="5f4e63d9846190edae863ef33879f410" category="paragraph">资源始终处于数量有限的状态之一。必须明确定义状态以及用于影响状态更改的关联操作。</block>
+  <block id="6e9ee433459bf14a5380c1e7371232a9" category="section-title">URI 端点</block>
+  <block id="64c51063277c11a48be48ec3446f5087" category="paragraph">必须使用定义明确的寻址方案定义和提供每个 REST 资源。资源所在的端点和标识的端点使用统一资源标识符（ Uniform Resource Identifier ， URI ）。URI 提供了一个通用框架，用于为网络中的每个资源创建唯一名称。统一资源定位器（ Uniform Resource Locator ， URL ）是一种用于 Web 服务的 URI 类型，用于标识和访问资源。资源通常以类似于文件目录的分层结构公开。</block>
+  <block id="34d23bd6dd51b3238872241264de74bf" category="section-title">HTTP 消息</block>
+  <block id="19f05b47f4b958662678fc11fd0ce414" category="paragraph">超文本传输协议（ HTTP ）是 Web 服务客户端和服务器用来交换有关资源的请求和响应消息的协议。在设计 Web 服务应用程序时， HTTP 方法会映射到资源以及相应的状态管理操作。HTTP 为无状态。因此，要将一组相关请求和响应关联为一个事务的一部分，必须将追加信息包含在随请求和响应数据流一起提供的 HTTP 标头中。</block>
+  <block id="bd4c8bbdccbcb7826a3bc4ae421c0604" category="section-title">JSON 格式化</block>
+  <block id="f7f7c023e06c60d8a9ae56cd4601182e" category="paragraph">虽然信息可以通过多种方式在 Web 服务客户端和服务器之间进行结构化和传输，但最受欢迎的选项是 JavaScript 对象表示法（ JSON ）。JSON 是一种行业标准，用于以纯文本形式表示简单数据结构，并用于传输描述资源的状态信息。Astra REST API 使用 JSON 格式化每个 HTTP 请求和响应正文中包含的数据。</block>
+  <block id="6c1135aa75f16bbc27409510d3724adb" category="doc">Astra REST API 简介</block>
+  <block id="937e2aa05fe5b768c5d7276c52172309" category="paragraph">NetApp Astra 服务提供了一个 REST API ，您可以通过编程语言或实用程序（如 Curl ）直接访问此 API 。下面介绍了 API 的主要亮点和优势。</block>
+  <block id="51f5ae5fe8fe0164ab413bfd10f98b26" category="admonition">要访问 REST API ，您需要先登录到 Astra Web 用户界面并生成 API 令牌。您必须在每个 API 请求中包含令牌。</block>
+  <block id="305f82eee427805e1142e3f58b3e6aff" category="section-title">基于 REST 技术构建</block>
+  <block id="6ef75e2bdeb92fa50466ba8c9d3673df" category="paragraph">Astra API 是使用 REST 技术和当前最佳实践创建的。核心技术包括 HTTP ， JSON 和 RBAC 。</block>
+  <block id="308e494b1e26dffecccd3503e87801ab" category="section-title">清晰地映射 REST 端点资源和对象模型</block>
+  <block id="8538dfe988aff949d5dd74e2d6c12949" category="paragraph">用于访问资源的外部 REST 端点映射到由 Astra 服务在内部维护的一致对象模型。对象模型采用实体关系（ ential-Relationship ， ER ）建模设计，有助于明确定义 API 操作和响应。</block>
+  <block id="5c4c20c54ea821de85f6857e32e28368" category="section-title">丰富的查询参数集</block>
+  <block id="0a59f11c8c269585f6e19423aa0f7c5c" category="paragraph">REST API 提供了一组丰富的查询参数，可用于访问资源集合。支持的部分操作包括筛选，排序和分页。</block>
+  <block id="e1cdc93506166ccc41d5fdc6c37d4fd1" category="section-title">与 Astra Web UI 对齐</block>
+  <block id="bdc2516aa5546e7df819a07cd9385485" category="paragraph">Astra Web 用户界面的设计与 REST API 一致，因此两个访问路径和用户体验之间保持一致。</block>
+  <block id="d92a4a4962077027ebae61f4c351e303" category="section-title">强大的调试和问题确定数据</block>
+  <block id="ee193b43e8405a785bab9bb4d7dc7825" category="paragraph">Astra REST API 可提供强大的调试和问题确定功能，包括在内部生成的事件和通知。</block>
+  <block id="fcf3c3d757005a8b62346f06f3b393ff" category="section-title">高级自动化技术的基础</block>
+  <block id="ae87f89d7c4f7c0e1e3b75bca46efc06" category="paragraph">除了直接访问 REST API 之外，您还可以使用基于 REST API 的其他自动化技术。</block>
+  <block id="c6c51849eeb1ac322baa3a99b7cd7e43" category="summary">这是 Astra Automation 的总结。</block>
+  <block id="b7c9edd2e46b359df3e102d497901244" category="doc">Astra 自动化文档</block>
+  <block id="e61ad2d01a2692e9ed29c90c0c413101" category="paragraph">您可以使用以下脚本列出 Astra 帐户的受管应用程序。</block>
+  <block id="365c8dec8255a8a164436c71a2611920" category="doc">使用 Python</block>
+  <block id="661e1b272625510e6473c31c45f241d8" category="paragraph">Python 是一种受欢迎的开发语言，尤其适用于数据中心自动化。本节提供的信息和示例可帮助您开始使用 Python 访问 Astra REST API 。</block>
+  <block id="16f5fb5b56bbf7e7a0cb81bc4f2cddad" category="paragraph">在运行示例 Python 脚本之前，您必须准备环境和所需的输入文件。</block>
+  <block id="0998ed5beee28345ae02fc586e2414f2" category="section-title">准备环境</block>
+  <block id="eacdf05a2e0f975530592f3afa7c5858" category="paragraph">下面介绍了运行 Python 脚本的基本配置要求。</block>
+  <block id="3c91a74236fab100f024452f6df13b5e" category="section-title">Python 3.</block>
+  <block id="5d4e91ee0c02874831683e91598ba067" category="paragraph">您需要安装最新版本的 Python 3 。</block>
+  <block id="56fc4201e750acc72a0afd74dd68fbf7" category="section-title">其他库</block>
+  <block id="eac991115911389530678363913a1115" category="paragraph">必须安装 * 请求 * 和 * urllib3* 库。您可以根据环境需要使用 pip 或其他 Python 管理工具。</block>
+  <block id="7a7bc312cecb8df7c0104f60400498da" category="section-title">网络访问</block>
+  <block id="b9649eec150477bd68ab9acda555e7dd" category="paragraph">运行脚本的客户端工作站必须能够通过网络访问 Internet ，并且能够访问位于 `https://astra.netapp.io` 的 Astra 站点。</block>
+  <block id="479ddc3e49067c67012525e145d88610" category="section-title">身份信息</block>
+  <block id="ddeb9b8a16dddd591affefce272eca3b" category="paragraph">您需要一个具有帐户标识符和 API 令牌的有效 Astra 帐户。请参见 <block ref="949977ec887dbf77cf703083221524dc" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="4b8e18b7aa4e59cfa3e050e47541b237" category="section-title">创建 JSON 输入文件</block>
+  <block id="28d986906a20a82d756066c923b70105" category="paragraph">Python 脚本依赖于 JSON 输入文件中包含的配置信息。下面提供了示例文件。</block>
+  <block id="b16c2ac3d45f78db4d3ebfb08672cd50" category="admonition">您需要根据环境的具体情况更新这些示例。</block>
+  <block id="332b0c66434f09b3a45336c87ac0af07" category="paragraph">以下文件包含 API 令牌和 Astra 帐户。您需要使用 ` -i` （或 ` -identity` ） CLI 参数将此文件传递到 Python 脚本。</block>
+  <block id="31862872c35b9509755103831963a7ff" category="paragraph">您可以访问其他资源来获取帮助并查找有关 NetApp 云服务和支持以及一般 REST 和云概念的更多信息。</block>
+  <block id="58bf8b302985815533fd451d770a1b0a" category="section-title">NetApp 云资源</block>
+  <block id="1eeb05c97eb6a268a15e00eff890e07f" category="inline-link">NetApp 云解决方案</block>
+  <block id="548968c32bccd14a9476be7490cfc41a" category="list-text"><block ref="548968c32bccd14a9476be7490cfc41a" category="inline-link-rx"></block></block>
+  <block id="4049649408c78f285cb012e2651847f4" category="paragraph">NetApp 云解决方案的中央站点。</block>
+  <block id="654f92d3e3cad866eb53b8787cc67444" category="inline-link">NetApp Cloud Central 控制台</block>
+  <block id="1f45f670e1231774c60ec8b4cae95f3a" category="list-text"><block ref="1f45f670e1231774c60ec8b4cae95f3a" category="inline-link-rx"></block></block>
+  <block id="6b75881aaba9107ac80de75cbb548445" category="paragraph">可登录的 NetApp Cloud Central 服务控制台。</block>
+  <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link">NetApp 支持</block>
+  <block id="4e3ffaad45a8ae63f200119be8101498" category="list-text"><block ref="4e3ffaad45a8ae63f200119be8101498" category="inline-link-rx"></block></block>
+  <block id="3d32fc1a126e880a8ed715ad4b9c42f5" category="paragraph">访问故障排除工具，文档和技术支持帮助。</block>
+  <block id="9908fe61d53709e616ab0ca94767db29" category="section-title">REST 概念和云技术</block>
+  <block id="e9c4f861f257833ba2ec75155047b6ed" category="inline-link">Dissertation</block>
+  <block id="b9e9e4c00e500b7ab02ea023fdde7644" category="list-text">博士<block ref="f64b654d7799e22745330f1f41a344ae" category="inline-link-rx"></block> 由 Roy Fielding 主讲</block>
+  <block id="fc0386108cb3bd212c4e2b1402e8cdc9" category="paragraph">本出版物介绍并建立了 REST 应用程序开发模型。</block>
+  <block id="2a723769d08b0732d8563ffe6bdaee7d" category="inline-link">Auth0</block>
+  <block id="fa4c9b25eb1d8f275cec785023f608b2" category="list-text"><block ref="fa4c9b25eb1d8f275cec785023f608b2" category="inline-link-rx"></block></block>
+  <block id="28ee6d27c391b09083c6f956239a12ea" category="paragraph">这是 Astra 服务用于 Web 访问的身份验证和授权平台服务。</block>
+  <block id="fa862ec81357f8907a8b75f4d969c590" category="inline-link">RFC 编辑器</block>
+  <block id="6763d4dfc2fa6c04b08ba1e1b7751f5f" category="list-text"><block ref="6763d4dfc2fa6c04b08ba1e1b7751f5f" category="inline-link-rx"></block></block>
+  <block id="ba793efaa4293b35388d140ee9308a68" category="paragraph">Web 和 Internet 标准的权威来源，作为一组编号唯一的 RFC 文档进行维护。</block>
+  <block id="27cf840321d17e56b1aa845077c2a75a" category="sidebar">Astra 自动化文档</block>
+  <block id="8a72d09dc95b3b91b5b0e50e2855c7df" category="sidebar">简要了解 Astra REST API 。</block>
+  <block id="c2ad6cb5783a46ec95fe67ed3a1b83a8" category="sidebar">准备开始使用 API 。</block>
+  <block id="d28d4b1da29c1d8e78bf13e2dcf81308" category="sidebar">生成 API 访问所需的令牌。</block>
+  <block id="18500a8a0b71e0c523540a041898f20e" category="sidebar">测试对 REST API 的基本访问。</block>
+  <block id="5a8acee56ec6e869519f734e2088df5f" category="sidebar">了解 REST Web 服务的技术基础。</block>
+  <block id="ffffaf26e2c2db4b739b56890328e4fc" category="sidebar">查看 HTTP 实施的详细信息。</block>
+  <block id="b48b16eddb41e4fa6195a15600ab9357" category="sidebar">了解 URL 格式及其如何由多个值组成。</block>
+  <block id="d75a5043a76ca76174481f399b106691" category="sidebar">其他使用注意事项</block>
+  <block id="9755f42ebf56e17cf5975e86f758625f" category="sidebar">了解 REST API 提供的安全性。</block>
+  <block id="10dbdee8ec3b04e3bbc3cf0d5107272d" category="sidebar">使用查询参数访问资源收集。</block>
+  <block id="0d94de5cabf3777edbb39575a23997f0" category="sidebar">准备支持 Astra 应用程序。</block>
+  <block id="a4d53babcc4593ce136c41558903e411" category="sidebar">熟悉 REST 资源和集合的设计。</block>
+  <block id="d5cddbe28bb94f4d691c86fc60edc7b4" category="sidebar">Astra REST API 资源的详细信息</block>
+  <block id="115b4cdc499a3cd389a6ef30356ff6ef" category="sidebar">查看有关各种 Astra 资源的简要介绍。</block>
+  <block id="9a5f09cf66e692efdae493ce4c9aa64f" category="sidebar">准备</block>
+  <block id="5e8f36bd36829d3772c20b89480e3105" category="sidebar">准备使用 Astra 工作流。</block>
+  <block id="3b9ade08e977be32fce53e27407f805e" category="sidebar">按类别划分的工作流</block>
+  <block id="5484b9d12f8b55f6000fb810f8fbbbc1" category="sidebar">这些工作流分为多个不同的类别。</block>
+  <block id="a7f5f35426b927411fc9231b56382173" category="sidebar">Python</block>
+  <block id="4916981f03660e03cc80dd62c59eae32" category="sidebar">准备运行示例 Python 脚本。</block>
+  <block id="b601ee4ab1a336d55b2570d122e0acd8" category="sidebar">运行示例脚本以列出受管应用程序。</block>
+  <block id="36b64aad8a26246fe3ad4116a2b6f289" category="sidebar">诊断</block>
+  <block id="f05754a1ff0413a18fba9fcecbf43b4d" category="sidebar">获取 API 令牌</block>
+  <block id="824ee32982b0cc1ac1aca8447c9cb3cf" category="sidebar">应用程序控制</block>
+  <block id="0990e289177ad252ad62d3e723123f2d" category="sidebar">列出非受管应用程序</block>
+  <block id="6e401175b804a895ba134912540780f9" category="sidebar">列出受管应用程序</block>
+  <block id="373370c9330843dbc9a492b75e68e396" category="sidebar">应用程序保护</block>
+  <block id="f787d303cdb9d100881b69dd4d492588" category="sidebar">列出快照</block>
+  <block id="f7bcabdf07e891b3508301fa92282eea" category="sidebar">列出备份</block>
+  <block id="bfb2cee5de3a54c30810194a0077e673" category="sidebar">创建快照</block>
+  <block id="905771c53eca9759892774cc3976e8b7" category="sidebar">创建备份</block>
+  <block id="c461a6f00f9a642a637e3f162f3ded1b" category="sidebar">删除快照</block>
+  <block id="b6cf8e12bbbeee058067ebf8c8dda7e2" category="sidebar">删除备份</block>
+  <block id="9d29351a61669dd1dfeee1d7e8b13578" category="sidebar">克隆应用程序</block>
+  <block id="6c2edaf69733280351ebbe36a83562ae" category="sidebar">从快照克隆应用程序</block>
+  <block id="879ad4bddb82a977b90643c7b33a4e49" category="sidebar">从备份克隆应用程序</block>
+  <block id="dc299aaf3e84eb3627f50d2d2484cf17" category="sidebar">从备份还原应用程序</block>
+  <block id="999e0dcec594b55111b1ede61b4409f5" category="sidebar">列出通知</block>
+</blocks>

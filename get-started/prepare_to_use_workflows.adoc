@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: get-started/prepare_to_use_workflows.html 
+keywords:  
+summary:  
+---
+= 准备使用这些工作流
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在将 Astra 工作流用于实时部署之前，您应熟悉这些工作流的组织和格式。
+
+
+
+== 简介
+
+_Workflow _ 是完成特定管理任务或目标所需的一个或多个步骤的序列。Astra 工作流中的每个步骤都是以下步骤之一：
+
+* REST API 调用（包含 curl 和 JSON 示例等详细信息）
+* 调用另一个 Astra 工作流
+* 其他相关任务（例如做出必要的设计决策）
+
+
+这些工作流包括完成每个任务所需的核心步骤和参数。它们为自定义自动化环境提供了一个起点。
+
+
+
+== 通用输入参数
+
+以下所述的输入参数对于用于说明 REST API 调用的所有 curl 示例通用。
+
+
+NOTE: 由于这些输入参数是通用的要求，因此在各个工作流中不会对其进行进一步说明。如果在特定的 curl 示例中使用了其他输入参数，则会在 * 其他输入参数 * 一节中进行介绍。
+
+
+
+=== 路径参数
+
+每次 REST API 调用使用的端点路径都包括以下参数。另请参见 link:../rest-core/url_format.html["URL 格式"] 有关详细信息 ...
+
+帐户 ID:: 这是用于标识运行 API 操作的 Astra 帐户的 UUIDv4 值。请参见 link:../get-started/get_api_token.html["获取 API 令牌"] 有关查找帐户 ID 的详细信息，请参见。
+
+
+
+
+=== 请求标题
+
+根据 REST API 调用，您可能需要包含多个请求标头。
+
+Authorization:: 工作流中的所有 API 调用都需要 API 令牌来标识用户。您必须在 `Authorization` Request 标题中包含令牌。请参见 link:../get-started/get_api_token.html["获取 API 令牌"] 有关生成 API 令牌的详细信息。
+内容类型:: 对于请求正文中包含 JSON 的 HTTP POST 和 PUT 请求，您应根据 Astra 资源声明介质类型。例如，在为受管应用程序创建快照时，可以包括标题 `Content-Type ： application/Astra-appsnap+json` 。
+接受:: 您可以根据 Astra 资源声明响应中预期内容的特定介质类型。例如，在列出受管应用程序的备份时，您可以包括标题 `accept ： application/Astra-appBackup+json` 。但是，为了简单起见，工作流中的 curl 样本接受所有介质类型。
+
+
+
+
+== 表示令牌和标识符
+
+在 curl 示例中使用的 API 令牌和其他 ID 值是不透明的，没有明显的含义。因此，为了提高示例的可读性，不会使用实际令牌和 ID 值。而是使用较小的保留关键字，它具有以下几个优势：
+
+* curl 和 JSON 示例更清晰，更易于理解。
+* 由于所有关键字都使用相同的格式以及括号和大写字母，因此您可以快速确定要插入或提取的位置和内容。
+* 不会丢失任何值，因为无法复制原始参数并将其用于实际部署。
+
+
+以下是在 curl 示例中使用的一些常见保留关键字。此列表并非详尽无遗，我们会根据需要使用其他关键字。根据具体情况，其含义应该是显而易见的。
+
+[cols="25,15,60"]
+|===
+| 关键字 | Type | Description 
+
+
+| <account_ID> | 路径 | 用于标识运行 API 操作的帐户的 UUIDv4 值。 
+
+
+| <api_token> | 标题 | 标识和授权调用方的令牌。 
+
+
+| <managed_app_ID> | 路径 | 用于标识 API 调用的受管应用程序的 UUIDv4 值。 
+|===

@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: additional/additional_considerations.html 
+keywords:  
+summary:  
+---
+= 使用 REST API 时的其他注意事项
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Astra REST API 还有几个其他特性会影响其操作和使用。在发出 API 调用之前，您应了解这些注意事项。

@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: additional/diagnostics_support.html 
+keywords:  
+summary:  
+---
+= 诊断和支持
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Astra REST API 提供了多种支持功能，可用于诊断和调试。
+
+
+
+== API resources
+
+API 资源提供了多种可提供诊断信息和支持的 Astra 功能。
+
+[cols="20,80"]
+|===
+| Type | Description 
+
+
+| 事件 | 在 Astra 处理过程中记录的系统活动。 
+
+
+| 通知 | 被视为足够重要的一小部分事件，可提供给用户。 
+
+
+| 未读通知 | 用户尚未读取或检索的通知。 
+|===

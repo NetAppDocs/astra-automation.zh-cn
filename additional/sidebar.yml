@@ -1,0 +1,11 @@
+---
+section: additional
+title: 其他使用注意事项
+url: "/additional/additional_considerations.html"
+entries:
+- title: 安全性
+  url: "/additional/security.html"
+- title: 使用收集
+  url: "/additional/working_with_collections.html"
+- title: 诊断
+  url: "/additional/diagnostics_support.html"

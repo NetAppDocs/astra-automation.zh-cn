@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: information/additional_resources.html 
+keywords:  
+summary:  
+---
+= 其他资源
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以访问其他资源来获取帮助并查找有关 NetApp 云服务和支持以及一般 REST 和云概念的更多信息。
+
+
+
+=== NetApp 云资源
+
+* https://cloud.netapp.com/["NetApp 云解决方案"^]
++
+NetApp 云解决方案的中央站点。
+
+* https://services.cloud.netapp.com/redirect-to-login?startOnSignup=false["NetApp Cloud Central 控制台"^]
++
+可登录的 NetApp Cloud Central 服务控制台。
+
+* https://mysupport.netapp.com/["NetApp 支持"^]
++
+访问故障排除工具，文档和技术支持帮助。
+
+
+
+
+
+=== REST 概念和云技术
+
+* 博士 https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm["Dissertation"^] 由 Roy Fielding 主讲
++
+本出版物介绍并建立了 REST 应用程序开发模型。
+
+* https://auth0.com/["Auth0"^]
++
+这是 Astra 服务用于 Web 访问的身份验证和授权平台服务。
+
+* https://www.rfc-editor.org/["RFC 编辑器"^]
++
+Web 和 Internet 标准的权威来源，作为一组编号唯一的 RFC 文档进行维护。
+
+

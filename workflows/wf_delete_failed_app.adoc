@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_delete_failed_app.html 
+keywords:  
+summary:  
+---
+= 删除失败的应用程序
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果某个受管应用程序的备份或快照处于故障状态，您可能无法将其删除。在这种情况下，您可以使用下面所述的工作流手动删除此应用程序。
+
+
+
+=== 1. 选择要删除的受管应用程序
+
+执行工作流 link:wf_list_man_apps.html["列出受管应用程序"] 并选择要删除的应用程序。
+
+
+
+=== 2. 列出应用程序的现有备份
+
+执行工作流 link:wf_list_backups.html["列出备份"]。
+
+
+
+=== 3. 删除所有备份
+
+通过执行此工作流删除所有应用程序备份 link:wf_delete_backup.html["删除备份"] 列表中的每个备份。
+
+
+
+=== 4. 列出应用程序的现有快照
+
+执行工作流 link:wf_list_snapshots.html["列出快照"]。
+
+
+
+=== 5. 删除所有快照
+
+执行工作流 link:wf_delete_snapshot.html["删除快照"] 列表中的每个快照。
+
+
+
+=== 6. 删除应用程序
+
+执行工作流 link:wf_unmanage_app.html["取消管理应用程序"] 删除应用程序。
