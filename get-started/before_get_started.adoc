@@ -13,7 +13,7 @@ summary:
 
 
 [role="lead"]
-准备使用 Astra REST API 时，应执行几个步骤。
+您可以通过查看下面所述的步骤来快速准备开始使用 Astra REST API 。
 
 
 
@@ -23,9 +23,9 @@ summary:
 
 
 
-===== 拥有 Cloud Central 帐户凭据
+===== 拥有 Astra 帐户凭据
 
-您需要使用 * Auth0* 帐户凭据登录到 Astra Web 用户界面并生成 API 令牌。
+您需要使用 Astra 凭据登录到 Astra Web 用户界面并生成 API 令牌。使用 Astra 控制中心，您可以在本地管理这些凭据。使用 Astra 控制服务时，帐户凭据由 * Auth0* 服务维护。
 
 
 

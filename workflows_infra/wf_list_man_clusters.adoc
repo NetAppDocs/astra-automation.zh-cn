@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: workflows_infra/wf_list_man_clusters.html 
+keywords:  
+summary:  
+---
+= 列出受管集群
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以列出当前由 Astra 管理的 Kubernetes 集群。
+
+
+
+=== 1. 列出集群
+
+执行以下 REST API 调用。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 获取 | /account/ ｛ accountID ｝ /topology/v1/managedClusters 
+|===
+
+
+===== curl 示例：返回所有集群的所有数据
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/managedClusters' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----

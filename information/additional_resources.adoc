@@ -17,6 +17,20 @@ summary:
 
 
 
+=== Astra
+
+* https://docs.netapp.com/us-en/astra-control-center/["Astra 控制中心文档"^]
++
+在客户内部部署的 Astra Control Center 软件的文档。
+
+* https://docs.netapp.com/us-en/astra/["Astra Control Service 文档"^]
++
+公有云中提供的 Astra 控制服务软件文档。
+
+
+
+
+
 === NetApp 云资源
 
 * https://cloud.netapp.com/["NetApp 云解决方案"^]

@@ -1,0 +1,22 @@
+---
+section: workflows_infra
+title: 基础架构工作流
+entries:
+- title: 开始之前
+  url: "/workflows_infra/workflows_infra_before.html"
+- title: 身份和访问
+  entries:
+  - title: 列出用户
+    url: "/workflows_infra/wf_list_users.html"
+- title: 存储分段
+  entries:
+  - title: 列出分段
+    url: "/workflows_infra/wf_list_buckets.html"
+- title: 存储
+  entries:
+  - title: 列出存储后端
+    url: "/workflows_infra/wf_list_storage_backends.html"
+- title: 集群
+  entries:
+  - title: 列出受管集群
+    url: "/workflows_infra/wf_list_man_clusters.html"

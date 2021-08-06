@@ -66,7 +66,7 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
 
 [source, json]
 ----
-{{
+{
   "items": [
     [
       "maria",

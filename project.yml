@@ -3,11 +3,13 @@ sidebar:
   entries:
   - title: Astra 自动化文档
     url: "/index.html"
+  - section: rn
   - section: intro
   - section: get-started
   - section: rest-core
   - section: additional
   - section: endpoints
+  - section: workflows_infra
   - section: workflows
   - section: python
   - section: reference
@@ -22,10 +24,10 @@ homepage:
       summary: 简要了解 Astra REST API 。
       url: "/intro/introduction.html"
     - title: 开始之前
-      summary: 准备开始使用 API 。
+      summary: 准备开始使用 REST API 。
       url: "/get-started/before_get_started.html"
     - title: 获取 API 令牌
-      summary: 生成 API 访问所需的令牌。
+      summary: 生成访问 API 所需的令牌。
       url: "/get-started/get_api_token.html"
     - title: 大家好
       summary: 测试对 REST API 的基本访问。
@@ -41,7 +43,7 @@ homepage:
     - title: URL 格式
       summary: 了解 URL 格式及其如何由多个值组成。
       url: "/rest-core/url_format.html"
-  - title: 其他使用注意事项
+  - title: 其他注意事项
     links:
     - title: 安全性
       summary: 了解 REST API 提供的安全性。
@@ -65,9 +67,12 @@ homepage:
     - title: 准备
       summary: 准备使用 Astra 工作流。
       url: "/get-started/prepare_to_use_workflows.html"
-    - title: 按类别划分的工作流
-      summary: 这些工作流分为多个不同的类别。
-      url: "/workflows/workflows.html"
+    - title: 基础架构工作流
+      summary: 维护 Astra 运行时基础架构所需的工作流。
+      url: "/workflows_infra/workflows_infra_before.html"
+    - title: 管理工作流
+      summary: 用于管理受管应用程序的通用工作流。
+      url: "/workflows/workflows_before.html"
   - title: Python
     links:
     - title: 开始之前

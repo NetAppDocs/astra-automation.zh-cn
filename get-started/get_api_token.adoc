@@ -13,19 +13,19 @@ summary:
 
 
 [role="lead"]
-要访问 Astra REST API ，您必须具有 API 访问令牌。
+要使用 Astra REST API ，您必须具有 API 访问令牌。
 
 
 NOTE: Astra API 令牌永不过期，但是您可以在不再需要某个令牌时将其撤消。
 
-您需要一个 Astra 服务帐户。
+您需要 Astra 帐户的凭据。
 
-此任务会在 Astra Web 界面上生成 API 令牌。您还应检索帐户 ID 。
+此任务会在 Astra Web 界面上生成 API 令牌。此外，您还应检索帐户 ID ，进行 API 调用时也需要此 ID 。
 
 .步骤
-. 使用您的帐户凭据登录到 Astra 服务。
+. 使用您的帐户凭据登录到 Astra 。
 +
-https://astra.netapp.io/["https://astra.netapp.io"^]
+访问以下站点以获取 Astra 控制服务： https://astra.netapp.io/["https://astra.netapp.io"^]
 
 . 单击页面右上角的图图标并选择 * API access* 。
 . 单击页面上的 * 生成 API 令牌 * ，然后在弹出窗口中单击 * 生成 API 令牌 * 。

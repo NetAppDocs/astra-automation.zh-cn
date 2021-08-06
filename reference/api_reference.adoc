@@ -16,14 +16,14 @@ summary:
 您可以访问所有 Astra REST API 调用的详细信息，包括 HTTP 方法，输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。
 
 
-NOTE: 目前，可通过 Astra 服务在线获取 REST API 参考文档。
+NOTE: REST API 参考文档当前随 Astra 提供，可在线获取。
 
-您需要一个 Astra 服务帐户。
+您需要一个 Astra 控制中心或 Astra 控制服务帐户。
 
 .步骤
-. 使用您的帐户凭据登录到 Astra 服务。
+. 使用您的帐户凭据登录到 Astra 。
 +
-link:https://astra.netapp.io["https://astra.netapp.io"^]
+访问以下站点以获取 Astra 控制服务： link:https://astra.netapp.io["https://astra.netapp.io"^]
 
 . 单击页面右上角的图图标并选择 * API access* 。
 . 在页面顶部，单击 * API Documentage* 下显示的 URL 。

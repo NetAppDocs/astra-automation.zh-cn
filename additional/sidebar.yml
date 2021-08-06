@@ -1,7 +1,6 @@
 ---
 section: additional
-title: 其他使用注意事项
-url: "/additional/additional_considerations.html"
+title: 其他 REST 注意事项
 entries:
 - title: 安全性
   url: "/additional/security.html"

@@ -1,10 +1,10 @@
 ---
 section: workflows
-title: 工作流
-url: "/workflows/workflows.html"
+title: 管理工作流
 entries:
+- title: 开始之前
+  url: "/workflows/workflows_before.html"
 - title: 应用程序控制
-  url: "/workflows/wf_app_control.html"
   entries:
   - title: 列出非受管应用程序
     url: "/workflows/wf_list_unman_apps.html"
@@ -17,7 +17,6 @@ entries:
   - title: 取消管理应用程序
     url: "/workflows/wf_unmanage_app.html"
 - title: 应用程序保护
-  url: "/workflows/wf_app_protection.html"
   entries:
   - title: 列出快照
     url: "/workflows/wf_list_snapshots.html"
@@ -32,7 +31,6 @@ entries:
   - title: 删除备份
     url: "/workflows/wf_delete_backup.html"
 - title: 克隆和还原应用程序
-  url: "/workflows/wf_app_cloning.html"
   entries:
   - title: 克隆应用程序
     url: "/workflows/wf_clone_app.html"
@@ -43,7 +41,6 @@ entries:
   - title: 从备份还原应用程序
     url: "/workflows/wf_restore_app_backup.html"
 - title: 支持
-  url: "/workflows/wf_support.html"
   entries:
   - title: 列出通知
     url: "/workflows/wf_list_notifications.html"

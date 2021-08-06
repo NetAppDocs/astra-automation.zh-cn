@@ -1,7 +1,6 @@
 ---
 section: rest-core
 title: 核心 REST 实施
-url: "/rest-core/rest_implementation.html"
 entries:
 - title: REST Web 服务
   url: "/rest-core/rest_web_services.html"

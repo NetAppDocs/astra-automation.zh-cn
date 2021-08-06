@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: workflows_infra/wf_list_buckets.html 
+keywords:  
+summary:  
+---
+= 列出分段
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以列出为特定 Astra 帐户定义的 S3 存储分段。
+
+
+
+=== 1. 列出分段
+
+执行以下 REST API 调用。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 获取 | /account/ ｛ accountID ｝ /topology/v1/b桶 
+|===
+
+
+===== curl 示例：返回所有存储分段的所有数据
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/buckets' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
