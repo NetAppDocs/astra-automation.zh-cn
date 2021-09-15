@@ -13,7 +13,7 @@ summary:
 
 
 [role="lead"]
-您可以列出为特定 Astra 帐户定义的应用程序。
+您可以列出为特定 Astra 帐户定义的用户。
 
 
 

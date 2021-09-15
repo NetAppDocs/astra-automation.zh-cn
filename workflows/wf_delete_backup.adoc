@@ -16,9 +16,6 @@ summary:
 您可以删除与受管应用程序关联的备份。
 
 
-IMPORTANT: 使用来自 Michael 的输入和 foce 标头进行更新。
-
-
 
 === 开始之前
 

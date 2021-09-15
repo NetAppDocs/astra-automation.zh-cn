@@ -85,7 +85,6 @@
   <block id="135b308ed83c53f1516b7c754566d1c4" category="doc">开始之前</block>
   <block id="0182974655f974e8429fb64bb3d15eb2" category="section-title">查看 REST 概念和实施</block>
   <block id="67d003f4d71c424d95442bd22e4d9b35" category="inline-link-macro">核心 REST 实施</block>
-  <block id="fb41b868adeac131ab0ae7d9867182a6" category="paragraph">请务必查看 <block ref="c26a9f88bafefa1ad48ed3b31483dd1a" category="inline-link-macro-rx"></block> 有关 REST 概念的信息以及有关如何设计 Astra REST API 的详细信息。</block>
   <block id="bf07f432276ee2fe7e55f9ea12c2ba5a" category="section-title">获取更多信息</block>
   <block id="8cd58c89ff3d51a256ecfe3fe8bab20f" category="inline-link-macro">其他资源</block>
   <block id="1975d27c17bd745494bde5176f3687d2" category="paragraph">您应了解中建议的追加信息资源 <block ref="d9232e9ba333ee728d29f8228e038c57" category="inline-link-macro-rx"></block>。</block>
@@ -683,7 +682,6 @@
   <block id="6a627ba1141f45676a9b0d39e9f12cbe" category="cell">克隆和还原应用程序</block>
   <block id="f51006269ca36dd064b0504bccc2bab2" category="paragraph">使用管理工作流时，还需要注意一些其他注意事项。</block>
   <block id="78997a84642061d9102d778722872a51" category="paragraph">克隆应用程序时，需要考虑一些事项。以下所述参数是 JSON 输入的一部分。</block>
-  <block id="845be01916750c503f0ca12fe8a7690f" category="admonition">使用来自 Michael 的输入和 foce 标头进行更新。</block>
   <block id="a21d40ddb0a01edc7a833c5cd6f2ca2d" category="admonition">REST API 参考文档当前随 Astra 提供，可在线获取。</block>
   <block id="18bfd97c33ffd64bcd077be2ff48cd45" category="paragraph">您需要一个 Astra 控制中心或 Astra 控制服务帐户。</block>
   <block id="1fb6c6816575c47391caa2d4408774f5" category="paragraph">访问以下站点以获取 Astra 控制服务： <block ref="a7c1946d9e83ca7cb364e2283d9c1bfa" category="inline-link-macro-rx"></block></block>
@@ -732,7 +730,6 @@
   <block id="9b99bf7d2bfd4b09363304c166832734" category="cell">集群</block>
   <block id="fb06a1a5fb91fa6698fe3e86c0957986" category="cell">您可以添加受管 Kubernetes 集群，以便保护和支持这些集群所包含的应用程序。</block>
   <block id="f923f903857a5387d3db70494e074632" category="doc">列出用户</block>
-  <block id="1099c9446c6d35c1126aacaf3c0324af" category="paragraph">您可以列出为特定 Astra 帐户定义的应用程序。</block>
   <block id="908398b479e9327ae04f2325e64e79ad" category="section-title">1. 列出用户</block>
   <block id="b16682201ded465cc3160dbc12de687f" category="cell">/account/ ｛ accountID ｝ /core/v1/users</block>
   <block id="d5eaca06185acdad8b69d18d2b7d8a07" category="section-title">curl 示例：返回所有用户的所有数据</block>
@@ -746,4 +743,6 @@
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="c59ae8d7beeb519a23478ab048af482c" category="paragraph"><block ref="c59ae8d7beeb519a23478ab048af482c" category="inline-link-macro-rx"></block></block>
   <block id="e81b0f8fae224ca0c3d3258b75a989dd" category="section-title">Astra Control API 许可证</block>
+  <block id="9c54608eb3a6fa74fe3dfd79d4cb5bb7" category="paragraph">请务必查看 <block ref="533ba43849291e761802432633424684" category="inline-link-macro-rx"></block> 有关 REST 概念的信息以及有关如何设计 Astra REST API 的详细信息。</block>
+  <block id="4c7aee6e8d40dfdf7713e4a924264d5a" category="paragraph">您可以列出为特定 Astra 帐户定义的用户。</block>
 </blocks>

@@ -19,7 +19,7 @@ summary:
 
 ===== 查看 REST 概念和实施
 
-请务必查看 link:../rest-core/rest_implementation.html["核心 REST 实施"] 有关 REST 概念的信息以及有关如何设计 Astra REST API 的详细信息。
+请务必查看 link:../rest-core/rest_web_services.html["核心 REST 实施"] 有关 REST 概念的信息以及有关如何设计 Astra REST API 的详细信息。
 
 
 
