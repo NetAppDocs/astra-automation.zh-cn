@@ -745,4 +745,8 @@
   <block id="e81b0f8fae224ca0c3d3258b75a989dd" category="section-title">Astra Control API 许可证</block>
   <block id="9c54608eb3a6fa74fe3dfd79d4cb5bb7" category="paragraph">请务必查看 <block ref="533ba43849291e761802432633424684" category="inline-link-macro-rx"></block> 有关 REST 概念的信息以及有关如何设计 Astra REST API 的详细信息。</block>
   <block id="4c7aee6e8d40dfdf7713e4a924264d5a" category="paragraph">您可以列出为特定 Astra 帐户定义的用户。</block>
+  <block id="e6c08d334ddcc8f5824e2eb3371f9b4f" category="admonition">您可以使用可选的请求标头强制删除失败的备份，如下所述。</block>
+  <block id="24d522ed56286396130064a0fbfa76f1" category="cell">强制删除</block>
+  <block id="7fbc2bc01923d084eec8be7efd48837b" category="cell">用于强制删除失败的备份。</block>
+  <block id="58f00e9fb9c0fb6247e6c188b96d901b" category="section-title">curl 示例：使用 force 选项删除应用程序的单个备份</block>
 </blocks>

@@ -31,6 +31,9 @@ summary:
 
 执行以下 REST API 调用。
 
+
+NOTE: 您可以使用可选的请求标头强制删除失败的备份，如下所述。
+
 [cols="25,75"]
 |===
 | HTTP 方法 | 路径 
@@ -53,6 +56,9 @@ summary:
 
 
 | 备份 ID | 路径 | 是的。 | 标识要删除的备份。 
+
+
+| 强制删除 | 标题 | 否 | 用于强制删除失败的备份。 
 |===
 
 
@@ -61,4 +67,12 @@ summary:
 [source, curl]
 ----
 curl --location -i --request DELETE 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>/appBackups/<BACKUP_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== curl 示例：使用 force 选项删除应用程序的单个备份
+
+[source, curl]
+----
+curl --location -i --request DELETE 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>/appBackups/<BACKUP_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --header 'Force-Delete: true'
 ----
