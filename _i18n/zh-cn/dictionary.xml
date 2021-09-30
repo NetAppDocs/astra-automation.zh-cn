@@ -749,4 +749,5 @@
   <block id="24d522ed56286396130064a0fbfa76f1" category="cell">强制删除</block>
   <block id="7fbc2bc01923d084eec8be7efd48837b" category="cell">用于强制删除失败的备份。</block>
   <block id="58f00e9fb9c0fb6247e6c188b96d901b" category="section-title">curl 示例：使用 force 选项删除应用程序的单个备份</block>
+  <block id="d58b759501469292f5d0464d265c376c" category="sidebar">REST 实施</block>
 </blocks>

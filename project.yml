@@ -32,7 +32,7 @@ homepage:
     - title: 大家好
       summary: 测试对 REST API 的基本访问。
       url: "/get-started/hello_world.html"
-  - title: 核心 REST 实施
+  - title: REST 实施
     links:
     - title: REST Web 服务
       summary: 了解 REST Web 服务的技术基础。
