@@ -1,5 +1,12 @@
 ---
-settings: {}
+settings:
+  name: Astra Automation
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: true
+    langs: zh-cn,us-en,ja-jp
 sidebar:
   entries:
   - title: Astra 自动化文档
