@@ -13,7 +13,7 @@ summary:
 
 
 [role="lead"]
-Astra REST API 提供了多种支持功能，可用于诊断和调试。
+Astra Control REST API 提供了多种支持功能，可用于诊断和调试。
 
 
 

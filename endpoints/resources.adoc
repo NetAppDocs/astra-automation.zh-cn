@@ -13,16 +13,16 @@ summary:
 
 
 [role="lead"]
-您可以使用通过 REST API 提供的资源自动部署 Astra 。每个资源都通过一个或多个端点进行访问。本节介绍了可在规划自动化部署时使用的 REST 资源。
+您可以使用通过 Astra Control REST API 提供的资源来自动执行 Astra 部署。每个资源都通过一个或多个端点进行访问。本节介绍了可在规划自动化部署时使用的 REST 资源。
 
 
-NOTE: 用于访问 Astra 资源的路径和完整 URL 的格式基于多个值。请参见 link:../rest-core/url_format.html["URL 格式"] 有关详细信息 ...另请参见  有关使用 Astra 资源和端点的详细信息。
+NOTE: 用于访问 Astra Control 资源的路径和完整 URL 的格式基于多个值。请参见 link:../rest-core/url_format.html["URL 格式"] 有关详细信息 ...另请参见  有关使用 Astra 资源和端点的详细信息。
 
 
 
-== Astra REST 资源和端点
+== Astra Control REST 资源和端点
 
-Astra REST API 中提供的主要资源端点分为三类。除了需要说明的情况外，可以使用一整套 CRUD 操作（创建，读取，更新，删除）来访问每个资源。
+Astra Control REST API 中提供的主要资源端点分为三类。除了需要说明的情况外，可以使用一整套 CRUD 操作（创建，读取，更新，删除）来访问每个资源。
 
 
 
@@ -81,7 +81,7 @@ Volume:: 卷资源表示与受管应用程序关联的 Kubernetes 存储卷。
 您可以使用多种其他资源和端点来支持 Astra 部署。
 
 
-NOTE: 这些资源和端点当前未包含在 Astra API 参考文档中。
+NOTE: 这些资源和端点当前未包含在 Astra Control API 参考文档中。
 
 OpenAPI:: 通过 OpenAPI 端点可以访问当前的 OpenAPI JSON 文档和其他相关资源。
 OpenMetrics:: 通过 OpenMetrics 端点，您可以通过 OpenMetrics 资源访问帐户指标。Astra 控制中心部署模式支持此功能。

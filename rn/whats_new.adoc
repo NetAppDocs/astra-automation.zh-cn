@@ -4,7 +4,7 @@ permalink: rn/whats_new.html
 keywords:  
 summary:  
 ---
-= Astra REST API 的新增功能
+= Astra Control REST API 新增功能
 :hardbreaks:
 :nofooter: 
 :icons: font
@@ -13,7 +13,7 @@ summary:
 
 
 [role="lead"]
-NetApp 会定期更新 Astra REST API ，为您提供新功能，增强功能和错误修复。
+NetApp 会定期更新 Astra Control REST API ，为您提供新功能，增强功能和错误修复。
 
 
 
@@ -25,19 +25,19 @@ NetApp 会定期更新 Astra REST API ，为您提供新功能，增强功能和
 
 === Astra 控制中心部署模式
 
-除了作为公有云服务提供的现有 Astra 控制服务之外，此版本还包括 Astra 控制中心内部部署模式。您可以在站点上安装 Astra 控制中心来管理本地 Kubernetes 环境。这两种部署模式共享相同的 REST API ，但根据需要在文档中指出了一些细微的差异。
+除了作为公有云服务提供的现有 Astra 控制服务之外，此版本还包括 Astra 控制中心内部部署模式。您可以在站点上安装 Astra 控制中心来管理本地 Kubernetes 环境。两种 Astra Control 部署模式共享同一个 REST API ，但文档中会根据需要指出一些细微的差异。
 
 
 
 === 扩展 REST 资源类型
 
-通过 Astra REST API 访问的资源数量已大幅增加，许多新资源为内部 Astra 控制中心产品奠定了基础。新资源包括： ASUP ，授权，功能，许可证，设置， 订阅，存储分段，云，集群，受管集群， 存储后端和存储类。请参见 link:../endpoints/resources.html["Resources"] 有关详细信息 ...
+通过 Astra Control REST API 访问的资源数量已大幅增加，许多新资源为内部 Astra Control Center 产品奠定了基础。新资源包括： ASUP ，授权，功能，许可证，设置， 订阅，存储分段，云，集群，受管集群， 存储后端和存储类。请参见 link:../endpoints/resources.html["Resources"] 有关详细信息 ...
 
 
 
 === 支持 Astra 部署的其他端点
 
-除了扩展的 Astra REST 资源之外，还有其他几个新的 API 端点可用于支持 Astra 部署。
+除了扩展的 REST 资源之外，还有其他几个新的 API 端点可用于支持 Astra Control 部署。
 
 支持 OpenAPI:: 通过 OpenAPI 端点可以访问当前的 OpenAPI JSON 文档和其他相关资源。
 支持 OpenMetrics:: 通过 OpenMetrics 资源，您可以通过 OpenMetrics 端点访问帐户指标。
@@ -53,7 +53,7 @@ NetApp 会定期更新 Astra REST API ，为您提供新功能，增强功能和
 
 === 引入 REST API
 
-Astra REST API 可与 Astra Control Service 产品配合使用。它是基于 REST 技术和当前最佳实践创建的。API 为 Astra 部署的自动化奠定了基础，并具有以下功能和优势。
+Astra Control REST API 可与 Astra Control Service 产品配合使用。它是基于 REST 技术和当前最佳实践创建的。API 为 Astra 部署的自动化奠定了基础，并具有以下功能和优势。
 
 Resources:: 有 14 种可用的 REST 资源类型。
 API 令牌访问:: REST API 的访问通过 API 访问令牌提供，您可以在 Astra Web 用户界面上生成此令牌。通过 API 令牌，可以安全地访问 API 。

@@ -13,7 +13,7 @@ summary:
 
 
 [role="lead"]
-通过 Astra REST API ，可以访问资源实例和资源实例集合。
+通过 Astra Control REST API ，可以访问资源实例和资源实例集合。
 
 
 NOTE: 从概念上讲， REST * 资源 * 类似于使用面向对象的编程（ OOP ）语言和系统定义的 * 对象 * 。有时，这些术语可以互换使用。但一般来说，在外部 REST API 环境中使用时，首选使用 "resource" ，而在服务器上存储的相应有状态实例数据中使用 "object" 。
@@ -22,13 +22,13 @@ NOTE: 从概念上讲， REST * 资源 * 类似于使用面向对象的编程（
 
 == Astra 资源的属性
 
-Astra REST API 符合 RESTful 设计原则。每个 Astra 资源实例都是根据定义明确的资源类型创建的。一组相同类型的资源实例称为 * 集合 * 。API 调用会对单个资源或资源集合执行操作。
+Astra Control REST API 符合 RESTful 设计原则。每个 Astra 资源实例都是根据定义明确的资源类型创建的。一组相同类型的资源实例称为 * 集合 * 。API 调用会对单个资源或资源集合执行操作。
 
 
 
 ===== 资源类型
 
-Astra REST API 附带的资源类型具有以下特征：
+Astra Control REST API 附带的资源类型具有以下特征：
 
 * 每个资源类型均使用模式定义（通常在 JSON 中）
 * 每个资源架构都包括资源类型和版本
@@ -39,7 +39,7 @@ Astra REST API 附带的资源类型具有以下特征：
 
 ===== 资源实例
 
-通过 Astra REST API 提供的资源实例具有以下特征：
+通过 Astra Control REST API 提供的资源实例具有以下特征：
 
 * 资源实例是根据单个资源类型创建的
 * 资源类型使用介质类型值来指示
@@ -52,7 +52,7 @@ Astra REST API 附带的资源类型具有以下特征：
 
 ===== 资源收集
 
-通过 Astra REST API 提供的资源收集具有以下特征：
+通过 Astra Control REST API 提供的资源收集具有以下特征：
 
 * 一种资源类型的一组资源实例称为集合
 * 资源集合具有一个唯一且长期存在的 URL
@@ -71,7 +71,7 @@ NOTE: 资源标识符是用于收集的主密钥。
 
 == Astra 资源的通用结构
 
-每个 Astra 资源都使用一个通用结构进行定义。
+每个 Astra Control 资源都使用一个通用结构进行定义。
 
 
 

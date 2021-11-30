@@ -13,7 +13,7 @@ summary:
 
 
 [role="lead"]
-Astra REST API 提供多个安全层。
+Astra Control REST API 提供多个安全层。
 
 
 NOTE: 所有 HTTP 网络流量均使用传输层安全（ Transport Layer Security ， TLS ）标准进行保护。
@@ -22,7 +22,7 @@ NOTE: 所有 HTTP 网络流量均使用传输层安全（ Transport Layer Securi
 
 == Astra API 令牌
 
-要使用 Astra REST API ，您必须在 `Authorization` Request 标头中为每个请求提供一个 API 令牌。请注意以下事项：
+要使用 Astra Control REST API ，您必须在 `Authorization` Request 标头中为每个请求提供一个 API 令牌。请注意以下事项：
 
 * 您可以在 Astra Web 用户界面上生成 API 令牌。
 * 令牌创建后永不过期。

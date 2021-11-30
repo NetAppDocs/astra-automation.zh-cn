@@ -67,7 +67,7 @@ homepage:
     - title: 资源和集合
       summary: 熟悉 REST 资源和集合的设计。
       url: "/rest-core/resources_collections.html"
-    - title: Astra REST API 资源的详细信息
+    - title: Astra Control REST API 资源
       summary: 查看有关各种 Astra 资源的简要介绍。
       url: "/endpoints/resources.html"
   - title: 工作流

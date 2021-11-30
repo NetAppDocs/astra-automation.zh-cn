@@ -13,7 +13,7 @@ summary:
 
 
 [role="lead"]
-Python 是一种受欢迎的开发语言，尤其适用于数据中心自动化。在使用 Python 访问 Astra REST API 之前，您需要准备环境和所需的输入文件。
+Python 是一种受欢迎的开发语言，尤其适用于数据中心自动化。在使用 Python 访问 Astra Control REST API 之前，您需要准备环境和所需的输入文件。
 
 
 
@@ -37,7 +37,7 @@ Python 是一种受欢迎的开发语言，尤其适用于数据中心自动化�
 
 ===== 网络访问
 
-运行脚本的工作站必须能够访问网络并能够访问 Astra 。使用 Astra 控制服务时，您必须连接到互联网，并且能够连接到 `https://astra.netapp.io` 上的服务。
+运行脚本的工作站必须能够访问网络并访问 Astra Control 。使用 Astra 控制服务时，您必须连接到互联网，并且能够连接到 `https://astra.netapp.io` 上的服务。
 
 
 

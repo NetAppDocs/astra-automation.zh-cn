@@ -19,7 +19,7 @@ summary:
 
 == 简介
 
-_Workflow _ 是完成特定管理任务或目标所需的一个或多个步骤的序列。Astra 工作流中的每个步骤都是以下步骤之一：
+_Workflow _ 是完成特定管理任务或目标所需的一个或多个步骤的序列。Astra Control 工作流中的每个步骤均为以下步骤之一：
 
 * REST API 调用（包含 curl 和 JSON 示例等详细信息）
 * 调用另一个 Astra 工作流

@@ -13,7 +13,7 @@ summary:
 
 
 [role="lead"]
-Astra REST API 提供了多种不同的方法来通过定义的查询参数访问资源收集。
+Astra Control REST API 提供了多种不同的方法来通过定义的查询参数访问资源收集。
 
 
 

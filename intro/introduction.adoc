@@ -4,7 +4,7 @@ permalink: intro/introduction.html
 keywords: introduction, Astra REST API 
 summary:  
 ---
-= Astra REST API 简介
+= Astra Control REST API 简介
 :hardbreaks:
 :nofooter: 
 :icons: font
@@ -22,13 +22,13 @@ NOTE: 要访问 REST API ，您需要先登录到 Astra Web 用户界面并生�
 
 === 基于 REST 技术构建
 
-Astra API 是使用 REST 技术和当前最佳实践创建的。核心技术包括 HTTP ， JSON 和 RBAC 。
+Astra Control API 是使用 REST 技术和当前最佳实践创建的。核心技术包括 HTTP ， JSON 和 RBAC 。
 
 
 
-=== 支持两种 Astra 部署模式
+=== 支持两种 Astra Control 部署模式
 
-Astra 控制服务在公有云环境中使用，而 Astra 控制中心则用于您的内部部署。有一个 Astra REST API 支持这两种部署模式。
+Astra 控制服务在公有云环境中使用，而 Astra 控制中心则用于您的内部部署。有一个 REST API 支持这两种部署模式。
 
 
 
@@ -44,7 +44,7 @@ REST API 提供了一组丰富的查询参数，您可以使用这些参数来�
 
 
 
-=== 与 Astra Web UI 对齐
+=== 与 Astra Control Web UI 对齐
 
 Astra Web 用户界面的设计与 REST API 一致，因此两个访问路径和用户体验之间保持一致。
 
@@ -52,7 +52,7 @@ Astra Web 用户界面的设计与 REST API 一致，因此两个访问路径和
 
 === 强大的调试和问题确定数据
 
-Astra REST API 可提供强大的调试和问题确定功能，包括系统事件和用户通知。
+Astra Control REST API 可提供强大的调试和问题确定功能，包括系统事件和用户通知。
 
 
 

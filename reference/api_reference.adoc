@@ -13,10 +13,10 @@ summary:
 
 
 [role="lead"]
-您可以访问所有 Astra REST API 调用的详细信息，包括 HTTP 方法，输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。
+您可以访问所有 Astra Control REST API 调用的详细信息，包括 HTTP 方法，输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。
 
 
-NOTE: REST API 参考文档当前随 Astra 提供，可在线获取。
+NOTE: 目前， Astra Control 随附了 REST API 参考文档，可在线获取。
 
 您需要一个 Astra 控制中心或 Astra 控制服务帐户。
 
