@@ -360,7 +360,6 @@
   <block id="58eeca9906af37123daca426979fbe90" category="cell">设置读取集合时要传递和跳过的资源数量。</block>
   <block id="16bd6f56e0279353c2bf47e3b1d13c41" category="cell">指示是否应在元数据对象中返回资源总数。</block>
   <block id="2974f783f17d54a41f4040c8daa90545" category="section-title">HTTP status codes</block>
-  <block id="93a91202a6310bf1ac84de3e96b701dc" category="admonition">Astra REST API 还使用 * HTTP APIs* 标准的问题详细信息。请参见 <block ref="d9c154af7dec160f41ead610ccb970e9" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="ca0dbad92a874b2f69b549293387925e" category="cell">代码</block>
   <block id="7277de5f2ed6f17c61f1f25594591a82" category="cell">含义</block>
   <block id="3644a684f98ea8fe223c713b77189a77" category="cell">200</block>
@@ -573,7 +572,6 @@
   <block id="939b4310fe5592716c602cf48793e84f" category="list-text">设置资源表示一组密钥值对，用于描述特定 Astra 帐户的功能。</block>
   <block id="787ad0b7a17de4ad6b1711bbf8d79fcb" category="list-text">订阅。</block>
   <block id="f1cf7121547bd4912f3ebf1b8e483b5a" category="list-text">订阅资源表示 Astra 帐户的活动订阅。</block>
-  <block id="8bfbe6740400d30ca721dbb4bccd8671" category="list-text">令牌资源表示可通过编程方式访问 Astra REST API 的令牌。</block>
   <block id="0bfed6a24fda71fcefed59052aa8b04d" category="list-text">未读通知资源表示已分配给特定用户但尚未读取的通知。</block>
   <block id="6335f12cd32772f1f765a1aadeaffd96" category="list-text">用户资源表示 Astra 用户能够根据其定义的角色访问系统。</block>
   <block id="9e9335e3f4a9b4abe338f2fa5fec0162" category="paragraph">通过受管应用程序资源端点，可以访问受管 Kubernetes 应用程序。</block>
@@ -737,17 +735,23 @@
   <block id="e0d6a2d78d72729fadfd056ea5b00739" category="admonition">用于访问 Astra Control 资源的路径和完整 URL 的格式基于多个值。请参见 <block ref="d30352e41f8ff3b0c022e188e6d650e9" category="inline-link-macro-rx"></block> 有关详细信息 ...另请参见 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关使用 Astra 资源和端点的详细信息。</block>
   <block id="248846079d127e0a82d697f25c33991f" category="section-title">Astra Control REST 资源和端点</block>
   <block id="0f879b71f480ca631ac007cea8270eb9" category="paragraph">Astra Control REST API 中提供的主要资源端点分为三类。除了需要说明的情况外，可以使用一整套 CRUD 操作（创建，读取，更新，删除）来访问每个资源。</block>
-  <block id="489724a097dc3fadf3216fa3006ed549" category="admonition">这些资源和端点当前未包含在 Astra Control API 参考文档中。</block>
   <block id="a3fb339c1c586b61a4747f75e3e18873" category="list-text"><block ref="a3fb339c1c586b61a4747f75e3e18873" category="inline-link-rx"></block></block>
   <block id="8814863051032c96890d514b89b4519c" category="paragraph">Astra Control REST API 提供了多种不同的方法来通过定义的查询参数访问资源收集。</block>
   <block id="d5def2c7a33c06df000ce3ff88f44d5e" category="paragraph">Astra Control REST API 提供了多种支持功能，可用于诊断和调试。</block>
   <block id="b38e88eda86454f4be23da84305cd6a9" category="paragraph">Astra Control REST API 提供多个安全层。</block>
   <block id="3c4ec4a11a6b65eadf33041e30d96199" category="paragraph">要使用 Astra Control REST API ，您必须在 `Authorization` Request 标头中为每个请求提供一个 API 令牌。请注意以下事项：</block>
   <block id="d5fa8b444f3de5587d549b76d16aa7b5" category="paragraph">要使用 Astra Control REST API ，您必须具有 API 访问令牌。</block>
-  <block id="f383c4f118fbb06364aa17d044f226bc" category="paragraph">通过 Curl 或编程语言访问 Astra Control REST API 时，您必须在 `Authorization` Request 标头的 API 承载令牌中包含。要撤消令牌，请参见 <block ref="63fd24300d4159b871bba5cd675e33b6" category="inline-link-macro-rx"></block>。</block>
   <block id="fcc723c942724132893726738da56aeb" category="paragraph">您可以在工作站的命令行界面上通过问题描述执行一个简单的 Curl 命令来开始使用 Astra Control REST API 并确认其可用性。</block>
   <block id="b3433e01f10e1e1369d819f420b2a8a7" category="paragraph">_Workflow _ 是完成特定管理任务或目标所需的一个或多个步骤的序列。Astra Control 工作流中的每个步骤均为以下步骤之一：</block>
   <block id="bcfb4ff2a5e78e411d4f8304902a5b0f" category="paragraph">您可以通过查看下面所述的步骤来快速准备开始使用 Astra Control REST API 。</block>
   <block id="0c59027cf761af16d5101de509ed5ef7" category="paragraph">请务必查看 <block ref="533ba43849291e761802432633424684" category="inline-link-macro-rx"></block> 有关 REST 概念的信息以及有关如何设计 Astra Control REST API 的详细信息。</block>
   <block id="6a408a175b27a07dcdc920140f5043a1" category="sidebar">Astra Control REST API 资源</block>
+  <block id="ef69df9e80d5e1591d22bfe189aa737e" category="admonition">Astra Control REST API 还使用 * HTTP APIs* 标准的问题详细信息。请参见 <block ref="d9c154af7dec160f41ead610ccb970e9" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="de89d8750ec160e779ccfc4acb253798" category="list-text">令牌资源表示可通过编程方式访问 Astra Control REST API 的令牌。</block>
+  <block id="55fcf9a6a46c69408785dcd2e3a82522" category="admonition">这些资源和端点当前未包含在 Astra Control REST API 参考文档中。</block>
+  <block id="14d9b10c6196045941347a9e85704b50" category="inline-link">Astra Trident 文档</block>
+  <block id="b886ef3e400bd69f357f6981475b14e1" category="list-text"><block ref="b886ef3e400bd69f357f6981475b14e1" category="inline-link-rx"></block></block>
+  <block id="6ab6ba8e185f765dc8c0114487dd8a3a" category="paragraph">由 NetApp 维护的 Astra Trident 开源存储编排程序的文档。</block>
+  <block id="43c6f73174a98f1fd36eac3fee0c20ab" category="paragraph">通过 Curl 或编程语言访问 Astra Control REST API 时，必须在 `Authorization` Request 标头中包含 API 承载令牌。要撤消令牌，请参见 <block ref="63fd24300d4159b871bba5cd675e33b6" category="inline-link-macro-rx"></block>。</block>
+  <block id="e0da47631d6f2648f3a36bde7e269c3b" category="section-title">curl 示例</block>
 </blocks>

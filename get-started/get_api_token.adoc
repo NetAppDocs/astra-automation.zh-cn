@@ -33,4 +33,4 @@ NOTE: Astra API 令牌永不过期，但是您可以在不再需要某个令牌�
 . 复制并保存同一页面上提供的帐户 ID 。
 
 
-通过 Curl 或编程语言访问 Astra Control REST API 时，您必须在 `Authorization` Request 标头的 API 承载令牌中包含。要撤消令牌，请参见 link:../additional/security.html["安全性"]。
+通过 Curl 或编程语言访问 Astra Control REST API 时，必须在 `Authorization` Request 标头中包含 API 承载令牌。要撤消令牌，请参见 link:../additional/security.html["安全性"]。

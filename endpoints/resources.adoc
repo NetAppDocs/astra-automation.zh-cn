@@ -40,7 +40,7 @@ ASUP:: ASUP 资源表示转发给 NetApp 支持部门的 AutoSupport 捆绑包�
 角色绑定:: 角色绑定资源表示特定用户对和帐户之间的关系。除了这两者之间的链接之外，还会通过特定角色为每个指定一组权限。
 正在设置 ...:: 设置资源表示一组密钥值对，用于描述特定 Astra 帐户的功能。
 订阅。:: 订阅资源表示 Astra 帐户的活动订阅。
-令牌:: 令牌资源表示可通过编程方式访问 Astra REST API 的令牌。
+令牌:: 令牌资源表示可通过编程方式访问 Astra Control REST API 的令牌。
 未读通知:: 未读通知资源表示已分配给特定用户但尚未读取的通知。
 用户:: 用户资源表示 Astra 用户能够根据其定义的角色访问系统。
 
@@ -81,7 +81,7 @@ Volume:: 卷资源表示与受管应用程序关联的 Kubernetes 存储卷。
 您可以使用多种其他资源和端点来支持 Astra 部署。
 
 
-NOTE: 这些资源和端点当前未包含在 Astra Control API 参考文档中。
+NOTE: 这些资源和端点当前未包含在 Astra Control REST API 参考文档中。
 
 OpenAPI:: 通过 OpenAPI 端点可以访问当前的 OpenAPI JSON 文档和其他相关资源。
 OpenMetrics:: 通过 OpenMetrics 端点，您可以通过 OpenMetrics 资源访问帐户指标。Astra 控制中心部署模式支持此功能。

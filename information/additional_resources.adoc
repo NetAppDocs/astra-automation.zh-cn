@@ -27,6 +27,10 @@ summary:
 +
 公有云中提供的 Astra 控制服务软件文档。
 
+* https://docs.netapp.com/us-en/trident/["Astra Trident 文档"^]
++
+由 NetApp 维护的 Astra Trident 开源存储编排程序的文档。
+
 
 
 

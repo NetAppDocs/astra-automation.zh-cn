@@ -135,7 +135,7 @@ NOTE: 请参见 https://www.rfc-editor.org/rfc/rfc7232.txt["RFC 7232"^] 和 有�
 下面介绍了 Astra Control REST API 使用的 HTTP 状态代码。
 
 
-NOTE: Astra REST API 还使用 * HTTP APIs* 标准的问题详细信息。请参见 link:diagnostics_support.html["诊断和支持"] 有关详细信息 ...
+NOTE: Astra Control REST API 还使用 * HTTP APIs* 标准的问题详细信息。请参见 link:diagnostics_support.html["诊断和支持"] 有关详细信息 ...
 
 [cols="15,20,65"]
 |===
