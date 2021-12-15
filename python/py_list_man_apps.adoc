@@ -15,6 +15,9 @@ summary:
 [role="lead"]
 您可以使用以下脚本列出 Astra 帐户的受管应用程序。
 
+
+NOTE: 请参见 link:../python/python_before.html["开始之前"] 所需 JSON 输入文件的示例。
+
 [source, python]
 ----
 #!/usr/bin/env python3
@@ -86,7 +89,7 @@ def get_managed_apps():
     resp_headers = resp1.headers
 
     # Print the list of managed apps
-    if http_code == 200:
+    if resp1.ok:
         resp_data = json.loads(resp1.text)
         items = resp_data['items']
         for i in items:

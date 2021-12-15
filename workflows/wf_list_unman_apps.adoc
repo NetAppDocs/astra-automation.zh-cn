@@ -16,11 +16,102 @@ summary:
 您可以列出当前不受 Astra 管理的应用程序。您可以在选择要管理的应用程序时执行此操作。
 
 
-NOTE: 此工作流将列出所有 Astra 应用程序。您可以通过检查 `managedState` 字段查看输出以确定哪些应用程序不受管理。
+NOTE: 默认情况下，这些工作流中使用的 REST 端点将返回所有 Astra 应用程序。您可以在 API 调用中使用 `filter` query 参数，仅请求返回非受管应用程序。或者，您也可以省略 filter 参数以返回所有应用程序，然后检查输出中的 `managedState` 字段以确定哪些应用程序处于 `非受管` 状态。
 
 
 
-=== 1. 列出应用程序
+== 仅列出受管理状态等于非受管状态的应用程序
+
+此工作流使用 `filter` query 参数仅返回非受管应用程序。
+
+
+
+=== 1. 列出非受管应用程序
+
+执行以下 REST API 调用。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 获取 | /account/ ｛ accountID ｝ /topology/v1/apps 
+|===
+
+
+===== 其他输入参数
+
+除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。
+
+[cols="25,10,10,55"]
+|===
+| 参数 | Type | Required | Description 
+
+
+| 筛选器 | 查询 | 否 | 使用筛选器指定应返回哪些应用程序。 
+
+
+| 包括 | 查询 | 否 | 也可以选择要在响应中返回的值。 
+|===
+
+
+===== curl 示例：返回非受管应用程序的名称， ID 和管理状态
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/apps?filter=managedState%20eq%20'unmanaged'&include=name,id,managedState' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== JSON 输出示例
+
+[source, json]
+----
+{
+  "items": [
+    [
+      "maria",
+      "eed19f78-0884-4792-bb7a-313258c6b0b1",
+      "unmanaged"
+    ],
+    [
+      "test-postgres-app",
+      "1ee6235b-cda1-45cb-8d4c-630bdb8b41a5",
+      "unmanaged"
+    ],
+    [
+      "postgres1-postgresql",
+      "e591ee59-ea90-4a9f-8e6c-d2b6e8647096",
+      "unmanaged"
+    ],
+    [
+      "kube-system",
+      "077a2f73-4b51-4d04-8c6c-f63b3b069755",
+      "unmanaged"
+    ],
+    [
+      "trident",
+      "5b6fc28f-e308-4653-b9d2-6d66a764d2e1",
+      "unmanaged"
+    ],
+    [
+      "postgres1-postgresql-clone",
+      "06be05c5-763e-4d73-bd06-1f27f5f2e130",
+      "unmanaged"
+    ]
+  ],
+  "metadata": {}
+}
+----
+
+
+== 列出所有应用程序并选择非受管应用程序
+
+此工作流将返回所有应用程序。您必须检查输出以确定哪些不受管。
+
+
+
+=== 1. 列出所有应用程序
 
 执行以下 REST API 调用。
 
@@ -112,3 +203,8 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
   "metadata": {}
 }
 ----
+
+
+=== 2. 选择非受管应用程序
+
+查看 API 调用的输出，然后手动选择 `managedState` 等于 `非受管` 的应用程序。

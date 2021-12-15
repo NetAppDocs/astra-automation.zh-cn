@@ -17,7 +17,31 @@ NetApp 会定期更新 Astra Control REST API ，为您提供新功能，增强�
 
 
 
-== 2021 年 8 月 5 日
+== 2021 年 12 月 14 日（ 21.12 ）
+
+此版本扩展了 REST API ，并对文档结构进行了更改，以便在未来的版本更新中更好地支持 Astra Control 的发展。
+
+
+
+=== 每个版本的 Astra Control 都有单独的 Astra Automation 文档
+
+每个版本的 Astra Control 都包含一个独特的 REST API ，该 API 已根据特定版本的功能进行了增强和定制。每个版本的 Astra Control REST API 的文档以及相关的 GitHub 内容存储库现在均可从其自己的专用网站上获得。主文档站点 https://docs.netapp.com/us-en/astra-automation/["Astra Control Automation"^] 始终包含最新版本的文档。请参见 link:../aa-earlier-versions.html["早期版本的 Astra Control Automation 文档"] 有关先前版本的信息。
+
+
+
+=== 扩展 REST 资源类型
+
+REST 资源类型的数量不断增加，重点是执行挂钩和存储后端。新资源包括：帐户，执行钩，钩源，执行钩覆盖，集群节点， 受管存储后端，命名空间，存储设备和存储节点。请参见 link:../endpoints/resources.html["Resources"] 有关详细信息 ...
+
+
+
+=== NetApp Astra Control Python SDK
+
+NetApp Astra Control Python SDK 是一个开源软件包，可以更轻松地为您的 Astra Control 环境开发自动化代码。其核心是 Astra SDK ，其中包含一组类，用于抽象化 REST API 调用的复杂性。此外，还提供了一个工具包脚本，用于通过包装和抽象化 Python 类来执行特定管理任务。请参见 link:../python/astra_toolkits.html["NetApp Astra Control Python SDK"] 有关详细信息 ...
+
+
+
+== 2021 年 8 月 5 日（ 21.08 ）
 
 此版本引入了新的 Astra 部署模式，并对 REST API 进行了重大扩展。
 
@@ -45,7 +69,7 @@ NetApp 会定期更新 Astra Control REST API ，为您提供新功能，增强�
 
 
 
-== 2021 年 4 月 15 日
+== 2021 年 4 月 15 日（ 21.04 ）
 
 此版本包含以下新增功能和增强功能：
 

@@ -65,7 +65,6 @@
   <block id="19ec08da81a826d919d64ab860845c04" category="inline-link-macro">API 参考</block>
   <block id="7dbea29c80effd84223267932eaa1d82" category="section-title">核心资源</block>
   <block id="03bc142e6422dbb9b288ad2cabee08c7" category="list-text">凭据</block>
-  <block id="31539113d1f24f50fd650a5084e246e7" category="list-text">角色绑定</block>
   <block id="459a6f79ad9b13cbcb5f692d2cc7a94d" category="list-text">令牌</block>
   <block id="8f9bfe9d1345237cb3b2b205864da075" category="list-text">用户</block>
   <block id="cc32566cda71be962f99357b3002c8db" category="section-title">受管应用程序资源</block>
@@ -213,7 +212,6 @@
   <block id="a6678bfaa94621c04bacbb0514f6d9d4" category="section-title">curl 示例：返回应用程序和计数的所有快照</block>
   <block id="3d8174b7a5e7e2c2f19aa676ce494658" category="doc">列出非受管应用程序</block>
   <block id="563a0b5f6c4efcacd5b8847d1eee9649" category="paragraph">您可以列出当前不受 Astra 管理的应用程序。您可以在选择要管理的应用程序时执行此操作。</block>
-  <block id="eb646550499781d051cdd47a82fd97de" category="admonition">此工作流将列出所有 Astra 应用程序。您可以通过检查 `managedState` 字段查看输出以确定哪些应用程序不受管理。</block>
   <block id="5a7e60861a502dc956f007273373ee29" category="cell">/account/ ｛ accountID ｝ /topology/v1/apps</block>
   <block id="e2c473c218d9b4c045f316cd4af94e1c" category="section-title">curl 示例：返回所有应用程序的名称， ID 和 managedState</block>
   <block id="d12275e5ed9a0bebaad289f16e74c1e3" category="doc">从快照克隆受管应用程序</block>
@@ -475,7 +473,6 @@
   <block id="d92a4a4962077027ebae61f4c351e303" category="section-title">强大的调试和问题确定数据</block>
   <block id="fcf3c3d757005a8b62346f06f3b393ff" category="section-title">高级自动化技术的基础</block>
   <block id="c6c51849eeb1ac322baa3a99b7cd7e43" category="summary">这是 Astra Automation 的总结。</block>
-  <block id="b7c9edd2e46b359df3e102d497901244" category="doc">Astra 自动化文档</block>
   <block id="e61ad2d01a2692e9ed29c90c0c413101" category="paragraph">您可以使用以下脚本列出 Astra 帐户的受管应用程序。</block>
   <block id="365c8dec8255a8a164436c71a2611920" category="doc">使用 Python</block>
   <block id="0998ed5beee28345ae02fc586e2414f2" category="section-title">准备环境</block>
@@ -512,7 +509,6 @@
   <block id="fa862ec81357f8907a8b75f4d969c590" category="inline-link">RFC 编辑器</block>
   <block id="6763d4dfc2fa6c04b08ba1e1b7751f5f" category="list-text"><block ref="6763d4dfc2fa6c04b08ba1e1b7751f5f" category="inline-link-rx"></block></block>
   <block id="ba793efaa4293b35388d140ee9308a68" category="paragraph">Web 和 Internet 标准的权威来源，作为一组编号唯一的 RFC 文档进行维护。</block>
-  <block id="27cf840321d17e56b1aa845077c2a75a" category="sidebar">Astra 自动化文档</block>
   <block id="8a72d09dc95b3b91b5b0e50e2855c7df" category="sidebar">简要了解 Astra REST API 。</block>
   <block id="18500a8a0b71e0c523540a041898f20e" category="sidebar">测试对 REST API 的基本访问。</block>
   <block id="5a8acee56ec6e869519f734e2088df5f" category="sidebar">了解 REST Web 服务的技术基础。</block>
@@ -601,7 +597,6 @@
   <block id="3568b4ed2338901078928983e029bbba" category="list-text">通过 OpenAPI 端点可以访问当前的 OpenAPI JSON 文档和其他相关资源。</block>
   <block id="4f48af1c326e720124a79cc1f9216ecb" category="list-text">OpenMetrics</block>
   <block id="27ee1c661b70f7b369179a81dd12721d" category="list-text">通过 OpenMetrics 端点，您可以通过 OpenMetrics 资源访问帐户指标。Astra 控制中心部署模式支持此功能。</block>
-  <block id="bf2952986042f5403c53bded609c0d9b" category="section-title">2021 年 8 月 5 日</block>
   <block id="adbf11dd6ee196fa62d94a4c1d8e03f2" category="paragraph">此版本引入了新的 Astra 部署模式，并对 REST API 进行了重大扩展。</block>
   <block id="95550f34187aaccfb0a17b770c43f0d6" category="section-title">Astra 控制中心部署模式</block>
   <block id="ebafbad4787b0e1e6e07c722454234fb" category="section-title">扩展 REST 资源类型</block>
@@ -609,7 +604,6 @@
   <block id="8cf4055911ae05ed7dc35f98a193f09e" category="list-text">支持 OpenAPI</block>
   <block id="13c89442e2b2eedafc42714812ad8c6b" category="list-text">支持 OpenMetrics</block>
   <block id="22221689a6b4fc342456938de9f79725" category="list-text">通过 OpenMetrics 资源，您可以通过 OpenMetrics 端点访问帐户指标。</block>
-  <block id="12b25d2d9c1a5b6acd85bf6a54697871" category="section-title">2021 年 4 月 15 日</block>
   <block id="40bde2f2e0e627e3fcf147169d6d315a" category="paragraph">此版本包含以下新增功能和增强功能：</block>
   <block id="1b232d16c3766a50978710492ba942a2" category="section-title">引入 REST API</block>
   <block id="0ef8b3f579af1cdc8418626db265a1ce" category="list-text">有 14 种可用的 REST 资源类型。</block>
@@ -618,10 +612,6 @@
   <block id="affb0039f4c476ad568439a171c9db0c" category="list-text">支持收集</block>
   <block id="39fc3040b9fe64cf202ce4de80bf7f69" category="list-text">有一组丰富的查询参数，可用于访问资源集合。支持的部分操作包括筛选，排序和分页。</block>
   <block id="95dc0391ce7b396d7dd5622284e8fc3e" category="doc">已知问题</block>
-  <block id="5d1913165f16cc0ae673ddaea1f155d5" category="paragraph">已知问题用于确定可能会阻止您成功使用此产品版本附带的 REST API 的问题。</block>
-  <block id="482723983a4f2af954e36ff41e567451" category="doc">已知限制</block>
-  <block id="478b776fc28a60e8545a858eb7ca9a3e" category="paragraph">已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。</block>
-  <block id="bfb3ffb75e2fb799264b44821188458b" category="admonition">您应仔细查看这些限制。</block>
   <block id="1a615153bb2bd3389942d44023a8f4bb" category="section-title">拥有 Astra 帐户凭据</block>
   <block id="11b7e523e4dba4e9a9499492d8f958a2" category="paragraph">您需要使用 Astra 凭据登录到 Astra Web 用户界面并生成 API 令牌。使用 Astra 控制中心，您可以在本地管理这些凭据。使用 Astra 控制服务时，帐户凭据由 * Auth0* 服务维护。</block>
   <block id="646fd3c3d22d826a188a59c1bba8854b" category="paragraph">您需要 Astra 帐户的凭据。</block>
@@ -651,13 +641,10 @@
   <block id="04bff76b57babc7298f6780f4f20901e" category="section-title">工作流进程</block>
   <block id="b6c92126e042e664395830549916fde8" category="paragraph">我们提供了一组工作流来帮助您开发自动化代码。这些工作流分为两大类：基础架构和管理。</block>
   <block id="e252a713c9e65fd0bb92dbc65b6b0610" category="paragraph">除了直接访问 REST API 之外，您还可以使用基于 REST API 的其他自动化技术。</block>
-  <block id="90dedefe8625c03190325424b88ee195" category="doc">NetApp Astra 工具包</block>
   <block id="3cce5f3eaf76e098ba8e28f7bbba3f92" category="section-title">Astra</block>
   <block id="3a4b2c66d4bdac6ce0e3340c71a39eda" category="inline-link">Astra 控制中心文档</block>
   <block id="281db70ca8dfcac9ebe6166029058548" category="list-text"><block ref="281db70ca8dfcac9ebe6166029058548" category="inline-link-rx"></block></block>
-  <block id="42abfef9c7eb8e9eddef8ed7d36fe034" category="paragraph">在客户内部部署的 Astra Control Center 软件的文档。</block>
   <block id="ef22ff17624b3faeed227ce5c717eb5f" category="inline-link">Astra Control Service 文档</block>
-  <block id="11fca7f10569dec655ac235663e76427" category="paragraph">公有云中提供的 Astra 控制服务软件文档。</block>
   <block id="49d7482cad2dac48b0f0e77473d3a249" category="doc">列出受管集群</block>
   <block id="1b382a88a3817dcba16a81ec9e5cf1c5" category="paragraph">您可以列出当前由 Astra 管理的 Kubernetes 集群。</block>
   <block id="c58119ccc549e36f20a93873ead75956" category="section-title">1. 列出集群</block>
@@ -715,7 +702,6 @@
   <block id="175b29f6f8dd1aa8a166427b6bcd061c" category="paragraph">下面介绍了 Astra Control REST API 使用的 HTTP 状态代码。</block>
   <block id="8af1f604c2ddb0ae53e02227ab1ca1da" category="paragraph">表述性状态传输（ Representational State Transfer ， REST ）是一种用于创建分布式 Web 应用程序的模式。在设计 Web 服务 API 时，它会建立一组用于公开基于服务器的资源并管理其状态的主流技术和最佳实践。虽然 REST 为应用程序开发提供了一致的基础，但每个 API 的详细信息可能因特定设计选项而异。在将 Astra Control REST API 用于实时部署之前，您应了解其特征。</block>
   <block id="352836aad17f0db4217873eb0a9524b3" category="paragraph">虽然信息可以通过多种方式在 Web 服务客户端和服务器之间进行结构化和传输，但最受欢迎的选项是 JavaScript 对象表示法（ JSON ）。JSON 是一种行业标准，用于以纯文本形式表示简单数据结构，并用于传输描述资源的状态信息。Astra Control REST API 使用 JSON 格式化每个 HTTP 请求和响应正文中包含的数据。</block>
-  <block id="ac21a3146a66cb0350efda681b416574" category="paragraph">Python 是一种受欢迎的开发语言，尤其适用于数据中心自动化。在使用 Python 访问 Astra Control REST API 之前，您需要准备环境和所需的输入文件。</block>
   <block id="67a1ee90ebb7f60d74dc1baee961de03" category="paragraph">运行脚本的工作站必须能够访问网络并访问 Astra Control 。使用 Astra 控制服务时，您必须连接到互联网，并且能够连接到 `https://astra.netapp.io` 上的服务。</block>
   <block id="2d5a5fa8a82d5c201cb1e33457f8b169" category="doc">Astra Control REST API 新增功能</block>
   <block id="b0c0f8ac8f671541655d3d0e2beb2ce8" category="paragraph">NetApp 会定期更新 Astra Control REST API ，为您提供新功能，增强功能和错误修复。</block>
@@ -732,7 +718,6 @@
   <block id="e2cfa1b12557ae7ad3c2bb28c8b77d7c" category="paragraph">您可以访问所有 Astra Control REST API 调用的详细信息，包括 HTTP 方法，输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。</block>
   <block id="2aedb1bdf28ee2f3357b9859cfa547c3" category="admonition">目前， Astra Control 随附了 REST API 参考文档，可在线获取。</block>
   <block id="b5e893215efc14b056461f3d72a24170" category="paragraph">您可以使用通过 Astra Control REST API 提供的资源来自动执行 Astra 部署。每个资源都通过一个或多个端点进行访问。本节介绍了可在规划自动化部署时使用的 REST 资源。</block>
-  <block id="e0d6a2d78d72729fadfd056ea5b00739" category="admonition">用于访问 Astra Control 资源的路径和完整 URL 的格式基于多个值。请参见 <block ref="d30352e41f8ff3b0c022e188e6d650e9" category="inline-link-macro-rx"></block> 有关详细信息 ...另请参见 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关使用 Astra 资源和端点的详细信息。</block>
   <block id="248846079d127e0a82d697f25c33991f" category="section-title">Astra Control REST 资源和端点</block>
   <block id="0f879b71f480ca631ac007cea8270eb9" category="paragraph">Astra Control REST API 中提供的主要资源端点分为三类。除了需要说明的情况外，可以使用一整套 CRUD 操作（创建，读取，更新，删除）来访问每个资源。</block>
   <block id="a3fb339c1c586b61a4747f75e3e18873" category="list-text"><block ref="a3fb339c1c586b61a4747f75e3e18873" category="inline-link-rx"></block></block>
@@ -751,7 +736,130 @@
   <block id="55fcf9a6a46c69408785dcd2e3a82522" category="admonition">这些资源和端点当前未包含在 Astra Control REST API 参考文档中。</block>
   <block id="14d9b10c6196045941347a9e85704b50" category="inline-link">Astra Trident 文档</block>
   <block id="b886ef3e400bd69f357f6981475b14e1" category="list-text"><block ref="b886ef3e400bd69f357f6981475b14e1" category="inline-link-rx"></block></block>
-  <block id="6ab6ba8e185f765dc8c0114487dd8a3a" category="paragraph">由 NetApp 维护的 Astra Trident 开源存储编排程序的文档。</block>
   <block id="43c6f73174a98f1fd36eac3fee0c20ab" category="paragraph">通过 Curl 或编程语言访问 Astra Control REST API 时，必须在 `Authorization` Request 标头中包含 API 承载令牌。要撤消令牌，请参见 <block ref="63fd24300d4159b871bba5cd675e33b6" category="inline-link-macro-rx"></block>。</block>
   <block id="e0da47631d6f2648f3a36bde7e269c3b" category="section-title">curl 示例</block>
+  <block id="1966cbc7987b76acf54312ed4c9007ec" category="paragraph">Python 是一种受欢迎的开发语言，尤其适用于数据中心自动化。在将 Python 的原生功能与多个通用软件包结合使用之前，您需要准备环境和所需的输入文件。</block>
+  <block id="0e8625d3981b9d26e0866da357d318c8" category="inline-link-macro">NetApp Astra Control Python SDK</block>
+  <block id="a048c98daf24dc4c378ae4a226190097" category="admonition">除了使用 Python 直接访问 Astra Control REST API 之外， NetApp 还提供了一个工具包软件包，用于抽象化 API 并消除一些复杂性。请参见 <block ref="d09002f98f3f10539db2caafc83b3213" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="0dca49fc2e144253162b8cbd94b3b83c" category="admonition">请参见 <block ref="471a805638f43cfd34206d9398385425" category="inline-link-macro-rx"></block> 所需 JSON 输入文件的示例。</block>
+  <block id="a64509d450efa26111a7b1e6db3baf74" category="paragraph">NetApp Astra Control Python SDK 是一个开源软件包，可用于自动部署 Astra Control 。该软件包也是了解 Astra Control REST API 的宝贵资源，或许可以在创建您自己的自动化平台时使用。</block>
+  <block id="20f4f585bd60497ac5129e3cac5ce9f3" category="admonition">为了简单起见，本页其余部分将 NetApp Astra Control Python SDK 称为 * SDK * 。</block>
+  <block id="583a49db5f92162fc0bd14c90e6dfd12" category="section-title">两个相关软件工具</block>
+  <block id="6185cd9749993dbef93bbd9484213c5d" category="paragraph">SDK 包含两个不同但相关的工具，这些工具在访问 Astra Control REST API 时在不同的抽象级别运行。</block>
+  <block id="7a947a0e78de7f2a4b74b7420db98fc3" category="section-title">Astra SDK</block>
+  <block id="ad7e7ea46900019430506e34b6c4ad49" category="paragraph">Astra SDK 提供核心平台功能。它包括一组 Python 类，用于抽象化底层 REST API 调用。这些类支持对各种 Astra Control 资源执行管理操作，包括应用程序，备份，快照和集群。</block>
+  <block id="6dbbc40c6449ca3fda5f8c356b6b0376" category="paragraph">Astra SDK 是该软件包的一部分，并在单个 `astraSDK.py` 文件中提供。您可以将此文件导入到您的环境中并直接使用这些类。</block>
+  <block id="5e5df168638042d7a718b1e5462bfb24" category="admonition">NetApp Astra Control Python SDK* （或仅 SDK ）是整个软件包的名称。* Astra SDK* 是指单个文件 `astraSDK.py` 中的核心 Python 类。</block>
+  <block id="042f2f95117cad397f19ae8bda1b2bbf" category="section-title">工具包脚本</block>
+  <block id="56b26fd2ed2c36f5045eb36cf77c7948" category="paragraph">除了 Astra SDK 文件之外，还可以使用 `toolkup.py` 脚本。此脚本可通过访问内部定义为 Python 函数的独立管理操作，在较高的抽象级别下运行。该脚本将导入 Astra SDK 并根据需要调用类。</block>
+  <block id="c1fa54c7b9d3166a56b9afe8d178025e" category="section-title">如何访问</block>
+  <block id="caf8d9c274d92761873c194de7fd847e" category="paragraph">您可以通过以下方式访问 SDK 。</block>
+  <block id="f789019254e2d94578114761c04bb180" category="section-title">Python 软件包</block>
+  <block id="0b0321c50e2a79cdce826f0c8f5f7f20" category="inline-link">Python 软件包索引</block>
+  <block id="a65d831b17fd79d3bf54336b2ed84e31" category="paragraph">SDK 可从获取<block ref="8410061c73ca21d204619a04c32c035c" category="inline-link-rx"></block> 名称为 * NetApp-Astra-toolkits* 。软件包将分配一个版本号，并将根据需要继续更新。您必须使用 * Pip* 软件包管理实用程序将软件包安装到您的环境中。</block>
+  <block id="cc255a90b5e22a79adcc253fd5643c0e" category="inline-link">PyPI ： NetApp Astra Control Python SDK</block>
+  <block id="5101ad75321ce3f01dd0612c22b9fa44" category="paragraph">请参见<block ref="b0ae7ae3e90ea984094ad8df5b6a65f5" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="0c9b6306d32fc8f44ff469ab235c5104" category="section-title">GitHub 源代码</block>
+  <block id="e8c4206b0f47aa117169255eaa08c5eb" category="paragraph">此外，还可以从 GitHub 获取 SDK 源代码。存储库包括以下内容：</block>
+  <block id="674eb3a9ec8ac34ddaaf6ea44b7eb422" category="list-text">`astraSDK.py` （采用 Python 类的 Astra SDK ）</block>
+  <block id="f2af4f364548b21864e1b7b7bd176f6c" category="list-text">`toolkit .py` （基于函数的高级脚本）</block>
+  <block id="63eaa893bb8e1f738d6a4c1c1447da78" category="list-text">详细的安装要求和说明</block>
+  <block id="463554d1311a014b3fde6d3323ae338f" category="list-text">安装脚本</block>
+  <block id="01d954fb2edbf283d121f0651b04de83" category="list-text">其他文档</block>
+  <block id="c9a3d674846b5861ee3ca1771cb3fe5e" category="inline-link">GitHub ： NetApp/NetApp-Astra-toolkits.</block>
+  <block id="6a3e1686f161e74193cdf5b583396b8c" category="paragraph">您可以克隆<block ref="722f7e844f39c6d237353116706890c9" category="inline-link-rx"></block> 存储库连接到本地环境。</block>
+  <block id="6343ba741cd1ee396593580192d07224" category="section-title">安装和基本要求</block>
+  <block id="7e5ad59a792bdfb61631a29cbadd4216" category="paragraph">在安装软件包并准备使用该软件包时，需要考虑多个选项和要求。</block>
+  <block id="a2c5d7f1ae59d7e25522b6b34ea1f27f" category="section-title">安装选项摘要</block>
+  <block id="9fcb3e0ffb2078377dcce5ceb342f1b1" category="paragraph">您可以通过以下方式之一安装 SDK ：</block>
+  <block id="658d546fab60a55bbf70f000f63ee91c" category="list-text">使用 Pip 将 PyPI 中的软件包安装到 Python 环境中</block>
+  <block id="144f4cb6f91591a4b697a30ebcf1ab07" category="list-text">克隆 Git Hub 存储库，然后执行以下任一操作：</block>
+  <block id="32ffd39c439ea17f73e4f5036abb3944" category="list-text">将软件包部署为 Docker 容器（其中包括您需要的所有内容）</block>
+  <block id="a09f9226f893c1dac534e03b85311d73" category="list-text">复制这两个核心 Python 文件，以便可以通过 Python 客户端代码访问它们</block>
+  <block id="acb730b2d5158050dc822b6dc8c932e2" category="paragraph">有关详细信息，请参见 PyPI 和 GitHub 页面。</block>
+  <block id="1737ce95b71a7983a78611220c00300c" category="section-title">Astra Control 环境的要求</block>
+  <block id="20cb526cb438c874dbc67eaf9ded63f0" category="paragraph">无论是直接使用 Astra SDK 中的 Python 类，还是使用 `toolkape.py` 脚本中的功能，最终您将在部署 Astra Control 时访问 REST API 。因此，您需要一个 Astra 帐户以及一个 API 令牌。请参见 <block ref="6790e3b8b21e3717c59b764a5b68d086" category="inline-link-macro-rx"></block> 有关详细信息，请参见本文档 * 入门 * 一节中的其他页面。</block>
+  <block id="dfbe44cf1815fe1873dd8a7c434bcda9" category="section-title">NetApp Astra Control Python SDK 的要求</block>
+  <block id="d53f4bad554105d2379ba7cf28728467" category="paragraph">SDK 具有与本地 Python 环境相关的几个前提条件。例如，您必须使用 Python 3.5 或更高版本。此外，还需要几个 Python 软件包。有关详细信息，请参见 GitHub 存储库页面或 PyPI 软件包页面。</block>
+  <block id="2c3632f4f9feb6a54026be6d9c946d20" category="section-title">有用资源摘要</block>
+  <block id="9d287cbd5a950094749c49fb0370b01c" category="paragraph">下面是开始使用所需资源的摘要。</block>
+  <block id="ba24114401f0d96a4086faa5796f3079" category="list-text"><block ref="ba24114401f0d96a4086faa5796f3079" category="inline-link-rx"></block></block>
+  <block id="b455f4010eda9452a921d32bfc7e1318" category="list-text"><block ref="b455f4010eda9452a921d32bfc7e1318" category="inline-link-rx"></block></block>
+  <block id="78ceba6718263592394adb03dc11471c" category="paragraph">您应查看当前版本中与 Astra Control REST API 相关的所有已知问题。已知问题可确定可能会阻止您成功使用本产品的问题。</block>
+  <block id="f977fda19bbfe49b9346f60f532f0704" category="section-title">未发现后端存储节点中的所有存储设备</block>
+  <block id="13595bcf3f8022567de41bcd09ef92b2" category="paragraph">在发出 REST API 调用以检索存储节点中定义的存储设备时，只会发现 Astra 数据存储设备。并非所有设备都会返回。</block>
+  <block id="fd341dfea170932946910997510c48e8" category="section-title">Astra Data Store 存储后端处于未知状态</block>
+  <block id="e1c83179f57e62cb00fbb2646ef58e6e" category="paragraph">发出 API 调用以检索存储后端后， Astra Data Store 存储后端处于 `未知` 状态。在这种情况下，存储后端实际上仍可用，可以与通信。但是，存储后端中的组件可能处于不正常状态，需要将其恢复为正常状态，以便存储后端显示为 `Available` 。</block>
+  <block id="a1be4875b5bb7cb5ecf7bdcde9034c85" category="section-title">2021 年 12 月 14 日（ 21.12 ）</block>
+  <block id="09709048ce6033b774d7c044c1d718a2" category="paragraph">此版本扩展了 REST API ，并对文档结构进行了更改，以便在未来的版本更新中更好地支持 Astra Control 的发展。</block>
+  <block id="ac36e7b65e4f6ad43be3f12f0d0799df" category="section-title">每个版本的 Astra Control 都有单独的 Astra Automation 文档</block>
+  <block id="9a96b1cd085b9e8e259f701ed2e8edbc" category="inline-link-macro">早期版本的 Astra Control Automation 文档</block>
+  <block id="b0d9341a86886d085ea7727cabd2ea40" category="inline-link">Astra Control Automation</block>
+  <block id="0a389878c5dc68edba73dd8e0e98c145" category="paragraph">每个版本的 Astra Control 都包含一个独特的 REST API ，该 API 已根据特定版本的功能进行了增强和定制。每个版本的 Astra Control REST API 的文档以及相关的 GitHub 内容存储库现在均可从其自己的专用网站上获得。主文档站点<block ref="528bb65c82e5ff834ab031d8d81cba09" category="inline-link-rx"></block> 始终包含最新版本的文档。请参见 <block ref="c9bb9dcf44e030eb56e66a1e24e585e6" category="inline-link-macro-rx"></block> 有关先前版本的信息。</block>
+  <block id="4d1c4b6bfa2aac0ebe38d861ab737e79" category="paragraph">REST 资源类型的数量不断增加，重点是执行挂钩和存储后端。新资源包括：帐户，执行钩，钩源，执行钩覆盖，集群节点， 受管存储后端，命名空间，存储设备和存储节点。请参见 <block ref="f79c22f30a5c9f960ce998adee5739fa" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="736ac6ee210a91c2f1a6638cc6127fd4" category="paragraph">NetApp Astra Control Python SDK 是一个开源软件包，可以更轻松地为您的 Astra Control 环境开发自动化代码。其核心是 Astra SDK ，其中包含一组类，用于抽象化 REST API 调用的复杂性。此外，还提供了一个工具包脚本，用于通过包装和抽象化 Python 类来执行特定管理任务。请参见 <block ref="d09002f98f3f10539db2caafc83b3213" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="b179356a4d80ff3c8707972005712b2f" category="section-title">2021 年 8 月 5 日（ 21.08 ）</block>
+  <block id="b090a7e9d0299b1a0c16321ebfd1f755" category="section-title">2021 年 4 月 15 日（ 21.04 ）</block>
+  <block id="d71331c5ce470b093ebf6c996f4ed88a" category="doc">关于此版本</block>
+  <block id="4ed4c272d833a45163ae23ce2c927305" category="paragraph">本站点的文档介绍了随 Astra Control 2021 （ 21.12 ）版提供的 Astra Control REST API 以及相关自动化技术。特别是，此版本的 REST API 随相应的 21.12 版 Astra 控制中心和 Astra 控制服务一起提供。</block>
+  <block id="ea68f7ff6b79a550f669d752f15bd5da" category="paragraph">有关此版本以及先前版本的详细信息，请参见以下页面和站点：</block>
+  <block id="89d597c4d411409065b7e48fe97b7327" category="inline-link-macro">Astra Control REST API 的新增功能</block>
+  <block id="55d1aec576bc2fa5929c487a67f4f1fe" category="list-text"><block ref="55d1aec576bc2fa5929c487a67f4f1fe" category="inline-link-macro-rx"></block></block>
+  <block id="39b20ec9ac87283be93addb7db493125" category="list-text"><block ref="39b20ec9ac87283be93addb7db493125" category="inline-link-macro-rx"></block></block>
+  <block id="c95deb0b38b91727ae70217b718c15b6" category="inline-link">Astra Control Center 21.12 文档</block>
+  <block id="6bac7a3afd0fae5fb87d4c318c88b8d7" category="list-text"><block ref="6bac7a3afd0fae5fb87d4c318c88b8d7" category="inline-link-rx"></block></block>
+  <block id="0129349d759b45f11e9ff68b2e3fdf84" category="inline-link">Astra Control Service 21.12 文档</block>
+  <block id="453379871ec9a52d3f4e6f4bc5e6f3d8" category="list-text"><block ref="453379871ec9a52d3f4e6f4bc5e6f3d8" category="inline-link-rx"></block></block>
+  <block id="fdd081f1598a50889ba0720484271938" category="inline-link-macro">早期版本的 Astra Automation 文档</block>
+  <block id="0cc206202c15e68cf39519791ed593a1" category="list-text"><block ref="0cc206202c15e68cf39519791ed593a1" category="inline-link-macro-rx"></block></block>
+  <block id="4bddbc6d61b2586c05f9efdf9aa7b5cd" category="paragraph">您可以通过以下链接访问先前版本的 Astra Control 的自动化文档。</block>
+  <block id="832210201d55f5c764a32c055a00b726" category="inline-link">Astra Control Automation 21.08 文档</block>
+  <block id="025fa2688359a439d7fa215fbbbaf287" category="list-text"><block ref="025fa2688359a439d7fa215fbbbaf287" category="inline-link-rx"></block></block>
+  <block id="1a0ca7f0a5aea880c24d544b4655d6ed" category="doc">Astra Control Automation 文档</block>
+  <block id="f13263898a2cd18c9ee7843dc1459aba" category="admonition">默认情况下，这些工作流中使用的 REST 端点将返回所有 Astra 应用程序。您可以在 API 调用中使用 `filter` query 参数，仅请求返回非受管应用程序。或者，您也可以省略 filter 参数以返回所有应用程序，然后检查输出中的 `managedState` 字段以确定哪些应用程序处于 `非受管` 状态。</block>
+  <block id="b6a35c94f854cd740168a0764638d0df" category="section-title">仅列出受管理状态等于非受管状态的应用程序</block>
+  <block id="bc9eb7d967c0a164260a3a3362df3173" category="paragraph">此工作流使用 `filter` query 参数仅返回非受管应用程序。</block>
+  <block id="b778c76d47db062e719ea97fffdb251e" category="section-title">1. 列出非受管应用程序</block>
+  <block id="225ff177d2b3ca52f452571419d65f70" category="cell">使用筛选器指定应返回哪些应用程序。</block>
+  <block id="b27c8e443cc3570cdff9e631ba1485fa" category="section-title">curl 示例：返回非受管应用程序的名称， ID 和管理状态</block>
+  <block id="3a340585a0931b07ac9b6627082689c8" category="section-title">列出所有应用程序并选择非受管应用程序</block>
+  <block id="f370302c742b824210b358edece7e15d" category="paragraph">此工作流将返回所有应用程序。您必须检查输出以确定哪些不受管。</block>
+  <block id="0f17193d6bf995f16caf5e86bc3ded83" category="section-title">1. 列出所有应用程序</block>
+  <block id="3640a41cdbb2456f459491fd8672e6cb" category="section-title">2. 选择非受管应用程序</block>
+  <block id="a2fee71d053291b11da659df7d22ce18" category="paragraph">查看 API 调用的输出，然后手动选择 `managedState` 等于 `非受管` 的应用程序。</block>
+  <block id="08d7f360c94a906d3639173599184943" category="paragraph">执行以下 REST API 调用。您必须提供备份（如下所示）或快照的 ID 。</block>
+  <block id="51cd01a5a6a691746293ce972056d4c1" category="cell">/account/ ｛ accountID ｝ /K8s/v1/managedApps/ ｛ appID ｝</block>
+  <block id="a477f086784d869d73c5ae084b145ca8" category="section-title">curl 示例：从备份原位还原应用程序</block>
+  <block id="98904826ae5cef8716020180473276c8" category="admonition">用于访问 Astra Control 资源的路径和完整 URL 的格式基于多个值。请参见 <block ref="d30352e41f8ff3b0c022e188e6d650e9" category="inline-link-macro-rx"></block> 有关详细信息 ...另请参见 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关使用 Astra 资源和端点的更多详细信息。</block>
+  <block id="5814e35bd932d85c35c92f3c990f80c0" category="paragraph">* 版本 * 列表示首次引入资源时的 Astra 版本。对于新添加到当前版本的资源，此字段为粗体。</block>
+  <block id="be8545ae7ab0276e15898aae7acfbd7a" category="cell">资源</block>
+  <block id="b8e7b465df7c5979dc731d06e84ce2cf" category="cell">版本。</block>
+  <block id="08bd40c7543007ad06e4fce31618f6ec" category="cell">Account</block>
+  <block id="5b0653f11dfe407c7afac43ce74c43cf" category="cell">* 。 21.12*</block>
+  <block id="39a70d60ad1f39618d1dd601b341a2f6" category="cell">通过帐户资源，您可以管理多租户 Astra Control 部署环境中的隔离租户。</block>
+  <block id="8ff5110ebae476ca35aeb20b14a75693" category="cell">21.08.</block>
+  <block id="af08b45fa44807ac1852671e6fc59d44" category="cell">21.04</block>
+  <block id="b9ab083ebcf27029a022bf2e308555ab" category="cell">执行钩</block>
+  <block id="54d57faf98d4bfad6eed40ece793dce5" category="cell">执行钩资源表示自定义脚本，您可以在执行受管应用程序的快照之前或之后运行这些脚本。</block>
+  <block id="f42562a6ae551c35216254ce200afcc8" category="cell">挂钩源</block>
+  <block id="fba14cda608976c44a49d623666f37c7" category="cell">hook 源资源表示与执行 hook 一起使用的实际源代码。将源代码与执行控制分开具有多种优势，例如允许共享脚本。</block>
+  <block id="fd2bd51169cf1622d8afc842b6c7fae9" category="cell">角色绑定</block>
+  <block id="9f9b94351efdd20bfec97ae027bdd1de" category="cell">执行挂机覆盖</block>
+  <block id="d20b671eee65b07689030c1a810243c7" category="cell">使用执行挂钩覆盖资源，您可以根据需要为特定应用程序禁用预加载的 NetApp 默认执行挂钩。</block>
+  <block id="db6b0e60fc01fe1efd233929dea252ca" category="cell">集群节点</block>
+  <block id="46f255d802b6381149870692736dad56" category="cell">集群节点资源允许您访问 Kubernetes 集群中的各个节点，从而提供额外的解析。</block>
+  <block id="129be99fc591453941e189ee076a0290" category="cell">托管存储后端</block>
+  <block id="3e96a7fa7d0e1d88d70912b8a5d80908" category="cell">通过托管存储后端资源，您可以访问后端存储提供程序的抽象表示形式。这些存储后端可供受管集群和应用程序使用。</block>
+  <block id="b3ba0fe968ce39dcfc6fe8cc0f1b02da" category="cell">命名空间</block>
+  <block id="08dafbbeceed7e340c9625fd30927d83" category="cell">命名空间资源用于访问 Kubernetes 集群中使用的命名空间。</block>
+  <block id="ec0f2a3052ae80ccfcad8020e8680088" category="cell">存储设备</block>
+  <block id="5482e18b728d9af600694261c0650975" category="cell">通过存储设备资源，您可以访问与 Astra 数据存储（ ADS ）类型存储后端的特定存储节点关联的磁盘。ADS 存储后端部署为 Kubernetes 集群。</block>
+  <block id="fe171fe0421ac266ac1285e64b1311d2" category="cell">存储节点</block>
+  <block id="2c0709150edcf4371b39572b109c04c3" category="cell">存储节点资源表示属于 ADS 集群的节点。</block>
+  <block id="01d5e4ec3cb4b0c1971b9e8a5199a107" category="paragraph">在客户内部部署的当前版本 Astra Control Center 软件的文档。</block>
+  <block id="9533b0dcff191d66f9ea3fe447bffddc" category="paragraph">公有云中提供的最新版本的 Astra 控制服务软件文档。</block>
+  <block id="5b9e0257ebcdde10e1d11e75a9a03336" category="paragraph">由 NetApp 维护的开源存储编排程序 Astra Trident 软件最新版本的文档。</block>
+  <block id="1045f2798351223896fdab281a8307eb" category="sidebar">Astra Control Automation 文档</block>
+  <block id="93168a8084b3e838d2932c4734bd234e" category="sidebar">早期版本</block>
+  <block id="35bcd8d33247c44923eb71df2f2f0a2d" category="sidebar">原生 Python</block>
 </blocks>

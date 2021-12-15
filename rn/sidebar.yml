@@ -2,5 +2,9 @@
 section: rn
 title: 发行说明
 entries:
+- title: 关于此版本
+  url: "/rn/about.html"
 - title: 新增功能
   url: "/rn/whats_new.html"
+- title: 已知问题
+  url: "/rn/known_issues.html"

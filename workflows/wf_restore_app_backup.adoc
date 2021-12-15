@@ -31,14 +31,14 @@ summary:
 
 === 3. 还原应用程序
 
-执行以下 REST API 调用。
+执行以下 REST API 调用。您必须提供备份（如下所示）或快照的 ID 。
 
 [cols="25,75"]
 |===
 | HTTP 方法 | 路径 
 
 
-| 发布 | /account/ ｛ accountID ｝ /K8s/v1/managedApps 
+| PUT | /account/ ｛ accountID ｝ /K8s/v1/managedApps/ ｛ appID ｝ 
 |===
 
 
@@ -61,20 +61,15 @@ summary:
 ----
 {
   "type": "application/astra-managedApp",
-  "version": "1.0",
-  "name": "postgres1-postgresql-clone",
-  "clusterID": "30880586-d579-4d27-930f-a9633e59173b",
-  "sourceClusterID": "30880586-d579-4d27-930f-a9633e59173b",
-  "namespace": "davidns-postgres-app",
-  "backupID": "e24515bd-a28e-4b28-b832-f3c74dbf32fb",
-  "sourceAppID": "e591ee59-ea90-4a9f-8e6c-d2b6e8647096"
+  "version": "1.2",
+  "backupID": "e24515bd-a28e-4b28-b832-f3c74dbf32fb"
 }
 ----
 
 
-===== curl 示例：从备份克隆应用程序
+===== curl 示例：从备份原位还原应用程序
 
 [source, curl]
 ----
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps' --header 'Content-Type: application/astra-managedApp+json' --header '*/*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput
+curl --location -i --request PUT 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<APP_ID>' --header 'Content-Type: application/astra-managedApp+json' --header '*/*' --header 'ForceUpdate: true' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput
 ----
