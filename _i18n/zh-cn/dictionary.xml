@@ -862,4 +862,7 @@
   <block id="1045f2798351223896fdab281a8307eb" category="sidebar">Astra Control Automation 文档</block>
   <block id="93168a8084b3e838d2932c4734bd234e" category="sidebar">早期版本</block>
   <block id="35bcd8d33247c44923eb71df2f2f0a2d" category="sidebar">原生 Python</block>
+  <block id="be1c3d3113c4023e29e8dd947523c711" category="inline-link">Astra Data Store 文档</block>
+  <block id="c1f6a45da7b5911a5f35093ae72bfc7a" category="list-text"><block ref="c1f6a45da7b5911a5f35093ae72bfc7a" category="inline-link-rx"></block></block>
+  <block id="f1078b605bb76543a5137c04c286382d" category="paragraph">在客户内部部署的当前版本 Astra Data Store 软件的文档。</block>
 </blocks>
