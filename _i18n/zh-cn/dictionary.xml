@@ -865,4 +865,10 @@
   <block id="be1c3d3113c4023e29e8dd947523c711" category="inline-link">Astra Data Store 文档</block>
   <block id="c1f6a45da7b5911a5f35093ae72bfc7a" category="list-text"><block ref="c1f6a45da7b5911a5f35093ae72bfc7a" category="inline-link-rx"></block></block>
   <block id="f1078b605bb76543a5137c04c286382d" category="paragraph">在客户内部部署的当前版本 Astra Data Store 软件的文档。</block>
+  <block id="d4f45c394127f6c3eb5c89e1eb467c9b" category="section-title">Astra 系列文档的一部分</block>
+  <block id="4b675e54aa1095b2b20f8c4019de37b0" category="inline-link">Astra 文档</block>
+  <block id="e24577a913c63a00f3c432062590ce18" category="paragraph">Astra Control Automation 文档是较大的 Astra 系列文档的一部分。请参见<block ref="30a4a2719bc4878ee8fefb5295fc2613" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="c2c4dd027136447874b3a5d1dbac4ae0" category="inline-link">Astra 系列文档</block>
+  <block id="d718eacc67f8b74e62fa7298041adf60" category="list-text"><block ref="d718eacc67f8b74e62fa7298041adf60" category="inline-link-rx"></block></block>
+  <block id="2c3489a3234e45e6f5946c26c4cb7d5e" category="paragraph">用于访问适用于内部部署和公有云部署的所有 Astra 文档的中央位置。</block>
 </blocks>

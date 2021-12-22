@@ -65,3 +65,9 @@ Astra Control REST API 可提供强大的调试和问题确定功能，包括系
 === 高级自动化技术的基础
 
 除了直接访问 REST API 之外，您还可以使用基于 REST API 的其他自动化技术。
+
+
+
+=== Astra 系列文档的一部分
+
+Astra Control Automation 文档是较大的 Astra 系列文档的一部分。请参见 https://docs.netapp.com/us-en/astra-family/["Astra 文档"^] 有关详细信息 ...

@@ -35,6 +35,10 @@ summary:
 +
 由 NetApp 维护的开源存储编排程序 Astra Trident 软件最新版本的文档。
 
+* https://docs.netapp.com/us-en/astra-family/["Astra 系列文档"^]
++
+用于访问适用于内部部署和公有云部署的所有 Astra 文档的中央位置。
+
 
 
 
