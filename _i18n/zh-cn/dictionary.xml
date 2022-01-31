@@ -703,7 +703,6 @@
   <block id="8af1f604c2ddb0ae53e02227ab1ca1da" category="paragraph">表述性状态传输（ Representational State Transfer ， REST ）是一种用于创建分布式 Web 应用程序的模式。在设计 Web 服务 API 时，它会建立一组用于公开基于服务器的资源并管理其状态的主流技术和最佳实践。虽然 REST 为应用程序开发提供了一致的基础，但每个 API 的详细信息可能因特定设计选项而异。在将 Astra Control REST API 用于实时部署之前，您应了解其特征。</block>
   <block id="352836aad17f0db4217873eb0a9524b3" category="paragraph">虽然信息可以通过多种方式在 Web 服务客户端和服务器之间进行结构化和传输，但最受欢迎的选项是 JavaScript 对象表示法（ JSON ）。JSON 是一种行业标准，用于以纯文本形式表示简单数据结构，并用于传输描述资源的状态信息。Astra Control REST API 使用 JSON 格式化每个 HTTP 请求和响应正文中包含的数据。</block>
   <block id="67a1ee90ebb7f60d74dc1baee961de03" category="paragraph">运行脚本的工作站必须能够访问网络并访问 Astra Control 。使用 Astra 控制服务时，您必须连接到互联网，并且能够连接到 `https://astra.netapp.io` 上的服务。</block>
-  <block id="2d5a5fa8a82d5c201cb1e33457f8b169" category="doc">Astra Control REST API 新增功能</block>
   <block id="b0c0f8ac8f671541655d3d0e2beb2ce8" category="paragraph">NetApp 会定期更新 Astra Control REST API ，为您提供新功能，增强功能和错误修复。</block>
   <block id="2ccd65a5a6a4e8a5f8ce16d83c39361b" category="paragraph">除了作为公有云服务提供的现有 Astra 控制服务之外，此版本还包括 Astra 控制中心内部部署模式。您可以在站点上安装 Astra 控制中心来管理本地 Kubernetes 环境。两种 Astra Control 部署模式共享同一个 REST API ，但文档中会根据需要指出一些细微的差异。</block>
   <block id="e83314a43cc3f59ae86485142dc33671" category="paragraph">通过 Astra Control REST API 访问的资源数量已大幅增加，许多新资源为内部 Astra Control Center 产品奠定了基础。新资源包括： ASUP ，授权，功能，许可证，设置， 订阅，存储分段，云，集群，受管集群， 存储后端和存储类。请参见 <block ref="f79c22f30a5c9f960ce998adee5739fa" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
@@ -871,4 +870,5 @@
   <block id="c2c4dd027136447874b3a5d1dbac4ae0" category="inline-link">Astra 系列文档</block>
   <block id="d718eacc67f8b74e62fa7298041adf60" category="list-text"><block ref="d718eacc67f8b74e62fa7298041adf60" category="inline-link-rx"></block></block>
   <block id="2c3489a3234e45e6f5946c26c4cb7d5e" category="paragraph">用于访问适用于内部部署和公有云部署的所有 Astra 文档的中央位置。</block>
+  <block id="c93cc787737ceea532bea714170e32cf" category="doc">Astra Control REST API 的新增功能</block>
 </blocks>

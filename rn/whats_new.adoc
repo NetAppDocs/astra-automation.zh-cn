@@ -4,7 +4,7 @@ permalink: rn/whats_new.html
 keywords:  
 summary:  
 ---
-= Astra Control REST API 新增功能
+= Astra Control REST API 的新增功能
 :hardbreaks:
 :nofooter: 
 :icons: font
