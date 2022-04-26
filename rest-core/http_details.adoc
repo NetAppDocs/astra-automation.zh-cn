@@ -6,6 +6,7 @@ summary:
 ---
 = HTTP 详细信息
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -70,7 +71,7 @@ Astra Control REST API 可实施一个事务模式，其中包含定义明确的
 下表汇总了与 Astra Control REST API 一起使用的 HTTP 标头。
 
 
-NOTE: 请参见 https://www.rfc-editor.org/rfc/rfc7232.txt["RFC 7232"^] 和 有关详细信息 ...
+NOTE: 请参见 https://www.rfc-editor.org/rfc/rfc7232.txt["RFC 7232"^] 和 https://www.rfc-editor.org/rfc/rfc7233.txt["RFC 7233"^] 有关详细信息 ...
 
 [cols="30,15,55"]
 |===

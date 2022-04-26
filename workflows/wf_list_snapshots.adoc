@@ -6,6 +6,7 @@ summary:
 ---
 = 列出快照
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

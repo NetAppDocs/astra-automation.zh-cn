@@ -6,6 +6,7 @@ summary:
 ---
 = 为受管应用程序创建快照
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

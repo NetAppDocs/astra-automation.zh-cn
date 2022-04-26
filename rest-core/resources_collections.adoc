@@ -6,6 +6,7 @@ summary:
 ---
 = 资源和集合
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

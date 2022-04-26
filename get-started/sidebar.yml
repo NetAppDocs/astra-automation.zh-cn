@@ -10,3 +10,5 @@ entries:
   url: "/get-started/hello_world.html"
 - title: 准备使用这些工作流
   url: "/get-started/prepare_to_use_workflows.html"
+- title: 基本 Kubernetes 概念
+  url: "/get-started/kubernetes_concepts.html"

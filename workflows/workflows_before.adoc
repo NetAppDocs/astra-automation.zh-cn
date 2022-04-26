@@ -6,6 +6,7 @@ summary:
 ---
 = 开始之前
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -59,7 +60,7 @@ NOTE: NetApp 可以随时扩展和改进这些工作流，因此您应定期查�
 克隆应用程序时，需要考虑一些事项。以下所述参数是 JSON 输入的一部分。
 
 源集群标识符:: 值 `sClusterID` 始终表示安装原始应用程序的集群。
-集群标识符::
+集群标识符:: 值 `clusterID` 用于标识要安装新应用程序的集群。
 +
 --
 * 在同一集群中克隆时， `clusterID` 和 `sClusterID` 具有相同的值。

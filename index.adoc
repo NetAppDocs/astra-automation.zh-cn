@@ -7,6 +7,7 @@ summary: 这是 Astra Automation 的总结。
 ---
 = Astra Control Automation 文档
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

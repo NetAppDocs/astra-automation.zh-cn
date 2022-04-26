@@ -15,8 +15,8 @@ sidebar:
   - section: intro
   - section: get-started
   - section: rest-core
-  - section: additional
   - section: endpoints
+  - section: additional
   - section: workflows_infra
   - section: workflows
   - section: python
@@ -31,63 +31,48 @@ homepage:
   - title: 入门
     links:
     - title: 简介
-      summary: 简要了解 Astra REST API 。
       url: "/intro/introduction.html"
     - title: 开始之前
-      summary: 准备开始使用 REST API 。
       url: "/get-started/before_get_started.html"
     - title: 获取 API 令牌
-      summary: 生成访问 API 所需的令牌。
       url: "/get-started/get_api_token.html"
     - title: 大家好
-      summary: 测试对 REST API 的基本访问。
       url: "/get-started/hello_world.html"
   - title: REST 实施
     links:
     - title: REST Web 服务
-      summary: 了解 REST Web 服务的技术基础。
       url: "/rest-core/rest_web_services.html"
     - title: HTTP 详细信息
-      summary: 查看 HTTP 实施的详细信息。
       url: "/rest-core/http_details.html"
     - title: URL 格式
-      summary: 了解 URL 格式及其如何由多个值组成。
       url: "/rest-core/url_format.html"
   - title: 其他注意事项
     links:
-    - title: 安全性
-      summary: 了解 REST API 提供的安全性。
-      url: "/additional/security.html"
+    - title: RBAC 安全性
+      url: "/additional/rbac.html"
     - title: 使用收集
-      summary: 使用查询参数访问资源收集。
-      url: "/additional/working_with_collections.html"
+      url: "/additional/work_with_collections.html"
     - title: 诊断和支持
-      summary: 准备支持 Astra 应用程序。
       url: "/additional/diagnostics_support.html"
+    - title: 撤消 API 令牌
+      url: "/additional/revoke_token.html"
   - title: Resources
     links:
-    - title: 资源和集合
-      summary: 熟悉 REST 资源和集合的设计。
+    - title: REST 资源和集合
       url: "/rest-core/resources_collections.html"
-    - title: Astra Control REST API 资源
-      summary: 查看有关各种 Astra 资源的简要介绍。
+    - title: Astra API 资源摘要
       url: "/endpoints/resources.html"
   - title: 工作流
     links:
     - title: 准备
-      summary: 准备使用 Astra 工作流。
       url: "/get-started/prepare_to_use_workflows.html"
     - title: 基础架构工作流
-      summary: 维护 Astra 运行时基础架构所需的工作流。
       url: "/workflows_infra/workflows_infra_before.html"
     - title: 管理工作流
-      summary: 用于管理受管应用程序的通用工作流。
       url: "/workflows/workflows_before.html"
   - title: Python
     links:
-    - title: 开始之前
-      summary: 准备运行示例 Python 脚本。
+    - title: NetApp Astra Control Python SDK
+      url: "/python/astra_toolkits.html"
+    - title: 本机使用 Python
       url: "/python/python_before.html"
-    - title: 列出受管应用程序
-      summary: 运行示例脚本以列出受管应用程序。
-      url: "/python/py_list_man_apps.html"

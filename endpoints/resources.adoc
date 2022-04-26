@@ -6,6 +6,7 @@ summary:
 ---
 = 资源和端点
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -13,14 +14,14 @@ summary:
 
 
 [role="lead"]
-您可以使用通过 Astra Control REST API 提供的资源来自动执行 Astra 部署。每个资源都通过一个或多个端点进行访问。本节介绍了可在规划自动化部署时使用的 REST 资源。
+您可以使用通过 Astra Control REST API 提供的资源来自动执行 Astra 部署。每个资源都通过一个或多个端点进行访问。下面提供的信息介绍了可在自动化部署中使用的 REST 资源。
 
 
-NOTE: 用于访问 Astra Control 资源的路径和完整 URL 的格式基于多个值。请参见 link:../rest-core/url_format.html["URL 格式"] 有关详细信息 ...另请参见  有关使用 Astra 资源和端点的更多详细信息。
+NOTE: 用于访问 Astra Control 资源的路径和完整 URL 的格式基于多个值。请参见 link:../rest-core/url_format.html["URL 格式"] 有关详细信息 ...另请参见 link:../reference/api_reference.html["API 参考"] 有关使用 Astra 资源和端点的更多详细信息。
 
 
 
-== Astra Control REST 资源和端点
+== Astra Control REST 资源摘要
 
 Astra Control REST API 中提供的主要资源端点分为三类。除了需要说明的情况外，可以使用一整套 CRUD 操作（创建，读取，更新，删除）来访问每个资源。
 
@@ -37,7 +38,7 @@ Astra Control REST API 中提供的主要资源端点分为三类。除了需要
 | 资源 | 版本。 | Description 
 
 
-| Account | * 。 21.12* | 通过帐户资源，您可以管理多租户 Astra Control 部署环境中的隔离租户。 
+| Account | 21.12 | 通过帐户资源，您可以管理多租户 Astra Control 部署环境中的隔离租户。 
 
 
 | ASUP | 21.08. | ASUP 资源表示转发给 NetApp 支持部门的 AutoSupport 捆绑包。 
@@ -52,19 +53,22 @@ Astra Control REST API 中提供的主要资源端点分为三类。除了需要
 | 事件 | 21.04 | 事件资源表示系统中发生的所有事件，包括归类为通知的子集。 
 
 
-| 执行钩 | * 。 21.12* | 执行钩资源表示自定义脚本，您可以在执行受管应用程序的快照之前或之后运行这些脚本。 
+| 执行钩 | 21.12 | 执行钩资源表示自定义脚本，您可以在执行受管应用程序的快照之前或之后运行这些脚本。 
 
 
 | 功能 | 21.08. | 这些功能资源表示选定的 Astra 功能，您可以查询这些功能来确定它们是否已在系统中启用。访问权限仅限于只读。 
 
 
-| 挂钩源 | * 。 21.12* | hook 源资源表示与执行 hook 一起使用的实际源代码。将源代码与执行控制分开具有多种优势，例如允许共享脚本。 
+| 挂钩源 | 21.12 | hook 源资源表示与执行 hook 一起使用的实际源代码。将源代码与执行控制分开具有多种优势，例如允许共享脚本。 
 
 
 | 许可证 | 21.08. | 许可证资源表示可用于 Astra 帐户的许可证。 
 
 
 | 通知 | 21.04 | 通知资源表示具有通知目标的 Astra 事件。访问权限按用户提供。 
+
+
+| 软件包 | * 。 22.04* | 软件包资源用于注册和访问软件包定义。软件包由多个组件组成，包括文件，映像和其他项目。 
 
 
 | 角色绑定 | 21.04 | 角色绑定资源表示特定用户对和帐户之间的关系。除了这两者之间的链接之外，还会通过特定角色为每个指定一组权限。 
@@ -80,6 +84,9 @@ Astra Control REST API 中提供的主要资源端点分为三类。除了需要
 
 
 | 未读通知 | 21.04 | 未读通知资源表示已分配给特定用户但尚未读取的通知。 
+
+
+| 升级 | * 。 22.04* | 通过升级资源，您可以访问软件组件并启动升级。 
 
 
 | 用户 | 21.04 | 用户资源表示 Astra 用户能够根据其定义的角色访问系统。 
@@ -104,7 +111,7 @@ Astra Control REST API 中提供的主要资源端点分为三类。除了需要
 | 应用程序快照 | 21.04 | 应用程序快照资源表示受管应用程序的快照。 
 
 
-| 执行挂机覆盖 | * 。 21.12* | 使用执行挂钩覆盖资源，您可以根据需要为特定应用程序禁用预加载的 NetApp 默认执行挂钩。 
+| 执行挂机覆盖 | 21.12 | 使用执行挂钩覆盖资源，您可以根据需要为特定应用程序禁用预加载的 NetApp 默认执行挂钩。 
 
 
 | 受管应用程序 | 21.04 | 托管应用程序资源代表由 Astra 管理的 Kubernetes 应用程序。 
@@ -135,16 +142,16 @@ Astra Control REST API 中提供的主要资源端点分为三类。除了需要
 | 集群 | 21.08. | 集群资源表示不受 Kubernetes 管理的 Kubernetes 集群。 
 
 
-| 集群节点 | * 。 21.12* | 集群节点资源允许您访问 Kubernetes 集群中的各个节点，从而提供额外的解析。 
+| 集群节点 | 21.12 | 集群节点资源允许您访问 Kubernetes 集群中的各个节点，从而提供额外的解析。 
 
 
 | 受管集群 | 21.08. | 受管集群资源表示当前由 Kubernetes 管理的 Kubernetes 集群。 
 
 
-| 托管存储后端 | * 。 21.12* | 通过托管存储后端资源，您可以访问后端存储提供程序的抽象表示形式。这些存储后端可供受管集群和应用程序使用。 
+| 托管存储后端 | 21.12 | 通过托管存储后端资源，您可以访问后端存储提供程序的抽象表示形式。这些存储后端可供受管集群和应用程序使用。 
 
 
-| 命名空间 | * 。 21.12* | 命名空间资源用于访问 Kubernetes 集群中使用的命名空间。 
+| 命名空间 | 21.12 | 命名空间资源用于访问 Kubernetes 集群中使用的命名空间。 
 
 
 | 存储后端 | 21.08. | 存储后端资源表示可由 Astra 管理的集群和应用程序使用的存储服务提供商。 
@@ -153,14 +160,34 @@ Astra Control REST API 中提供的主要资源端点分为三类。除了需要
 | 存储类 | 21.08. | 存储类资源表示已发现并可供特定受管集群使用的不同存储类或类型。 
 
 
-| 存储设备 | * 。 21.12* | 通过存储设备资源，您可以访问与 Astra 数据存储（ ADS ）类型存储后端的特定存储节点关联的磁盘。ADS 存储后端部署为 Kubernetes 集群。 
+| 存储设备 | 21.12 | 通过存储设备资源，您可以访问与 Astra 数据存储（ ADS ）类型存储后端的特定存储节点关联的磁盘。ADS 存储后端部署为 Kubernetes 集群。 
 
 
-| 存储节点 | * 。 21.12* | 存储节点资源表示属于 ADS 集群的节点。 
+| 存储节点 | 21.12 | 存储节点资源表示属于 ADS 集群的节点。 
 
 
 | Volume | 21.04 | 卷资源表示与受管应用程序关联的 Kubernetes 存储卷。 
 |===
+
+
+== 最新版本中的新端点
+
+当前的 22.04 Astra Control 版本增加了以下 REST 端点。此外，已升级多个现有资源的版本。
+
+* /accouns/ ｛ account_id ｝ /core/v1/packages
+* /accouns/ ｛ account_id ｝ /core/v1/packages/｛ package_id ｝
+* /accouns/ ｛ account_id ｝ /core/v1/upgrades
+* /accouns/ ｛ account_id ｝ /core/v1/upgrades// ｛ upgrade_id ｝
+* /accouns/ ｛ account_id ｝ /topology/v1/appBackups
+* /accouns/ ｛ account_id ｝ /topology/v1/appBackups/ ｛ appBackup_id ｝
+* /accouns/ ｛ account_id ｝ /topology/v1/cloud / ｛ clune_id ｝ /clusters/ ｛ cluster_id ｝ /clusterNode
+* /accouns/ ｛ account_id ｝ /topology/v1/cloud / ｛ clune_id ｝ /cluster/ ｛ cluster_id ｝ /clusterNodes/｛ clusterNode_id ｝
+* /accouns/ ｛ account_id ｝ /topology/v1/managedClusters/ ｛ managedCluster_id ｝ /apps/ ｛ app_id ｝ /appAssets
+* /accouns/ ｛ account_id ｝ /topology/v1/managedClusters/ ｛ managedCluster_id ｝ /apps/ ｛ app_id ｝ /appAssets/ ｛ appasset_id ｝
+* /accouns/ ｛ account_id ｝ /topology/v1/managedClusters/ ｛ managedCluster_id ｝ /clusterNode
+* /accouns/ ｛ account_id ｝ /topology/v1/managedClusters/ ｛ managedCluster_id ｝ /clusterNodes/ ｛ clusterNode_id ｝
+
+
 
 
 == 其他资源和端点

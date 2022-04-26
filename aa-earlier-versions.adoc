@@ -6,6 +6,7 @@ summary:
 ---
 = 早期版本的 Astra Control Automation 文档
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -15,5 +16,6 @@ summary:
 [role="lead"]
 您可以通过以下链接访问先前版本的 Astra Control 的自动化文档。
 
+* https://docs.netapp.com/us-en/astra-automation-2112/["Astra Control Automation 21.12 文档"^]
 * https://docs.netapp.com/us-en/astra-automation-2108/["Astra Control Automation 21.08 文档"^]
 

@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: additional/revoke_token.html 
+keywords:  
+summary:  
+---
+= 撤消 API 令牌
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以在 Astra Web 界面上撤消不再需要的 API 令牌。
+
+您需要一个 Astra 帐户。您还应确定要撤消的令牌。
+
+令牌撤消后，它将立即永久不可用。
+
+.步骤
+. 使用您的帐户凭据登录到 Astra 。
++
+访问以下站点以获取 Astra 控制服务： https://astra.netapp.io/["https://astra.netapp.io"^]
+
+. 单击页面右上角的图图标并选择 * API access* 。
+. 选择要撤消的一个或多个令牌。
+. 在 * 操作 * 下拉框下，单击 * 撤消令牌 * 。
+

@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: additional/rbac.html 
+keywords:  
+summary:  
+---
+= RBAC 安全性
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Astra REST API 支持基于角色的访问控制（ Role-Based Access Control ， RBAC ）来限制对系统功能的访问。
+
+
+
+== Astra 角色
+
+每个 Astra 用户都分配有一个角色，用于确定可执行的操作。这些角色按层次结构进行排列，如下表所述。
+
+[cols="15,85"]
+|===
+| Role | Description 
+
+
+| 所有者 | 具有管理员角色的所有权限，并且还可以删除 Astra 帐户。 
+
+
+| 管理员 | 具有成员角色的所有权限，并且还可以邀请用户加入帐户。 
+
+
+| 成员 | 可以全面管理 Astra 应用程序和计算资源。 
+
+
+| 查看器 | 仅限查看资源。 
+|===
+
+
+== 具有命名空间粒度的增强型 RBAC
+
+
+NOTE: 此功能是在 Astra REST API 22.04 版中引入的。
+
+为特定用户建立角色绑定后，可以应用一个限制来限制用户有权访问的命名空间。可通过多种方法定义此限制，如下表所述。有关详细信息，请参见角色绑定 API 中的参数 `roleContrcons` 。
+
+[cols="20,80"]
+|===
+| 命名空间 | Description 
+
+
+| 全部 | 用户可以通过通配符参数 "*" 访问所有命名空间。这是保持向后兼容性的默认值。 
+
+
+| 无 | 尽管约束列表为空，但仍会指定此限制列表。这表示用户无法访问任何命名空间。 
+
+
+| 命名空间列表 | 包含命名空间的 UUID ，这会将用户限制为单个命名空间。此外，还可以使用逗号分隔列表来访问多个命名空间。 
+
+
+| Label | 指定了一个标签，并允许访问所有匹配的命名空间。 
+|===

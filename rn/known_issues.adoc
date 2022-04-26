@@ -6,6 +6,7 @@ summary:
 ---
 = 已知问题
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -14,6 +15,9 @@ summary:
 
 [role="lead"]
 您应查看当前版本中与 Astra Control REST API 相关的所有已知问题。已知问题可确定可能会阻止您成功使用本产品的问题。
+
+
+NOTE: Astra Control REST API 22.04 版本没有新的已知问题。以下所述问题已在先前版本中发现，但仍适用于当前版本。
 
 
 

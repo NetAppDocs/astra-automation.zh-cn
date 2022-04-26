@@ -41,22 +41,14 @@
   <block id="b4a49af66f4e673d029ee977129248ee" category="paragraph">您可以通过使用 `limit` 参数限制为请求返回的资源实例数来强制分页。</block>
   <block id="e93f994f01c537c4e2f7d8528c3eb5e9" category="section-title">计数</block>
   <block id="6a7d4ae9b8c0f0a303422357fd399580" category="paragraph">如果包括布尔参数 `count` set to `true` ，则元数据部分将提供给定响应返回数组中的资源数。</block>
-  <block id="2fae32629d4ef4fc6341f1751b405e45" category="doc">安全性</block>
-  <block id="e9fd08421726dfc597425b72cb749048" category="admonition">所有 HTTP 网络流量均使用传输层安全（ Transport Layer Security ， TLS ）标准进行保护。</block>
-  <block id="020fc1c1709865f47cf581e3063ef365" category="section-title">Astra API 令牌</block>
-  <block id="4c24942ab40abc662728ad39b3e7853f" category="list-text">您可以在 Astra Web 用户界面上生成 API 令牌。</block>
   <block id="261bfb4842abd90ac7080375e1e3a342" category="list-text">令牌创建后永不过期。</block>
-  <block id="0e8786f274c7ef1712747fb88e9cd3b3" category="list-text">您可以随时在 Astra Web 用户界面上撤消令牌。</block>
-  <block id="d0d1091dbfd376acefa9234b27bf00d3" category="section-title">撤消 API 访问令牌</block>
   <block id="0f20f78dc9e61210d9143c555c8e2db8" category="paragraph">您可以在 Astra Web 界面上撤消不再需要的 API 令牌。</block>
-  <block id="68a90746d8aa2fddfaf501b26970b07b" category="paragraph">您需要一个 Astra 服务帐户。您还应确定要撤消的令牌。</block>
   <block id="c4f78d9edffd445c660b4325747b976a" category="paragraph">令牌撤消后，它将立即永久不可用。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步骤</block>
   <block id="c3cd4b6e8352817aeaab7114fc20ee4d" category="inline-link"><block ref="c3cd4b6e8352817aeaab7114fc20ee4d" category="inline-link-rx"></block></block>
   <block id="7d88293618d45c51062ebb23f7a5777d" category="list-text">单击页面右上角的图图标并选择 * API access* 。</block>
   <block id="6aec476981db1f529613506dbaf170dd" category="list-text">选择要撤消的一个或多个令牌。</block>
   <block id="ae4a6c751a5ef4ed21296977cde2b309" category="list-text">在 * 操作 * 下拉框下，单击 * 撤消令牌 * 。</block>
-  <block id="0ca5961f07dff9845784a6a15a8010d0" category="section-title">角色和访问控制</block>
   <block id="b6f4a2ec6356bbd56d49f2096bf9d3d3" category="list-text">所有者</block>
   <block id="e3afed0047b08059d0fada10f400c1e5" category="list-text">管理员</block>
   <block id="858ba4765e53c712ef672a9570474b1d" category="list-text">成员</block>
@@ -84,7 +76,6 @@
   <block id="8cd58c89ff3d51a256ecfe3fe8bab20f" category="inline-link-macro">其他资源</block>
   <block id="1975d27c17bd745494bde5176f3687d2" category="paragraph">您应了解中建议的追加信息资源 <block ref="d9232e9ba333ee728d29f8228e038c57" category="inline-link-macro-rx"></block>。</block>
   <block id="6e567afb3c0582569592264335e77063" category="doc">获取 API 令牌</block>
-  <block id="3831398789fa13daf694eec5e5b8b586" category="admonition">Astra API 令牌永不过期，但是您可以在不再需要某个令牌时将其撤消。</block>
   <block id="b329e0b224bc672c7032902e91459644" category="list-text">单击页面上的 * 生成 API 令牌 * ，然后在弹出窗口中单击 * 生成 API 令牌 * 。</block>
   <block id="3040c02566f3d35a3b86a6ca9472dadd" category="list-text">单击图标将令牌字符串复制到剪贴板并将其保存在编辑器中。</block>
   <block id="df98c0b39730eeb3f14749ea1c0684c2" category="list-text">复制并保存同一页面上提供的帐户 ID 。</block>
@@ -499,7 +490,6 @@
   <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link">NetApp 支持</block>
   <block id="4e3ffaad45a8ae63f200119be8101498" category="list-text"><block ref="4e3ffaad45a8ae63f200119be8101498" category="inline-link-rx"></block></block>
   <block id="3d32fc1a126e880a8ed715ad4b9c42f5" category="paragraph">访问故障排除工具，文档和技术支持帮助。</block>
-  <block id="9908fe61d53709e616ab0ca94767db29" category="section-title">REST 概念和云技术</block>
   <block id="e9c4f861f257833ba2ec75155047b6ed" category="inline-link">Dissertation</block>
   <block id="b9e9e4c00e500b7ab02ea023fdde7644" category="list-text">博士<block ref="f64b654d7799e22745330f1f41a344ae" category="inline-link-rx"></block> 由 Roy Fielding 主讲</block>
   <block id="fc0386108cb3bd212c4e2b1402e8cdc9" category="paragraph">本出版物介绍并建立了 REST 应用程序开发模型。</block>
@@ -509,23 +499,9 @@
   <block id="fa862ec81357f8907a8b75f4d969c590" category="inline-link">RFC 编辑器</block>
   <block id="6763d4dfc2fa6c04b08ba1e1b7751f5f" category="list-text"><block ref="6763d4dfc2fa6c04b08ba1e1b7751f5f" category="inline-link-rx"></block></block>
   <block id="ba793efaa4293b35388d140ee9308a68" category="paragraph">Web 和 Internet 标准的权威来源，作为一组编号唯一的 RFC 文档进行维护。</block>
-  <block id="8a72d09dc95b3b91b5b0e50e2855c7df" category="sidebar">简要了解 Astra REST API 。</block>
-  <block id="18500a8a0b71e0c523540a041898f20e" category="sidebar">测试对 REST API 的基本访问。</block>
-  <block id="5a8acee56ec6e869519f734e2088df5f" category="sidebar">了解 REST Web 服务的技术基础。</block>
-  <block id="ffffaf26e2c2db4b739b56890328e4fc" category="sidebar">查看 HTTP 实施的详细信息。</block>
-  <block id="b48b16eddb41e4fa6195a15600ab9357" category="sidebar">了解 URL 格式及其如何由多个值组成。</block>
-  <block id="9755f42ebf56e17cf5975e86f758625f" category="sidebar">了解 REST API 提供的安全性。</block>
-  <block id="10dbdee8ec3b04e3bbc3cf0d5107272d" category="sidebar">使用查询参数访问资源收集。</block>
-  <block id="0d94de5cabf3777edbb39575a23997f0" category="sidebar">准备支持 Astra 应用程序。</block>
-  <block id="a4d53babcc4593ce136c41558903e411" category="sidebar">熟悉 REST 资源和集合的设计。</block>
-  <block id="115b4cdc499a3cd389a6ef30356ff6ef" category="sidebar">查看有关各种 Astra 资源的简要介绍。</block>
   <block id="9a5f09cf66e692efdae493ce4c9aa64f" category="sidebar">准备</block>
-  <block id="5e8f36bd36829d3772c20b89480e3105" category="sidebar">准备使用 Astra 工作流。</block>
   <block id="a7f5f35426b927411fc9231b56382173" category="sidebar">Python</block>
-  <block id="4916981f03660e03cc80dd62c59eae32" category="sidebar">准备运行示例 Python 脚本。</block>
-  <block id="b601ee4ab1a336d55b2570d122e0acd8" category="sidebar">运行示例脚本以列出受管应用程序。</block>
   <block id="36b64aad8a26246fe3ad4116a2b6f289" category="sidebar">诊断</block>
-  <block id="f05754a1ff0413a18fba9fcecbf43b4d" category="sidebar">获取 API 令牌</block>
   <block id="824ee32982b0cc1ac1aca8447c9cb3cf" category="sidebar">应用程序控制</block>
   <block id="0990e289177ad252ad62d3e723123f2d" category="sidebar">列出非受管应用程序</block>
   <block id="6e401175b804a895ba134912540780f9" category="sidebar">列出受管应用程序</block>
@@ -541,10 +517,8 @@
   <block id="879ad4bddb82a977b90643c7b33a4e49" category="sidebar">从备份克隆应用程序</block>
   <block id="dc299aaf3e84eb3627f50d2d2484cf17" category="sidebar">从备份还原应用程序</block>
   <block id="999e0dcec594b55111b1ede61b4409f5" category="sidebar">列出通知</block>
-  <block id="30ab6f0fd2f051c07baddb1c7c702733" category="paragraph">请参见 <block ref="949977ec887dbf77cf703083221524dc" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="c7937dcfe6d6141d399008b7df375246" category="list-text">使用您的帐户凭据登录到 Astra 。</block>
   <block id="6f38ef059f4b592ce26b99012c9d756d" category="paragraph">访问以下站点以获取 Astra 控制服务：<block ref="0045c0d6f22ad59c53fc1e6d3b91c771" category="inline-link-rx"></block></block>
-  <block id="c2ec1ffa08cff38a8aecac49aed91311" category="paragraph">每个 Astra 用户都分配有一个角色，用于确定可执行的操作。这些角色按层次结构进行排列，如下表所述。</block>
   <block id="bbbabdbe1b262f75d99d62880b953be1" category="cell">Role</block>
   <block id="40923151202a4a1da433572b776bb7ae" category="cell">具有管理员角色的所有权限，并且还可以删除 Astra 帐户。</block>
   <block id="7bd88b6f5fdbbacda32d9f1f4588445c" category="cell">具有成员角色的所有权限，并且还可以邀请用户加入帐户。</block>
@@ -613,9 +587,7 @@
   <block id="39fc3040b9fe64cf202ce4de80bf7f69" category="list-text">有一组丰富的查询参数，可用于访问资源集合。支持的部分操作包括筛选，排序和分页。</block>
   <block id="95dc0391ce7b396d7dd5622284e8fc3e" category="doc">已知问题</block>
   <block id="1a615153bb2bd3389942d44023a8f4bb" category="section-title">拥有 Astra 帐户凭据</block>
-  <block id="11b7e523e4dba4e9a9499492d8f958a2" category="paragraph">您需要使用 Astra 凭据登录到 Astra Web 用户界面并生成 API 令牌。使用 Astra 控制中心，您可以在本地管理这些凭据。使用 Astra 控制服务时，帐户凭据由 * Auth0* 服务维护。</block>
   <block id="646fd3c3d22d826a188a59c1bba8854b" category="paragraph">您需要 Astra 帐户的凭据。</block>
-  <block id="99f3096a06344ccb634a49e5cd253955" category="paragraph">此任务会在 Astra Web 界面上生成 API 令牌。此外，您还应检索帐户 ID ，进行 API 调用时也需要此 ID 。</block>
   <block id="ec34ea1038c99109c93f6776a16e2be8" category="section-title">工作流类别</block>
   <block id="20d2410ae6d60054698fdb2241648ec0" category="paragraph">根据您的部署模式，有两大类 Astra 工作流可用。如果您使用的是 Astra 控制中心，则应先从基础架构工作流开始，然后再继续执行管理工作流。使用 Astra Control Service 时，通常可以直接转到管理工作流。</block>
   <block id="3968c3333db40e7d3ec4d8fb2fc30853" category="admonition">工作流中的 curl 示例使用 Astra 控制服务的 URL 。在根据您的环境使用内部 Astra 控制中心时，您需要更改 URL 。</block>
@@ -674,14 +646,8 @@
   <block id="b16682201ded465cc3160dbc12de687f" category="cell">/account/ ｛ accountID ｝ /core/v1/users</block>
   <block id="d5eaca06185acdad8b69d18d2b7d8a07" category="section-title">curl 示例：返回所有用户的所有数据</block>
   <block id="6f0f5a995f8609d334baee54a5b0c773" category="section-title">curl 示例：返回所有用户的名字，姓氏和 ID</block>
-  <block id="ac765f2f54ea73e1526cf01bac4a309b" category="sidebar">准备开始使用 REST API 。</block>
-  <block id="cb6fea8e773da9ef213dc1af8650d291" category="sidebar">生成访问 API 所需的令牌。</block>
-  <block id="1a1f080e8f2136b11ff08f602e4ed1a3" category="sidebar">维护 Astra 运行时基础架构所需的工作流。</block>
-  <block id="25443fd74e95acec2509e7d76d37861d" category="sidebar">用于管理受管应用程序的通用工作流。</block>
-  <block id="35ddd64ed03dd1579ce39e6e82ff721f" category="sidebar">其他 REST 注意事项</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">发行说明</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
-  <block id="c59ae8d7beeb519a23478ab048af482c" category="paragraph"><block ref="c59ae8d7beeb519a23478ab048af482c" category="inline-link-macro-rx"></block></block>
   <block id="e81b0f8fae224ca0c3d3258b75a989dd" category="section-title">Astra Control API 许可证</block>
   <block id="4c7aee6e8d40dfdf7713e4a924264d5a" category="paragraph">您可以列出为特定 Astra 帐户定义的用户。</block>
   <block id="e6c08d334ddcc8f5824e2eb3371f9b4f" category="admonition">您可以使用可选的请求标头强制删除失败的备份，如下所述。</block>
@@ -716,26 +682,18 @@
   <block id="973e2c06fdb700a27ccfb70fe4627261" category="paragraph">Astra Control REST API 可提供强大的调试和问题确定功能，包括系统事件和用户通知。</block>
   <block id="e2cfa1b12557ae7ad3c2bb28c8b77d7c" category="paragraph">您可以访问所有 Astra Control REST API 调用的详细信息，包括 HTTP 方法，输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。</block>
   <block id="2aedb1bdf28ee2f3357b9859cfa547c3" category="admonition">目前， Astra Control 随附了 REST API 参考文档，可在线获取。</block>
-  <block id="b5e893215efc14b056461f3d72a24170" category="paragraph">您可以使用通过 Astra Control REST API 提供的资源来自动执行 Astra 部署。每个资源都通过一个或多个端点进行访问。本节介绍了可在规划自动化部署时使用的 REST 资源。</block>
-  <block id="248846079d127e0a82d697f25c33991f" category="section-title">Astra Control REST 资源和端点</block>
   <block id="0f879b71f480ca631ac007cea8270eb9" category="paragraph">Astra Control REST API 中提供的主要资源端点分为三类。除了需要说明的情况外，可以使用一整套 CRUD 操作（创建，读取，更新，删除）来访问每个资源。</block>
   <block id="a3fb339c1c586b61a4747f75e3e18873" category="list-text"><block ref="a3fb339c1c586b61a4747f75e3e18873" category="inline-link-rx"></block></block>
   <block id="8814863051032c96890d514b89b4519c" category="paragraph">Astra Control REST API 提供了多种不同的方法来通过定义的查询参数访问资源收集。</block>
   <block id="d5def2c7a33c06df000ce3ff88f44d5e" category="paragraph">Astra Control REST API 提供了多种支持功能，可用于诊断和调试。</block>
-  <block id="b38e88eda86454f4be23da84305cd6a9" category="paragraph">Astra Control REST API 提供多个安全层。</block>
-  <block id="3c4ec4a11a6b65eadf33041e30d96199" category="paragraph">要使用 Astra Control REST API ，您必须在 `Authorization` Request 标头中为每个请求提供一个 API 令牌。请注意以下事项：</block>
-  <block id="d5fa8b444f3de5587d549b76d16aa7b5" category="paragraph">要使用 Astra Control REST API ，您必须具有 API 访问令牌。</block>
   <block id="fcc723c942724132893726738da56aeb" category="paragraph">您可以在工作站的命令行界面上通过问题描述执行一个简单的 Curl 命令来开始使用 Astra Control REST API 并确认其可用性。</block>
   <block id="b3433e01f10e1e1369d819f420b2a8a7" category="paragraph">_Workflow _ 是完成特定管理任务或目标所需的一个或多个步骤的序列。Astra Control 工作流中的每个步骤均为以下步骤之一：</block>
-  <block id="bcfb4ff2a5e78e411d4f8304902a5b0f" category="paragraph">您可以通过查看下面所述的步骤来快速准备开始使用 Astra Control REST API 。</block>
   <block id="0c59027cf761af16d5101de509ed5ef7" category="paragraph">请务必查看 <block ref="533ba43849291e761802432633424684" category="inline-link-macro-rx"></block> 有关 REST 概念的信息以及有关如何设计 Astra Control REST API 的详细信息。</block>
-  <block id="6a408a175b27a07dcdc920140f5043a1" category="sidebar">Astra Control REST API 资源</block>
   <block id="ef69df9e80d5e1591d22bfe189aa737e" category="admonition">Astra Control REST API 还使用 * HTTP APIs* 标准的问题详细信息。请参见 <block ref="d9c154af7dec160f41ead610ccb970e9" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="de89d8750ec160e779ccfc4acb253798" category="list-text">令牌资源表示可通过编程方式访问 Astra Control REST API 的令牌。</block>
   <block id="55fcf9a6a46c69408785dcd2e3a82522" category="admonition">这些资源和端点当前未包含在 Astra Control REST API 参考文档中。</block>
   <block id="14d9b10c6196045941347a9e85704b50" category="inline-link">Astra Trident 文档</block>
   <block id="b886ef3e400bd69f357f6981475b14e1" category="list-text"><block ref="b886ef3e400bd69f357f6981475b14e1" category="inline-link-rx"></block></block>
-  <block id="43c6f73174a98f1fd36eac3fee0c20ab" category="paragraph">通过 Curl 或编程语言访问 Astra Control REST API 时，必须在 `Authorization` Request 标头中包含 API 承载令牌。要撤消令牌，请参见 <block ref="63fd24300d4159b871bba5cd675e33b6" category="inline-link-macro-rx"></block>。</block>
   <block id="e0da47631d6f2648f3a36bde7e269c3b" category="section-title">curl 示例</block>
   <block id="1966cbc7987b76acf54312ed4c9007ec" category="paragraph">Python 是一种受欢迎的开发语言，尤其适用于数据中心自动化。在将 Python 的原生功能与多个通用软件包结合使用之前，您需要准备环境和所需的输入文件。</block>
   <block id="0e8625d3981b9d26e0866da357d318c8" category="inline-link-macro">NetApp Astra Control Python SDK</block>
@@ -800,15 +758,9 @@
   <block id="b179356a4d80ff3c8707972005712b2f" category="section-title">2021 年 8 月 5 日（ 21.08 ）</block>
   <block id="b090a7e9d0299b1a0c16321ebfd1f755" category="section-title">2021 年 4 月 15 日（ 21.04 ）</block>
   <block id="d71331c5ce470b093ebf6c996f4ed88a" category="doc">关于此版本</block>
-  <block id="4ed4c272d833a45163ae23ce2c927305" category="paragraph">本站点的文档介绍了随 Astra Control 2021 （ 21.12 ）版提供的 Astra Control REST API 以及相关自动化技术。特别是，此版本的 REST API 随相应的 21.12 版 Astra 控制中心和 Astra 控制服务一起提供。</block>
   <block id="ea68f7ff6b79a550f669d752f15bd5da" category="paragraph">有关此版本以及先前版本的详细信息，请参见以下页面和站点：</block>
   <block id="89d597c4d411409065b7e48fe97b7327" category="inline-link-macro">Astra Control REST API 的新增功能</block>
   <block id="55d1aec576bc2fa5929c487a67f4f1fe" category="list-text"><block ref="55d1aec576bc2fa5929c487a67f4f1fe" category="inline-link-macro-rx"></block></block>
-  <block id="39b20ec9ac87283be93addb7db493125" category="list-text"><block ref="39b20ec9ac87283be93addb7db493125" category="inline-link-macro-rx"></block></block>
-  <block id="c95deb0b38b91727ae70217b718c15b6" category="inline-link">Astra Control Center 21.12 文档</block>
-  <block id="6bac7a3afd0fae5fb87d4c318c88b8d7" category="list-text"><block ref="6bac7a3afd0fae5fb87d4c318c88b8d7" category="inline-link-rx"></block></block>
-  <block id="0129349d759b45f11e9ff68b2e3fdf84" category="inline-link">Astra Control Service 21.12 文档</block>
-  <block id="453379871ec9a52d3f4e6f4bc5e6f3d8" category="list-text"><block ref="453379871ec9a52d3f4e6f4bc5e6f3d8" category="inline-link-rx"></block></block>
   <block id="fdd081f1598a50889ba0720484271938" category="inline-link-macro">早期版本的 Astra Automation 文档</block>
   <block id="0cc206202c15e68cf39519791ed593a1" category="list-text"><block ref="0cc206202c15e68cf39519791ed593a1" category="inline-link-macro-rx"></block></block>
   <block id="4bddbc6d61b2586c05f9efdf9aa7b5cd" category="paragraph">您可以通过以下链接访问先前版本的 Astra Control 的自动化文档。</block>
@@ -834,7 +786,6 @@
   <block id="be8545ae7ab0276e15898aae7acfbd7a" category="cell">资源</block>
   <block id="b8e7b465df7c5979dc731d06e84ce2cf" category="cell">版本。</block>
   <block id="08bd40c7543007ad06e4fce31618f6ec" category="cell">Account</block>
-  <block id="5b0653f11dfe407c7afac43ce74c43cf" category="cell">* 。 21.12*</block>
   <block id="39a70d60ad1f39618d1dd601b341a2f6" category="cell">通过帐户资源，您可以管理多租户 Astra Control 部署环境中的隔离租户。</block>
   <block id="8ff5110ebae476ca35aeb20b14a75693" category="cell">21.08.</block>
   <block id="af08b45fa44807ac1852671e6fc59d44" category="cell">21.04</block>
@@ -871,4 +822,102 @@
   <block id="d718eacc67f8b74e62fa7298041adf60" category="list-text"><block ref="d718eacc67f8b74e62fa7298041adf60" category="inline-link-rx"></block></block>
   <block id="2c3489a3234e45e6f5946c26c4cb7d5e" category="paragraph">用于访问适用于内部部署和公有云部署的所有 Astra 文档的中央位置。</block>
   <block id="c93cc787737ceea532bea714170e32cf" category="doc">Astra Control REST API 的新增功能</block>
+  <block id="d61b1a26306fd2300000d407ac76b0ca" category="inline-link">Astra Control Automation 21.12 文档</block>
+  <block id="f7fb8efb01216bddc5505f64c4c92bae" category="list-text"><block ref="f7fb8efb01216bddc5505f64c4c92bae" category="inline-link-rx"></block></block>
+  <block id="30c6c6906b4bf69f566ac699b562cb7d" category="section-title">REST 和云概念</block>
+  <block id="2ed9c00506ccdd2b103717bce2773b16" category="paragraph">本站点的文档介绍了随 2022 年 4 月（ 22.04 ）版的 Astra Control REST API 以及相关自动化技术。特别是，此版本的 REST API 随相应的 Astra 控制中心和 Astra 控制服务 22.04 版本一起提供。</block>
+  <block id="c4fabb35d8b386aaa673c94aee7e69f2" category="inline-link-macro">REST 资源和端点</block>
+  <block id="d8c5d8ee32fcd828c5197ddcb0a431b2" category="list-text"><block ref="d8c5d8ee32fcd828c5197ddcb0a431b2" category="inline-link-macro-rx"></block></block>
+  <block id="74456513b7ca75af96c4b1316688791f" category="inline-link">Astra Control Center 22.04 文档</block>
+  <block id="468721780732e23fa637324968cd2783" category="list-text"><block ref="468721780732e23fa637324968cd2783" category="inline-link-rx"></block></block>
+  <block id="a6e9ae9fa8a8d65b930fd7704e4863bb" category="inline-link">Astra Control Service 22.04 文档</block>
+  <block id="fa979f157aaf36a8653ce9ba1d7433ac" category="list-text"><block ref="fa979f157aaf36a8653ce9ba1d7433ac" category="inline-link-rx"></block></block>
+  <block id="186b5474f8ff952677455ef8c6479620" category="admonition">Astra Control REST API 22.04 版本没有新的已知问题。以下所述问题已在先前版本中发现，但仍适用于当前版本。</block>
+  <block id="638191aa40b01d59e16da3223262a2ae" category="section-title">2022 年 4 月 26 日（ 22.04 ）</block>
+  <block id="0e7874b5c73e32ebc1ff07cc0f74f4d2" category="paragraph">此版本包括对 REST API 的扩展和更新，以及增强的安全性和管理功能。</block>
+  <block id="b2e7eefe39dff61bfe224d948a6b01f1" category="section-title">新增和增强的 Astra 资源</block>
+  <block id="4bde032aca792c950934ec7109889309" category="paragraph">添加了两种新的资源类型： * 软件包 * 和 * 升级 * 。此外，已升级多个现有资源的版本。</block>
+  <block id="e34439ebb43a7db679d765747385c74b" category="section-title">具有命名空间粒度的增强型 RBAC</block>
+  <block id="2496b3f288a81c8c923f8c9c19fe6ed4" category="inline-link-macro">RBAC 安全性</block>
+  <block id="ce130d685ca26589024445539bb4a112" category="paragraph">将角色绑定到关联用户时，您可以限制用户有权访问的命名空间。请参见 * 角色绑定 API" 参考和 <block ref="7771c01373e5c08e3b1e2d74687ada1b" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="32a38a631a3c644b9305586dfbe4c946" category="section-title">删除存储分段</block>
+  <block id="abe9507eaf1545e513b2bda0f13294b6" category="paragraph">您可以在不再需要某个存储分段或此存储分段无法正常运行时将其删除。</block>
+  <block id="aa702244278ce9224bdf493dbd836fcf" category="section-title">支持 Cloud Volumes ONTAP</block>
+  <block id="e7bb002985d166e3cf6e1ddc4e4393b2" category="paragraph">现在支持将 Cloud Volumes ONTAP 用作存储后端。</block>
+  <block id="2db9f7bc36bbde906d13641387315f23" category="section-title">其他产品增强功能</block>
+  <block id="5fe6ed1138cf9586db6e448abda4c52c" category="paragraph">这两种 Astra Control 产品实施还有几项额外的增强功能，包括：</block>
+  <block id="268713e23997ec1f8e0973dd7e0f9dd0" category="list-text">Astra 控制中心的通用传入</block>
+  <block id="201f9ff2e7c358be8d5de91222827154" category="list-text">AKS 中的专用集群</block>
+  <block id="c947068eab1ac219cdd1ae261b1673a0" category="list-text">支持 Kubernetes 1.22</block>
+  <block id="0afb329986521efa00ad1d41bb8a946f" category="list-text">支持 VMware Tanzu 产品组合</block>
+  <block id="f1ba17f787cb31c4e5cc9082051b3c0e" category="paragraph">请参见 Astra 控制中心和 Astra 控制服务文档站点上的 * 新增功能 * 页面。</block>
+  <block id="30f60d67f457bb040dffde52197a54da" category="list-title">相关信息</block>
+  <block id="b7fbb6594679af1b038dd55956fa1042" category="inline-link">Astra 控制中心：新增功能</block>
+  <block id="971f691a78e3ee1f19fb4b8c587dce95" category="list-text"><block ref="971f691a78e3ee1f19fb4b8c587dce95" category="inline-link-rx"></block></block>
+  <block id="efb9cca3b55227a8ebbaffd837df76fe" category="inline-link">Astra Control Service ：新增功能</block>
+  <block id="77f722ff3432ad425822aea915cbea34" category="list-text"><block ref="77f722ff3432ad425822aea915cbea34" category="inline-link-rx"></block></block>
+  <block id="3d9217d4e4ef94c56689e548b5186591" category="doc">使用收集</block>
+  <block id="99910604d292e8754daf25a401bb8857" category="doc">撤消 API 令牌</block>
+  <block id="1e035d8ab99dbf14a530ceac5ef93e74" category="paragraph">您需要一个 Astra 帐户。您还应确定要撤消的令牌。</block>
+  <block id="220c398b098026c9c6d51b8c5eed3f89" category="paragraph">Astra REST API 支持基于角色的访问控制（ Role-Based Access Control ， RBAC ）来限制对系统功能的访问。</block>
+  <block id="93f59591ef6394ec20a0c8c92e574665" category="section-title">Astra 角色</block>
+  <block id="1dfeab1980c9d1053325319ee410d098" category="paragraph">每个 Astra 用户都分配有一个角色，用于确定可执行的操作。这些角色按层次结构进行排列，如下表所述。</block>
+  <block id="ca9f95dba864c02ec48ffa894954ce17" category="admonition">此功能是在 Astra REST API 22.04 版中引入的。</block>
+  <block id="a9d9517c68a53b1205519361f2ca686a" category="paragraph">为特定用户建立角色绑定后，可以应用一个限制来限制用户有权访问的命名空间。可通过多种方法定义此限制，如下表所述。有关详细信息，请参见角色绑定 API 中的参数 `roleContrcons` 。</block>
+  <block id="b1c94ca2fbc3e78fc30069c8d0f01680" category="cell">全部</block>
+  <block id="2314ef5c1b30435a1b1cc4653755e483" category="cell">用户可以通过通配符参数 "*" 访问所有命名空间。这是保持向后兼容性的默认值。</block>
+  <block id="6adf97f83acf6453d4a6a4b1070f3754" category="cell">无</block>
+  <block id="d199198d4707ccee0eda9f48caa1d5a2" category="cell">尽管约束列表为空，但仍会指定此限制列表。这表示用户无法访问任何命名空间。</block>
+  <block id="b3a4cc1061fd85ffd3c83cd8e72944d9" category="cell">命名空间列表</block>
+  <block id="20ff3ae26f36cff01131b324696db602" category="cell">包含命名空间的 UUID ，这会将用户限制为单个命名空间。此外，还可以使用逗号分隔列表来访问多个命名空间。</block>
+  <block id="b021df6aac4654c454f46c77646e745f" category="cell">Label</block>
+  <block id="18ea4b625687c7be99c38ace25c075e1" category="cell">指定了一个标签，并允许访问所有匹配的命名空间。</block>
+  <block id="35e431c9f5b342b3021d74196ba6d0ca" category="doc">基本 Kubernetes 概念</block>
+  <block id="4086ad8bc58a79384e2abed3e4c7b4f1" category="paragraph">使用 Astra REST API 时，有几个相关的 Kubernetes 概念。</block>
+  <block id="c8308b1eba7ba926a61b8fd802194386" category="section-title">对象</block>
+  <block id="f1cc005117a5cbfdc746b09fc2740ce3" category="paragraph">Kubernetes 环境中维护的对象是表示集群配置的永久性实体。这些对象共同描述了系统的状态，包括集群工作负载。</block>
+  <block id="e4bf9ae863cd1aefddf2b696b955f449" category="paragraph">命名空间提供了一种隔离单个集群中的资源的技术。在划分工作类型，用户类型和资源类型时，此组织结构非常有用。命名空间范围 _ 的对象在命名空间中必须是唯一的，而具有 _cluster 范围 _ 的对象必须在整个集群中是唯一的。</block>
+  <block id="3ad6cb6100190c8f81e99fd52debf7ef" category="section-title">标签</block>
+  <block id="3430bf151db09278950b5545d1433fc0" category="paragraph">标签可以与 Kubernetes 对象关联。它们使用键值对描述属性，并可在集群上强制实施任意组织，这对组织可能有用，但不在核心 Kubernetes 操作范围内。</block>
+  <block id="f2082cbd04c532123c4a60b265595268" category="paragraph">要使用 Astra Control REST API ，您需要获取 Astra API 令牌。</block>
+  <block id="e18812059a8d09f0f17ebcad797930df" category="paragraph">API 令牌用于标识 Astra 的调用方，并且必须包含在每个 REST API 调用中。</block>
+  <block id="0e2c9374186101782c17c706d964b6ab" category="list-text">您可以使用 Astra Web 用户界面生成 API 令牌。</block>
+  <block id="dd1c8bab333b87721ef3d1780c9d2744" category="list-text">令牌附带的用户身份由创建令牌的用户确定。</block>
+  <block id="80c4d1da0ffc63fa594010f5c5541b4b" category="list-text">令牌必须包含在 `Authorization` HTTP Request 标头中。</block>
+  <block id="7d3bb36b2de41ab91073fa12ad3242f6" category="list-text">您可以在 Astra Web 用户界面上撤消令牌。</block>
+  <block id="344fcf1ffe13f47b7e084c95c8926ec6" category="list-text"><block ref="344fcf1ffe13f47b7e084c95c8926ec6" category="inline-link-macro-rx"></block></block>
+  <block id="1ac36aa6ca00de5e76a5920ca6368fa6" category="section-title">创建 Astra API 令牌</block>
+  <block id="8d4eb0217153cb37c8687158d7067cfb" category="paragraph">以下步骤介绍如何创建 Astra API 令牌。</block>
+  <block id="af02d3e1ad157f1839fbba3f7e1fc763" category="paragraph">此任务会在 Astra Web 界面上生成 API 令牌。此外，您还应检索帐户 ID ，在进行 API 调用时也需要使用此 ID 。</block>
+  <block id="38ed0da570fd8c0b212e0f8dc6cdb8fc" category="paragraph">通过 Curl 或编程语言访问 Astra Control REST API 时，必须在 HTTP `Authorization` Request 标头中包含 API 承载令牌。</block>
+  <block id="ff187555434d269d1d36dedf48955cdb" category="paragraph">您可以通过查看以下步骤快速准备开始使用 Astra Control REST API 。</block>
+  <block id="2f4e21e17441a71f2d731b0fdb15fc17" category="paragraph">您需要使用 Astra 凭据登录到 Astra Web 用户界面并生成 API 令牌。使用 Astra 控制中心，您可以在本地管理这些凭据。使用 Astra 控制服务时，帐户凭据可通过 * 身份验证 0* 服务进行访问。</block>
+  <block id="7e8def8db3d7d1cc38b119879791cb9b" category="section-title">熟悉 Kubernetes 的基本概念</block>
+  <block id="4b96d62533ac6ea29ddc9891a6776a3b" category="paragraph">您应熟悉 Kubernetes 的几个基本概念。请参见 <block ref="e274b8e6d2e2ed892d318b3b2d0764db" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="8e9b0300da42294f8690b8db105eb132" category="paragraph">您可以使用通过 Astra Control REST API 提供的资源来自动执行 Astra 部署。每个资源都通过一个或多个端点进行访问。下面提供的信息介绍了可在自动化部署中使用的 REST 资源。</block>
+  <block id="94076f0e9f9b57b9bc636dff06dec4be" category="section-title">Astra Control REST 资源摘要</block>
+  <block id="b9afcd2399096c529c7bdb5fde05df0e" category="cell">21.12</block>
+  <block id="209802fb858e2c83205027dbbb5d9e6c" category="cell">软件包</block>
+  <block id="6777d9fcfed4364226ace710a3a4ebbb" category="cell">* 。 22.04*</block>
+  <block id="d340d1aca9540d03d5dbc3a841480388" category="cell">软件包资源用于注册和访问软件包定义。软件包由多个组件组成，包括文件，映像和其他项目。</block>
+  <block id="f683581d3e75f05f9d9215f9b4696cef" category="cell">升级</block>
+  <block id="2d90c29fa077bbff5b5b4c8a523efa88" category="cell">通过升级资源，您可以访问软件组件并启动升级。</block>
+  <block id="a4defd5be5a64ad7db7bf34bbb2d7bd5" category="section-title">最新版本中的新端点</block>
+  <block id="1472c716e11246059bd5bad85258d4fa" category="paragraph">当前的 22.04 Astra Control 版本增加了以下 REST 端点。此外，已升级多个现有资源的版本。</block>
+  <block id="60f19edaba62296afaacba509d2b225c" category="list-text">/accouns/ ｛ account_id ｝ /core/v1/packages</block>
+  <block id="7a7c91988c5a19469d8334fad1ec5c38" category="list-text">/accouns/ ｛ account_id ｝ /core/v1/packages/｛ package_id ｝</block>
+  <block id="7a15e41858611250b2b43df48995251e" category="list-text">/accouns/ ｛ account_id ｝ /core/v1/upgrades</block>
+  <block id="6e1712f69f618f74a5e744bc9fea885b" category="list-text">/accouns/ ｛ account_id ｝ /core/v1/upgrades// ｛ upgrade_id ｝</block>
+  <block id="30ab72a33c39ac472d4fcdb91ef0a504" category="list-text">/accouns/ ｛ account_id ｝ /topology/v1/appBackups</block>
+  <block id="e340612c1a39b19881ab28cb164d3767" category="list-text">/accouns/ ｛ account_id ｝ /topology/v1/appBackups/ ｛ appBackup_id ｝</block>
+  <block id="c0484da53699af19f1945268b462f2d0" category="list-text">/accouns/ ｛ account_id ｝ /topology/v1/cloud / ｛ clune_id ｝ /clusters/ ｛ cluster_id ｝ /clusterNode</block>
+  <block id="09b7193670ee8eaefdf2ad50fef6a76d" category="list-text">/accouns/ ｛ account_id ｝ /topology/v1/cloud / ｛ clune_id ｝ /cluster/ ｛ cluster_id ｝ /clusterNodes/｛ clusterNode_id ｝</block>
+  <block id="d3f25c248c7a0c122bc45b3a69071627" category="list-text">/accouns/ ｛ account_id ｝ /topology/v1/managedClusters/ ｛ managedCluster_id ｝ /apps/ ｛ app_id ｝ /appAssets</block>
+  <block id="300f9968ddf97bc0ecebcc8be8ed5ac2" category="list-text">/accouns/ ｛ account_id ｝ /topology/v1/managedClusters/ ｛ managedCluster_id ｝ /apps/ ｛ app_id ｝ /appAssets/ ｛ appasset_id ｝</block>
+  <block id="38edf6fb6f3379336c180aaa2a4ed5c4" category="list-text">/accouns/ ｛ account_id ｝ /topology/v1/managedClusters/ ｛ managedCluster_id ｝ /clusterNode</block>
+  <block id="9c66bb701e33b6862773eeb2967c6548" category="list-text">/accouns/ ｛ account_id ｝ /topology/v1/managedClusters/ ｛ managedCluster_id ｝ /clusterNodes/ ｛ clusterNode_id ｝</block>
+  <block id="b4ec6b7393a41bf5e5870f1ce48009e5" category="sidebar">REST 资源和集合</block>
+  <block id="f38713c0367843938a57ef219a3bfbfc" category="sidebar">Astra API 资源摘要</block>
+  <block id="ea1c0b8e4018f75659e26eb720b206e5" category="sidebar">本机使用 Python</block>
+  <block id="d75a5043a76ca76174481f399b106691" category="sidebar">其他使用注意事项</block>
 </blocks>

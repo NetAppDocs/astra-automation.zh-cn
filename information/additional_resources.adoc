@@ -6,6 +6,7 @@ summary:
 ---
 = 其他资源
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -61,7 +62,7 @@ NetApp 云解决方案的中央站点。
 
 
 
-=== REST 概念和云技术
+=== REST 和云概念
 
 * 博士 https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm["Dissertation"^] 由 Roy Fielding 主讲
 +

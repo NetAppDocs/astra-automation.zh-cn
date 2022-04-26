@@ -1,10 +1,12 @@
 ---
 section: additional
-title: 其他 REST 注意事项
+title: 其他使用注意事项
 entries:
-- title: 安全性
-  url: "/additional/security.html"
+- title: RBAC 安全性
+  url: "/additional/rbac.html"
 - title: 使用收集
-  url: "/additional/working_with_collections.html"
+  url: "/additional/work_with_collections.html"
 - title: 诊断
   url: "/additional/diagnostics_support.html"
+- title: 撤消 API 令牌
+  url: "/additional/revoke_token.html"

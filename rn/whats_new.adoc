@@ -6,6 +6,7 @@ summary:
 ---
 = Astra Control REST API 的新增功能
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -14,6 +15,55 @@ summary:
 
 [role="lead"]
 NetApp 会定期更新 Astra Control REST API ，为您提供新功能，增强功能和错误修复。
+
+
+
+== 2022 年 4 月 26 日（ 22.04 ）
+
+此版本包括对 REST API 的扩展和更新，以及增强的安全性和管理功能。
+
+
+
+=== 新增和增强的 Astra 资源
+
+添加了两种新的资源类型： * 软件包 * 和 * 升级 * 。此外，已升级多个现有资源的版本。
+
+
+
+=== 具有命名空间粒度的增强型 RBAC
+
+将角色绑定到关联用户时，您可以限制用户有权访问的命名空间。请参见 * 角色绑定 API" 参考和 link:../additional/rbac.html["RBAC 安全性"] 有关详细信息 ...
+
+
+
+=== 删除存储分段
+
+您可以在不再需要某个存储分段或此存储分段无法正常运行时将其删除。
+
+
+
+=== 支持 Cloud Volumes ONTAP
+
+现在支持将 Cloud Volumes ONTAP 用作存储后端。
+
+
+
+=== 其他产品增强功能
+
+这两种 Astra Control 产品实施还有几项额外的增强功能，包括：
+
+* Astra 控制中心的通用传入
+* AKS 中的专用集群
+* 支持 Kubernetes 1.22
+* 支持 VMware Tanzu 产品组合
+
+
+请参见 Astra 控制中心和 Astra 控制服务文档站点上的 * 新增功能 * 页面。
+
+.相关信息
+* https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html["Astra 控制中心：新增功能"^]
+* https://docs.netapp.com/us-en/astra-control-service/release-notes/whats-new.html["Astra Control Service ：新增功能"^]
+
 
 
 
