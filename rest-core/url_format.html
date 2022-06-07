@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">简体中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">简体中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/astra-automation/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/astra-automation/rest-core/url_format.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/astra-automation/rest-core/url_format.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/astra-automation/rest-core/url_format.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/astra-automation/rest-core/url_format.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/astra-automation/rest-core/url_format.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-cn/astra-automation/rest-core/url_format.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/astra-automation/rest-core/url_format.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/astra-automation/rest-core/url_format.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/astra-automation/rest-core/url_format.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/astra-automation/rest-core/url_format.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -903,7 +895,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-cn/astra-automation/index.html">
         Astra Control Automation 文档
       </a></li><li class="subfolders "><a href="#">
@@ -1078,6 +1070,10 @@
         
 
         
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com/zh-cn/astra-family/">Astra</a>
+        </li>
+        
 
         <li class="n-breadcrumb__list-item">
           <a href="/zh-cn/astra-automation/">Astra&nbsp;Automation</a>
@@ -1111,34 +1107,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-26 17:28:22 +0000">04/26/2022</time>
+    <time datetime="2022-06-07 17:52:36 +0000">06/07/2022</time>
     
   
 
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>用于通过 REST API 访问资源实例或集合的 URL 的常规结构由多个值组成。此结构反映了底层对象模型和系统设计。</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="url-的格式">URL 的格式</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>下面显示了 URL 的格式以及一个示例。</p>
-</div>
-<div class="sect4">
-<h5 id="帐户作为-root">帐户作为 root</h5>
 <div class="paragraph">
 <p>指向每个 REST 端点的资源路径的根是 Astra 帐户。因此， URL 中的所有路径均以 ` /account/ ｛ account_id ｝` 开头，其中 <code>account_id</code> 是帐户的唯一 UUIDv4 值。内部结构这反映了一种设计，其中所有资源访问都基于特定帐户。</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="端点资源类别">端点资源类别</h5>
 <div class="paragraph">
 <p>Astra 资源端点分为三类：</p>
 </div>
@@ -1158,22 +1139,14 @@
 <div class="paragraph">
 <p>请参见 <a href="../endpoints/resources.html">"Resources"</a> 有关详细信息 &#8230;&#8203;</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="类别版本">类别版本</h5>
 <div class="paragraph">
 <p>这三个资源类别中的每一个都有一个全局版本，用于控制所访问资源的版本。按照约定和定义，迁移到资源类别的新主要版本（例如，从 ` /v1` 到 ` /v2` ）将会导致 API 发生中断更改。</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="资源实例或集合">资源实例或集合</h5>
 <div class="paragraph">
 <p>根据是否访问资源实例或集合，可以在路径中使用资源类型和标识符的组合。</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="示例">示例</h5>
 <div class="ulist">
+<div class="title">示例</div>
 <ul>
 <li>
 <p>资源路径</p>
@@ -1188,9 +1161,6 @@
 </div>
 </li>
 </ul>
-</div>
-</div>
-</div>
 </div>
 
     </article>
@@ -1338,4 +1308,5 @@
     </script>
     <script src='/zh-cn/astra-automation/js/www-ntap.js'></script>
     <script src='/zh-cn/astra-automation/js/tabbed-blocks.js'></script>
+    <script src='/zh-cn/astra-automation/js/sidebar.js'></script>
   </body></html>

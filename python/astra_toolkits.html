@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">简体中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">简体中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/astra-automation/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/astra-automation/python/astra_toolkits.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/astra-automation/python/astra_toolkits.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/astra-automation/python/astra_toolkits.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/astra-automation/python/astra_toolkits.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/astra-automation/python/astra_toolkits.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-cn/astra-automation/python/astra_toolkits.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/astra-automation/python/astra_toolkits.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/astra-automation/python/astra_toolkits.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/astra-automation/python/astra_toolkits.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/astra-automation/python/astra_toolkits.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -903,7 +895,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-cn/astra-automation/index.html">
         Astra Control Automation 文档
       </a></li><li class="subfolders "><a href="#">
@@ -1078,6 +1070,10 @@
         
 
         
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com/zh-cn/astra-family/">Astra</a>
+        </li>
+        
 
         <li class="n-breadcrumb__list-item">
           <a href="/zh-cn/astra-automation/">Astra&nbsp;Automation</a>
@@ -1111,7 +1107,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-26 17:28:22 +0000">04/26/2022</time>
+    <time datetime="2022-06-07 17:52:36 +0000">06/07/2022</time>
     
   
 
@@ -1143,8 +1139,6 @@
 <div class="paragraph">
 <p>SDK 包含两个不同但相关的工具，这些工具在访问 Astra Control REST API 时在不同的抽象级别运行。</p>
 </div>
-<div class="sect3">
-<h4 id="astra-sdk">Astra SDK</h4>
 <div class="paragraph">
 <p>Astra SDK 提供核心平台功能。它包括一组 Python 类，用于抽象化底层 REST API 调用。这些类支持对各种 Astra Control 资源执行管理操作，包括应用程序，备份，快照和集群。</p>
 </div>
@@ -1163,12 +1157,8 @@ NetApp Astra Control Python SDK* （或仅 SDK ）是整个软件包的名称。
 </tr>
 </table>
 </div>
-</div>
-<div class="sect3">
-<h4 id="工具包脚本">工具包脚本</h4>
 <div class="paragraph">
 <p>除了 Astra SDK 文件之外，还可以使用 <code>toolkup.py</code> 脚本。此脚本可通过访问内部定义为 Python 函数的独立管理操作，在较高的抽象级别下运行。该脚本将导入 Astra SDK 并根据需要调用类。</p>
-</div>
 </div>
 </div>
 </div>
@@ -1178,17 +1168,12 @@ NetApp Astra Control Python SDK* （或仅 SDK ）是整个软件包的名称。
 <div class="paragraph">
 <p>您可以通过以下方式访问 SDK 。</p>
 </div>
-<div class="sect3">
-<h4 id="python-软件包">Python 软件包</h4>
 <div class="paragraph">
 <p>SDK 可从获取 <a href="https://pypi.org/" target="_blank" rel="noopener">"Python 软件包索引"</a> 名称为 * NetApp-Astra-toolkits* 。软件包将分配一个版本号，并将根据需要继续更新。您必须使用 * Pip* 软件包管理实用程序将软件包安装到您的环境中。</p>
 </div>
 <div class="paragraph">
 <p>请参见 <a href="https://pypi.org/project/netapp-astra-toolkits/" target="_blank" rel="noopener">"PyPI ： NetApp Astra Control Python SDK"</a> 有关详细信息 &#8230;&#8203;</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="github-源代码">GitHub 源代码</h4>
 <div class="paragraph">
 <p>此外，还可以从 GitHub 获取 SDK 源代码。存储库包括以下内容：</p>
 </div>
@@ -1216,15 +1201,12 @@ NetApp Astra Control Python SDK* （或仅 SDK ）是整个软件包的名称。
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
 <h2 id="安装和基本要求">安装和基本要求</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>在安装软件包并准备使用该软件包时，需要考虑多个选项和要求。</p>
 </div>
-<div class="sect3">
-<h4 id="安装选项摘要">安装选项摘要</h4>
 <div class="paragraph">
 <p>您可以通过以下方式之一安装 SDK ：</p>
 </div>
@@ -1251,18 +1233,11 @@ NetApp Astra Control Python SDK* （或仅 SDK ）是整个软件包的名称。
 <div class="paragraph">
 <p>有关详细信息，请参见 PyPI 和 GitHub 页面。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="astra-control-环境的要求">Astra Control 环境的要求</h4>
 <div class="paragraph">
 <p>无论是直接使用 Astra SDK 中的 Python 类，还是使用 <code>toolkape.py</code> 脚本中的功能，最终您将在部署 Astra Control 时访问 REST API 。因此，您需要一个 Astra 帐户以及一个 API 令牌。请参见 <a href="../get-started/before_get_started.html">"开始之前"</a> 有关详细信息，请参见本文档 * 入门 * 一节中的其他页面。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="netapp-astra-control-python-sdk-的要求">NetApp Astra Control Python SDK 的要求</h4>
 <div class="paragraph">
 <p>SDK 具有与本地 Python 环境相关的几个前提条件。例如，您必须使用 Python 3.5 或更高版本。此外，还需要几个 Python 软件包。有关详细信息，请参见 GitHub 存储库页面或 PyPI 软件包页面。</p>
-</div>
 </div>
 </div>
 </div>
@@ -1270,7 +1245,7 @@ NetApp Astra Control Python SDK* （或仅 SDK ）是整个软件包的名称。
 <h2 id="有用资源摘要">有用资源摘要</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>下面是开始使用所需资源的摘要。</p>
+<p>下面是您开始使用所需的一些资源。</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1430,4 +1405,5 @@ NetApp Astra Control Python SDK* （或仅 SDK ）是整个软件包的名称。
     </script>
     <script src='/zh-cn/astra-automation/js/www-ntap.js'></script>
     <script src='/zh-cn/astra-automation/js/tabbed-blocks.js'></script>
+    <script src='/zh-cn/astra-automation/js/sidebar.js'></script>
   </body></html>
