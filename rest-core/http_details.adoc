@@ -22,15 +22,7 @@ Astra Control REST API 使用 HTTP 以及相关参数对资源和集合执行操
 
 Astra Control REST API 可实施一个事务模式，其中包含定义明确的操作和状态过渡。
 
-
-
-===== 请求和响应 API 事务
-
 每次 REST API 调用都是作为对 Astra 服务的 HTTP 请求执行的。每个请求都会向客户端生成关联的响应。此请求响应对可视为 API 事务。
-
-
-
-===== 支持 CRUD 操作模式
 
 通过 Astra Control REST API 提供的每个资源实例和集合均可根据 * CRU* 模型进行访问。有四个操作，每个操作都映射到一个 HTTP 方法。这些操作包括：
 
@@ -66,7 +58,7 @@ Astra Control REST API 可实施一个事务模式，其中包含定义明确的
 |===
 
 
-=== 请求和响应标头
+== 请求和响应标头
 
 下表汇总了与 Astra Control REST API 一起使用的 HTTP 标头。
 
@@ -103,7 +95,7 @@ NOTE: 请参见 https://www.rfc-editor.org/rfc/rfc7232.txt["RFC 7232"^] 和 http
 |===
 
 
-=== 查询参数
+== 查询参数
 
 以下查询参数可用于资源收集。请参见 link:../additional/working_with_collections.html["使用收集"] 有关详细信息 ...
 
@@ -131,7 +123,7 @@ NOTE: 请参见 https://www.rfc-editor.org/rfc/rfc7232.txt["RFC 7232"^] 和 http
 |===
 
 
-=== HTTP status codes
+== HTTP status codes
 
 下面介绍了 Astra Control REST API 使用的 HTTP 状态代码。
 

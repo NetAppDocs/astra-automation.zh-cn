@@ -18,7 +18,7 @@ summary:
 
 
 
-=== Astra
+== Astra
 
 * https://docs.netapp.com/us-en/astra-control-center/["Astra 控制中心文档"^]
 +
@@ -44,7 +44,7 @@ summary:
 
 
 
-=== NetApp 云资源
+== NetApp 云资源
 
 * https://cloud.netapp.com/["NetApp 云解决方案"^]
 +
@@ -62,7 +62,7 @@ NetApp 云解决方案的中央站点。
 
 
 
-=== REST 和云概念
+== REST 和云概念
 
 * 博士 https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm["Dissertation"^] 由 Roy Fielding 主讲
 +
