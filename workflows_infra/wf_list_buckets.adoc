@@ -27,7 +27,7 @@ summary:
 | HTTP 方法 | 路径 
 
 
-| 获取 | /account/ ｛ accountID ｝ /topology/v1/b桶 
+| 获取 | /account/｛account_id｝/topology/v1/bass桶 
 |===
 
 

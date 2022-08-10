@@ -18,6 +18,48 @@ NetApp 会定期更新 Astra Control REST API ，为您提供新功能，增强�
 
 
 
+== 2022年8月10日(22.08)
+
+此版本包括对 REST API 的扩展和更新，以及增强的安全性和管理功能。
+
+
+
+=== 新增和增强的 Astra 资源
+
+添加了三种新的资源类型：*证书*、*组*和*应用镜像*。此外、还更新了多个现有资源的版本。
+
+
+
+=== LDAP 身份验证
+
+您可以选择将Astra控制中心配置为与LDAP服务器集成、以便对选定的Astra用户进行身份验证。请参见 link:../workflows_infra/ldap_prepare.html["LDAP 配置"] 有关详细信息 ...
+
+
+
+=== 增强的执行钩
+
+Astra Control 21.12版增加了对执行挂钩的支持。除了现有的预快照和后快照执行挂钩之外、您现在还可以在22.08版本中配置以下类型的执行挂钩：
+
+* 预备份
+* 备份后
+* 还原后
+
+
+Astra Control现在还允许将同一个脚本用于多个执行挂钩。
+
+
+
+=== 使用SnapMirror进行应用程序复制
+
+现在、您可以使用NetApp SnapMirror技术在集群之间复制数据和应用程序更改。此增强功能可用于提高业务连续性和恢复能力。
+
+.相关信息
+* https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html["Astra 控制中心：新增功能"^]
+* https://docs.netapp.com/us-en/astra-control-service/release-notes/whats-new.html["Astra Control Service ：新增功能"^]
+
+
+
+
 == 2022 年 4 月 26 日（ 22.04 ）
 
 此版本包括对 REST API 的扩展和更新，以及增强的安全性和管理功能。

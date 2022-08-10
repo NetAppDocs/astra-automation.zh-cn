@@ -39,7 +39,7 @@ summary:
 | HTTP 方法 | 路径 
 
 
-| PUT | /account/ ｛ accountID ｝ /K8s/v1/managedApps/ ｛ appID ｝ 
+| PUT | /account/｛account_id｝/k8s/v1/managedApps/｛app_id｝ 
 |===
 
 

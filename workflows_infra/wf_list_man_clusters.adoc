@@ -22,12 +22,12 @@ summary:
 
 执行以下 REST API 调用。
 
-[cols="25,75"]
+[cols="1,6"]
 |===
 | HTTP 方法 | 路径 
 
 
-| 获取 | /account/ ｛ accountID ｝ /topology/v1/managedClusters 
+| 获取 | /account/｛account_id｝/topology/v1/managedClusters 
 |===
 
 

@@ -36,7 +36,7 @@ NOTE: 默认情况下，这些工作流中使用的 REST 端点将返回所有 A
 | HTTP 方法 | 路径 
 
 
-| 获取 | /account/ ｛ accountID ｝ /topology/v1/apps 
+| 获取 | /account/｛account_id｝/topology/v1/apps 
 |===
 
 
@@ -121,7 +121,7 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
 | HTTP 方法 | 路径 
 
 
-| 获取 | /account/ ｛ accountID ｝ /topology/v1/apps 
+| 获取 | /account/｛account_id｝/topology/v1/apps 
 |===
 
 

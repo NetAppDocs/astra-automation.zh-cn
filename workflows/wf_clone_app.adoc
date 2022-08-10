@@ -46,7 +46,7 @@ NOTE: 要将应用程序克隆到其他集群，您需要根据环境需要更�
 | HTTP 方法 | 路径 
 
 
-| 发布 | /account/ ｛ accountID ｝ /K8s/v1/managedApps 
+| 发布 | /account/｛account_id｝/k8s/v1/managedApps 
 |===
 
 

@@ -1,0 +1,334 @@
+---
+sidebar: sidebar 
+permalink: workflows_infra/wf_ldap_add_entries.html 
+keywords:  
+summary:  
+---
+= 将LDAP条目添加到Astra
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+将LDAP配置为Astra控制中心的身份验证提供程序后、您可以选择Astra将使用LDAP凭据进行身份验证的LDAP用户。每个用户都必须在Astra中具有一个角色、然后才能通过Astra Control REST API访问Astra。
+
+您可以通过两种方式配置Astra来分配角色。选择适合您的环境的选项。
+
+* link:../workflows_infra/wf_ldap_add_entries.html#add-and-bind-an-individual-user["添加并绑定单个用户"]
+* link:../workflows_infra/wf_ldap_add_entries.html#add-and-bind-a-group["添加和绑定组"]
+
+
+
+NOTE: LDAP凭据以用户名作为电子邮件地址以及关联的LDAP密码的形式提供。
+
+
+
+== 添加并绑定单个用户
+
+您可以为每个Astra用户分配一个角色、该角色将在LDAP身份验证后使用。如果用户数量较少、并且每个用户的管理特征可能不同、则这种做法是合适的。
+
+
+
+=== 1.添加用户
+
+执行以下REST API调用、将用户添加到Astra并指示LDAP是身份验证提供程序。
+
+[cols="1,6"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 发布 | /account/｛account_id｝/core/v1/users 
+|===
+
+
+===== JSON 输入示例
+
+[source, json]
+----
+{
+  "type" :  "application/astra-user",
+  "version" : "1.1",
+  "authID" : "cn=JohnDoe,ou=users,ou=astra,dc=example,dc=com",
+  "authProvider" : "ldap",
+  "firstName" : "John",
+  "lastName" : "Doe",
+  "email" : "john.doe@example.com"
+}
+----
+有关输入参数、请注意以下事项：
+
+* 需要以下参数：
++
+** `authProvider`
+** `authId`
+** `电子邮件`
+
+
+* `authId`是LDAP中用户的可分辨名称(DN)
+* `email`对于在Astra中定义的所有用户都必须是唯一的
+
+
+如果`email`值不唯一、则会发生错误、并在响应中返回409 HTTP状态代码。
+
+
+
+===== curl 示例
+
+[source, curl]
+----
+curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Content-Type: application/astra-user+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== JSON响应示例
+
+[source, json]
+----
+{
+  "metadata": {
+    "creationTimestamp": "2022-07-21T17:44:18Z",
+    "modificationTimestamp": "2022-07-21T17:44:18Z",
+    "createdBy": "8a02d2b8-a69d-4064-827f-36851b3e1e6e",
+    "labels": []
+  },
+  "type": "application/astra-user",
+  "version": "1.2",
+  "id": "a7b5e674-a1b1-48f6-9729-6a571426d49f",
+  "authProvider": "ldap",
+  "authID": "cn=JohnDoe,ou=users,ou=astra,dc=example,dc=com",
+  "firstName": "John",
+  "lastName": "Doe",
+  "companyName": "",
+  "email": "john.doe@example.com",
+  "postalAddress": {
+    "addressCountry": "",
+    "addressLocality": "",
+    "addressRegion": "",
+    "streetAddress1": "",
+    "streetAddress2": "",
+    "postalCode": ""
+  },
+  "state": "active",
+  "sendWelcomeEmail": "false",
+  "isEnabled": "true",
+  "isInviteAccepted": "true",
+  "enableTimestamp": "2022-07-21T17:44:18Z",
+  "lastActTimestamp": ""
+}
+----
+
+
+=== 2.为用户添加角色绑定
+
+执行以下REST API调用以将用户绑定到特定角色。您需要具有上一步中创建的用户UUID。
+
+[cols="1,6"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 发布 | /account/｛account_id｝/core/v1/roleBindings 
+|===
+
+
+===== JSON 输入示例
+
+[source, json]
+----
+{
+  "type": "application/astra-roleBinding",
+  "version": "1.1",
+  "accountID": "{account_id}",
+  "userID": "a7b5e674-a1b1-48f6-9729-6a571426d49f",
+  "role": "member",
+  "roleConstraints": ["*"]
+}
+----
+有关输入参数、请注意以下事项：
+
+* 以上用于`roleConstrcont`的值是当前版本Astra唯一可用的选项。它表示用户不受限于一组有限的命名空间、并且可以访问所有这些命名空间。
+
+
+
+
+===== curl 示例
+
+[source, curl]
+----
+curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/roleBindings' --header 'Content-Type: application/astra-roleBinding+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== JSON响应示例
+
+[source, json]
+----
+{
+  "metadata": {
+    "creationTimestamp": "2022-07-21T18:08:24Z",
+    "modificationTimestamp": "2022-07-21T18:08:24Z",
+    "createdBy": "8a02d2b8-a69d-4064-827f-36851b3e1e6e",
+    "labels": []
+  },
+  "type": "application/astra-roleBinding",
+  "principalType": "user",
+  "version": "1.1",
+  "id": "b02c7e4d-d483-40d1-aaff-e1f900312114",
+  "userID": "a7b5e674-a1b1-48f6-9729-6a571426d49f",
+  "groupID": "00000000-0000-0000-0000-000000000000",
+  "accountID": "d0fdbfa7-be32-4a71-b59d-13d95b42329a",
+  "role": "member",
+  "roleConstraints": ["*"]
+}
+----
+请注意以下有关响应参数的信息：
+
+* `PrincipalType`字段的值`user`表示已为用户(而不是组)添加角色绑定。
+
+
+
+
+== 添加和绑定组
+
+您可以为Astra组分配一个角色、该角色将在LDAP身份验证后使用。如果用户数量很多、并且每个用户都可能具有类似的管理特征、则这种做法是合适的。
+
+
+
+=== 1.添加组
+
+执行以下REST API调用、将组添加到Astra并指示LDAP是身份验证提供程序。
+
+[cols="1,6"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 发布 | /account/｛account_id｝/core/v1/groups 
+|===
+
+
+===== JSON 输入示例
+
+[source, json]
+----
+{
+  "type": "application/astra-group",
+  "version": "1.0",
+  "name": "Engineering",
+  "authProvider": "ldap",
+  "authID": "CN=Engineering,OU=groups,OU=astra,DC=example,DC=com"
+}
+----
+有关输入参数、请注意以下事项：
+
+* 需要以下参数：
++
+** `authProvider`
+** `authId`
+
+
+
+
+
+
+===== curl 示例
+
+[source, curl]
+----
+curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/groups' --header 'Content-Type: application/astra-group+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== JSON响应示例
+
+[source, json]
+----
+{
+  "type": "application/astra-group",
+  "version": "1.0",
+  "id": "8b5b54da-ae53-497a-963d-1fc89990525b",
+  "name": "Engineering",
+  "authProvider": "ldap",
+  "authID": "CN=Engineering,OU=groups,OU=astra,DC=example,DC=com",
+  "metadata": {
+    "creationTimestamp": "2022-07-21T18:42:52Z",
+    "modificationTimestamp": "2022-07-21T18:42:52Z",
+    "createdBy": "8a02d2b8-a69d-4064-827f-36851b3e1e6e",
+    "labels": []
+  }
+}
+----
+
+
+=== 2.为组添加角色绑定
+
+执行以下REST API调用以将组绑定到特定角色。您需要具有上一步中创建的组的UUID。在LDAP执行身份验证后、属于组成员的用户将能够登录到Astra。
+
+[cols="1,6"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 发布 | /account/｛account_id｝/core/v1/roleBindings 
+|===
+
+
+===== JSON 输入示例
+
+[source, json]
+----
+{
+  "type": "application/astra-roleBinding",
+  "version": "1.1",
+  "accountID": "{account_id}",
+  "groupID": "8b5b54da-ae53-497a-963d-1fc89990525b",
+  "role": "viewer",
+  "roleConstraints": ["*"]
+}
+----
+有关输入参数、请注意以下事项：
+
+* 以上用于`roleConstrcont`的值是当前版本Astra唯一可用的选项。它表示用户不受特定命名空间的限制、并且可以访问所有命名空间。
+
+
+
+
+===== curl 示例
+
+[source, curl]
+----
+curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/roleBindings' --header 'Content-Type: application/astra-roleBinding+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== JSON响应示例
+
+[source, json]
+----
+{
+  "metadata": {
+    "creationTimestamp": "2022-07-21T18:59:43Z",
+    "modificationTimestamp": "2022-07-21T18:59:43Z",
+    "createdBy": "527329f2-662c-41c0-ada9-2f428f14c137",
+    "labels": []
+  },
+  "type": "application/astra-roleBinding",
+  "principalType": "group",
+  "version": "1.1",
+  "id": "2f91b06d-315e-41d8-ae18-7df7c08fbb77",
+  "userID": "00000000-0000-0000-0000-000000000000",
+  "groupID": "8b5b54da-ae53-497a-963d-1fc89990525b",
+  "accountID": "d0fdbfa7-be32-4a71-b59d-13d95b42329a",
+  "role": "viewer",
+  "roleConstraints": ["*"]
+}
+----
+请注意以下有关响应参数的信息：
+
+* `PrincipalType`字段的值`group`表示已为组(而不是用户)添加角色绑定。
+

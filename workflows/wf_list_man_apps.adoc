@@ -27,7 +27,7 @@ summary:
 | HTTP 方法 | 路径 
 
 
-| 获取 | /account/ ｛ accountID ｝ /K8s/v1/managedApps 
+| 获取 | /account/｛account_id｝/k8s/v1/managedApps 
 |===
 
 

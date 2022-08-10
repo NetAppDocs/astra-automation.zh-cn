@@ -1,0 +1,115 @@
+---
+sidebar: sidebar 
+permalink: workflows_infra/wf_ldap_disable_reset.html 
+keywords:  
+summary:  
+---
+= 禁用并重置LDAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以根据需要为Astra控制中心部署执行两项可选的相关管理任务。您可以全局禁用LDAP身份验证并重置LDAP配置。
+
+这两个工作流任务都需要`Astra.account.ldap` Astra设置的ID。有关如何检索设置ID的详细信息、请参见*配置LDAP服务器*。请参见 link:../workflows_infra/wf_ldap_configure_server.html#3-retrieve-the-uuid-of-the-ldap-setting["检索LDAP设置的UUID"] 有关详细信息 ...
+
+* link:../workflows_infra/wf_ldap_disable_reset.html#disable-ldap-authentication["禁用LDAP身份验证"]
+* link:../workflows_infra/wf_ldap_disable_reset.html#reset-the-ldap-authentication-configuration["重置LDAP身份验证配置"]
+
+
+
+
+== 禁用LDAP身份验证
+
+您可以执行以下REST API调用来全局禁用特定Astra部署的LDAP身份验证。此调用会更新`Astra.account.ldap`设置、并且`isenabled`值设置为`false`。
+
+[cols="1,6"]
+|===
+| HTTP 方法 | 路径 
+
+
+| PUT | /account/｛account_id｝/core/v1/settings/｛setting_id｝ 
+|===
+
+
+===== JSON 输入示例
+
+[source, json]
+----
+{
+  "type": "application/astra-setting",
+  "version": "1.0",
+  "desiredConfig": {
+    "connectionHost": "myldap.example.com",
+    "credentialId": "3bd9c8a7-f5a4-4c44-b778-90a85fc7d154",
+    "groupBaseDN": "OU=groups,OU=astra,DC=example,DC=com",
+    "isEnabled": "false",
+    "port": 686,
+    "secureMode": "LDAPS",
+    "userBaseDN": "OU=users,OU=astra,DC=example,dc=com",
+    "userSearchFilter": "((objectClass=User))",
+    "vendor": "Active Directory"
+    }
+}
+----
+[source, curl]
+----
+curl --location -i --request PUT --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>' --header 'Content-Type: application/astra-setting+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+如果调用成功、则返回`HTTP 204`响应。您可以选择再次检索配置设置以确认更改。
+
+
+
+== 重置LDAP身份验证配置
+
+您可以执行以下REST API调用以断开Astra与LDAP服务器的连接、并在Astra中重置LDAP配置。此调用将更新`Astra.account.ldap`设置、并清除`connectionHost`的值。
+
+`isenabled`的值也必须设置为`false`。您可以在进行重置调用之前设置此值、也可以在进行重置调用时设置此值。在第二种情况下、应在同一重置调用中清除`connectionHost`并将`isenabled`设置为false。
+
+
+CAUTION: 此操作会造成系统中断、您应谨慎操作。它会删除所有已导入的LDAP用户和组。它还会删除您在Astra控制中心中创建的所有相关Astra用户、组和roleBindings (LDAP类型)。
+
+[cols="1,6"]
+|===
+| HTTP 方法 | 路径 
+
+
+| PUT | /account/｛account_id｝/core/v1/settings/｛setting_id｝ 
+|===
+
+
+===== JSON 输入示例
+
+[source, json]
+----
+{
+  "type": "application/astra-setting",
+  "version": "1.0",
+  "desiredConfig": {
+    "connectionHost": "",
+    "credentialId": "3bd9c8a7-f5a4-4c44-b778-90a85fc7d154",
+    "groupBaseDN": "OU=groups,OU=astra,DC=example,DC=com",
+    "isEnabled": "false",
+    "port": 686,
+    "secureMode": "LDAPS",
+    "userBaseDN": "OU=users,OU=astra,DC=example,dc=com",
+    "userSearchFilter": "((objectClass=User))",
+    "vendor": "Active Directory"
+    }
+}
+----
+请注意以下事项：
+
+* 要更改LDAP服务器、必须禁用LDAP Changing `connectHost`并将其重置为空值、如上例所示。
+
+
+[source, curl]
+----
+curl --location -i --request PUT --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>' --header 'Content-Type: application/astra-setting+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+如果调用成功、则返回`HTTP 204`响应。您也可以选择重新检索配置以确认更改。

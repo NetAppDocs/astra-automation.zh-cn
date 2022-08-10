@@ -44,6 +44,9 @@ Astra Control REST API 中提供的主要资源端点分为三类。除了需要
 | ASUP | 21.08. | ASUP 资源表示转发给 NetApp 支持部门的 AutoSupport 捆绑包。 
 
 
+| 证书 | *。22.08* | 证书资源表示已安装的用于对传出连接进行强身份验证的证书。 
+
+
 | 凭据 | 21.04 | 凭据资源包含可用于 Astra 用户，集群，分段和存储后端的安全相关信息。 
 
 
@@ -59,6 +62,9 @@ Astra Control REST API 中提供的主要资源端点分为三类。除了需要
 | 功能 | 21.08. | 这些功能资源表示选定的 Astra 功能，您可以查询这些功能来确定它们是否已在系统中启用。访问权限仅限于只读。 
 
 
+| 组 | *。22.08* | 组资源表示Astra组和关联资源。当前版本仅支持LDAP组。 
+
+
 | 挂钩源 | 21.12 | hook 源资源表示与执行 hook 一起使用的实际源代码。将源代码与执行控制分开具有多种优势，例如允许共享脚本。 
 
 
@@ -68,7 +74,7 @@ Astra Control REST API 中提供的主要资源端点分为三类。除了需要
 | 通知 | 21.04 | 通知资源表示具有通知目标的 Astra 事件。访问权限按用户提供。 
 
 
-| 软件包 | * 。 22.04* | 软件包资源用于注册和访问软件包定义。软件包由多个组件组成，包括文件，映像和其他项目。 
+| 软件包 | 22.04 | 软件包资源用于注册和访问软件包定义。软件包由多个组件组成，包括文件，映像和其他项目。 
 
 
 | 角色绑定 | 21.04 | 角色绑定资源表示特定用户对和帐户之间的关系。除了这两者之间的链接之外，还会通过特定角色为每个指定一组权限。 
@@ -86,7 +92,7 @@ Astra Control REST API 中提供的主要资源端点分为三类。除了需要
 | 未读通知 | 21.04 | 未读通知资源表示已分配给特定用户但尚未读取的通知。 
 
 
-| 升级 | * 。 22.04* | 通过升级资源，您可以访问软件组件并启动升级。 
+| 升级 | 22.04 | 通过升级资源，您可以访问软件组件并启动升级。 
 
 
 | 用户 | 21.04 | 用户资源表示 Astra 用户能够根据其定义的角色访问系统。 
@@ -133,6 +139,9 @@ Astra Control REST API 中提供的主要资源端点分为三类。除了需要
 | 应用程序 | 21.04 | 应用程序资源表示所有 Kubernetes 应用程序，包括那些不受 Astra 管理的应用程序。 
 
 
+| AppMirror | *。22.08* | AppMirror资源表示用于管理应用程序镜像关系的AppMirror资源。 
+
+
 | 存储分段 | 21.08. | 存储分段资源表示用于存储由 Astra 管理的应用程序备份的 S3 云分段。 
 
 
@@ -168,26 +177,6 @@ Astra Control REST API 中提供的主要资源端点分为三类。除了需要
 
 | Volume | 21.04 | 卷资源表示与受管应用程序关联的 Kubernetes 存储卷。 
 |===
-
-
-== 最新版本中的新端点
-
-当前的 22.04 Astra Control 版本增加了以下 REST 端点。此外，已升级多个现有资源的版本。
-
-* /accouns/ ｛ account_id ｝ /core/v1/packages
-* /accouns/ ｛ account_id ｝ /core/v1/packages/｛ package_id ｝
-* /accouns/ ｛ account_id ｝ /core/v1/upgrades
-* /accouns/ ｛ account_id ｝ /core/v1/upgrades// ｛ upgrade_id ｝
-* /accouns/ ｛ account_id ｝ /topology/v1/appBackups
-* /accouns/ ｛ account_id ｝ /topology/v1/appBackups/ ｛ appBackup_id ｝
-* /accouns/ ｛ account_id ｝ /topology/v1/cloud / ｛ clune_id ｝ /clusters/ ｛ cluster_id ｝ /clusterNode
-* /accouns/ ｛ account_id ｝ /topology/v1/cloud / ｛ clune_id ｝ /cluster/ ｛ cluster_id ｝ /clusterNodes/｛ clusterNode_id ｝
-* /accouns/ ｛ account_id ｝ /topology/v1/managedClusters/ ｛ managedCluster_id ｝ /apps/ ｛ app_id ｝ /appAssets
-* /accouns/ ｛ account_id ｝ /topology/v1/managedClusters/ ｛ managedCluster_id ｝ /apps/ ｛ app_id ｝ /appAssets/ ｛ appasset_id ｝
-* /accouns/ ｛ account_id ｝ /topology/v1/managedClusters/ ｛ managedCluster_id ｝ /clusterNode
-* /accouns/ ｛ account_id ｝ /topology/v1/managedClusters/ ｛ managedCluster_id ｝ /clusterNodes/ ｛ clusterNode_id ｝
-
-
 
 
 == 其他资源和端点
