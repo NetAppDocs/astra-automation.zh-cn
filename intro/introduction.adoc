@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: intro/introduction.html 
-keywords: introduction, Astra REST API 
-summary:  
+keywords: introduction, features, benefits, deployment models, object model, query parameters, automation, family 
+summary: Astra 控制中心和 Astra 控制服务提供了一个通用的 REST API ，您可以通过编程语言或 Curl 等实用程序直接访问该 API 。下面介绍了 API 的主要亮点和优势。 
 ---
-= Astra Control REST API 简介
+= 功能和优势简介
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

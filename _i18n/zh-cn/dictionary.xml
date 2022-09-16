@@ -433,7 +433,6 @@
   <block id="bd4c8bbdccbcb7826a3bc4ae421c0604" category="section-title">JSON 格式化</block>
   <block id="8538dfe988aff949d5dd74e2d6c12949" category="paragraph">用于访问资源的外部 REST 端点映射到由 Astra 服务在内部维护的一致对象模型。对象模型采用实体关系（ ential-Relationship ， ER ）建模设计，有助于明确定义 API 操作和响应。</block>
   <block id="bdc2516aa5546e7df819a07cd9385485" category="paragraph">Astra Web 用户界面的设计与 REST API 一致，因此两个访问路径和用户体验之间保持一致。</block>
-  <block id="c6c51849eeb1ac322baa3a99b7cd7e43" category="summary">这是 Astra Automation 的总结。</block>
   <block id="e61ad2d01a2692e9ed29c90c0c413101" category="paragraph">您可以使用以下脚本列出 Astra 帐户的受管应用程序。</block>
   <block id="365c8dec8255a8a164436c71a2611920" category="doc">使用 Python</block>
   <block id="0998ed5beee28345ae02fc586e2414f2" category="section-title">准备环境</block>
@@ -634,7 +633,6 @@
   <block id="e83314a43cc3f59ae86485142dc33671" category="paragraph">通过 Astra Control REST API 访问的资源数量已大幅增加，许多新资源为内部 Astra Control Center 产品奠定了基础。新资源包括： ASUP ，授权，功能，许可证，设置， 订阅，存储分段，云，集群，受管集群， 存储后端和存储类。请参见 <block ref="f79c22f30a5c9f960ce998adee5739fa" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="5f5312990235e82a209579a232929aef" category="paragraph">除了扩展的 REST 资源之外，还有其他几个新的 API 端点可用于支持 Astra Control 部署。</block>
   <block id="8df6c80ff18efadb362ec0a4942fb7b6" category="paragraph">Astra Control REST API 可与 Astra Control Service 产品配合使用。它是基于 REST 技术和当前最佳实践创建的。API 为 Astra 部署的自动化奠定了基础，并具有以下功能和优势。</block>
-  <block id="5bfa69d8f97671928100931c0d411913" category="doc">Astra Control REST API 简介</block>
   <block id="6c38ead9bdb25d09c6e504c53fc268a5" category="paragraph">Astra Control API 是使用 REST 技术和当前最佳实践创建的。核心技术包括 HTTP ， JSON 和 RBAC 。</block>
   <block id="6ded6cd1a82081d2c5fe31ad44e26927" category="paragraph">Astra 控制服务在公有云环境中使用，而 Astra 控制中心则用于您的内部部署。有一个 REST API 支持这两种部署模式。</block>
   <block id="973e2c06fdb700a27ccfb70fe4627261" category="paragraph">Astra Control REST API 可提供强大的调试和问题确定功能，包括系统事件和用户通知。</block>
@@ -644,7 +642,6 @@
   <block id="a3fb339c1c586b61a4747f75e3e18873" category="list-text"><block ref="a3fb339c1c586b61a4747f75e3e18873" category="inline-link-rx"></block></block>
   <block id="8814863051032c96890d514b89b4519c" category="paragraph">Astra Control REST API 提供了多种不同的方法来通过定义的查询参数访问资源收集。</block>
   <block id="d5def2c7a33c06df000ce3ff88f44d5e" category="paragraph">Astra Control REST API 提供了多种支持功能，可用于诊断和调试。</block>
-  <block id="fcc723c942724132893726738da56aeb" category="paragraph">您可以在工作站的命令行界面上通过问题描述执行一个简单的 Curl 命令来开始使用 Astra Control REST API 并确认其可用性。</block>
   <block id="b3433e01f10e1e1369d819f420b2a8a7" category="paragraph">_Workflow _ 是完成特定管理任务或目标所需的一个或多个步骤的序列。Astra Control 工作流中的每个步骤均为以下步骤之一：</block>
   <block id="0c59027cf761af16d5101de509ed5ef7" category="paragraph">请务必查看 <block ref="533ba43849291e761802432633424684" category="inline-link-macro-rx"></block> 有关 REST 概念的信息以及有关如何设计 Astra Control REST API 的详细信息。</block>
   <block id="ef69df9e80d5e1591d22bfe189aa737e" category="admonition">Astra Control REST API 还使用 * HTTP APIs* 标准的问题详细信息。请参见 <block ref="d9c154af7dec160f41ead610ccb970e9" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
@@ -834,7 +831,6 @@
   <block id="ff187555434d269d1d36dedf48955cdb" category="paragraph">您可以通过查看以下步骤快速准备开始使用 Astra Control REST API 。</block>
   <block id="2f4e21e17441a71f2d731b0fdb15fc17" category="paragraph">您需要使用 Astra 凭据登录到 Astra Web 用户界面并生成 API 令牌。使用 Astra 控制中心，您可以在本地管理这些凭据。使用 Astra 控制服务时，帐户凭据可通过 * 身份验证 0* 服务进行访问。</block>
   <block id="4b96d62533ac6ea29ddc9891a6776a3b" category="paragraph">您应熟悉 Kubernetes 的几个基本概念。请参见 <block ref="e274b8e6d2e2ed892d318b3b2d0764db" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
-  <block id="8e9b0300da42294f8690b8db105eb132" category="paragraph">您可以使用通过 Astra Control REST API 提供的资源来自动执行 Astra 部署。每个资源都通过一个或多个端点进行访问。下面提供的信息介绍了可在自动化部署中使用的 REST 资源。</block>
   <block id="94076f0e9f9b57b9bc636dff06dec4be" category="section-title">Astra Control REST 资源摘要</block>
   <block id="b9afcd2399096c529c7bdb5fde05df0e" category="cell">21.12</block>
   <block id="209802fb858e2c83205027dbbb5d9e6c" category="cell">软件包</block>
@@ -1004,4 +1000,12 @@
   <block id="3d951227fdf405841826a71ed6c30234" category="list-text"><block ref="3d951227fdf405841826a71ed6c30234" category="inline-link-rx"></block></block>
   <block id="0b7d1e8a8b66c054d1b104e700b7bd15" category="admonition">Astra Control REST API 22.08版没有新的已知问题。以下所述问题已在先前版本中发现，但仍适用于当前版本。</block>
   <block id="b0df0cbb0d80fcf4a587effd8b8f3f6a" category="sidebar">配置LDAP服务器</block>
+  <block id="941b6ae90f15cea12f3fe36796089500" category="summary">您可以访问通过Astra Control REST API提供的资源、以自动执行Astra部署。每个资源都可通过一个或多个端点来使用。下面提供的信息介绍了可在自动化部署中使用的 REST 资源。</block>
+  <block id="a941511c207017106c6b7b09e9dec884" category="summary">本站点的文档介绍了Astra Control REST API以及随Astra Control提供的相关自动化技术。</block>
+  <block id="3f4fc4220755866f399810fee47c7884" category="inline-link-macro">GitHub 贡献者</block>
+  <block id="65ed3c4720fad34d453db54755338725" category="paragraph">在 Twitter @NetAppDoc 上关注我们。通过成为发送有关文档的反馈 <block ref="78cabac26f0b6e0ce9a3e24d1b749910" category="inline-link-macro-rx"></block> 或发送电子邮件至 doccomments@netapp.com 。</block>
+  <block id="2d388ce46646f517f31092dee87e1af6" category="paragraph">您可以在工作站的命令行界面上通过问题描述 执行一个简单的cURL命令来开始使用Astra Control REST API并确认其可用性。</block>
+  <block id="29af96a9ec5aae2cc2423a2c632b3216" category="doc">功能和优势简介</block>
+  <block id="775e2faa120631457b3eb5f26a2f323a" category="summary">Astra Control是一款NetApp软件产品、可为您的Kubernetes应用程序提供数据生命周期管理。根据您的环境、有两种部署模式可供选择。在给定版本中、Astra控制中心和Astra控制服务都共享相同的REST API。您可以使用API和其他相关自动化技术来管理Astra Control部署。</block>
+  <block id="35ae08a314ffffc02580e3c3fbfad924" category="sidebar">功能和优势</block>
 </blocks>

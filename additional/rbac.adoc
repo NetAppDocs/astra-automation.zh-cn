@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: additional/rbac.html 
 keywords:  
-summary:  
+summary: Astra REST API 支持基于角色的访问控制（ Role-Based Access Control ， RBAC ）来限制对系统功能的访问。 
 ---
 = RBAC 安全性
 :hardbreaks:

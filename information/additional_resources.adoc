@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: information/additional_resources.html 
-keywords:  
-summary:  
+keywords: addition resources, additional information, astra family, cloud, netapp cloud, support 
+summary: 您可以访问其他资源来获取帮助并查找有关 NetApp 云服务和支持以及一般 REST 和云概念的更多信息。 
 ---
 = 其他资源
 :hardbreaks:

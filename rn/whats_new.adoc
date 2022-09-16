@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: rn/whats_new.html 
-keywords:  
-summary:  
+keywords: whats new, enhancements, new features 
+summary: NetApp 会定期更新 Astra Control REST API ，为您提供新功能，增强功能和错误修复。 
 ---
 = Astra Control REST API 的新增功能
 :hardbreaks:
