@@ -676,7 +676,6 @@
   <block id="acb730b2d5158050dc822b6dc8c932e2" category="paragraph">有关详细信息，请参见 PyPI 和 GitHub 页面。</block>
   <block id="20cb526cb438c874dbc67eaf9ded63f0" category="paragraph">无论是直接使用 Astra SDK 中的 Python 类，还是使用 `toolkape.py` 脚本中的功能，最终您将在部署 Astra Control 时访问 REST API 。因此，您需要一个 Astra 帐户以及一个 API 令牌。请参见 <block ref="6790e3b8b21e3717c59b764a5b68d086" category="inline-link-macro-rx"></block> 有关详细信息，请参见本文档 * 入门 * 一节中的其他页面。</block>
   <block id="2c3632f4f9feb6a54026be6d9c946d20" category="section-title">有用资源摘要</block>
-  <block id="ba24114401f0d96a4086faa5796f3079" category="list-text"><block ref="ba24114401f0d96a4086faa5796f3079" category="inline-link-rx"></block></block>
   <block id="b455f4010eda9452a921d32bfc7e1318" category="list-text"><block ref="b455f4010eda9452a921d32bfc7e1318" category="inline-link-rx"></block></block>
   <block id="78ceba6718263592394adb03dc11471c" category="paragraph">您应查看当前版本中与 Astra Control REST API 相关的所有已知问题。已知问题可确定可能会阻止您成功使用本产品的问题。</block>
   <block id="f977fda19bbfe49b9346f60f532f0704" category="section-title">未发现后端存储节点中的所有存储设备</block>
@@ -1013,4 +1012,5 @@
   <block id="d2eba1db06d9a5fbe5780c6a0d3131b9" category="list-text">克隆GitHub存储库并复制/修改两个核心Python文件、以便可以通过Python客户端代码访问它们</block>
   <block id="27b72a5b697b4b5014519a7f674fe0f9" category="paragraph">SDK 具有与本地 Python 环境相关的几个前提条件。例如、您必须使用Python 3.8或更高版本。此外，还需要几个 Python 软件包。有关详细信息，请参见 GitHub 存储库页面或 PyPI 软件包页面。</block>
   <block id="e598386ca051245bd47f1531754638e2" category="list-text"><block ref="e598386ca051245bd47f1531754638e2" category="inline-link-rx"></block></block>
+  <block id="420fbf00d0fa9a9d0a4c6d109b03b7ab" category="list-text"><block ref="420fbf00d0fa9a9d0a4c6d109b03b7ab" category="inline-link-rx"></block></block>
 </blocks>
