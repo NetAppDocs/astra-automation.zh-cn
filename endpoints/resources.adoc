@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: endpoints/resources.html 
-keywords: resources, endpoints, core, managed application, topology. openapi, openmetrics 
-summary: 您可以访问通过Astra Control REST API提供的资源、以自动执行Astra部署。每个资源都可通过一个或多个端点来使用。下面提供的信息介绍了可在自动化部署中使用的 REST 资源。 
+keywords: resources, endpoints, core, managed application, topology, openapi, openmetrics 
+summary: 您可以访问通过Astra Control REST API提供的资源、以自动执行Astra部署。每个资源都可通过一个或多个端点来使用。此页面介绍了可在自动化部署中使用的REST资源。 
 ---
 = 资源和端点
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 您可以访问通过Astra Control REST API提供的资源、以自动�
 
 
 [role="lead"]
-您可以访问通过Astra Control REST API提供的资源、以自动执行Astra部署。每个资源都可通过一个或多个端点来使用。下面提供的信息介绍了可在自动化部署中使用的 REST 资源。
+您可以访问通过Astra Control REST API提供的资源、以自动执行Astra部署。每个资源都可通过一个或多个端点来使用。下面介绍了可在自动化部署中使用的REST资源。
 
 
 NOTE: 用于访问 Astra Control 资源的路径和完整 URL 的格式基于多个值。请参见 link:../rest-core/url_format.html["URL 格式"] 有关详细信息 ...另请参见 link:../reference/api_reference.html["API 参考"] 有关使用 Astra 资源和端点的更多详细信息。

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: rn/known_issues.html 
-keywords: known issues, bugs, fixes, issues 
+keywords: known issues, issues, bugs, fixes 
 summary: 您应查看当前版本中与 Astra Control REST API 相关的所有已知问题。已知问题可确定可能会阻止您成功使用本产品的问题。 
 ---
 = 已知问题

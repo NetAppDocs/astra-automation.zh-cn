@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: get-started/hello_world.html 
-keywords:  
-summary:  
+keywords: get started, simple example 
+summary: 您可以在工作站的命令行界面上通过问题描述 执行一个简单的cURL命令来开始使用Astra Control REST API并确认其可用性。 
 ---
 = 大家好
 :hardbreaks:

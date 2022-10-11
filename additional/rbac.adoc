@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: additional/rbac.html 
-keywords:  
-summary: Astra REST API 支持基于角色的访问控制（ Role-Based Access Control ， RBAC ）来限制对系统功能的访问。 
+keywords: rbac, roles, namespace granularity 
+summary: 'Astra REST API支持基于角色的访问控制(Role-Based Access Control、RBAC)来授予和限制对系统功能的访问权限。' 
 ---
 = RBAC 安全性
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Astra REST API 支持基于角色的访问控制（ Role-Based Access C
 
 
 [role="lead"]
-Astra REST API 支持基于角色的访问控制（ Role-Based Access Control ， RBAC ）来限制对系统功能的访问。
+Astra REST API支持基于角色的访问控制(Role-Based Access Control、RBAC)来授予和限制对系统功能的访问权限。
 
 
 

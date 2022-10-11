@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: rn/about.html 
-keywords: about, current release 
+keywords: about, about this release, current release 
 summary: 本站点的文档介绍了Astra Control REST API以及随Astra Control提供的相关自动化技术。 
 ---
 = 关于此版本

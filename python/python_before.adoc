@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: python/python_before.html 
 keywords: python3, requests, urllib3, identity, json 
-summary: Python 是一种受欢迎的开发语言，尤其适用于数据中心自动化。在将 Python 的原生功能与多个通用软件包结合使用之前，您需要准备环境和所需的输入文件。 
+summary: Python是数据中心自动化的一种流行开发语言。在将 Python 的原生功能与多个通用软件包结合使用之前，您需要准备环境和所需的输入文件。 
 ---
 = 开始之前
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Python 是一种受欢迎的开发语言，尤其适用于数据中心�
 
 
 [role="lead"]
-Python 是一种受欢迎的开发语言，尤其适用于数据中心自动化。在将 Python 的原生功能与多个通用软件包结合使用之前，您需要准备环境和所需的输入文件。
+Python是数据中心自动化的一种流行开发语言。在将 Python 的原生功能与多个通用软件包结合使用之前，您需要准备环境和所需的输入文件。
 
 
 NOTE: 除了使用 Python 直接访问 Astra Control REST API 之外， NetApp 还提供了一个工具包软件包，用于抽象化 API 并消除一些复杂性。请参见 link:../python/astra_toolkits.html["NetApp Astra Control Python SDK"] 有关详细信息 ...
