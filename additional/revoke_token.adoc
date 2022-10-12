@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: additional/revoke_token.html 
-keywords:  
-summary:  
+keywords: token, revoke token 
+summary: 您可以在 Astra Web 界面上撤消不再需要的 API 令牌。 
 ---
 = 撤消 API 令牌
 :hardbreaks:

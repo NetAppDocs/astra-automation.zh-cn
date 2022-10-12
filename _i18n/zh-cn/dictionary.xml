@@ -620,7 +620,6 @@
   <block id="a520c7cb73d88575fc93ad35b53894ab" category="paragraph">通过 Astra Control REST API 提供的资源实例具有以下特征：</block>
   <block id="5edbe2734dc4b7c3185c8a5192c5e940" category="paragraph">通过 Astra Control REST API 提供的资源收集具有以下特征：</block>
   <block id="1e34169f9f85961a4918c2a3ec12335c" category="paragraph">每个 Astra Control 资源都使用一个通用结构进行定义。</block>
-  <block id="8dc7c8b39c78b50c93daffc3e502aa5e" category="paragraph">Astra Control REST API 使用 HTTP 以及相关参数对资源和集合执行操作。下面提供了 HTTP 实施的详细信息。</block>
   <block id="01b7ef875c4a217845bac8e7ae38175b" category="paragraph">Astra Control REST API 可实施一个事务模式，其中包含定义明确的操作和状态过渡。</block>
   <block id="c015cb2c04ac629966b40f1d6b58b583" category="paragraph">通过 Astra Control REST API 提供的每个资源实例和集合均可根据 * CRU* 模型进行访问。有四个操作，每个操作都映射到一个 HTTP 方法。这些操作包括：</block>
   <block id="beeda4a7ebc8ea202e9ed1791403ab32" category="paragraph">下表汇总了与 Astra Control REST API 一起使用的 HTTP 标头。</block>
@@ -1013,4 +1012,8 @@
   <block id="27b72a5b697b4b5014519a7f674fe0f9" category="paragraph">SDK 具有与本地 Python 环境相关的几个前提条件。例如、您必须使用Python 3.8或更高版本。此外，还需要几个 Python 软件包。有关详细信息，请参见 GitHub 存储库页面或 PyPI 软件包页面。</block>
   <block id="e598386ca051245bd47f1531754638e2" category="list-text"><block ref="e598386ca051245bd47f1531754638e2" category="inline-link-rx"></block></block>
   <block id="420fbf00d0fa9a9d0a4c6d109b03b7ab" category="list-text"><block ref="420fbf00d0fa9a9d0a4c6d109b03b7ab" category="inline-link-rx"></block></block>
+  <block id="ce44f3c6e8850cf4a69ccd2da1d186c8" category="summary">表述性状态传输（ Representational State Transfer ， REST ）是一种用于创建分布式 Web 应用程序的模式。在设计 Web 服务 API 时，它会建立一组用于公开基于服务器的资源并管理其状态的主流技术和最佳实践。</block>
+  <block id="ad60c6f0b038daedb3b46ea65cd82bc1" category="summary">Astra Control REST API使用HTTP以及相关参数对资源实例和集合执行操作。</block>
+  <block id="e4c8251a9c6d357d3aa4b05293542914" category="paragraph">Astra Control REST API使用HTTP以及相关参数对资源实例和集合执行操作。下面提供了 HTTP 实施的详细信息。</block>
+  <block id="3c7367ab4ec3900042f765d5f3b81ee6" category="summary">您可以快速做好准备、开始使用Astra Control REST API。</block>
 </blocks>

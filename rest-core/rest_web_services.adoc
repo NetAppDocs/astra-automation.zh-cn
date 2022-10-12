@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: rest-core/rest_web_services.html 
-keywords:  
-summary:  
+keywords: rest, web, web services 
+summary: 表述性状态传输（ Representational State Transfer ， REST ）是一种用于创建分布式 Web 应用程序的模式。在设计 Web 服务 API 时，它会建立一组用于公开基于服务器的资源并管理其状态的主流技术和最佳实践。 
 ---
 = REST Web 服务
 :hardbreaks:

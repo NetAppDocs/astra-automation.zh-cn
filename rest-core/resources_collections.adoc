@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: rest-core/resources_collections.html 
-keywords: concepts 
-summary:  
+keywords: resources, instances, collections, uuid, uuidv4, state 
+summary: 通过 Astra Control REST API ，可以访问资源实例和资源实例集合。 
 ---
 = 资源和集合
 :hardbreaks:

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: get-started/prepare_to_use_workflows.html 
-keywords:  
-summary:  
+keywords: workflows, prepare workflows, use workflows 
+summary: 在将 Astra 工作流用于实时部署之前，您应熟悉这些工作流的组织和格式。 
 ---
 = 准备使用这些工作流
 :hardbreaks:

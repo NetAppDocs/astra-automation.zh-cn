@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: additional/work_with_collections.html 
-keywords: collections 
-summary:  
+keywords: collections, filtering, pagination, count 
+summary: Astra Control REST API 提供了多种不同的方法来通过定义的查询参数访问资源收集。 
 ---
 = 使用收集
 :hardbreaks:
