@@ -560,7 +560,6 @@
   <block id="a0aa3c13c7e155cdac2e684ed97bd329" category="section-title">管理工作流</block>
   <block id="6ea966a7aff682cea4e20915ee526ea8" category="paragraph">您可以在拥有受管集群后使用这些工作流。这些工作流侧重于应用程序保护和支持操作，例如备份，还原和克隆受管应用程序。</block>
   <block id="9b355d9a0df5a5e777f4cd881f971a4e" category="paragraph">本地工作站必须提供 Curl 实用程序。您还必须具有 API 令牌和关联的帐户标识符。请参见 <block ref="67af9ad396391bc7ade4b472f0b4f030" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
-  <block id="6fff62f9303e1554ae200440f5af5315" category="paragraph">您可以在管理 Astra 受管集群中的应用程序时使用这些工作流。</block>
   <block id="8f6291e033ff30c19e8b03e19a26f0f3" category="admonition">NetApp 可以随时扩展和改进这些工作流，因此您应定期查看这些工作流。</block>
   <block id="6fd2337d24b1882caa5014a35282404b" category="section-title">一般准备</block>
   <block id="cbdeff17f21659aa95f18f7102990f97" category="paragraph">在使用任何 Astra 工作流之前，请务必查看 <block ref="1d4e486ef41d26d87e2c5a1c939d4914" category="inline-link-macro-rx"></block>。</block>
@@ -591,7 +590,6 @@
   <block id="b65e59022e022b723c1c1fbb73cd0092" category="doc">列出分段</block>
   <block id="846402b8c9f043783b1fea0eaa5d5e3a" category="paragraph">您可以列出为特定 Astra 帐户定义的 S3 存储分段。</block>
   <block id="cfafa44c04121f529847f5cd8be51756" category="section-title">curl 示例：返回所有存储分段的所有数据</block>
-  <block id="40e6d99f89a6388188f257045e26e638" category="paragraph">您可以使用这些工作流创建和维护与 Astra 控制中心部署模式结合使用的基础架构。在大多数情况下，这些工作流也可与 Astra Control Service 结合使用。</block>
   <block id="c2864f49ccd62b4a439e6e98cf080bad" category="paragraph">基础架构工作流按不同类别进行组织，以便更容易找到所需的工作流。</block>
   <block id="cfc97f6bd7c3456321d1fd8b90352beb" category="cell">身份和访问</block>
   <block id="d65ef3c48dc6be2ab6c525428ec0071f" category="cell">通过这些工作流，您可以管理身份以及如何访问 Astra 。这些资源包括用户，凭据和令牌。</block>
@@ -1016,4 +1014,7 @@
   <block id="ad60c6f0b038daedb3b46ea65cd82bc1" category="summary">Astra Control REST API使用HTTP以及相关参数对资源实例和集合执行操作。</block>
   <block id="e4c8251a9c6d357d3aa4b05293542914" category="paragraph">Astra Control REST API使用HTTP以及相关参数对资源实例和集合执行操作。下面提供了 HTTP 实施的详细信息。</block>
   <block id="3c7367ab4ec3900042f765d5f3b81ee6" category="summary">您可以快速做好准备、开始使用Astra Control REST API。</block>
+  <block id="bec9f16b8e469e038cb36941a7f49a27" category="summary">您可以使用这些工作流创建和维护用于Astra Control Center部署的基础架构。在许多情况下、这些工作流也可以与Astra Control Service结合使用。</block>
+  <block id="efc48892bfa2d48bf7b7099da5e8b1cb" category="summary">您可以选择将Astra控制中心与轻型目录访问协议(Lightweight Directory Access Protocol、LDAP)服务器集成、以便为选定的Astra用户执行身份验证。</block>
+  <block id="29d0525c4055c4b47d6c1f6b4681a4d4" category="summary">您可以在管理Astra受管集群中的应用程序时使用这些工作流。</block>
 </blocks>

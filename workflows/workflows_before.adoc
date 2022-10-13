@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: workflows/workflows_before.html 
-keywords:  
-summary:  
+keywords: workflows, management workflows, preparation 
+summary: 您可以在管理Astra受管集群中的应用程序时使用这些工作流。 
 ---
 = 开始之前
 :hardbreaks:
@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-您可以在管理 Astra 受管集群中的应用程序时使用这些工作流。
+您可以在管理Astra受管集群中的应用程序时使用这些工作流。
 
 
 NOTE: NetApp 可以随时扩展和改进这些工作流，因此您应定期查看这些工作流。

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: workflows_infra/workflows_infra_before.html 
-keywords:  
-summary:  
+keywords: workflows, infrastructure workflows, preparation 
+summary: 您可以使用这些工作流创建和维护用于Astra Control Center部署的基础架构。在许多情况下、这些工作流也可以与Astra Control Service结合使用。 
 ---
 = 开始之前
 :hardbreaks:
@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-您可以使用这些工作流创建和维护与 Astra 控制中心部署模式结合使用的基础架构。在大多数情况下，这些工作流也可与 Astra Control Service 结合使用。
+您可以使用这些工作流创建和维护用于Astra Control Center部署的基础架构。在许多情况下、这些工作流也可以与Astra Control Service结合使用。
 
 
 NOTE: NetApp 可以随时扩展和改进这些工作流，因此您应定期查看这些工作流。

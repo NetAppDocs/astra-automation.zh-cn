@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: workflows_infra/ldap_prepare.html 
-keywords:  
-summary:  
+keywords: LDAP, LDAP integration 
+summary: '您可以选择将Astra控制中心与轻型目录访问协议(Lightweight Directory Access Protocol、LDAP)服务器集成、以便为选定的Astra用户执行身份验证。' 
 ---
 = 准备LDAP配置
 :hardbreaks:
