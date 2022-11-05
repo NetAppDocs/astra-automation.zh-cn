@@ -8,5 +8,5 @@ entries:
   entries:
   - title: 开始之前
     url: "/python/python_before.html"
-  - title: 列出受管应用程序
+  - title: 列出应用程序
     url: "/python/py_list_man_apps.html"

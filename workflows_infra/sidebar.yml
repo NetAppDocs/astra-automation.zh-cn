@@ -18,15 +18,23 @@ entries:
     url: "/workflows_infra/wf_ldap_add_entries.html"
   - title: 禁用并重置LDAP
     url: "/workflows_infra/wf_ldap_disable_reset.html"
+- title: 集群
+  entries:
+  - title: 列出集群
+    url: "/workflows_infra/wf_list_clusters.html"
+  - title: 列出受管集群
+    url: "/workflows_infra/wf_list_man_clusters.html"
+- title: 云
+  entries:
+  - title: 列出云
+    url: "/workflows_infra/wf_list_clouds.html"
 - title: 存储分段
   entries:
   - title: 列出分段
     url: "/workflows_infra/wf_list_buckets.html"
 - title: 存储
   entries:
+  - title: 列出存储类
+    url: "/workflows_infra/wf_list_storage_classes.html"
   - title: 列出存储后端
     url: "/workflows_infra/wf_list_storage_backends.html"
-- title: 集群
-  entries:
-  - title: 列出受管集群
-    url: "/workflows_infra/wf_list_man_clusters.html"

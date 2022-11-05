@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: workflows/wf_create_backup.html 
 keywords:  
-summary:  
+summary: 您可以为特定应用程序创建备份、然后使用此备份还原或克隆此应用程序。 
 ---
-= 为受管应用程序创建备份
+= 为应用程序创建备份
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary:
 
 
 [role="lead"]
-您可以为特定受管应用程序创建备份。您可以使用备份还原或克隆应用程序。
+您可以为特定应用程序创建备份、然后使用此备份还原或克隆此应用程序。
 
 
 
 === 开始之前
 
-您必须具有要创建备份的受管应用程序的 ID 。如果需要，您可以使用此工作流 link:wf_list_man_apps.html["列出受管应用程序"] 以查找应用程序。
+您必须具有要备份的应用程序的ID。如果需要，您可以使用此工作流 link:wf_list_man_apps.html["列出应用程序"] 以查找应用程序。
 
 
 
@@ -33,7 +33,7 @@ summary:
 | HTTP 方法 | 路径 
 
 
-| 发布 | /accouns/ ｛ account_id ｝ /K8s/v1/managedApps/ ｛ managedApp_id ｝ /appBackups 
+| 发布 | /accouns/｛account_id｝/k8s/v1/apps/｛app_id｝/appBackups 
 |===
 
 
@@ -46,7 +46,7 @@ summary:
 | 参数 | Type | Required | Description 
 
 
-| 受管应用程序 ID | 路径 | 是的。 | 标识要创建备份的受管应用程序。 
+| 应用程序ID | 路径 | 是的。 | 标识要创建备份的应用程序。 
 
 
 | JSON | body | 是的。 | 提供备份的参数。请参见以下示例。 
@@ -59,7 +59,7 @@ summary:
 ----
 {
   "type": "application/astra-appBackup",
-  "version": "1.0",
+  "version": "1.1",
   "name": "backup-david-1"
 }
 ----
@@ -69,5 +69,5 @@ summary:
 
 [source, curl]
 ----
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>/appBackups' --header 'Content-Type: application/astra-appBackup+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appBackups' --header 'Content-Type: application/astra-appBackup+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
 ----

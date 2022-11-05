@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: workflows_infra/wf_list_buckets.html 
 keywords:  
-summary:  
+summary: 您可以列出为特定 Astra 帐户定义的 S3 存储分段。 
 ---
 = 列出分段
 :hardbreaks:
@@ -20,7 +20,7 @@ summary:
 
 === 1. 列出分段
 
-执行以下 REST API 调用。
+执行以下REST API调用以列出分段。
 
 [cols="25,75"]
 |===

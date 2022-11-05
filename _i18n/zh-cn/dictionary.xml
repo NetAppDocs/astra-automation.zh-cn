@@ -58,7 +58,6 @@
   <block id="79018ac7f72b136dcb6a5f9e125d4c2b" category="list-text">应用程序资产</block>
   <block id="639d7e9624e068b9cb919e6476673916" category="list-text">应用程序备份</block>
   <block id="1fd2b9909603c282becde555a00d5699" category="list-text">应用程序快照</block>
-  <block id="1d1de1a5cacebf8dae3ee084e7af3eaf" category="list-text">受管应用程序</block>
   <block id="25f7347236b51a5eae4ba01a7862cb55" category="list-text">计划</block>
   <block id="67c58d2de17edb43efeda54f12292dd2" category="section-title">拓扑资源</block>
   <block id="ac863f346e618f9a959b5c95d5d28941" category="list-text">应用程序</block>
@@ -107,28 +106,21 @@
   <block id="4a66fdca0794b65eaa799aa5ead36fb1" category="cell">&lt;api_token&gt;</block>
   <block id="bf50d5e661106d0abe925af3c2e6f7e7" category="cell">标题</block>
   <block id="14ce98600753e7afda082ba76ce94155" category="cell">标识和授权调用方的令牌。</block>
-  <block id="ef388075ecc9c993b3b3b5dd15b487de" category="cell">&lt;managed_app_ID&gt;</block>
-  <block id="478387b91feafb83455f33de88aa26eb" category="cell">用于标识 API 调用的受管应用程序的 UUIDv4 值。</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="doc">入门</block>
   <block id="3e25960a79dbc69b674cd4ec67a72c62" category="doc">大家好</block>
   <block id="cbd2fd368381db0d8cdbdead253cf132" category="paragraph">以下 Curl 命令将检索 Astra 用户列表。按指示提供相应的 &lt;account_ID&gt; 和 &lt;api_token&gt; 。</block>
   <block id="efb44cfe1d5b8d9954ea045385675c66" category="doc">删除快照</block>
-  <block id="482aff56a1c2140c6b17c288f13f98d1" category="paragraph">您可以删除与受管应用程序关联的快照。</block>
   <block id="a08d0039b6defc60dd0db0aebca289d8" category="paragraph">您必须具备以下条件：</block>
-  <block id="a50be7a834c95319089495cab34dcc3a" category="inline-link-macro">列出受管应用程序</block>
-  <block id="d2feaf779ccf544c3e1d8746f06f8b6c" category="list-text">拥有快照的受管应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
   <block id="020ac174aad4268a50eed3705447b327" category="inline-link-macro">列出快照</block>
   <block id="8228d21d4972f0a8ed1a2129680b70b2" category="list-text">要删除的快照的 ID 。如果需要，您可以使用此工作流 <block ref="ec07e92ba8186e37075c19b8ee786603" category="inline-link-macro-rx"></block> 以查找快照。</block>
   <block id="860aa2c08f5183e7dd18366105498ef2" category="section-title">1. 删除快照</block>
   <block id="0ded27ebd95eb2dcf0ec2ac7f61b926c" category="paragraph">执行以下 REST API 调用。</block>
   <block id="3ded167f4ad4afb85c6ace5862e27ba0" category="cell">HTTP 方法</block>
   <block id="32f68a60cef40faedbc6af20298c1a1e" category="cell">删除</block>
-  <block id="c673742e49a29363ba7d2d773a12101f" category="cell">/accounts-｛ account_id ｝ /K8s/v1/managedApps/ ｛ managedApp_id ｝ /appSnaps/ ｛ appsnap_id ｝</block>
   <block id="c24b0224d3b54e6b4e908019f2447f30" category="section-title">其他输入参数</block>
   <block id="8ad1007adda12ebaacc83f24d677e5e6" category="paragraph">除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。</block>
   <block id="83f499a540b1323009c200d6f8cc9396" category="cell">参数</block>
   <block id="b651efdb98a5d6bd2b3935d0c3f4a5e2" category="cell">Required</block>
-  <block id="f5cd5a00af0952558b2b1674f802d0f8" category="cell">受管应用程序 ID</block>
   <block id="93cba07454f06a4a960172bbd6e2a435" category="cell">是的。</block>
   <block id="151b82a6507e2eebe2f879130b46a783" category="cell">标识拥有快照的受管应用程序。</block>
   <block id="79e04f95eeac07344faa5b56bab83760" category="cell">Snapshot ID</block>
@@ -136,20 +128,13 @@
   <block id="c60d917b462a557b73224bd3194b4cf6" category="section-title">curl 示例：删除应用程序的单个快照</block>
   <block id="f33f60a3b5c95e8659ec5a992f0f055c" category="doc">取消管理应用程序</block>
   <block id="2b194b9170143eb845c618e13f34e5fb" category="paragraph">您可以删除不再需要的受管应用程序。删除受管应用程序也会删除关联的计划。</block>
-  <block id="3e1039dbfbb34cea04f6e9ad984e888d" category="paragraph">您必须具有要取消管理的受管应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
   <block id="1fa9ca676a71f70d29ff65963febbf34" category="paragraph">删除应用程序时，不会自动删除其备份和快照。如果您不再需要备份和快照，应在删除应用程序之前将其删除。</block>
   <block id="ba058813d4014443679bdc5bad08e6da" category="section-title">1. 非受管应用程序</block>
-  <block id="3901599d0fd96520d6bf312cf8f94bf4" category="cell">/accouns/ ｛ account_id ｝ /K8s/v1/managedApps/ ｛ managedApp_id ｝</block>
-  <block id="659ce686d2a2b1df0facd830a74cdc4a" category="cell">标识要删除的受管应用程序。</block>
   <block id="0be694be5856c81608913372d1359b00" category="section-title">curl 示例：删除受管应用程序</block>
-  <block id="3ae4faabc8d186416cb233eb7c276c1f" category="doc">从备份克隆受管应用程序</block>
-  <block id="bcb874876569db1f62920ea72a96e0ed" category="paragraph">您可以通过从应用程序备份克隆新的托管应用程序来创建该应用程序。</block>
   <block id="f9af5d61179519ce2b27f22348ea2c5b" category="paragraph">请注意以下有关此工作流的信息：</block>
   <block id="6a3f7086385ab02e213a4864a905e1e5" category="list-text">使用应用程序备份</block>
   <block id="8b442400420c3b7121c9e031882bcf48" category="list-text">克隆操作在同一集群中执行</block>
   <block id="e1d39bdee6b9663d35dc3845e9dd04e5" category="admonition">要将应用程序克隆到其他集群，您需要根据环境需要更新 JSON 输入中的 `clusterid` 参数。</block>
-  <block id="537000f9a14aec12548122fc358faea9" category="section-title">选择要克隆的受管应用程序</block>
-  <block id="99155ec73c71b392b5b5511fca5b8697" category="paragraph">执行工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 并选择要克隆的应用程序。用于克隆应用程序的 REST 调用需要多个资源值。</block>
   <block id="a873d81cfc688902e71d08400f93684a" category="section-title">2. 选择要使用的备份</block>
   <block id="8aa0f7001085d2ffdad3efbc0e9de159" category="inline-link-macro">列出备份</block>
   <block id="d40d66b0e6d970d00db3de547260af68" category="paragraph">执行工作流 <block ref="e6b45b76c52a9dd27daf9fa3d915439e" category="inline-link-macro-rx"></block> 并选择要使用的备份。</block>
@@ -171,12 +156,7 @@
   <block id="6ca58aed53ac62d5749597600edbbdff" category="section-title">curl 示例：返回所有应用程序的所有数据</block>
   <block id="68c53a357a1ff35f5aa8ba654aab4362" category="section-title">curl 示例：返回所有应用程序的名称， ID 和状态</block>
   <block id="bff6b273561ec6570215c14bdba13a26" category="section-title">JSON 输出示例</block>
-  <block id="5ad1db1f03ff165972b0c70619a75ba3" category="doc">从备份还原受管应用程序</block>
-  <block id="ce134f7334fe009ec211cc92e1c0b79d" category="paragraph">您可以通过从备份创建新应用程序来还原受管应用程序。</block>
-  <block id="88164f3abe33a2d7cadd994093364280" category="section-title">1. 选择要还原的受管应用程序</block>
   <block id="dac907b900763815cd0dab3692a0ccb9" category="section-title">3. 还原应用程序</block>
-  <block id="04a20f97156c327fa56ba3a250089cba" category="doc">克隆受管应用程序</block>
-  <block id="4ff0a0de39ae6f53c4831148ad61fcef" category="paragraph">您可以通过克隆现有受管应用程序来创建新应用程序。</block>
   <block id="c16473b0d0e0a369510a4772f6a13523" category="list-text">未使用应用程序备份或快照</block>
   <block id="91e9ad87c32b1417c98a1c8a57d14d21" category="section-title">2. 克隆应用程序</block>
   <block id="812ae8a5c2b12f97ec673b1ed61bab86" category="section-title">curl 示例：克隆应用程序</block>
@@ -184,28 +164,16 @@
   <block id="e24800f8fa54848c57ec9b63af6231d3" category="paragraph">有多个工作流可用于调试和支持您的应用程序以及常规 Kubernetes 环境。</block>
   <block id="eadfe8388f5ebf45cdfeff23f0e39899" category="doc">应用程序控制</block>
   <block id="9de4b07ae6319c45521f7ab9180fa62e" category="paragraph">通过这些工作流，您可以控制受管应用程序和非受管应用程序。您可以列出应用程序以及创建和删除受管应用程序。</block>
-  <block id="5a040e0212028f4e1b11cb1ca4c1f6b3" category="paragraph">您可以列出为特定受管应用程序创建的快照。</block>
-  <block id="abd4e0354b71e6e1bbb5728e6b5ef675" category="paragraph">您必须具有要列出其快照的受管应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
   <block id="f09394ee48f57bbe80f0a951776c3439" category="section-title">1. 列出快照</block>
-  <block id="d07095366fb3f7a5563f836aeaace3bf" category="cell">/accouns/ ｛ account_id ｝ /K8s/v1/managedApps/ ｛ managedApp_id ｝ /appSaps</block>
-  <block id="07b981f0108ccf7265702dde8bd01e8e" category="cell">标识拥有列出快照的受管应用程序。</block>
   <block id="e2942a04780e223b215eb8b663cf5353" category="cell">count</block>
   <block id="5aeb23b435f0d586a0493bb8c70b8fc5" category="cell">如果为 `count=true` ，则快照数包含在响应的元数据部分中。</block>
   <block id="f51493699b1a1513a7a2e95212bdc3da" category="section-title">curl 示例：返回应用程序的所有快照</block>
   <block id="a6678bfaa94621c04bacbb0514f6d9d4" category="section-title">curl 示例：返回应用程序和计数的所有快照</block>
-  <block id="3d8174b7a5e7e2c2f19aa676ce494658" category="doc">列出非受管应用程序</block>
-  <block id="563a0b5f6c4efcacd5b8847d1eee9649" category="paragraph">您可以列出当前不受 Astra 管理的应用程序。您可以在选择要管理的应用程序时执行此操作。</block>
-  <block id="e2c473c218d9b4c045f316cd4af94e1c" category="section-title">curl 示例：返回所有应用程序的名称， ID 和 managedState</block>
-  <block id="d12275e5ed9a0bebaad289f16e74c1e3" category="doc">从快照克隆受管应用程序</block>
-  <block id="50e826b69d89371f5df994a8efc1fa9a" category="paragraph">您可以通过从应用程序快照克隆新应用程序来创建该应用程序。</block>
   <block id="38395f100e712c841ca6c8a613f86abc" category="list-text">使用应用程序快照</block>
   <block id="da88fe405a2037d8a9476bbfc8f6cf7f" category="section-title">2. 选择要使用的快照</block>
   <block id="176ae10d2b65c2e741fef4d23fc66fe5" category="paragraph">执行工作流 <block ref="ec07e92ba8186e37075c19b8ee786603" category="inline-link-macro-rx"></block> 并选择要使用的快照。</block>
   <block id="601c2032f11a3d99c3889b1faf260874" category="section-title">curl 示例：从快照克隆应用程序</block>
   <block id="44d23b5c3f8571e7bb4294d0b82f7497" category="doc">管理应用程序</block>
-  <block id="d3475627a9245c69f16195dc1b7e76c6" category="paragraph">您可以基于 Astra 已知的应用程序创建托管应用程序。管理应用程序时，您可以通过定期备份和快照来对其进行保护。</block>
-  <block id="e998c93727ba4b42fb21ab7eb5b2a36d" category="paragraph">您必须具有要管理的已发现应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="ad26acc8f05568b58fadc6a01e36de64" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
-  <block id="146e5b45541ec01c95f3c39d17e6cb56" category="section-title">1. 管理应用程序</block>
   <block id="f211caf53405c1c7a730894c76845b78" category="cell">提供确定要管理的应用程序所需的参数。请参见以下示例。</block>
   <block id="6a476923d36b27fb8d2ff2da1e18c322" category="section-title">curl 示例：管理应用程序</block>
   <block id="9c041cca5c70493333f8bd4912e37e70" category="doc">应用程序保护</block>
@@ -217,9 +185,6 @@
   <block id="0aaaa617845874504df6c76a750325da" category="cell">也可以筛选要在响应中返回的通知。</block>
   <block id="f921030431759c9c846d8a3fd7d84ca2" category="section-title">curl 示例：返回所有通知</block>
   <block id="943e5258980784703a84c31110cf2eec" category="section-title">curl 示例：返回严重性为警告的通知的问题描述</block>
-  <block id="14ead4573d59a3fd24fd074f4279a1ce" category="doc">为受管应用程序创建快照</block>
-  <block id="e3187f556451d0afc040d8d2882a9cf8" category="paragraph">您可以为特定受管应用程序创建快照。</block>
-  <block id="aabc01843e9612eddd27f0ccdd01a0cf" category="paragraph">您必须具有要为其创建快照的受管应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
   <block id="18c7420f03313eb33044afb6b943cb43" category="section-title">1. 创建快照</block>
   <block id="ca88d296d98d8a63f103fe3b0b63d819" category="cell">标识要创建快照的受管应用程序。</block>
   <block id="97edc5e90d2062e191a3eae330d2afa0" category="cell">提供快照的参数。请参见以下示例。</block>
@@ -241,39 +206,23 @@
   <block id="bc75de9e075d82274edd026fd05fd01f" category="paragraph">以下是还原应用程序时需要考虑的几个事项。</block>
   <block id="2d49337d583eac8056d564e348f43744" category="list-text">还原应用程序与克隆操作非常相似。</block>
   <block id="af5cd1844721ca591969375d08152b0e" category="list-text">还原应用程序时，您必须提供备份或快照。</block>
-  <block id="3e1ffa4f0f56cc64320d9813031ed226" category="doc">为受管应用程序创建备份</block>
-  <block id="dd4ad95efd478c84cdb33460b84c4a9e" category="paragraph">您可以为特定受管应用程序创建备份。您可以使用备份还原或克隆应用程序。</block>
-  <block id="98f7c990eb05a7e5b5e449e8808c1ba0" category="paragraph">您必须具有要创建备份的受管应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
   <block id="15d4d7ada9bf77d46154e409388ea743" category="section-title">1. 创建备份</block>
-  <block id="de8116e7a1571e52baf8e636aca38f81" category="cell">/accouns/ ｛ account_id ｝ /K8s/v1/managedApps/ ｛ managedApp_id ｝ /appBackups</block>
-  <block id="0cb7b7e0036252a8d2ac816a0e9ce6dc" category="cell">标识要创建备份的受管应用程序。</block>
   <block id="6f3183b7efdec0553f8a26ad8a42bd12" category="cell">提供备份的参数。请参见以下示例。</block>
   <block id="eaa80d521faeae22624528a6ab4291dc" category="section-title">curl 示例：为应用程序创建备份</block>
-  <block id="73dc919e6ecbb6cad3d9d9ba9392aee2" category="paragraph">您可以列出为特定受管应用程序创建的备份。</block>
-  <block id="85c7807d3ea7259393890e092ea20eea" category="paragraph">您必须具有要列出备份的受管应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
   <block id="4cd1e59d794feeee43e7cd32844ec8ec" category="section-title">1. 列出备份</block>
   <block id="0254dd3f84d764f594f8490729e7c196" category="cell">标识拥有列出备份的受管应用程序。</block>
   <block id="53c07d76a2f4ca060d727cd96fd24eeb" category="section-title">curl 示例：返回应用程序的所有备份</block>
-  <block id="eacfebc40e4c5274fcf9a4f5c191753f" category="doc">获取托管应用程序</block>
-  <block id="e3045f9e9da6edc5411efe234eb8d7a0" category="paragraph">您可以检索描述单个受管应用程序的所有资源变量。</block>
-  <block id="4c9466a5ebb832e841259b6ff45eb3f3" category="paragraph">您必须具有要检索的受管应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
   <block id="d822b85cd89777748e1bd6b0a8fd0a46" category="section-title">1. 获取应用程序</block>
-  <block id="aeb049f425f4d71edb3a5580d5a2155d" category="cell">要检索的受管应用程序的 ID 值。</block>
   <block id="036e9ec4ee01123ffae8afd3dab3ff9f" category="section-title">curl 示例：返回应用程序的所有数据</block>
   <block id="cb2cecbd9776fc0c17c7929541fe9404" category="doc">删除备份</block>
-  <block id="245b889f170a1caa3c38b6933fe09e9f" category="paragraph">您可以删除与受管应用程序关联的备份。</block>
-  <block id="b17b8f6ccac7f28b3e6293a447fd1fb1" category="list-text">拥有备份的受管应用程序的 ID 。如果需要，您可以使用此工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
   <block id="9332cf683c594f797fdb3d0a19819c01" category="list-text">要删除的备份的 ID 。如果需要，您可以使用此工作流 <block ref="e6b45b76c52a9dd27daf9fa3d915439e" category="inline-link-macro-rx"></block> 以查找快照。</block>
   <block id="9764b72f7f4c0e5ee3e7e8350c8ccd00" category="section-title">1. 删除备份</block>
-  <block id="5ceeae484264e7fdea333c9b933670e6" category="cell">/accouns/ ｛ account_id ｝ /K8s/v1/managedApps/ ｛ managedApp_id ｝ /appBackups/ ｛ appBackup_id ｝</block>
   <block id="bd5f8c5e1797c9b7450b0fcd4de20d28" category="cell">标识拥有备份的受管应用程序。</block>
   <block id="deed7df33f535761651277671dff8ecd" category="cell">备份 ID</block>
   <block id="31bed42d29869473ab52c27108626330" category="cell">标识要删除的备份。</block>
   <block id="97b9689d8a4aef28c756533c3e3bca1d" category="section-title">curl 示例：删除应用程序的单个备份</block>
   <block id="6a94b76b128da4767ce7885cb84ec799" category="doc">删除失败的应用程序</block>
   <block id="90c78af3e4fa9a4298b9bc66f86d06a6" category="paragraph">如果某个受管应用程序的备份或快照处于故障状态，您可能无法将其删除。在这种情况下，您可以使用下面所述的工作流手动删除此应用程序。</block>
-  <block id="5a58a2434bb85bcdb2f88f89a54856e8" category="section-title">1. 选择要删除的受管应用程序</block>
-  <block id="1718c6712c2030f412e9494b4d22c89f" category="paragraph">执行工作流 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 并选择要删除的应用程序。</block>
   <block id="c776475c27b1d7a554d7f110559479d9" category="section-title">2. 列出应用程序的现有备份</block>
   <block id="03697ae46f1d2d1002ffcb19e1ebbd04" category="paragraph">执行工作流 <block ref="e6b45b76c52a9dd27daf9fa3d915439e" category="inline-link-macro-rx"></block>。</block>
   <block id="dcefcc8de5a7541a95d041f4943c300d" category="section-title">3. 删除所有备份</block>
@@ -433,7 +382,6 @@
   <block id="bd4c8bbdccbcb7826a3bc4ae421c0604" category="section-title">JSON 格式化</block>
   <block id="8538dfe988aff949d5dd74e2d6c12949" category="paragraph">用于访问资源的外部 REST 端点映射到由 Astra 服务在内部维护的一致对象模型。对象模型采用实体关系（ ential-Relationship ， ER ）建模设计，有助于明确定义 API 操作和响应。</block>
   <block id="bdc2516aa5546e7df819a07cd9385485" category="paragraph">Astra Web 用户界面的设计与 REST API 一致，因此两个访问路径和用户体验之间保持一致。</block>
-  <block id="e61ad2d01a2692e9ed29c90c0c413101" category="paragraph">您可以使用以下脚本列出 Astra 帐户的受管应用程序。</block>
   <block id="365c8dec8255a8a164436c71a2611920" category="doc">使用 Python</block>
   <block id="0998ed5beee28345ae02fc586e2414f2" category="section-title">准备环境</block>
   <block id="eacdf05a2e0f975530592f3afa7c5858" category="paragraph">下面介绍了运行 Python 脚本的基本配置要求。</block>
@@ -468,8 +416,6 @@
   <block id="a7f5f35426b927411fc9231b56382173" category="sidebar">Python</block>
   <block id="36b64aad8a26246fe3ad4116a2b6f289" category="sidebar">诊断</block>
   <block id="824ee32982b0cc1ac1aca8447c9cb3cf" category="sidebar">应用程序控制</block>
-  <block id="0990e289177ad252ad62d3e723123f2d" category="sidebar">列出非受管应用程序</block>
-  <block id="6e401175b804a895ba134912540780f9" category="sidebar">列出受管应用程序</block>
   <block id="373370c9330843dbc9a492b75e68e396" category="sidebar">应用程序保护</block>
   <block id="f787d303cdb9d100881b69dd4d492588" category="sidebar">列出快照</block>
   <block id="f7bcabdf07e891b3508301fa92282eea" category="sidebar">列出备份</block>
@@ -513,7 +459,6 @@
   <block id="f63ec399edbf672707e34b98cb969ccd" category="list-text">应用程序资产资源表示管理 Astra 应用程序所需的内部状态信息集合。</block>
   <block id="e92acef3d98e8a64572a05792290f27b" category="list-text">应用程序备份资源表示受管应用程序的备份。</block>
   <block id="73150caf4eee48175bcbbee6e9bdf201" category="list-text">应用程序快照资源表示受管应用程序的快照。</block>
-  <block id="2991d7bd84b53963293c4248a415922e" category="list-text">托管应用程序资源代表由 Astra 管理的 Kubernetes 应用程序。</block>
   <block id="91fd88ee3861a8eb1aa5fb75a5577d89" category="list-text">计划资源表示在数据保护策略中为受管应用程序计划的数据保护操作。</block>
   <block id="2570c360375a393547ef6c0be287059b" category="paragraph">通过拓扑资源端点可以访问非受管应用程序和存储资源。</block>
   <block id="e43da2c91ef5f1040a302b6b10917893" category="list-text">应用程序资源表示所有 Kubernetes 应用程序，包括那些不受 Astra 管理的应用程序。</block>
@@ -558,7 +503,6 @@
   <block id="3037de0d7a975b284e2a80d0ff32a9cc" category="section-title">基础架构工作流</block>
   <block id="23f646b4da04b69e64a7e464ec005504" category="paragraph">这些工作流用于处理 Astra 基础架构，包括凭据，存储分段和存储后端。Astra 控制中心需要使用这些控制器，但在大多数情况下，也可以与 Astra 控制服务一起使用。这些工作流侧重于建立和维护 Astra 受管集群所需的任务。</block>
   <block id="a0aa3c13c7e155cdac2e684ed97bd329" category="section-title">管理工作流</block>
-  <block id="6ea966a7aff682cea4e20915ee526ea8" category="paragraph">您可以在拥有受管集群后使用这些工作流。这些工作流侧重于应用程序保护和支持操作，例如备份，还原和克隆受管应用程序。</block>
   <block id="9b355d9a0df5a5e777f4cd881f971a4e" category="paragraph">本地工作站必须提供 Curl 实用程序。您还必须具有 API 令牌和关联的帐户标识符。请参见 <block ref="67af9ad396391bc7ade4b472f0b4f030" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="8f6291e033ff30c19e8b03e19a26f0f3" category="admonition">NetApp 可以随时扩展和改进这些工作流，因此您应定期查看这些工作流。</block>
   <block id="6fd2337d24b1882caa5014a35282404b" category="section-title">一般准备</block>
@@ -581,7 +525,6 @@
   <block id="ef22ff17624b3faeed227ce5c717eb5f" category="inline-link">Astra Control Service 文档</block>
   <block id="49d7482cad2dac48b0f0e77473d3a249" category="doc">列出受管集群</block>
   <block id="1b382a88a3817dcba16a81ec9e5cf1c5" category="paragraph">您可以列出当前由 Astra 管理的 Kubernetes 集群。</block>
-  <block id="c58119ccc549e36f20a93873ead75956" category="section-title">1. 列出集群</block>
   <block id="6ff447fbf69dd4070e63e99da1dde7b0" category="section-title">curl 示例：返回所有集群的所有数据</block>
   <block id="99a4fd4c49fccb599a3b4d33e4b37909" category="doc">列出存储后端</block>
   <block id="c3a6f95958616037be5bc621e7f71032" category="paragraph">您可以列出可用的存储后端。</block>
@@ -699,17 +642,6 @@
   <block id="832210201d55f5c764a32c055a00b726" category="inline-link">Astra Control Automation 21.08 文档</block>
   <block id="025fa2688359a439d7fa215fbbbaf287" category="list-text"><block ref="025fa2688359a439d7fa215fbbbaf287" category="inline-link-rx"></block></block>
   <block id="1a0ca7f0a5aea880c24d544b4655d6ed" category="doc">Astra Control Automation 文档</block>
-  <block id="f13263898a2cd18c9ee7843dc1459aba" category="admonition">默认情况下，这些工作流中使用的 REST 端点将返回所有 Astra 应用程序。您可以在 API 调用中使用 `filter` query 参数，仅请求返回非受管应用程序。或者，您也可以省略 filter 参数以返回所有应用程序，然后检查输出中的 `managedState` 字段以确定哪些应用程序处于 `非受管` 状态。</block>
-  <block id="b6a35c94f854cd740168a0764638d0df" category="section-title">仅列出受管理状态等于非受管状态的应用程序</block>
-  <block id="bc9eb7d967c0a164260a3a3362df3173" category="paragraph">此工作流使用 `filter` query 参数仅返回非受管应用程序。</block>
-  <block id="b778c76d47db062e719ea97fffdb251e" category="section-title">1. 列出非受管应用程序</block>
-  <block id="225ff177d2b3ca52f452571419d65f70" category="cell">使用筛选器指定应返回哪些应用程序。</block>
-  <block id="b27c8e443cc3570cdff9e631ba1485fa" category="section-title">curl 示例：返回非受管应用程序的名称， ID 和管理状态</block>
-  <block id="3a340585a0931b07ac9b6627082689c8" category="section-title">列出所有应用程序并选择非受管应用程序</block>
-  <block id="f370302c742b824210b358edece7e15d" category="paragraph">此工作流将返回所有应用程序。您必须检查输出以确定哪些不受管。</block>
-  <block id="0f17193d6bf995f16caf5e86bc3ded83" category="section-title">1. 列出所有应用程序</block>
-  <block id="3640a41cdbb2456f459491fd8672e6cb" category="section-title">2. 选择非受管应用程序</block>
-  <block id="a2fee71d053291b11da659df7d22ce18" category="paragraph">查看 API 调用的输出，然后手动选择 `managedState` 等于 `非受管` 的应用程序。</block>
   <block id="08d7f360c94a906d3639173599184943" category="paragraph">执行以下 REST API 调用。您必须提供备份（如下所示）或快照的 ID 。</block>
   <block id="a477f086784d869d73c5ae084b145ca8" category="section-title">curl 示例：从备份原位还原应用程序</block>
   <block id="98904826ae5cef8716020180473276c8" category="admonition">用于访问 Astra Control 资源的路径和完整 URL 的格式基于多个值。请参见 <block ref="d30352e41f8ff3b0c022e188e6d650e9" category="inline-link-macro-rx"></block> 有关详细信息 ...另请参见 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关使用 Astra 资源和端点的更多详细信息。</block>
@@ -837,10 +769,7 @@
   <block id="e764fe6b8f8825a307a87cedbef45678" category="cell">22.04</block>
   <block id="c600ce546bf9ac67939481d537d10403" category="cell">AppMirror</block>
   <block id="2ea0c70486ac42aa9093e842d4d23473" category="cell">AppMirror资源表示用于管理应用程序镜像关系的AppMirror资源。</block>
-  <block id="8421de10d5dbbb7e150fb9700fe89879" category="cell">/account/｛account_id｝/k8s/v1/managedApps</block>
   <block id="66faf58201d5b76b037701451b9a3234" category="cell">/account/｛account_id｝/core/v1/notifications</block>
-  <block id="cf0a08323ecbf4b810438acdd526b436" category="cell">/account/｛account_id｝/k8s/v1/managedApps/｛app_id｝</block>
-  <block id="c07be556746490be1229e10b74e3eb29" category="cell">/account/｛account_id｝/topology/v1/apps</block>
   <block id="9fb6a7e4842bd1acf9b57b499b8036b0" category="cell">/account/｛account_id｝/topology/v1/bass桶</block>
   <block id="9f836651cdc687b80d11b030386b39cc" category="doc">禁用并重置LDAP</block>
   <block id="29927b373bf91a30324f8b9244efff87" category="paragraph">您可以根据需要为Astra控制中心部署执行两项可选的相关管理任务。您可以全局禁用LDAP身份验证并重置LDAP配置。</block>
@@ -1017,4 +946,96 @@
   <block id="bec9f16b8e469e038cb36941a7f49a27" category="summary">您可以使用这些工作流创建和维护用于Astra Control Center部署的基础架构。在许多情况下、这些工作流也可以与Astra Control Service结合使用。</block>
   <block id="efc48892bfa2d48bf7b7099da5e8b1cb" category="summary">您可以选择将Astra控制中心与轻型目录访问协议(Lightweight Directory Access Protocol、LDAP)服务器集成、以便为选定的Astra用户执行身份验证。</block>
   <block id="29d0525c4055c4b47d6c1f6b4681a4d4" category="summary">您可以在管理Astra受管集群中的应用程序时使用这些工作流。</block>
+  <block id="5b11110b9a97c66915e86bcba53ee809" category="summary">您可以列出特定Astra帐户定义和可用的云。</block>
+  <block id="aef02d026fec2eb688571bfa2422be3a" category="doc">列出云</block>
+  <block id="1b6ac21e78d44a219b6937e90879165d" category="section-title">1.列出云</block>
+  <block id="095599abd98771dd2c043675b15cd910" category="paragraph">执行以下REST API调用以列出云。</block>
+  <block id="d5141cbc6eb85bf48e94e7d96fbd6a95" category="cell">/account/｛account_id｝/topology/v1/Clouds</block>
+  <block id="e660247893e67f2eed38a94a3b63cd22" category="section-title">curl示例：返回所有云的所有数据</block>
+  <block id="69e44482660be2fd1013a46b8f354ef2" category="doc">列出分段</block>
+  <block id="4609424b2fcb4eca19af08e562b2f818" category="paragraph">执行以下REST API调用以列出分段。</block>
+  <block id="9b419681cf780fc8739ee91b14338a6d" category="summary">您可以列出可用的存储类。</block>
+  <block id="a2e45d2c4126abee2b89f161a0a3a50f" category="doc">列出存储类</block>
+  <block id="daaec12836753c1aad81b32a5a058476" category="section-title">1.选择云</block>
+  <block id="0d3339545a3c8c350c171199c6549779" category="paragraph">执行工作流 <block ref="c4922000cf4edc9c6c02533eba85b458" category="inline-link-macro-rx"></block> 并选择要使用的云。</block>
+  <block id="cb1d8fe3c0fa41d5a40e80cca7f91ff2" category="section-title">2.选择集群</block>
+  <block id="1a26d4a9628f05c630331939becee5ab" category="inline-link-macro">列出集群</block>
+  <block id="4c52978a3e6a86d17e5ea3080d73c1d4" category="paragraph">执行工作流 <block ref="23d58ac86c4531c319d79804ab05ca2c" category="inline-link-macro-rx"></block> 并选择集群。</block>
+  <block id="0555a951c447a0cbe3807de815a06d5d" category="section-title">3.列出特定集群的存储类</block>
+  <block id="646ae38688e5af41b737db05fd5a5cdb" category="paragraph">执行以下REST API调用以列出特定集群和云的存储类。</block>
+  <block id="bed512ae2e247eeb98fdd4cd3feb1f36" category="cell">/account/｛account_id｝/topology/v1/clones/&lt;clune_ID&gt;/clusters/&lt;cluster_ID&gt;/storageClasses</block>
+  <block id="55d1071fe1b5a920cb319a5cdd834452" category="section-title">curl示例：返回所有存储类的所有数据</block>
+  <block id="a70539afac49ca03ebbf1219df791a81" category="paragraph">您可以列出特定云中的可用集群。</block>
+  <block id="6e7a5e444e17b81da2d35e5e7b5fb7ea" category="paragraph">执行工作流 <block ref="c4922000cf4edc9c6c02533eba85b458" category="inline-link-macro-rx"></block> 并选择包含集群的云。</block>
+  <block id="4a8c29c133faeda5a63e72796ed312c8" category="section-title">2.列出集群</block>
+  <block id="279e904c662f9babe50ce81e0df24ea5" category="paragraph">执行以下REST API调用以列出特定云中的集群。</block>
+  <block id="ea62700eaf9c7c85e33b80518f121429" category="cell">/account/｛account_id｝/topology/v1/cloud /｛clune_id｝/集群</block>
+  <block id="fa52d266bf5c95bd5d51a11ed63c7fa3" category="section-title">1.列出受管集群</block>
+  <block id="8aaca9da7a2057e6c3482b19683ee3b0" category="cell">&lt;APP_ID&gt;</block>
+  <block id="f5a4b32e77235d71cac07525901e432b" category="cell">用于标识API调用的应用程序的UUIDv4值。</block>
+  <block id="ead63516b6f8d40a5195059120a34741" category="paragraph">您可以在拥有受管集群后使用这些工作流。这些工作流侧重于应用程序保护和支持操作、例如备份、还原和克隆应用程序。</block>
+  <block id="3559bd2aaec7a375c246be9bad63a176" category="summary">您可以为特定应用程序创建备份、然后使用此备份还原或克隆此应用程序。</block>
+  <block id="80681c9412a27f13b376ee7ffc18f647" category="doc">为应用程序创建备份</block>
+  <block id="7d45849f0acada4f0f40e1349c847305" category="inline-link-macro">列出应用程序</block>
+  <block id="e02fd4c0a67641762561c661c332b72d" category="paragraph">您必须具有要备份的应用程序的ID。如果需要，您可以使用此工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
+  <block id="96d15410fa829d04096983645e60475b" category="cell">/accouns/｛account_id｝/k8s/v1/apps/｛app_id｝/appBackups</block>
+  <block id="c9a1712ca7c64da73ff9ce7bc4f48bea" category="cell">应用程序ID</block>
+  <block id="8eb729367d3278cfd6c5aa5310d1f61c" category="cell">标识要创建备份的应用程序。</block>
+  <block id="ada65121a72989ba6a7ceafb787c2971" category="summary">您可以通过克隆现有应用程序来创建新应用程序。</block>
+  <block id="c92ab9403e09db69311aeb9f72e2e480" category="list-text">新应用程序将放置在其他命名空间中</block>
+  <block id="1db96426d6f4f867edf3cc0ae9e35947" category="section-title">1.选择要克隆的应用程序</block>
+  <block id="b46f6842bf882cb490d122382f7a98d5" category="paragraph">执行工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 并选择要克隆的应用程序。用于克隆应用程序的 REST 调用需要多个资源值。</block>
+  <block id="af2926b139e31d88056f28937a9c49b6" category="paragraph">执行以下REST API调用以克隆此应用程序。</block>
+  <block id="567a9af273a25b92860b783e7f5a7524" category="cell">/account/｛account_id｝/k8s/v2/apps</block>
+  <block id="7bf69d8a687703afd9b5af54243f143d" category="summary">您可以通过从备份克隆新应用程序来创建该应用程序。</block>
+  <block id="f3e3d6adafd239930134d426b02920c1" category="cell">/account/｛account_id｝/k8s/v2/qpps</block>
+  <block id="ecf41bcdc089c3b619f5975173077430" category="summary">您可以列出为特定应用程序创建的备份。</block>
+  <block id="dbd2251516ab8d7e1775469c5c1508a3" category="paragraph">您必须具有要列出备份的应用程序的ID。如果需要，您可以使用此工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
+  <block id="8b7796198eef86f78d17188652bd8260" category="section-title">1.选择要删除的应用程序</block>
+  <block id="82029d5fee8f7191d3a021c9db8b43ac" category="paragraph">执行工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 并选择要删除的应用程序。</block>
+  <block id="5678454487dc87ea3b9a2601e9ecd8e3" category="summary">您可以删除与应用程序关联的快照。</block>
+  <block id="057648776a4afb375be6db76fd760748" category="list-text">拥有快照的应用程序的ID。如果需要，您可以使用此工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
+  <block id="c25f938f3e5ab183a0718fbc32b60cce" category="cell">/accouns/｛account_id｝/K8s/v1/apps/｛app_id｝/appSnaps/｛appsnap_id｝</block>
+  <block id="a9f7d2aed593551dc011220c90a52be3" category="paragraph">您可以基于Astra已知的应用程序在特定命名空间中创建托管应用程序。在将应用程序管理或定义到Astra后、您可以通过创建备份和快照来对其进行保护。</block>
+  <block id="d801ba89b540c5da0e4f732a81e855fd" category="section-title">1.选择命名空间</block>
+  <block id="ef1d4c0913b02ff6423ee4d1161fea0b" category="inline-link-macro">列出命名空间</block>
+  <block id="0a94b02b2f35acb72af0ca2e31006abb" category="paragraph">执行工作流 <block ref="d14574597a65756c248d691b26627131" category="inline-link-macro-rx"></block> 并选择命名空间。</block>
+  <block id="0c686bb338de3ff0d9a5c7aff0164f66" category="section-title">3.管理应用程序</block>
+  <block id="3c7008ad6fd78ff999655de722126630" category="paragraph">执行以下REST API调用以管理此应用程序。</block>
+  <block id="a32aff1568b14bb39f1c15ef5e32eb54" category="paragraph">您必须具有要取消管理的应用程序的ID。如果需要，您可以使用此工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
+  <block id="cc627e860ccc11393d4a5fb9a37cf9a7" category="paragraph">执行以下REST API调用以删除此应用程序。</block>
+  <block id="f6ae66a627b9c3047f8f88beffc23cd7" category="cell">/accouns/｛account_id｝/k8s/v2/apps/｛app_id｝</block>
+  <block id="58e5b159105a6ed936549bb5a1695ea7" category="cell">标识要删除的应用程序。</block>
+  <block id="596763b84eac1a557d6c2b19a508c915" category="summary">您可以删除与应用程序关联的备份。</block>
+  <block id="9a7affff9968bb03650e50fa108c3fa7" category="list-text">拥有备份的应用程序的ID。如果需要，您可以使用此工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
+  <block id="907cc0ef4298a38b7fa096493c7684a0" category="cell">/accouns/｛account_id｝/K8s/v1/apps/｛app_id｝/appBackups/｛appBackup_id｝</block>
+  <block id="1003e23b805c899981a7d5126ccc0378" category="summary">您可以列出为特定应用程序创建的快照。</block>
+  <block id="9abace8c90645d3ee8eec992f42d897a" category="paragraph">您必须具有要列出其快照的应用程序的ID。如果需要，您可以使用此工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
+  <block id="02b00e5480497e1586ce1bf62bf8184a" category="paragraph">执行以下REST API调用以列出快照。</block>
+  <block id="250f359ba7b762da3435baba160a6f1b" category="cell">/accouns/｛account_id｝/k8s/v1/apps/｛app_id｝/appSaps</block>
+  <block id="f38ae0e099fa484b915fa7bab67ac4b2" category="cell">标识拥有列出快照的应用程序。</block>
+  <block id="0388f8ab481ed6c7aef94777258ef378" category="summary">您可以检索描述单个应用程序的所有资源变量。</block>
+  <block id="61b98994206e2a99e823ca136bdf24a1" category="doc">获取应用程序</block>
+  <block id="c2e04773cf7cf8f91a4a9a351b03c32f" category="paragraph">您必须具有要检索的应用程序的ID。如果需要，您可以使用此工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
+  <block id="6bb9953a8e27258bd16ce65f51b81000" category="cell">要检索的应用程序的ID值。</block>
+  <block id="bfdba4e9998c294b1a4016914698c099" category="summary">您可以通过从备份创建新应用程序来还原应用程序。</block>
+  <block id="14e236ddabe391b8a0496211807ab78b" category="section-title">1.选择要还原的应用程序</block>
+  <block id="7a217d2f25d9076086e8f01a3a0e198d" category="paragraph">执行工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 并选择要克隆的应用程序。用于还原应用程序的REST调用需要多个资源值。</block>
+  <block id="46690c7c33008cbcef94d31765deede2" category="cell">/account/｛account_id｝/k8s/v2/apps/｛app_id｝</block>
+  <block id="55c34d696f9301dcae31350ec87093ac" category="summary">您可以通过从快照克隆新应用程序来创建该应用程序。</block>
+  <block id="29fd28138191fbfa1b58ba0623d40105" category="summary">您可以为特定应用程序创建快照。</block>
+  <block id="be48e6237dab1df212834256a63ceb44" category="doc">为应用程序创建快照</block>
+  <block id="e32d1c8a20aafa5c39c1d3b2c3875f36" category="paragraph">您必须具有要为其创建快照的应用程序的ID。如果需要，您可以使用此工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
+  <block id="c9ed41c2c3fbdd3ab2809e8a19fa57ee" category="summary">您可以列出可用的命名空间。</block>
+  <block id="2a983bbf122e057a73bf1870cf2ea2db" category="section-title">1.列出命名空间</block>
+  <block id="c42968dfccb26ee2ef5912aaf9ee50ed" category="paragraph">执行以下REST API调用以列出命名空间。</block>
+  <block id="11ccdd095a2f5d49045fb5bc39eaae3e" category="cell">/account/｛account_id｝/topology/v1/namespaces</block>
+  <block id="55b85a82f8838ea89842d9ebe5cbe0d6" category="section-title">curl示例：返回所有命名空间的所有数据</block>
+  <block id="f06023f42f86a62fda5cde9e1ca56143" category="section-title">curl示例：返回所有命名空间的名称、状态和集群ID</block>
+  <block id="a5f871c981a398cb87374a1ff883bcca" category="summary">您可以使用以下脚本列出Astra帐户的应用程序。</block>
+  <block id="c7a97245522ed1fb42a97f5e4d3c60b7" category="sidebar">列出集群</block>
+  <block id="4a8f72b777dc9735afaebac72822c77e" category="sidebar">云</block>
+  <block id="b99e07f4bea810f88b69ecfe1784ab28" category="sidebar">列出云</block>
+  <block id="4d3e9b74a79b7af51564aa58491a951e" category="sidebar">列出应用程序</block>
+  <block id="76427b3f214d8ae919f1432a89eefd65" category="sidebar">列出命名空间</block>
 </blocks>

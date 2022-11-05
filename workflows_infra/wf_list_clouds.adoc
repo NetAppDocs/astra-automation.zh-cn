@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: workflows_infra/wf_list_clouds.html 
+keywords:  
+summary: 您可以列出特定Astra帐户定义和可用的云。 
+---
+= 列出云
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以列出特定Astra帐户定义和可用的云。
+
+
+
+=== 1.列出云
+
+执行以下REST API调用以列出云。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 获取 | /account/｛account_id｝/topology/v1/Clouds 
+|===
+
+
+===== curl示例：返回所有云的所有数据
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/clouds' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----

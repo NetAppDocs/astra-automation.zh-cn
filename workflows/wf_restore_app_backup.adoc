@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: workflows/wf_restore_app_backup.html 
 keywords:  
-summary:  
+summary: 您可以通过从备份创建新应用程序来还原应用程序。 
 ---
-= 从备份还原受管应用程序
+= 从备份还原应用程序
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary:
 
 
 [role="lead"]
-您可以通过从备份创建新应用程序来还原受管应用程序。
+您可以通过从备份创建新应用程序来还原应用程序。
 
 
 
-=== 1. 选择要还原的受管应用程序
+=== 1.选择要还原的应用程序
 
-执行工作流 link:wf_list_man_apps.html["列出受管应用程序"] 并选择要克隆的应用程序。用于克隆应用程序的 REST 调用需要多个资源值。
+执行工作流 link:wf_list_man_apps.html["列出应用程序"] 并选择要克隆的应用程序。用于还原应用程序的REST调用需要多个资源值。
 
 
 
@@ -39,7 +39,7 @@ summary:
 | HTTP 方法 | 路径 
 
 
-| PUT | /account/｛account_id｝/k8s/v1/managedApps/｛app_id｝ 
+| PUT | /account/｛account_id｝/k8s/v2/apps/｛app_id｝ 
 |===
 
 
@@ -61,8 +61,8 @@ summary:
 [source, json]
 ----
 {
-  "type": "application/astra-managedApp",
-  "version": "1.2",
+  "type": "application/astra-app",
+  "version": "2.0",
   "backupID": "e24515bd-a28e-4b28-b832-f3c74dbf32fb"
 }
 ----
@@ -72,5 +72,5 @@ summary:
 
 [source, curl]
 ----
-curl --location -i --request PUT 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<APP_ID>' --header 'Content-Type: application/astra-managedApp+json' --header '*/*' --header 'ForceUpdate: true' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput
+curl --location -i --request PUT 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps/<APP_ID>' --header 'Content-Type: application/astra-app+json' --header '*/*' --header 'ForceUpdate: true' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
 ----

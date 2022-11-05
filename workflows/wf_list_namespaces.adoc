@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_list_namespaces.html 
+keywords:  
+summary: 您可以列出可用的命名空间。 
+---
+= 列出命名空间
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以列出可用的命名空间。
+
+
+
+=== 1.列出命名空间
+
+执行以下REST API调用以列出命名空间。
+
+[cols="1,6"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 获取 | /account/｛account_id｝/topology/v1/namespaces 
+|===
+
+
+===== curl示例：返回所有命名空间的所有数据
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/namespaces' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== curl示例：返回所有命名空间的名称、状态和集群ID
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/namespaces?include=name,namespaceState,clusterID' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== JSON 输出示例
+
+[source, json]
+----
+{
+    "items": [
+        [
+            "default",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ],
+        [
+            "kube-node-lease",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ],
+        [
+            "kube-public",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ],
+        [
+            "kube-system",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ],
+        [
+            "mysql",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ],
+        [
+            "mysql-clone1",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ],
+        [
+            "netapp-acc-operator",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ],
+        [
+            "openshift",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ],
+        [
+            "trident",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ]
+    ],
+    "metadata": {}
+}
+----

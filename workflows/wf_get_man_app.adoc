@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: workflows/wf_get_man_app.html 
 keywords:  
-summary:  
+summary: 您可以检索描述单个应用程序的所有资源变量。 
 ---
-= 获取托管应用程序
+= 获取应用程序
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary:
 
 
 [role="lead"]
-您可以检索描述单个受管应用程序的所有资源变量。
+您可以检索描述单个应用程序的所有资源变量。
 
 
 
 === 开始之前
 
-您必须具有要检索的受管应用程序的 ID 。如果需要，您可以使用此工作流 link:wf_list_man_apps.html["列出受管应用程序"] 以查找应用程序。
+您必须具有要检索的应用程序的ID。如果需要，您可以使用此工作流 link:wf_list_man_apps.html["列出应用程序"] 以查找应用程序。
 
 
 
@@ -33,7 +33,7 @@ summary:
 | HTTP 方法 | 路径 
 
 
-| 获取 | /accouns/ ｛ account_id ｝ /K8s/v1/managedApps/ ｛ managedApp_id ｝ 
+| 获取 | /accouns/｛account_id｝/k8s/v2/apps/｛app_id｝ 
 |===
 
 
@@ -46,7 +46,7 @@ summary:
 | 参数 | Type | Required | Description 
 
 
-| 受管应用程序 ID | 路径 | 是的。 | 要检索的受管应用程序的 ID 值。 
+| 应用程序ID | 路径 | 是的。 | 要检索的应用程序的ID值。 
 |===
 
 
@@ -54,5 +54,5 @@ summary:
 
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps/<APP_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
 ----

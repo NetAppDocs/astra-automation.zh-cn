@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: workflows/wf_clone_app.html 
 keywords:  
-summary:  
+summary: 您可以通过克隆现有应用程序来创建新应用程序。 
 ---
-= 克隆受管应用程序
+= 克隆应用程序
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-您可以通过克隆现有受管应用程序来创建新应用程序。
+您可以通过克隆现有应用程序来创建新应用程序。
 
 
 
@@ -24,6 +24,7 @@ summary:
 
 * 未使用应用程序备份或快照
 * 克隆操作在同一集群中执行
+* 新应用程序将放置在其他命名空间中
 
 
 
@@ -31,22 +32,22 @@ NOTE: 要将应用程序克隆到其他集群，您需要根据环境需要更�
 
 
 
-=== 选择要克隆的受管应用程序
+=== 1.选择要克隆的应用程序
 
-执行工作流 link:wf_list_man_apps.html["列出受管应用程序"] 并选择要克隆的应用程序。用于克隆应用程序的 REST 调用需要多个资源值。
+执行工作流 link:wf_list_man_apps.html["列出应用程序"] 并选择要克隆的应用程序。用于克隆应用程序的 REST 调用需要多个资源值。
 
 
 
 === 2. 克隆应用程序
 
-执行以下 REST API 调用。
+执行以下REST API调用以克隆此应用程序。
 
 [cols="25,75"]
 |===
 | HTTP 方法 | 路径 
 
 
-| 发布 | /account/｛account_id｝/k8s/v1/managedApps 
+| 发布 | /account/｛account_id｝/k8s/v2/apps 
 |===
 
 
@@ -68,12 +69,12 @@ NOTE: 要将应用程序克隆到其他集群，您需要根据环境需要更�
 [source, json]
 ----
 {
-  "type": "application/astra-managedApp",
-  "version": "1.0",
-  "name": "postgres1-postgresql-clone",
+  "type": "application/astra-app",
+  "version": "2.0",
+  "name": "mysql-clone",
   "clusterID": "30880586-d579-4d27-930f-a9633e59173b",
   "sourceClusterID": "30880586-d579-4d27-930f-a9633e59173b",
-  "namespace": "davidns-postgres-app",
+  "namespace": "mysql-ns",
   "sourceAppID": "e591ee59-ea90-4a9f-8e6c-d2b6e8647096"
 }
 ----
@@ -83,5 +84,5 @@ NOTE: 要将应用程序克隆到其他集群，您需要根据环境需要更�
 
 [source, curl]
 ----
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps' --header 'Content-Type: application/astra-managedApp+json' --header '*/*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps' --header 'Content-Type: application/astra-app+json' --header '*/*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
 ----

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: workflows/wf_create_snapshot.html 
 keywords:  
-summary:  
+summary: 您可以为特定应用程序创建快照。 
 ---
-= 为受管应用程序创建快照
+= 为应用程序创建快照
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary:
 
 
 [role="lead"]
-您可以为特定受管应用程序创建快照。
+您可以为特定应用程序创建快照。
 
 
 
 === 开始之前
 
-您必须具有要为其创建快照的受管应用程序的 ID 。如果需要，您可以使用此工作流 link:wf_list_man_apps.html["列出受管应用程序"] 以查找应用程序。
+您必须具有要为其创建快照的应用程序的ID。如果需要，您可以使用此工作流 link:wf_list_man_apps.html["列出应用程序"] 以查找应用程序。
 
 
 
@@ -33,7 +33,7 @@ summary:
 | HTTP 方法 | 路径 
 
 
-| 发布 | /accouns/ ｛ account_id ｝ /K8s/v1/managedApps/ ｛ managedApp_id ｝ /appSaps 
+| 发布 | /accouns/｛account_id｝/k8s/v1/apps/｛app_id｝/appSaps 
 |===
 
 
@@ -46,7 +46,7 @@ summary:
 | 参数 | Type | Required | Description 
 
 
-| 受管应用程序 ID | 路径 | 是的。 | 标识要创建快照的受管应用程序。 
+| 应用程序ID | 路径 | 是的。 | 标识要创建快照的受管应用程序。 
 
 
 | JSON | body | 是的。 | 提供快照的参数。请参见以下示例。 
@@ -59,7 +59,7 @@ summary:
 ----
 {
   "type": "application/astra-appSnap",
-  "version": "1.0",
+  "version": "1.1",
   "name": "snapshot-david-1"
 }
 ----
@@ -69,5 +69,5 @@ summary:
 
 [source, curl]
 ----
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>/appSnaps' --header 'Content-Type: application/astra-appSnap+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appSnaps' --header 'Content-Type: application/astra-appSnap+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
 ----
