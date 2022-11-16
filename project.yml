@@ -7,7 +7,7 @@ settings:
     pdf_enabled: true
     harmony_enabled: false
   rss_page: rn/whats_new.html
-  langs: zh-cn,us-en,ja-jp,zh-tw,ko-kr
+  langs: zh-cn,us-en,ja-jp,zh-tw,ko-kr,fr-fr,de-de
 sidebar:
   entries:
   - title: Astra Control Automation 文档
@@ -80,3 +80,4 @@ homepage:
 product-family:
   name: Astra
   repo: astra-family
+  sidebar_label: 所有Astra文档

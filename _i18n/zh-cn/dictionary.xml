@@ -13,12 +13,7 @@
   <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隐私政策</block>
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
-  <block id="095c5c108494764107cc19d59aa10a7b" category="section-title">Astra API 许可证</block>
   <block id="f7c79ca7f13fd9da78390d5a97db7042" category="paragraph"><block ref="f7c79ca7f13fd9da78390d5a97db7042" category="inline-link-rx"></block></block>
-  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
-  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
-  <block id="fbd3ad11889bebf7ba34d30c64465dc9" category="inline-link">有关 Astra 的通知</block>
-  <block id="b571cab532f203c4ad9f53bdd8a27935" category="paragraph"><block ref="b571cab532f203c4ad9f53bdd8a27935" category="inline-link-rx"></block></block>
   <block id="68f3bee395b27d2cbfdf4b021846dcca" category="doc">诊断和支持</block>
   <block id="ccfae33112eaa095d6943fef30aeb1c6" category="section-title">API resources</block>
   <block id="519b3b4f6c348f4c18db7639e52ec355" category="paragraph">API 资源提供了多种可提供诊断信息和支持的 Astra 功能。</block>
@@ -1038,4 +1033,5 @@
   <block id="b99e07f4bea810f88b69ecfe1784ab28" category="sidebar">列出云</block>
   <block id="4d3e9b74a79b7af51564aa58491a951e" category="sidebar">列出应用程序</block>
   <block id="76427b3f214d8ae919f1432a89eefd65" category="sidebar">列出命名空间</block>
+  <block id="f21f22dde0e0692333a7a28cce456b08" category="sidebar">所有Astra文档</block>
 </blocks>
