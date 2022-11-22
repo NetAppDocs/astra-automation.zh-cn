@@ -28,6 +28,8 @@ entries:
     url: "/workflows/wf_delete_snapshot.html"
   - title: 删除备份
     url: "/workflows/wf_delete_backup.html"
+  - title: 创建保护策略
+    url: "/workflows/wf_create_protection.html"
 - title: 克隆和还原应用程序
   entries:
   - title: 克隆应用程序

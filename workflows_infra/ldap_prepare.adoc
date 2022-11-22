@@ -45,7 +45,7 @@ NOTE: 尽管下面介绍的步骤是按顺序执行的、但在某些情况下�
 
 Astra Control平台提供了两种部署模式。只有Astra控制中心部署才支持LDAP身份验证。
 
-当前版本的Astra控制中心仅支持使用Astra Control REST API配置LDAP身份验证。此限制的一个重要方面是、LDAP用户不会显示在Astra Web界面的"Users"选项卡中。它们可通过端点`../core/v1/users`上的REST API获得。
+当前版本的Astra控制中心支持使用Astra Control REST API以及Astra Web用户界面配置LDAP身份验证。
 
 要接受和处理Astra身份验证请求、您必须具有LDAP服务器。当前版本的Astra控制中心支持Microsoft的Active Directory。
 

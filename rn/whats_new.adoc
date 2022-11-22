@@ -18,6 +18,40 @@ NetApp会定期更新Astra Control REST API、为您提供新功能、增强功�
 
 
 
+== 2022年11月22日(22.11)
+
+此版本包括对REST API的扩展和更新、以及增强的命名空间和LDAP支持。
+
+
+
+=== 新增和增强的 Astra 资源
+
+添加了四种新的资源类型：* apiResource*、* ldapGroup*、* LDAP用户*和*任务*。此外、还对多个现有资源和端点进行了改进。
+
+
+
+=== 监控对长期运行任务的支持
+
+新的任务端点可用于访问受管任务资源、并可用于显示内部长时间运行的任务的状态。
+
+
+
+=== 增强的命名空间使用情形
+
+增加了对跨多个命名空间的应用程序以及与符合命名空间要求的资源关联的集群资源的支持。
+
+
+
+=== 扩展了云订阅
+
+现在、可以为每个云提供商添加多个帐户订阅。
+
+.相关信息
+* https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html["Astra 控制中心：新增功能"^]
+
+
+
+
 == 2022年8月10日(22.08)
 
 此版本包括对 REST API 的扩展和更新，以及增强的安全性和管理功能。
@@ -54,8 +88,7 @@ Astra Control现在还允许将同一个脚本用于多个执行挂钩。
 现在、您可以使用NetApp SnapMirror技术在集群之间复制数据和应用程序更改。此增强功能可用于提高业务连续性和恢复能力。
 
 .相关信息
-* https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html["Astra 控制中心：新增功能"^]
-* https://docs.netapp.com/us-en/astra-control-service/release-notes/whats-new.html["Astra Control Service ：新增功能"^]
+* https://docs.netapp.com/us-en/astra-control-center-2208/release-notes/whats-new.html["Astra控制中心22.08：新增功能"^]
 
 
 
@@ -103,8 +136,7 @@ Astra Control现在还允许将同一个脚本用于多个执行挂钩。
 请参见 Astra 控制中心和 Astra 控制服务文档站点上的 * 新增功能 * 页面。
 
 .相关信息
-* https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html["Astra 控制中心：新增功能"^]
-* https://docs.netapp.com/us-en/astra-control-service/release-notes/whats-new.html["Astra Control Service ：新增功能"^]
+* https://docs.netapp.com/us-en/astra-control-center-2204/release-notes/whats-new.html["Astra控制中心22.04：新增功能"^]
 
 
 
@@ -130,6 +162,10 @@ REST 资源类型的数量不断增加，重点是执行挂钩和存储后端。
 === NetApp Astra Control Python SDK
 
 NetApp Astra Control Python SDK 是一个开源软件包，可以更轻松地为您的 Astra Control 环境开发自动化代码。其核心是 Astra SDK ，其中包含一组类，用于抽象化 REST API 调用的复杂性。此外，还提供了一个工具包脚本，用于通过包装和抽象化 Python 类来执行特定管理任务。请参见 link:../python/astra_toolkits.html["NetApp Astra Control Python SDK"] 有关详细信息 ...
+
+.相关信息
+* https://docs.netapp.com/us-en/astra-control-center-2112/release-notes/whats-new.html["Astra控制中心21.12：新增功能"^]
+
 
 
 
@@ -157,6 +193,10 @@ NetApp Astra Control Python SDK 是一个开源软件包，可以更轻松地为
 
 支持 OpenAPI:: 通过 OpenAPI 端点可以访问当前的 OpenAPI JSON 文档和其他相关资源。
 支持 OpenMetrics:: 通过 OpenMetrics 资源，您可以通过 OpenMetrics 端点访问帐户指标。
+
+
+.相关信息
+* https://docs.netapp.com/us-en/astra-control-center-2108/release-notes/whats-new.html["Astra Control Center 21.08：新增功能"^]
 
 
 

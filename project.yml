@@ -37,8 +37,8 @@ homepage:
       url: "/get-started/before_get_started.html"
     - title: 获取 API 令牌
       url: "/get-started/get_api_token.html"
-    - title: 大家好
-      url: "/get-started/hello_world.html"
+    - title: 首次API调用
+      url: "/get-started/first_call.html"
   - title: REST 实施
     links:
     - title: REST Web 服务

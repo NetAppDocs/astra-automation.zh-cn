@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: workflows_infra/wf_ldap_configure_server.html 
 keywords:  
-summary:  
+summary: 您需要选择LDAP服务器并将Astra配置为使用该服务器作为身份验证提供程序。 
 ---
 = 将Astra配置为使用LDAP服务器
 :hardbreaks:
@@ -30,7 +30,7 @@ NOTE: 此步骤是可选的、只有当您希望Astra和LDAP通过使用LDAPS的
 | HTTP 方法 | 路径 
 
 
-| 发布 | /account/｛account_id｝/core/v1/certificates 
+| 发布 | /accouns/｛account_id｝/core/v1/certificates 
 |===
 
 
@@ -121,7 +121,7 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 | HTTP 方法 | 路径 
 
 
-| 发布 | /account/｛account_id｝/core/v1/credentials 
+| 发布 | /accouns/｛account_id｝/core/v1/credentials 
 |===
 
 
@@ -189,7 +189,7 @@ NOTE: 以下cURL示例使用查询参数筛选设置收集。您可以改为删�
 | HTTP 方法 | 路径 
 
 
-| 获取 | /account/｛account_id｝/core/v1/settings 
+| 获取 | /accouns/｛account_id｝/core/v1/settings 
 |===
 
 
@@ -228,7 +228,7 @@ NOTE: 您可以先对特定设置的GET请求进行问题描述 处理、以查�
 | HTTP 方法 | 路径 
 
 
-| PUT | /account/｛account_id｝/core/v1/settings/｛setting_id｝ 
+| PUT | /accouns/｛account_id｝/core/v1/settings/｛setting_id｝ 
 |===
 
 
@@ -281,7 +281,7 @@ curl --location -i --request PUT --data @JSONinput 'https://astra.example.com/ac
 | HTTP 方法 | 路径 
 
 
-| 获取 | /account/｛account_id｝/core/v1/settings/｛setting_id｝ 
+| 获取 | /accouns/｛account_id｝/core/v1/settings/｛setting_id｝ 
 |===
 
 

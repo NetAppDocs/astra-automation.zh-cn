@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: workflows/wf_list_notifications.html 
 keywords:  
-summary:  
+summary: 您可以列出特定 Astra 帐户的通知。您可以在监控系统活动或调试问题描述时执行此操作。 
 ---
 = 列出通知
 :hardbreaks:
@@ -27,7 +27,7 @@ summary:
 | HTTP 方法 | 路径 
 
 
-| 获取 | /account/｛account_id｝/core/v1/notifications 
+| 获取 | /accouns/｛account_id｝/core/v1/notifications 
 |===
 
 

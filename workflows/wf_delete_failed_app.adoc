@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: workflows/wf_delete_failed_app.html 
 keywords:  
-summary:  
+summary: 如果某个受管应用程序的备份或快照处于故障状态，您可能无法将其删除。在这种情况下、您可以手动删除此应用程序。 
 ---
 = 删除失败的应用程序
 :hardbreaks:

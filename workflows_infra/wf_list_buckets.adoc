@@ -27,7 +27,7 @@ summary: 您可以列出为特定 Astra 帐户定义的 S3 存储分段。
 | HTTP 方法 | 路径 
 
 
-| 获取 | /account/｛account_id｝/topology/v1/bass桶 
+| 获取 | /accouns/｛account_id｝/topology/v1/bass桶 
 |===
 
 

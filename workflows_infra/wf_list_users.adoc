@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: workflows_infra/wf_list_users.html 
 keywords:  
-summary:  
+summary: 您可以列出为特定 Astra 帐户定义的用户。 
 ---
 = 列出用户
 :hardbreaks:
@@ -27,7 +27,7 @@ summary:
 | HTTP 方法 | 路径 
 
 
-| 获取 | /account/｛account_id｝/core/v1/users 
+| 获取 | /accouns/｛account_id｝/core/v1/users 
 |===
 
 
@@ -62,7 +62,7 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
 
 ===== JSON 输出示例
 
-[source, json]
+[source, curl]
 ----
 {
   "items": [

@@ -8,6 +8,8 @@ entries:
   entries:
   - title: 列出用户
     url: "/workflows_infra/wf_list_users.html"
+  - title: 创建用户
+    url: "/workflows_infra/wf_create_user.html"
 - title: LDAP 配置
   entries:
   - title: 准备LDAP配置
@@ -22,8 +24,12 @@ entries:
   entries:
   - title: 列出集群
     url: "/workflows_infra/wf_list_clusters.html"
+  - title: 添加集群
+    url: "/workflows_infra/wf_add_cluster.html"
   - title: 列出受管集群
     url: "/workflows_infra/wf_list_man_clusters.html"
+  - title: 管理集群
+    url: "/workflows_infra/wf_man_cluster.html"
 - title: 云
   entries:
   - title: 列出云

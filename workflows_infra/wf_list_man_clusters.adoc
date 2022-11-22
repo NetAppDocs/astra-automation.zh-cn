@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: workflows_infra/wf_list_man_clusters.html 
 keywords:  
-summary:  
+summary: 您可以列出当前由 Astra 管理的 Kubernetes 集群。 
 ---
 = 列出受管集群
 :hardbreaks:
@@ -27,7 +27,7 @@ summary:
 | HTTP 方法 | 路径 
 
 
-| 获取 | /account/｛account_id｝/topology/v1/managedClusters 
+| 获取 | /accouns/｛account_id｝/topology/v1/managedClusters 
 |===
 
 

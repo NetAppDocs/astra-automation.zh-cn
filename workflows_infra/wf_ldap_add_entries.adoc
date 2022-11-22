@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: workflows_infra/wf_ldap_add_entries.html 
 keywords:  
-summary:  
+summary: 将LDAP配置为Astra控制中心的身份验证提供程序后、您可以选择Astra将使用LDAP凭据进行身份验证的LDAP用户。 
 ---
 = 将LDAP条目添加到Astra
 :hardbreaks:
@@ -42,7 +42,7 @@ NOTE: LDAP凭据以用户名作为电子邮件地址以及关联的LDAP密码的
 | HTTP 方法 | 路径 
 
 
-| 发布 | /account/｛account_id｝/core/v1/users 
+| 发布 | /accouns/｛account_id｝/core/v1/users 
 |===
 
 
@@ -132,7 +132,7 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 | HTTP 方法 | 路径 
 
 
-| 发布 | /account/｛account_id｝/core/v1/roleBindings 
+| 发布 | /accouns/｛account_id｝/core/v1/roleBindings 
 |===
 
 
@@ -208,7 +208,7 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 | HTTP 方法 | 路径 
 
 
-| 发布 | /account/｛account_id｝/core/v1/groups 
+| 发布 | /accouns/｛account_id｝/core/v1/groups 
 |===
 
 
@@ -274,7 +274,7 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 | HTTP 方法 | 路径 
 
 
-| 发布 | /account/｛account_id｝/core/v1/roleBindings 
+| 发布 | /accouns/｛account_id｝/core/v1/roleBindings 
 |===
 
 

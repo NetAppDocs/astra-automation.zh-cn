@@ -39,7 +39,7 @@ summary: 您可以通过从备份创建新应用程序来还原应用程序。
 | HTTP 方法 | 路径 
 
 
-| PUT | /account/｛account_id｝/k8s/v2/apps/｛app_id｝ 
+| PUT | /accouns/｛account_id｝/k8s/v2/apps/｛app_id｝ 
 |===
 
 

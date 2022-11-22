@@ -1,0 +1,119 @@
+---
+sidebar: sidebar 
+permalink: workflows_infra/wf_add_cluster.html 
+keywords:  
+summary: 您可以添加一个集群、使其可由Astra管理。 
+---
+= 使用凭据添加集群
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以添加一个集群、使其可由Astra管理。从Astra 22.11开始、您可以使用Astra控制中心或Astra控制服务添加集群。
+
+
+NOTE: 使用主要云提供商之一(AKS、EKS、GKE）提供的Kubernetes服务时、不需要添加集群。
+
+
+
+=== 1.获取kubeconfig文件
+
+您需要从Kubernetes管理员或服务处获取一份* kubconfig*文件副本。
+
+
+
+=== 2.准备kubeconfig文件
+
+在使用* kubeconfig*文件之前、应执行以下操作：
+
+如果您收到格式为YAML的kubeconfig文件、则需要将其转换为JSON。
+
+必须在base64中对JSON文件进行编码。例如：
+
+`yq -o=json ~/.kube/config | base64`
+
+
+
+=== 3.选择云
+
+执行工作流 link:../workflows_infra/wf_list_clouds.html["列出云"] 并选择要添加集群的云。
+
+
+NOTE: 您只能选择*私有*云。
+
+
+
+=== 4.创建凭据
+
+执行以下REST API调用以使用kubeconfig文件创建凭据。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 发布 | /accouns/｛account_id｝/core/v1/credentials 
+|===
+
+
+===== JSON 输入示例
+
+[source, curl]
+----
+{
+  "type" :  "application/astra-credential",
+  "version" : "1.1",
+  "name" : "Cloud One",
+  "keyType" : "kubeconfig",
+  "keyStore" : {
+    "base64": encoded_kubeconfig
+  },
+  "valid" : "true"
+}
+----
+
+
+===== curl 示例
+
+[source, curl]
+----
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
+----
+
+
+=== 5.添加集群
+
+执行以下REST API调用以将集群添加到云。的值 `credentialID` 输入字段是从上一步中的REST API调用获取的。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 发布 | /accouns/｛account_id｝/topology/v1/cloud /｛clune_id｝/集群 
+|===
+
+
+===== JSON 输入示例
+
+[source, curl]
+----
+{
+  "type" :  "application/astra-cluster",
+  "version" : "1.1",
+  "credentialID": credential_id
+}
+----
+
+
+===== curl 示例
+
+[source, curl]
+----
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/clouds/<CLOUD_ID>/clusters' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
+----

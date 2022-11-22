@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: workflows/wf_unmanage_app.html 
 keywords:  
-summary:  
+summary: 您可以删除不再需要的受管应用程序。删除受管应用程序也会删除关联的计划。 
 ---
 = 取消管理应用程序
 :hardbreaks:

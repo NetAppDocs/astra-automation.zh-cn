@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: workflows_infra/wf_ldap_disable_reset.html 
 keywords:  
-summary:  
+summary: 您可以根据需要为Astra控制中心部署执行两项可选的相关管理任务。您可以全局禁用LDAP身份验证并重置LDAP配置。 
 ---
 = 禁用并重置LDAP
 :hardbreaks:
@@ -33,7 +33,7 @@ summary:
 | HTTP 方法 | 路径 
 
 
-| PUT | /account/｛account_id｝/core/v1/settings/｛setting_id｝ 
+| PUT | /accouns/｛account_id｝/core/v1/settings/｛setting_id｝ 
 |===
 
 
@@ -79,7 +79,7 @@ CAUTION: 此操作会造成系统中断、您应谨慎操作。它会删除所�
 | HTTP 方法 | 路径 
 
 
-| PUT | /account/｛account_id｝/core/v1/settings/｛setting_id｝ 
+| PUT | /accouns/｛account_id｝/core/v1/settings/｛setting_id｝ 
 |===
 
 

@@ -39,7 +39,7 @@ summary: 您可以列出可用的存储类。
 | HTTP 方法 | 路径 
 
 
-| 获取 | /account/｛account_id｝/topology/v1/clones/<clune_ID>/clusters/<cluster_ID>/storageClasses 
+| 获取 | /accouns/｛account_id｝/topology/v1/clones/clones/clusters/storageClasses.<CLUSTER_ID> <CLOUD_ID> 
 |===
 
 
