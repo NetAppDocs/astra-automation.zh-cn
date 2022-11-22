@@ -46,6 +46,12 @@ NetApp会定期更新Astra Control REST API、为您提供新功能、增强功�
 
 现在、可以为每个云提供商添加多个帐户订阅。
 
+
+
+=== 其他工作流
+
+添加了说明Astra Control REST API的其他工作流。请参见 link:../workflows_infra/workflows_infra_before.html["基础架构工作流"] 和 link:../workflows/workflows_before.html["管理工作流"] 有关详细信息 ...
+
 .相关信息
 * https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html["Astra 控制中心：新增功能"^]
 
