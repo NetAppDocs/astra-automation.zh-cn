@@ -19,8 +19,4 @@ summary: 您应查看当前版本中与 Astra Control REST API 相关的所有�
 
 NOTE: Astra Control REST API 22.11版没有新的已知问题。以下所述问题已在先前版本中发现，但仍适用于当前版本。
 
-
-
-== 未发现后端存储节点中的所有存储设备
-
-在发出 REST API 调用以检索存储节点中定义的存储设备时，只会发现 Astra 数据存储设备。并非所有设备都会返回。
+请参见 https://docs.netapp.com/us-en/astra-control-center/release-notes/known-issues.html["Astra控制中心的已知问题"^] 有关详细信息 ...

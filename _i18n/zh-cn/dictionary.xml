@@ -610,8 +610,6 @@
   <block id="2c3632f4f9feb6a54026be6d9c946d20" category="section-title">有用资源摘要</block>
   <block id="b455f4010eda9452a921d32bfc7e1318" category="list-text"><block ref="b455f4010eda9452a921d32bfc7e1318" category="inline-link-rx"></block></block>
   <block id="78ceba6718263592394adb03dc11471c" category="paragraph">您应查看当前版本中与 Astra Control REST API 相关的所有已知问题。已知问题可确定可能会阻止您成功使用本产品的问题。</block>
-  <block id="f977fda19bbfe49b9346f60f532f0704" category="section-title">未发现后端存储节点中的所有存储设备</block>
-  <block id="13595bcf3f8022567de41bcd09ef92b2" category="paragraph">在发出 REST API 调用以检索存储节点中定义的存储设备时，只会发现 Astra 数据存储设备。并非所有设备都会返回。</block>
   <block id="a1be4875b5bb7cb5ecf7bdcde9034c85" category="section-title">2021 年 12 月 14 日（ 21.12 ）</block>
   <block id="09709048ce6033b774d7c044c1d718a2" category="paragraph">此版本扩展了 REST API ，并对文档结构进行了更改，以便在未来的版本更新中更好地支持 Astra Control 的发展。</block>
   <block id="ac36e7b65e4f6ad43be3f12f0d0799df" category="section-title">每个版本的 Astra Control 都有单独的 Astra Automation 文档</block>
@@ -1104,4 +1102,6 @@
   <block id="01d6bcac2686956739a4135c6248a7e0" category="admonition">Astra Control REST API 22.11版没有新的已知问题。以下所述问题已在先前版本中发现，但仍适用于当前版本。</block>
   <block id="25742c79c197ce7f0982652ead3bd964" category="section-title">其他工作流</block>
   <block id="7494e7f70b31d89664784c20229e8098" category="paragraph">添加了说明Astra Control REST API的其他工作流。请参见 <block ref="fc2071d838ca44c08fca8ef5c62f2e8e" category="inline-link-macro-rx"></block> 和 <block ref="b729850dc33cbcb91b47d13a137b85a8" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="7a95f2a4373ad29d744890f090214195" category="inline-link">Astra控制中心的已知问题</block>
+  <block id="9fa80e5e6d07d73203692c1b2c6a3f1f" category="paragraph">请参见<block ref="1748a923b17519fc41af247d5369ec47" category="inline-link-rx"></block> 有关详细信息 ...</block>
 </blocks>
