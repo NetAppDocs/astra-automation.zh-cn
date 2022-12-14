@@ -39,8 +39,10 @@ API 令牌用于标识 Astra 的调用方，并且必须包含在每个 REST API
 
 以下步骤介绍如何创建 Astra API 令牌。
 
+.开始之前
 您需要 Astra 帐户的凭据。
 
+.关于此任务
 此任务会在 Astra Web 界面上生成 API 令牌。此外，您还应检索帐户 ID ，在进行 API 调用时也需要使用此 ID 。
 
 .步骤
@@ -54,4 +56,5 @@ API 令牌用于标识 Astra 的调用方，并且必须包含在每个 REST API
 . 复制并保存同一页面上提供的帐户 ID 。
 
 
+.完成后
 通过 Curl 或编程语言访问 Astra Control REST API 时，必须在 HTTP `Authorization` Request 标头中包含 API 承载令牌。

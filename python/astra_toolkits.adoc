@@ -25,6 +25,7 @@ NOTE: 为了简单起见，本页其余部分将 NetApp Astra Control Python SDK
 
 SDK 包含两个不同但相关的工具，这些工具在访问 Astra Control REST API 时在不同的抽象级别运行。
 
+.Astra SDK
 Astra SDK 提供核心平台功能。它包括一组 Python 类，用于抽象化底层 REST API 调用。这些类支持对各种 Astra Control 资源执行管理操作，包括应用程序，备份，快照和集群。
 
 Astra SDK 是该软件包的一部分，并在单个 `astraSDK.py` 文件中提供。您可以将此文件导入到您的环境中并直接使用这些类。
@@ -32,6 +33,7 @@ Astra SDK 是该软件包的一部分，并在单个 `astraSDK.py` 文件中提�
 
 NOTE: NetApp Astra Control Python SDK* （或仅 SDK ）是整个软件包的名称。* Astra SDK* 是指单个文件 `astraSDK.py` 中的核心 Python 类。
 
+.工具包脚本
 除了 Astra SDK 文件之外，还可以使用 `toolkup.py` 脚本。此脚本可通过访问内部定义为 Python 函数的独立管理操作，在较高的抽象级别下运行。该脚本将导入 Astra SDK 并根据需要调用类。
 
 
@@ -40,12 +42,14 @@ NOTE: NetApp Astra Control Python SDK* （或仅 SDK ）是整个软件包的名
 
 您可以通过以下方式访问 SDK 。
 
+.Python 软件包
 SDK 可从获取 https://pypi.org/["Python 软件包索引"^] 名称为* actoolkit *。软件包将分配一个版本号，并将根据需要继续更新。您必须使用 * Pip* 软件包管理实用程序将软件包安装到您的环境中。
 
 安装后、可以通过在脚本中放置`import astraSDK`来使用astraSDK.py类。此外、您可以直接在命令提示符处调用`actoolkit`、其等效于`tooltoolb.py`(`actoolkit list clusters`与`./toolkit.py list clusters`相同)。
 
 请参见 https://pypi.org/project/actoolkit/["PyPI ： NetApp Astra Control Python SDK"^] 有关详细信息 ...
 
+.GitHub 源代码
 此外，还可以从 GitHub 获取 SDK 源代码。存储库包括以下内容：
 
 * `astraSDK.py` （采用 Python 类的 Astra SDK ）
@@ -63,6 +67,7 @@ SDK 可从获取 https://pypi.org/["Python 软件包索引"^] 名称为* actoolk
 
 在安装软件包并准备使用该软件包时，需要考虑多个选项和要求。
 
+.安装选项摘要
 您可以通过以下方式之一安装 SDK ：
 
 * 使用准备好的 https://hub.docker.com/r/netapp/astra-toolkits["Docker：NetApp/Astra-toolkits."^] 映像、已安装所有必要的依赖项、包括`actoolkit`
@@ -72,8 +77,10 @@ SDK 可从获取 https://pypi.org/["Python 软件包索引"^] 名称为* actoolk
 
 有关详细信息，请参见 PyPI 和 GitHub 页面。
 
+.Astra Control 环境的要求
 无论是直接使用 Astra SDK 中的 Python 类，还是使用 `toolkape.py` 脚本中的功能，最终您将在部署 Astra Control 时访问 REST API 。因此，您需要一个 Astra 帐户以及一个 API 令牌。请参见 link:../get-started/before_get_started.html["开始之前"] 有关详细信息，请参见本文档 * 入门 * 一节中的其他页面。
 
+.NetApp Astra Control Python SDK 的要求
 SDK 具有与本地 Python 环境相关的几个前提条件。例如、您必须使用Python 3.8或更高版本。此外，还需要几个 Python 软件包。有关详细信息，请参见 GitHub 存储库页面或 PyPI 软件包页面。
 
 

@@ -16,8 +16,10 @@ summary: 您可以在工作站的命令行界面上通过问题描述 执行一�
 [role="lead"]
 您可以在工作站的命令行界面上通过问题描述 执行一个简单的cURL命令来开始使用Astra Control REST API并确认其可用性。
 
+.开始之前
 本地工作站必须提供 Curl 实用程序。您还必须具有 API 令牌和关联的帐户标识符。请参见 link:get_api_token.html["获取 API 令牌"] 有关详细信息 ...
 
+.curl 示例
 以下 Curl 命令将检索 Astra 用户列表。按指示提供相应的 <account_ID> 和 <api_token> 。
 
 [source, curl]

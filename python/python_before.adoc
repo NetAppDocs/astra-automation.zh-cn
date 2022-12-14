@@ -25,12 +25,16 @@ NOTE: 除了使用 Python 直接访问 Astra Control REST API 之外， NetApp �
 
 下面介绍了运行 Python 脚本的基本配置要求。
 
+.Python 3.
 您需要安装最新版本的 Python 3 。
 
+.其他库
 必须安装 * 请求 * 和 * urllib3* 库。您可以根据环境需要使用 pip 或其他 Python 管理工具。
 
+.网络访问
 运行脚本的工作站必须能够访问网络并访问 Astra Control 。使用 Astra 控制服务时，您必须连接到互联网，并且能够连接到 `https://astra.netapp.io` 上的服务。
 
+.身份信息
 您需要一个具有帐户标识符和 API 令牌的有效 Astra 帐户。请参见 link:../get-started/get_api_token.html["获取 API 令牌"] 有关详细信息 ...
 
 
@@ -42,6 +46,7 @@ Python 脚本依赖于 JSON 输入文件中包含的配置信息。下面提供�
 
 NOTE: 您需要根据环境的具体情况更新这些示例。
 
+.身份信息
 以下文件包含 API 令牌和 Astra 帐户。您需要使用 ` -i` （或 ` -identity` ） CLI 参数将此文件传递到 Python 脚本。
 
 [source, json]

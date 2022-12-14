@@ -22,8 +22,10 @@ Astra Control REST API使用HTTP以及相关参数对资源实例和集合执行
 
 Astra Control REST API 可实施一个事务模式，其中包含定义明确的操作和状态过渡。
 
+.请求和响应 API 事务
 每次 REST API 调用都是作为对 Astra 服务的 HTTP 请求执行的。每个请求都会向客户端生成关联的响应。此请求响应对可视为 API 事务。
 
+.支持 CRUD 操作模式
 通过 Astra Control REST API 提供的每个资源实例和集合均可根据 * CRU* 模型进行访问。有四个操作，每个操作都映射到一个 HTTP 方法。这些操作包括：
 
 * 创建

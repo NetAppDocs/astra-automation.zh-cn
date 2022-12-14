@@ -16,10 +16,14 @@ summary: 您可以快速做好准备、开始使用Astra Control REST API。
 [role="lead"]
 您可以通过查看以下步骤快速准备开始使用 Astra Control REST API 。
 
+.拥有 Astra 帐户凭据
 您需要使用 Astra 凭据登录到 Astra Web 用户界面并生成 API 令牌。使用 Astra 控制中心，您可以在本地管理这些凭据。使用 Astra 控制服务时，帐户凭据可通过 * 身份验证 0* 服务进行访问。
 
+.熟悉 Kubernetes 的基本概念
 您应熟悉 Kubernetes 的几个基本概念。请参见 link:kubernetes_concepts.html["基本 Kubernetes 概念"] 有关详细信息 ...
 
+.查看 REST 概念和实施
 请务必查看 link:../rest-core/rest_web_services.html["核心 REST 实施"] 有关 REST 概念的信息以及有关如何设计 Astra Control REST API 的详细信息。
 
+.获取更多信息
 您应了解中建议的追加信息资源 link:../information/additional_resources.html["其他资源"]。

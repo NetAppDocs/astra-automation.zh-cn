@@ -19,20 +19,29 @@ Astra 控制中心和 Astra 控制服务提供了一个通用的 REST API ，您
 
 NOTE: 要访问 REST API ，您需要先登录到 Astra Web 用户界面并生成 API 令牌。您必须在每个 API 请求中包含令牌。
 
+.基于 REST 技术构建
 Astra Control API 是使用 REST 技术和当前最佳实践创建的。核心技术包括 HTTP ， JSON 和 RBAC 。
 
+.支持两种 Astra Control 部署模式
 Astra 控制服务在公有云环境中使用，而 Astra 控制中心则用于您的内部部署。有一个 REST API 支持这两种部署模式。
 
+.清晰地映射 REST 端点资源和对象模型
 用于访问资源的外部 REST 端点映射到由 Astra 服务在内部维护的一致对象模型。对象模型采用实体关系（ ential-Relationship ， ER ）建模设计，有助于明确定义 API 操作和响应。
 
+.丰富的查询参数集
 REST API 提供了一组丰富的查询参数，您可以使用这些参数来访问资源集合。支持的部分操作包括筛选，排序和分页。
 
+.与 Astra Control Web UI 对齐
 Astra Web 用户界面的设计与 REST API 一致，因此两个访问路径和用户体验之间保持一致。
 
+.强大的调试和问题确定数据
 Astra Control REST API 可提供强大的调试和问题确定功能，包括系统事件和用户通知。
 
+.工作流进程
 我们提供了一组工作流来帮助您开发自动化代码。这些工作流分为两大类：基础架构和管理。
 
+.高级自动化技术的基础
 除了直接访问 REST API 之外，您还可以使用基于 REST API 的其他自动化技术。
 
+.Astra 系列文档的一部分
 Astra Control Automation 文档是较大的 Astra 系列文档的一部分。请参见 https://docs.netapp.com/us-en/astra-family/["Astra 文档"^] 有关详细信息 ...

@@ -19,6 +19,7 @@ summary: 您可以访问Astra Control REST API调用的详细信息、包括HTTP
 
 NOTE: 目前， Astra Control 随附了 REST API 参考文档，可在线获取。
 
+.开始之前
 您需要一个 Astra 控制中心或 Astra 控制服务帐户。
 
 .步骤
