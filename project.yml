@@ -31,8 +31,8 @@ homepage:
   tiles:
   - title: 入门
     links:
-    - title: 简介
-      url: "/intro/introduction.html"
+    - title: 概述
+      url: "/intro/overview.html"
     - title: 开始之前
       url: "/get-started/before_get_started.html"
     - title: 获取 API 令牌
