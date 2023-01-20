@@ -14,7 +14,7 @@ summary: 您可以添加一个集群、使其可由Astra管理。
 
 
 [role="lead"]
-您可以添加一个集群、使其可由Astra管理。从Astra 22.11开始、您可以使用Astra控制中心或Astra控制服务添加集群。
+您可以添加一个集群、使其可由Astra管理。从Astra 22.11版开始、您可以添加同时包含Astra控制中心和Astra控制服务的集群。
 
 
 NOTE: 使用主要云提供商之一(AKS、EKS、GKE）提供的Kubernetes服务时、不需要添加集群。

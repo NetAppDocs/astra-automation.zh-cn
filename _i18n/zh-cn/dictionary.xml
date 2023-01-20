@@ -621,7 +621,6 @@
   <block id="b179356a4d80ff3c8707972005712b2f" category="section-title">2021 年 8 月 5 日（ 21.08 ）</block>
   <block id="b090a7e9d0299b1a0c16321ebfd1f755" category="section-title">2021 年 4 月 15 日（ 21.04 ）</block>
   <block id="d71331c5ce470b093ebf6c996f4ed88a" category="doc">关于此版本</block>
-  <block id="ea68f7ff6b79a550f669d752f15bd5da" category="paragraph">有关此版本以及先前版本的详细信息，请参见以下页面和站点：</block>
   <block id="89d597c4d411409065b7e48fe97b7327" category="inline-link-macro">Astra Control REST API 的新增功能</block>
   <block id="55d1aec576bc2fa5929c487a67f4f1fe" category="list-text"><block ref="55d1aec576bc2fa5929c487a67f4f1fe" category="inline-link-macro-rx"></block></block>
   <block id="fdd081f1598a50889ba0720484271938" category="inline-link-macro">早期版本的 Astra Automation 文档</block>
@@ -633,7 +632,6 @@
   <block id="08d7f360c94a906d3639173599184943" category="paragraph">执行以下 REST API 调用。您必须提供备份（如下所示）或快照的 ID 。</block>
   <block id="a477f086784d869d73c5ae084b145ca8" category="section-title">curl 示例：从备份原位还原应用程序</block>
   <block id="98904826ae5cef8716020180473276c8" category="admonition">用于访问 Astra Control 资源的路径和完整 URL 的格式基于多个值。请参见 <block ref="d30352e41f8ff3b0c022e188e6d650e9" category="inline-link-macro-rx"></block> 有关详细信息 ...另请参见 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关使用 Astra 资源和端点的更多详细信息。</block>
-  <block id="5814e35bd932d85c35c92f3c990f80c0" category="paragraph">* 版本 * 列表示首次引入资源时的 Astra 版本。对于新添加到当前版本的资源，此字段为粗体。</block>
   <block id="be8545ae7ab0276e15898aae7acfbd7a" category="cell">资源</block>
   <block id="b8e7b465df7c5979dc731d06e84ce2cf" category="cell">版本。</block>
   <block id="08bd40c7543007ad06e4fce31618f6ec" category="cell">Account</block>
@@ -874,7 +872,6 @@
   <block id="b0df0cbb0d80fcf4a587effd8b8f3f6a" category="sidebar">配置LDAP服务器</block>
   <block id="a941511c207017106c6b7b09e9dec884" category="summary">本站点的文档介绍了Astra Control REST API以及随Astra Control提供的相关自动化技术。</block>
   <block id="3f4fc4220755866f399810fee47c7884" category="inline-link-macro">GitHub 贡献者</block>
-  <block id="65ed3c4720fad34d453db54755338725" category="paragraph">在 Twitter @NetAppDoc 上关注我们。通过成为发送有关文档的反馈 <block ref="78cabac26f0b6e0ce9a3e24d1b749910" category="inline-link-macro-rx"></block> 或发送电子邮件至 doccomments@netapp.com 。</block>
   <block id="2d388ce46646f517f31092dee87e1af6" category="paragraph">您可以在工作站的命令行界面上通过问题描述 执行一个简单的cURL命令来开始使用Astra Control REST API并确认其可用性。</block>
   <block id="35ae08a314ffffc02580e3c3fbfad924" category="sidebar">功能和优势</block>
   <block id="7a161061772a428a5823e2adbe01f5f4" category="summary">您可以访问Astra Control REST API调用的详细信息、包括HTTP方法、输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。</block>
@@ -1008,7 +1005,6 @@
   <block id="c23ee749361bcb35c4bb9425ae5cd602" category="cell">/accouns/｛account_id｝/topology/v1/clones/clones/clusters/storageClasses.&lt;CLUSTER_ID&gt; &lt;CLOUD_ID&gt;</block>
   <block id="38a0f81608bad4301a7bd0c62937c7a0" category="summary">您可以添加一个集群、使其可由Astra管理。</block>
   <block id="617a1e32f2d409a9c77e56b76a744edc" category="doc">使用凭据添加集群</block>
-  <block id="1596fe22178cdca2d275cff48aad4af1" category="paragraph">您可以添加一个集群、使其可由Astra管理。从Astra 22.11开始、您可以使用Astra控制中心或Astra控制服务添加集群。</block>
   <block id="ec1064b7d3d701d90bcd843f62de2199" category="admonition">使用主要云提供商之一(AKS、EKS、GKE）提供的Kubernetes服务时、不需要添加集群。</block>
   <block id="9a7df7f9a0a709d54e5600f10282be3c" category="section-title">1.获取kubeconfig文件</block>
   <block id="0f9d366662bdbaac5e7e94b497107f97" category="paragraph">您需要从Kubernetes管理员或服务处获取一份* kubconfig*文件副本。</block>
@@ -1091,7 +1087,6 @@
   <block id="012c01c016d35f3bdc2e34a079b6cf0e" category="list-text"><block ref="012c01c016d35f3bdc2e34a079b6cf0e" category="inline-link-rx"></block></block>
   <block id="099195e2a0ecbb5b0569da7e9c28fbc0" category="inline-link">Astra Control Center 21.08：新增功能</block>
   <block id="70679aeca94d2b828ca1dc6cda2ac994" category="list-text"><block ref="70679aeca94d2b828ca1dc6cda2ac994" category="inline-link-rx"></block></block>
-  <block id="9f4dd3879adfbe7a60dc7c6745d67158" category="paragraph">本站点的文档介绍了随2022年11月(22.11)版的Astra Control REST API以及相关自动化技术。特别是、此版本的REST API随相应的Astra控制中心和Astra控制服务22.11版本一起提供。</block>
   <block id="070b3d3a153094a5ee57ed5e75530780" category="inline-link">Astra控制中心22.11文档</block>
   <block id="bee8b0efee9e08520e8e0cb30b730adf" category="list-text"><block ref="bee8b0efee9e08520e8e0cb30b730adf" category="inline-link-rx"></block></block>
   <block id="165fa9bdd003d8079831262d0360efc1" category="inline-link">Astra Control Automation 22.08文档</block>
@@ -1099,11 +1094,9 @@
   <block id="547abae9d6ca9df339ec4543e220ab8e" category="sidebar">首次API调用</block>
   <block id="013a127f643228c21ab6c9baf558cef5" category="sidebar">添加集群</block>
   <block id="826f785c760529ceb6e978afdab2a9a7" category="sidebar">创建保护策略</block>
-  <block id="01d6bcac2686956739a4135c6248a7e0" category="admonition">Astra Control REST API 22.11版没有新的已知问题。以下所述问题已在先前版本中发现，但仍适用于当前版本。</block>
   <block id="25742c79c197ce7f0982652ead3bd964" category="section-title">其他工作流</block>
   <block id="7494e7f70b31d89664784c20229e8098" category="paragraph">添加了说明Astra Control REST API的其他工作流。请参见 <block ref="fc2071d838ca44c08fca8ef5c62f2e8e" category="inline-link-macro-rx"></block> 和 <block ref="b729850dc33cbcb91b47d13a137b85a8" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="7a95f2a4373ad29d744890f090214195" category="inline-link">Astra控制中心的已知问题</block>
-  <block id="9fa80e5e6d07d73203692c1b2c6a3f1f" category="paragraph">请参见<block ref="1748a923b17519fc41af247d5369ec47" category="inline-link-rx"></block> 有关详细信息 ...</block>
   <block id="1a615153bb2bd3389942d44023a8f4bb" category="paragraph-title">拥有 Astra 帐户凭据</block>
   <block id="7e8def8db3d7d1cc38b119879791cb9b" category="paragraph-title">熟悉 Kubernetes 的基本概念</block>
   <block id="0182974655f974e8429fb64bb3d15eb2" category="paragraph-title">查看 REST 概念和实施</block>
@@ -1164,4 +1157,30 @@
   <block id="cbb81506a7fe3ef03f7a89c76c52131a" category="paragraph-title">分页</block>
   <block id="e93f994f01c537c4e2f7d8528c3eb5e9" category="paragraph-title">计数</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">概述</block>
+  <block id="ec23c88fbeb1dbd6e4036cbd90351825" category="paragraph">您可以添加一个集群、使其可由Astra管理。从Astra 22.11版开始、您可以添加同时包含Astra控制中心和Astra控制服务的集群。</block>
+  <block id="9f8189b17fcf187cb4416d8f8ee93490" category="cell">通过这些工作流、可以访问通过Astra Control REST API提供的云。</block>
+  <block id="80bcbd8aa7db0b3dfcedfd4388c73c17" category="paragraph">* 版本 * 列表示首次引入资源时的 Astra 版本。对于最近添加到REST API的资源、此字段为粗体。</block>
+  <block id="34d23ad383fb9597324019dc1045fabb" category="admonition">Astra Control REST API 23.01版没有新的已知问题。以下所述的任何问题均已在先前版本中发现、并且仍适用于当前版本。</block>
+  <block id="73e9416791f56a93d23840b6c27ae436" category="paragraph">请根据您的部署模式查看以下页面之一。</block>
+  <block id="eb6a5d80177fc44f1a834a5fac76b612" category="inline-link">Astra控制服务的已知问题</block>
+  <block id="1a8244f3a147b8df7de50e9d16df07ac" category="list-text"><block ref="1a8244f3a147b8df7de50e9d16df07ac" category="inline-link-rx"></block></block>
+  <block id="750f48353ffad2f2dc8aaad3df0d9144" category="list-text"><block ref="750f48353ffad2f2dc8aaad3df0d9144" category="inline-link-rx"></block></block>
+  <block id="48d4b62231f750392dd784d9182c8dc5" category="paragraph">此站点的文档介绍了两种Astra部署模式的最新版本中包含的Astra Control REST API以及相关自动化技术。</block>
+  <block id="b23a60ebc7020fe310d80180653261b7" category="paragraph-title">发布节奏</block>
+  <block id="aecf6ebbe0aba381087ff4427d1692b7" category="paragraph">通常、Astra控制服务和Astra控制中心的更新会同时发布。但是、Astra控制服务会使用加速发布节奏、从而导致在最新的Astra控制中心版本之后进行一次或多次增量更新。</block>
+  <block id="0e4bd344e2cee7644ad300cdfc0d63d1" category="paragraph">由于此站点记录了这两种部署模式的REST API、因此可能包含一些仅适用于最新的Astra Control Service版本的功能或更改。此站点会根据需要记录这两者之间的差异。</block>
+  <block id="ce2f654fe20c0aa5fa4ece0648021275" category="paragraph-title">Astra Control部署</block>
+  <block id="a6614c977e9c818d6355f9b59c74764f" category="paragraph">此站点上的文档介绍了适用场景 的Astra部署模式、如下所示。</block>
+  <block id="d92324a56dde3645b2b0ebf9145c93b8" category="list-text">Astra控制服务23.01</block>
+  <block id="910e94624b00c7abc1675a19e1165204" category="list-text">Astra控制中心22.11</block>
+  <block id="ab066b3292d8ab61ef3b5c77169cdd19" category="paragraph-title">更多信息</block>
+  <block id="06e642707bb2ed358193d9d175786f6d" category="paragraph">有关包含REST API的Astra Control的当前版本以及早期版本的详细信息、请参见以下内容。</block>
+  <block id="57568765d51dbdfa0a0799807a13dfc5" category="inline-link">Astra Control Service 23.01文档</block>
+  <block id="9905934fe9c85f338f46074487afd222" category="list-text"><block ref="9905934fe9c85f338f46074487afd222" category="inline-link-rx"></block></block>
+  <block id="8372692ac95eb7fc27fe8f964e134d59" category="paragraph-title">参与其中</block>
+  <block id="5596f30fbf5a63b7848467c492bb0781" category="paragraph">在Twitter *@NetAppDocument*上关注我们。您也可以通过成为发送有关文档的反馈 <block ref="78cabac26f0b6e0ce9a3e24d1b749910" category="inline-link-macro-rx"></block> 或发送电子邮件至_doccomments@netapp.com_。</block>
+  <block id="14f03db07d2c880fafbf7c4fdb9955bd" category="section-title">2023年1月17日(23.01)</block>
+  <block id="055a27c4d72ac10e8bf363a70b1218a0" category="paragraph">此版本对REST API进行了少量更新。</block>
+  <block id="fd681e19859abac8a0d1df0703c54996" category="section-title">通过筛选器增强了执行挂钩功能</block>
+  <block id="03612c2b7f26bb15fe2a8f56732f28ad" category="paragraph">现在、在使用执行挂钩时、您可以添加筛选器来控制挂钩要匹配的容器。如果为单个执行钩创建多个筛选器、则这些筛选器将与逻辑运算符和运算符结合使用。每个执行挂机最多可以定义10个活动筛选器。</block>
 </blocks>

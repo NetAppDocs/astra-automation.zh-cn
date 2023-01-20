@@ -14,15 +14,29 @@ summary: 本站点的文档介绍了Astra Control REST API以及随Astra Control
 
 
 [role="lead"]
-本站点的文档介绍了随2022年11月(22.11)版的Astra Control REST API以及相关自动化技术。特别是、此版本的REST API随相应的Astra控制中心和Astra控制服务22.11版本一起提供。
+此站点的文档介绍了两种Astra部署模式的最新版本中包含的Astra Control REST API以及相关自动化技术。
 
-有关此版本以及先前版本的详细信息，请参见以下页面和站点：
+.发布节奏
+通常、Astra控制服务和Astra控制中心的更新会同时发布。但是、Astra控制服务会使用加速发布节奏、从而导致在最新的Astra控制中心版本之后进行一次或多次增量更新。
+
+由于此站点记录了这两种部署模式的REST API、因此可能包含一些仅适用于最新的Astra Control Service版本的功能或更改。此站点会根据需要记录这两者之间的差异。
+
+.Astra Control部署
+此站点上的文档介绍了适用场景 的Astra部署模式、如下所示。
+
+* Astra控制服务23.01
+* Astra控制中心22.11
+
+
+.更多信息
+有关包含REST API的Astra Control的当前版本以及早期版本的详细信息、请参见以下内容。
 
 * link:../rn/whats_new.html["Astra Control REST API 的新增功能"]
 * link:../endpoints/resources.html["REST 资源和端点"]
 * https://docs.netapp.com/us-en/astra-control-center/["Astra控制中心22.11文档"^]
-* https://docs.netapp.com/us-en/astra-control-service/["Astra Control Service 文档"^]
+* https://docs.netapp.com/us-en/astra-control-service/["Astra Control Service 23.01文档"^]
 * link:../aa-earlier-versions.html["早期版本的 Astra Automation 文档"]
 
 
-在 Twitter @NetAppDoc 上关注我们。通过成为发送有关文档的反馈 link:https://docs.netapp.com/us-en/contribute/["GitHub 贡献者"^] 或发送电子邮件至 doccomments@netapp.com 。
+.参与其中
+在Twitter *@NetAppDocument*上关注我们。您也可以通过成为发送有关文档的反馈 link:https://docs.netapp.com/us-en/contribute/["GitHub 贡献者"^] 或发送电子邮件至_doccomments@netapp.com_。
