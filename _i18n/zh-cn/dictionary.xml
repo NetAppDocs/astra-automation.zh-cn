@@ -237,7 +237,6 @@
   <block id="7a1a5f3e79fdc91edf2f5ead9d66abb4" category="list-text">读取</block>
   <block id="06933067aafd48425d67bcb01bba5cb6" category="list-text">更新</block>
   <block id="f2a6c498fb90ee345d997f888fce3b18" category="list-text">删除</block>
-  <block id="fde59e3cd820ea0be7c3ed5c4be3f292" category="paragraph">对于某些 Astra 资源，仅支持其中一部分操作。您应查看 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关特定 API 调用的详细信息。</block>
   <block id="957a8c35c28e967701ff975f1d7182d5" category="section-title">HTTP 方法</block>
   <block id="63d1169901437c6f9acfc445cee3a4ba" category="paragraph">下表显示了 API 支持的 HTTP 方法或动词。</block>
   <block id="4c3880bb027f159e801041b1021e88e8" category="cell">方法</block>
@@ -631,7 +630,6 @@
   <block id="1a0ca7f0a5aea880c24d544b4655d6ed" category="doc">Astra Control Automation 文档</block>
   <block id="08d7f360c94a906d3639173599184943" category="paragraph">执行以下 REST API 调用。您必须提供备份（如下所示）或快照的 ID 。</block>
   <block id="a477f086784d869d73c5ae084b145ca8" category="section-title">curl 示例：从备份原位还原应用程序</block>
-  <block id="98904826ae5cef8716020180473276c8" category="admonition">用于访问 Astra Control 资源的路径和完整 URL 的格式基于多个值。请参见 <block ref="d30352e41f8ff3b0c022e188e6d650e9" category="inline-link-macro-rx"></block> 有关详细信息 ...另请参见 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关使用 Astra 资源和端点的更多详细信息。</block>
   <block id="be8545ae7ab0276e15898aae7acfbd7a" category="cell">资源</block>
   <block id="b8e7b465df7c5979dc731d06e84ce2cf" category="cell">版本。</block>
   <block id="08bd40c7543007ad06e4fce31618f6ec" category="cell">Account</block>
@@ -791,7 +789,6 @@
   <block id="2839ece291324f6c806790ca58811cc8" category="paragraph">如果某个LDAP用户属于多个LDAP组、并且在Astra中为这些组分配了不同的角色、则用户在进行身份验证时的有效角色将获得最大的特权。例如、如果为用户分配了组1的`viewer`角色、但在组2中具有`mMember`角色、则该用户的角色将为`mMember`。这基于Astra使用的层次结构(从高到低)：</block>
   <block id="f2ed562f43254d0123b5ec5c7446769b" category="paragraph">Astra大约每60秒就会将其用户和组与LDAP服务器同步一次。因此、如果将用户或组添加到LDAP或从LDAP中删除、则可能需要长达一分钟的时间、才能在Astra中使用该用户或组。</block>
   <block id="b76debe413bda7ec6dfd72991496d708" category="paragraph">在尝试重置LDAP配置之前、必须先禁用LDAP身份验证。此外、要更改LDAP服务器(`connectionHost`)、您需要同时执行这两个操作。请参见 <block ref="9757cdec26988067ceb9687504d1344e" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
-  <block id="fd492c20355537c6885cfc88284a0f9c" category="paragraph">LDAP配置工作流会调用REST API来完成特定任务。每个API调用都可以包括输入参数、如提供的示例所示。请参见 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关如何查找参考文档的信息。</block>
   <block id="a4cce93638d786143ceaec53646fcbd0" category="paragraph">您需要选择LDAP服务器并将Astra配置为使用该服务器作为身份验证提供程序。配置任务包括以下步骤。每个步骤都包括一个REST API调用。</block>
   <block id="b05f354eda3398ade96e9055b0305ee6" category="section-title">1.添加CA证书</block>
   <block id="468c35b0a371a6568ff7d068ff72eeea" category="paragraph">执行以下REST API调用、将CA证书添加到Astra。</block>
@@ -1184,4 +1181,8 @@
   <block id="06661ae837df4aebc82db4f943f32dd7" category="paragraph">有关当前版本以及先前版本的Astra Control的详细信息、请参见以下页面和站点。</block>
   <block id="6dbfc88df6a1c21e55d3430850d3bd1c" category="paragraph-title">帮助我们改进文档</block>
   <block id="d2d35c8cbc7027976910df89e09c7b5a" category="paragraph">请在Twitter *@NetAppDocument*上关注我们、了解有关NetApp文档的通知。您也可以通过成为来提供反馈 <block ref="78cabac26f0b6e0ce9a3e24d1b749910" category="inline-link-macro-rx"></block> 或发送电子邮件至_doccomments@netapp.com_。</block>
+  <block id="11c9923ccf1bdb99c76f391a24f9925f" category="inline-link-macro">联机API参考</block>
+  <block id="e89fa43834d6738a939f8c7ecd4c28a4" category="paragraph">LDAP配置工作流会调用REST API来完成特定任务。每个API调用都可以包括输入参数、如提供的示例所示。请参见 <block ref="bc3e5681b34d05fe80cb8ba4dac9f8c1" category="inline-link-macro-rx"></block> 有关如何查找参考文档的信息。</block>
+  <block id="b7ca8ec82a5eaa56c4cd485d10d4f8ff" category="admonition">用于访问 Astra Control 资源的路径和完整 URL 的格式基于多个值。请参见 <block ref="d30352e41f8ff3b0c022e188e6d650e9" category="inline-link-macro-rx"></block> 有关详细信息 ...另请参见 <block ref="bc3e5681b34d05fe80cb8ba4dac9f8c1" category="inline-link-macro-rx"></block> 有关使用 Astra 资源和端点的更多详细信息。</block>
+  <block id="943f70de346a2442881b356af65be85e" category="paragraph">对于某些 Astra 资源，仅支持其中一部分操作。您应查看 <block ref="bc3e5681b34d05fe80cb8ba4dac9f8c1" category="inline-link-macro-rx"></block> 有关特定 API 调用的详细信息。</block>
 </blocks>

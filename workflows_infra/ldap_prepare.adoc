@@ -86,4 +86,4 @@ Astra大约每60秒就会将其用户和组与LDAP服务器同步一次。因此
 在尝试重置LDAP配置之前、必须先禁用LDAP身份验证。此外、要更改LDAP服务器(`connectionHost`)、您需要同时执行这两个操作。请参见 link:../workflows_infra/wf_ldap_disable_reset.html["禁用并重置LDAP"] 有关详细信息 ...
 
 .REST API参数
-LDAP配置工作流会调用REST API来完成特定任务。每个API调用都可以包括输入参数、如提供的示例所示。请参见 link:../reference/api_reference.html["API 参考"] 有关如何查找参考文档的信息。
+LDAP配置工作流会调用REST API来完成特定任务。每个API调用都可以包括输入参数、如提供的示例所示。请参见 link:../get-started/online_api_ref.html["联机API参考"] 有关如何查找参考文档的信息。

@@ -34,7 +34,7 @@ Astra Control REST API 可实施一个事务模式，其中包含定义明确的
 * 删除
 
 
-对于某些 Astra 资源，仅支持其中一部分操作。您应查看 link:../reference/api_reference.html["API 参考"] 有关特定 API 调用的详细信息。
+对于某些 Astra 资源，仅支持其中一部分操作。您应查看 link:../get-started/online_api_ref.html["联机API参考"] 有关特定 API 调用的详细信息。
 
 
 
