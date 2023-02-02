@@ -9,7 +9,7 @@ settings:
     harmony_enabled: false
     api_enabled: true
   rss_page: rn/whats_new.html
-  langs: zh-cn,us-en,ja-jp,ko-kr,zh-tw,de-de,fr-fr
+  langs: zh-cn,us-en,ja-jp,ko-kr,zh-tw,de-de,es-es,fr-fr
 sidebar:
   entries:
   - title: Astra Control Automation 文档
