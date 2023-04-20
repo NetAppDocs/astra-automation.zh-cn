@@ -25,7 +25,6 @@
   <block id="b9df3bfca1810fb5992aadc53d6c5f6e" category="cell">被视为足够重要的一小部分事件，可提供给用户。</block>
   <block id="3d74270bce6df5c461068acd3992d1bd" category="cell">未读通知</block>
   <block id="0f15555c27239decf2cb19f7c4f55045" category="cell">用户尚未读取或检索的通知。</block>
-  <block id="7fec4843ebac2572cb7aba56b67d7ddb" category="doc">使用收集</block>
   <block id="70aa5e2062c38998b012ec6ad0a58b47" category="paragraph">您可以使用 `include` 参数为每个资源实例指定应返回的键值对。所有实例都会在响应正文中返回。</block>
   <block id="9ef1f99668081dc49f2b7578a58a3eb0" category="paragraph">通过收集资源筛选， API 用户可以指定条件，以确定是否在响应正文中返回资源。`filter` 参数用于指示筛选条件。</block>
   <block id="46a94c0bcecf335769bbfabb72514b44" category="paragraph">通过收集资源排序， API 用户可以在响应正文中指定资源的返回顺序。`ordersBy` 参数用于指示筛选条件。</block>
@@ -267,7 +266,6 @@
   <block id="ce5bf551379459c1c61d2a204061c455" category="cell">位置</block>
   <block id="cea5f66f37995fb196323018a31600fc" category="cell">包含新创建资源的完整 URL 。</block>
   <block id="6e2102ce7d7573c8b221194a86f7a48b" category="section-title">查询参数</block>
-  <block id="b206801753ef0a6abfae5904e5c68a57" category="paragraph">以下查询参数可用于资源收集。请参见 <block ref="114f30b2f00431234237350f516a01cf" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="ce73e1ed10f91fd167ae3d5803ce8dff" category="cell">查询参数</block>
   <block id="4d0d3b0c69167fef7204e14c4e946c15" category="cell">包含读取收集时应返回的字段。</block>
   <block id="c6960e489ca14167f9bd9ace657e6790" category="cell">指示读取收集时要返回的资源必须匹配的字段。</block>
@@ -572,7 +570,6 @@
   <block id="d5def2c7a33c06df000ce3ff88f44d5e" category="paragraph">Astra Control REST API 提供了多种支持功能，可用于诊断和调试。</block>
   <block id="b3433e01f10e1e1369d819f420b2a8a7" category="paragraph">_Workflow _ 是完成特定管理任务或目标所需的一个或多个步骤的序列。Astra Control 工作流中的每个步骤均为以下步骤之一：</block>
   <block id="0c59027cf761af16d5101de509ed5ef7" category="paragraph">请务必查看 <block ref="533ba43849291e761802432633424684" category="inline-link-macro-rx"></block> 有关 REST 概念的信息以及有关如何设计 Astra Control REST API 的详细信息。</block>
-  <block id="ef69df9e80d5e1591d22bfe189aa737e" category="admonition">Astra Control REST API 还使用 * HTTP APIs* 标准的问题详细信息。请参见 <block ref="d9c154af7dec160f41ead610ccb970e9" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="de89d8750ec160e779ccfc4acb253798" category="list-text">令牌资源表示可通过编程方式访问 Astra Control REST API 的令牌。</block>
   <block id="55fcf9a6a46c69408785dcd2e3a82522" category="admonition">这些资源和端点当前未包含在 Astra Control REST API 参考文档中。</block>
   <block id="14d9b10c6196045941347a9e85704b50" category="inline-link">Astra Trident 文档</block>
@@ -1189,4 +1186,6 @@
   <block id="5f86a5c97c95f60e61c70ba77d7346ae" category="list-text"><block ref="5f86a5c97c95f60e61c70ba77d7346ae" category="inline-link-rx"></block></block>
   <block id="0b5b4445b358715641cec74fe5aa74a5" category="paragraph">为Astra Control和其他NetApp产品提供社区支持。</block>
   <block id="c216e952dc373af46e9e31e0b8bdcf89" category="sidebar">Astra Automation</block>
+  <block id="8d5b3dceacc1264c4bb5aed273137b7a" category="paragraph">以下查询参数可用于资源收集。请参见 <block ref="a72643cb6a22061c1930f2e30db11319" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="d9a8eedd670f58ed76d5ae881e6d4469" category="admonition">Astra Control REST API 还使用 * HTTP APIs* 标准的问题详细信息。请参见 <block ref="e560597744bc7b2711ae89c683c4035f" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
 </blocks>
