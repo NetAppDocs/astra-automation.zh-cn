@@ -35,7 +35,10 @@ NOTE: 使用主要云提供商之一(AKS、EKS、GKE）提供的Kubernetes服务
 如果您收到格式为YAML的kubeconfig文件、则需要将其转换为JSON。
 
 .在base64中对JSON进行编码
-必须在base64中对JSON文件进行编码。例如：
+必须在base64中对JSON文件进行编码。
+
+.示例
+以下是将kubeconfigfile文件从YAML转换为JSON并在base64中进行编码的示例：
 
 `yq -o=json ~/.kube/config | base64`
 
