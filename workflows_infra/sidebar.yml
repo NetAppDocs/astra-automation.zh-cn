@@ -44,3 +44,5 @@ entries:
     url: "/workflows_infra/wf_list_storage_classes.html"
   - title: 列出存储后端
     url: "/workflows_infra/wf_list_storage_backends.html"
+  - title: 启用动态ANF池
+    url: "/workflows_infra/wf_enable_anf_dyn_pools.html"

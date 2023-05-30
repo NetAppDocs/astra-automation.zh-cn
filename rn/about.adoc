@@ -27,7 +27,7 @@ NOTE: 每个Astra Control发行版都分配有一个格式为*YY.MM*的版本号
 .Astra Control部署
 此站点的文档将发布以下适用场景 控制版本：
 
-* Astra Control Service 23.04
+* Astra Control Service 23.05
 * Astra控制中心23.04.
 
 
@@ -37,7 +37,7 @@ NOTE: 每个Astra Control发行版都分配有一个格式为*YY.MM*的版本号
 * link:../rn/whats_new.html["Astra Control REST API 的新增功能"]
 * link:../endpoints/resources.html["REST 资源和端点"]
 * https://docs.netapp.com/us-en/astra-control-center/["Astra Control Center 23.04文档"^]
-* https://docs.netapp.com/us-en/astra-control-service/["Astra Control Service 23.04文档"^]
+* https://docs.netapp.com/us-en/astra-control-service/["Astra Control Service 23.05文档"^]
 * link:../aa-earlier-versions.html["早期版本的 Astra Automation 文档"]
 
 

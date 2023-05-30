@@ -4,7 +4,7 @@ permalink: get-started/online_api_ref.html
 keywords: reference, api reference 
 summary: 您可以访问Astra Control REST API调用的详细信息、包括HTTP方法、输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。 
 ---
-= 联机API参考
+= 访问Astra API参考文档
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,18 +16,22 @@ summary: 您可以访问Astra Control REST API调用的详细信息、包括HTTP
 [role="lead"]
 您可以访问Astra Control REST API调用的详细信息、包括HTTP方法、输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。
 
-
-NOTE: 目前， Astra Control 随附了 REST API 参考文档，可在线获取。
-
 .开始之前
-您需要一个 Astra 控制中心或 Astra 控制服务帐户。
+您需要凭据才能登录到适用于您的部署的ASRA Web用户界面。用于访问参考文档的操作步骤对于Astra控制服务和Astra控制中心是相同的。只有URL不同。访问和查看参考文档不需要API令牌。
 
 .步骤
-. 使用您的帐户凭据登录到 Astra 。
+. 使用您的帐户凭据登录ASRA、如下所示：
 +
-访问以下站点以获取 Astra 控制服务： link:https://astra.netapp.io["https://astra.netapp.io"^]
+** Asta控制服务： link:https://astra.netapp.io["https://astra.netapp.io"^]
+** Astra Control Center：使用安装期间为您的本地环境建立的URL
+
 
 . 单击页面右上角的图图标并选择 * API access* 。
 . 在页面顶部，单击 * API Documentage* 下显示的 URL 。
-. 如果出现提示，请重新提供您的帐户凭据。
 
+
+.结果
+Swagger页面将在新窗口或选项卡中启动。请注意、此URL包含您登录的帐户的帐户ID。
+
+.下一步是什么？
+您可以选择从Swagger页面执行API调用。请参见 link:../get-started/online_api_call.html["问题描述Asta REST API调用"] 有关详细信息 ...

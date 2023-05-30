@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: get-started/online_api_call.html 
+keywords: reference, api reference, execute call 
+summary: 您可以从问题描述参考文档页面对Astra Control REST API调用执行API调用。 
+---
+= 问题描述Asta REST API调用
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以从问题描述参考文档页面对Astra Control REST API调用执行API调用。
+
+.开始之前
+您必须登录Astra并访问API参考页面。请参见 link:../get-started/online_api_ref.html["访问Astra API参考文档"] 有关详细信息 ...您还需要一个令牌才能使用REST API。请参见 link:../get-started/get_api_token.html["获取 API 令牌"] 有关生成API令牌的详细信息。
+
+.步骤
+. 在API参考页面顶部、单击*授权*。
+. 将您的API令牌值复制并粘贴到弹出窗口的字段中，单击*Authorize*，然后单击*Close*。
+. 向下滚动页面并打开所需的API调用。
+. 在右键单击*试用*。
+. 在同一API调用中向下滚动，然后单击*Execute。
+
+
+.结果
+此时将执行API调用并显示HTTP状态代码。

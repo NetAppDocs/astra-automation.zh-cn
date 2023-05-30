@@ -62,7 +62,6 @@
   <block id="8cd58c89ff3d51a256ecfe3fe8bab20f" category="inline-link-macro">其他资源</block>
   <block id="1975d27c17bd745494bde5176f3687d2" category="paragraph">您应了解中建议的追加信息资源 <block ref="d9232e9ba333ee728d29f8228e038c57" category="inline-link-macro-rx"></block>。</block>
   <block id="6e567afb3c0582569592264335e77063" category="doc">获取 API 令牌</block>
-  <block id="b329e0b224bc672c7032902e91459644" category="list-text">单击页面上的 * 生成 API 令牌 * ，然后在弹出窗口中单击 * 生成 API 令牌 * 。</block>
   <block id="3040c02566f3d35a3b86a6ca9472dadd" category="list-text">单击图标将令牌字符串复制到剪贴板并将其保存在编辑器中。</block>
   <block id="df98c0b39730eeb3f14749ea1c0684c2" category="list-text">复制并保存同一页面上提供的帐户 ID 。</block>
   <block id="1b18b55a054bdd1b04a8c8f5c862bc4f" category="doc">准备使用这些工作流</block>
@@ -227,7 +226,6 @@
   <block id="af9ef9bb2e7c334105bad0aa17ad5d28" category="section-title">6. 删除应用程序</block>
   <block id="08a28b071946cc1515702440ff6582d8" category="paragraph">执行工作流 <block ref="a7ef8d5c47daed312bb700c375f9019c" category="inline-link-macro-rx"></block> 删除应用程序。</block>
   <block id="a242cf3d90ad638fe0e23d9477b74175" category="list-text">在页面顶部，单击 * API Documentage* 下显示的 URL 。</block>
-  <block id="1cafd580155ad918d6c525c18cc8e5e6" category="list-text">如果出现提示，请重新提供您的帐户凭据。</block>
   <block id="015f8c34f52b6ef8a3361958660f5e88" category="inline-link-macro">其他注意事项</block>
   <block id="7ab91fd48b58ce1ea4cada1f1a4e1808" category="doc">HTTP 详细信息</block>
   <block id="deaf360f123e9392f769c7ceb4e01747" category="section-title">API 事务和 CRUD 模型</block>
@@ -500,8 +498,6 @@
   <block id="6a627ba1141f45676a9b0d39e9f12cbe" category="cell">克隆和还原应用程序</block>
   <block id="f51006269ca36dd064b0504bccc2bab2" category="paragraph">使用管理工作流时，还需要注意一些其他注意事项。</block>
   <block id="78997a84642061d9102d778722872a51" category="paragraph">克隆应用程序时，需要考虑一些事项。以下所述参数是 JSON 输入的一部分。</block>
-  <block id="18bfd97c33ffd64bcd077be2ff48cd45" category="paragraph">您需要一个 Astra 控制中心或 Astra 控制服务帐户。</block>
-  <block id="1fb6c6816575c47391caa2d4408774f5" category="paragraph">访问以下站点以获取 Astra 控制服务： <block ref="a7c1946d9e83ca7cb364e2283d9c1bfa" category="inline-link-macro-rx"></block></block>
   <block id="640575a1239211b2cdac8d24cbd8fe4e" category="paragraph">Astra 控制中心和 Astra 控制服务提供了一个通用的 REST API ，您可以通过编程语言或 Curl 等实用程序直接访问该 API 。下面介绍了 API 的主要亮点和优势。</block>
   <block id="351df3aa3706c8ed2199a8019e815c0c" category="admonition">要访问 REST API ，您需要先登录到 Astra Web 用户界面并生成 API 令牌。您必须在每个 API 请求中包含令牌。</block>
   <block id="479c256f055cedaadf40e8a31b1cb62f" category="paragraph">REST API 提供了一组丰富的查询参数，您可以使用这些参数来访问资源集合。支持的部分操作包括筛选，排序和分页。</block>
@@ -563,7 +559,6 @@
   <block id="6c38ead9bdb25d09c6e504c53fc268a5" category="paragraph">Astra Control API 是使用 REST 技术和当前最佳实践创建的。核心技术包括 HTTP ， JSON 和 RBAC 。</block>
   <block id="6ded6cd1a82081d2c5fe31ad44e26927" category="paragraph">Astra 控制服务在公有云环境中使用，而 Astra 控制中心则用于您的内部部署。有一个 REST API 支持这两种部署模式。</block>
   <block id="973e2c06fdb700a27ccfb70fe4627261" category="paragraph">Astra Control REST API 可提供强大的调试和问题确定功能，包括系统事件和用户通知。</block>
-  <block id="2aedb1bdf28ee2f3357b9859cfa547c3" category="admonition">目前， Astra Control 随附了 REST API 参考文档，可在线获取。</block>
   <block id="0f879b71f480ca631ac007cea8270eb9" category="paragraph">Astra Control REST API 中提供的主要资源端点分为三类。除了需要说明的情况外，可以使用一整套 CRUD 操作（创建，读取，更新，删除）来访问每个资源。</block>
   <block id="a3fb339c1c586b61a4747f75e3e18873" category="list-text"><block ref="a3fb339c1c586b61a4747f75e3e18873" category="inline-link-rx"></block></block>
   <block id="8814863051032c96890d514b89b4519c" category="paragraph">Astra Control REST API 提供了多种不同的方法来通过定义的查询参数访问资源收集。</block>
@@ -705,15 +700,12 @@
   <block id="3430bf151db09278950b5545d1433fc0" category="paragraph">标签可以与 Kubernetes 对象关联。它们使用键值对描述属性，并可在集群上强制实施任意组织，这对组织可能有用，但不在核心 Kubernetes 操作范围内。</block>
   <block id="f2082cbd04c532123c4a60b265595268" category="paragraph">要使用 Astra Control REST API ，您需要获取 Astra API 令牌。</block>
   <block id="e18812059a8d09f0f17ebcad797930df" category="paragraph">API 令牌用于标识 Astra 的调用方，并且必须包含在每个 REST API 调用中。</block>
-  <block id="0e2c9374186101782c17c706d964b6ab" category="list-text">您可以使用 Astra Web 用户界面生成 API 令牌。</block>
-  <block id="dd1c8bab333b87721ef3d1780c9d2744" category="list-text">令牌附带的用户身份由创建令牌的用户确定。</block>
   <block id="80c4d1da0ffc63fa594010f5c5541b4b" category="list-text">令牌必须包含在 `Authorization` HTTP Request 标头中。</block>
   <block id="7d3bb36b2de41ab91073fa12ad3242f6" category="list-text">您可以在 Astra Web 用户界面上撤消令牌。</block>
   <block id="344fcf1ffe13f47b7e084c95c8926ec6" category="list-text"><block ref="344fcf1ffe13f47b7e084c95c8926ec6" category="inline-link-macro-rx"></block></block>
   <block id="1ac36aa6ca00de5e76a5920ca6368fa6" category="section-title">创建 Astra API 令牌</block>
   <block id="8d4eb0217153cb37c8687158d7067cfb" category="paragraph">以下步骤介绍如何创建 Astra API 令牌。</block>
   <block id="af02d3e1ad157f1839fbba3f7e1fc763" category="paragraph">此任务会在 Astra Web 界面上生成 API 令牌。此外，您还应检索帐户 ID ，在进行 API 调用时也需要使用此 ID 。</block>
-  <block id="38ed0da570fd8c0b212e0f8dc6cdb8fc" category="paragraph">通过 Curl 或编程语言访问 Astra Control REST API 时，必须在 HTTP `Authorization` Request 标头中包含 API 承载令牌。</block>
   <block id="ff187555434d269d1d36dedf48955cdb" category="paragraph">您可以通过查看以下步骤快速准备开始使用 Astra Control REST API 。</block>
   <block id="2f4e21e17441a71f2d731b0fdb15fc17" category="paragraph">您需要使用 Astra 凭据登录到 Astra Web 用户界面并生成 API 令牌。使用 Astra 控制中心，您可以在本地管理这些凭据。使用 Astra 控制服务时，帐户凭据可通过 * 身份验证 0* 服务进行访问。</block>
   <block id="4b96d62533ac6ea29ddc9891a6776a3b" category="paragraph">您应熟悉 Kubernetes 的几个基本概念。请参见 <block ref="e274b8e6d2e2ed892d318b3b2d0764db" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
@@ -1184,12 +1176,9 @@
   <block id="52eabae058b28c969498b7a857c6879d" category="list-text"><block ref="52eabae058b28c969498b7a857c6879d" category="inline-link-rx"></block></block>
   <block id="8f84a5e65a3efc01a0b185016179b60b" category="admonition">每个Astra Control发行版都分配有一个格式为*YY.MM*的版本号。此值根据可用的年份(_YY_)和月份(_MM_)标识版本。例如、Asta Control Center 23.04于2023年4月发布。</block>
   <block id="c41bf5dc0ae334cb95d5c9af7e04effd" category="paragraph">通常、对Astra控制服务和Astra控制中心的更新会同时进行。但是、Astra Control Service的版本发行速度加快、可能会导致在最新Astra Control Center版本之外进行一个或多个增量更新。</block>
-  <block id="010fb6f5627b64ba23d67bf240d888f1" category="list-text">Astra Control Service 23.04</block>
   <block id="20a97065ffc33c9c3dbdd1435b0a9fef" category="list-text">Astra控制中心23.04.</block>
   <block id="e2345475f657a83bdb89f0d758173706" category="inline-link">Astra Control Center 23.04文档</block>
   <block id="806930774cd41dac9f96fae2a8f4bdd3" category="list-text"><block ref="806930774cd41dac9f96fae2a8f4bdd3" category="inline-link-rx"></block></block>
-  <block id="40e101808c19a51478d8108eed888560" category="inline-link">Astra Control Service 23.04文档</block>
-  <block id="aff8f153110395d7fa2dad02e6fef700" category="list-text"><block ref="aff8f153110395d7fa2dad02e6fef700" category="inline-link-rx"></block></block>
   <block id="cdfde9b3972928d07d0aa9787e6589c3" category="section-title">2023年4月25日(23.04)</block>
   <block id="05b8695ac535480ad4f4cf9e5bd4ecd2" category="paragraph">此版本包含对REST API的选择性更新。</block>
   <block id="a1dba4846637919a02bf180b636f6229" category="section-title">选择性还原操作</block>
@@ -1197,4 +1186,47 @@
   <block id="fc39be20ea823e1b9e3d3a96c1cc1c4d" category="section-title">支持纯数据应用程序</block>
   <block id="060c77065349f3e6f9b971248729bf60" category="paragraph">对管理应用程序的支持已扩展到纯数据应用程序。</block>
   <block id="b844ee2db8fd78557f753d0c04015c4a" category="summary">Astra Control是一款NetApp软件产品、可为您的Kubernetes应用程序提供数据生命周期管理。根据您的环境、有两种部署模式可供选择。Astra Control Center和Astra Control Service会共享同一个REST API、具体取决于版本。您可以使用REST API和其他相关自动化技术来管理Astra Control部署。</block>
+  <block id="e347b2f3a025e39e9b9b45d49ad72dab" category="summary">您可以从问题描述参考文档页面对Astra Control REST API调用执行API调用。</block>
+  <block id="d2d3bbdb180fea4732023aa385c2bcad" category="doc">问题描述Asta REST API调用</block>
+  <block id="53b4dbb805da489969e32d5e207f43af" category="inline-link-macro">访问Astra API参考文档</block>
+  <block id="ebe7080a642d0936cad4e377fe9b8401" category="paragraph">您必须登录Astra并访问API参考页面。请参见 <block ref="010c4a1892f0ae334c914939807b2734" category="inline-link-macro-rx"></block> 有关详细信息 ...您还需要一个令牌才能使用REST API。请参见 <block ref="949977ec887dbf77cf703083221524dc" category="inline-link-macro-rx"></block> 有关生成API令牌的详细信息。</block>
+  <block id="cbed555cdf913285d9275ccd1866519f" category="list-text">在API参考页面顶部、单击*授权*。</block>
+  <block id="f1fca9fdba2865f1e5e68171f8e501c8" category="list-text">将您的API令牌值复制并粘贴到弹出窗口的字段中，单击*Authorize*，然后单击*Close*。</block>
+  <block id="d77956bf312c489126fb210ac26e1560" category="list-text">向下滚动页面并打开所需的API调用。</block>
+  <block id="640c9068a50bdac21a3ada93c538c020" category="list-text">在右键单击*试用*。</block>
+  <block id="faa896405f051eeeb846ead40d365dcf" category="list-text">在同一API调用中向下滚动，然后单击*Execute。</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">结果</block>
+  <block id="5a698356ed60cc238c0048ecf6f15037" category="paragraph">此时将执行API调用并显示HTTP状态代码。</block>
+  <block id="e90840c9e835dabec4f6627d0ccddef2" category="paragraph">您需要凭据才能登录到适用于您的部署的ASRA Web用户界面。用于访问参考文档的操作步骤对于Astra控制服务和Astra控制中心是相同的。只有URL不同。访问和查看参考文档不需要API令牌。</block>
+  <block id="c961cf856b145ed8b86b895597c0d1b6" category="list-text">使用您的帐户凭据登录ASRA、如下所示：</block>
+  <block id="ffda91bc16561c140aa3a3293cb3373d" category="list-text">Asta控制服务： <block ref="a7c1946d9e83ca7cb364e2283d9c1bfa" category="inline-link-macro-rx"></block></block>
+  <block id="b95e7570a853619e504ccb1e42b41457" category="list-text">Astra Control Center：使用安装期间为您的本地环境建立的URL</block>
+  <block id="93a04a12da3b73c104f76110d28e439f" category="paragraph">Swagger页面将在新窗口或选项卡中启动。请注意、此URL包含您登录的帐户的帐户ID。</block>
+  <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">下一步是什么？</block>
+  <block id="2e72d917f5fd43aa4a556d9db54a8b23" category="paragraph">您可以选择从Swagger页面执行API调用。请参见 <block ref="d791a02ae369ca3bfa55295caf72fedd" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="7652ed5ca976b004d92eaaa78c376c9d" category="list-text">您需要使用Asta Web用户界面生成API令牌。</block>
+  <block id="3c8afa648b8d63ba3e2f942bec9ab73e" category="list-text">用于生成令牌的操作步骤对于这两种Astra部署模式是相同的。只有用于访问Astra的URL不同。</block>
+  <block id="19f3e619111d8d4c522de7221584fc6c" category="list-text">与令牌一起携带的用户身份以及相关权限由创建令牌的用户确定。</block>
+  <block id="69c0346ff6510c5ad7f7659ec6fd66be" category="list-text">单击页面上的*生成API令牌*，然后在弹出窗口中单击*生成API令牌*。</block>
+  <block id="e720ccabcfbd213be97f4476ff0c5601" category="paragraph">通过cURL或编程语言访问Astra Control REST API时、必须在HTTP中包含API承载令牌<block ref="9cd8a2455b1839ff98ef70c05b9b5983" prefix=" " category="inline-code"></block> 请求标题。</block>
+  <block id="9aba329f6bcfe3b8f1b0df8dd4c1e1fa" category="summary">在具有ANF存储后端的私有内部集群中备份托管应用程序时、您必须启用动态ANF池功能。为此、可以提供一个订阅ID、以便在扩展和缩减容量池时使用。</block>
+  <block id="2d895ac3837ac459cbcdcd76339d84cd" category="doc">为自管理集群启用动态ANF池</block>
+  <block id="5eb0c12811f3c807e7fa3fce6fb5b38d" category="inline-link">Azure应用程序备份</block>
+  <block id="d2f8ee1082b8b805ab4862d852412403" category="admonition">动态ANF池是使用Azure NetApp Files (ANF)存储后端的Astra托管应用程序的一项功能。备份这些应用程序时、A作用 力会自动扩展和收缩永久性卷所属的容量池1.5倍。这样可以确保有足够的空间进行备份、而不会产生额外的永久费用。请参见<block ref="e77f243482d8cab01f119049bce61a15" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="7d1e075c0879d28eb6f2e0dc2ca0c95d" category="section-title">1.添加Azure订阅标识符</block>
+  <block id="842df53ed4115db6639f801f88098d30" category="admonition">您需要根据环境的具体情况更新JSON输入示例、包括订阅ID和服务主体的base64值。</block>
+  <block id="e740ac68beb1aec839dcd6ebdf75bf51" category="section-title">2.根据需要添加存储分段</block>
+  <block id="efdbcac27db1bf42436b1e2e15d5d0e5" category="paragraph">如果需要、您应向受管应用程序添加存储分段。</block>
+  <block id="31858496f01db3c4c122cda1f4614893" category="section-title">3.备份托管应用程序</block>
+  <block id="25e18fd10fb78e25d46577d809123272" category="paragraph">执行工作流 <block ref="531c5c815f0a3a3ceb921ff9baf4d1b9" category="inline-link-macro-rx"></block>。存在初始永久性卷的容量池将自动扩展和缩减。</block>
+  <block id="96422ff09af7e6fad796f820c7b0e17c" category="section-title">4.查看事件日志</block>
+  <block id="5212b6690e36338eb93a0191226877d7" category="paragraph">备份期间会记录活动事件。执行工作流 <block ref="0828f7558c056f6ee4409551e28d3465" category="inline-link-macro-rx"></block> 可查看信息。</block>
+  <block id="2aeee044c45621f3427b4056855a973c" category="list-text">Astra Control Service 23.05</block>
+  <block id="a1a82e7175905cefa5377393fc5e0e4b" category="inline-link">Astra Control Service 23.05文档</block>
+  <block id="87baaf02b03cc0785a4a9e2b89d4cdc4" category="list-text"><block ref="87baaf02b03cc0785a4a9e2b89d4cdc4" category="inline-link-rx"></block></block>
+  <block id="162c594ec970f3cd4eb2f6d6d2311381" category="section-title">2023年5月30日(23.05)</block>
+  <block id="3ecf6cf3aaad58d22b055973cbbae0d4" category="paragraph">您可以在还原或克隆操作期间选择目标存储类。</block>
+  <block id="5917ef890e9d60f9bf3cc41a2723766a" category="inline-link-macro">启用动态ANF池</block>
+  <block id="10331a659c4281dea77fa4165e988593" category="paragraph">现在、在具有ANF存储后端的私有内部集群中备份托管应用程序时、您可以通过提供订阅ID来启用动态ANF池功能。请参见 <block ref="0d6a3e3d7740d3989d225fce5dc1ad21" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="157ecd713825d83c3595df6b4c0c11af" category="sidebar">访问参考文档</block>
 </blocks>

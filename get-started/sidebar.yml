@@ -13,4 +13,8 @@ entries:
 - title: 基本 Kubernetes 概念
   url: "/get-started/kubernetes_concepts.html"
 - title: 联机API参考
-  url: "/get-started/online_api_ref.html"
+  entries:
+  - title: 访问参考文档
+    url: "/get-started/online_api_ref.html"
+  - title: 问题描述Asta REST API调用
+    url: "/get-started/online_api_call.html"
