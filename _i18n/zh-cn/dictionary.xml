@@ -1141,7 +1141,6 @@
   <block id="ec23c88fbeb1dbd6e4036cbd90351825" category="paragraph">您可以添加一个集群、使其可由Astra管理。从Astra 22.11版开始、您可以添加同时包含Astra控制中心和Astra控制服务的集群。</block>
   <block id="9f8189b17fcf187cb4416d8f8ee93490" category="cell">通过这些工作流、可以访问通过Astra Control REST API提供的云。</block>
   <block id="80bcbd8aa7db0b3dfcedfd4388c73c17" category="paragraph">* 版本 * 列表示首次引入资源时的 Astra 版本。对于最近添加到REST API的资源、此字段为粗体。</block>
-  <block id="34d23ad383fb9597324019dc1045fabb" category="admonition">Astra Control REST API 23.01版没有新的已知问题。以下所述的任何问题均已在先前版本中发现、并且仍适用于当前版本。</block>
   <block id="73e9416791f56a93d23840b6c27ae436" category="paragraph">请根据您的部署模式查看以下页面之一。</block>
   <block id="eb6a5d80177fc44f1a834a5fac76b612" category="inline-link">Astra控制服务的已知问题</block>
   <block id="1a8244f3a147b8df7de50e9d16df07ac" category="list-text"><block ref="1a8244f3a147b8df7de50e9d16df07ac" category="inline-link-rx"></block></block>
@@ -1221,12 +1220,19 @@
   <block id="25e18fd10fb78e25d46577d809123272" category="paragraph">执行工作流 <block ref="531c5c815f0a3a3ceb921ff9baf4d1b9" category="inline-link-macro-rx"></block>。存在初始永久性卷的容量池将自动扩展和缩减。</block>
   <block id="96422ff09af7e6fad796f820c7b0e17c" category="section-title">4.查看事件日志</block>
   <block id="5212b6690e36338eb93a0191226877d7" category="paragraph">备份期间会记录活动事件。执行工作流 <block ref="0828f7558c056f6ee4409551e28d3465" category="inline-link-macro-rx"></block> 可查看信息。</block>
-  <block id="2aeee044c45621f3427b4056855a973c" category="list-text">Astra Control Service 23.05</block>
-  <block id="a1a82e7175905cefa5377393fc5e0e4b" category="inline-link">Astra Control Service 23.05文档</block>
-  <block id="87baaf02b03cc0785a4a9e2b89d4cdc4" category="list-text"><block ref="87baaf02b03cc0785a4a9e2b89d4cdc4" category="inline-link-rx"></block></block>
   <block id="162c594ec970f3cd4eb2f6d6d2311381" category="section-title">2023年5月30日(23.05)</block>
   <block id="3ecf6cf3aaad58d22b055973cbbae0d4" category="paragraph">您可以在还原或克隆操作期间选择目标存储类。</block>
   <block id="5917ef890e9d60f9bf3cc41a2723766a" category="inline-link-macro">启用动态ANF池</block>
   <block id="10331a659c4281dea77fa4165e988593" category="paragraph">现在、在具有ANF存储后端的私有内部集群中备份托管应用程序时、您可以通过提供订阅ID来启用动态ANF池功能。请参见 <block ref="0d6a3e3d7740d3989d225fce5dc1ad21" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="157ecd713825d83c3595df6b4c0c11af" category="sidebar">访问参考文档</block>
+  <block id="33bb807546f543c0b9c58cf7b7e62a4c" category="section-title">2023年6月27日(23.06)</block>
+  <block id="21e74b3c28d006317f38a2bc8eb1da3b" category="section-title">Azure Marketplace</block>
+  <block id="31553f2d81caf3af40330c67fcb7b3d6" category="inline-link">设置计费</block>
+  <block id="58e46bdad56d44447c43649a3b5b4f7b" category="paragraph">Azure Marketplace订阅现在按小时计费、而不是按分钟计费。另请参见<block ref="633dc17422f08a9c882e1f52f9a90b82" category="inline-link-rx"></block>。</block>
+  <block id="8e926a216f6adb19574523270dec9729" category="section-title">Restic优化</block>
+  <block id="a73241b184629bdaef0ee68446abeb15" category="paragraph">您可以使用标志为restic备份启用性能优化<block ref="6fb6e873ef6d6ac86ac763f089d95fa1" prefix=" " category="inline-code"></block> 在新中<block ref="4e513e9fe169e7733cdfe334575b2dec" prefix=" " category="inline-code"></block> 设置API资源。设置为时<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>，的数量<block ref="47964ec30dfb028cc802262834e3577b" prefix=" " category="inline-code"></block> 将大型卷备份到Azure容器时、这种重新测试的使用量会增加。对于1 TB到4 TB的卷、将使用128个连接。对于大于4 TB的卷、将使用512个后端连接。</block>
+  <block id="60bc44a6f8b10e394c8d7a408e94fecc" category="list-text">Astra Control Service 23.06</block>
+  <block id="3987948e759f27889fb63521255c084f" category="inline-link">Astra Control Service 23.06文档</block>
+  <block id="8de8be2639041c77c0c0e3c2870c7446" category="list-text"><block ref="8de8be2639041c77c0c0e3c2870c7446" category="inline-link-rx"></block></block>
+  <block id="529552afdc21e1a01b8e807df92fe719" category="admonition">Asta Control REST API 23.06版没有新的已知问题。以下所述的任何问题均已在先前版本中发现、并且仍适用于当前版本。</block>
 </blocks>

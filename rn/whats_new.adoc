@@ -18,6 +18,24 @@ NetApp会定期更新Astra Control REST API、为您提供新功能、增强功�
 
 
 
+== 2023年6月27日(23.06)
+
+此版本包含对REST API的选择性更新。
+
+
+
+=== Azure Marketplace
+
+Azure Marketplace订阅现在按小时计费、而不是按分钟计费。另请参见 https://docs.netapp.com/us-en/astra-control-service/use/set-up-billing.html["设置计费"^]。
+
+
+
+=== Restic优化
+
+您可以使用标志为restic备份启用性能优化 `useResticParallel` 在新中 `astra.datamover` 设置API资源。设置为时 `true`，的数量 `backendConnections` 将大型卷备份到Azure容器时、这种重新测试的使用量会增加。对于1 TB到4 TB的卷、将使用128个连接。对于大于4 TB的卷、将使用512个后端连接。
+
+
+
 == 2023年5月30日(23.05)
 
 此版本包含对REST API的选择性更新。
