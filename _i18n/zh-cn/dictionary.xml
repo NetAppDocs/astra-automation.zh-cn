@@ -1193,7 +1193,6 @@
   <block id="f1fca9fdba2865f1e5e68171f8e501c8" category="list-text">将您的API令牌值复制并粘贴到弹出窗口的字段中，单击*Authorize*，然后单击*Close*。</block>
   <block id="d77956bf312c489126fb210ac26e1560" category="list-text">向下滚动页面并打开所需的API调用。</block>
   <block id="640c9068a50bdac21a3ada93c538c020" category="list-text">在右键单击*试用*。</block>
-  <block id="faa896405f051eeeb846ead40d365dcf" category="list-text">在同一API调用中向下滚动，然后单击*Execute。</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">结果</block>
   <block id="5a698356ed60cc238c0048ecf6f15037" category="paragraph">此时将执行API调用并显示HTTP状态代码。</block>
   <block id="e90840c9e835dabec4f6627d0ccddef2" category="paragraph">您需要凭据才能登录到适用于您的部署的ASRA Web用户界面。用于访问参考文档的操作步骤对于Astra控制服务和Astra控制中心是相同的。只有URL不同。访问和查看参考文档不需要API令牌。</block>
@@ -1235,4 +1234,5 @@
   <block id="3987948e759f27889fb63521255c084f" category="inline-link">Astra Control Service 23.06文档</block>
   <block id="8de8be2639041c77c0c0e3c2870c7446" category="list-text"><block ref="8de8be2639041c77c0c0e3c2870c7446" category="inline-link-rx"></block></block>
   <block id="529552afdc21e1a01b8e807df92fe719" category="admonition">Asta Control REST API 23.06版没有新的已知问题。以下所述的任何问题均已在先前版本中发现、并且仍适用于当前版本。</block>
+  <block id="db21e6fd52879394e8294f15387580ad" category="list-text">在同一API调用中向下滚动。提供任何所需的参数值，然后单击*Execute (执行)*以问题描述此调用。</block>
 </blocks>
