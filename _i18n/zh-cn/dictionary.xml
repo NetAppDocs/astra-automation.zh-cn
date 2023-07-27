@@ -1152,7 +1152,6 @@
   <block id="055a27c4d72ac10e8bf363a70b1218a0" category="paragraph">此版本对REST API进行了少量更新。</block>
   <block id="fd681e19859abac8a0d1df0703c54996" category="section-title">通过筛选器增强了执行挂钩功能</block>
   <block id="03612c2b7f26bb15fe2a8f56732f28ad" category="paragraph">现在、在使用执行挂钩时、您可以添加筛选器来控制挂钩要匹配的容器。如果为单个执行钩创建多个筛选器、则这些筛选器将与逻辑运算符和运算符结合使用。每个执行挂机最多可以定义10个活动筛选器。</block>
-  <block id="3c59b55f9bf059f6664a2ad8c3b5ff06" category="paragraph">本站点的文档介绍了两种Astra Control部署模式的最新版本中包含的Astra Control REST API以及相关自动化技术。</block>
   <block id="ce3f3db7878407d89bb9f3e42409287c" category="paragraph">由于此站点记录了这两种部署模式的REST API、因此可能只有最新版本的Astra Control Service才提供某些功能。这两种部署模式之间的任何差异均会根据需要予以说明。</block>
   <block id="fdd9fe55f1a01a1ad085e5d6ce35c93b" category="paragraph">此站点的文档将发布以下适用场景 控制版本：</block>
   <block id="06661ae837df4aebc82db4f943f32dd7" category="paragraph">有关当前版本以及先前版本的Astra Control的详细信息、请参见以下页面和站点。</block>
@@ -1173,11 +1172,7 @@
   <block id="62a9da32071f678334a21060c67e7014" category="paragraph">以下是将kubeconfigfile文件从YAML转换为JSON并在base64中进行编码的示例：</block>
   <block id="013e0c333b0775d95a5c6579724b4b45" category="inline-link">Astra Control Automation 22.11文档</block>
   <block id="52eabae058b28c969498b7a857c6879d" category="list-text"><block ref="52eabae058b28c969498b7a857c6879d" category="inline-link-rx"></block></block>
-  <block id="8f84a5e65a3efc01a0b185016179b60b" category="admonition">每个Astra Control发行版都分配有一个格式为*YY.MM*的版本号。此值根据可用的年份(_YY_)和月份(_MM_)标识版本。例如、Asta Control Center 23.04于2023年4月发布。</block>
   <block id="c41bf5dc0ae334cb95d5c9af7e04effd" category="paragraph">通常、对Astra控制服务和Astra控制中心的更新会同时进行。但是、Astra Control Service的版本发行速度加快、可能会导致在最新Astra Control Center版本之外进行一个或多个增量更新。</block>
-  <block id="20a97065ffc33c9c3dbdd1435b0a9fef" category="list-text">Astra控制中心23.04.</block>
-  <block id="e2345475f657a83bdb89f0d758173706" category="inline-link">Astra Control Center 23.04文档</block>
-  <block id="806930774cd41dac9f96fae2a8f4bdd3" category="list-text"><block ref="806930774cd41dac9f96fae2a8f4bdd3" category="inline-link-rx"></block></block>
   <block id="cdfde9b3972928d07d0aa9787e6589c3" category="section-title">2023年4月25日(23.04)</block>
   <block id="05b8695ac535480ad4f4cf9e5bd4ecd2" category="paragraph">此版本包含对REST API的选择性更新。</block>
   <block id="a1dba4846637919a02bf180b636f6229" category="section-title">选择性还原操作</block>
@@ -1230,9 +1225,27 @@
   <block id="58e46bdad56d44447c43649a3b5b4f7b" category="paragraph">Azure Marketplace订阅现在按小时计费、而不是按分钟计费。另请参见<block ref="633dc17422f08a9c882e1f52f9a90b82" category="inline-link-rx"></block>。</block>
   <block id="8e926a216f6adb19574523270dec9729" category="section-title">Restic优化</block>
   <block id="a73241b184629bdaef0ee68446abeb15" category="paragraph">您可以使用标志为restic备份启用性能优化<block ref="6fb6e873ef6d6ac86ac763f089d95fa1" prefix=" " category="inline-code"></block> 在新中<block ref="4e513e9fe169e7733cdfe334575b2dec" prefix=" " category="inline-code"></block> 设置API资源。设置为时<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>，的数量<block ref="47964ec30dfb028cc802262834e3577b" prefix=" " category="inline-code"></block> 将大型卷备份到Azure容器时、这种重新测试的使用量会增加。对于1 TB到4 TB的卷、将使用128个连接。对于大于4 TB的卷、将使用512个后端连接。</block>
-  <block id="60bc44a6f8b10e394c8d7a408e94fecc" category="list-text">Astra Control Service 23.06</block>
-  <block id="3987948e759f27889fb63521255c084f" category="inline-link">Astra Control Service 23.06文档</block>
-  <block id="8de8be2639041c77c0c0e3c2870c7446" category="list-text"><block ref="8de8be2639041c77c0c0e3c2870c7446" category="inline-link-rx"></block></block>
   <block id="529552afdc21e1a01b8e807df92fe719" category="admonition">Asta Control REST API 23.06版没有新的已知问题。以下所述的任何问题均已在先前版本中发现、并且仍适用于当前版本。</block>
   <block id="db21e6fd52879394e8294f15387580ad" category="list-text">在同一API调用中向下滚动。提供任何所需的参数值，然后单击*Execute (执行)*以问题描述此调用。</block>
+  <block id="7b36f358be6830020f92c7a96bc9ebb7" category="section-title">2023年7月27日(23.07)</block>
+  <block id="32b0cbc34ea58967e6c353f6c878e408" category="paragraph">此版本对REST API进行了选择性增强。Astra Control Service和Astra Control Center均已更新为23.07版本。</block>
+  <block id="be9971554f6f1c3ebcb04b3c2ef0dd72" category="section-title">克隆和复制操作</block>
+  <block id="3ea32f614af63c14a7b957de0a796445" category="paragraph">现在、克隆操作仅支持实时克隆(受管应用程序的当前状态)。要从快照或备份克隆、您需要使用还原操作。此外、应用程序现在可以在同一个Kubnetes集群中的ONTAP存储后端之间进行复制。</block>
+  <block id="aa6c06174da3e56927ecff87b8b59d97" category="section-title">扩展了存储后端</block>
+  <block id="7fdbac7d23ca41d2cef806f176e51840" category="paragraph">Astra Control Center现在可以使用其他存储后端、包括：</block>
+  <block id="94466e32e364f329d0be558873e8c904" category="list-text">延伸型配置中的NetApp MetroCluster</block>
+  <block id="cd27a1715aac859bc2a48a86ed2000c0" category="inline-link">Longhorn</block>
+  <block id="1d64e26fe87f8846d60010aa3270a37f" category="list-text"><block ref="1752f949f63eb1f41cea70be24a2a732" category="inline-link-rx"></block> 1.5.0及更高版本</block>
+  <block id="e6ae92bcba1e3a36ef0b12b0f1ed5c53" category="section-title">新的执行挂钩类型</block>
+  <block id="00b87f63b5ab2f631053ae22c2cbadbd" category="paragraph">Astra Control Center提供了新的执行挂钩类型*post-Failover。</block>
+  <block id="6184061dd3b1b99309800d9a0000c740" category="paragraph">此站点上的文档介绍了两种Astra Control部署模型中包含的Astra Control REST API和相关自动化技术、如下所述。</block>
+  <block id="809951d75a5959408aaef7facffe73f1" category="admonition">每个Astra Control发行版都分配有一个格式为*YY.MM*的版本号。此值根据可用的年份(_YY_)和月份(_MM_)标识版本。例如、Asta Control Center 23.07于2023年7月发布。</block>
+  <block id="685fab4e0f4afbe567f9410e426cf33b" category="list-text">Astra Control Service 23.07</block>
+  <block id="20e97def7e9adb5021f4a28abe844ccf" category="list-text">Astra控制中心23.07</block>
+  <block id="51ec83fd81ce58f9ea70187b74727aff" category="inline-link">Astra Control Center 23.07文档</block>
+  <block id="b2ea0c38a745c6bfb4298aecb931d130" category="list-text"><block ref="b2ea0c38a745c6bfb4298aecb931d130" category="inline-link-rx"></block></block>
+  <block id="88f3464f5e943dd845d3ca23235e5791" category="inline-link">Astra Control Service 23.07文档</block>
+  <block id="119edfca8dd05a2365b25f221a07fa7d" category="list-text"><block ref="119edfca8dd05a2365b25f221a07fa7d" category="inline-link-rx"></block></block>
+  <block id="43a62b176f718092748cfb8e6a9afa19" category="inline-link">Astra Control Automation 23.04文档</block>
+  <block id="da054b04f4f9b4f05d91fce1501f15ef" category="list-text"><block ref="da054b04f4f9b4f05d91fce1501f15ef" category="inline-link-rx"></block></block>
 </blocks>
