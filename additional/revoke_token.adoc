@@ -17,15 +17,17 @@ summary: 您可以在 Astra Web 界面上撤消不再需要的 API 令牌。
 您可以在 Astra Web 界面上撤消不再需要的 API 令牌。
 
 .开始之前
-您需要一个 Astra 帐户。您还应确定要撤消的令牌。
+您需要凭据才能登录到适用于您的部署的ASRA Web用户界面。  您还应确定要撤消的令牌。
 
 .关于此任务
 令牌撤消后，它将立即永久不可用。
 
 .步骤
-. 使用您的帐户凭据登录到 Astra 。
+. 使用您的帐户凭据登录ASRA、如下所示：
 +
-访问以下站点以获取 Astra 控制服务： https://astra.netapp.io/["https://astra.netapp.io"^]
+.. Asta控制服务： https://astra.netapp.io/["https://astra.netapp.io"^]
+.. Astra Control Center：使用安装期间为您的本地环境建立的URL
+
 
 . 单击页面右上角的图图标并选择 * API access* 。
 . 选择要撤消的一个或多个令牌。

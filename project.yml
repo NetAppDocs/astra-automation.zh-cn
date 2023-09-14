@@ -36,16 +36,16 @@ sidebar:
   - section: rn
   - section: intro
   - section: get-started
-  - section: rest-core
-  - section: endpoints
-  - section: additional
+  - title: Astra REST实施
+    entries:
+    - section: rest-core
+    - section: endpoints
+    - section: additional
   - section: workflows_infra
   - section: workflows
   - section: python
   - section: reference
   - section: information
-  - title: 早期版本
-    url: "/aa-earlier-versions.html"
   - title: 法律声明
     url: "/legal-notices.html"
 homepage:
@@ -60,7 +60,7 @@ homepage:
       url: "/get-started/get_api_token.html"
     - title: 首次API调用
       url: "/get-started/first_call.html"
-  - title: REST 实施
+  - title: 核心REST设计
     links:
     - title: REST Web 服务
       url: "/rest-core/rest_web_services.html"

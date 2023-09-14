@@ -18,7 +18,7 @@ summary: 要使用 Astra Control REST API ，您需要获取 Astra API 令牌。
 
 
 
-== 简介
+== 概述
 
 API 令牌用于标识 Astra 的调用方，并且必须包含在每个 REST API 调用中。
 

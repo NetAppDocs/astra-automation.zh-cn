@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: aa-earlier-versions.html 
+permalink: rn/earlier-versions.html 
 keywords: earlier versions, earlier releases 
 summary: 您可以访问先前版本的Astra Control的自动化文档。 
 ---

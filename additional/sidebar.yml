@@ -1,6 +1,6 @@
 ---
 section: additional
-title: 其他使用注意事项
+title: 其他注意事项
 entries:
 - title: RBAC 安全性
   url: "/additional/rbac.html"
