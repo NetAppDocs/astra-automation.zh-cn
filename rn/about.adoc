@@ -25,8 +25,8 @@ Astra Control Service和Astra Control Center的更新通常同时进行。但是
 .Astra Control部署
 此站点的文档将发布以下适用场景 控制版本：
 
-* Astra Control Service 23.07
-* Astra控制中心23.07
+* Astra控制服务23.10.
+* Astra控制中心23.10.
 
 
 由于此站点记录了这两种部署模式的REST API、因此某些功能可能仅适用于其中一种部署模式。如有必要、我们会记录两者之间的任何重大差异。
@@ -36,8 +36,8 @@ Astra Control Service和Astra Control Center的更新通常同时进行。但是
 
 * link:../rn/whats_new.html["Astra Control REST API 的新增功能"]
 * link:../endpoints/resources.html["REST 资源和端点"]
-* https://docs.netapp.com/us-en/astra-control-center/["Astra Control Center 23.07文档"^]
-* https://docs.netapp.com/us-en/astra-control-service/["Astra Control Service 23.07文档"^]
+* https://docs.netapp.com/us-en/astra-control-center/["Astra Control Center 23.10文档"^]
+* https://docs.netapp.com/us-en/astra-control-service/["Astra Control Service 23.10文档"^]
 * link:../rn/earlier-versions.html["早期版本的 Astra Automation 文档"]
 
 

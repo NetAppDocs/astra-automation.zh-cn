@@ -959,7 +959,6 @@
   <block id="b99e07f4bea810f88b69ecfe1784ab28" category="sidebar">列出云</block>
   <block id="4d3e9b74a79b7af51564aa58491a951e" category="sidebar">列出应用程序</block>
   <block id="76427b3f214d8ae919f1432a89eefd65" category="sidebar">列出命名空间</block>
-  <block id="f21f22dde0e0692333a7a28cce456b08" category="sidebar">所有Astra文档</block>
   <block id="1273c8a63109161e6fd1f18d6998523f" category="inline-link">NetApp BlueXP</block>
   <block id="a3235da3acacf344734cc119c20ba900" category="list-text"><block ref="a3235da3acacf344734cc119c20ba900" category="inline-link-rx"></block></block>
   <block id="06146decfb17ed58c6f7a0bb23eea2a6" category="summary">将LDAP配置为Astra控制中心的身份验证提供程序后、您可以选择Astra将使用LDAP凭据进行身份验证的LDAP用户。</block>
@@ -1021,7 +1020,6 @@
   <block id="88e25761f6eadcead9ced5f76a00e95c" category="doc">您的第一次API调用</block>
   <block id="9d5b1c42f951723db7dbb51b14e6251a" category="cell">22.08.</block>
   <block id="f156c7862a93e81ca10ba4bc4349824d" category="cell">LDAP组</block>
-  <block id="dc488877c36bb584e674e32f8b4e1de4" category="cell">*。22.11*</block>
   <block id="8a958fceac1f74e78832d8498767ce1f" category="cell">您可以列出已配置的LDAP服务器中的组。对LDAP组的访问是只读的。</block>
   <block id="30b31a74662fc368bd562efd0f43adc2" category="cell">LDAP用户</block>
   <block id="0d0a6d61fee1311a1ba8a542e2bb5623" category="cell">您可以列出已配置的LDAP服务器中的用户。对LDAP用户的访问是只读的。</block>
@@ -1151,7 +1149,6 @@
   <block id="8f5cc6430613f1c12f36965050bb7197" category="inline-link">不和</block>
   <block id="5f86a5c97c95f60e61c70ba77d7346ae" category="list-text"><block ref="5f86a5c97c95f60e61c70ba77d7346ae" category="inline-link-rx"></block></block>
   <block id="0b5b4445b358715641cec74fe5aa74a5" category="paragraph">为Astra Control和其他NetApp产品提供社区支持。</block>
-  <block id="c216e952dc373af46e9e31e0b8bdcf89" category="sidebar">Astra Automation</block>
   <block id="8d5b3dceacc1264c4bb5aed273137b7a" category="paragraph">以下查询参数可用于资源收集。请参见 <block ref="a72643cb6a22061c1930f2e30db11319" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="d9a8eedd670f58ed76d5ae881e6d4469" category="admonition">Astra Control REST API 还使用 * HTTP APIs* 标准的问题详细信息。请参见 <block ref="e560597744bc7b2711ae89c683c4035f" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="b30ac06bf6c3102a84f420a5a1444360" category="paragraph">必须在base64中对JSON文件进行编码。</block>
@@ -1223,12 +1220,6 @@
   <block id="e6ae92bcba1e3a36ef0b12b0f1ed5c53" category="section-title">新的执行挂钩类型</block>
   <block id="00b87f63b5ab2f631053ae22c2cbadbd" category="paragraph">Astra Control Center提供了新的执行挂钩类型*post-Failover。</block>
   <block id="809951d75a5959408aaef7facffe73f1" category="admonition">每个Astra Control发行版都分配有一个格式为*YY.MM*的版本号。此值根据可用的年份(_YY_)和月份(_MM_)标识版本。例如、Asta Control Center 23.07于2023年7月发布。</block>
-  <block id="685fab4e0f4afbe567f9410e426cf33b" category="list-text">Astra Control Service 23.07</block>
-  <block id="20e97def7e9adb5021f4a28abe844ccf" category="list-text">Astra控制中心23.07</block>
-  <block id="51ec83fd81ce58f9ea70187b74727aff" category="inline-link">Astra Control Center 23.07文档</block>
-  <block id="b2ea0c38a745c6bfb4298aecb931d130" category="list-text"><block ref="b2ea0c38a745c6bfb4298aecb931d130" category="inline-link-rx"></block></block>
-  <block id="88f3464f5e943dd845d3ca23235e5791" category="inline-link">Astra Control Service 23.07文档</block>
-  <block id="119edfca8dd05a2365b25f221a07fa7d" category="list-text"><block ref="119edfca8dd05a2365b25f221a07fa7d" category="inline-link-rx"></block></block>
   <block id="43a62b176f718092748cfb8e6a9afa19" category="inline-link">Astra Control Automation 23.04文档</block>
   <block id="da054b04f4f9b4f05d91fce1501f15ef" category="list-text"><block ref="da054b04f4f9b4f05d91fce1501f15ef" category="inline-link-rx"></block></block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
@@ -1252,4 +1243,25 @@
   <block id="4beba69037bd14812e726a2a137a8c7f" category="sidebar">核心REST设计</block>
   <block id="43659ebbefa72dddc0bf81f83ff3645d" category="sidebar">资源摘要</block>
   <block id="f8de52ebe15fa6f74d720087c5ea48fb" category="sidebar">核心设计</block>
+  <block id="b2753ac117117258ce5ba22aebd3a8a8" category="cell">22.1.</block>
+  <block id="c4340906de504057557c6bb8611b0ab5" category="cell">22.11.</block>
+  <block id="ed5dea09095f671b801bee34ea28a319" category="cell">权限</block>
+  <block id="5a31da03b445627c9d11d99efb7cc803" category="cell">23.06.</block>
+  <block id="22a15af82a20adf60996d549baa48d24" category="cell">权限资源表示与系统中的操作相关的权限。API提供对权限的只读访问权限。</block>
+  <block id="8fe5430b97accfa7b33d3c5887f90718" category="cell">角色资源表示系统中可用的角色。API提供对角色的只读访问权限。</block>
+  <block id="6881779f2ae76c74d15a56eaefcccd8b" category="section-title">2023年11月7日(23.10)</block>
+  <block id="c5f7bfd0f88ba662f205c76fa84795d3" category="paragraph">Astra Control Service和Astra Control Center均已更新为23.10版本。REST API有选择地进行了增强、以支持这些新功能。</block>
+  <block id="59c699c319c0ae768cb1a82b07028dff" category="paragraph">您可以为启用备份和还原操作<block ref="caafdf62a2c609bfa5316118231a1007" prefix=" " category="inline-code"></block> 存储后端。</block>
+  <block id="615193f2c37d9fd054a61bf78b73ad01" category="section-title">不可配置的备份</block>
+  <block id="621ca655e0daef2645ca8111b3c531cc" category="paragraph">Astra Control现在支持不可更改的只读备份、作为抵御恶意软件和其他威胁的额外安全层。</block>
+  <block id="74e32fa10752727786230542db6f5350" category="section-title">增强了对执行挂钩的控制</block>
+  <block id="2f2999f047197765442c0c74117bb5be" category="paragraph">从此版本开始、可以启用或禁用执行挂钩功能、以提高安全性(默认情况下、此功能处于禁用状态)。如果尚未创建用于Astra Control的执行挂钩、则需要启用执行挂钩功能才能开始创建挂钩。如果您在此版本之前创建了执行挂钩、则执行挂钩功能将保持启用状态、您可以像往常一样使用挂钩。</block>
+  <block id="64d97a20d86a4938bc2f0ca6487991bf" category="list-text">Astra控制服务23.10.</block>
+  <block id="4646da7b1b74b708dde12727beab50a2" category="list-text">Astra控制中心23.10.</block>
+  <block id="fa73c4158a31e3bf65319a4cd45bd936" category="inline-link">Astra Control Center 23.10文档</block>
+  <block id="5dcdce741516a1f5d54bd302aa84737e" category="list-text"><block ref="5dcdce741516a1f5d54bd302aa84737e" category="inline-link-rx"></block></block>
+  <block id="7d2e6602b95dd5d4d056964dea6dea4c" category="inline-link">Astra Control Service 23.10文档</block>
+  <block id="5ef5b3f51e13355494fcdf46ca82fde4" category="list-text"><block ref="5ef5b3f51e13355494fcdf46ca82fde4" category="inline-link-rx"></block></block>
+  <block id="319cbcbe823e54bc4431c0aeca14c9d6" category="inline-link">Astra Control Automation 23.07文档</block>
+  <block id="bff628185da3389d42f4449fd249480c" category="list-text"><block ref="bff628185da3389d42f4449fd249480c" category="inline-link-rx"></block></block>
 </blocks>
