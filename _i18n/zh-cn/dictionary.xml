@@ -133,7 +133,6 @@
   <block id="5a77a315cc422da89819194837af885d" category="cell">提供克隆应用程序的参数。请参见以下示例。</block>
   <block id="0577bbabd0439eea401a8ec18491d1a6" category="section-title">JSON 输入示例</block>
   <block id="b8622ecf971d21371a3ba9d07a233300" category="section-title">curl 示例：从备份克隆应用程序</block>
-  <block id="e6b088db24ebe67ed0e9567d309387ec" category="doc">工作流</block>
   <block id="82d9e1423b1fe50e0e9afcb47255d25a" category="paragraph">您可以列出当前由 Astra 管理的应用程序。您可以在查找特定应用程序的快照或备份时执行此操作。</block>
   <block id="48db3210f5486202c6926aa7551be0bd" category="section-title">1. 列出应用程序</block>
   <block id="7528035a93ee69cedb1dbddb2f0bfcc8" category="cell">获取</block>
@@ -394,8 +393,6 @@
   <block id="fa862ec81357f8907a8b75f4d969c590" category="inline-link">RFC 编辑器</block>
   <block id="6763d4dfc2fa6c04b08ba1e1b7751f5f" category="list-text"><block ref="6763d4dfc2fa6c04b08ba1e1b7751f5f" category="inline-link-rx"></block></block>
   <block id="ba793efaa4293b35388d140ee9308a68" category="paragraph">Web 和 Internet 标准的权威来源，作为一组编号唯一的 RFC 文档进行维护。</block>
-  <block id="9a5f09cf66e692efdae493ce4c9aa64f" category="sidebar">准备</block>
-  <block id="a7f5f35426b927411fc9231b56382173" category="sidebar">Python</block>
   <block id="36b64aad8a26246fe3ad4116a2b6f289" category="sidebar">诊断</block>
   <block id="824ee32982b0cc1ac1aca8447c9cb3cf" category="sidebar">应用程序控制</block>
   <block id="373370c9330843dbc9a492b75e68e396" category="sidebar">应用程序保护</block>
@@ -705,9 +702,6 @@
   <block id="d340d1aca9540d03d5dbc3a841480388" category="cell">软件包资源用于注册和访问软件包定义。软件包由多个组件组成，包括文件，映像和其他项目。</block>
   <block id="f683581d3e75f05f9d9215f9b4696cef" category="cell">升级</block>
   <block id="2d90c29fa077bbff5b5b4c8a523efa88" category="cell">通过升级资源，您可以访问软件组件并启动升级。</block>
-  <block id="b4ec6b7393a41bf5e5870f1ce48009e5" category="sidebar">REST 资源和集合</block>
-  <block id="f38713c0367843938a57ef219a3bfbfc" category="sidebar">Astra API 资源摘要</block>
-  <block id="ea1c0b8e4018f75659e26eb720b206e5" category="sidebar">本机使用 Python</block>
   <block id="74c118bd101940603c14c3d7326843a4" category="paragraph">下面是您开始使用所需的一些资源。</block>
   <block id="798161428a705ba47c31cc8ace9316e3" category="inline-link">Astra Control Automation 22.04文档</block>
   <block id="693af21b54b2e5032434113328d4a53e" category="list-text"><block ref="693af21b54b2e5032434113328d4a53e" category="inline-link-rx"></block></block>
@@ -1058,7 +1052,6 @@
   <block id="70679aeca94d2b828ca1dc6cda2ac994" category="list-text"><block ref="70679aeca94d2b828ca1dc6cda2ac994" category="inline-link-rx"></block></block>
   <block id="165fa9bdd003d8079831262d0360efc1" category="inline-link">Astra Control Automation 22.08文档</block>
   <block id="94ed7ec7b9510cd1e4664fbfe8a08329" category="list-text"><block ref="94ed7ec7b9510cd1e4664fbfe8a08329" category="inline-link-rx"></block></block>
-  <block id="547abae9d6ca9df339ec4543e220ab8e" category="sidebar">首次API调用</block>
   <block id="013a127f643228c21ab6c9baf558cef5" category="sidebar">添加集群</block>
   <block id="826f785c760529ceb6e978afdab2a9a7" category="sidebar">创建保护策略</block>
   <block id="25742c79c197ce7f0982652ead3bd964" category="section-title">其他工作流</block>
@@ -1219,7 +1212,6 @@
   <block id="1d64e26fe87f8846d60010aa3270a37f" category="list-text"><block ref="1752f949f63eb1f41cea70be24a2a732" category="inline-link-rx"></block> 1.5.0及更高版本</block>
   <block id="e6ae92bcba1e3a36ef0b12b0f1ed5c53" category="section-title">新的执行挂钩类型</block>
   <block id="00b87f63b5ab2f631053ae22c2cbadbd" category="paragraph">Astra Control Center提供了新的执行挂钩类型*post-Failover。</block>
-  <block id="809951d75a5959408aaef7facffe73f1" category="admonition">每个Astra Control发行版都分配有一个格式为*YY.MM*的版本号。此值根据可用的年份(_YY_)和月份(_MM_)标识版本。例如、Asta Control Center 23.07于2023年7月发布。</block>
   <block id="43a62b176f718092748cfb8e6a9afa19" category="inline-link">Astra Control Automation 23.04文档</block>
   <block id="da054b04f4f9b4f05d91fce1501f15ef" category="list-text"><block ref="da054b04f4f9b4f05d91fce1501f15ef" category="inline-link-rx"></block></block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
@@ -1234,13 +1226,11 @@
   <block id="f3cc9a8807405c26d51d9df37d490dd7" category="list-text">Asta控制服务：<block ref="0045c0d6f22ad59c53fc1e6d3b91c771" category="inline-link-rx"></block></block>
   <block id="4bdd2ccefb2f03cc6285395d8c1ae399" category="summary">此站点上的文档介绍了两种Astra Control部署模型中包含的Astra Control REST API和相关自动化技术。</block>
   <block id="f61369f881218faa68ada1128b5d5854" category="paragraph-title">版本控制</block>
-  <block id="0dde93985fcf355fdbe3950194c0dd60" category="paragraph">Astra Control Service和Astra Control Center的更新通常同时进行。但是、在过去Astra Control Service的发布节奏加快了。这样、除了最新的Asta Control Center版本之外、还会有一个或多个增量更新。</block>
   <block id="80eee0325102cbbe5624dd825f288da6" category="paragraph">由于此站点记录了这两种部署模式的REST API、因此某些功能可能仅适用于其中一种部署模式。如有必要、我们会记录两者之间的任何重大差异。</block>
   <block id="d33e3df86964bc9c994984b08fd48e76" category="list-text"><block ref="d33e3df86964bc9c994984b08fd48e76" category="inline-link-macro-rx"></block></block>
   <block id="5ef64ef4145885449a36757ad3925285" category="summary">您应查看当前版本的Astra Control以及关联的REST API的所有已知问题。已知问题可确定可能会阻止您成功使用本产品的问题。</block>
   <block id="0158322c4aa7f21160a8bc5298e211b1" category="paragraph">您应查看当前版本的Astra Control以及关联的REST API的所有已知问题。已知问题可确定可能会阻止您成功使用本产品的问题。请根据您的部署模式查看以下页面之一：</block>
   <block id="90a5fcdce1500ecacc854f6c87061ce9" category="sidebar">Astra REST实施</block>
-  <block id="4beba69037bd14812e726a2a137a8c7f" category="sidebar">核心REST设计</block>
   <block id="43659ebbefa72dddc0bf81f83ff3645d" category="sidebar">资源摘要</block>
   <block id="f8de52ebe15fa6f74d720087c5ea48fb" category="sidebar">核心设计</block>
   <block id="b2753ac117117258ce5ba22aebd3a8a8" category="cell">22.1.</block>
@@ -1256,12 +1246,22 @@
   <block id="621ca655e0daef2645ca8111b3c531cc" category="paragraph">Astra Control现在支持不可更改的只读备份、作为抵御恶意软件和其他威胁的额外安全层。</block>
   <block id="74e32fa10752727786230542db6f5350" category="section-title">增强了对执行挂钩的控制</block>
   <block id="2f2999f047197765442c0c74117bb5be" category="paragraph">从此版本开始、可以启用或禁用执行挂钩功能、以提高安全性(默认情况下、此功能处于禁用状态)。如果尚未创建用于Astra Control的执行挂钩、则需要启用执行挂钩功能才能开始创建挂钩。如果您在此版本之前创建了执行挂钩、则执行挂钩功能将保持启用状态、您可以像往常一样使用挂钩。</block>
-  <block id="64d97a20d86a4938bc2f0ca6487991bf" category="list-text">Astra控制服务23.10.</block>
-  <block id="4646da7b1b74b708dde12727beab50a2" category="list-text">Astra控制中心23.10.</block>
-  <block id="fa73c4158a31e3bf65319a4cd45bd936" category="inline-link">Astra Control Center 23.10文档</block>
-  <block id="5dcdce741516a1f5d54bd302aa84737e" category="list-text"><block ref="5dcdce741516a1f5d54bd302aa84737e" category="inline-link-rx"></block></block>
-  <block id="7d2e6602b95dd5d4d056964dea6dea4c" category="inline-link">Astra Control Service 23.10文档</block>
-  <block id="5ef5b3f51e13355494fcdf46ca82fde4" category="list-text"><block ref="5ef5b3f51e13355494fcdf46ca82fde4" category="inline-link-rx"></block></block>
   <block id="319cbcbe823e54bc4431c0aeca14c9d6" category="inline-link">Astra Control Automation 23.07文档</block>
   <block id="bff628185da3389d42f4449fd249480c" category="list-text"><block ref="bff628185da3389d42f4449fd249480c" category="inline-link-rx"></block></block>
+  <block id="8053414eb52e1996818bee3317a4c80b" category="section-title">2024年3月14日(24.02)</block>
+  <block id="a5f2459676ba50b9da6c058ccbd5bc76" category="paragraph">Astra Control Service和Astra Control Center均已更新为24.02版本。</block>
+  <block id="35255425bea0e5bb9b43d5c6806d0df8" category="section-title">小错误修复</block>
+  <block id="39424c31b4c5741354b6ec5bfd9f110e" category="paragraph">24.02版主要侧重于修复一些小错误。Asta Control API中未添加任何新资源类型。</block>
+  <block id="88273195e6bf6e2b8a0e13648e5047ae" category="section-title">技术预览：声明性Kubarnetes工作流</block>
+  <block id="830f012ca90773e40cbe1216d249795b" category="paragraph">Astra Control Center 24.02包含声明性Kubarnetes功能、可用于从本机Kubarnetes自定义资源(CR)执行数据管理。此功能尚未普遍提供。请参见<block ref="b0515e8b7b46d83fe943d8f3ca4602ba" category="inline-link-rx"></block> 了解更多信息(如果需要)。</block>
+  <block id="5b6906a11af67ab437cebb35ce37666a" category="paragraph">每个Astra Control发行版都分配有一个格式为*YY.MM*的版本号。通常情况下、此值根据Astra版本可用的年份(_YY_)和月份(_MM_)来标识Astra版本。例如、Asta Control Center 23.07于2023年7月发布。</block>
+  <block id="60da41e76ad106913eecb1da9106bd42" category="paragraph">Astra Control Service和Astra Control Center的更新通常同时进行。但是、在过去、Astra Control Service的发布速度加快了。这会导致Asta Control Center主要版本之间的一个或多个增量更新。</block>
+  <block id="ee4417330da16f81921d54a408aae37b" category="list-text">Astra Control Service 24.02</block>
+  <block id="984b3f2546572ca2b1fd8de4013c1882" category="list-text">Astra控制中心24.02.</block>
+  <block id="5ab109fbab91ad9ade1835c318286e64" category="inline-link">Astra Control Center 24.02文档</block>
+  <block id="9ec89e483777b281c0d114e1ed0c8c8f" category="list-text"><block ref="9ec89e483777b281c0d114e1ed0c8c8f" category="inline-link-rx"></block></block>
+  <block id="ee89a8c8a8c4124e1c47b50f7d6c8420" category="inline-link">Astra Control Service 24.02文档</block>
+  <block id="ad688d9042062312f59460f99f7f7881" category="list-text"><block ref="ad688d9042062312f59460f99f7f7881" category="inline-link-rx"></block></block>
+  <block id="2ce5679e796a226301682da2e8eb77f6" category="inline-link">Astra Control Automation 23.10文档</block>
+  <block id="b59949e755b5f42564828ce536cb3b96" category="list-text"><block ref="b59949e755b5f42564828ce536cb3b96" category="inline-link-rx"></block></block>
 </blocks>

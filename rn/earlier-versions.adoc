@@ -16,6 +16,7 @@ summary: 您可以访问先前版本的Astra Control的自动化文档。
 [role="lead"]
 您可以通过以下链接访问先前版本的 Astra Control 的自动化文档。
 
+* https://docs.netapp.com/us-en/astra-automation-2310/["Astra Control Automation 23.10文档"^]
 * https://docs.netapp.com/us-en/astra-automation-2307/["Astra Control Automation 23.07文档"^]
 * https://docs.netapp.com/us-en/astra-automation-2304/["Astra Control Automation 23.04文档"^]
 * https://docs.netapp.com/us-en/astra-automation-2211/["Astra Control Automation 22.11文档"^]
