@@ -606,7 +606,6 @@
   <block id="4bddbc6d61b2586c05f9efdf9aa7b5cd" category="paragraph">您可以通过以下链接访问先前版本的 Astra Control 的自动化文档。</block>
   <block id="832210201d55f5c764a32c055a00b726" category="inline-link">Astra Control Automation 21.08 文档</block>
   <block id="025fa2688359a439d7fa215fbbbaf287" category="list-text"><block ref="025fa2688359a439d7fa215fbbbaf287" category="inline-link-rx"></block></block>
-  <block id="1a0ca7f0a5aea880c24d544b4655d6ed" category="doc">Astra Control Automation 文档</block>
   <block id="08d7f360c94a906d3639173599184943" category="paragraph">执行以下 REST API 调用。您必须提供备份（如下所示）或快照的 ID 。</block>
   <block id="a477f086784d869d73c5ae084b145ca8" category="section-title">curl 示例：从备份原位还原应用程序</block>
   <block id="be8545ae7ab0276e15898aae7acfbd7a" category="cell">资源</block>
@@ -1264,4 +1263,5 @@
   <block id="ad688d9042062312f59460f99f7f7881" category="list-text"><block ref="ad688d9042062312f59460f99f7f7881" category="inline-link-rx"></block></block>
   <block id="2ce5679e796a226301682da2e8eb77f6" category="inline-link">Astra Control Automation 23.10文档</block>
   <block id="b59949e755b5f42564828ce536cb3b96" category="list-text"><block ref="b59949e755b5f42564828ce536cb3b96" category="inline-link-rx"></block></block>
+  <block id="0b11ef934b0c996ff94917743f4e7c1c" category="doc">Astra Control Automation 24.02文档</block>
 </blocks>
