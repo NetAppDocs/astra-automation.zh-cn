@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>astra-automation | NetApp Documentation</title>
+    <atom:link href="https://docs.netapp.com/zh-cn/astra-automation/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://docs.netapp.com/zh-cn/astra-automation</link>
+    <description>The latest updates from NetApp Documentation</description>
+    <language>zh-cn</language>
+    <ttl>60</ttl>
+    <pubDate>Sun, 17 Mar 2024 16:25:02 +0000</pubDate>
+    <lastBuildDate>Sun, 17 Mar 2024 16:25:02 +0000</lastBuildDate>
+    
+    
+    
+    <item>
+      <title>Astra Control REST API 的新增功能 (16 Mar 2024)</title>
+      <pubDate>Sat, 16 Mar 2024 13:03:18 +0000</pubDate>
+      <link>https://docs.netapp.com/zh-cn/astra-automation/rn/whats_new.html?time=1710594198</link>
+      <guid isPermaLink="false">Sat, 16 Mar 2024 13:03:18 +0000</guid>
+      <description><![CDATA[ NetApp会定期更新Astra Control REST API、为您提供新功能、增强功能和错误修复。 ]]></description>
+    </item>
+    
+    
+  </channel>
+</rss>
