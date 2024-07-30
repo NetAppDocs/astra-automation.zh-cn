@@ -2,7 +2,7 @@
 section: workflows_infra
 title: 基础架构工作流
 entries:
-- title: 开始之前
+- title: 准备使用基础架构工作流
   url: "/workflows_infra/workflows_infra_before.html"
 - title: 身份和访问
   entries:

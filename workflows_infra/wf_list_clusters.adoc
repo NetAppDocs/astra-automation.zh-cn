@@ -18,15 +18,18 @@ summary: 您可以列出特定云中的可用集群。
 
 
 
-=== 1.选择云
+== 第1步：选择云
 
 执行工作流 link:../workflows_infra/wf_list_clouds.html["列出云"] 并选择包含集群的云。
 
 
 
-=== 2.列出集群
+== 第2步：列出集群
 
 执行以下REST API调用以列出特定云中的集群。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="1,6"]
 |===
@@ -35,19 +38,17 @@ summary: 您可以列出特定云中的可用集群。
 
 | 获取 | /accouns/｛account_id｝/topology/v1/cloud /｛clune_id｝/集群 
 |===
-
-
-===== curl 示例：返回所有集群的所有数据
-
+.curl 示例：返回所有集群的所有数据
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/clouds/<CLOUD_ID>/clusters' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/clouds/<CLOUD_ID>/clusters" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----
-
-
-===== JSON 输出示例
-
-[source, json]
+.JSON 输出示例
+[listing]
 ----
 {
     "items": [

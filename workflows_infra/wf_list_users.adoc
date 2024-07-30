@@ -16,11 +16,8 @@ summary: 您可以列出为特定 Astra 帐户定义的用户。
 [role="lead"]
 您可以列出为特定 Astra 帐户定义的用户。
 
-
-
-=== 1. 列出用户
-
-执行以下 REST API 调用。
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="25,75"]
 |===
@@ -29,10 +26,7 @@ summary: 您可以列出为特定 Astra 帐户定义的用户。
 
 | 获取 | /accouns/｛account_id｝/core/v1/users 
 |===
-
-
-===== 其他输入参数
-
+.其他输入参数
 除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。
 
 [cols="25,10,10,55"]
@@ -42,27 +36,26 @@ summary: 您可以列出为特定 Astra 帐户定义的用户。
 
 | 包括 | 查询 | 否 | 也可以选择要在响应中返回的值。 
 |===
-
-
-===== curl 示例：返回所有用户的所有数据
-
+.curl 示例：返回所有用户的所有数据
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/users" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----
-
-
-===== curl 示例：返回所有用户的名字，姓氏和 ID
-
+.CURL示例：返回所有用户的名字、姓氏和ID
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users?include=firstName,lastName,id' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/users?include=firstName,lastName,id" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----
-
-
-===== JSON 输出示例
-
-[source, curl]
+.JSON 输出示例
+[listing]
 ----
 {
   "items": [

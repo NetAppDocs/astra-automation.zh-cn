@@ -16,11 +16,10 @@ summary: 您可以列出可用的存储后端。
 [role="lead"]
 您可以列出可用的存储后端。
 
-
-
-=== 1.列出后端
-
 执行以下 REST API 调用。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="1,6"]
 |===
@@ -29,19 +28,17 @@ summary: 您可以列出可用的存储后端。
 
 | 获取 | /accouns/｛account_id｝/topology/v1/storageBackend 
 |===
-
-
-===== curl 示例：返回所有存储后端的所有数据
-
+.curl 示例：返回所有存储后端的所有数据
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/storageBackends' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/storageBackends" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----
-
-
-===== JSON 输出示例
-
-[source, json]
+.JSON 输出示例
+[listing]
 ----
 {
   "items": [

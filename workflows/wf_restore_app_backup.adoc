@@ -18,21 +18,24 @@ summary: 您可以通过从备份创建新应用程序来还原应用程序。
 
 
 
-=== 1.选择要还原的应用程序
+== 第1步：选择要还原的应用程序
 
 执行工作流 link:wf_list_man_apps.html["列出应用程序"] 并选择要克隆的应用程序。用于还原应用程序的REST调用需要多个资源值。
 
 
 
-=== 2. 选择要使用的备份
+== 第2步：选择要使用的备份
 
 执行工作流 link:wf_list_backups.html["列出备份"] 并选择要使用的备份。
 
 
 
-=== 3. 还原应用程序
+== 第3步：还原应用程序
 
 执行以下 REST API 调用。您必须提供备份（如下所示）或快照的 ID 。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="25,75"]
 |===
@@ -41,10 +44,7 @@ summary: 您可以通过从备份创建新应用程序来还原应用程序。
 
 | PUT | /accouns/｛account_id｝/k8s/v2/apps/｛app_id｝ 
 |===
-
-
-===== 其他输入参数
-
+.其他输入参数
 除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。
 
 [cols="25,10,10,55"]
@@ -54,10 +54,19 @@ summary: 您可以通过从备份创建新应用程序来还原应用程序。
 
 | JSON | body | 是的。 | 提供克隆应用程序的参数。请参见以下示例。 
 |===
-
-
-===== JSON 输入示例
-
+.curl 示例：从备份原位还原应用程序
+[source, curl]
+----
+curl --request PUT \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v2/apps/$APP_ID" \
+--include \
+--header "Content-Type: application/astra-app+json" \
+--header "ForceUpdate: true" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data @JSONinput
+----
+.JSON 输入示例
 [source, json]
 ----
 {
@@ -65,12 +74,4 @@ summary: 您可以通过从备份创建新应用程序来还原应用程序。
   "version": "2.0",
   "backupID": "e24515bd-a28e-4b28-b832-f3c74dbf32fb"
 }
-----
-
-
-===== curl 示例：从备份原位还原应用程序
-
-[source, curl]
-----
-curl --location -i --request PUT 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps/<APP_ID>' --header 'Content-Type: application/astra-app+json' --header '*/*' --header 'ForceUpdate: true' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
 ----

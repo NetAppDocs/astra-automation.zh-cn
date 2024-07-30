@@ -21,12 +21,15 @@ NOTE: 动态ANF池是使用Azure NetApp Files (ANF)存储后端的Astra托管应
 
 
 
-=== 1.添加Azure订阅标识符
+== 第1步：添加Azure订阅标识符
 
 执行以下 REST API 调用。
 
 
 NOTE: 您需要根据环境的具体情况更新JSON输入示例、包括订阅ID和服务主体的base64值。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="1,6"]
 |===
@@ -35,6 +38,17 @@ NOTE: 您需要根据环境的具体情况更新JSON输入示例、包括订阅I
 
 | 发布 | /accouns/｛account_id｝/core/v1/credentials 
 |===
+.curl 示例
+[source, curl]
+----
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/credentials" \
+--include \
+--header "Content-Type: application/astra-credential+json"
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
 .JSON 输入示例
 [source, json]
 ----
@@ -65,25 +79,20 @@ NOTE: 您需要根据环境的具体情况更新JSON输入示例、包括订阅I
   }
 }
 ----
-.curl 示例
-[source, curl]
-----
-curl --location -i --request POST --data @JSONinput 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --header 'Content-Type: application/astra-credential+json'
-----
 
 
-=== 2.根据需要添加存储分段
+== 第2步：根据需要添加存储分段
 
 如果需要、您应向受管应用程序添加存储分段。
 
 
 
-=== 3.备份托管应用程序
+== 第3步：备份托管应用程序
 
 执行工作流 link:../workflows/wf_create_backup.html["为应用程序创建备份"]。存在初始永久性卷的容量池将自动扩展和缩减。
 
 
 
-=== 4.查看事件日志
+== 第4步：查看事件日志
 
 备份期间会记录活动事件。执行工作流 link:../workflows/wf_list_notifications.html["列出通知"] 可查看信息。

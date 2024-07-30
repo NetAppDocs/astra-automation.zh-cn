@@ -18,12 +18,15 @@ summary: 您需要选择LDAP服务器并将Astra配置为使用该服务器作�
 
 
 
-=== 1.添加CA证书
+== 第1步：添加CA证书
 
 执行以下REST API调用、将CA证书添加到Astra。
 
 
 NOTE: 此步骤是可选的、只有当您希望Astra和LDAP通过使用LDAPS的安全通道进行通信时、才需要执行此步骤。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="1,6"]
 |===
@@ -32,10 +35,18 @@ NOTE: 此步骤是可选的、只有当您希望Astra和LDAP通过使用LDAPS的
 
 | 发布 | /accouns/｛account_id｝/core/v1/certificates 
 |===
-
-
-===== JSON 输入示例
-
+.curl 示例
+[source, curl]
+----
+curl --request POST \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/certificates" \
+--include \
+--header "Content-Type: application/astra-certificate+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
+.JSON 输入示例
 [source, json]
 ----
 {
@@ -52,19 +63,8 @@ NOTE: 此步骤是可选的、只有当您希望Astra和LDAP通过使用LDAPS的
 * 如果证书为自签名证书、则应将`isSelfSigned`设置为`true`。默认值为 `false` 。
 
 
-
-
-===== curl 示例
-
-[source, curl]
-----
-curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/certificates' --header 'Content-Type: application/astra-certificate+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
-----
-
-
-===== JSON响应示例
-
-[source, json]
+.JSON 输出示例
+[listing]
 ----
 {
   "type": "application/astra-certificate",
@@ -112,9 +112,12 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 ----
 
 
-=== 2.添加绑定凭据
+== 第2步：添加绑定凭据
 
 执行以下REST API调用以添加绑定凭据。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="1,6"]
 |===
@@ -123,10 +126,18 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 
 | 发布 | /accouns/｛account_id｝/core/v1/credentials 
 |===
-
-
-===== JSON 输入示例
-
+.curl 示例
+[source, curl]
+----
+curl --request POST \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/credentials" \
+--include \
+--header "Content-Type: application/astra-certificate+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
+.JSON 输入示例
 [source, json]
 ----
 {
@@ -144,19 +155,8 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 * `binddn`和`password`是LDAP管理员用户的base64编码绑定凭据、可连接和搜索LDAP目录。`binddn`是LDAP用户的电子邮件地址。
 
 
-
-
-===== curl 示例
-
-[source, curl]
-----
-curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Content-Type: application/astra-credential+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
-----
-
-
-===== JSON响应示例
-
-[source, json]
+.JSON 输出示例
+[listing]
 ----
 {
     "type": "application/astra-credential",
@@ -177,12 +177,15 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 
 
 
-=== 3.检索LDAP设置的UUID
+== 第3步：检索LDAP设置的UUID
 
 执行以下REST API调用以检索Astra控制中心附带的`Astra.account.ldap`设置的UUID。
 
 
 NOTE: 以下cURL示例使用查询参数筛选设置收集。您可以改为删除此筛选器以获取所有设置、然后搜索`Astra.account.ldap`。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="1,6"]
 |===
@@ -191,19 +194,17 @@ NOTE: 以下cURL示例使用查询参数筛选设置收集。您可以改为删�
 
 | 获取 | /accouns/｛account_id｝/core/v1/settings 
 |===
-
-
-===== curl 示例
-
+.curl 示例
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings?filter=name%20eq%20'astra.account.ldap'&include=name,id' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings?filter=name%20eq%20'astra.account.ldap'&include=name,id" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
 ----
-
-
-===== JSON响应示例
-
-[source, json]
+.JSON 输出示例
+[listing]
 ----
 {
   "items": [
@@ -216,12 +217,15 @@ curl --location -i --request GET 'https://astra.example.com/accounts/<ACCOUNT_ID
 ----
 
 
-=== 4.更新LDAP设置
+== 第4步：更新LDAP设置
 
 执行以下REST API调用以更新LDAP设置并完成配置。使用上一个API调用中的`id`值作为以下URL路径中的`<setting_ID>`值。
 
 
 NOTE: 您可以先对特定设置的GET请求进行问题描述 处理、以查看configSchema。此操作将提供有关配置中所需字段的详细信息。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="1,6"]
 |===
@@ -230,10 +234,18 @@ NOTE: 您可以先对特定设置的GET请求进行问题描述 处理、以查�
 
 | PUT | /accouns/｛account_id｝/core/v1/settings/｛setting_id｝ 
 |===
-
-
-===== JSON 输入示例
-
+.curl 示例
+[source, curl]
+----
+curl --request PUT \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
+--include \
+--header "Content-Type: application/astra-setting+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data @JSONinput
+----
+.JSON 输入示例
 [source, json]
 ----
 {
@@ -260,21 +272,16 @@ NOTE: 您可以先对特定设置的GET请求进行问题描述 处理、以查�
 * 仅支持使用"Active Directory"作为供应商。
 
 
-
-
-===== curl 示例
-
-[source, curl]
-----
-curl --location -i --request PUT --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>' --header 'Content-Type: application/astra-setting+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
-----
 如果调用成功、则返回HTTP 204响应。
 
 
 
-=== 5.检索LDAP设置
+== 第5步：检索LDAP设置
 
 您可以选择执行以下REST API调用来检索LDAP设置并确认更新。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="1,6"]
 |===
@@ -283,19 +290,17 @@ curl --location -i --request PUT --data @JSONinput 'https://astra.example.com/ac
 
 | 获取 | /accouns/｛account_id｝/core/v1/settings/｛setting_id｝ 
 |===
-
-
-===== curl 示例
-
+.curl 示例
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "'https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----
-
-
-===== JSON响应示例
-
-[source, json]
+.JSON 输出示例
+[listing]
 ----
 {
   "items": [

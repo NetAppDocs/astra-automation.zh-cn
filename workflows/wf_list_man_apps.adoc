@@ -16,11 +16,10 @@ summary: 您可以列出当前由 Astra 管理的应用程序。您可以在查�
 [role="lead"]
 您可以列出当前由 Astra 管理的应用程序。您可以在查找特定应用程序的快照或备份时执行此操作。
 
-
-
-=== 1. 列出应用程序
-
 执行以下 REST API 调用。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="25,75"]
 |===
@@ -29,10 +28,7 @@ summary: 您可以列出当前由 Astra 管理的应用程序。您可以在查�
 
 | 获取 | /account/｛account_id｝/k8s/v2/apps 
 |===
-
-
-===== 其他输入参数
-
+.其他输入参数
 除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。
 
 [cols="25,10,10,55"]
@@ -42,27 +38,26 @@ summary: 您可以列出当前由 Astra 管理的应用程序。您可以在查�
 
 | 包括 | 查询 | 否 | 也可以选择要在响应中返回的值。 
 |===
-
-
-===== curl 示例：返回所有应用程序的所有数据
-
+.curl 示例：返回所有应用程序的所有数据
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v2/apps" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----
-
-
-===== curl 示例：返回所有应用程序的名称， ID 和状态
-
+.curl 示例：返回所有应用程序的名称， ID 和状态
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps?include=name,id,state' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v2/apps?include=name,id,state" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----
-
-
-===== JSON 输出示例
-
-[source, json]
+.JSON 输出示例
+[listing]
 ----
 {
     "items": [

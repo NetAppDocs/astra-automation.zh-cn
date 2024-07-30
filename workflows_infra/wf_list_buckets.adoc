@@ -16,11 +16,10 @@ summary: 您可以列出为特定 Astra 帐户定义的 S3 存储分段。
 [role="lead"]
 您可以列出为特定 Astra 帐户定义的 S3 存储分段。
 
-
-
-=== 1. 列出分段
-
 执行以下REST API调用以列出分段。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="25,75"]
 |===
@@ -29,11 +28,12 @@ summary: 您可以列出为特定 Astra 帐户定义的 S3 存储分段。
 
 | 获取 | /accouns/｛account_id｝/topology/v1/bass桶 
 |===
-
-
-===== curl 示例：返回所有存储分段的所有数据
-
+.curl 示例：返回所有存储分段的所有数据
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/buckets' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/buckets" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----

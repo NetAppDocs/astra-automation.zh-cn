@@ -18,15 +18,18 @@ summary: 您可以列出为特定应用程序创建的快照。
 
 
 
-=== 开始之前
+== 开始之前
 
 您必须具有要列出其快照的应用程序的ID。如果需要，您可以使用此工作流 link:wf_list_man_apps.html["列出应用程序"] 以查找应用程序。
 
 
 
-=== 1. 列出快照
+== 列出快照
 
 执行以下REST API调用以列出快照。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="25,75"]
 |===
@@ -35,10 +38,7 @@ summary: 您可以列出为特定应用程序创建的快照。
 
 | 获取 | /accouns/｛account_id｝/k8s/v1/apps/｛app_id｝/appSaps 
 |===
-
-
-===== 其他输入参数
-
+.其他输入参数
 除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。
 
 [cols="15,10,10,65"]
@@ -51,27 +51,26 @@ summary: 您可以列出为特定应用程序创建的快照。
 
 | count | 查询 | 否 | 如果为 `count=true` ，则快照数包含在响应的元数据部分中。 
 |===
-
-
-===== curl 示例：返回应用程序的所有快照
-
+.curl 示例：返回应用程序的所有快照
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appSnaps' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v1/apps/$APP_ID/appSnaps" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----
-
-
-===== curl 示例：返回应用程序和计数的所有快照
-
+.curl 示例：返回应用程序和计数的所有快照
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appSnaps?count=true' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v1/apps/$APP_ID/appSnaps?count=true" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----
-
-
-===== JSON 输出示例
-
-[source, json]
+.JSON 输出示例
+[listing]
 ----
 {
     "items": [

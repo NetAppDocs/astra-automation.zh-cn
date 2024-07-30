@@ -18,21 +18,24 @@ summary: 您可以列出可用的存储类。
 
 
 
-=== 1.选择云
+== 第1步：选择云
 
 执行工作流 link:../workflows_infra/wf_list_clouds.html["列出云"] 并选择要使用的云。
 
 
 
-=== 2.选择集群
+== 第2步：选择集群
 
 执行工作流 link:../workflows_infra/wf_list_clusters.html["列出集群"] 并选择集群。
 
 
 
-=== 3.列出特定集群的存储类
+== 第3步：列出特定集群的存储类
 
 执行以下REST API调用以列出特定集群和云的存储类。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="1,6"]
 |===
@@ -41,19 +44,17 @@ summary: 您可以列出可用的存储类。
 
 | 获取 | /accouns/｛account_id｝/topology/v1/clones/clones/clusters/storageClasses.<CLUSTER_ID> <CLOUD_ID> 
 |===
-
-
-===== curl示例：返回所有存储类的所有数据
-
+.curl示例：返回所有存储类的所有数据
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/clouds/<CLOUD_ID>/clusters/<CLUSTER_ID>/storageClasses' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/clouds/<CLOUD_ID>/clusters/<CLUSTER_ID>/storageClasses" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----
-
-
-===== JSON 输出示例
-
-[source, json]
+.JSON 输出示例
+[listing]
 ----
 {
     "items": [

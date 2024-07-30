@@ -18,7 +18,7 @@ summary: 您可以通过克隆现有应用程序来创建新应用程序。
 
 
 
-=== 开始之前
+== 开始之前
 
 请注意以下有关此工作流的信息：
 
@@ -32,15 +32,18 @@ NOTE: 要将应用程序克隆到其他集群，您需要根据环境需要更�
 
 
 
-=== 1.选择要克隆的应用程序
+== 第1步：选择要克隆的应用程序
 
 执行工作流 link:wf_list_man_apps.html["列出应用程序"] 并选择要克隆的应用程序。用于克隆应用程序的 REST 调用需要多个资源值。
 
 
 
-=== 2. 克隆应用程序
+== 第2步：克隆应用程序
 
 执行以下REST API调用以克隆此应用程序。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="25,75"]
 |===
@@ -49,10 +52,7 @@ NOTE: 要将应用程序克隆到其他集群，您需要根据环境需要更�
 
 | 发布 | /accouns/｛account_id｝/k8s/v2/apps 
 |===
-
-
-===== 其他输入参数
-
+.其他输入参数
 除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。
 
 [cols="25,10,10,55"]
@@ -62,10 +62,18 @@ NOTE: 要将应用程序克隆到其他集群，您需要根据环境需要更�
 
 | JSON | body | 是的。 | 提供克隆应用程序的参数。请参见以下示例。 
 |===
-
-
-===== JSON 输入示例
-
+.curl 示例：克隆应用程序
+[source, curl]
+----
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v2/apps" \
+--include \
+--header "Content-Type: application/astra-app+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
+.JSON 输入示例
 [source, json]
 ----
 {
@@ -77,12 +85,4 @@ NOTE: 要将应用程序克隆到其他集群，您需要根据环境需要更�
   "namespace": "mysql-ns",
   "sourceAppID": "e591ee59-ea90-4a9f-8e6c-d2b6e8647096"
 }
-----
-
-
-===== curl 示例：克隆应用程序
-
-[source, curl]
-----
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps' --header 'Content-Type: application/astra-app+json' --header '*/*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
 ----

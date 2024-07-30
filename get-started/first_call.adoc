@@ -17,14 +17,19 @@ summary: 您可以在工作站的命令行界面上通过问题描述 执行一�
 您可以在工作站的命令行界面上通过问题描述 执行一个简单的cURL命令来开始使用Astra Control REST API并确认其可用性。
 
 .开始之前
-本地工作站必须提供 Curl 实用程序。您还必须具有 API 令牌和关联的帐户标识符。请参见 link:get_api_token.html["获取 API 令牌"] 有关详细信息 ...
+您的本地工作站必须提供CURL实用程序。您还必须具有 API 令牌和关联的帐户标识符。有关详细信息、请参见 link:get_api_token.html["获取 API 令牌"] 。
 
 .curl 示例
-以下 Curl 命令将检索 Astra 用户列表。按指示提供相应的 <account_ID> 和 <api_token> 。
+以下cURL命令将检索Asta用户列表。按照说明提供相应的$ACCOUNT_ID和$API_TOCOOL。
 
 [source, curl]
 ----
-curl --location --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Content-Type: application/json' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET  \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/users" \
+--include \
+--header "Content-Type: application/json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----
 .JSON 输出示例
 [listing]

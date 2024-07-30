@@ -18,15 +18,18 @@ summary: 您可以使用特定凭据和预定义角色创建用户。您也可�
 
 
 
-=== 1.选择用户名
+== 第1步：选择用户名
 
 执行工作流 link:../workflows_infra/wf_list_users.html["列出用户"] 并选择当前未使用的可用名称。
 
 
 
-=== 2.创建用户
+== 第2步：创建用户
 
 执行以下REST API调用以创建用户。成功完成调用后、新用户将无法使用。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="25,75"]
 |===
@@ -35,11 +38,18 @@ summary: 您可以使用特定凭据和预定义角色创建用户。您也可�
 
 | 发布 | /accouns/｛account_id｝/core/v1/users 
 |===
-
-
-===== JSON 输入示例
-
+.curl 示例
 [source, curl]
+----
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/users" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
+.JSON 输入示例
+[source, json]
 ----
 {
   "type" :  "application/astra-user",
@@ -49,19 +59,8 @@ summary: 您可以使用特定凭据和预定义角色创建用户。您也可�
   "email" : "jwest@example.com"
 }
 ----
-
-
-===== curl 示例
-
-[source, curl]
-----
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
-----
-
-
-===== JSON 输出示例
-
-[source, curl]
+.JSON 输出示例
+[listing]
 ----
 {
     "metadata": {
@@ -97,15 +96,18 @@ curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>
 ----
 
 
-=== 3.也可以选择允许的命名空间
+== 第3步：(可选)选择允许的名称空格
 
 执行工作流 link:../workflows/wf_list_namespaces.html["列出命名空间"] 并选择要限制访问的命名空间。
 
 
 
-=== 4.将用户绑定到角色
+== 第4步：将用户绑定到角色
 
 执行以下REST API调用以将用户绑定到角色。以下示例对命名空间访问没有任何限制。请参见 link:../additional/rbac.html#enhanced-rbac-with-namespace-granularity["具有命名空间粒度的增强型 RBAC"] 有关详细信息 ...
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="25,75"]
 |===
@@ -114,11 +116,18 @@ curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>
 
 | 发布 | /accouns/｛account_id｝/core/v1/roleBindings 
 |===
-
-
-===== JSON 输入示例
-
+.curl 示例
 [source, curl]
+----
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/roleBindings" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
+.JSON 输入示例
+[source, json]
 ----
 {
   "type" :  "application/astra-roleBinding",
@@ -131,20 +140,15 @@ curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>
 ----
 
 
-===== curl 示例
-
-[source, curl]
-----
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/roleBindings' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
-----
-
-
-=== 5.创建凭据
+== 第5步：创建凭据
 
 执行以下REST API调用以创建凭据并将其与用户关联。此示例使用作为base64值提供的密码。。 `name` 属性应包含上一步返回的用户的ID。输入属性 `change` 还必须在base64中进行编码、并确定用户是否必须在首次登录时更改其密码 (`true` 或 `false`）。
 
 
 NOTE: 只有使用本地身份验证部署Astra控制中心时、才需要执行此步骤。使用LDAP部署Astra控制中心或部署Astra控制服务时不需要此功能。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="25,75"]
 |===
@@ -153,11 +157,18 @@ NOTE: 只有使用本地身份验证部署Astra控制中心时、才需要执行
 
 | 发布 | /accouns/｛account_id｝/core/v1/credentials 
 |===
-
-
-===== JSON 输入示例
-
+.curl 示例
 [source, curl]
+----
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/credentials" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
+.JSON 输入示例
+[source, json]
 ----
 {
   "type" :  "application/astra-credential",
@@ -170,12 +181,4 @@ NOTE: 只有使用本地身份验证部署Astra控制中心时、才需要执行
   },
   "valid" : "true"
 }
-----
-
-
-===== curl 示例
-
-[source, curl]
-----
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
 ----

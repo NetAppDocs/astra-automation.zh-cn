@@ -18,15 +18,18 @@ summary: 您可以检索描述单个应用程序的所有资源变量。
 
 
 
-=== 开始之前
+== 开始之前
 
 您必须具有要检索的应用程序的ID。如果需要，您可以使用此工作流 link:wf_list_man_apps.html["列出应用程序"] 以查找应用程序。
 
 
 
-=== 1. 获取应用程序
+== 第1步：获取应用程序
 
 执行以下 REST API 调用。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="25,75"]
 |===
@@ -35,10 +38,7 @@ summary: 您可以检索描述单个应用程序的所有资源变量。
 
 | 获取 | /accouns/｛account_id｝/k8s/v2/apps/｛app_id｝ 
 |===
-
-
-===== 其他输入参数
-
+.其他输入参数
 除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。
 
 [cols="25,10,10,55"]
@@ -48,11 +48,12 @@ summary: 您可以检索描述单个应用程序的所有资源变量。
 
 | 应用程序ID | 路径 | 是的。 | 要检索的应用程序的ID值。 
 |===
-
-
-===== curl 示例：返回应用程序的所有数据
-
+.curl 示例：返回应用程序的所有数据
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps/<APP_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v2/apps/$APP_ID" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----

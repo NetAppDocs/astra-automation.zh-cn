@@ -2,7 +2,7 @@
 section: workflows
 title: 管理工作流
 entries:
-- title: 开始之前
+- title: 准备使用管理工作流
   url: "/workflows/workflows_before.html"
 - title: 应用程序控制
   entries:

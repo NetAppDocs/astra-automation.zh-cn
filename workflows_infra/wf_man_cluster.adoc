@@ -18,13 +18,13 @@ summary: 您可以管理Kubernetes集群、以便执行数据保护操作。
 
 
 
-=== 1.选择要管理的集群
+== 第1步：选择要管理的集群
 
 执行工作流 link:../workflows_infra/wf_list_clusters.html["列出集群"] 并选择所需的集群。属性 `managedState` 的集群必须为 `unmanaged`。
 
 
 
-=== 2.也可以选择存储类
+== 第2步：(可选)选择存储类
 
 也可以执行工作流 link:../workflows_infra/wf_list_storage_classes.html["列出存储类"] 并选择所需的存储类。
 
@@ -33,9 +33,12 @@ NOTE: 如果在管理集群的调用中未提供存储类、则会使用默认�
 
 
 
-=== 3.管理集群
+== 第3步：管理集群
 
 执行以下REST API调用以管理集群。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="1,6"]
 |===
@@ -44,10 +47,17 @@ NOTE: 如果在管理集群的调用中未提供存储类、则会使用默认�
 
 | 发布 | /accouns/｛account_id｝/topology/v1/managedClusters 
 |===
-
-
-===== JSON 输入示例
-
+.curl 示例
+[source, curl]
+----
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/managedClusters" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
+.JSON 输入示例
 [source, json]
 ----
 {
@@ -55,12 +65,4 @@ NOTE: 如果在管理集群的调用中未提供存储类、则会使用默认�
   "version": "1.0",
   "id": "d0fdf455-4330-476d-bb5d-4d109714e07d"
 }
-----
-
-
-===== curl 示例
-
-[source, curl]
-----
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/managedClusters' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
 ----

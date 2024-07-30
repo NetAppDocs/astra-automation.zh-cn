@@ -16,11 +16,10 @@ summary: 您可以列出当前由 Astra 管理的 Kubernetes 集群。
 [role="lead"]
 您可以列出当前由 Astra 管理的 Kubernetes 集群。
 
-
-
-=== 1.列出受管集群
-
 执行以下 REST API 调用。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="1,6"]
 |===
@@ -29,11 +28,12 @@ summary: 您可以列出当前由 Astra 管理的 Kubernetes 集群。
 
 | 获取 | /accouns/｛account_id｝/topology/v1/managedClusters 
 |===
-
-
-===== curl 示例：返回所有集群的所有数据
-
+.curl 示例：返回所有集群的所有数据
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/managedClusters' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/managedClusters" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----

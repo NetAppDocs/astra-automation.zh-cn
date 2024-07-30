@@ -18,15 +18,18 @@ summary: 您可以根据一个或多个计划创建数据保护策略。
 
 
 
-=== 1.选择应用程序
+== 第1步：选择应用程序
 
 执行工作流 link:../workflows/wf_list_man_apps.html["列出应用程序"] 并选择所需的应用程序。
 
 
 
-=== 2.创建保护
+== 第2步：创建保护
 
 执行以下REST API调用、为特定应用程序创建保护策略。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="1,6"]
 |===
@@ -35,10 +38,17 @@ summary: 您可以根据一个或多个计划创建数据保护策略。
 
 | 发布 | /accouns/｛account_id｝/k8s/v1/apps/｛app_id｝/计划 
 |===
-
-
-===== JSON 输入示例
-
+.curl 示例
+[source, curl]
+----
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v1/apps/$APP_ID/schedules" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
+.JSON 输入示例
 [source, json]
 ----
 {
@@ -53,12 +63,4 @@ summary: 您可以根据一个或多个计划创建数据保护策略。
   "snapshotRetention": "12",
   "backupRetention": "12"
 }
-----
-
-
-===== curl 示例
-
-[source, curl]
-----
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/schedules' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
 ----

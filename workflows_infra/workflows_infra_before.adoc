@@ -4,7 +4,7 @@ permalink: workflows_infra/workflows_infra_before.html
 keywords: workflows, infrastructure workflows, preparation 
 summary: 您可以使用这些工作流创建和维护用于Astra Control Center部署的基础架构。在许多情况下、这些工作流也可以与Astra Control Service结合使用。 
 ---
-= 开始之前
+= 准备使用基础架构工作流
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

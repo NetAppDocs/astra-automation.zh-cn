@@ -33,9 +33,12 @@ NOTE: LDAP凭据以用户名作为电子邮件地址以及关联的LDAP密码的
 
 
 
-=== 1.添加用户
+=== 第1步：添加用户
 
 执行以下REST API调用、将用户添加到Astra并指示LDAP是身份验证提供程序。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="1,6"]
 |===
@@ -44,10 +47,18 @@ NOTE: LDAP凭据以用户名作为电子邮件地址以及关联的LDAP密码的
 
 | 发布 | /accouns/｛account_id｝/core/v1/users 
 |===
-
-
-===== JSON 输入示例
-
+.curl 示例
+[source, curl]
+----
+curl --request POST \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/users" \
+--include \
+--header "Content-Type: application/astra-user+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
+.JSON 输入示例
 [source, json]
 ----
 {
@@ -75,19 +86,8 @@ NOTE: LDAP凭据以用户名作为电子邮件地址以及关联的LDAP密码的
 
 如果`email`值不唯一、则会发生错误、并在响应中返回409 HTTP状态代码。
 
-
-
-===== curl 示例
-
-[source, curl]
-----
-curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Content-Type: application/astra-user+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
-----
-
-
-===== JSON响应示例
-
-[source, json]
+.JSON 输出示例
+[listing]
 ----
 {
   "metadata": {
@@ -123,9 +123,12 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 ----
 
 
-=== 2.为用户添加角色绑定
+=== 第2步：为用户添加角色绑定
 
 执行以下REST API调用以将用户绑定到特定角色。您需要具有上一步中创建的用户UUID。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="1,6"]
 |===
@@ -134,10 +137,18 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 
 | 发布 | /accouns/｛account_id｝/core/v1/roleBindings 
 |===
-
-
-===== JSON 输入示例
-
+.curl 示例
+[source, curl]
+----
+curl --request POST \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/roleBindings" \
+--include \
+--header "Content-Type: application/astra-roleBinding+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
+.JSON 输入示例
 [source, json]
 ----
 {
@@ -154,19 +165,8 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 * 以上用于`roleConstrcont`的值是当前版本Astra唯一可用的选项。它表示用户不受限于一组有限的命名空间、并且可以访问所有这些命名空间。
 
 
-
-
-===== curl 示例
-
-[source, curl]
-----
-curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/roleBindings' --header 'Content-Type: application/astra-roleBinding+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
-----
-
-
-===== JSON响应示例
-
-[source, json]
+.JSON响应示例
+[listing]
 ----
 {
   "metadata": {
@@ -199,9 +199,12 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 
 
 
-=== 1.添加组
+=== 第1步：添加组
 
 执行以下REST API调用、将组添加到Astra并指示LDAP是身份验证提供程序。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="1,6"]
 |===
@@ -210,10 +213,18 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 
 | 发布 | /accouns/｛account_id｝/core/v1/groups 
 |===
-
-
-===== JSON 输入示例
-
+.curl 示例
+[source, curl]
+----
+curl --request POST \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/groups" \
+--include \
+--header "Content-Type: application/astra-group+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
+.JSON 输入示例
 [source, json]
 ----
 {
@@ -234,19 +245,8 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 
 
 
-
-
-===== curl 示例
-
-[source, curl]
-----
-curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/groups' --header 'Content-Type: application/astra-group+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
-----
-
-
-===== JSON响应示例
-
-[source, json]
+.JSON响应示例
+[listing]
 ----
 {
   "type": "application/astra-group",
@@ -265,9 +265,12 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 ----
 
 
-=== 2.为组添加角色绑定
+=== 第2步：为组添加角色绑定
 
 执行以下REST API调用以将组绑定到特定角色。您需要具有上一步中创建的组的UUID。在LDAP执行身份验证后、属于组成员的用户将能够登录到Astra。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
 
 [cols="1,6"]
 |===
@@ -276,10 +279,18 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 
 | 发布 | /accouns/｛account_id｝/core/v1/roleBindings 
 |===
-
-
-===== JSON 输入示例
-
+.curl 示例
+[source, curl]
+----
+curl --request POST \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/roleBindings" \
+--include \
+--header "Content-Type: application/astra-roleBinding+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
+.JSON 输入示例
 [source, json]
 ----
 {
@@ -296,19 +307,8 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 * 以上用于`roleConstrcont`的值是当前版本Astra唯一可用的选项。它表示用户不受特定命名空间的限制、并且可以访问所有命名空间。
 
 
-
-
-===== curl 示例
-
-[source, curl]
-----
-curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/roleBindings' --header 'Content-Type: application/astra-roleBinding+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
-----
-
-
-===== JSON响应示例
-
-[source, json]
+.JSON响应示例
+[listing]
 ----
 {
   "metadata": {

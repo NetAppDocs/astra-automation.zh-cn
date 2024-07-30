@@ -89,19 +89,15 @@
   <block id="ae8a59dcfdfdb01ea66130c76c50f0a7" category="list-text">不会丢失任何值，因为无法复制原始参数并将其用于实际部署。</block>
   <block id="a5fa758a804c6e775ad8c0643a197329" category="paragraph">以下是在 curl 示例中使用的一些常见保留关键字。此列表并非详尽无遗，我们会根据需要使用其他关键字。根据具体情况，其含义应该是显而易见的。</block>
   <block id="220f3d3750583b9db48568a0b5b9a5f1" category="cell">关键字</block>
-  <block id="901931235afef62a62e9ee2657e55eaf" category="cell">&lt;account_ID&gt;</block>
   <block id="ac70412e939d72a9234cdebb1af5867b" category="cell">路径</block>
   <block id="7b5c2e331dadd94a7f2f3c331d308424" category="cell">用于标识运行 API 操作的帐户的 UUIDv4 值。</block>
-  <block id="4a66fdca0794b65eaa799aa5ead36fb1" category="cell">&lt;api_token&gt;</block>
   <block id="bf50d5e661106d0abe925af3c2e6f7e7" category="cell">标题</block>
   <block id="14ce98600753e7afda082ba76ce94155" category="cell">标识和授权调用方的令牌。</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="doc">入门</block>
-  <block id="cbd2fd368381db0d8cdbdead253cf132" category="paragraph">以下 Curl 命令将检索 Astra 用户列表。按指示提供相应的 &lt;account_ID&gt; 和 &lt;api_token&gt; 。</block>
   <block id="efb44cfe1d5b8d9954ea045385675c66" category="doc">删除快照</block>
   <block id="a08d0039b6defc60dd0db0aebca289d8" category="paragraph">您必须具备以下条件：</block>
   <block id="020ac174aad4268a50eed3705447b327" category="inline-link-macro">列出快照</block>
   <block id="8228d21d4972f0a8ed1a2129680b70b2" category="list-text">要删除的快照的 ID 。如果需要，您可以使用此工作流 <block ref="ec07e92ba8186e37075c19b8ee786603" category="inline-link-macro-rx"></block> 以查找快照。</block>
-  <block id="860aa2c08f5183e7dd18366105498ef2" category="section-title">1. 删除快照</block>
   <block id="0ded27ebd95eb2dcf0ec2ac7f61b926c" category="paragraph">执行以下 REST API 调用。</block>
   <block id="3ded167f4ad4afb85c6ace5862e27ba0" category="cell">HTTP 方法</block>
   <block id="32f68a60cef40faedbc6af20298c1a1e" category="cell">删除</block>
@@ -117,16 +113,13 @@
   <block id="f33f60a3b5c95e8659ec5a992f0f055c" category="doc">取消管理应用程序</block>
   <block id="2b194b9170143eb845c618e13f34e5fb" category="paragraph">您可以删除不再需要的受管应用程序。删除受管应用程序也会删除关联的计划。</block>
   <block id="1fa9ca676a71f70d29ff65963febbf34" category="paragraph">删除应用程序时，不会自动删除其备份和快照。如果您不再需要备份和快照，应在删除应用程序之前将其删除。</block>
-  <block id="ba058813d4014443679bdc5bad08e6da" category="section-title">1. 非受管应用程序</block>
   <block id="0be694be5856c81608913372d1359b00" category="section-title">curl 示例：删除受管应用程序</block>
   <block id="f9af5d61179519ce2b27f22348ea2c5b" category="paragraph">请注意以下有关此工作流的信息：</block>
   <block id="6a3f7086385ab02e213a4864a905e1e5" category="list-text">使用应用程序备份</block>
   <block id="8b442400420c3b7121c9e031882bcf48" category="list-text">克隆操作在同一集群中执行</block>
   <block id="e1d39bdee6b9663d35dc3845e9dd04e5" category="admonition">要将应用程序克隆到其他集群，您需要根据环境需要更新 JSON 输入中的 `clusterid` 参数。</block>
-  <block id="a873d81cfc688902e71d08400f93684a" category="section-title">2. 选择要使用的备份</block>
   <block id="8aa0f7001085d2ffdad3efbc0e9de159" category="inline-link-macro">列出备份</block>
   <block id="d40d66b0e6d970d00db3de547260af68" category="paragraph">执行工作流 <block ref="e6b45b76c52a9dd27daf9fa3d915439e" category="inline-link-macro-rx"></block> 并选择要使用的备份。</block>
-  <block id="a2e167678135121b44df9d3e6c7a8d2d" category="section-title">3. 克隆应用程序</block>
   <block id="a02439ec229d8be0e74b0c1602392310" category="cell">发布</block>
   <block id="0ecd11c1d7a287401d148a23bbd7a2f8" category="cell">JSON</block>
   <block id="ac101b32dda4448cf13a93fe283dddd8" category="cell">body</block>
@@ -134,7 +127,6 @@
   <block id="0577bbabd0439eea401a8ec18491d1a6" category="section-title">JSON 输入示例</block>
   <block id="b8622ecf971d21371a3ba9d07a233300" category="section-title">curl 示例：从备份克隆应用程序</block>
   <block id="82d9e1423b1fe50e0e9afcb47255d25a" category="paragraph">您可以列出当前由 Astra 管理的应用程序。您可以在查找特定应用程序的快照或备份时执行此操作。</block>
-  <block id="48db3210f5486202c6926aa7551be0bd" category="section-title">1. 列出应用程序</block>
   <block id="7528035a93ee69cedb1dbddb2f0bfcc8" category="cell">获取</block>
   <block id="d436eb0fd9de10b54a828ce6435f7e81" category="cell">包括</block>
   <block id="66c1b4c7f3dc385b68a9fa903ccd016d" category="cell">查询</block>
@@ -143,21 +135,17 @@
   <block id="6ca58aed53ac62d5749597600edbbdff" category="section-title">curl 示例：返回所有应用程序的所有数据</block>
   <block id="68c53a357a1ff35f5aa8ba654aab4362" category="section-title">curl 示例：返回所有应用程序的名称， ID 和状态</block>
   <block id="bff6b273561ec6570215c14bdba13a26" category="section-title">JSON 输出示例</block>
-  <block id="dac907b900763815cd0dab3692a0ccb9" category="section-title">3. 还原应用程序</block>
   <block id="c16473b0d0e0a369510a4772f6a13523" category="list-text">未使用应用程序备份或快照</block>
-  <block id="91e9ad87c32b1417c98a1c8a57d14d21" category="section-title">2. 克隆应用程序</block>
   <block id="812ae8a5c2b12f97ec673b1ed61bab86" category="section-title">curl 示例：克隆应用程序</block>
   <block id="db5eb84117d06047c97c9a0191b5fffe" category="doc">支持</block>
   <block id="e24800f8fa54848c57ec9b63af6231d3" category="paragraph">有多个工作流可用于调试和支持您的应用程序以及常规 Kubernetes 环境。</block>
   <block id="eadfe8388f5ebf45cdfeff23f0e39899" category="doc">应用程序控制</block>
   <block id="9de4b07ae6319c45521f7ab9180fa62e" category="paragraph">通过这些工作流，您可以控制受管应用程序和非受管应用程序。您可以列出应用程序以及创建和删除受管应用程序。</block>
-  <block id="f09394ee48f57bbe80f0a951776c3439" category="section-title">1. 列出快照</block>
   <block id="e2942a04780e223b215eb8b663cf5353" category="cell">count</block>
   <block id="5aeb23b435f0d586a0493bb8c70b8fc5" category="cell">如果为 `count=true` ，则快照数包含在响应的元数据部分中。</block>
   <block id="f51493699b1a1513a7a2e95212bdc3da" category="section-title">curl 示例：返回应用程序的所有快照</block>
   <block id="a6678bfaa94621c04bacbb0514f6d9d4" category="section-title">curl 示例：返回应用程序和计数的所有快照</block>
   <block id="38395f100e712c841ca6c8a613f86abc" category="list-text">使用应用程序快照</block>
-  <block id="da88fe405a2037d8a9476bbfc8f6cf7f" category="section-title">2. 选择要使用的快照</block>
   <block id="176ae10d2b65c2e741fef4d23fc66fe5" category="paragraph">执行工作流 <block ref="ec07e92ba8186e37075c19b8ee786603" category="inline-link-macro-rx"></block> 并选择要使用的快照。</block>
   <block id="601c2032f11a3d99c3889b1faf260874" category="section-title">curl 示例：从快照克隆应用程序</block>
   <block id="44d23b5c3f8571e7bb4294d0b82f7497" category="doc">管理应用程序</block>
@@ -167,12 +155,10 @@
   <block id="166cbd4582aeac28601a128615e486a3" category="paragraph">您可以使用这些工作流通过快照和备份保护受管应用程序。</block>
   <block id="a6fe5f717c07a456c15f8f2af8c1c7b7" category="doc">列出通知</block>
   <block id="28e5da4816b7e4821438045e6ed86d2b" category="paragraph">您可以列出特定 Astra 帐户的通知。您可以在监控系统活动或调试问题描述时执行此操作。</block>
-  <block id="9d9ee088d3dd8f7e21041745a8cf259f" category="section-title">1. 列出通知</block>
   <block id="b2c97ae425dd751b0e48a3acae79cf4a" category="cell">筛选器</block>
   <block id="0aaaa617845874504df6c76a750325da" category="cell">也可以筛选要在响应中返回的通知。</block>
   <block id="f921030431759c9c846d8a3fd7d84ca2" category="section-title">curl 示例：返回所有通知</block>
   <block id="943e5258980784703a84c31110cf2eec" category="section-title">curl 示例：返回严重性为警告的通知的问题描述</block>
-  <block id="18c7420f03313eb33044afb6b943cb43" category="section-title">1. 创建快照</block>
   <block id="ca88d296d98d8a63f103fe3b0b63d819" category="cell">标识要创建快照的受管应用程序。</block>
   <block id="97edc5e90d2062e191a3eae330d2afa0" category="cell">提供快照的参数。请参见以下示例。</block>
   <block id="c681a34970e8e1b61eddc5718f0627e9" category="section-title">curl 示例：为应用程序创建快照</block>
@@ -193,32 +179,23 @@
   <block id="bc75de9e075d82274edd026fd05fd01f" category="paragraph">以下是还原应用程序时需要考虑的几个事项。</block>
   <block id="2d49337d583eac8056d564e348f43744" category="list-text">还原应用程序与克隆操作非常相似。</block>
   <block id="af5cd1844721ca591969375d08152b0e" category="list-text">还原应用程序时，您必须提供备份或快照。</block>
-  <block id="15d4d7ada9bf77d46154e409388ea743" category="section-title">1. 创建备份</block>
   <block id="6f3183b7efdec0553f8a26ad8a42bd12" category="cell">提供备份的参数。请参见以下示例。</block>
   <block id="eaa80d521faeae22624528a6ab4291dc" category="section-title">curl 示例：为应用程序创建备份</block>
-  <block id="4cd1e59d794feeee43e7cd32844ec8ec" category="section-title">1. 列出备份</block>
   <block id="0254dd3f84d764f594f8490729e7c196" category="cell">标识拥有列出备份的受管应用程序。</block>
   <block id="53c07d76a2f4ca060d727cd96fd24eeb" category="section-title">curl 示例：返回应用程序的所有备份</block>
-  <block id="d822b85cd89777748e1bd6b0a8fd0a46" category="section-title">1. 获取应用程序</block>
   <block id="036e9ec4ee01123ffae8afd3dab3ff9f" category="section-title">curl 示例：返回应用程序的所有数据</block>
   <block id="cb2cecbd9776fc0c17c7929541fe9404" category="doc">删除备份</block>
   <block id="9332cf683c594f797fdb3d0a19819c01" category="list-text">要删除的备份的 ID 。如果需要，您可以使用此工作流 <block ref="e6b45b76c52a9dd27daf9fa3d915439e" category="inline-link-macro-rx"></block> 以查找快照。</block>
-  <block id="9764b72f7f4c0e5ee3e7e8350c8ccd00" category="section-title">1. 删除备份</block>
   <block id="bd5f8c5e1797c9b7450b0fcd4de20d28" category="cell">标识拥有备份的受管应用程序。</block>
   <block id="deed7df33f535761651277671dff8ecd" category="cell">备份 ID</block>
   <block id="31bed42d29869473ab52c27108626330" category="cell">标识要删除的备份。</block>
   <block id="97b9689d8a4aef28c756533c3e3bca1d" category="section-title">curl 示例：删除应用程序的单个备份</block>
   <block id="6a94b76b128da4767ce7885cb84ec799" category="doc">删除失败的应用程序</block>
   <block id="90c78af3e4fa9a4298b9bc66f86d06a6" category="paragraph">如果某个受管应用程序的备份或快照处于故障状态，您可能无法将其删除。在这种情况下，您可以使用下面所述的工作流手动删除此应用程序。</block>
-  <block id="c776475c27b1d7a554d7f110559479d9" category="section-title">2. 列出应用程序的现有备份</block>
   <block id="03697ae46f1d2d1002ffcb19e1ebbd04" category="paragraph">执行工作流 <block ref="e6b45b76c52a9dd27daf9fa3d915439e" category="inline-link-macro-rx"></block>。</block>
-  <block id="dcefcc8de5a7541a95d041f4943c300d" category="section-title">3. 删除所有备份</block>
   <block id="198a14532624e3324770ded326a70a0d" category="paragraph">通过执行此工作流删除所有应用程序备份 <block ref="4f0b12c4d7b6e38cbd2c51245afded1c" category="inline-link-macro-rx"></block> 列表中的每个备份。</block>
-  <block id="dbda08e56067649f1ab59eea05bc44db" category="section-title">4. 列出应用程序的现有快照</block>
   <block id="431b5bf2b0c89bff5ce71c6d5a42c4be" category="paragraph">执行工作流 <block ref="ec07e92ba8186e37075c19b8ee786603" category="inline-link-macro-rx"></block>。</block>
-  <block id="2d29043fd95ac713b9b4c9b91db9d11b" category="section-title">5. 删除所有快照</block>
   <block id="97153f849dc1e17ce221b1aecaa1b827" category="paragraph">执行工作流 <block ref="9716569143d126579035607ebd1a1120" category="inline-link-macro-rx"></block> 列表中的每个快照。</block>
-  <block id="af9ef9bb2e7c334105bad0aa17ad5d28" category="section-title">6. 删除应用程序</block>
   <block id="08a28b071946cc1515702440ff6582d8" category="paragraph">执行工作流 <block ref="a7ef8d5c47daed312bb700c375f9019c" category="inline-link-macro-rx"></block> 删除应用程序。</block>
   <block id="a242cf3d90ad638fe0e23d9477b74175" category="list-text">在页面顶部，单击 * API Documentage* 下显示的 URL 。</block>
   <block id="015f8c34f52b6ef8a3361958660f5e88" category="inline-link-macro">其他注意事项</block>
@@ -476,11 +453,9 @@
   <block id="646fd3c3d22d826a188a59c1bba8854b" category="paragraph">您需要 Astra 帐户的凭据。</block>
   <block id="ec34ea1038c99109c93f6776a16e2be8" category="section-title">工作流类别</block>
   <block id="20d2410ae6d60054698fdb2241648ec0" category="paragraph">根据您的部署模式，有两大类 Astra 工作流可用。如果您使用的是 Astra 控制中心，则应先从基础架构工作流开始，然后再继续执行管理工作流。使用 Astra Control Service 时，通常可以直接转到管理工作流。</block>
-  <block id="3968c3333db40e7d3ec4d8fb2fc30853" category="admonition">工作流中的 curl 示例使用 Astra 控制服务的 URL 。在根据您的环境使用内部 Astra 控制中心时，您需要更改 URL 。</block>
   <block id="3037de0d7a975b284e2a80d0ff32a9cc" category="section-title">基础架构工作流</block>
   <block id="23f646b4da04b69e64a7e464ec005504" category="paragraph">这些工作流用于处理 Astra 基础架构，包括凭据，存储分段和存储后端。Astra 控制中心需要使用这些控制器，但在大多数情况下，也可以与 Astra 控制服务一起使用。这些工作流侧重于建立和维护 Astra 受管集群所需的任务。</block>
   <block id="a0aa3c13c7e155cdac2e684ed97bd329" category="section-title">管理工作流</block>
-  <block id="9b355d9a0df5a5e777f4cd881f971a4e" category="paragraph">本地工作站必须提供 Curl 实用程序。您还必须具有 API 令牌和关联的帐户标识符。请参见 <block ref="67af9ad396391bc7ade4b472f0b4f030" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="8f6291e033ff30c19e8b03e19a26f0f3" category="admonition">NetApp 可以随时扩展和改进这些工作流，因此您应定期查看这些工作流。</block>
   <block id="6fd2337d24b1882caa5014a35282404b" category="section-title">一般准备</block>
   <block id="cbdeff17f21659aa95f18f7102990f97" category="paragraph">在使用任何 Astra 工作流之前，请务必查看 <block ref="1d4e486ef41d26d87e2c5a1c939d4914" category="inline-link-macro-rx"></block>。</block>
@@ -503,7 +478,6 @@
   <block id="6ff447fbf69dd4070e63e99da1dde7b0" category="section-title">curl 示例：返回所有集群的所有数据</block>
   <block id="99a4fd4c49fccb599a3b4d33e4b37909" category="doc">列出存储后端</block>
   <block id="c3a6f95958616037be5bc621e7f71032" category="paragraph">您可以列出可用的存储后端。</block>
-  <block id="9117feaebfa26145178f03156c040dec" category="section-title">1. 列出分段</block>
   <block id="97d6ce33b116e0cdc883be2e518a550e" category="section-title">curl 示例：返回所有存储后端的所有数据</block>
   <block id="b65e59022e022b723c1c1fbb73cd0092" category="doc">列出分段</block>
   <block id="846402b8c9f043783b1fea0eaa5d5e3a" category="paragraph">您可以列出为特定 Astra 帐户定义的 S3 存储分段。</block>
@@ -518,9 +492,7 @@
   <block id="9b99bf7d2bfd4b09363304c166832734" category="cell">集群</block>
   <block id="fb06a1a5fb91fa6698fe3e86c0957986" category="cell">您可以添加受管 Kubernetes 集群，以便保护和支持这些集群所包含的应用程序。</block>
   <block id="f923f903857a5387d3db70494e074632" category="doc">列出用户</block>
-  <block id="908398b479e9327ae04f2325e64e79ad" category="section-title">1. 列出用户</block>
   <block id="d5eaca06185acdad8b69d18d2b7d8a07" category="section-title">curl 示例：返回所有用户的所有数据</block>
-  <block id="6f0f5a995f8609d334baee54a5b0c773" category="section-title">curl 示例：返回所有用户的名字，姓氏和 ID</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">发行说明</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="e81b0f8fae224ca0c3d3258b75a989dd" category="section-title">Astra Control API 许可证</block>
@@ -760,7 +732,6 @@
   <block id="f2ed562f43254d0123b5ec5c7446769b" category="paragraph">Astra大约每60秒就会将其用户和组与LDAP服务器同步一次。因此、如果将用户或组添加到LDAP或从LDAP中删除、则可能需要长达一分钟的时间、才能在Astra中使用该用户或组。</block>
   <block id="b76debe413bda7ec6dfd72991496d708" category="paragraph">在尝试重置LDAP配置之前、必须先禁用LDAP身份验证。此外、要更改LDAP服务器(`connectionHost`)、您需要同时执行这两个操作。请参见 <block ref="9757cdec26988067ceb9687504d1344e" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="a4cce93638d786143ceaec53646fcbd0" category="paragraph">您需要选择LDAP服务器并将Astra配置为使用该服务器作为身份验证提供程序。配置任务包括以下步骤。每个步骤都包括一个REST API调用。</block>
-  <block id="b05f354eda3398ade96e9055b0305ee6" category="section-title">1.添加CA证书</block>
   <block id="468c35b0a371a6568ff7d068ff72eeea" category="paragraph">执行以下REST API调用、将CA证书添加到Astra。</block>
   <block id="073d8b65fb7ecf85a06f38d463b9fdd1" category="admonition">此步骤是可选的、只有当您希望Astra和LDAP通过使用LDAPS的安全通道进行通信时、才需要执行此步骤。</block>
   <block id="ecfba265de37f13d6cf0121430a4909e" category="paragraph">有关输入参数、请注意以下事项：</block>
@@ -768,15 +739,12 @@
   <block id="6387f0ce5ee860358d87cf0c10e51883" category="list-text">如果证书为自签名证书、则应将`isSelfSigned`设置为`true`。默认值为 `false` 。</block>
   <block id="e0da47631d6f2648f3a36bde7e269c3b" category="section-title">curl 示例</block>
   <block id="d6c64252b8ce71696a41d941f4cab6e6" category="section-title">JSON响应示例</block>
-  <block id="d18a6eed5380b79bc54e2eb6e4de5506" category="section-title">2.添加绑定凭据</block>
   <block id="9beb1432cc918de4d5a2f634c78b257d" category="paragraph">执行以下REST API调用以添加绑定凭据。</block>
   <block id="ae15f0c9912e2e37b3523e7e2e9f84ee" category="list-text">`binddn`和`password`是LDAP管理员用户的base64编码绑定凭据、可连接和搜索LDAP目录。`binddn`是LDAP用户的电子邮件地址。</block>
   <block id="bc1e18d5941e02ad1eb5530ea712bf97" category="paragraph">请注意以下响应参数：</block>
   <block id="7650c05d04a1e9ff8418e0b2c4d3117a" category="list-text">在后续工作流步骤中使用凭据的`id`。</block>
-  <block id="be0de023c657d3318fab7db4965e926d" category="section-title">3.检索LDAP设置的UUID</block>
   <block id="bdf56457fecf48ce12cedd63e4baec6a" category="paragraph">执行以下REST API调用以检索Astra控制中心附带的`Astra.account.ldap`设置的UUID。</block>
   <block id="9a7c85ed5d7349bb01adfea8e76844c3" category="admonition">以下cURL示例使用查询参数筛选设置收集。您可以改为删除此筛选器以获取所有设置、然后搜索`Astra.account.ldap`。</block>
-  <block id="a04f6fc98905b19569e98c821652785c" category="section-title">4.更新LDAP设置</block>
   <block id="c74075f7ca4f004176562adafe18dc7f" category="paragraph">执行以下REST API调用以更新LDAP设置并完成配置。使用上一个API调用中的`id`值作为以下URL路径中的`&lt;setting_ID&gt;`值。</block>
   <block id="0634ea9e84d965a9b2b7b53435251582" category="admonition">您可以先对特定设置的GET请求进行问题描述 处理、以查看configSchema。此操作将提供有关配置中所需字段的详细信息。</block>
   <block id="ca58d7a87892784f449108b5713d3d80" category="list-text">`isenabled`应设置为`true`、否则可能会发生错误。</block>
@@ -784,7 +752,6 @@
   <block id="91977da3ac4942f4a1225522ce4a5c8d" category="list-text">`secureMode` should be set to `LDAP` or `LDAPS` based on your configuration in the earlier stee.</block>
   <block id="760e899cc5769c0faca3e4d9e4a5fe50" category="list-text">仅支持使用"Active Directory"作为供应商。</block>
   <block id="c7d952ff6c857d0f8f2f2361f8599340" category="paragraph">如果调用成功、则返回HTTP 204响应。</block>
-  <block id="da31a4db41ccdf3dc0b4203a87c48c02" category="section-title">5.检索LDAP设置</block>
   <block id="49776a9f5739155239c8bae279694c8f" category="paragraph">您可以选择执行以下REST API调用来检索LDAP设置并确认更新。</block>
   <block id="88b81844873daf6f3107692fe9afb47e" category="paragraph">在响应中找到`state`字段、该字段将具有下表中的一个值。</block>
   <block id="46a2a41cc6e552044816a2d04634545d" category="cell">State</block>
@@ -802,7 +769,6 @@
   <block id="16cec7fbd9ab597f4db09dbf853b7ceb" category="list-text"><block ref="16cec7fbd9ab597f4db09dbf853b7ceb" category="inline-link-macro-rx"></block></block>
   <block id="e99b81ee58ab09acce5c0fbc08127e13" category="admonition">LDAP凭据以用户名作为电子邮件地址以及关联的LDAP密码的形式提供。</block>
   <block id="362b4b17b5ad67c04eaf618b3c217139" category="paragraph">您可以为每个Astra用户分配一个角色、该角色将在LDAP身份验证后使用。如果用户数量较少、并且每个用户的管理特征可能不同、则这种做法是合适的。</block>
-  <block id="7250e7ffd1bdbfad9824adacd3541cb3" category="section-title">1.添加用户</block>
   <block id="80429b74c4df5ad07a23ce4efb1b2faa" category="paragraph">执行以下REST API调用、将用户添加到Astra并指示LDAP是身份验证提供程序。</block>
   <block id="181e7c57490e9fb900c9322a2192473b" category="list-text">需要以下参数：</block>
   <block id="1123062a01214f821b854c82829467dc" category="list-text">`authProvider`</block>
@@ -811,19 +777,15 @@
   <block id="8b6d79c2a8205303d04c5e068e578fd8" category="list-text">`authId`是LDAP中用户的可分辨名称(DN)</block>
   <block id="885e6661c5477a454659497bcf807df5" category="list-text">`email`对于在Astra中定义的所有用户都必须是唯一的</block>
   <block id="97c54ae5385dfb0bfaf0ebfe82486c53" category="paragraph">如果`email`值不唯一、则会发生错误、并在响应中返回409 HTTP状态代码。</block>
-  <block id="73ae336a1bcf7abf02f83c9d961066d2" category="section-title">2.为用户添加角色绑定</block>
   <block id="f82c041e2677cb63989e7061882203bc" category="paragraph">执行以下REST API调用以将用户绑定到特定角色。您需要具有上一步中创建的用户UUID。</block>
   <block id="afeef4481e8f77ed56c4383e82369e67" category="list-text">以上用于`roleConstrcont`的值是当前版本Astra唯一可用的选项。它表示用户不受限于一组有限的命名空间、并且可以访问所有这些命名空间。</block>
   <block id="0622cb2fb15cd9db10328e2ba1d3e821" category="paragraph">请注意以下有关响应参数的信息：</block>
   <block id="ac7d66f43ecf3e035bc9139997762243" category="list-text">`PrincipalType`字段的值`user`表示已为用户(而不是组)添加角色绑定。</block>
   <block id="1cce2e3f66074da3b3746e8ff32e3fa7" category="paragraph">您可以为Astra组分配一个角色、该角色将在LDAP身份验证后使用。如果用户数量很多、并且每个用户都可能具有类似的管理特征、则这种做法是合适的。</block>
-  <block id="92c4973d42b7f8c2b77e4ecde1fb1110" category="section-title">1.添加组</block>
   <block id="c0ad03b2572c4c7580edf10837ea5620" category="paragraph">执行以下REST API调用、将组添加到Astra并指示LDAP是身份验证提供程序。</block>
-  <block id="d951c83a74c1539e200b4b2a6abc7a9d" category="section-title">2.为组添加角色绑定</block>
   <block id="a5a9025a2565e62426d0d6fa46ca4e54" category="paragraph">执行以下REST API调用以将组绑定到特定角色。您需要具有上一步中创建的组的UUID。在LDAP执行身份验证后、属于组成员的用户将能够登录到Astra。</block>
   <block id="3f78918ffaed6aa648fbf481030b078e" category="list-text">以上用于`roleConstrcont`的值是当前版本Astra唯一可用的选项。它表示用户不受特定命名空间的限制、并且可以访问所有命名空间。</block>
   <block id="535f31c0d94d3cf84629bee7a5935c63" category="list-text">`PrincipalType`字段的值`group`表示已为组(而不是用户)添加角色绑定。</block>
-  <block id="be1dcc1afbc1a43cd23e6374cd48ad18" category="section-title">1.列出后端</block>
   <block id="affab1573a02975db1b9ece3ebe809a2" category="section-title">2022年8月10日(22.08)</block>
   <block id="a143d01f8afcfb8648ec6fb992293200" category="paragraph">添加了三种新的资源类型：*证书*、*组*和*应用镜像*。此外、还更新了多个现有资源的版本。</block>
   <block id="a49c9c380ec2e13191e995f949a1c440" category="section-title">LDAP 身份验证</block>
@@ -868,29 +830,21 @@
   <block id="29d0525c4055c4b47d6c1f6b4681a4d4" category="summary">您可以在管理Astra受管集群中的应用程序时使用这些工作流。</block>
   <block id="5b11110b9a97c66915e86bcba53ee809" category="summary">您可以列出特定Astra帐户定义和可用的云。</block>
   <block id="aef02d026fec2eb688571bfa2422be3a" category="doc">列出云</block>
-  <block id="1b6ac21e78d44a219b6937e90879165d" category="section-title">1.列出云</block>
   <block id="095599abd98771dd2c043675b15cd910" category="paragraph">执行以下REST API调用以列出云。</block>
   <block id="e660247893e67f2eed38a94a3b63cd22" category="section-title">curl示例：返回所有云的所有数据</block>
   <block id="69e44482660be2fd1013a46b8f354ef2" category="doc">列出分段</block>
   <block id="4609424b2fcb4eca19af08e562b2f818" category="paragraph">执行以下REST API调用以列出分段。</block>
   <block id="9b419681cf780fc8739ee91b14338a6d" category="summary">您可以列出可用的存储类。</block>
   <block id="a2e45d2c4126abee2b89f161a0a3a50f" category="doc">列出存储类</block>
-  <block id="daaec12836753c1aad81b32a5a058476" category="section-title">1.选择云</block>
   <block id="0d3339545a3c8c350c171199c6549779" category="paragraph">执行工作流 <block ref="c4922000cf4edc9c6c02533eba85b458" category="inline-link-macro-rx"></block> 并选择要使用的云。</block>
-  <block id="cb1d8fe3c0fa41d5a40e80cca7f91ff2" category="section-title">2.选择集群</block>
   <block id="1a26d4a9628f05c630331939becee5ab" category="inline-link-macro">列出集群</block>
   <block id="4c52978a3e6a86d17e5ea3080d73c1d4" category="paragraph">执行工作流 <block ref="23d58ac86c4531c319d79804ab05ca2c" category="inline-link-macro-rx"></block> 并选择集群。</block>
-  <block id="0555a951c447a0cbe3807de815a06d5d" category="section-title">3.列出特定集群的存储类</block>
   <block id="646ae38688e5af41b737db05fd5a5cdb" category="paragraph">执行以下REST API调用以列出特定集群和云的存储类。</block>
   <block id="55d1071fe1b5a920cb319a5cdd834452" category="section-title">curl示例：返回所有存储类的所有数据</block>
   <block id="a70539afac49ca03ebbf1219df791a81" category="paragraph">您可以列出特定云中的可用集群。</block>
   <block id="6e7a5e444e17b81da2d35e5e7b5fb7ea" category="paragraph">执行工作流 <block ref="c4922000cf4edc9c6c02533eba85b458" category="inline-link-macro-rx"></block> 并选择包含集群的云。</block>
-  <block id="4a8c29c133faeda5a63e72796ed312c8" category="section-title">2.列出集群</block>
   <block id="279e904c662f9babe50ce81e0df24ea5" category="paragraph">执行以下REST API调用以列出特定云中的集群。</block>
-  <block id="fa52d266bf5c95bd5d51a11ed63c7fa3" category="section-title">1.列出受管集群</block>
-  <block id="8aaca9da7a2057e6c3482b19683ee3b0" category="cell">&lt;APP_ID&gt;</block>
   <block id="f5a4b32e77235d71cac07525901e432b" category="cell">用于标识API调用的应用程序的UUIDv4值。</block>
-  <block id="ead63516b6f8d40a5195059120a34741" category="paragraph">您可以在拥有受管集群后使用这些工作流。这些工作流侧重于应用程序保护和支持操作、例如备份、还原和克隆应用程序。</block>
   <block id="3559bd2aaec7a375c246be9bad63a176" category="summary">您可以为特定应用程序创建备份、然后使用此备份还原或克隆此应用程序。</block>
   <block id="80681c9412a27f13b376ee7ffc18f647" category="doc">为应用程序创建备份</block>
   <block id="7d45849f0acada4f0f40e1349c847305" category="inline-link-macro">列出应用程序</block>
@@ -900,23 +854,19 @@
   <block id="8eb729367d3278cfd6c5aa5310d1f61c" category="cell">标识要创建备份的应用程序。</block>
   <block id="ada65121a72989ba6a7ceafb787c2971" category="summary">您可以通过克隆现有应用程序来创建新应用程序。</block>
   <block id="c92ab9403e09db69311aeb9f72e2e480" category="list-text">新应用程序将放置在其他命名空间中</block>
-  <block id="1db96426d6f4f867edf3cc0ae9e35947" category="section-title">1.选择要克隆的应用程序</block>
   <block id="b46f6842bf882cb490d122382f7a98d5" category="paragraph">执行工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 并选择要克隆的应用程序。用于克隆应用程序的 REST 调用需要多个资源值。</block>
   <block id="af2926b139e31d88056f28937a9c49b6" category="paragraph">执行以下REST API调用以克隆此应用程序。</block>
   <block id="567a9af273a25b92860b783e7f5a7524" category="cell">/account/｛account_id｝/k8s/v2/apps</block>
   <block id="7bf69d8a687703afd9b5af54243f143d" category="summary">您可以通过从备份克隆新应用程序来创建该应用程序。</block>
   <block id="ecf41bcdc089c3b619f5975173077430" category="summary">您可以列出为特定应用程序创建的备份。</block>
   <block id="dbd2251516ab8d7e1775469c5c1508a3" category="paragraph">您必须具有要列出备份的应用程序的ID。如果需要，您可以使用此工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
-  <block id="8b7796198eef86f78d17188652bd8260" category="section-title">1.选择要删除的应用程序</block>
   <block id="82029d5fee8f7191d3a021c9db8b43ac" category="paragraph">执行工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 并选择要删除的应用程序。</block>
   <block id="5678454487dc87ea3b9a2601e9ecd8e3" category="summary">您可以删除与应用程序关联的快照。</block>
   <block id="057648776a4afb375be6db76fd760748" category="list-text">拥有快照的应用程序的ID。如果需要，您可以使用此工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
   <block id="c25f938f3e5ab183a0718fbc32b60cce" category="cell">/accouns/｛account_id｝/K8s/v1/apps/｛app_id｝/appSnaps/｛appsnap_id｝</block>
   <block id="a9f7d2aed593551dc011220c90a52be3" category="paragraph">您可以基于Astra已知的应用程序在特定命名空间中创建托管应用程序。在将应用程序管理或定义到Astra后、您可以通过创建备份和快照来对其进行保护。</block>
-  <block id="d801ba89b540c5da0e4f732a81e855fd" category="section-title">1.选择命名空间</block>
   <block id="ef1d4c0913b02ff6423ee4d1161fea0b" category="inline-link-macro">列出命名空间</block>
   <block id="0a94b02b2f35acb72af0ca2e31006abb" category="paragraph">执行工作流 <block ref="d14574597a65756c248d691b26627131" category="inline-link-macro-rx"></block> 并选择命名空间。</block>
-  <block id="0c686bb338de3ff0d9a5c7aff0164f66" category="section-title">3.管理应用程序</block>
   <block id="3c7008ad6fd78ff999655de722126630" category="paragraph">执行以下REST API调用以管理此应用程序。</block>
   <block id="a32aff1568b14bb39f1c15ef5e32eb54" category="paragraph">您必须具有要取消管理的应用程序的ID。如果需要，您可以使用此工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
   <block id="cc627e860ccc11393d4a5fb9a37cf9a7" category="paragraph">执行以下REST API调用以删除此应用程序。</block>
@@ -935,14 +885,12 @@
   <block id="c2e04773cf7cf8f91a4a9a351b03c32f" category="paragraph">您必须具有要检索的应用程序的ID。如果需要，您可以使用此工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
   <block id="6bb9953a8e27258bd16ce65f51b81000" category="cell">要检索的应用程序的ID值。</block>
   <block id="bfdba4e9998c294b1a4016914698c099" category="summary">您可以通过从备份创建新应用程序来还原应用程序。</block>
-  <block id="14e236ddabe391b8a0496211807ab78b" category="section-title">1.选择要还原的应用程序</block>
   <block id="7a217d2f25d9076086e8f01a3a0e198d" category="paragraph">执行工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 并选择要克隆的应用程序。用于还原应用程序的REST调用需要多个资源值。</block>
   <block id="55c34d696f9301dcae31350ec87093ac" category="summary">您可以通过从快照克隆新应用程序来创建该应用程序。</block>
   <block id="29fd28138191fbfa1b58ba0623d40105" category="summary">您可以为特定应用程序创建快照。</block>
   <block id="be48e6237dab1df212834256a63ceb44" category="doc">为应用程序创建快照</block>
   <block id="e32d1c8a20aafa5c39c1d3b2c3875f36" category="paragraph">您必须具有要为其创建快照的应用程序的ID。如果需要，您可以使用此工作流 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 以查找应用程序。</block>
   <block id="c9ed41c2c3fbdd3ab2809e8a19fa57ee" category="summary">您可以列出可用的命名空间。</block>
-  <block id="2a983bbf122e057a73bf1870cf2ea2db" category="section-title">1.列出命名空间</block>
   <block id="c42968dfccb26ee2ef5912aaf9ee50ed" category="paragraph">执行以下REST API调用以列出命名空间。</block>
   <block id="55b85a82f8838ea89842d9ebe5cbe0d6" category="section-title">curl示例：返回所有命名空间的所有数据</block>
   <block id="f06023f42f86a62fda5cde9e1ca56143" category="section-title">curl示例：返回所有命名空间的名称、状态和集群ID</block>
@@ -970,44 +918,31 @@
   <block id="38a0f81608bad4301a7bd0c62937c7a0" category="summary">您可以添加一个集群、使其可由Astra管理。</block>
   <block id="617a1e32f2d409a9c77e56b76a744edc" category="doc">使用凭据添加集群</block>
   <block id="ec1064b7d3d701d90bcd843f62de2199" category="admonition">使用主要云提供商之一(AKS、EKS、GKE）提供的Kubernetes服务时、不需要添加集群。</block>
-  <block id="9a7df7f9a0a709d54e5600f10282be3c" category="section-title">1.获取kubeconfig文件</block>
   <block id="0f9d366662bdbaac5e7e94b497107f97" category="paragraph">您需要从Kubernetes管理员或服务处获取一份* kubconfig*文件副本。</block>
-  <block id="4213c71e0f3bf4e29d847ed32a86c256" category="section-title">2.准备kubeconfig文件</block>
   <block id="2f01fc21d4fc91a63d214e05b58d1ae3" category="paragraph">在使用* kubeconfig*文件之前、应执行以下操作：</block>
   <block id="4439d3db8fedf30a9f782857c3ba84c1" category="paragraph">如果您收到格式为YAML的kubeconfig文件、则需要将其转换为JSON。</block>
   <block id="9413bfba8f719cfbad604b6dc31a25c7" category="paragraph"><block ref="c4fe76de412e2e8e625be88a4c8c0409" prefix="" category="inline-code"></block></block>
-  <block id="179dae9c1238082df51d848f55149f2b" category="section-title">3.选择云</block>
   <block id="a334c61bdbeeba71f0e5b3f6261056cf" category="paragraph">执行工作流 <block ref="c4922000cf4edc9c6c02533eba85b458" category="inline-link-macro-rx"></block> 并选择要添加集群的云。</block>
   <block id="adaaed5dfdf88205bfc2a19f52977915" category="admonition">您只能选择*私有*云。</block>
-  <block id="0da20235e02091f71130fe02f554db86" category="section-title">4.创建凭据</block>
   <block id="9309ae9888680ed2a9bdac6c4088fda7" category="paragraph">执行以下REST API调用以使用kubeconfig文件创建凭据。</block>
-  <block id="eeb0a36c0a2afb32d05402176c5257dc" category="section-title">5.添加集群</block>
   <block id="6cfceed1b9ea5b28883e844012ce6f31" category="paragraph">执行以下REST API调用以将集群添加到云。的值<block ref="5f2852e58e87847c0c9324d5a8954ae2" prefix=" " category="inline-code"></block> 输入字段是从上一步中的REST API调用获取的。</block>
   <block id="dd8bce8e0fdc7bda8fad7990aa89d570" category="cell">/accouns/｛account_id｝/topology/v1/cloud /｛clune_id｝/集群</block>
   <block id="96e8b262ac53bb3f01457c0c38ed44d1" category="summary">您可以管理Kubernetes集群、以便执行数据保护操作。</block>
   <block id="b07c44c21401db918cbbe0f16f65f02d" category="doc">管理集群</block>
   <block id="46443fe8f8a5e981e03dc9c27f667bba" category="paragraph">您可以管理Kubernetes集群、以便执行数据保护。</block>
-  <block id="7f8edbfa07fdddc2b36b6ef33b38eb6d" category="section-title">1.选择要管理的集群</block>
   <block id="c34eca2cd66003553184da76495d4c73" category="paragraph">执行工作流 <block ref="43eeb3a6199b799839a97c97fac67885" category="inline-link-macro-rx"></block> 并选择所需的集群。属性<block ref="1454762565548055b90a7701d83300db" prefix=" " category="inline-code"></block> 的集群必须为<block ref="a4078d5d3c7b4099b0e6e6cc3ac7d2cd" prefix=" " category="inline-code"></block>。</block>
-  <block id="57c02db141949f6cd9bc959185c1549c" category="section-title">2.也可以选择存储类</block>
   <block id="ce44453b1a2349be569ca70117dc0084" category="paragraph">也可以执行工作流 <block ref="884c867cca3f28784b93799b7c1af829" category="inline-link-macro-rx"></block> 并选择所需的存储类。</block>
   <block id="4b5051ec9f46833b1124a6c78b91ce7c" category="admonition">如果在管理集群的调用中未提供存储类、则会使用默认存储类。</block>
-  <block id="51c65ac5f91c0fe025d2538bb5501fea" category="section-title">3.管理集群</block>
   <block id="34d1129bcb3e6d80617b667f0ab676ac" category="paragraph">执行以下REST API调用以管理集群。</block>
   <block id="e58ad16d27f6c2bc0d209139b5397dce" category="cell">/accouns/｛account_id｝/topology/v1/managedClusters</block>
   <block id="440c9ff0e7eba386ee5e844a6dc1d5c3" category="paragraph">当前版本的Astra控制中心支持使用Astra Control REST API以及Astra Web用户界面配置LDAP身份验证。</block>
   <block id="1c66273c79676c96af07f60339276e5e" category="cell">/accouns/｛account_id｝/topology/v1/storageBackend</block>
   <block id="10a1bf46a85da0a993b0bdc9671634b9" category="summary">您可以使用特定凭据和预定义角色创建用户。您也可以选择限制用户对特定命名空间的访问。</block>
   <block id="5fed933898706fd78ac043eef2dcc541" category="doc">创建用户</block>
-  <block id="e4349772cddf8d27148f14bb1c090bc5" category="section-title">1.选择用户名</block>
   <block id="bf579e87389753dc6d0b880128602f3e" category="paragraph">执行工作流 <block ref="803a43b46c084c148a870ad78dfe7497" category="inline-link-macro-rx"></block> 并选择当前未使用的可用名称。</block>
-  <block id="7656639cc81b8de453d75419028ba7bb" category="section-title">2.创建用户</block>
   <block id="35586540b5807703d873e9f863008b67" category="paragraph">执行以下REST API调用以创建用户。成功完成调用后、新用户将无法使用。</block>
-  <block id="f8bd80db3c02397ae8e40a4e6de0b758" category="section-title">3.也可以选择允许的命名空间</block>
   <block id="21e83956b83b77c2e3a07a7483b69661" category="paragraph">执行工作流 <block ref="d14574597a65756c248d691b26627131" category="inline-link-macro-rx"></block> 并选择要限制访问的命名空间。</block>
-  <block id="cadba72d8e514fc5b8a0e60e624ac9a9" category="section-title">4.将用户绑定到角色</block>
   <block id="d792a9c3d9a5eeca78d6128f5cc15afd" category="paragraph">执行以下REST API调用以将用户绑定到角色。以下示例对命名空间访问没有任何限制。请参见 <block ref="d5f96da881f3bbb1f2ce5df565a9eaea" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
-  <block id="abfd7bd655e908837e751c0d0f89aebf" category="section-title">5.创建凭据</block>
   <block id="b8f71e8040a8090368e4c50131b50bb5" category="paragraph">执行以下REST API调用以创建凭据并将其与用户关联。此示例使用作为base64值提供的密码。。<block ref="b068931cc450442b63f5b3d276ea4297" prefix=" " category="inline-code"></block> 属性应包含上一步返回的用户的ID。输入属性<block ref="eb399bcaca686f8609137153307eecf1" prefix=" " category="inline-code"></block> 还必须在base64中进行编码、并确定用户是否必须在首次登录时更改其密码 <block ref="b326b5062b2f0e69046810717534cb09" prefix="(" category="inline-code"></block> 或<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block>）。</block>
   <block id="b5c7506e2454fbc7d8931d71087f0f8c" category="admonition">只有使用本地身份验证部署Astra控制中心时、才需要执行此步骤。使用LDAP部署Astra控制中心或部署Astra控制服务时不需要此功能。</block>
   <block id="88e25761f6eadcead9ced5f76a00e95c" category="doc">您的第一次API调用</block>
@@ -1025,9 +960,7 @@
   <block id="e13362bfbdde066993001bf62101c347" category="summary">如果某个受管应用程序的备份或快照处于故障状态，您可能无法将其删除。在这种情况下、您可以手动删除此应用程序。</block>
   <block id="36698dfb0401a82ae4a38d7a89d2f6ac" category="summary">您可以根据一个或多个计划创建数据保护策略。</block>
   <block id="37a344179b5428c5bfd29a3e5ebc4386" category="doc">创建数据保护策略</block>
-  <block id="d60248c3a037c50b4fab1b40e42d382b" category="section-title">1.选择应用程序</block>
   <block id="3617b7e17906ff769522250249891768" category="paragraph">执行工作流 <block ref="c7a76b5950dd1b7839ca89fdcde3242a" category="inline-link-macro-rx"></block> 并选择所需的应用程序。</block>
-  <block id="6e1fa1e618821080db74d32c83305ac0" category="section-title">2.创建保护</block>
   <block id="984ccae8e91a0f8522083819554ac899" category="paragraph">执行以下REST API调用、为特定应用程序创建保护策略。</block>
   <block id="84fe78ce214ed629070f9fc2c47da727" category="cell">/accouns/｛account_id｝/k8s/v1/apps/｛app_id｝/计划</block>
   <block id="2d548fd4304c3df5c7e5211c43482750" category="cell">/accouns/｛account_id｝/core/v1/notifications</block>
@@ -1099,8 +1032,6 @@
   <block id="197a73ee4a006ef52c4fbd2b948357d6" category="paragraph-title">定期同步帐户</block>
   <block id="70d08db9e31d103a9a98ae62d1f934cd" category="paragraph-title">禁用并重置LDAP配置</block>
   <block id="19050c1d965285490381eed739648de9" category="paragraph-title">REST API参数</block>
-  <block id="0e20371f2b50c1982ba88634480d8036" category="paragraph-title">将文件从YAML格式转换为JSON</block>
-  <block id="fb08278d28a518a351675c5e1706ae41" category="paragraph-title">在base64中对JSON进行编码</block>
   <block id="305f82eee427805e1142e3f58b3e6aff" category="paragraph-title">基于 REST 技术构建</block>
   <block id="9f58c2cc1c4a1a9d30320aec8702f1e5" category="paragraph-title">支持两种 Astra Control 部署模式</block>
   <block id="308e494b1e26dffecccd3503e87801ab" category="paragraph-title">清晰地映射 REST 端点资源和对象模型</block>
@@ -1180,13 +1111,9 @@
   <block id="2d895ac3837ac459cbcdcd76339d84cd" category="doc">为自管理集群启用动态ANF池</block>
   <block id="5eb0c12811f3c807e7fa3fce6fb5b38d" category="inline-link">Azure应用程序备份</block>
   <block id="d2f8ee1082b8b805ab4862d852412403" category="admonition">动态ANF池是使用Azure NetApp Files (ANF)存储后端的Astra托管应用程序的一项功能。备份这些应用程序时、A作用 力会自动扩展和收缩永久性卷所属的容量池1.5倍。这样可以确保有足够的空间进行备份、而不会产生额外的永久费用。请参见<block ref="e77f243482d8cab01f119049bce61a15" category="inline-link-rx"></block> 有关详细信息 ...</block>
-  <block id="7d1e075c0879d28eb6f2e0dc2ca0c95d" category="section-title">1.添加Azure订阅标识符</block>
   <block id="842df53ed4115db6639f801f88098d30" category="admonition">您需要根据环境的具体情况更新JSON输入示例、包括订阅ID和服务主体的base64值。</block>
-  <block id="e740ac68beb1aec839dcd6ebdf75bf51" category="section-title">2.根据需要添加存储分段</block>
   <block id="efdbcac27db1bf42436b1e2e15d5d0e5" category="paragraph">如果需要、您应向受管应用程序添加存储分段。</block>
-  <block id="31858496f01db3c4c122cda1f4614893" category="section-title">3.备份托管应用程序</block>
   <block id="25e18fd10fb78e25d46577d809123272" category="paragraph">执行工作流 <block ref="531c5c815f0a3a3ceb921ff9baf4d1b9" category="inline-link-macro-rx"></block>。存在初始永久性卷的容量池将自动扩展和缩减。</block>
-  <block id="96422ff09af7e6fad796f820c7b0e17c" category="section-title">4.查看事件日志</block>
   <block id="5212b6690e36338eb93a0191226877d7" category="paragraph">备份期间会记录活动事件。执行工作流 <block ref="0828f7558c056f6ee4409551e28d3465" category="inline-link-macro-rx"></block> 可查看信息。</block>
   <block id="162c594ec970f3cd4eb2f6d6d2311381" category="section-title">2023年5月30日(23.05)</block>
   <block id="3ecf6cf3aaad58d22b055973cbbae0d4" category="paragraph">您可以在还原或克隆操作期间选择目标存储类。</block>
@@ -1272,4 +1199,83 @@
   <block id="9a5f09cf66e692efdae493ce4c9aa64f" category="sidebar">准备</block>
   <block id="a7f5f35426b927411fc9231b56382173" category="sidebar">Python</block>
   <block id="ea1c0b8e4018f75659e26eb720b206e5" category="sidebar">本机使用 Python</block>
+  <block id="523a1cfb3b4256bbe5311726ee36f696" category="paragraph">您的本地工作站必须提供CURL实用程序。您还必须具有 API 令牌和关联的帐户标识符。有关详细信息、请参见 <block ref="67af9ad396391bc7ade4b472f0b4f030" category="inline-link-macro-rx"></block> 。</block>
+  <block id="f299b0f6fdbc34ea3d794597ba73c9ec" category="paragraph">以下cURL命令将检索Asta用户列表。按照说明提供相应的$ACCOUNT_ID和$API_TOCOOL。</block>
+  <block id="4a2dafab48196ce861e90a0907c73127" category="admonition">一个工作流只能包含一个步骤。这些单步工作流的格式与包含多个步骤的工作流略有不同。例如、删除显式步骤名称。操作或操作应根据工作流标题明确。</block>
+  <block id="5405c26aee0953a9b08923bc28b809f3" category="admonition">工作流中的cURL示例使用Astra Control Service的URL。在根据您的环境使用内部 Astra 控制中心时，您需要更改 URL 。</block>
+  <block id="788d16c550305d5cdd6d901e38602c4f" category="paragraph">设置受管集群后、您可以使用这些工作流。管理工作流侧重于应用程序保护和支持操作、例如备份、还原和克隆应用程序。</block>
+  <block id="8f22b98753b9a8d986074d99513ea82d" category="paragraph">这些变量经过格式设置、可在bash shell环境中使用。每个变量都以美元符号开头、并根据需要用双引号括起来。这使得他们可以被巴什所识别。名称始终使用大写。</block>
+  <block id="970f0ff461f24a88893c95d057c3f91a" category="cell">$account_ID</block>
+  <block id="9b797bf1d19d4e2621c60a1a528793bd" category="cell">$API_TOATHOR</block>
+  <block id="78f011d2c3c145e1d8df351c66fdcf84" category="cell">$APP_ID</block>
+  <block id="12c6401fb02cab85d072b4b981f50e87" category="section-title">将示例与Bash结合使用</block>
+  <block id="4e663cee8de7cfcd12693277d7261dd0" category="paragraph">如果您直接使用工作流卷曲示例、则必须使用适合您环境的值更新其包含的变量。您可以手动编辑这些示例、也可以依靠bash shell为您执行替换、如下所述。</block>
+  <block id="f2e6cc557c48559ec2b9ae2a12ddd1c6" category="admonition">使用"Bash"的一个优点是、您可以在shell会话中设置一次变量值、而不是在每个CURL命令中设置一次。</block>
+  <block id="1e5ad8f157b0c54185ce7c5af4fe8bbd" category="list-text">打开随Linux或类似操作系统提供的bash shell。</block>
+  <block id="cb607a6c7e4c50ffa4ecc75254227d82" category="list-text">设置要运行的CURL示例中包含的变量值。例如：</block>
+  <block id="1bf91cbd146b9cbe376f76b20aa28a58" category="paragraph"><block ref="4b75e3bfad4e9874b694b1af5271a20e" prefix="" category="inline-code"></block></block>
+  <block id="a76ad0ce3b4ce85c64bbc3d3cd25bdd2" category="list-text">从工作流页面复制卷曲示例并将其粘贴到shell终端中。</block>
+  <block id="50f5e9afe70053510216546ebb7b3c89" category="list-text">按*enter*执行以下任务：</block>
+  <block id="d39d8df6cc6b6690437657a67b14b44c" category="list-text">替换您设置的变量值。</block>
+  <block id="1b816384befdca88f399e4ba1d8d4510" category="list-text">执行Curl命令。</block>
+  <block id="26d71a26023b960adecf980acb1b09a4" category="section-title">第1步：选择要克隆的应用程序</block>
+  <block id="831c3d6874c26ae3b603eb386a68c7e7" category="section-title">第2步：克隆应用程序</block>
+  <block id="aeeec844965e3df4410c1eb088d94a03" category="paragraph-title">HTTP方法和端点</block>
+  <block id="0b0231c1815d06ad4701a091ce91a740" category="paragraph">此REST API调用使用以下方法和端点。</block>
+  <block id="6a8d4bb4089035fd968556a67bb5d221" category="section-title">第2步：选择要使用的备份</block>
+  <block id="adf0fd686c4102d59d11f2d0dcdf398a" category="section-title">第3步：克隆应用程序</block>
+  <block id="b32caa55ac8df979135c737a27fc2079" category="section-title">第2步：选择要使用的快照</block>
+  <block id="f99b69945a176ffbedac86a22cf6c413" category="section-title">创建备份</block>
+  <block id="6aa9029b6977fa721b34d2406dfc4521" category="section-title">第1步：选择应用程序</block>
+  <block id="ef597d1d2964ff7f19397916ec8a7c5b" category="section-title">第2步：创建保护</block>
+  <block id="af9c364e0933200b7b8c1e7e13947ccf" category="section-title">创建快照</block>
+  <block id="0e33237b8aefb402a3309a57e55b946a" category="section-title">删除备份</block>
+  <block id="7e062944baeabb6f3489fafa43b50d34" category="section-title">第1步：选择要删除的应用程序</block>
+  <block id="8bc874cef59e76875fb8d69d77f9ab06" category="section-title">第2步：列出应用程序的现有备份</block>
+  <block id="a0658c0f3d22c9292ce6d9a8992b138b" category="section-title">第3步：删除所有备份</block>
+  <block id="abd13ae640ca6baadd3662cf90572826" category="section-title">第4步：列出应用程序的现有快照</block>
+  <block id="771eb3fc4f75030247a65e1fc19823cb" category="section-title">第5步：删除所有快照</block>
+  <block id="2b441e5745e992dacb6396716af36085" category="section-title">第6步：删除应用程序</block>
+  <block id="fe660bb8d946c61245b96e164bac89dd" category="section-title">删除快照</block>
+  <block id="470606db3314867beffec97198174fab" category="section-title">第1步：获取应用程序</block>
+  <block id="83211b51a299c7e00941e0e68f5e1aa0" category="section-title">第1步：选择命名空间</block>
+  <block id="4f227403463a55591f80d6047724e30f" category="section-title">第2步：选择集群</block>
+  <block id="0b741e00aac1537f8f2fb54fb86c353a" category="section-title">第3步：管理应用程序</block>
+  <block id="81ebad3a1612a35641aba3076fab140a" category="section-title">第1步：选择要还原的应用程序</block>
+  <block id="aadc9b3845dc364b58f5da855ae92141" category="section-title">第3步：还原应用程序</block>
+  <block id="661fe6993f73c7ce8d5ad4b777e91b12" category="section-title">取消管理应用程序</block>
+  <block id="3d8ffdc021ffd43ad74e3d6f519722a8" category="doc">准备使用管理工作流</block>
+  <block id="3e23114f69d603af9b389f390d1d792c" category="section-title">第1步：获取kubeconfig</block>
+  <block id="fb178ee98879cf10394c3fcc1e9cfe3b" category="section-title">第2步：准备kubeconfig</block>
+  <block id="49fcb7da740fd696b93ed531cf2522bf" category="list-text">将文件从YAML格式转换为JSON：</block>
+  <block id="04915ca9374f9360174c5bb822d62952" category="list-text">在base64中编码JSON：</block>
+  <block id="94d01a1376d270947b45780d48f1adb0" category="section-title">第3步：选择云</block>
+  <block id="f77352c420ac351bac23422e82905baf" category="section-title">第4步：创建凭据</block>
+  <block id="aa47cd065ccbbefd08a6328ed9e779c4" category="section-title">第5步：添加集群</block>
+  <block id="8b097b2280e9b5ac412b3c18f56ef5a9" category="section-title">第1步：选择用户名</block>
+  <block id="9a4401607f289467156272185387ce84" category="section-title">第2步：创建用户</block>
+  <block id="a55b6678b9bfa39f05fbb875b2e65cc8" category="section-title">第3步：(可选)选择允许的名称空格</block>
+  <block id="b0aa935b55f5415b326911a80ea6ec55" category="section-title">第4步：将用户绑定到角色</block>
+  <block id="da900c773a61192cea343bbe892a8ae8" category="section-title">第5步：创建凭据</block>
+  <block id="51678b1087926261039ec3b5589aed07" category="section-title">第1步：添加Azure订阅标识符</block>
+  <block id="3cbe83c82d94dc509761c4f24bfbdb8a" category="section-title">第2步：根据需要添加存储分段</block>
+  <block id="9228519267884c86287fce3da18f54fa" category="section-title">第3步：备份托管应用程序</block>
+  <block id="abfda017d96afa83e37da2abd6358a28" category="section-title">第4步：查看事件日志</block>
+  <block id="9c1df6d1e26209d3fa67de90d73265f3" category="section-title">第1步：添加用户</block>
+  <block id="723721d98c017af00675af2fca6d4fa7" category="section-title">第2步：为用户添加角色绑定</block>
+  <block id="b53c4a885c58765a35e13bfd940ab8a9" category="section-title">第1步：添加组</block>
+  <block id="8222df3702e992109ddcb77ba542cc90" category="section-title">第2步：为组添加角色绑定</block>
+  <block id="f6c25fbe4a988311f3605f656a9a4af4" category="section-title">第1步：添加CA证书</block>
+  <block id="4a71332192146eda4a814b5aeeb3d11d" category="section-title">第2步：添加绑定凭据</block>
+  <block id="401e75ec18c40153f3cc32c6fb14d303" category="section-title">第3步：检索LDAP设置的UUID</block>
+  <block id="679e8523a1ac3ecf0472684a2cf25224" category="section-title">第4步：更新LDAP设置</block>
+  <block id="7cfd5cf5b29a4d7d255c81bac6fb1654" category="section-title">第5步：检索LDAP设置</block>
+  <block id="3cf330d77199a0200d9c86e28e8b4133" category="section-title">第1步：选择云</block>
+  <block id="700310349d59d4d2d9201ecb37d5ad6f" category="section-title">第2步：列出集群</block>
+  <block id="265d87ecadd8f805dbc0fb9fc9d0669a" category="section-title">第3步：列出特定集群的存储类</block>
+  <block id="faae4ffdb14c7efde6acb709e7e0a804" category="listing-title">CURL示例：返回所有用户的名字、姓氏和ID</block>
+  <block id="c17e12b2f9bed3b70d0e8ed1fa90ff42" category="section-title">第1步：选择要管理的集群</block>
+  <block id="f3ce982ad9387cf7c9ddd68f1e127726" category="section-title">第2步：(可选)选择存储类</block>
+  <block id="b50a5e66f115ae19653182ad262cdc3a" category="section-title">第3步：管理集群</block>
+  <block id="9eddc2012ee6ec370149202882b1432b" category="doc">准备使用基础架构工作流</block>
 </blocks>
