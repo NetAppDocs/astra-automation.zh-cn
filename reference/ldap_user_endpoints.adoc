@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/ldap_user_endpoints.html 
+summary: 'Astra API (ACC) LDAP 用户端点' 
+---
+= Astra API (ACC) LDAP 用户端点
+:allow-uri-read: 
+
+
+LDAP 用户 API 为配置的 LDAP 服务器内的 LDAP 用户提供只读访问。

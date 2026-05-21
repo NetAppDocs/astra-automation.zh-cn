@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/feature_endpoints.html 
+summary: 'Astra API (ACC) 功能端点' 
+---
+= Astra API (ACC) 功能端点
+:allow-uri-read: 
+
+
+Feature API 提供对功能标志资源的只读访问权限，以确定在系统中启用或禁用了哪些功能。

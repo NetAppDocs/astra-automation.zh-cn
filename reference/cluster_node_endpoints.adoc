@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/cluster_node_endpoints.html 
+summary: 'Astra API (ACC) 集群节点端点' 
+---
+= Astra API (ACC) 集群节点端点
+:allow-uri-read: 
+
+
+Cluster Node API 提供对与集群关联的节点的访问。

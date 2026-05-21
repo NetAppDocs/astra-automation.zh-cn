@@ -1,0 +1,639 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-core-v1-certificates.html 
+summary: 列出所有证书 
+---
+= 列出所有证书
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/certificates`#
+
+返回集合中所有匹配资源的 JSON 数组。如果在请求中指定了单个字段，则项目 JSON 数组将包含按指定顺序为每个匹配资源请求的字段。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| 继续 |  | 查询 | False  a| 
+指示要从中恢复列表的令牌。
+
+URL 示例："continue=+++<continue token="" from="" collection="" metadata="">+++"+++</continue>+++
+
+OpenAPI 示例："+++<continue token="" from="" collection="" metadata="">+++</continue>+++</continue>
+
+
+
+| 筛选器 | string | 查询 | False  a| 
+指示在列出集合时应匹配哪些字段以返回资源。
+
+支持的运算符有：
+
+* eq - 相等
+* lt/gt - 小于/大于
+* lte/gte - 小于或等于/大于或等于
+
+
+URL 示例："filter=field%20eq%20%27value%27"
+
+OpenAPI 示例："field eq 'value'"
+
+* 示例：certUse%20eq%20'rootCA'
+
+
+
+
+| 包括 | string | 查询 | False  a| 
+指示列出集合时应返回哪些字段。
+
+URL 示例："include=id"、"include=id,name"
+
+OpenAPI 示例："id"
+
+* 示例：id,cn,isSelfSigned
+
+
+
+
+| limit | string | 查询 | False  a| 
+指示列出集合时要返回的最大资源数。
+
+URL 示例："limit=2"
+
+OpenAPI 示例："2"
+
+
+
+| 订单 | string | 查询 | False  a| 
+指示列出集合时资源的排序顺序。
+
+URL 示例："orderBy=name"，"orderBy=name%20desc"
+
+OpenAPI 示例："name desc"
+
+|===
+
+
+== 响应
+
+[source]
+----
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 个项 | 数组[任意一个：link:#certificate_1_1_get_response_body["certificate_1.1_get_response_body"]，数组[]] | True  a| 
+
+
+
+| 元数据 | link:#type_astra_metadata_list["type_astra_metadata_list"] | True  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-certificates",
+  "version": "1.1",
+  "items": [
+    [
+      "f97f3441-075e-4f9b-9d1e-47f9f62a3fc4",
+      "prod.region-1.example.com",
+      "true"
+    ],
+    [
+      "5e365b4d-034f-4f13-95ef-d3a7fbc0df3d",
+      "prod.region-2.example.com",
+      "false"
+    ],
+    [
+      "11ceb350-1999-4b79-80a6-46a980a27856",
+      "prod.example.com",
+      "false"
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidParams | 数组[link:#invalidParams["invalidParams"]] | False  a| 
+无效查询参数列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 503, Service unavailable
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/41",
+  "title": "Service not ready",
+  "detail": "Currently, the service can't respond to this request.",
+  "status": "503"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 409, Conflict
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/164",
+  "title": "Requested resource in unexpected state",
+  "detail": "The requested resource can't be returned because it isn't in the expected state. Wait for the conflict to be resolved and retry the request.",
+  "status": "409"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+type_astra_stateTransition
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 自 | string | True  a| 
+
+
+
+| to | 数组[string] | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+additionalDetails
+
+[role="api-collapsible-fifth-title"]
+type_astra_stateDetail
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_update
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+certificate_1.1_get_response_body
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-certificate"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+* "1.1"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| certUse | string | True  a| 
+表示证书使用情况的 JSON 字符串。如果未指定，则默认为"rootCA"。定义的值为：
+
+* "rootCA" - 证书是证书颁发机构 (CA) 证书，用于信任由该 CA 签名的任何证书。
+* "intermediateCA" - 证书是由根 CA 颁发的中间 CA 证书。
+
+
+
+
+| cert | string | True  a| 
+包含 base64 编码的 PKCS-11 格式证书 (PEM) 的 JSON 字符串。定义的值是：
+
+* 符合 base64 编码数据架构
+
+
+
+
+| cn | string | True  a| 
+包含从证书中提取的通用名称的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：511
+
+
+
+
+| expiryTimestamp | string | True  a| 
+包含指示证书何时过期的时间戳的 JSON 字符串。定义的值为：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| isSelfSigned | string | True  a| 
+表示证书是否为自签名的 JSON 字符串。如果在创建时未提供，则该值默认为"false"。更新时：
+
+* 如果提供了值，则将使用该值。
+* 如果不提供该值，并且更新中包含 "cert" 字段，则该值将设置为 "false"。
+* 如果未提供该值，并且"cert"字段未包含在更新中，则将保留现有值。定义的值为：
+* "true" - 证书是自签名的。
+* "false" - 此证书不是自签名的。
+
+
+
+
+| trustState | string | True  a| 
+包含指示证书是否受信任的一组枚举值之一的 JSON 字符串。定义的值为：
+
+* "untrusted" - 此证书不受信任。
+* "trusted" - 证书被标记为可信。
+* "expired" - 证书已过期，因此既不受信任也不不受信任。
+
+
+
+
+| trustStateTransitions | 数组[link:#type_astra_stateTransition["type_astra_stateTransition"]] | True  a| 
+JSON 对象的 JSON 数组，每个表示从给定定义状态的允许状态转换集。每个 JSON 对象都包含"from"和"to"字段，其中"from"值是状态的名称，"to"值是允许的目标状态数组。
+
+
+
+| trustStateDesired | string | False  a| 
+包含指示证书是否受信任的值的 JSON 字符串。如果在创建时未指定，则默认值为"trusted"。定义的值为：
+
+* "untrusted" - 此证书不受信任。
+* "trusted" - 证书被标记为可信。
+
+
+
+
+| trustStateDetails | 数组[link:#type_astra_stateDetail["type_astra_stateDetail"]] | True  a| 
+列出有关证书信任状态的其他详细信息的 JSON 对象的 JSON 数组。如果没有可用的详细信息，则此数组将为空。
+
+* 最小项目数：0
+
+
+
+
+| 元数据 | link:#type_astra_metadata_update["type_astra_metadata_update"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_list
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 继续 | string | False  a| 
+
+
+
+| count | 数字 | False  a| 
+
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+====

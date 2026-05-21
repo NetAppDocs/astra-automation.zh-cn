@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/execution_hook_override_endpoints.html 
+summary: 'Astra API (ACC) 执行挂钩覆盖端点' 
+---
+= Astra API (ACC) 执行挂钩覆盖端点
+:allow-uri-read: 
+
+
+Execution Hook Override API 允许用户为特定应用程序禁用预加载的"netapp"执行挂钩。(*注意以下 API DEPRECATIONS*)

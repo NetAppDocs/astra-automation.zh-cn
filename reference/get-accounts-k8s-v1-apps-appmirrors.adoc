@@ -1,0 +1,950 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-k8s-v1-apps-appmirrors.html 
+summary: 列出应用程序的 AppMirror 资源 
+---
+= 列出应用程序的 AppMirror 资源
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors`#
+
+返回集合中所有匹配资源的 JSON 数组。如果在请求中指定了单个字段，则项目 JSON 数组将包含按指定顺序为每个匹配资源请求的字段。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| app_id | string | path | True  a| 
+包含应用程序资源的 ID
+
+
+
+| 包括 | string | 查询 | False  a| 
+指示列出集合时应返回哪些字段。
+
+URL 示例："include=id"、"include=id,name"
+
+OpenAPI 示例："id"
+
+
+
+| limit | string | 查询 | False  a| 
+指示列出集合时要返回的最大资源数。
+
+URL 示例："limit=2"
+
+OpenAPI 示例："2"
+
+
+
+| 筛选器 | string | 查询 | False  a| 
+指示在列出集合时应匹配哪些字段以返回资源。
+
+支持的运算符有：
+
+* eq - 相等
+* lt/gt - 小于/大于
+* lte/gte - 小于或等于/大于或等于
+
+
+URL 示例："filter=field%20eq%20%27value%27"
+
+OpenAPI 示例："field eq 'value'"
+
+|===
+
+
+== 响应
+
+[source]
+----
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 个项 | 数组[任意以下之一：link:#appMirror_1_1_get_response_body["appMirror_1.1_get_response_body"]，数组[]] | True  a| 
+
+
+
+| 元数据 | link:#type_astra_metadata_list["type_astra_metadata_list"] | True  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-appMirrors",
+  "version": "1.1",
+  "items": [
+    {
+      "type": "application/astra-appMirror",
+      "version": "1.1",
+      "id": "f1c98c2e-6391-42d3-8b21-3e75dac048a3",
+      "sourceAppID": "efd639b6-fc92-4112-8841-0c0ab7890ae0",
+      "sourceClusterID": "5789e026-c2e2-41e9-ab00-9766bcfa8951",
+      "destinationAppID": "cd7b6d91-fc19-4983-a754-9a7bb4d80a7b",
+      "destinationClusterID": "c5d023a9-4061-4a8a-bfbf-3be11ff06226",
+      "namespaceMapping": [
+        {
+          "clusterID": "5789e026-c2e2-41e9-ab00-9766bcfa8951",
+          "namespaces": [
+            "ns1-src",
+            "ns2-src"
+          ]
+        },
+        {
+          "clusterID": "c5d023a9-4061-4a8a-bfbf-3be11ff06226",
+          "namespaces": [
+            "ns1-dest",
+            "ns2-dest"
+          ]
+        }
+      ],
+      "state": "established",
+      "stateTransitions": [
+        {
+          "from": "establishing",
+          "to": [
+            "established",
+            "deleting"
+          ]
+        },
+        {
+          "from": "established",
+          "to": [
+            "failingOver",
+            "deleting"
+          ]
+        },
+        {
+          "from": "failingOver",
+          "to": [
+            "failedOver",
+            "deleting"
+          ]
+        },
+        {
+          "from": "failedOver",
+          "to": [
+            "establishing",
+            "deleting"
+          ]
+        },
+        {
+          "from": "deleting",
+          "to": [
+            "deleted"
+          ]
+        }
+      ],
+      "stateDesired": "established",
+      "stateAllowed": [
+        "failedOver",
+        "deleted"
+      ],
+      "stateDetails": [
+        {
+          "type": "https://astra.netapp.io/stateDetails/1",
+          "title": "AppMirror relationship established",
+          "detail": "The AppMirror relationship has been successfully established."
+        }
+      ],
+      "healthState": "normal",
+      "healthStateTransitions": [
+        {
+          "from": "indeterminate",
+          "to": [
+            "normal",
+            "warning",
+            "critical"
+          ]
+        },
+        {
+          "from": "normal",
+          "to": [
+            "indeterminate",
+            "warning",
+            "critical"
+          ]
+        },
+        {
+          "from": "warning",
+          "to": [
+            "indeterminate",
+            "normal",
+            "critical"
+          ]
+        },
+        {
+          "from": "critical",
+          "to": [
+            "indeterminate",
+            "normal",
+            "warning"
+          ]
+        }
+      ],
+      "healthStateDetails": [
+        {
+          "type": "https://astra.netapp.io/stateDetails/2",
+          "title": "SnapMirror syncing successfully",
+          "detail": "All SnapMirror relationships are synchronizing as expected."
+        }
+      ],
+      "metadata": {
+        "labels": [],
+        "creationTimestamp": "2020-08-06T12:24:52.256624Z",
+        "modificationTimestamp": "2020-08-06T12:24:52.256624Z",
+        "createdBy": "11c0cfa1-4f27-4ef7-a21c-cb452fc5c9aa"
+      }
+    },
+    {
+      "type": "application/astra-appMirror",
+      "version": "1.1",
+      "id": "114633f0-5b59-4bd7-adce-a9ba4423a1bd",
+      "sourceAppID": "eaf8b854-211d-460a-ac18-d093d8e2ac70",
+      "sourceClusterID": "fcb27b51-ebb7-40ca-b8f1-1d23ebd06889",
+      "destinationAppID": "e829c5e0-750f-44ad-a684-aee85be2c2bb",
+      "destinationClusterID": "fcb27b51-ebb7-40ca-b8f1-1d23ebd06889",
+      "namespaceMapping": [
+        {
+          "clusterID": "fcb27b51-ebb7-40ca-b8f1-1d23ebd06889",
+          "namespaces": [
+            "app-namespace"
+          ],
+          "role": "source"
+        },
+        {
+          "clusterID": "fcb27b51-ebb7-40ca-b8f1-1d23ebd06889",
+          "namespaces": [
+            "destination-app-namespace"
+          ],
+          "role": "destination"
+        }
+      ],
+      "storageClasses": [
+        {
+          "storageClassName": "destination-sc",
+          "clusterID": "fcb27b51-ebb7-40ca-b8f1-1d23ebd06889",
+          "role": "destination"
+        }
+      ],
+      "state": "established",
+      "stateTransitions": [
+        {
+          "from": "establishing",
+          "to": [
+            "established",
+            "deleting"
+          ]
+        },
+        {
+          "from": "established",
+          "to": [
+            "failingOver",
+            "deleting"
+          ]
+        },
+        {
+          "from": "failingOver",
+          "to": [
+            "failedOver",
+            "deleting"
+          ]
+        },
+        {
+          "from": "failedOver",
+          "to": [
+            "establishing",
+            "deleting"
+          ]
+        }
+      ],
+      "stateDesired": "established",
+      "stateAllowed": [
+        "failedOver",
+        "deleted"
+      ],
+      "stateDetails": [],
+      "transferState": "idle",
+      "transferStateTransitions": [
+        {
+          "from": "transferring",
+          "to": [
+            "idle"
+          ]
+        },
+        {
+          "from": "idle",
+          "to": [
+            "transferring"
+          ]
+        }
+      ],
+      "transferStateDetails": [
+        {
+          "type": "https://astra.netapp.io/stateDetails/24",
+          "title": "Snapshot replication completed",
+          "detail": "A snapshot was replicated to the destination.",
+          "additionalDetails": {
+            "completionTime": "2023-07-06T22:46:39Z",
+            "snapshotID": "ae60820d-e963-4eab-8bb3-9159e9f012f0",
+            "startTime": "2023-07-06T22:46:08Z"
+          }
+        }
+      ],
+      "healthState": "normal",
+      "healthStateTransitions": [],
+      "healthStateDetails": [
+        {
+          "type": "https://astra.netapp.io/stateDetails/24",
+          "title": "Snapshot replication completed",
+          "detail": "A snapshot was replicated to the destination.",
+          "additionalDetails": {
+            "completionTime": "2023-07-06T22:46:39Z",
+            "snapshotID": "ae60820d-e963-4eab-8bb3-9159e9f012f0",
+            "startTime": "2023-07-06T22:46:08Z"
+          }
+        }
+      ],
+      "metadata": {
+        "labels": [],
+        "creationTimestamp": "2023-07-06T22:45:24Z",
+        "modificationTimestamp": "2023-07-06T22:45:24Z",
+        "createdBy": "cc420827-f968-4da7-9e72-df8a0fd52f94"
+      }
+    }
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidParams | 数组[link:#invalidParams["invalidParams"]] | False  a| 
+无效查询参数列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+namespaceMapping
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| clusterID | string | False  a| 
+为其指定了命名空间的集群的标识符。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| 命名空间 | 数组[string] | False  a| 
+要在集群上使用的命名空间列表。按索引与其他集群命名空间列表相关联。定义的值是：
+
+* 最小长度：1
+* 最大长度：63
+* 符合 DNS 1123 标签架构
+
+
+
+
+| 角色 | string | False  a| 
+此命名空间定义的初始角色。此参数是可选的，使用同一群集复制配置时除外。定义的值为：
+
+* "source"
+* “目标”
+
+
+|===
+[role="api-collapsible-fifth-title"]
+storageClasses
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| clusterID | string | False  a| 
+为其指定了存储类的集群的标识符。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| storageClassName | string | False  a| 
+在"clusterID"中指定的集群上创建 PVC 时要使用的存储类的名称。定义的值为：
+
+* 最小长度：1
+* 最大长度：255
+
+
+
+
+| 角色 | string | False  a| 
+此存储类定义的初始角色。此参数是可选的，使用同一集群复制配置时除外。定义的值为：
+
+* "source"
+* “目标”
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_stateTransition
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 自 | string | True  a| 
+
+
+
+| to | 数组[string] | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+additionalDetails
+
+[role="api-collapsible-fifth-title"]
+type_astra_stateDetail
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_update
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+appMirror_1.1_get_response_body
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-appMirror"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+* "1.1"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| sourceAppID | string | True  a| 
+源应用程序的标识符。仅在将 sourceAppID 与 destinationAppID 交换时更新。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| sourceClusterID | string | True  a| 
+托管源应用程序的托管群集的标识符。此字段是只读的，并根据源应用程序的主机群集确定。如果在更新中提供，则它必须与源应用程序的群集 ID 匹配，因此只能在将 sourceAppID 与 destinationAppID 交换时进行更改。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| 目标应用程序 ID | string | False  a| 
+目标应用程序的标识符。无法在创建时提供，因为新的应用程序 ID 将作为关系初始化的一部分生成。只能在将 sourceAppID 与 destinationAppID 交换时更新。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| 目标集群 ID | string | True  a| 
+托管目标应用程序的托管群集的标识符。必须在创建时提供，因为它确定将在哪个群集上创建目标应用程序。如果在更新时提供，它必须匹配目标应用程序的群集 ID，因此只能在将 sourceAppID 与 destinationAppID 交换时更改。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| namespaceMapping | 数组[link:#namespaceMapping["namespaceMapping"]] | False  a| 
+创建目标应用程序时要使用的命名空间，对应于源应用程序的命名空间。每个 JSON 对象都包含字段 "clusterID" 和 "namespaces"，其中 "clusterID" 值是源或目标集群的 JSON 字符串 ID，"namespaces" 值是 JSON 字符串的 JSON 数组。每个集群必须正好有一个 JSON 对象，命名空间将通过索引关联。如果未提供，源集群的相同命名空间将在目标集群中使用。定义的值是：
+
+* 最小长度：0
+* 最大长度：2
+
+
+
+
+| storageClasses | 数组[link:#storageClasses["storageClasses"]] | False  a| 
+创建新的持久卷声明 (PVC) 时要在目标集群上使用的存储类。每个 JSON 对象都包含字段 "clusterID" 和 "storageClassName"，其中 "clusterID" 值是源或目标集群的 JSON 字符串 ID，"storageClassName" 是在该集群上创建 PVC 时要使用的存储类。如果未提供或缺少集群的值，则将对该集群使用默认存储类。定义的值为：
+
+* 最小长度：0
+* 最大长度：2
+
+
+
+
+| 状态 | string | True  a| 
+关系的状态。定义的值为：
+
+* "establishing" - 正在创建关系。
+* "established" - 已创建关系。
+* "failingOver" - 正在将应用程序故障转移到目标群集。
+* "failedOver" - 应用程序到目标集群的故障转移已完成。
+* "deleting" - 正在清理由关系创建的资源。
+* "deleted" - 已清理并删除此关系。
+
+
+
+
+| stateTransitions | 数组[link:#type_astra_stateTransition["type_astra_stateTransition"]] | False  a| 
+允许的状态转换。此资源可能存在以下状态转换：
+
+* "正在建立": "已建立", "正在删除"
+* "established": "failingOver", "deleting"
+* "failingOver": "failedOver", "正在删除"
+* "failedOver": "正在建立", "正在删除"
+* "deleting": "已删除"
+* "已删除":
+
+
+
+
+| stateDesired | string | True  a| 
+关系的期望状态。在创建时，唯一有效的值是 "established"。定义的值为：
+
+* "established" - 已创建关系。
+* "failedOver" - 应用程序到目标集群的故障转移已完成。
+* "deleted" - 已成功清理并删除此关系。
+
+
+
+
+| stateAllowed | 数组[string] | False  a| 
+可以在给定状态下请求的状态。可以在每个定义的状态下请求以下状态：
+
+* "establishing"："已建立"，"已删除"
+* "established": "failedOver", "deleted"
+* “failingOver”: “failedOver”, “deleted”
+* "failedOver": "已建立", "已删除"
+* "deleting": "已删除"
+* "deleted": "deleted"
+
+
+
+
+| stateDetails | 数组[link:#type_astra_stateDetail["type_astra_stateDetail"]] | True  a| 
+有关当前状态的其他详细信息，包括为什么达到当前状态。如果没有可用的详细信息，此数组将为空。定义的值为：
+
+* 最小项目数：0
+
+
+
+
+| transferState | string | False  a| 
+当前或最近快照传输的状态。定义的值是：
+
+* "transferring" - 创建了一个新的快照，现在正在复制到目标集群。此状态还包括先前尝试失败且正在持续重试的传输。
+* "idle" - 当前没有正在执行的传输。
+
+
+
+
+| transferStateTransitions | 数组[link:#type_astra_stateTransition["type_astra_stateTransition"]] | False  a| 
+从给定定义状态允许的状态转换。此资源可以进行以下状态转换：
+
+* “传输中”: “空闲”
+* “空闲”: “传输中”
+
+
+
+
+| transferStateDetails | 数组[link:#type_astra_stateDetail["type_astra_stateDetail"]] | False  a| 
+有关当前状态的其他详细信息，包括为什么达到当前状态。如果没有可用的详细信息，此数组将为空。定义的值为：
+
+* 最小项目数：0
+
+
+
+
+| healthState | string | True  a| 
+资源的运行状况。定义的值为：
+
+* "不确定" - 无法确定资源的健康状况（例如，由于缺乏连接）
+* "normal" - 资源没有已知问题，可以根据接口规范提供服务
+* "warning" - 资源存在已知问题，但不会阻止其根据接口规范提供服务
+* "critical" - 资源存在已知问题，无法根据接口规范提供服务
+
+
+
+
+| healthStateTransitions | 数组[link:#type_astra_stateTransition["type_astra_stateTransition"]] | True  a| 
+从给定定义状态允许的状态转换。此资源可以进行以下状态转换：
+
+* "不确定": "正常", "警告", "严重"
+* "normal": "不确定", "警告", "严重"
+* "warning": "不确定", "正常", "严重"
+* "critical": "indeterminate", "normal", "warning"
+
+
+
+
+| healthStateDetails | 数组[link:#type_astra_stateDetail["type_astra_stateDetail"]] | True  a| 
+有关当前状态的其他详细信息，包括为什么达到当前状态。如果没有可用的详细信息，此数组将为空。定义的值为：
+
+* 最小项目数：0
+
+
+
+
+| 元数据 | link:#type_astra_metadata_update["type_astra_metadata_update"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_list
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 继续 | string | False  a| 
+
+
+
+| count | 数字 | False  a| 
+
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+====

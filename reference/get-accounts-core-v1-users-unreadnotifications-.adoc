@@ -1,0 +1,388 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-core-v1-users-unreadnotifications-.html 
+summary: 检索未读通知 
+---
+= 检索未读通知
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/unreadNotifications/{unreadNotification_id}`#
+
+返回 JSON 响应正文中存储的未读通知 API 资源。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| 用户 ID | string | path | True  a| 
+包含用户资源的 ID
+
+
+
+| 未读通知_id | string | path | True  a| 
+要列出的 unreadNotification 集合的 ID
+
+|===
+
+
+== 响应
+
+[source]
+----
+Status: 200, Returns the stored Unread Notification API resource in the JSON response body.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-unreadNotification"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| notificationID | string | True  a| 
+包含要由创建标记的用户标记为已读的通知 ID 的 JSON 字符串。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| sequenceCount | 数字 | True  a| 
+包含与通知 ID 指定的通知关联的序列计数的 JSON 编号。
+
+
+
+| severity | string | True  a| 
+包含指示事件严重性的以下值之一的 JSON 字符串。定义的值为：
+
+* "已清除" - 表示先前报告的描述条件的事件不再处于活动状态。严重程度为"已清除"的事件将使用相同的摘要和关联 ID 来实现匹配
+* "indeterminate" - 表示无法确定严重性
+* "informational" - 表示预期和正常状态的变化（未在 X.733 中定义）
+* "warning" - 表示在感受到任何重大影响之前检测到潜在或即将发生的影响服务的故障
+* "critical" - 表示已发生影响服务的情况，需要立即采取更正操作
+
+
+
+
+| 元数据 | link:#type_astra_metadata["type_astra_metadata"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构
+
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-unreadNotification",
+  "version": "1.0",
+  "id": "10df997b-629e-50f8-bc5f-a18b9a4ac5f6",
+  "notificationID": "4080cf5f-2261-4130-b8fb-8432e2e553e6",
+  "sequenceCount": 48923,
+  "severity": "warning",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidParams | 数组[link:#invalidParams["invalidParams"]] | False  a| 
+无效查询参数列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | True  a| 
+
+
+
+| creationTimestamp | string | True  a| 
+
+
+
+| modificationTimestamp | string | True  a| 
+
+
+
+| 已创建 | string | True  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+====

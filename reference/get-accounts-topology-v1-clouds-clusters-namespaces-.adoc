@@ -1,0 +1,554 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-topology-v1-clouds-clusters-namespaces-.html 
+summary: 检索云的命名空间 
+---
+= 检索云的命名空间
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/namespaces/{namespace_id}`#
+
+返回 JSON 响应正文中存储的 Namespace API 资源。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| cloud_id | string | path | True  a| 
+包含的云资源的 ID
+
+
+
+| cluster_id | string | path | True  a| 
+包含群集资源的 ID
+
+
+
+| 命名空间 ID | string | path | True  a| 
+要列出的命名空间集合的 ID
+
+|===
+
+
+== 响应
+
+[source]
+----
+Status: 200, Returns the stored Namespace API resource in the JSON response body.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-namespace"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+* "1.1"
+* "1.2"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| 链接 | 数组[link:#type_astra_link["type_astra_link"]] | True  a| 
+描述针对资源的支持操作的链接。
+
+
+
+| name | string | True  a| 
+包含指示命名空间名称的值的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：255
+
+
+
+
+| namespaceState | string | True  a| 
+包含指示命名空间状态的值的 JSON 字符串。定义的值是：
+
+* "discovered" - 已在集群中找到命名空间
+* "removed" - 命名空间已从集群中删除，或集群未被管理，但可能存在引用命名空间的资源
+
+
+
+
+| namespaceStateDetails | 数组[link:#type_astra_stateDetail["type_astra_stateDetail"]] | True  a| 
+JSON 对象的 JSON 数组，列出有关"state"转换为"state a"、"state b"或"state c"的其他详细信息。如果没有可用的详细信息，则此数组将为空。定义的值为：
+
+* 最小项目数：0
+
+
+
+
+| kubernetesLabels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+JSON 对象的 JSON 数组，每个都包含与命名空间关联的 Kubernetes 标签。定义的值是：
+
+* 符合 Kubernetes 标签数组架构
+
+
+
+
+| kubernetesUID | string | True  a| 
+包含命名空间资源的 Kubernetes 生成 UID 的 JSON 字符串
+
+
+
+| clusterID | string | True  a| 
+包含命名空间所在的群集的全局唯一标识符的 JSON 字符串。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| systemType | string | False  a| 
+表示命名空间是系统命名空间类型的 JSON 字符串。此字段标识命名空间是什么类型的系统命名空间（如果有的话）（仅版本 1.1）。定义的值为：
+
+* "kubernetes" - 一个通用的 Kubernetes (K8s) 系统命名空间，例如 "kube-system"
+* "netapp" - NetApp 系统命名空间，例如 "trident" 或 "netapp-monitoring"
+* "openshift" - 一个 OpenShift 系统命名空间，例如 "openshift-monitoring"
+* "rke" - Rancher 命名空间，例如 "cattle-logging"
+* "other" - 不一定适合其他地方的通用系统命名空间，例如 "ingress-nginx"、"tekton-system"
+
+
+
+
+| 元数据 | link:#type_astra_metadata["type_astra_metadata"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构
+
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-namespace",
+  "version": "1.2",
+  "id": "214dc2eb-19a6-5444-b156-f4b6b551a81a",
+  "links": [
+    {
+      "rel": "canonical",
+      "href": "/accounts/0b311ae7-d89a-4a11-a52c-1349ca090415/topology/v1/namespaces/7d451d2f-196e-4234-aee9-7e2376047e63",
+      "type": "application/vnd.netapp.astra.namespace"
+    },
+    {
+      "rel": "collection",
+      "href": "/accounts/0b311ae7-d89a-4a11-a52c-1349ca090415/topology/v1/clouds/e0490197-872e-4de8-9287-b04a938e801f/clusters/0f284377-e5dc-4dcd-bacd-3197f2b8a347/namespaces",
+      "type": "application/vnd.netapp.astra.namespaces"
+    }
+  ],
+  "name": "kube-system",
+  "namespaceState": "discovered",
+  "namespaceStateDetails": [
+    {
+      "type": "https://astra.netapp.io/stateDetails/9",
+      "title": "Namespace Discovered",
+      "detail": "The namespace was discovered in the indicated managed cluster"
+    }
+  ],
+  "kubernetesLabels": [
+    {
+      "name": "app.kubernetes.io/environment",
+      "value": "dev"
+    }
+  ],
+  "clusterID": "0f284377-e5dc-4dcd-bacd-3197f2b8a347",
+  "kubernetesUID": "4f28c377-e5dc-4dcd-b7cd-319cf2b8a345",
+  "systemType": "kubernetes",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidParams | 数组[link:#invalidParams["invalidParams"]] | False  a| 
+无效查询参数列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+targetSchema
+
+[role="api-collapsible-fifth-title"]
+接受发布
+
+[role="api-collapsible-fifth-title"]
+接受-put
+
+[role="api-collapsible-fifth-title"]
+提示
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 状态 | string | False  a| 
+
+
+
+| 允许 | 数组[string] | False  a| 
+
+
+
+| 接受发布 | link:#accept-post["接受发布"] | False  a| 
+
+
+
+| 权限 | 数组[string] | False  a| 
+
+
+
+| 接受-put | link:#accept-put["接受-put"] | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_link
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| rel | string | True  a| 
+
+
+
+| href | string | True  a| 
+
+
+
+| type | string | False  a| 
+
+
+
+| targetSchema | link:#targetSchema["targetSchema"] | False  a| 
+
+
+
+| 标题 | string | False  a| 
+
+
+
+| 提示 | link:#hints["提示"] | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+additionalDetails
+
+[role="api-collapsible-fifth-title"]
+type_astra_stateDetail
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | True  a| 
+
+
+
+| creationTimestamp | string | True  a| 
+
+
+
+| modificationTimestamp | string | True  a| 
+
+
+
+| 已创建 | string | True  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+====

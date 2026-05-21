@@ -1,0 +1,525 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-core-v1-settings-.html 
+summary: 检索设置 
+---
+= 检索设置
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/settings/{setting_id}`#
+
+返回 JSON 响应正文中存储的 Setting API 资源。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| setting_id | string | path | True  a| 
+要列出的设置集合的 ID
+
+|===
+
+
+== 响应
+
+[source]
+----
+Status: 200, Returns the stored Setting API resource in the JSON response body.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-setting"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+* "1.1"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| name | string | True  a| 
+包含设置名称的 JSON 字符串，采用分层点表示法（.）。定义的值是：
+
+* 最小长度：1
+* 最大长度：63
+* 此字符串经过内部验证，以防止 XSS、Unicode、目录遍历和 SQL 注入攻击。此值由运行时加载的 configmap 指定，用户无法更新。
+
+
+
+
+| currentConfig | link:#type_json["type_json"] | True  a| 
+包含构成此设置的当前配置的键和值的 JSON 对象。此对象的内容必须符合 configSchema 字段中包含的 JSON Schema。默认值由 configmap 提供。用户更改默认值后，它们将不会被覆盖。
+
+
+
+| desiredConfig | link:#type_json["type_json"] | False  a| 
+JSON 对象包含组成此设置的请求配置的键和值。此对象的内容必须符合 configSchema 字段中包含的 JSON 架构。该对象在指定之前不存在。指定后，这将触发功能服务通知相应服务请求可以应用所需配置。然后，相应的服务可以执行验证并将所需配置应用于当前配置。
+
+
+
+| configSchema | link:#type_json_schema["类型_json_schema"] | True  a| 
+包含此资源中 config 属性的 JSON 架构的 JSON 对象。必须符合 JSON Schema Draft 7。如果资源中存在配置值，则必须根据所示的 configSchema 进行验证。作为一种常见的约定，建议在适当的时候配置具有"isEnabled"字段。"isEnabled"字段包含一个值，该值指示设置是打开（"true"）还是关闭（"false"）。
+
+
+
+| 状态 | string | True  a| 
+包含指示应用程序操作状态的值的 JSON 字符串。定义的值是：
+
+* "valid" - 当前配置与所需配置匹配。
+* "pending" - 正在应用所需的配置。
+* "error" - 无法应用所需的配置。
+
+
+
+
+| stateUnready | 数组[string] | True  a| 
+JSON 字符串的 JSON 数组，每个字符串指示未成功应用设置的原因。定义的值为：
+
+* 最小长度：1
+* 最大长度：127
+
+
+
+
+| 元数据 | link:#type_astra_metadata_update["type_astra_metadata_update"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将不加修改地保留。
+
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-setting",
+  "version": "1.1",
+  "id": "ea510866-47d3-5130-8468-563df4cd6a28",
+  "name": "astra.account.smtp",
+  "currentConfig": {
+    "credential": "",
+    "isEnabled": "false",
+    "port": 587,
+    "relayServer": "smtp.sendgrid.net"
+  },
+  "configSchema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "astra.account.smtp",
+    "type": "object",
+    "properties": {
+      "credential": {
+        "type": "string",
+        "description": "The credential ID for SMTP authentication."
+      },
+      "isEnabled": {
+        "type": "string",
+        "description": "This property determines if this setting is enabled or not."
+      },
+      "port": {
+        "type": "integer",
+        "description": "The SMTP port. For an unencrypted or a TLS connection, use port 25, 2525, or 587."
+      },
+      "relayServer": {
+        "type": "string",
+        "description": "This setting is sometimes referred to as the external SMTP server or the SMTP relay."
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "relayServer",
+      "port",
+      "isEnabled"
+    ]
+  },
+  "state": "valid",
+  "stateUnready": [],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidParams | 数组[link:#invalidParams["invalidParams"]] | False  a| 
+无效查询参数列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 503, Service unavailable
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/41",
+  "title": "Service not ready",
+  "detail": "Currently, the service can't respond to this request.",
+  "status": "503"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+type_json
+
+包含构成此设置的当前配置的键和值的 JSON 对象。此对象的内容必须符合 configSchema 字段中包含的 JSON Schema。默认值由 configmap 提供。用户更改默认值后，它们将不会被覆盖。
+
+[role="api-collapsible-fifth-title"]
+type_json
+
+JSON 对象包含组成此设置的请求配置的键和值。此对象的内容必须符合 configSchema 字段中包含的 JSON 架构。该对象在指定之前不存在。指定后，这将触发功能服务通知相应服务请求可以应用所需配置。然后，相应的服务可以执行验证并将所需配置应用于当前配置。
+
+[role="api-collapsible-fifth-title"]
+属性
+
+[role="api-collapsible-fifth-title"]
+类型_json_schema
+
+包含此资源中 config 属性的 JSON 架构的 JSON 对象。必须符合 JSON Schema Draft 7。如果资源中存在配置值，则必须根据所示的 configSchema 进行验证。作为一种常见的约定，建议在适当的时候配置具有"isEnabled"字段。"isEnabled"字段包含一个值，该值指示设置是打开（"true"）还是关闭（"false"）。
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| $schema | string | True  a| 
+
+
+
+| type | string | True  a| 
+
+
+
+| 属性 | link:#properties["属性"] | True  a| 
+
+
+
+| additionalProperties | 布尔值 | True  a| 
+
+
+
+| 必填 | 数组[string] | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_update
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将不加修改地保留。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+====

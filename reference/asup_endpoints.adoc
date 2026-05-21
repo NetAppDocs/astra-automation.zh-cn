@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/asup_endpoints.html 
+summary: 'Astra API (ACC) ASUP 端点' 
+---
+= Astra API (ACC) ASUP 端点
+:allow-uri-read: 
+
+
+ASUP API 提供对 ASUP 资源的访问权限，以便创建和上传 AutoSupport 捆绑包（可选）。

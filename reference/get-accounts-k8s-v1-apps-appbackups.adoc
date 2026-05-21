@@ -1,0 +1,616 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-k8s-v1-apps-appbackups.html 
+summary: 列出应用的应用备份 
+---
+= 列出应用的应用备份
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups`#
+
+返回集合中所有匹配资源的 JSON 数组。如果在请求中指定了单个字段，则项目 JSON 数组将包含按指定顺序为每个匹配资源请求的字段。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| app_id | string | path | True  a| 
+包含应用程序资源的 ID
+
+
+
+| 包括 | string | 查询 | False  a| 
+指示列出集合时应返回哪些字段。
+
+URL 示例："include=id"、"include=id,name"
+
+OpenAPI 示例："id"
+
+* 示例：id,name,state
+
+
+
+
+| limit | string | 查询 | False  a| 
+指示列出集合时要返回的最大资源数。
+
+URL 示例："limit=2"
+
+OpenAPI 示例："2"
+
+|===
+
+
+== 响应
+
+[source]
+----
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 个项 | 数组[任意以下之一：link:#appBackup_1_2_get_response_body["appBackup_1.2_get_response_body"]，数组[]] | True  a| 
+
+
+
+| 元数据 | link:#type_astra_metadata_list["type_astra_metadata_list"] | True  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-appBackups",
+  "version": "1.2",
+  "items": [
+    [
+      "5cb608f9-571b-492e-a520-5bfb900a9b9c",
+      "app-name-245",
+      "pending"
+    ],
+    [
+      "f8faa690-7e09-48a4-b33c-7965712acd0c",
+      "app-name-244",
+      "completed"
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidParams | 数组[link:#invalidParams["invalidParams"]] | False  a| 
+无效查询参数列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 500, Internal server error
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/96",
+  "title": "Backups not listed",
+  "detail": "The backups didn't list because of an internal server issue.",
+  "status": "500"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+additionalDetails
+
+[role="api-collapsible-fifth-title"]
+type_astra_stateDetail
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | True  a| 
+
+
+
+| creationTimestamp | string | True  a| 
+
+
+
+| modificationTimestamp | string | True  a| 
+
+
+
+| 已创建 | string | True  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+appBackup_1.2_get_response_body
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-appBackup"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+* "1.1"
+* "1.2"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| name | string | True  a| 
+包含用户指定的备份名称的 JSON 字符串。如果未指定，或者当备份由计划启动时，系统会分配备份的名称。定义的值是：
+
+* 最小长度：1
+* 最大长度：63
+* 符合 DNS 1123 标签架构
+
+
+
+
+| bucketID | string | True  a| 
+包含一个可选存储桶 ID 的 JSON 字符串，该 ID 指示将在创建时存储备份的位置。如果未指定，则使用系统选择的存储桶。如果没有可用的存储桶，则在创建时将返回错误。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| snapshotID | string | False  a| 
+包含用于创建备份的快照的 JSON 字符串。要创建备份，可以在创建时指定与要备份的应用程序关联的快照 ID。如果未指定，将为备份创建新的快照。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| scheduleID | string | False  a| 
+包含可选计划 ID 的 JSON 字符串，指示备份是由计划触发的，以及哪个计划触发了备份。仅适用于由计划启动的备份。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| 状态 | string | True  a| 
+包含指示备份操作状态的值的 JSON 字符串。定义的值是：
+
+* "pending" - 应用程序备份已计划进行发现
+* "discovering" - 正在发现应用程序备份
+* "running" - 应用程序备份正在正常运行
+* "completed" - 应用程序备份已成功完成
+* "failed" - 应用程序备份处于永久失败状态
+* "removed" - 当前无法访问应用程序备份
+* "unknown" - 无法确定应用程序备份状态
+* "deleting" - 计划删除应用程序备份
+
+
+
+
+| stateUnready | 数组[string] | True  a| 
+JSON 字符串的 JSON 数组，每个字符串指示应用程序备份无法转换为"running"的原因，或者它已转换为"failed"或"removed"的原因。定义的值为：
+
+* 最小长度：1
+* 最大长度：127
+
+
+
+
+| stateDetails | 数组[link:#type_astra_stateDetail["type_astra_stateDetail"]] | False  a| 
+JSON 对象的 JSON 数组，其中列出有关当前状态的其他详细信息，包括达到当前状态的原因。如果没有可用的详细信息，则此数组将为空。定义的值为：
+
+* 最小项目数：0
+
+
+
+
+| hookState | string | False  a| 
+JSON 字符串包含一个值，该值指示作为快照的一部分运行的任何执行挂钩的状态。定义的值为：
+
+* "failed" - 一个或多个执行挂钩出现故障
+* "success" - 没有或多个适用的挂钩，所有挂钩均成功
+
+
+
+
+| hookStateDetails | 数组[link:#type_astra_stateDetail["type_astra_stateDetail"]] | False  a| 
+JSON 对象的 JSON 数组，其中列出了有关"hookState"转换为"失败"的其他详细信息。如果没有可用的详细信息，此数组将为空。
+
+* 最小项目数：0
+
+
+
+
+| backupCreationTimestamp | string | False  a| 
+JSON 字符串，包含指示备份时间的时间戳。定义的值是：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| totalBytes | 数字 | False  a| 
+包含备份中字节总数的 JSON 数字。
+
+
+
+| bytesDone | 数字 | False  a| 
+JSON 数字，包含正在运行的备份所备份的字节数。备份完成后，它与 totalBytes 字段匹配。
+
+
+
+| percentDone | 数字 | False  a| 
+包含正在运行的备份完成百分比的 JSON 编号。备份完成后，设置为"100"。
+
+
+
+| 元数据 | link:#type_astra_metadata["type_astra_metadata"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_list
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 继续 | string | False  a| 
+
+
+
+| count | 数字 | False  a| 
+
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+====

@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/package_endpoints.html 
+summary: 'Astra API (ACC) 包端点' 
+---
+= Astra API (ACC) 包端点
+:allow-uri-read: 
+
+
+Package API 表示可安装的软件包。

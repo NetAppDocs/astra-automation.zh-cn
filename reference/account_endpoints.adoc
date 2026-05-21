@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/account_endpoints.html 
+summary: 'Astra API (ACC) 帐户端点' 
+---
+= Astra API (ACC) 帐户端点
+:allow-uri-read: 
+
+
+Account API 表示多租户系统中的隔离租户。

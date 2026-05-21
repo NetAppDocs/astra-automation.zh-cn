@@ -1,0 +1,425 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-core-v1-entitlements-.html 
+summary: 检索授权 
+---
+= 检索授权
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/entitlements/{entitlement_id}`#
+
+返回 JSON 响应正文中存储的 Entitlement API 资源。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| entitlement_id | string | path | True  a| 
+要列出的授权集合的 ID
+
+|===
+
+
+== 响应
+
+[source]
+----
+Status: 200, Returns the stored Entitlement API resource in the JSON response body.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-entitlement"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| 分配 | string | False  a| 
+包含授权分配到的对象的 ID 的 JSON 字符串。仅在分配授权时存在。架构未验证字符串内容。
+
+
+
+| 产品 | string | False  a| 
+包含从许可证或订阅中提取的产品字符串的 JSON 字符串。架构未验证的字符串内容。
+
+
+
+| productVersion | string | False  a| 
+包含从许可证或订阅中提取的版本字符串的 JSON 字符串。架构未验证的字符串内容。
+
+
+
+| entitlementType | string | True  a| 
+包含授权类型的 JSON 字符串。这是从许可证或订阅中提取的。架构未验证字符串内容。
+
+
+
+| entitlementValue | string | True  a| 
+包含与授权关联的容量的 JSON 字符串。架构未验证字符串内容。
+
+
+
+| entitlementConsumption | string | False  a| 
+包含与当前正在使用的授权关联的容量量的 JSON 字符串。架构未验证字符串内容。
+
+
+
+| sourceLicense | string | False  a| 
+包含授权源自的许可证对象 ID 的 JSON 字符串。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| sourceSubscription | string | False  a| 
+包含授权源自的订阅对象的 ID 的 JSON 字符串。定义的值是：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| validFromTimestamp | string | False  a| 
+包含指示授权何时生效的时间戳的 JSON 字符串。定义的值为：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| validUntilTimestamp | string | False  a| 
+包含指示授权何时不再有效的时间戳的 JSON 字符串。定义的值是：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| 元数据 | link:#type_astra_metadata["type_astra_metadata"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构
+
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-entitlement",
+  "version": "1.0",
+  "id": "8bdafc19-bde6-5f45-9808-4893c845c9f5",
+  "product": "Astra SDS",
+  "productVersion": "1.0",
+  "entitlementType": "capacity",
+  "entitlementValue": "2",
+  "entitlementConsumption": "1",
+  "sourceLicense": "c8aa757a-5318-489f-8134-a2a1a6956a3e",
+  "validFromTimestamp": "2020-08-06T00:00:00.000000Z",
+  "validUntilTimestamp": "2021-08-06T00:00:00.000000Z",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidParams | 数组[link:#invalidParams["invalidParams"]] | False  a| 
+无效查询参数列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | True  a| 
+
+
+
+| creationTimestamp | string | True  a| 
+
+
+
+| modificationTimestamp | string | True  a| 
+
+
+
+| 已创建 | string | True  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+====

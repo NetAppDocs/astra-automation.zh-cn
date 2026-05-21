@@ -1,0 +1,578 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-core-v1-tasks-.html 
+summary: 检索任务 
+---
+= 检索任务
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/tasks/{task_id}`#
+
+返回 JSON 响应正文中存储的 Task API 资源。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| task_id | string | path | True  a| 
+要列出的任务集合的 ID
+
+|===
+
+
+== 响应
+
+[source]
+----
+Status: 200, Returns the stored Task API resource in the JSON response body.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-task"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+* "1.1"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| name | string | True  a| 
+包含任务的点符号 (.) 层次结构名称的 JSON 字符串。定义的值是：
+
+* 最小长度：3
+* 最大长度：127
+* 定义的正则表达式为："^(([a-z])_(\.))_([a-z])+$"
+
+
+
+
+| 摘要 | string | True  a| 
+包含任务的短格式摘要的 JSON 字符串。定义的值是：
+
+* 最小长度：3
+* 最大长度：63
+
+
+
+
+| description | string | True  a| 
+包含任务说明的 JSON 字符串。已定义的值为：
+
+* 最小长度：1
+* 最大长度：511
+
+
+
+
+| service | string | False  a| 
+包含管理任务的服务的名称的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：31
+
+
+
+
+| parentTaskID | string | False  a| 
+包含任务的父任务的全局唯一标识符的 JSON 字符串。定义的值是：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| 用户 ID | string | False  a| 
+包含与任务关联的用户 ID 的 JSON 字符串。仅包含与用户启动的操作相关联的任务。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| resourceID | string | True  a| 
+包含与任务关联的资源的全局唯一标识符的 JSON 字符串。定义的值是：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| 资源 URI | string | True  a| 
+包含与任务关联的 URI 的 JSON 字符串。定义的值为：
+
+* 最小长度：3
+* 最大长度：4095
+
+
+
+
+| resourceCollectionURI | 数组[string] | True  a| 
+JSON 字符串的 JSON 数组，每个数组指示与任务关联的资源的完全扩展的访问 URL。定义的值为：
+
+* 最小长度：3
+* 最大长度：4095
+
+
+
+
+| 状态 | string | True  a| 
+包含指示任务操作状态的值的 JSON 字符串。定义的值为：
+
+* "notStarted" - 任务尚未开始执行。
+* "running" - 任务正在运行。
+* "completed" - 任务已完成。
+* "pausing" - 请求暂停任务。
+* "paused" - 任务已暂停。
+* "cancelling" - 任务被请求取消。
+* "cancelled" - 任务已取消。
+* "failed" - 任务失败。
+* 最小长度：1
+* 最大长度：31
+
+
+
+
+| stateTransitions | 数组[link:#type_astra_stateTransition["type_astra_stateTransition"]] | True  a| 
+JSON 对象的 JSON 数组，每个表示从给定定义状态的允许状态转换集。每个 JSON 对象都包含"from"和"to"字段，其中"from"值是状态的名称，"to"值是允许的目标状态数组。
+
+* 最小长度：1
+* 最大长度：31 例如："stateTransitions" : [ { "from": "running", "to": ["paused", "cancelled"] }, { "from": "paused", "to": ["running", "cancelled"] }, ]
+
+
+
+
+| stateDetails | 数组[link:#type_astra_stateDetail["type_astra_stateDetail"]] | True  a| 
+列出有关当前"状态"的其他详细信息的 JSON 对象的 JSON 数组。此字段指示何时存在阻止实际状态与所需状态匹配的条件或错误。如果没有可用的详细信息，此数组将为空。
+
+* 最小项目数：0
+
+
+
+
+| orderHint | 数字 | False  a| 
+表示子任务顺序的 JSON 编号。客户端可以使用此字段将子任务从最小到最大排序。
+
+
+
+| percentDone | 数字 | False  a| 
+包含正在运行的任务的完成百分比的 JSON 编号。任务完成后，设置为"100"。
+
+
+
+| startTime | string | False  a| 
+包含指示任务何时启动的时间戳的 JSON 字符串。已定义的值为：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| endTime | string | False  a| 
+包含指示任务何时结束的时间戳的 JSON 字符串。定义的值为：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| cancelTime | string | False  a| 
+包含指示任务何时被取消的时间戳的 JSON 字符串。定义的值为：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| 元数据 | link:#type_astra_metadata["type_astra_metadata"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构
+
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-task",
+  "version": "1.1",
+  "id": "26e8e8ef-5549-5928-98dd-2c3d43a608e8",
+  "name": "astra.backup.prep",
+  "summary": "Backup preparation",
+  "description": "Task to prepare for the application backup",
+  "service": "nautilus",
+  "userID": "abda967f-cd2c-4237-908e-99266648c553",
+  "parentTaskID": "9cc8c321-6af1-406c-8158-2c6582c247f8",
+  "resourceID": "626a0978-d55f-4841-8b7c-dc0c0f592c6f",
+  "resourceURI": "/accounts/fdaa655c-15ab-4d34-aa61-1e9098e67be0/k8s/v1/apps/7c8bef49-697e-4fb4-810c-675cef4cf6c9/appSnaps/2b6dafc3-2172-4431-a482-6306b2703130",
+  "resourceCollectionURI": [
+    "/accounts/fdaa655c-15ab-4d34-aa61-1e9098e67be0/topology/v1/clouds/0df3f1a0-7203-4c12-aabf-a7bee6302671/clusters/dfd9de2d-6f0b-437b-a737-c8f7f176cd14/namespaces/f8b58091-4b9c-4c64-9b40-018dbaf7c5de/apps/f670bf11-8850-44bd-b330-815af6186a06/appSnaps/2b6dafc3-2172-4431-a482-6306b2703130",
+    "/accounts/fdaa655c-15ab-4d34-aa61-1e9098e67be0/topology/v1/clouds/0df3f1a0-7203-4c12-aabf-a7bee6302671/clusters/dfd9de2d-6f0b-437b-a737-c8f7f176cd14/namespaces/923708f8-0435-45b5-8c00-fbdef3ffaf25/apps/f670bf11-8850-44bd-b330-815af6186a06/appSnaps/2b6dafc3-2172-4431-a482-6306b2703130"
+  ],
+  "state": "running",
+  "stateTransitions": [
+    {
+      "from": "running",
+      "to": [
+        "paused",
+        "cancelled"
+      ]
+    },
+    {
+      "from": "paused",
+      "to": [
+        "running",
+        "cancelled"
+      ]
+    }
+  ],
+  "stateDetails": [],
+  "orderHint": 0,
+  "percentDone": 20.25,
+  "startTime": "2020-08-06T12:24:52.256624Z",
+  "endTime": "2020-08-06T12:26:52.256624Z",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidParams | 数组[link:#invalidParams["invalidParams"]] | False  a| 
+无效查询参数列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/1",
+  "title": "Resource not found",
+  "detail": "The resource specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+type_astra_stateTransition
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 自 | string | True  a| 
+
+
+
+| to | 数组[string] | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+additionalDetails
+
+[role="api-collapsible-fifth-title"]
+type_astra_stateDetail
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | True  a| 
+
+
+
+| creationTimestamp | string | True  a| 
+
+
+
+| modificationTimestamp | string | True  a| 
+
+
+
+| 已创建 | string | True  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+====

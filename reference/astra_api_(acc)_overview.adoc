@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: 'reference/astra_api_(acc)_overview.html' 
+summary: 'Astra API (ACC) 概述' 
+---
+= Astra API (ACC) 概述
+:allow-uri-read: 
+
+
+Astra Control REST API 参考文档包含所有 REST API 调用的详细信息，包括端点、HTTP 方法、输入参数和响应。在使用 API 开发自动化应用程序时，此完整参考非常有用。Astra REST API 提供对所有 Astra Control 资源的 CRUD（Create-Read-Update-Delete）访问，特定资源类别除外。本参考文档适用于 Astra Control REST API 的 24.02 版本。

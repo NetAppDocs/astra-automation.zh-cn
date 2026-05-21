@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/user_endpoints.html 
+summary: 'Astra API (ACC) 用户端点' 
+---
+= Astra API (ACC) 用户端点
+:allow-uri-read: 
+
+
+User API 表示能够与系统交互的用户。

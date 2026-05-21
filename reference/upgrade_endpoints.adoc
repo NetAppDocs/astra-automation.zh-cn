@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/upgrade_endpoints.html 
+summary: 'Astra API (ACC) 升级端点' 
+---
+= Astra API (ACC) 升级端点
+:allow-uri-read: 
+
+
+升级应用 API 提供对有资格升级的软件组件的访问权限，并启动升级。升级的可用性取决于在 Packages API 中注册的包。

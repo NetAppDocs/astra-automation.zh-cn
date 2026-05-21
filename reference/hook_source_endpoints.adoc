@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/hook_source_endpoints.html 
+summary: 'Astra API (ACC) 挂钩源端点' 
+---
+= Astra API (ACC) 挂钩源端点
+:allow-uri-read: 
+
+
+Hook Source API 实现了与执行挂钩资源管理分离的挂钩源的简单管理。例如，单个挂钩源可以由多个执行挂钩引用，以避免重复的挂钩源，并允许单个 API 调用更新一个挂钩源，即使它被多个执行挂钩资源使用。

@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/subscription_endpoints.html 
+summary: 'Astra API (ACC) 订阅端点' 
+---
+= Astra API (ACC) 订阅端点
+:allow-uri-read: 
+
+
+Subscription API 提供对订阅资源的访问，以表示活动订阅。

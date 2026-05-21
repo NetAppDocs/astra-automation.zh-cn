@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/storage_class_endpoints.html 
+summary: 'Astra API (ACC) 存储类端点' 
+---
+= Astra API (ACC) 存储类端点
+:allow-uri-read: 
+
+
+Storage Class API 描述给定集群已知的存储类。

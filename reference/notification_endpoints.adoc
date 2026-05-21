@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/notification_endpoints.html 
+summary: 'Astra API (ACC) 通知端点' 
+---
+= Astra API (ACC) 通知端点
+:allow-uri-read: 
+
+
+通知 API 为每个用户提供对具有通知目标的事件的访问。

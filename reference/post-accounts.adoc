@@ -1,0 +1,628 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/post-accounts.html 
+summary: 创建新帐户 
+---
+= 创建新帐户
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts`#
+
+指示要创建的 Account API 资源的所需值。
+
+
+
+== 请求正文
+
+指示要创建的 Account API 资源的所需值。
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-account"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+
+
+
+
+| name | string | True  a| 
+包含帐户名称的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：63
+* 此字符串经过内部验证，以防止 XSS、Unicode、目录遍历和 SQL 注入攻击。
+
+
+
+
+| 元数据 | link:#type_astra_metadata_update["type_astra_metadata_update"] | False  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+|===
+.请求示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-account",
+  "version": "1.0",
+  "name": "Testing 123"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 201, Returns the newly created account resource in the JSON response body.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-account"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| name | string | True  a| 
+包含帐户名称的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：63
+* 此字符串经过内部验证，以防止 XSS、Unicode、目录遍历和 SQL 注入攻击。
+
+
+
+
+| 状态 | string | True  a| 
+包含指示帐户操作状态的值的 JSON 字符串。定义的值为：
+
+* "pending" - 只能对帐户下的用户和角色资源进行更改（默认值）
+* "active" - 可以对帐户下的任何资源进行更改
+* "deletePending" - 用户无法登录，数据保护操作暂停，费用不再累计
+
+
+
+
+| isEnabled | string | True  a| 
+表示已启用帐户的 JSON 字符串。定义的值为：
+
+* "false" - 不允许用户使用此帐户
+* "true" - 允许用户使用此帐户
+
+
+
+
+| enabledTimestamp | string | False  a| 
+JSON 字符串，包含指示上次启用帐户的时间的时间戳。如果帐户从未启用，则此字段不存在。定义的值为：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| accountContact | link:#accountContact["accountContact"] | False  a| 
+JSON 对象包含用户联系信息，用于在帐户激活时创建所有者用户。
+
+
+
+| 元数据 | link:#type_astra_metadata_update["type_astra_metadata_update"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-account",
+  "version": "1.0",
+  "id": "666a3f38-d4fa-5b62-a391-a69029758d32",
+  "name": "fraught-pines",
+  "state": "pending",
+  "isEnabled": "false",
+  "enabledTimestamp": "2020-08-06T12:24:52.256624Z",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidFields | 数组[link:#invalidFields["invalidFields"]] | False  a| 
+无效请求正文字段列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 409, Conflict
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidFields | 数组[link:#invalidFields["invalidFields"]] | False  a| 
+无效请求正文字段列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_update
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+postalAddress
+
+包含指定地址的 JSON 字符串集合的 JSON 对象。如果此键不存在，则表示未提供地址。如果此键存在，则所有六个包含的 JSON 字符串都将存在。如果不提供任何内容，字符串将为空。
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| addressCountry | string | True  a| 
+包含与邮政地址关联的国家/地区名称或国家/地区代码的 JSON 字符串，如 ISO 3166 Alpha-2 中所指定。定义的值为：
+
+* 最小长度：2
+* 最大长度：2
+
+
+
+
+| addressLocality | string | True  a| 
+包含与邮政地址关联的地点（例如城市）的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| addressRegion | string | True  a| 
+包含与邮政地址关联的区域（例如州）的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| postalCode | string | True  a| 
+包含与邮政地址关联的邮政编码的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：31
+
+
+
+
+| streetAddress1 | string | True  a| 
+包含与邮政地址关联的街道地址的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| streetAddress2 | string | False  a| 
+包含可选辅助街道地址信息、邮政信箱等的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+
+
+|===
+[role="api-collapsible-fifth-title"]
+accountContact
+
+JSON 对象包含用户联系信息，用于在帐户激活时创建所有者用户。
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| firstName | string | True  a| 
+包含用户指定的长格式名字的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+* 此字符串经过内部验证，以防止 XSS、Unicode、目录遍历和 SQL 注入攻击。
+
+
+
+
+| lastName | string | True  a| 
+包含用户指定的长格式姓氏的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+* 此字符串经过内部验证，以防止 XSS、Unicode、目录遍历和 SQL 注入攻击。
+
+
+
+
+| companyName | string | False  a| 
+包含与用户关联的公司名称的 JSON 字符串。如果此密钥不存在，则表示未提供公司名称。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+* 此字符串经过内部验证，以防止 XSS、Unicode、目录遍历和 SQL 注入攻击。
+
+
+
+
+| 电子邮件 | string | True  a| 
+包含用户指定的电子邮件地址的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| 电话 | string | False  a| 
+包含用户电话号码的 JSON 字符串。如果此密钥不存在，则表示未提供电话号码。定义的值为：
+
+* 最小长度：1
+* 最大长度：31
+
+
+
+
+| postalAddress | link:#postalAddress["postalAddress"] | True  a| 
+包含指定地址的 JSON 字符串集合的 JSON 对象。如果此键不存在，则表示未提供地址。如果此键存在，则所有六个包含的 JSON 字符串都将存在。如果不提供任何内容，字符串将为空。
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidFields
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效请求正文字段的名称
+
+
+
+| 原因 | string | True  a| 
+请求正文字段无效的原因
+
+|===
+====

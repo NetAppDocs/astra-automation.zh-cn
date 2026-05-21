@@ -1,0 +1,460 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-core-v1-asups-.html 
+summary: 检索 ASUP 资源 
+---
+= 检索 ASUP 资源
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/asups/{asup_id}`#
+
+返回 JSON 响应正文中存储的 ASUP API 资源。如果 AutoSupport 捆绑包"creationState"为"completed"或"partial"，则可以通过指定包含"*/*"或"application/gzip"的 Accept 标头来下载 AutoSupport 捆绑包。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| asup_id | string | path | True  a| 
+要列出的 ASUP 集合的 ID
+
+|===
+
+
+== 响应
+
+[source]
+----
+Status: 200, Returns the stored ASUP API resource in the JSON response body. If the AutoSupport bundle "creationState" is "completed" or "partial", the AutoSupport bundle can be downloaded by specifying an Accept header containing "*/*" or "application/gzip".
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-asup"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| creationState | string | True  a| 
+包含指示 AutoSupport 捆绑包创建状态的值的 JSON 字符串。对于"completed"和"partial"状态，可以通过使用包含"*/*"或"application/gzip"的 Accept 标头执行资源 URI 的 GET 来下载捆绑包。定义的值为：
+
+* "running" - AutoSupport 捆绑包生成正在正常运行。
+* "completed" - AutoSupport 捆绑包生成已完成。
+* "partial" - AutoSupport 捆绑包生成已完成，但捆绑包中未包含某些数据。
+* "failed" - AutoSupport 捆绑包生成处于永久失败状态。
+
+
+
+
+| creationStateDetails | 数组[link:#type_astra_stateDetail["type_astra_stateDetail"]] | True  a| 
+JSON 对象的 JSON 数组，列出有关 "creationState" 转换为 "partial" 或 "failed" 的其他详细信息。如果没有可用的详细信息，则此数组将为空。
+
+* 最小项目数：0
+
+
+
+
+| 上传 | string | True  a| 
+包含指示是否在成功创建后上传 AutoSupport 捆绑包的值的 JSON 字符串。定义的值为：
+
+* "true" - 上传 AutoSupport 捆绑包。
+* "false" - 不要上传 AutoSupport 捆绑包。
+
+
+
+
+| uploadState | string | False  a| 
+包含指示 AutoSupport 捆绑包上传状态（如果已请求）的值的 JSON 字符串。定义的值为：
+
+* "pending" - 计划在 AutoSupport 捆绑包创建完成时上传 AutoSupport 捆绑包（"creationState" 为 "running"）。
+* "blocked" - 未尝试 AutoSupport 捆绑包上传，因为未创建捆绑包（"creationState" 为 "failed"）或上传被阻止，因为没有许可证。
+* "running" - AutoSupport 捆绑包上传正常运行（"creationState" 为 "completed" 或 "partial"）。
+* "completed" - AutoSupport 捆绑包上传已完成。
+* "failed" - AutoSupport 捆绑上传处于永久失败状态。
+
+
+
+
+| uploadStateDetails | 数组[link:#type_astra_stateDetail["type_astra_stateDetail"]] | False  a| 
+JSON 对象的 JSON 数组，列出有关"uploadState"转换为"failed"的原因的其他详细信息。如果没有可用的详细信息，此数组将为空。
+
+* 最小项目数：0
+
+
+
+
+| triggerType | string | True  a| 
+包含一个值的 JSON 字符串，该值指示触发 ASUP 资源创建的原因。定义的值为：
+
+* "manual" - ASUP 资源和相关 AutoSupport 捆绑包是手动创建的。
+* "scheduled" - ASUP 资源和相关 AutoSupport 捆绑包是根据配置的计划创建的。
+
+
+
+
+| dataWindowStart | string | True  a| 
+包含指示 AutoSupport 捆绑包数据收集窗口开始时间的时间戳的 JSON 字符串。默认为"dataWindowEnd"键值之前的 24 小时。必须位于"dataWindowEnd"键值之前。最多距离当前请求时间提前 7 天。定义的值为：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| dataWindowEnd | string | True  a| 
+JSON 字符串，包含指示 AutoSupport 捆绑包数据收集窗口结束时间的时间戳。默认为请求的当前时间。定义的值是：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| 元数据 | link:#type_astra_metadata["type_astra_metadata"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。
+
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-asup",
+  "version": "1.0",
+  "id": "9950003f-a1c7-5ca7-8930-06eec25f60aa",
+  "creationState": "completed",
+  "creationStateDetails": [],
+  "upload": "false",
+  "triggerType": "manual",
+  "dataWindowStart": "2020-08-05T12:24:00.000000Z",
+  "dataWindowEnd": "2020-08-06T12:24:52.000000Z",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidParams | 数组[link:#invalidParams["invalidParams"]] | False  a| 
+无效查询参数列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+additionalDetails
+
+[role="api-collapsible-fifth-title"]
+type_astra_stateDetail
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | True  a| 
+
+
+
+| creationTimestamp | string | True  a| 
+
+
+
+| modificationTimestamp | string | True  a| 
+
+
+
+| 已创建 | string | True  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+====

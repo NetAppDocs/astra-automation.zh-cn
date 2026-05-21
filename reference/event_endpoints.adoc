@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/event_endpoints.html 
+summary: 'Astra API (ACC) 事件端点' 
+---
+= Astra API (ACC) 事件端点
+:allow-uri-read: 
+
+
+Event API 提供对系统中发生的事件的访问。

@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/namespace_endpoints.html 
+summary: 'Astra API (ACC) 命名空间端点' 
+---
+= Astra API (ACC) 命名空间端点
+:allow-uri-read: 
+
+
+Namespace API 提供对命名空间资源的只读访问，以描述与给定集群相关联的命名空间。

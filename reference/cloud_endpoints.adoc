@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/cloud_endpoints.html 
+summary: 'Astra API (ACC) 云端点' 
+---
+= Astra API (ACC) 云端点
+:allow-uri-read: 
+
+
+Cloud API 提供对云资源的访问，允许客户端连接到特定云来管理集群和应用程序。

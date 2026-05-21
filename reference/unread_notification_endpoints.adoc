@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/unread_notification_endpoints.html 
+summary: 'Astra API (ACC) 未读通知端点' 
+---
+= Astra API (ACC) 未读通知端点
+:allow-uri-read: 
+
+
+Unread Notification API 提供有关未被给定用户读取的通知的信息，并允许将其标记为已读。

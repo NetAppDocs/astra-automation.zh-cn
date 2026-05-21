@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/storage_backend_endpoints.html 
+summary: 'Astra API (ACC) 存储后端端点' 
+---
+= Astra API (ACC) 存储后端端点
+:allow-uri-read: 
+
+
+Storage Backend API 提供对存储服务提供商（存储后端）表示的访问，这些存储服务提供商可供托管集群和应用程序使用。

@@ -1,0 +1,602 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/put-accounts-topology-v1-storagebackends-.html 
+summary: 修改存储后端 
+---
+= 修改存储后端
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}`#
+
+将整个存储资源替换为提供的 JSON 请求正文，同时保留不可由用户修改的键值。
+
+*副作用*
+
+* 指定配置版本会导致应用存储后端类型特定的配置更改，其中可能包括存储后端的初始安装。
+* 指定配置版本可能会导致添加、修改或删除 storageClass 资源。
+
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| storageBackend_id | string | path | True  a| 
+要列出的 storageBackend 集合的 ID
+
+|===
+
+
+== 请求正文
+
+将整个存储资源替换为提供的 JSON 请求正文，同时保留不可由用户修改的键值。
+
+*副作用*
+
+* 指定配置版本会导致应用存储后端类型特定的配置更改，其中可能包括存储后端的初始安装。
+* 指定配置版本可能会导致添加、修改或删除 storageClass 资源。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-storageBackend"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+* "1.1"
+* "1.2"
+* "1.3"
+
+
+
+
+| id | string | False  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| backendName | string | False  a| 
+包含存储后端的用户指定名称的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| backendType | string | False  a| 
+JSON 字符串，其中包含指示所表示的存储后端类型的值。定义的值为：
+
+* "ontap" - 存储后端表示 NetApp ONTAP 系统
+* enum: ["ONTAP"]
+* 示例：ONTAP
+
+
+
+
+| backendVersion | string | False  a| 
+包含指示所表示的存储后端版本的值的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| backendCredentialsName | string | False  a| 
+包含指示用于存储后端的一个或多个凭据资源的名称的值的 JSON 字符串。允许在多个凭据对象具有相同名称的情况下进行凭据轮换。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| configVersion | string | False  a| 
+包含指示存储后端使用的活动配置的值的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| 状态 | string | False  a| 
+包含指示存储后端操作状态的值的 JSON 字符串。定义的值为：
+
+* "discovered" - 已从托管集群中发现存储后端
+* "running" - 存储后端正常运行
+* "unknown" - 无法确定存储后端的状态
+* "failed" - 存储后端处于不可用状态
+
+
+
+
+| stateDesired | string | False  a| 
+包含指示存储后端所需操作状态的值的 JSON 字符串。定义的值为：
+
+* "running" - 存储后端将处于正常运行状态
+
+
+
+
+| stateUnready | 数组[string] | False  a| 
+JSON 字符串的 JSON 数组，每个表示存储后端无法转换为"running"的原因，转换为"failed"或"unknown"的原因，和/或转换为"failed"的风险。定义的值为：
+
+* 最小长度：1
+* 最大长度：127
+
+
+
+
+| managedState | string | False  a| 
+包含指示存储后端管理状态的值的 JSON 字符串。定义的值为：
+
+* "pending" - 计划发现或添加存储后端
+* "unmanaged" - 存储后端处于 "discovered" 状态，不受管理，并且有资格进行管理
+* "managed" - 存储后端处于 "running" 或 "unknown" 状态并且正在管理中
+
+
+
+
+| managedStateUnready | 数组[string] | False  a| 
+JSON 字符串的 JSON 数组，每个字符串都指示存储后端不符合管理资格的原因。定义的值是：
+
+* 最小长度：1
+* 最大长度：127
+
+
+
+
+| healthState | string | False  a| 
+包含指示存储后端运行状况状态的值的 JSON 字符串。定义的值为：
+
+* "不确定" - 无法确定资源的健康状况（例如，由于缺乏连接）
+* "normal" - 资源没有已知问题，可以根据接口规范提供服务
+* "warning" - 资源存在已知问题，但不会阻止其根据接口规范提供服务
+* "critical" - 资源存在已知问题，无法根据接口规范提供服务
+
+
+
+
+| healthStateUnready | 数组[string] | False  a| 
+JSON 字符串的 JSON 数组，每个字符串指示存储后端未处于正常运行状况的原因。定义的值为：
+
+* 最小长度：1
+* 最大长度：127
+
+
+
+
+| protectionState | string | False  a| 
+包含指示存储后端保护状态的值的 JSON 字符串。ONTAP 为 "unknown"。定义的值为：
+
+* "protected" - 存储后端已定义保护策略并符合该策略
+* "partial" - 存储后端已定义保护策略，但不符合该策略
+* "none" - 存储后端不受保护
+* "unknown" - 无法确定存储后端保护策略一致性
+* 枚举: [“protected”, “partial”, “none”, “unknown”]
+* 示例：protected
+
+
+
+
+| protectionStateUnready | 数组[string] | False  a| 
+JSON 字符串的 JSON 数组，每个字符串指示保护策略不符合要求的原因。定义的值为：
+
+* 最小长度：1
+* 最大长度：127
+
+
+
+
+| ONTAP | link:#ontap["ONTAP"] | False  a| 
+包含与 ONTAP 集群相关的特定信息的 JSON 对象。
+
+* additionalProperties: false
+
+
+
+
+| 元数据 | link:#type_astra_metadata_update["type_astra_metadata_update"] | False  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+|===
+.请求示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-storageBackend",
+  "version": "1.3",
+  "backendName": "st1-46"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 204, Indicates if the storageBackend resource was updated.
+----
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidFields | 数组[link:#invalidFields["invalidFields"]] | False  a| 
+无效请求正文字段列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 409, Conflict
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidFields | 数组[link:#invalidFields["invalidFields"]] | False  a| 
+无效请求正文字段列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/1",
+  "title": "Resource not found",
+  "detail": "The resource specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+ONTAP
+
+包含与 ONTAP 集群相关的特定信息的 JSON 对象。
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 后端管理 IP | string | False  a| 
+包含用于连接到此 ONTAP 集群的 IP 地址的 JSON 字符串。
+
+
+
+| 管理 IP | 数组[string] | False  a| 
+JSON 字符串的 JSON 数组，包含用于连接到此 ONTAP 集群的所有可能管理 IP 的列表。这用于关联通过 Trident 检测到的后端和 Astra 中的存储后端。
+
+* uniqueItems：1
+
+
+|===
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_update
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidFields
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效请求正文字段的名称
+
+
+
+| 原因 | string | True  a| 
+请求正文字段无效的原因
+
+|===
+====

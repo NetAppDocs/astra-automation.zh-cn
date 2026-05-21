@@ -1,0 +1,917 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/post-accounts-topology-v1-clouds-clusters.html 
+summary: 为云创建新群集 
+---
+= 为云创建新群集
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters`#
+
+指示要创建的 Cluster API 资源的所需值。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| cloud_id | string | path | True  a| 
+包含的云资源的 ID
+
+|===
+
+
+== 请求正文
+
+指示要创建的 Cluster API 资源的所需值。
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-cluster"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+* "1.1"
+* "1.2"
+* "1.3"
+* "1.4"
+* "1.5"
+* "1.6"
+* "1.7"
+
+
+
+
+| name | string | False  a| 
+包含集群名称的 JSON 字符串。如果未指定，则将使用集群的 Kubernetes 名称。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+* 此字符串经过内部验证，可防止 XSS、Unicode、目录遍历和 SQL 注入攻击
+
+
+
+
+| accHost | string | False  a| 
+指示此群集承载当前正在访问的 Astra Control Center 实例的 JSON 字符串。定义的值为：
+
+* "true" - 此集群正在托管当前正在访问的 Astra Control Center 的实例。
+
+
+
+
+| clusterType | string | False  a| 
+包含指示集群类型的值的 JSON 字符串。定义的值为：
+
+* "gke" - 托管在 Google Kubernetes Engine 上的 Kubernetes
+* "aks" - 托管在 Microsoft Azure Kubernetes Service 上的 Kubernetes
+* "eks" - 托管在 Amazon Elastic Kubernetes Service 上的 Kubernetes
+* "rke" - 集群的类型为 Rancher
+* "tanzu" - 集群类型为 Tanzu Kubernetes Grid
+* "openshift" - 集群的类型为 OpenShift
+* "anthos" - 集群的类型为 GKE Anthos
+* "kubernetes" - 集群是通用的 Kubernetes
+
+
+
+
+| 凭证 ID | string | False  a| 
+JSON 字符串包含一个值，该值指示包含集群的 kubeconfig 文件的凭据的 ID。定义的值为：
+
+* 符合 Astra 标识符架构如果提供了 privateRouteID 和带有 connectorV2 选项的 connectorCapabilities，则 credentialID 为可选。如果未提供，则需要 credentialID，否则会生成错误。如果提供了 credentialID 和具有中继功能的连接器，则会生成错误。
+
+
+
+
+| privateRouteID | string | False  a| 
+包含专用集群位置 ID 的 JSON 字符串。
+
+* 最小长度：1
+* 最大长度：255
+
+
+
+
+| connectorCapabilities | 数组[string] | False  a| 
+与此集群关联的连接器的功能。可选以实现向后兼容性。如果不存在，则假定的功能为代理。
+
+
+
+| 元数据 | link:#type_astra_metadata_update["type_astra_metadata_update"] | False  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+|===
+.请求示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-cluster",
+  "version": "1.7",
+  "name": "GKE-22",
+  "credentialID": "6fa2f917-f730-41b8-9c15-17f531843b31"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 201, Returns the newly created cluster resource in the JSON response body.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-cluster"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+* "1.1"
+* "1.2"
+* "1.3"
+* "1.4"
+* "1.5"
+* "1.6"
+* "1.7"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| name | string | True  a| 
+包含集群名称的 JSON 字符串。如果未指定，则将使用集群的 Kubernetes 名称。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+* 此字符串经过内部验证，可防止 XSS、Unicode、目录遍历和 SQL 注入攻击
+
+
+
+
+| 状态 | string | True  a| 
+包含指示集群操作状态的值的 JSON 字符串。定义的值为：
+
+* "pending" - 已计划发现集群
+* "discovering" - 集群正在被发现
+* "provisioning" - 集群正在进行调配
+* "running" - 集群运行正常
+* "failed" - 集群处于永久失败状态
+* "removed" - 集群当前不可访问
+* "unknown" - 无法确定集群状态
+
+
+
+
+| stateUnready | 数组[string] | True  a| 
+JSON 字符串的 JSON 数组，每个数组指示集群无法转换到"running"状态的原因，当处于"running"状态时出现问题的原因，或者它已转换到"failed"或"removed"状态的原因。定义的值为：
+
+* 最小长度：1
+* 最大长度：127
+
+
+
+
+| managedState | string | True  a| 
+包含指示群集管理状态的值的 JSON 字符串。定义的值为：
+
+* "pending" - 计划发现或添加集群
+* "ineligible" - 集群处于 "running" 状态，不在管理之下，并且不符合管理条件。未就绪密钥值中提供了不符合资格的原因
+* "deleting" - 集群正在被删除
+* "unmanaged" - 集群处于 "running" 或 "failed" 状态，不在管理之下，并且有资格进行管理
+* "managing" - 集群处于 "running" 状态，并且正在被管理
+* "managed" - 集群处于 "running"、"failed" 或 "removed" 状态，并且正在管理中
+
+
+
+
+| managedStateDetails | 数组[link:#type_astra_stateDetail["type_astra_stateDetail"]] | False  a| 
+JSON 对象的 JSON 数组，其中列出有关当前状态的其他详细信息，包括达到当前状态的原因。如果没有可用的详细信息，则此数组将为空。定义的值为：
+
+* 最小项目数：0
+
+
+
+
+| protectionState | string | True  a| 
+包含指示群集保护状态的值的 JSON 字符串。定义的值为：
+
+* "full" - 集群默认存储类支持快照
+* "partial" - 集群仅具有不支持快照的 storageClasses
+* "atRisk" - 集群的默认存储类不支持快照
+
+
+
+
+| protectionStateDetails | 数组[link:#type_astra_stateDetail["type_astra_stateDetail"]] | True  a| 
+JSON 对象的 JSON 数组，其中列出有关当前保护状态的其他详细信息，包括达到当前状态的原因。如果没有可用的详细信息，此数组将为空。定义的值为：
+
+* 最小项目数：0
+
+
+
+
+| restoreTargetSupported | string | False  a| 
+包含一个值的 JSON 字符串，该值指示集群能够成为应用程序数据管理操作的 _target_。定义的值为：
+
+* "true" - 集群是应用程序数据管理操作的合格目标。
+* "false" - 集群不是应用程序数据管理操作的合格目标。
+
+
+
+
+| snapshotSupported | string | False  a| 
+包含指示集群执行类似应用程序数据管理备份操作的能力的值的 JSON 字符串。定义的值为：
+
+* "true" - 集群有资格执行应用程序数据管理操作。
+* "false" - 集群没有资格执行应用程序数据管理操作。
+
+
+
+
+| managedStateUnready | 数组[string] | True  a| 
+JSON 字符串的 JSON 数组，每个数组指示集群不符合管理资格的原因，或者集群被管理但在管理集群时遇到非致命错误。定义的值是：
+
+* 最小长度：1
+* 最大长度：127
+
+
+
+
+| managedTimestamp | string | False  a| 
+包含指示集群何时进行管理的时间戳的 JSON 字符串。定义的值为：
+
+* 符合 ISO-8601 日期时间架构。此密钥仅在集群具有 managedState 为 "managed" 时返回。
+
+
+
+
+| tridentVersion | string | False  a| 
+包含集群上安装的 Trident 版本的 JSON 字符串。定义的值是：
+
+* 符合 Software Version Schema
+
+
+
+
+| acpVersion | string | False  a| 
+包含集群上安装的 Astra Control Provisioner 版本的 JSON 字符串。定义的值是：
+
+* 符合 Software Version Schema
+
+
+
+
+| tridentManagedState | string | False  a| 
+包含一组枚举值之一的 JSON 字符串，指示此集群上 Trident 的管理状态。定义的值为：
+
+* "managed" - 集群上的 Trident 实例由 Astra 管理
+* "unmanaged" - 集群上的 Trident 实例不由 Astra 管理
+
+
+
+
+| tridentManagedStateDesired | string | False  a| 
+包含指示 Trident 所需管理状态值的 JSON 字符串。定义的值为：
+
+* "managed" - 在此集群上管理 Trident
+* "unmanaged" - 不在此集群上管理 Trident
+
+
+
+
+| tridentManagedStateDetails | 数组[link:#type_astra_stateDetail["type_astra_stateDetail"]] | False  a| 
+JSON 对象的 JSON 数组，列出有关状态转换为"托管"或"非托管"的其他详细信息。+ 如果没有可用的详细信息，此数组将为空。
+
+* 最小项目数：0
+
+
+
+
+| tridentManagedStateAllowed | 数组[string] | False  a| 
+可以在给定 tridentManagedState 中请求的状态。可以在每个定义的状态下请求以下状态：
+
+* "managed": "托管"
+* "unmanaged": "非托管"
+
+
+
+
+| inUse | string | True  a| 
+包含指示群集是否具有任何托管应用程序的值的 JSON 字符串，因此无法删除。定义的值为：
+
+* "false" - 集群未被托管或被托管，但没有与其关联的托管应用程序
+* "true" - 集群已托管，并具有与其关联的托管应用程序
+
+
+
+
+| accHost | string | False  a| 
+指示此群集承载当前正在访问的 Astra Control Center 实例的 JSON 字符串。定义的值为：
+
+* "true" - 此集群正在托管当前正在访问的 Astra Control Center 的实例。
+
+
+
+
+| clusterType | string | True  a| 
+包含指示集群类型的值的 JSON 字符串。定义的值为：
+
+* "gke" - 托管在 Google Kubernetes Engine 上的 Kubernetes
+* "aks" - 托管在 Microsoft Azure Kubernetes Service 上的 Kubernetes
+* "eks" - 托管在 Amazon Elastic Kubernetes Service 上的 Kubernetes
+* "rke" - 集群的类型为 Rancher
+* "tanzu" - 集群类型为 Tanzu Kubernetes Grid
+* "openshift" - 集群的类型为 OpenShift
+* "anthos" - 集群的类型为 GKE Anthos
+* "kubernetes" - 集群是通用的 Kubernetes
+
+
+
+
+| clusterVersion | string | False  a| 
+包含指示集群环境的语义版本控制表示的值的 JSON 字符串。对于 Kubernetes 集群，这是 Kubernetes 版本。定义的值为：
+
+* 最小长度：1
+* 最大长度：31
+
+
+
+
+| clusterVersionString | string | False  a| 
+包含指示集群环境扩展版本控制信息的值的 JSON 字符串。对于 Kubernetes 集群，这是完整的 Kubernetes 版本。定义的值为：
+
+* 最小长度：1
+* 最大长度：31
+
+
+
+
+| clusterCreationTimestamp | string | False  a| 
+包含指示集群最初创建时间的时间戳的 JSON 字符串。定义的值为：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| 命名空间 | 数组[string] | False  a| 
+JSON 字符串的 JSON 数组，每个表示集群内的命名空间。定义的值为：
+
+* 最小长度：1
+* 最大长度：253
+
+
+
+
+| defaultStorageClass | string | False  a| 
+包含与 Kubernetes 中设置的默认存储类对应的存储类 ID 的 JSON 字符串。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| cloudID | string | True  a| 
+JSON 字符串，包含指示运行集群的云 ID 的值。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| 凭证 ID | string | False  a| 
+JSON 字符串包含一个值，该值指示包含集群的 kubeconfig 文件的凭据的 ID。定义的值为：
+
+* 符合 Astra 标识符架构如果提供了 privateRouteID 和带有 connectorV2 选项的 connectorCapabilities，则 credentialID 为可选。如果未提供，则需要 credentialID，否则会生成错误。如果提供了 credentialID 和具有中继功能的连接器，则会生成错误。
+
+
+
+
+| 位置 | string | False  a| 
+包含运行集群的云提供的值的 JSON 字符串，指示集群的特定于云的位置。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| isMultizonal | string | False  a| 
+包含运行集群的云提供的值的 JSON 字符串，指示集群是否跨越两个或多个可用区域。定义的值为：
+
+* "true" - 集群跨越两个或多个可用性区域
+* "false" - 集群完全位于单个可用区域内
+
+
+
+
+| privateRouteID | string | False  a| 
+包含专用集群位置 ID 的 JSON 字符串。
+
+* 最小长度：1
+* 最大长度：255
+
+
+
+
+| connectorCapabilities | 数组[string] | False  a| 
+与此集群关联的连接器的功能。可选以实现向后兼容性。如果不存在，则假定的功能为代理。
+
+
+
+| apiServiceID | string | False  a| 
+包含来自 Kubernetes (k8s) API 服务对象的 UUID 的 JSON 字符串。用于唯一标识集群。
+
+
+
+| 元数据 | link:#type_astra_metadata_update["type_astra_metadata_update"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-cluster",
+  "version": "1.7",
+  "id": "dd95ce34-55ce-5f74-bb49-2f734fe5da30",
+  "name": "GKE-22",
+  "state": "running",
+  "stateUnready": [],
+  "managedState": "unmanaged",
+  "managedStateUnready": [],
+  "protectionState": "full",
+  "protectionStateDetails": [],
+  "tridentVersion": "23.10.0",
+  "acpVersion": "23.10.0",
+  "tridentManagedState": "managed",
+  "tridentManagedStateDetails": [],
+  "inUse": "false",
+  "clusterType": "kubernetes",
+  "clusterVersion": "1.91.1",
+  "clusterVersionString": "1.19.1",
+  "clusterCreationTimestamp": "2020-08-06T12:24:52.256624Z",
+  "namespaces": [
+    "kube-system",
+    "kube-public",
+    "my-app-1"
+  ],
+  "defaultStorageClass": "31c95aba-99d9-4987-b1bb-000dfce5952c",
+  "cloudID": "548bdc1f-f00e-4a23-a062-83265d224d46",
+  "credentialID": "6fa2f917-f730-41b8-9c15-17f531843b31",
+  "location": "europe-west4",
+  "isMultizonal": "false",
+  "apiServiceID": "6bf33af2-872a-4553-a891-26b510c3edbe",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 409, Conflict
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidFields | 数组[link:#invalidFields["invalidFields"]] | False  a| 
+无效请求正文字段列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 500, Internal server error
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/64",
+  "title": "Storage classes not found",
+  "detail": "Storage classes from Trident weren't found.",
+  "status": "500"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_update
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+additionalDetails
+
+[role="api-collapsible-fifth-title"]
+type_astra_stateDetail
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidFields
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效请求正文字段的名称
+
+
+
+| 原因 | string | True  a| 
+请求正文字段无效的原因
+
+|===
+====

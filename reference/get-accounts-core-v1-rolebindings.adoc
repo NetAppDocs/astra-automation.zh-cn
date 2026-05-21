@@ -1,0 +1,570 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-core-v1-rolebindings.html 
+summary: 列出所有角色绑定 
+---
+= 列出所有角色绑定
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/roleBindings`#
+
+返回集合中所有匹配资源的 JSON 数组。如果在请求中指定了单个字段，则项目 JSON 数组将包含按指定顺序为每个匹配资源请求的字段。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| 包括 | string | 查询 | False  a| 
+指示列出集合时应返回哪些字段。
+
+URL 示例："include=id"、"include=id,name"
+
+OpenAPI 示例："id"
+
+* 示例：accountID、userID、role
+
+
+
+
+| limit | string | 查询 | False  a| 
+指示列出集合时要返回的最大资源数。
+
+URL 示例："limit=2"
+
+OpenAPI 示例："2"
+
+
+
+| 筛选器 | string | 查询 | False  a| 
+指示在列出集合时应匹配哪些字段以返回资源。
+
+支持的运算符有：
+
+* eq - 相等
+* lt/gt - 小于/大于
+* lte/gte - 小于或等于/大于或等于
+
+
+URL 示例："filter=field%20eq%20%27value%27"
+
+OpenAPI 示例："field eq 'value'"
+
+
+
+| 订单 | string | 查询 | False  a| 
+指示列出集合时资源的排序顺序。
+
+URL 示例："orderBy=name"，"orderBy=name%20desc"
+
+OpenAPI 示例："name desc"
+
+
+
+| 跳过 | string | 查询 | False  a| 
+指示列出集合时要跳过的资源数。
+
+URL 示例："skip=1"
+
+OpenAPI 示例："1"
+
+
+
+| count | string | 查询 | False  a| 
+指示是否应在元数据对象中返回资源总数。
+
+URL 示例："count=true"
+
+OpenAPI 示例："true"
+
+
+
+| 继续 |  | 查询 | False  a| 
+指示要从中恢复列表的令牌。
+
+URL 示例："continue=+++<continue token="" from="" collection="" metadata="">+++"+++</continue>+++
+
+OpenAPI 示例："+++<continue token="" from="" collection="" metadata="">+++</continue>+++</continue>
+
+|===
+
+
+== 响应
+
+[source]
+----
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 个项 | 数组[任意类型：link:#roleBinding_1_1_get_response_body["roleBinding_1.1_get_response_body"]，数组[]] | True  a| 
+
+
+
+| 元数据 | link:#type_astra_metadata_list["type_astra_metadata_list"] | True  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-roleBindings",
+  "version": "1.1",
+  "items": [
+    [
+      "9fd87309-067f-48c9-a331-527796c14cf3",
+      "4c27d25a-9edb-4e85-9438-48dc8e917231",
+      "viewer"
+    ],
+    [
+      "9fd87309-067f-48c9-a331-527796c14cf3",
+      "dc40a13f-e9b3-4cf5-900f-58de32174390",
+      "owner"
+    ],
+    [
+      "9fd87309-067f-48c9-a331-527796c14cf3",
+      "c38abd8d-7dae-4659-8382-2e74a58738ba",
+      "owner"
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidParams | 数组[link:#invalidParams["invalidParams"]] | False  a| 
+无效查询参数列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_update
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+roleBinding_1.1_get_response_body
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-roleBinding"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+* "1.1"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| principalType | string | True  a| 
+表示此绑定关联的主体类型的 JSON 字符串。定义的值为：
+
+* "用户"
+* "group" 对于 principalType "user"，需要非零用户 ID。对于 principalType "group"，需要非零组 ID。
+
+
+
+
+| 用户 ID | string | True  a| 
+包含用户资源 ID 的 JSON 字符串。定义的值为：
+
+* 符合 Astra 标识符架构如果在创建时未指定，则将使用 nil UUID。只能指定 userID 或 groupID。
+
+
+
+
+| groupID | string | True  a| 
+包含组资源 ID 的 JSON 字符串。定义的值为：
+
+* 符合 Astra 标识符架构如果在创建时未指定，则将使用 nil UUID。只能指定 userID 或 groupID。
+
+
+
+
+| accountID | string | True  a| 
+包含帐户资源 ID 的 JSON 字符串。对于创建，这必须与请求 URI 中的帐户 ID 匹配。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| 角色 | string | True  a| 
+包含四个定义角色之一的 JSON 字符串。定义的值为：
+
+* "查看器"
+* "成员"
+* "admin"
+* “所有者”
+
+
+
+
+| roleConstraints | 数组[string] | False  a| 
+指定角色分配范围的 JSON 字符串的 JSON 数组。定义的值为：
+
+* 符合 Astra 角色约束架构如果在创建时未指定，则该值将设置为大小为 1 的数组，包含字符串 "*"，表示 "全范围"。如果在更新时未指定，则会保留该值，不进行任何修改。空数组表示 "无作用域"。示例：
+* 
++
+= 允许访问任何资源："roleConstraints"：["*"]
+
+* 
++
+= 拒绝访问所有资源："roleConstraints"：[]
+
+* 
++
+= 仅允许访问特定命名空间资源："roleConstraints": [ "namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'" ]
+
+* 
++
+= 允许访问特定命名空间及其下的所有内容："roleConstraints": [ "namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'.*"]
+
+* 
++
+= 允许访问任何云中任何集群中标记为 "dev" 的所有命名空间及其下的所有内容："roleConstraints"：[ "namespaces:kubernetesLabels='http://dev.example.com/appname=dev["dev.example.com/appname=dev'.*"]" ]
+
+* 
++
+= 仅允许访问所有命名空间资源："roleConstraints"：[ "namespaces:*" ]
+
+* 
++
+= 允许访问所有命名空间资源及其下的所有资源："roleConstraints"：[ "namespaces:__.__" ]
+
+
+
+
+
+| 元数据 | link:#type_astra_metadata_update["type_astra_metadata_update"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_list
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 继续 | string | False  a| 
+
+
+
+| count | 数字 | False  a| 
+
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+====

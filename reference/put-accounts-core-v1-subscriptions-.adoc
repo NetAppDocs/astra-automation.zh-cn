@@ -1,0 +1,643 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/put-accounts-core-v1-subscriptions-.html 
+summary: 修改订阅 
+---
+= 修改订阅
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/subscriptions/{subscription_id}`#
+
+将整个存储资源替换为提供的 JSON 请求正文，同时保留不可由用户修改的键值。
+
+*副作用*
+
+* 如果用户取消订阅，则必须使用 "status": "inactive" 调用 PUT 端点。
+* 当状态设置为"非活动"时，此订阅的待定费用将发送到 Zuora，并且 Zuora 订阅将以某种方式标记为"非活动"。
+
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| subscription_id | string | path | True  a| 
+要列出的订阅集合的 ID
+
+|===
+
+
+== 请求正文
+
+将整个存储资源替换为提供的 JSON 请求正文，同时保留不可由用户修改的键值。
+
+*副作用*
+
+* 如果用户取消订阅，则必须使用 "status": "inactive" 调用 PUT 端点。
+* 当状态设置为"非活动"时，此订阅的待定费用将发送到 Zuora，并且 Zuora 订阅将以某种方式标记为"非活动"。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-subscription"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+* "1.1"
+* "1.2"
+
+
+
+
+| id | string | False  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| customerProfileID | string | False  a| 
+未为试用期设置包含来自 http://authorize.net["Authorize.net"]的客户配置文件 ID 的 JSON 字符串，该字符串由 UI 调用。如果未设置，则在读取操作期间返回空字符串。定义的值为：
+
+* 最小长度：0
+* 最大长度：63
+
+
+
+
+| paymentFirstName | string | False  a| 
+包含用于付款计费的用户指定长格式名字的 JSON 字符串。仅在重新计费订阅时指定。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| paymentLastName | string | False  a| 
+包含用于付款计费的用户指定长格式姓氏的 JSON 字符串。仅在重新计费订阅时指定。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| paymentAddress | link:#paymentAddress["paymentAddress"] | False  a| 
+包含指定帐单地址的 JSON 字符串集合的 JSON 对象。仅在重新计费订阅时指定。如果此键存在，则所有六个包含的 JSON 字符串都将存在。如果用户未提供任何内容，则字符串将为空。
+
+
+
+| paymentProfileID | string | False  a| 
+包含由用户界面调用的付款账户 ID http://Authorize.net["Authorize.net"] 的 JSON 字符串，未设置为试用期。如果未设置，则在读取操作期间返回空字符串。定义的值为：
+
+* 最小长度：0
+* 最大长度：63
+
+
+
+
+| paymentExpiry | string | False  a| 
+JSON 字符串，包含指示付款方式何时过期的时间戳。这是从 authorize.net](http://authorize.net[]) 获得的，由 UI 设置。定义的值为：
+
+* 符合 ISO-8601 日期时间架构。此字段不会为试用条款返回。
+
+
+
+
+| purchaseOrderNumber | string | False  a| 
+包含付款方式的采购订单编号的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：31
+
+
+
+
+| 市场 | string | False  a| 
+JSON 字符串，表示将记录付款的账户的市场。定义值：
+
+* "netapp"
+* "azure"
+* "aws"
+* "gcp"
+
+
+
+
+| licenseSN | string | False  a| 
+包含付款方式的许可证序列号的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：31
+
+
+
+
+| 条款 | string | False  a| 
+表示帐户当前层的 JSON 字符串。定义的值为：
+
+* "试用"
+* "付费"
+
+
+
+
+| 状态 | string | False  a| 
+表示订阅当前状态的 JSON 字符串。定义的值为：
+
+* "活动"
+* "非活动"
+
+
+
+
+| appLimit | 数字 | False  a| 
+表示此订阅的应用程序限制的 JSON 编号。值 -1 表示无限制。
+
+
+
+| namespaceLimit | 数字 | False  a| 
+表示此订阅的命名空间限制的 JSON 编号。值 -1 表示无限制。
+
+
+
+| subscriptionPeriod | 数字 | False  a| 
+表示订阅期限的 JSON 数字。值 -1 表示无限制。单位：天
+
+
+
+| gracePeriod | 数字 | False  a| 
+JSON 数字，表示试用订阅过期或付费订阅被取消后的宽限期。单位：天
+
+
+
+| reminderBeforePeriod | 数字 | False  a| 
+JSON 数字，表示在试用订阅结束之前客户通知将开始的天数。该值以天表示，值为 -1 表示不适用。
+
+
+
+| onboardStatus | string | False  a| 
+JSON 字符串，指示客户入职的当前状态。有效值为 "not started"、"in progress"、"success"、"failed"。定义的值为：
+
+* "未启动"
+* "正在进行中"
+* "成功"
+* "失败"
+
+
+
+
+| costPerAppUnit | 数字 | False  a| 
+表示每个应用单位成本的 JSON 数字。对于试用版，值为 0。单位：美元
+
+
+
+| costPerNamespaceUnit | 数字 | False  a| 
+表示每个命名空间单位成本的 JSON 数字。对于试用版，值为 0。单位：美元
+
+
+
+| 元数据 | link:#type_astra_metadata_update["type_astra_metadata_update"] | False  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+|===
+.请求示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-subscription",
+  "version": "1.2",
+  "customerProfileID": "2157047189",
+  "paymentProfileID": "E7CEB0A9F1BECA32A02493E1B31D5955",
+  "paymentExpiry": "2022-05-01T00:00:00Z"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 204, Indicates if the subscription resource was updated.
+----
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidFields | 数组[link:#invalidFields["invalidFields"]] | False  a| 
+无效请求正文字段列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 409, Conflict
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidFields | 数组[link:#invalidFields["invalidFields"]] | False  a| 
+无效请求正文字段列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/1",
+  "title": "Resource not found",
+  "detail": "The resource specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+paymentAddress
+
+包含指定帐单地址的 JSON 字符串集合的 JSON 对象。仅在重新计费订阅时指定。如果此键存在，则所有六个包含的 JSON 字符串都将存在。如果用户未提供任何内容，则字符串将为空。
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| addressCountry | string | True  a| 
+包含与邮政地址关联的国家/地区名称或国家/地区代码的 JSON 字符串，如 ISO 3166 Alpha-2 中所指定。定义的值为：
+
+* 最小长度：0
+* 最大长度：2
+
+
+
+
+| addressLocality | string | True  a| 
+包含与邮政地址关联的地点（例如城市）的 JSON 字符串。定义的值为：
+
+* 最小长度：0
+* 最大长度：63
+
+
+
+
+| addressRegion | string | True  a| 
+包含与邮政地址关联的区域（例如州）的 JSON 字符串。定义的值为：
+
+* 最小长度：0
+* 最大长度：63
+
+
+
+
+| postalCode | string | True  a| 
+包含与邮政地址关联的邮政编码的 JSON 字符串。定义的值为：
+
+* 最小长度：0
+* 最大长度：63
+
+
+
+
+| streetAddress1 | string | True  a| 
+包含与邮政地址关联的街道地址的 JSON 字符串。定义的值为：
+
+* 最小长度：0
+* 最大长度：63
+
+
+
+
+| streetAddress2 | string | False  a| 
+包含可选辅助街道地址信息、邮政信箱等的 JSON 字符串。定义的值为：
+
+* 最小长度：0
+* 最大长度：63
+
+
+|===
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_update
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidFields
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效请求正文字段的名称
+
+
+
+| 原因 | string | True  a| 
+请求正文字段无效的原因
+
+|===
+====

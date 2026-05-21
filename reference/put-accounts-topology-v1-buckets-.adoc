@@ -1,0 +1,601 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/put-accounts-topology-v1-buckets-.html 
+summary: 修改存储桶 
+---
+= 修改存储桶
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/buckets/{bucket_id}`#
+
+将整个存储资源替换为提供的 JSON 请求正文，同时保留不可由用户修改的键值。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| bucket_id | string | path | True  a| 
+要列出的存储区集合的 ID
+
+|===
+
+
+== 请求正文
+
+将整个存储资源替换为提供的 JSON 请求正文，同时保留不可由用户修改的键值。
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-bucket"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+* "1.1"
+* "1.2"
+
+
+
+
+| id | string | False  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| name | string | False  a| 
+包含用户分配的存储桶名称的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：256
+
+
+
+
+| 凭证 ID | string | False  a| 
+包含用于访问存储区的凭据标识符的 JSON 字符串。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| 状态 | string | False  a| 
+包含指示存储桶操作状态的值的 JSON 字符串。定义的值为：
+
+* "pending" - 已计划发现存储桶
+* "available" - 存储桶可供使用
+* "failed" - 存储桶处于永久失败状态
+* "removed" - 存储桶当前不可访问
+* "unknown" - 无法确定存储桶状态
+
+
+
+
+| stateDetails | 数组[link:#type_astra_stateDetail["type_astra_stateDetail"]] | False  a| 
+JSON 对象的 JSON 数组，列出有关"state"转换为"removed"或"failed"的其他详细信息。如果没有可用的详细信息，此数组将为空。
+
+* 最小项目数：0
+
+
+
+
+| 提供商 | string | False  a| 
+JSON 字符串，表示可用于访问存储桶的存储桶协议。定义的值是：
+
+* "ontap-s3"
+* "storagegrid-s3"
+* “generic-s3”
+* "gcp"
+* "azure"
+* "aws"
+
+
+
+
+| bucketParameters | link:#bucketParameters["bucketParameters"] | False  a| 
+提供访问存储桶所需的存储桶提供程序特定信息的 JSON 对象。此存储桶中的特定值因提供程序而异。
+
+
+
+| 元数据 | link:#type_astra_metadata_update["type_astra_metadata_update"] | False  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+|===
+.请求示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-bucket",
+  "version": "1.2",
+  "name": "New Bucket Name"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 204, Indicates if the bucket resource was updated.
+----
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidFields | 数组[link:#invalidFields["invalidFields"]] | False  a| 
+无效请求正文字段列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 409, Conflict
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidFields | 数组[link:#invalidFields["invalidFields"]] | False  a| 
+无效请求正文字段列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/1",
+  "title": "Resource not found",
+  "detail": "The resource specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+additionalDetails
+
+[role="api-collapsible-fifth-title"]
+type_astra_stateDetail
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+s3
+
+提供 Simple Storage Service (S3) 协议参数的 JSON 对象。（将此对象用于所有 S3 类型提供程序）。
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 服务器 URL | string | False  a| 
+包含存储桶基本路径 URL 的 JSON 字符串。定义的值为：
+
+* 最小长度：0
+* 最大长度：1023
+
+
+
+
+| bucketName | string | False  a| 
+包含 S3 存储桶名称的 JSON 字符串。定义的值是：
+
+* 最小长度：0
+* 最大长度：63
+
+
+|===
+[role="api-collapsible-fifth-title"]
+gcp
+
+提供 Google Cloud 协议参数的 JSON 对象。
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| bucketName | string | False  a| 
+包含支持的 Google Cloud 存储桶名称的 JSON 字符串。定义的值是：
+
+* 最小长度：0
+* 最大长度：63
+
+
+|===
+[role="api-collapsible-fifth-title"]
+azure
+
+提供 Azure 协议参数的 JSON 对象。
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| storageAccount | string | False  a| 
+包含 Azure 存储帐户名称的 JSON 字符串。定义的值为：
+
+* 最小长度：0
+* 最大长度：63
+
+
+
+
+| bucketName | string | False  a| 
+包含支持的 Azure blob 名称的 JSON 字符串。定义的值是：
+
+* 最小长度：0
+* 最大长度：63
+
+
+|===
+[role="api-collapsible-fifth-title"]
+bucketParameters
+
+提供访问存储桶所需的存储桶提供程序特定信息的 JSON 对象。此存储桶中的特定值因提供程序而异。
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| s3 | link:#s3["s3"] | False  a| 
+提供 Simple Storage Service (S3) 协议参数的 JSON 对象。（将此对象用于所有 S3 类型提供程序）。
+
+
+
+| gcp | link:#gcp["gcp"] | False  a| 
+提供 Google Cloud 协议参数的 JSON 对象。
+
+
+
+| azure | link:#azure["azure"] | False  a| 
+提供 Azure 协议参数的 JSON 对象。
+
+|===
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_update
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidFields
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效请求正文字段的名称
+
+
+
+| 原因 | string | True  a| 
+请求正文字段无效的原因
+
+|===
+====

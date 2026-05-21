@@ -1,0 +1,692 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/post-accounts-k8s-v1-apps-schedules.html 
+summary: 为应用创建新计划 
+---
+= 为应用创建新计划
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules`#
+
+指示要创建的 Schedule API 资源的所需值。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| app_id | string | path | True  a| 
+包含应用程序资源的 ID
+
+|===
+
+
+== 请求正文
+
+指示要创建的 Schedule API 资源的所需值。
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-schedule"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+* "1.1"
+* "1.2"
+* "1.3"
+
+
+
+
+| name | string | True  a| 
+包含计划名称的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| 启用 | string | False  a| 
+指示计划是否处于活动状态的 JSON 字符串。定义的值为：
+
+* "true" - 此计划处于活动状态
+* "false" - 计划未激活。如果未指定，则默认值为 "true"。
+
+
+
+
+| 粒度 | string | True  a| 
+表示计划粒度的 JSON 字符串。定义的值是：
+
+* "每小时"
+* "每日"
+* "每周"
+* "每月"
+* "自定义"
+
+
+
+
+| 分钟 | string | False  a| 
+包含数值的 JSON 字符串，该数值表示执行计划的小时中的分钟数（0 - 59）。定义的值为：
+
+* 定义的正则表达式为："^[0-9]|[1-5][0-9]$" 如果粒度设置为"hourly"、"daily"、"weekly"或"monthly"，则此字段存在。对于自定义计划，它将返回值"0"。
+
+
+
+
+| 小时 | string | False  a| 
+包含一个数值的 JSON 字符串，该数值指示执行计划的一天中的小时（0 - 23）。定义的值为：
+
+* 定义的正则表达式为："^[0-9]|[1][0-9]|[2][0-3]$" 如果粒度设置为"daily"、"weekly"或"monthly"，则此字段存在。
+
+
+
+
+| dayOfWeek | string | False  a| 
+包含一个数值的 JSON 字符串，该数值指示要执行计划的星期几 (0-7)。定义的值为：
+
+* 定义的正则表达式为："^[0-7]$" 此字段仅在粒度设置为"weekly"时才存在。
+
+
+
+
+| dayOfMonth | string | False  a| 
+JSON 字符串，包含指示要执行计划的月份日期 (1-31) 的数值。定义的值为：
+
+* 定义的正则表达式为："^[1-9]|[1-2][0-9]|[3][0-1]$" 此字段仅在粒度设置为"monthly"时才存在。
+
+
+
+
+| recurrenceRule | string | False  a| 
+包含 RFC-5545 第 3.8.5.3 节的 JSON 字符串。重复规则。对于 DTSTART 参数，仅支持 UTC 时间戳（由"Z"后缀表示），并且仅支持当前时间之前的时间戳。对于 RECUR 规则部分，"FREQ"和"INTERVAL"是唯一受支持的规则部分。对于 FREQ 规则部分，"MINUTELY"和"HOURLY"是唯一支持的值。此字段仅在粒度设置为"custom"时才存在。
+
+
+
+| snapshotRetention | string | True  a| 
+包含正数值的 JSON 字符串，表示要保留多少个快照。零表示备份后应删除快照。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+* 定义的正则表达式为："^(0|([1-9][0-9]*))$"
+
+
+
+
+| backupRetention | string | True  a| 
+包含指示要保留多少个备份的正数值的 JSON 字符串。零表示不应创建备份。定义的值是：
+
+* 最小长度：1
+* 最大长度：63
+* 定义的正则表达式为："^(0|([1-9][0-9]*))$"
+
+
+
+
+| bucketID | string | False  a| 
+包含一个可选存储桶 ID 的 JSON 字符串，该 ID 指示必须在创建时存储备份的位置。如果未指定，将使用系统选择的存储桶。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| 复制 | string | False  a| 
+JSON 字符串，指示计划是否触发每个快照的 AppMirror 复制。仅当应用程序定义了 AppMirror 关系时才生效。定义的值为：
+
+* "true" - 此计划触发 AppMirror 复制
+* "false" - 计划不会触发 AppMirror 复制如果未指定，则默认值为 "false"。
+
+
+
+
+| 元数据 | link:#type_astra_metadata_update["type_astra_metadata_update"] | False  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+|===
+.请求示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-schedule",
+  "version": "1.3",
+  "name": "Backup Schedule",
+  "enabled": "true",
+  "granularity": "monthly",
+  "minute": "0",
+  "hour": "0",
+  "dayOfMonth": "1",
+  "snapshotRetention": "12",
+  "backupRetention": "12"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 201, Returns the newly created schedule resource in the JSON response body.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-schedule"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+* "1.1"
+* "1.2"
+* "1.3"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| name | string | True  a| 
+包含计划名称的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| 启用 | string | True  a| 
+指示计划是否处于活动状态的 JSON 字符串。定义的值为：
+
+* "true" - 此计划处于活动状态
+* "false" - 计划未激活。如果未指定，则默认值为 "true"。
+
+
+
+
+| 粒度 | string | True  a| 
+表示计划粒度的 JSON 字符串。定义的值是：
+
+* "每小时"
+* "每日"
+* "每周"
+* "每月"
+* "自定义"
+
+
+
+
+| 分钟 | string | True  a| 
+包含数值的 JSON 字符串，该数值表示执行计划的小时中的分钟数（0 - 59）。定义的值为：
+
+* 定义的正则表达式为："^[0-9]|[1-5][0-9]$" 如果粒度设置为"hourly"、"daily"、"weekly"或"monthly"，则此字段存在。对于自定义计划，它将返回值"0"。
+
+
+
+
+| 小时 | string | False  a| 
+包含一个数值的 JSON 字符串，该数值指示执行计划的一天中的小时（0 - 23）。定义的值为：
+
+* 定义的正则表达式为："^[0-9]|[1][0-9]|[2][0-3]$" 如果粒度设置为"daily"、"weekly"或"monthly"，则此字段存在。
+
+
+
+
+| dayOfWeek | string | False  a| 
+包含一个数值的 JSON 字符串，该数值指示要执行计划的星期几 (0-7)。定义的值为：
+
+* 定义的正则表达式为："^[0-7]$" 此字段仅在粒度设置为"weekly"时才存在。
+
+
+
+
+| dayOfMonth | string | False  a| 
+JSON 字符串，包含指示要执行计划的月份日期 (1-31) 的数值。定义的值为：
+
+* 定义的正则表达式为："^[1-9]|[1-2][0-9]|[3][0-1]$" 此字段仅在粒度设置为"monthly"时才存在。
+
+
+
+
+| recurrenceRule | string | False  a| 
+包含 RFC-5545 第 3.8.5.3 节的 JSON 字符串。重复规则。对于 DTSTART 参数，仅支持 UTC 时间戳（由"Z"后缀表示），并且仅支持当前时间之前的时间戳。对于 RECUR 规则部分，"FREQ"和"INTERVAL"是唯一受支持的规则部分。对于 FREQ 规则部分，"MINUTELY"和"HOURLY"是唯一支持的值。此字段仅在粒度设置为"custom"时才存在。
+
+
+
+| snapshotRetention | string | True  a| 
+包含正数值的 JSON 字符串，表示要保留多少个快照。零表示备份后应删除快照。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+* 定义的正则表达式为："^(0|([1-9][0-9]*))$"
+
+
+
+
+| backupRetention | string | True  a| 
+包含指示要保留多少个备份的正数值的 JSON 字符串。零表示不应创建备份。定义的值是：
+
+* 最小长度：1
+* 最大长度：63
+* 定义的正则表达式为："^(0|([1-9][0-9]*))$"
+
+
+
+
+| bucketID | string | False  a| 
+包含一个可选存储桶 ID 的 JSON 字符串，该 ID 指示必须在创建时存储备份的位置。如果未指定，将使用系统选择的存储桶。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| 复制 | string | False  a| 
+JSON 字符串，指示计划是否触发每个快照的 AppMirror 复制。仅当应用程序定义了 AppMirror 关系时才生效。定义的值为：
+
+* "true" - 此计划触发 AppMirror 复制
+* "false" - 计划不会触发 AppMirror 复制如果未指定，则默认值为 "false"。
+
+
+
+
+| 元数据 | link:#type_astra_metadata_update["type_astra_metadata_update"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-schedule",
+  "version": "1.3",
+  "id": "49cbc480-5f7d-51e2-8f30-52b9a83a03b1",
+  "name": "Backup Schedule",
+  "enabled": "true",
+  "granularity": "monthly",
+  "minute": "0",
+  "hour": "0",
+  "dayOfMonth": "1",
+  "snapshotRetention": "12",
+  "backupRetention": "12",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidFields | 数组[link:#invalidFields["invalidFields"]] | False  a| 
+无效请求正文字段列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 409, Conflict
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_update
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidFields
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效请求正文字段的名称
+
+
+
+| 原因 | string | True  a| 
+请求正文字段无效的原因
+
+|===
+====

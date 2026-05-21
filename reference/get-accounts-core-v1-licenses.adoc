@@ -1,0 +1,606 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-core-v1-licenses.html 
+summary: 列出所有许可证 
+---
+= 列出所有许可证
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/licenses`#
+
+返回集合中所有匹配资源的 JSON 数组。如果在请求中指定了单个字段，则项目 JSON 数组将包含按指定顺序为每个匹配资源请求的字段。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| 包括 | string | 查询 | False  a| 
+指示列出集合时应返回哪些字段。
+
+URL 示例："include=id"、"include=id,name"
+
+OpenAPI 示例："id"
+
+* 示例：id,product
+
+
+
+
+| limit | string | 查询 | False  a| 
+指示列出集合时要返回的最大资源数。
+
+URL 示例："limit=2"
+
+OpenAPI 示例："2"
+
+
+
+| 筛选器 | string | 查询 | False  a| 
+指示在列出集合时应匹配哪些字段以返回资源。
+
+支持的运算符有：
+
+* eq - 相等
+* lt/gt - 小于/大于
+* lte/gte - 小于或等于/大于或等于
+
+
+URL 示例："filter=field%20eq%20%27value%27"
+
+OpenAPI 示例："field eq 'value'"
+
+|===
+
+
+== 响应
+
+[source]
+----
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 个项 | 数组[任意以下之一：link:#license_1_0_get_response_body["license_1.0_get_response_body"]，数组[]] | True  a| 
+
+
+
+| 元数据 | link:#type_astra_metadata_list["type_astra_metadata_list"] | True  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-licenses",
+  "version": "1.0",
+  "items": [
+    [
+      "c8aa757a-5318-489f-8134-a2a1a6956a3e",
+      "Astra SDS"
+    ],
+    [
+      "0f7cc03d-9afc-4192-af7f-b29ab24f8f2a",
+      "Astra Enterprise"
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidParams | 数组[link:#invalidParams["invalidParams"]] | False  a| 
+无效查询参数列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+插件
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| startDate | string | False  a| 
+包含指示此附加组件何时生效的时间戳的 JSON 字符串。定义的值为：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| endDate | string | False  a| 
+包含时间戳的 JSON 字符串，指示此附加组件何时不再有效。定义的值是：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| features | string | False  a| 
+包含与此加载项关联的功能列表的 JSON 字符串。定义的值为：
+
+* 架构未验证字符串内容。
+
+
+
+
+| 容量 | string | False  a| 
+包含从加载项提取的容量的 JSON 字符串。定义的值为：
+
+* 架构未验证的字符串内容
+
+
+
+
+| licenseProtocol | string | False  a| 
+包含与此附加组件关联的许可协议的 JSON 字符串。定义的值为：
+
+* 架构未验证的字符串内容
+
+
+|===
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_update
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+license_1.0_get_response_body
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-license"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| 分配 | string | False  a| 
+包含指示许可证分配对象的 ID 的 JSON 字符串。仅在分配许可证时存在。对于 Astra Control Center 许可证，此字段必须填写帐户 ID，并且必须与 POST URI 中指定的帐户 ID 匹配。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| hostID | string | False  a| 
+包含许可证绑定到的主机标识符的 JSON 字符串。仅在许可证处于主机锁定状态时存在。定义的值是：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| 设备凭证 ID | string | False  a| 
+包含与凭据 API 关联的 deviceCredential 标识符的 JSON 字符串。仅适用于 Astra Data Store 许可证。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| isEvaluation | string | True  a| 
+表示许可证是否为评估许可证的 JSON 字符串。定义的值为：
+
+* "true"
+* "false"
+
+
+
+
+| licenseProtocol | string | True  a| 
+包含从许可证中提取的许可证协议的 JSON 字符串。定义的值为：
+
+* 架构未验证的字符串内容
+
+
+
+
+| licenseText | string | True  a| 
+包含从 NetApp 许可证系统获取的许可证 JSON 的 base64 编码表示的 JSON 字符串。必须以原始字节级别顺序提供以进行签名验证。定义的值为：
+
+* 符合 base64 编码数据架构
+
+
+
+
+| validFromTimestamp | string | True  a| 
+包含指示许可证何时生效的时间戳的 JSON 字符串。定义的值为：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| validUntilTimestamp | string | True  a| 
+包含指示许可证何时不再有效的时间戳的 JSON 字符串。定义的值是：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| 产品 | string | True  a| 
+包含从许可证中提取的产品字符串的 JSON 字符串。定义的值为：
+
+* 架构未验证的字符串内容
+
+
+
+
+| productVersion | string | True  a| 
+包含从许可证中提取的版本字符串的 JSON 字符串。定义的值为：
+
+* 架构未验证的字符串内容
+
+
+
+
+| 产品 SN | string | True  a| 
+包含从许可证中提取的序列号字符串的 JSON 字符串。定义的值为：
+
+* 架构未验证的字符串内容
+
+
+
+
+| features | string | True  a| 
+包含从许可证中提取的包值的 JSON 字符串。定义的值为：
+
+* 架构未验证的字符串内容
+
+
+
+
+| 容量 | string | True  a| 
+包含从许可证中提取的容量的 JSON 字符串。
+
+
+
+| capacity2 | string | True  a| 
+包含从许可证中提取的辅助容量的 JSON 字符串。
+
+
+
+| 插件 | 数组[link:#addons["插件"]] | False  a| 
+包含许可证中附加组件列表的 JSON 对象的 JSON 数组。附加组件是指在未来可能发生的许可证变更。
+
+
+
+| 元数据 | link:#type_astra_metadata_update["type_astra_metadata_update"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_list
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 继续 | string | False  a| 
+
+
+
+| count | 数字 | False  a| 
+
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+====

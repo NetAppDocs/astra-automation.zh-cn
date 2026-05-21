@@ -1,0 +1,729 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-core-v1-events.html 
+summary: 列出所有事件 
+---
+= 列出所有事件
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/events`#
+
+返回集合中所有匹配资源的 JSON 数组。如果在请求中指定了单个字段，则项目 JSON 数组将包含按指定顺序为每个匹配资源请求的字段。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| 包括 | string | 查询 | False  a| 
+指示列出集合时应返回哪些字段。
+
+URL 示例："include=id"、"include=id,name"
+
+OpenAPI 示例："id"
+
+* 示例：id,summary
+
+
+
+
+| limit | string | 查询 | False  a| 
+指示列出集合时要返回的最大资源数。
+
+URL 示例："limit=2"
+
+OpenAPI 示例："2"
+
+
+
+| 筛选器 | string | 查询 | False  a| 
+指示在列出集合时应匹配哪些字段以返回资源。
+
+支持的运算符有：
+
+* eq - 相等
+* lt/gt - 小于/大于
+* lte/gte - 小于或等于/大于或等于
+
+
+URL 示例："filter=field%20eq%20%27value%27"
+
+OpenAPI 示例："field eq 'value'"
+
+
+
+| 订单 | string | 查询 | False  a| 
+指示列出集合时资源的排序顺序。
+
+URL 示例："orderBy=name"，"orderBy=name%20desc"
+
+OpenAPI 示例："name desc"
+
+
+
+| 跳过 | string | 查询 | False  a| 
+指示列出集合时要跳过的资源数。
+
+URL 示例："skip=1"
+
+OpenAPI 示例："1"
+
+
+
+| count | string | 查询 | False  a| 
+指示是否应在元数据对象中返回资源总数。
+
+URL 示例："count=true"
+
+OpenAPI 示例："true"
+
+
+
+| 继续 |  | 查询 | False  a| 
+指示要从中恢复列表的令牌。
+
+URL 示例："continue=+++<continue token="" from="" collection="" metadata="">+++"+++</continue>+++
+
+OpenAPI 示例："+++<continue token="" from="" collection="" metadata="">+++</continue>+++</continue>
+
+|===
+
+
+== 响应
+
+[source]
+----
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 个项 | 数组[任意一个：link:#event_1_4_get_response_body["event_1.4_get_response_body"]，数组[]] | True  a| 
+
+
+
+| 元数据 | link:#type_astra_metadata_list["type_astra_metadata_list"] | True  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-events",
+  "version": "1.4",
+  "items": [
+    [
+      "4f8273ee-883d-47f0-a512-9e27b6285f20",
+      "Discovering Applications in Cluster"
+    ],
+    [
+      "1cdd26dc-5eb0-4cf4-a0c1-39a9b83720e1",
+      "Application Discovered"
+    ],
+    [
+      "2064d1c1-4bc6-466e-9c30-b941a11be16a",
+      "Application Discovery Failed"
+    ],
+    [
+      "4325f971-ca9c-4a52-bc9a-da6ec62e6bfe",
+      "Application Discovered"
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidParams | 数组[link:#invalidParams["invalidParams"]] | False  a| 
+无效查询参数列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+数据
+
+包含其他事件特定信息的 JSON 对象。
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| ttl | 数字 | False  a| 
+JSON 数字，表示事件将被保留的秒数（自 eventTime 以来）。只有在指定的秒数后自动删除事件时，才会包含此字段。删除时，如果事件具有通知目标，则所有关联的通知也会被删除。删除时，如果事件具有横幅目标，则横幅也会被删除。缺少此字段（或值为"0"）意味着事件不会被自动删除。
+
+
+
+| isAcknowledgeable | string | False  a| 
+JSON 字符串，指示横幅是否可关闭。定义的值为：
+
+* "true" - 横幅可忽略
+* "false" - 横幅不可忽略
+
+
+|===
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | True  a| 
+
+
+
+| creationTimestamp | string | True  a| 
+
+
+
+| modificationTimestamp | string | True  a| 
+
+
+
+| 已创建 | string | True  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+event_1.4_get_response_body
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-event"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+* "1.1"
+* "1.2"
+* "1.3"
+* "1.4"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| name | string | True  a| 
+包含事件的点符号(.)层次结构名称的 JSON 字符串。定义的值是：
+
+* 最小长度：3
+* 最大长度：127
+* 定义的正则表达式为："^(([a-z])_(\.))_([a-z])+$"
+
+
+
+
+| sequenceCount | 数字 | True  a| 
+包含序列计数的 JSON 编号。每次接收到新事件时，系统都会递增该数字。
+
+
+
+| 摘要 | string | True  a| 
+包含事件的短格式（少于 40 个字符）摘要的 JSON 字符串。定义的值为：
+
+* 最小长度：3
+* 最大长度：79
+
+
+
+
+| eventTime | string | True  a| 
+包含指示事件发生时间的时间戳的 JSON 字符串。定义的值为：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| 源 | string | True  a| 
+包含生成事件的服务的小写名称的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：19
+* 定义的正则表达式为："^([a-z-])*$"
+
+
+
+
+| resourceID | string | True  a| 
+包含与事件关联的资源 ID 的 JSON 字符串。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| additionalResourceIDs | 数组[string] | True  a| 
+JSON 字符串的 JSON 数组，每个数组都包含与事件关联的其他资源的资源 ID。虽然 "resourceID" 字段包含与此事件关联的主要资源，但此字段包含与相同事件关联的任何数量的其他资源 ID。如果没有与事件关联的其他资源，则数组将为空。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| resourceType | string | True  a| 
+包含与事件关联的资源的媒体类型的 JSON 字符串。定义的值为：
+
+* 最小长度：4
+* 最大长度：79
+* 定义的正则表达式为："^application\/astra-([a-zA-Z])+$"
+
+
+
+
+| correlationID | string | True  a| 
+包含允许将相关事件分组在一起的 UUIDv4 相关 ID 的 JSON 字符串。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| severity | string | True  a| 
+包含指示事件严重性的以下值之一的 JSON 字符串。定义的值为：
+
+* "已清除" - 表示先前报告的描述条件的事件不再处于活动状态。严重程度为"已清除"的事件将使用相同的摘要和相关 ID 进行匹配。
+* "indeterminate" - 表示无法确定严重性。
+* "informational" - 表示预期和正常状态的变化（未在 X.733 中定义）。
+* "warning" - 表示在感受到任何重大影响之前检测到潜在或即将发生的影响服务的故障。
+* "critical" - 表示已发生影响服务的状况，需要立即采取纠正措施。"cleared"、"indeterminate"、"warning" 和 "critical" 的定义基于 CCITT X.733 第 8.1.2.3 条中的定义。
+
+
+
+
+| 类 | string | True  a| 
+包含指示事件类的以下值之一的 JSON 字符串。定义的值为：
+
+* "system" - 此事件与内部事件或请求相关。
+* "user" - 此事件与用户发起的事件或请求相关。
+* "security" - 此事件与安全问题相关。
+
+
+
+
+| description | string | True  a| 
+JSON 字符串包含有关此事件的长格式描述性文本。定义的值为：
+
+* 最小长度：3
+* 最大长度：1023
+
+
+
+
+| 描述 URL | string | False  a| 
+包含启用横幅中的按钮并将其链接到外部文档的 URL 的 JSON 字符串。定义的值为：
+
+* 最小长度：3
+* 最大长度：4095
+
+
+
+
+| correctiveAction | string | False  a| 
+包含有关必须采取哪些纠正措施以响应事件的长格式描述性文本的 JSON 字符串。定义的值为：
+
+* 最小长度：3
+* 最大长度：1023
+
+
+
+
+| correctiveActionURL | string | False  a| 
+包含将横幅中的按钮链接到 UI 中的页面以解决此问题的 URL 的 JSON 字符串。定义的值为：
+
+* 最小长度：3
+* 最大长度：4095
+
+
+
+
+| 可见性 | 数组[string] | False  a| 
+JSON 字符串的 JSON 数组，每个表示允许查看事件的 RBAC 角色。角色通过 OR 一起定义。可选。如果省略，则具有任何 RBAC 角色的用户都可以查看事件。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| 目标 | 数组[string] | False  a| 
+JSON 字符串的 JSON 数组，每个指示事件的附加目标。这些字符串允许服务提供有关除活动日志之外事件应路由到何处的提示。可选。定义的值为：
+
+* "notification" - 此事件标记为通知，可通过通知 API 端点访问。
+* "banner" - 此事件标记为横幅。
+* "support" - 此事件标记为与支持相关的事件。
+
+
+
+
+| 资源 URI | string | False  a| 
+包含与事件关联的 URI 的 JSON 字符串。仅包含与 API 操作相关的事件。定义的值为：
+
+* 最小长度：3
+* 最大长度：4095
+
+
+
+
+| resourceCollectionURL | 数组[string] | False  a| 
+JSON 字符串的 JSON 数组，每个字符串指示与事件关联的资源的完全扩展访问 URL。定义的值为：
+
+* 最小长度：1
+* 最大长度：1023
+
+
+
+
+| resourceMethod | string | False  a| 
+包含已调用 HTTP 方法的 JSON 字符串。仅包含与 API 操作相关的事件。定义的值为：
+
+* "options" - OPTIONS API 操作
+* "post" - POST API 操作
+* "get" - GET API 操作
+* "put" - PUT API 操作
+* "delete" - DELETE API 操作
+
+
+
+
+| resourceMethodResult | string | False  a| 
+包含调用 HTTP 方法的结果的 JSON 字符串。仅包含与 API 操作相关的事件。定义的值为：
+
+* 定义的正则表达式为："^[1-5][0-9]{2}$"
+
+
+
+
+| 用户 ID | string | False  a| 
+包含与事件关联的用户 ID 的 JSON 字符串。仅包含与用户启动的操作关联的事件。定义的值是：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| accountID | string | False  a| 
+包含与事件关联的帐户 ID 的 JSON 字符串。仅包含与帐户关联的事件。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| 数据 | link:#data["数据"] | False  a| 
+包含其他事件特定信息的 JSON 对象。
+
+
+
+| 元数据 | link:#type_astra_metadata["type_astra_metadata"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_list
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 继续 | string | False  a| 
+
+
+
+| count | 数字 | False  a| 
+
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+====

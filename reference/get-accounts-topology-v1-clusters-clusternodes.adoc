@@ -1,0 +1,598 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-topology-v1-clusters-clusternodes.html 
+summary: 列出集群的集群节点 
+---
+= 列出集群的集群节点
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clusters/{cluster_id}/clusterNodes`#
+
+返回集合中所有匹配资源的 JSON 数组。如果在请求中指定了单个字段，则项目 JSON 数组将包含按指定顺序为每个匹配资源请求的字段。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| cluster_id | string | path | True  a| 
+包含群集资源的 ID
+
+
+
+| 包括 | string | 查询 | False  a| 
+指示列出集合时应返回哪些字段。
+
+URL 示例："include=id"、"include=id,name"
+
+OpenAPI 示例："id"
+
+* 示例：name、instanceType
+
+
+
+
+| limit | string | 查询 | False  a| 
+指示列出集合时要返回的最大资源数。
+
+URL 示例："limit=2"
+
+OpenAPI 示例："2"
+
+|===
+
+
+== 响应
+
+[source]
+----
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 个项 | 数组[任意以下之一：link:#clusterNode_1_0_get_response_body["clusterNode_1.0_get_response_body"]，数组[]] | True  a| 
+
+
+
+| 元数据 | link:#type_astra_metadata_list["type_astra_metadata_list"] | True  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-clusterNodes",
+  "version": "1.0",
+  "items": [
+    [
+      "test-0",
+      "e2-medium"
+    ],
+    [
+      "test-1",
+      "e2-medium"
+    ],
+    [
+      "test-2",
+      "e2-medium"
+    ],
+    [
+      "test-3",
+      "e2-micro"
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidParams | 数组[link:#invalidParams["invalidParams"]] | False  a| 
+无效查询参数列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+labels
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+包含标签名称的 JSON 字符串定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+* 定义的正则表达式为："^([\S.]{1,253}\/)?([a-z0-9A-Z_.-]){1,63}$"
+
+
+
+
+| value | string | True  a| 
+包含标签值的 JSON 字符串定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+* 定义的正则表达式为："^([a-z0-9A-Z_.-]){1,63}$"
+
+
+|===
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | True  a| 
+
+
+
+| creationTimestamp | string | True  a| 
+
+
+
+| modificationTimestamp | string | True  a| 
+
+
+
+| 已创建 | string | True  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+clusterNode_1.0_get_response_body
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-clusterNode"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| name | string | True  a| 
+包含指示节点 Kubernetes 名称的值的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：254
+
+
+
+
+| 角色 | string | True  a| 
+包含指示节点的 Kubernetes 角色的值的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：254
+
+
+
+
+| labels | 数组[link:#labels["labels"]] | True  a| 
+JSON 对象的 JSON 数组，每个 JSON 对象都包含与节点关联的 Kubernetes 标签。如果没有可用的详细信息，此数组将为空。
+
+* 最小项目数：0
+
+
+
+
+| creationTime | string | True  a| 
+包含指示节点创建时间的 ISO 8601 时间戳的 JSON 字符串。已定义的值为：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| externalIP | string | True  a| 
+包含指示节点内部 IP 地址的值的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| internalIP | string | True  a| 
+包含指示节点外部 IP 地址的值的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| 区域 | string | True  a| 
+包含指示节点的 Kubernetes 区域的值的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：254
+
+
+
+
+| 区域 | string | True  a| 
+包含指示节点的 Kubernetes 区域的值的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：254
+
+
+
+
+| instanceType | string | True  a| 
+包含指示节点的 Kubernetes 实例类型的值的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：254
+
+
+
+
+| kernelVersion | string | True  a| 
+包含指示节点使用的内核版本的值的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：254
+
+
+
+
+| osImage | string | True  a| 
+包含指示节点使用的操作系统映像的值的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：254
+
+
+
+
+| numCpus | string | True  a| 
+JSON 字符串包含一个值，该值指示分配给该节点的 CPU 数量。定义的值为：
+
+* 最小长度：1
+* 最大长度：254
+
+
+
+
+| memory | string | True  a| 
+JSON 字符串包含一个值，该值指示分配给该节点的内存量。定义的值为：
+
+* 最小长度：1
+* 最大长度：254
+
+
+
+
+| 状态 | string | True  a| 
+包含指示节点操作状态的值的 JSON 字符串。定义的值为：
+
+* "running" - 节点正在正常运行
+* "provisioning" - 正在调配节点
+* "discovering" - 节点的各个方面正在被发现过程中
+* "pending" - 节点已安排进行发现
+* "failed" - 节点处于失败状态
+* "unknown" - 无法确定节点的状态
+
+
+
+
+| 元数据 | link:#type_astra_metadata["type_astra_metadata"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_list
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 继续 | string | False  a| 
+
+
+
+| count | 数字 | False  a| 
+
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+====

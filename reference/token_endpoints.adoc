@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/token_endpoints.html 
+summary: 'Astra API (ACC) 令牌端点' 
+---
+= Astra API (ACC) 令牌端点
+:allow-uri-read: 
+
+
+Token API 使用户能够创建和管理 API 访问令牌。

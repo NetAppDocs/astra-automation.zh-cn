@@ -1,0 +1,973 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-k8s-v2-apps.html 
+summary: 列出所有应用 
+---
+= 列出所有应用
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v2/apps`#
+
+返回集合中所有匹配资源的 JSON 数组。如果在请求中指定了单个字段，则项目 JSON 数组将包含按指定顺序为每个匹配资源请求的字段。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| 包括 | string | 查询 | False  a| 
+指示列出集合时应返回哪些字段。
+
+URL 示例："include=id"、"include=id,name"
+
+OpenAPI 示例："id"
+
+* 示例：id,name,state
+
+
+
+
+| limit | string | 查询 | False  a| 
+指示列出集合时要返回的最大资源数。
+
+URL 示例："limit=2"
+
+OpenAPI 示例："2"
+
+
+
+| 筛选器 | string | 查询 | False  a| 
+指示在列出集合时应匹配哪些字段以返回资源。
+
+支持的运算符有：
+
+* eq - 相等
+* lt/gt - 小于/大于
+* lte/gte - 小于或等于/大于或等于
+
+
+URL 示例："filter=field%20eq%20%27value%27"
+
+OpenAPI 示例："field eq 'value'"
+
+|===
+
+
+== 响应
+
+[source]
+----
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 个项 | 数组[任意以下之一：link:#app_2_2_get_response_body["app_2.2_get_response_body"]，数组[]] | True  a| 
+
+
+
+| 元数据 | link:#type_astra_metadata_list["type_astra_metadata_list"] | True  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-apps",
+  "version": "2.2",
+  "items": [
+    [
+      "2ff50f4b-fe40-4980-913f-8a4469184822",
+      "mysql",
+      "ready"
+    ],
+    [
+      "ae1e6561-9e22-406c-8a5a-762f4604da00",
+      "jenkins",
+      "ready"
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidParams | 数组[link:#invalidParams["invalidParams"]] | False  a| 
+无效查询参数列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+targetSchema
+
+[role="api-collapsible-fifth-title"]
+接受发布
+
+[role="api-collapsible-fifth-title"]
+接受-put
+
+[role="api-collapsible-fifth-title"]
+提示
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 状态 | string | False  a| 
+
+
+
+| 允许 | 数组[string] | False  a| 
+
+
+
+| 接受发布 | link:#accept-post["接受发布"] | False  a| 
+
+
+
+| 权限 | 数组[string] | False  a| 
+
+
+
+| 接受-put | link:#accept-put["接受-put"] | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_link
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| rel | string | True  a| 
+
+
+
+| href | string | True  a| 
+
+
+
+| type | string | False  a| 
+
+
+
+| targetSchema | link:#targetSchema["targetSchema"] | False  a| 
+
+
+
+| 标题 | string | False  a| 
+
+
+
+| 提示 | link:#hints["提示"] | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+GVK
+
+包含 Kubernetes 组/版本/种类的 JSON 对象。
+
+* 此对象已根据 Astra /apiResources 进行内部验证。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| group | string | True  a| 
+包含 Kubernetes 分配的组标识符的 JSON 字符串。
+
+* 此字符串已根据 Astra /apiResources 进行内部验证
+
+
+
+
+| 类型 | string | True  a| 
+包含 Kubernetes 分配的类型标识符的 JSON 字符串。
+
+* 此字符串已根据 Astra /apiResources 进行内部验证
+
+
+
+
+| version | string | True  a| 
+包含 Kubernetes 分配的版本标识符的 JSON 字符串。
+
+* 此字符串已根据 Astra /apiResources 进行内部验证
+
+
+|===
+[role="api-collapsible-fifth-title"]
+clusterScopedResources
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| GVK | link:#GVK["GVK"] | True  a| 
+包含 Kubernetes 组/版本/种类的 JSON 对象。
+
+* 此对象已根据 Astra /apiResources 进行内部验证。
+
+
+
+
+| labelSelectors | 数组[string] | False  a| 
+JSON 字符串的 JSON 数组，表示集群内集群范围 GroupVersionKinds (GVK) 的标签选择器。如果为空，则包含集群上的所有 GVK 实例。此数组中的每个元素都是 Kubernetes 标签选择器字符串，并遵循这些值的相同语法。示例：
+
+* [ "app=mysql" ] -- 选择具有名称为 app 且值为 mysql 的标签的所有资源更多示例可在此处找到： https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement[]
+
+
+|===
+[role="api-collapsible-fifth-title"]
+namespaceScopedResources
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| namespace | string | True  a| 
+包含其中定义了应用程序的命名空间名称的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：253
+* 符合 DNS 1123 标签架构
+
+
+
+
+| labelSelectors | 数组[string] | True  a| 
+JSON 字符串的 JSON 数组，表示命名空间中的标签选择器。如果这是空的，则包含命名空间中的所有资源。此数组中的每个元素都是 Kubernetes 标签选择器字符串，并遵循这些值的语法。示例：
+
+* [ "app=mysql" ] -- 选择具有名称为 app 且值为 mysql 的标签的所有资源
+* [ "app != mysql" ] -- 选择具有名称为 app 且值不是 mysql 的标签的所有资源
+* [ "app in (mysql, mariadb)" ] -- 选择具有名称为 app 且值为 mysql 或 mariadb 的标签的所有资源
+* [ "app notin (nginx, wordpress)" ] -- 选择所有没有名称为 app 且值为 nginx 或 wordpress 的标签的资源
+* [ "app" ] -- 选择具有名为 app 的标签的所有资源
+* [ "!app" ] -- 选择所有没有名为 app 的标签的资源。请注意，单个选择器中可以包含多个选择运算符，以逗号分隔。在这种情况下，各个选择运算符的结果是 AND-ed：
+* [ "app=mysql,version=2" ] -- 选择具有名称为 app 且值为 mysql 的标签以及名称为 version 且值为 2 的标签的所有资源
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_stateTransition
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 自 | string | True  a| 
+
+
+
+| to | 数组[string] | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+additionalDetails
+
+[role="api-collapsible-fifth-title"]
+type_astra_stateDetail
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+namespaceMapping
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 源 | string | True  a| 
+包含源群集上命名空间名称的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：253
+* 符合 DNS 1123 标签架构
+
+
+
+
+| 目标 | string | True  a| 
+包含目标集群上命名空间名称的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：253
+* 符合 DNS 1123 标签架构
+
+
+|===
+[role="api-collapsible-fifth-title"]
+storageClassMapping
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 源 | string | True  a| 
+包含源存储类名称的 JSON 字符串。也可以是 '*' 来指定所有源存储类。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+* 如果使用存储类名称，则符合 DNS 1123 标签架构
+* "*" 以指定所有存储类
+
+
+
+
+| 目标 | string | True  a| 
+包含目标存储类名称的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：63
+* 符合 DNS 1123 标签架构
+
+
+|===
+[role="api-collapsible-fifth-title"]
+GVKN
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| group | string | False  a| 
+包含 Kubernetes 分配的组标识符的 JSON 字符串。
+
+* 此字符串已根据 Astra /apiResources 进行内部验证
+
+
+
+
+| version | string | False  a| 
+包含 Kubernetes 分配的版本标识符的 JSON 字符串。
+
+* 此字符串已根据 Astra /apiResources 进行内部验证
+
+
+
+
+| 类型 | string | False  a| 
+包含 Kubernetes 分配的类型标识符的 JSON 字符串。
+
+* 此字符串已根据 Astra /apiResources 进行内部验证
+
+
+
+
+| 命名空间 | 数组[string] | False  a| 
+JSON 字符串的 JSON 数组，描述要包括或排除资源的命名空间。定义的值是：
+
+* 最小长度：1
+* 最大长度：63
+* 符合 DNS 1123 标签架构
+
+
+
+
+| 名称 | 数组[string] | False  a| 
+JSON 字符串的 JSON 数组，描述要包括或排除在选择性恢复中的 Kubernetes 资源名称。定义的值是：
+
+* 最小长度：1
+* 最大长度：253
+* 符合 DNS 1123 标签架构
+
+
+
+
+| labelSelectors | 数组[string] | False  a| 
+描述 Kubernetes 标签选择器的 JSON 字符串数组，用于从选择性还原中包括或排除资源。此数组中的每个元素都是 Kubernetes 标签选择器字符串，并遵循这些值的相同语法。示例：
+
+* [ "app=mysql" ] -- 选择具有名称为 app 且值为 mysql 的标签的所有资源更多示例可在此处找到： https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement[]
+
+
+|===
+[role="api-collapsible-fifth-title"]
+restoreFilter
+
+JSON 对象包含描述选择性还原操作中包括或排除的资源的筛选器列表。包含和排除是相互排斥的，选择性还原只能使用一种筛选器。
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| resourceSelectionCriteria | string | False  a| 
+包含一个值的 JSON 字符串，该值指示资源筛选器如何选择资源。有效值为 include 或 exclude。
+
+
+
+| GVKN | 数组[link:#GVKN["GVKN"]] | False  a| 
+JSON 对象的 JSON 数组，用于描述在选择性还原期间要筛选的资源。如果所有指定的筛选器字段都匹配相应的资源字段，则资源将匹配单个 GVKN 筛选器元素。作为数组的筛选器字段（例如，命名空间和名称）如果其任何元素与相应的资源字段匹配，则匹配。labelSelectors 字段要求所有选择器匹配。与 GVKN 筛选器对象数组中的任何筛选器匹配的资源将根据 resourceSelectionCriteria 值包括在还原中或从还原中排除。指定空的 GVKN 对象会导致验证错误。
+
+|===
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_update
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+app_2.2_get_response_body
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* “application/astra-app”
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "2.0"
+* "2.1"
+* "2.2"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| 链接 | 数组[link:#type_astra_link["type_astra_link"]] | True  a| 
+描述针对资源的支持操作的链接。
+
+
+
+| name | string | True  a| 
+包含应用程序名称的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：63
+* 此字符串经过内部验证，以防止 XSS、Unicode、目录遍历和 SQL 注入攻击。
+* 符合 DNS 1123 标签架构
+
+
+
+
+| clusterScopedResources | 数组[link:#clusterScopedResources["clusterScopedResources"]] | False  a| 
+描述属于此应用程序的集群范围资源的 JSON 对象的 JSON 数组
+
+
+
+| namespaceScopedResources | 数组[link:#namespaceScopedResources["namespaceScopedResources"]] | True  a| 
+描述作为此应用一部分的资源的 JSON 对象的 JSON 数组
+
+
+
+| lastResourceCollectionTimestamp | string | False  a| 
+包含上次执行资源收集时的时间戳的 JSON 字符串。如果尚未为此应用程序执行任何资源收集，则取消设置此字段。定义的值为：
+
+* 符合 ISO-8601 日期时间方案
+
+
+
+
+| 状态 | string | True  a| 
+包含指示应用程序操作状态的值的 JSON 字符串。定义的值是：
+
+* "pending" - 已计划发现应用程序
+* "discovering" - 正在发现应用程序
+* "provisioning" - 应用程序正在配置过程中
+* "ready" - 应用程序正常运行
+* "failed" - 应用程序处于永久失败状态
+* "restoring" - 正在从备份或快照还原应用程序
+* "unavailable" - 当前无法访问此应用程序
+* "unknown" - 无法确定应用程序状态
+* "deleting" - 应用程序正在删除过程中
+
+
+
+
+| stateTransitions | 数组[link:#type_astra_stateTransition["type_astra_stateTransition"]] | False  a| 
+JSON 对象的 JSON 数组，每个表示从给定定义状态的允许状态转换集。每个 JSON 对象都包含"from"和"to"字段，其中"from"值是状态的名称，"to"值是允许的目标状态数组。
+
+
+
+| stateDetails | 数组[link:#type_astra_stateDetail["type_astra_stateDetail"]] | True  a| 
+JSON 对象的 JSON 数组，其中列出有关当前状态的其他详细信息，包括达到当前状态的原因。如果没有可用的详细信息，则此数组将为空。定义的值为：
+
+* 最小项目数：0
+
+
+
+
+| protectionState | string | True  a| 
+包含指示应用程序保护状态的值的 JSON 字符串。定义的值是：
+
+* "protected" - 应用程序已定义保护策略并符合该策略
+* "partial" - 应用程序已定义保护策略，但不符合该策略
+* "none" - 应用程序未定义保护策略
+* "atRisk" - 集群上的默认存储类不支持快照，应用程序存在获取不受支持的卷的风险
+
+
+
+
+| protectionStateDetails | 数组[link:#type_astra_stateDetail["type_astra_stateDetail"]] | True  a| 
+JSON 对象的 JSON 数组，其中列出有关当前保护状态的其他详细信息，包括达到当前状态的原因。如果没有可用的详细信息，此数组将为空。定义的值为：
+
+* 最小项目数：0
+
+
+
+
+| appDetectedType | string | False  a| 
+唯一表示检测到的特定应用程序类型的 JSON 字符串。定义的值为：
+
+* "system" - 应用程序包含将其标识为 Kubernetes 环境一部分的资源
+* "acc" - 应用程序包含将其标识为 Astra Control Center 实例的资源
+
+
+
+
+| 命名空间 | 数组[string] | True  a| 
+包含运行应用程序的命名空间名称的 JSON 字符串的 JSON 数组。定义的值为：
+
+* 最小长度：1
+* 最大长度：253
+* 符合 DNS 1123 标签架构
+
+
+
+
+| namespaceMapping | 数组[link:#namespaceMapping["namespaceMapping"]] | False  a| 
+JSON 对象的 JSON 数组，每个都将源命名空间映射到目标命名空间以进行克隆操作。定义的值为：
+
+* 最小项目数：0
+
+
+
+
+| storageClassMapping | 数组[link:#storageClassMapping["storageClassMapping"]] | False  a| 
+JSON 对象的 JSON 数组，每个对象将源存储类映射到目标存储类以进行还原操作。如果没有元素或不存在，则将使用原始源存储类名称。定义的值为：
+
+* 最小项目数：0
+
+
+
+
+| clusterName | string | False  a| 
+包含正在运行应用程序的群集的名称的 JSON 字符串。如果应用程序当前未运行，则不返回。
+
+
+
+| clusterID | string | False  a| 
+包含正在运行应用程序的集群 ID 的 JSON 字符串。如果应用程序当前未运行，则不返回。在创建时指定时，clusterID 指示应用程序必须克隆到哪个集群。如果指定的集群不存在，或者指定的集群与请求 URI 中指定的 clusterID 不匹配，则克隆将失败。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| clusterType | string | False  a| 
+包含指示集群类型的值的 JSON 字符串。定义的值为：
+
+* "gke" - 托管在 Google Kubernetes Engine (GKE) 上的 Kubernetes
+* "aks" - 托管在 Microsoft Azure Kubernetes Service (AKS) 上的 Kubernetes
+* "eks" - 托管在 Amazon Elastic Kubernetes Service (Amazon EKS) 上的 Kubernetes
+* "openshift" - 集群的类型为 OpenShift
+* "kubernetes" - 集群是通用的 Kubernetes
+
+
+
+
+| sourceAppID | string | False  a| 
+包含源应用程序 ID 的 JSON 字符串。仅当应用程序从另一个应用程序克隆或从备份或快照还原时才返回。在创建时指定时，sourceAppID 与 sourceClusterID 一起使用，并指示将克隆哪个正在运行的应用程序。如果指定的应用程序不存在于指定的源集群上，则克隆将失败。创建应用程序时，只能指定 sourceAppID、backupID 或 snapshotID 中的一个。定义的值是：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| sourceClusterName | string | False  a| 
+包含应用程序先前运行的群集的名称的 JSON 字符串。仅当从另一个群集克隆应用程序时才返回。
+
+
+
+| sourceClusterID | string | False  a| 
+包含应用程序以前运行的群集 ID 的 JSON 字符串。仅当从另一个群集克隆应用程序时才返回。在 create 上指定时，sourceClusterID 与 sourceAppID 一起使用，并指示要克隆的应用程序的源群集。如果指定的源集群不存在，则克隆将失败。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| backupID | string | False  a| 
+包含从中还原应用程序的备份 ID 的 JSON 字符串。仅当应用程序从备份还原时返回。在创建时指定时，backupID 表示将从现有备份克隆应用程序。如果指定的备份不存在，则克隆将失败。创建应用程序时，只能指定 sourceAppID、backupID 或 snapshotID 中的一个。在替换时指定时，backupID 指示将从其就地还原应用程序的应用程序备份。如果指定的备份不存在，则还原将失败。更新应用程序时，只能指定 backupID 或 snapshotID 之一。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| snapshotID | string | False  a| 
+包含从中还原应用程序的快照 ID 的 JSON 字符串。仅当应用程序从快照还原时返回。在创建时指定时，snapshotID 表示将从现有快照克隆应用程序。如果指定的快照不存在，则克隆将失败。创建应用程序时，只能指定 sourceAppID、backupID 或 snapshotID 中的一个。当在替换上指定时，snapshotID 指示将从中就地还原应用程序的应用程序快照。如果指定的快照不存在，则还原将失败。更新应用程序时，只能指定 backupID 或 snapshotID 中的一个。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| replicationSourceAppID | string | False  a| 
+包含要复制到此应用程序的应用程序 ID 的 JSON 字符串。仅当应用程序当前是 AppMirror 关系中的目标，并且关系未处于 failedOver 状态时才返回。当关系处于 failedOver 状态时，不返回此字段。定义的值为：
+
+* 符合 Astra 标识符架构
+
+
+
+
+| restoreFilter | link:#restoreFilter["restoreFilter"] | False  a| 
+JSON 对象包含描述选择性还原操作中包括或排除的资源的筛选器列表。包含和排除是相互排斥的，选择性还原只能使用一种筛选器。
+
+
+
+| 元数据 | link:#type_astra_metadata_update["type_astra_metadata_update"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。如果在更新时未指定，则元数据对象的标签、creationTimestamp 和 createdBy 将保留而不进行修改。
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_list
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 继续 | string | False  a| 
+
+
+
+| count | 数字 | False  a| 
+
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+====

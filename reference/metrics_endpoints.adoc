@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/metrics_endpoints.html 
+summary: 'Astra API (ACC) 指标端点' 
+---
+= Astra API (ACC) 指标端点
+:allow-uri-read: 
+
+
+Metrics API 表示与给定帐户关联的指标。

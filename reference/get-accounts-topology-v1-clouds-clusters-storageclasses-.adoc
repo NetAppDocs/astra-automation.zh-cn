@@ -1,0 +1,479 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-topology-v1-clouds-clusters-storageclasses-.html 
+summary: 检索云的存储类 
+---
+= 检索云的存储类
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/storageClasses/{storageClass_id}`#
+
+返回 JSON 响应正文中存储的 Storage Class API 资源。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| cloud_id | string | path | True  a| 
+包含的云资源的 ID
+
+
+
+| cluster_id | string | path | True  a| 
+包含群集资源的 ID
+
+
+
+| storageClass_id | string | path | True  a| 
+要列出的 storageClass 集合的 ID
+
+|===
+
+
+== 响应
+
+[source]
+----
+Status: 200, Returns the stored Storage Class API resource in the JSON response body.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-storageClass"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+* "1.1"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| name | string | True  a| 
+包含指示存储类名称的值的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：255
+
+
+
+
+| 配置器 | string | True  a| 
+包含指示与存储类关联的置备程序的值的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：255
+
+
+
+
+| 可用 | string | True  a| 
+JSON 字符串，指示存储类是否可用于集群或是否有资格在管理时添加到集群。定义的值为：
+
+* "available" - 存储类可供使用
+* "eligible" - 当集群处于管理下时，存储类有资格被集群使用
+* "ineligible" - 存储类在管理时不符合集群使用的条件
+
+
+
+
+| allowVolumeExpansion | string | True  a| 
+JSON 字符串，指示存储类是否允许卷扩展。定义的值是：
+
+* "true" - 此存储类允许卷扩展
+* "false" - 存储类不允许卷扩展
+* "unavailable" - 未知存储类是否允许卷扩展
+
+
+
+
+| reclaimPolicy | string | True  a| 
+包含指示存储类的保留策略的云特定值的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：255
+
+
+
+
+| volumeBindingMode | string | True  a| 
+JSON 字符串，包含指示存储类的绑定模式的特定于云的值。定义的值是：
+
+* 最小长度：1
+* 最大长度：255
+
+
+
+
+| isDefault | string | False  a| 
+JSON 字符串，指示存储类是否包含默认批注。定义的值为：
+
+* "true" - 存储类包含默认批注
+
+
+
+
+| maxSnapshotCount | 数字 | False  a| 
+表示支持多少个快照的 JSON 编号。此信息附加到 NetApp 提供的存储类。
+
+
+
+| maxBackupCount | 数字 | False  a| 
+表示支持多少个备份的 JSON 编号。此信息附加到 NetApp 提供的存储类。
+
+
+
+| 价格 | string | False  a| 
+JSON 字符串，指示存储类的每单位时间的货币单位。此信息附加到 NetApp 提供的存储类。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| 货币 | string | False  a| 
+表示价格所用货币的 ISO 4217 三个字母代码的 JSON 字符串。此信息附加到 NetApp 提供的存储类。定义的值为：
+
+* 最小长度：1
+* 最大长度：255
+
+
+
+
+| 性能 | 数字 | False  a| 
+JSON 编号，以 MBps 表示性能服务级别目标 (SLO)。此信息附加到 NetApp 提供的存储类。
+
+
+
+| 复原力 | string | False  a| 
+表示存储弹性配置的 JSON 字符串。此信息附加到 NetApp 提供的存储类。定义的值是：
+
+* "regional" - 如果给定区域不可用，该卷将变得不可用
+* "multisite" - 如果给定区域不可用，卷将继续可用
+
+
+
+
+| 元数据 | link:#type_astra_metadata["type_astra_metadata"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构
+
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-storageClass",
+  "version": "1.1",
+  "id": "ad9be22b-53c7-540c-8647-76afe2878952",
+  "name": "my-storage-class",
+  "provisioner": "csi.trident.netapp.io",
+  "available": "eligible",
+  "allowVolumeExpansion": "true",
+  "reclaimPolicy": "recycle",
+  "volumeBindingMode": "immediate",
+  "isDefault": "true",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidParams | 数组[link:#invalidParams["invalidParams"]] | False  a| 
+无效查询参数列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | True  a| 
+
+
+
+| creationTimestamp | string | True  a| 
+
+
+
+| modificationTimestamp | string | True  a| 
+
+
+
+| 已创建 | string | True  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+====

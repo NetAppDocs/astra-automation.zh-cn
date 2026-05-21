@@ -1,0 +1,849 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-core-v1-packages.html 
+summary: 列出所有软件包 
+---
+= 列出所有软件包
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/packages`#
+
+返回集合中所有匹配资源的 JSON 数组。如果在请求中指定了单个字段，则项目 JSON 数组将包含按指定顺序为每个匹配资源请求的字段。
+
+
+
+== 参数
+
+[cols="5*"]
+|===
+| 名称 | Type | 在 | Required | Description 
+
+
+| account_id | string | path | True  a| 
+包含帐户资源的 ID
+
+* 示例：{{.Account}}
+
+
+
+
+| 筛选器 | string | 查询 | False  a| 
+指示在列出集合时应匹配哪些字段以返回资源。
+
+支持的运算符有：
+
+* eq - 相等
+* lt/gt - 小于/大于
+* lte/gte - 小于或等于/大于或等于
+
+
+URL 示例："filter=field%20eq%20%27value%27"
+
+OpenAPI 示例："field eq 'value'"
+
+
+
+| 订单 | string | 查询 | False  a| 
+指示列出集合时资源的排序顺序。
+
+URL 示例："orderBy=name"，"orderBy=name%20desc"
+
+OpenAPI 示例："name desc"
+
+
+
+| 包括 | string | 查询 | False  a| 
+指示列出集合时应返回哪些字段。
+
+URL 示例："include=id"、"include=id,name"
+
+OpenAPI 示例："id"
+
+* 示例：id,packageName,packageVersion,softwareType
+
+
+
+
+| limit | string | 查询 | False  a| 
+指示列出集合时要返回的最大资源数。
+
+URL 示例："limit=2"
+
+OpenAPI 示例："2"
+
+|===
+
+
+== 响应
+
+[source]
+----
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 个项 | 数组[任意一个：link:#package_1_0_get_response_body["package_1.0_get_response_body"]，数组[]] | True  a| 
+
+
+
+| 元数据 | link:#type_astra_metadata_list["type_astra_metadata_list"] | True  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-packages",
+  "version": "1.0",
+  "items": [
+    [
+      "e280ff62-be35-4f31-a31b-a210a1ad1b33",
+      "acc",
+      "22.01.0",
+      "install"
+    ],
+    [
+      "e8507dad-d33f-44b3-9c15-ec55ba6f6473",
+      "acc",
+      "22.01.1",
+      "patch"
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+
+
+| invalidParams | 数组[link:#invalidParams["invalidParams"]] | False  a| 
+无效查询参数列表
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 响应
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 错误
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| 状态 | string | True  a| 
+
+
+
+| correlationID | string | False  a| 
+
+|===
+.错误响应示例
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 定义
+
+.查看定义
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+type_astra_stateTransition
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 自 | string | True  a| 
+
+
+
+| to | 数组[string] | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+additionalDetails
+
+[role="api-collapsible-fifth-title"]
+type_astra_stateDetail
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+
+
+
+| 标题 | string | True  a| 
+
+
+
+| 详细信息 | string | True  a| 
+
+
+
+| additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+dependsOnImages
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| imagePath | string | True  a| 
+包含此 Docker 镜像路径的 JSON 字符串。它不能包含注册表的名称，只能包含从根到镜像的绝对路径。示例：/globalcicd/acc 定义的值为：
+
+* 最小长度：1
+* 最大长度：1023
+
+
+
+
+| imageName | string | True  a| 
+包含 Docker 镜像名称的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| imageTag | string | True  a| 
+表示此图像的标签/版本的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：31
+
+
+|===
+[role="api-collapsible-fifth-title"]
+镜像
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| imageName | string | True  a| 
+包含 Docker 镜像名称的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| imagePath | string | True  a| 
+包含此 Docker 镜像路径的 JSON 字符串。它不能包含注册表的名称，只能包含从根到镜像的绝对路径。示例：/globalcicd/acc 定义的值为：
+
+* 最小长度：1
+* 最大长度：1023
+
+
+
+
+| imageTag | string | True  a| 
+表示此图像的标签/版本的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：31
+
+
+
+
+| imageDigest | string | True  a| 
+表示此图像摘要的 JSON 字符串。定义的值是：
+
+* 定义的正则表达式为："^(sha256:)[0-9a-f]{64}$"
+
+
+
+
+| dependsOnImages | 数组[link:#dependsOnImages["dependsOnImages"]] | False  a| 
+JSON 对象的 JSON 数组，描述安装或升级当前映像所需的映像。
+
+|===
+[role="api-collapsible-fifth-title"]
+dependsOnComponents
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| componentName | string | True  a| 
+描述组件名称的 JSON 字符串。定义的值是：
+
+* "acc"
+* "acs"
+* “trident”
+* “kubernetes”
+
+
+
+
+| 版本 | 数组[string] | True  a| 
+JSON 字符串的 JSON 数组，定义安装当前映像所需的组件版本。
+
+|===
+[role="api-collapsible-fifth-title"]
+制品
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| artifactName | string | True  a| 
+包含文件名的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| artifactIdentifier | string | True  a| 
+包含此文件标识符的 JSON 字符串。在相同包类型的版本之间，文件名可能会更改，但标识符通常保持不变。定义的值是：
+
+* 最小长度：1
+* 最大长度：511
+
+
+
+
+| artifactPath | string | True  a| 
+JSON 字符串，包含从已知 Astra Control Center 数据存储/位置的根目录到此项目的路径。示例：/vmware/1.0/ 定义的值为：
+
+* 最小长度：1
+* 最大长度：1023
+
+
+
+
+| artifactVersion | string | False  a| 
+包含该项目版本的 JSON 字符串（如果提供）。定义的值为：
+
+* 符合 SemVer 架构
+* 最小长度：1
+* 最大长度：31
+
+
+
+
+| dependsOnComponents | 数组[link:#dependsOnComponents["dependsOnComponents"]] | False  a| 
+JSON 对象的 JSON 数组，描述安装/升级当前映像所需的已安装组件。
+
+|===
+[role="api-collapsible-fifth-title"]
+文件
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| fileName | string | True  a| 
+包含文件名的 JSON 字符串。定义的值是：
+
+* 最小长度：1
+* 最大长度：63
+
+
+
+
+| fileIdentifier | string | True  a| 
+包含此文件标识符的 JSON 字符串。在相同包类型的版本之间，文件名可能会更改，但标识符通常保持不变。定义的值是：
+
+* 最小长度：1
+* 最大长度：511
+
+
+
+
+| fileMediaType | string | True  a| 
+包含文件媒体类型的 JSON 字符串。定义的值是由 https://www.iana.org/assignments/media-types/media-types.xhtml["IANA"]定义的任何媒体类型。此外，还支持 yaml 文件的 application/x-yaml 或 application/x-yaml。
+
+* 最小长度：1
+* 最大长度：211
+
+
+
+
+| fileContents | string | True  a| 
+包含文件内容的 JSON 字符串。定义的值为：
+
+* 符合 Base64 Schema FIXME - 我们如何指定这是压缩的？什么算法等？
+
+
+|===
+[role="api-collapsible-fifth-title"]
+upgradableVersions
+
+JSON 对象包含可以升级到包版本的最低和最高版本。
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| minVersion | string | False  a| 
+JSON 字符串，描述可以升级到包版本的最低版本。定义的值为：
+
+* 符合 SemVer 架构
+
+
+
+
+| maxVersion | string | False  a| 
+JSON 字符串，描述可以升级到包版本的最高版本。定义的值为：
+
+* 符合 SemVer 架构
+
+
+|===
+[role="api-collapsible-fifth-title"]
+依赖项
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| componentName | string | True  a| 
+描述组件名称的 JSON 字符串。定义的值是：
+
+* "acc"
+* "acs"
+* “trident”
+* “kubernetes”
+
+
+
+
+| componentMinVersion | string | False  a| 
+描述该组件所需的最低版本的 JSON 字符串。定义的值为：
+
+* 符合 SemVer 架构
+
+
+
+
+| componentMaxVersion | string | False  a| 
+描述该组件所需的最高版本的 JSON 字符串。定义的值为：
+
+* 符合 SemVer 架构
+
+
+|===
+[role="api-collapsible-fifth-title"]
+类型 Astra 标签
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+
+
+
+| value | string | True  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata
+
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。
+
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | True  a| 
+
+
+
+| creationTimestamp | string | True  a| 
+
+
+
+| modificationTimestamp | string | True  a| 
+
+
+
+| 已创建 | string | True  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+package_1.0_get_response_body
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| type | string | True  a| 
+资源的媒体类型。定义的值为：
+
+* "application/astra-package"
+
+
+
+
+| version | string | True  a| 
+资源的版本。定义的值为：
+
+* "1.0"
+
+
+
+
+| id | string | True  a| 
+资源的全局唯一标识符。定义的值为：
+
+* 符合 UUIDv4 架构
+
+
+
+
+| packageName | string | True  a| 
+包含包名称的 JSON 字符串。定义的值为：
+
+* 最小长度：1
+* 最大长度：31 示例值为：
+* "acc"
+* "acs"
+* “trident”
+
+
+
+
+| packageVersion | string | True  a| 
+包含包的 SemVer 的 JSON 字符串。定义的值为：
+
+* 符合 SemVer 架构
+
+
+
+
+| packageType | string | True  a| 
+包含程序包类型的 JSON 字符串，指示这是完整的安装程序包还是修补程序。定义的值是：
+
+* "安装"
+* “补丁”
+
+
+
+
+| bundleName | 数组[string] | False  a| 
+包含软件包所在捆绑包名称的 JSON 字符串的 JSON 数组。
+
+
+
+| severityLevel | string | True  a| 
+描述此修补程序或安装的严重级别的 JSON 字符串。定义的值为：
+
+* "recommended" - 建议安装 - 默认值
+* "critical" - 强烈建议安装以解决关键错误修复和/或安全修补程序
+
+
+
+
+| packageState | string | True  a| 
+包含指示包操作状态的值的 JSON 字符串。在包验证和导入后，状态将显示为"complete"。否则，状态将显示为"incomplete"。定义的值是：
+
+* "verifying" - 正在验证包
+* "corrupt" - 包已损坏
+* "incomplete" - 包缺少元素
+* "available" - 与包关联的所有元素都可用，并且包已准备好使用
+
+
+
+
+| packageStateTransitions | 数组[link:#type_astra_stateTransition["type_astra_stateTransition"]] | True  a| 
+JSON 对象的 JSON 数组，每个表示从给定定义状态的允许状态转换集。每个 JSON 对象都包含字段"from"和"to"，其中"from"值是状态的名称，"to"值是允许的目标状态数组。定义的值为：
+
+* 符合状态转换架构
+
+
+
+
+| packageStateDetails | 数组[link:#type_astra_stateDetail["type_astra_stateDetail"]] | True  a| 
+JSON 对象的 JSON 数组，列出有关当前"状态"的其他详细信息。如果没有可用的详细信息，此数组将为空。
+
+* 最小项目数：0
+
+
+
+
+| 镜像 | 数组[link:#images["镜像"]] | False  a| 
+JSON 对象的 JSON 数组，每个对象都包含作为包一部分的 Docker 镜像。
+
+
+
+| 制品 | 数组[link:#artifacts["制品"]] | False  a| 
+描述与此包关联的其他工件（二进制文件和其他）的 JSON 对象的 JSON 数组。
+
+
+
+| 文件 | 数组[link:#files["文件"]] | False  a| 
+JSON 对象的 JSON 数组，每个表示与此包关联的非图像制品。
+
+
+
+| upgradableVersions | link:#upgradableVersions["upgradableVersions"] | False  a| 
+JSON 对象包含可以升级到包版本的最低和最高版本。
+
+
+
+| 依赖项 | 数组[link:#dependencies["依赖项"]] | False  a| 
+描述安装此包所需的给定依赖项最低版本的 JSON 对象的 JSON 数组
+
+
+
+| 元数据 | link:#type_astra_metadata["type_astra_metadata"] | True  a| 
+与资源关联的客户端和服务指定的元数据。定义的值为：
+
+* 符合 Astra 元数据架构如果在创建时未指定，则将创建没有标签的元数据对象。
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_metadata_list
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| 继续 | string | False  a| 
+
+
+
+| count | 数字 | False  a| 
+
+
+
+| labels | 数组[link:#type_astra_label["类型 Astra 标签"]] | False  a| 
+
+
+
+| creationTimestamp | string | False  a| 
+
+
+
+| modificationTimestamp | string | False  a| 
+
+
+
+| 已创建 | string | False  a| 
+
+
+
+| modifiedBy | string | False  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 名称 | Type | Required | Description 
+
+
+| name | string | True  a| 
+无效查询参数的名称
+
+
+
+| 原因 | string | True  a| 
+查询参数无效的原因
+
+|===
+====

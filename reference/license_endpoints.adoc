@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/license_endpoints.html 
+summary: 'Astra API (ACC) 许可证端点' 
+---
+= Astra API (ACC) 许可证端点
+:allow-uri-read: 
+
+
+License API 表示加载到帐户中的许可证。
