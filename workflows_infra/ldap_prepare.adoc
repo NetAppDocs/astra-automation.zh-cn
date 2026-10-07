@@ -23,6 +23,7 @@ summary: '您可以选择将Astra控制中心与轻型目录访问协议(Lightwe
 
 
 
+[[overview-of-the-implementation-process]]
 == 实施过程概述
 
 总体而言、要配置LDAP服务器以为Astra用户提供身份验证、需要执行几个步骤。
@@ -39,6 +40,7 @@ NOTE: 尽管下面介绍的步骤是按顺序执行的、但在某些情况下�
 
 
 
+[[requirements-and-limitations]]
 == 要求和限制
 
 在将Astra配置为使用LDAP进行身份验证之前、您应查看下面介绍的Astra配置要点、包括限制和配置选项。

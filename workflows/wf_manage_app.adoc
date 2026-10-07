@@ -18,18 +18,21 @@ summary: 您可以基于Astra已知的应用程序在特定命名空间中创建
 
 
 
+[[step-1-select-the-namespace]]
 == 第1步：选择命名空间
 
 执行工作流 link:../workflows/wf_list_namespaces.html["列出命名空间"] 并选择命名空间。
 
 
 
+[[step-2-select-the-cluster]]
 == 第2步：选择集群
 
 执行工作流 link:../workflows_infra/wf_list_clusters.html["列出集群"] 并选择集群。
 
 
 
+[[step-3-manage-the-application]]
 == 第3步：管理应用程序
 
 执行以下REST API调用以管理此应用程序。

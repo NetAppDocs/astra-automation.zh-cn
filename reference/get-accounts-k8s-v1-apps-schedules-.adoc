@@ -7,6 +7,7 @@ summary: 检索计划
 ---
 = 检索计划
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules/{schedule_id}`#
@@ -15,6 +16,7 @@ summary: 检索计划
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -41,6 +43,7 @@ summary: 检索计划
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -218,6 +221,7 @@ JSON 字符串，指示计划是否触发每个快照的 AppMirror 复制。仅�
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -263,6 +267,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -313,6 +318,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -358,6 +364,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -403,11 +410,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -423,6 +432,7 @@ Status: 404, Not found
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -455,6 +465,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

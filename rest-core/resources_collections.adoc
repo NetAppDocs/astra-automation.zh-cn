@@ -21,6 +21,7 @@ NOTE: 从概念上讲， REST * 资源 * 类似于使用面向对象的编程（
 
 
 
+[[attributes-of-the-astra-resources]]
 == Astra 资源的属性
 
 Astra Control REST API 符合 RESTful 设计原则。每个 Astra 资源实例都是根据定义明确的资源类型创建的。一组相同类型的资源实例称为 * 集合 * 。API 调用会对单个资源或资源集合执行操作。
@@ -58,6 +59,7 @@ NOTE: 资源标识符是用于收集的主密钥。
 
 
 
+[[common-structure-for-astra-resources]]
 == Astra 资源的通用结构
 
 每个 Astra Control 资源都使用一个通用结构进行定义。

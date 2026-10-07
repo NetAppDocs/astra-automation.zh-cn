@@ -7,6 +7,7 @@ summary: 检索应用的执行挂钩
 ---
 = 检索应用的执行挂钩
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks/{executionHook_id}`#
@@ -15,6 +16,7 @@ summary: 检索应用的执行挂钩
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -41,6 +43,7 @@ summary: 检索应用的执行挂钩
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -273,6 +276,7 @@ JSON 字符串，指示操作期间将执行挂钩的阶段。定义的值为：
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -318,6 +322,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -368,6 +373,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -413,6 +419,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -458,11 +465,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[matchingCriteria]]
 [role="api-collapsible-fifth-title"]
 matchingCriteria
 
@@ -480,6 +489,7 @@ matchingCriteria
 包含用于匹配给定匹配类型的正则表达式的 JSON 字符串。正则表达式语法： https://github.com/google/re2/wiki/Syntax[]
 
 |===
+[[type_k8s_label]]
 [role="api-collapsible-fifth-title"]
 type_k8s_label
 
@@ -495,6 +505,7 @@ type_k8s_label
 | value | string | True  a| 
 
 |===
+[[matchingContainers]]
 [role="api-collapsible-fifth-title"]
 matchingContainers
 
@@ -527,6 +538,7 @@ matchingContainers
 匹配容器的 Pod 命名空间名称的 JSON 字符串。
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -542,6 +554,7 @@ matchingContainers
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -574,6 +587,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

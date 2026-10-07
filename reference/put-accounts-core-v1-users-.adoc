@@ -7,6 +7,7 @@ summary: 修改用户
 ---
 = 修改用户
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}`#
@@ -15,6 +16,7 @@ summary: 修改用户
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -36,6 +38,7 @@ summary: 修改用户
 |===
 
 
+[[request-body]]
 == 请求正文
 
 将整个存储资源替换为提供的 JSON 请求正文，同时保留不可由用户修改的键值。
@@ -200,6 +203,7 @@ JSON 对象包含指定地址的字段集合。如果此 key 不存在，则表�
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -208,6 +212,7 @@ Status: 204, Indicates if the user resource was updated.
 ----
 
 
+[[response]]
 == 响应
 
 [source]
@@ -253,6 +258,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -303,6 +309,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -353,6 +360,7 @@ Status: 409, Conflict
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -398,6 +406,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -443,11 +452,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[postalAddress]]
 [role="api-collapsible-fifth-title"]
 postalAddress
 
@@ -511,6 +522,7 @@ JSON 对象包含指定地址的字段集合。如果此 key 不存在，则表�
 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -526,6 +538,7 @@ JSON 对象包含指定地址的字段集合。如果此 key 不存在，则表�
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -558,6 +571,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 
@@ -575,6 +589,7 @@ invalidParams
 查询参数无效的原因
 
 |===
+[[invalidFields]]
 [role="api-collapsible-fifth-title"]
 invalidFields
 

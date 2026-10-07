@@ -18,18 +18,21 @@ summary: 您可以通过从备份创建新应用程序来还原应用程序。
 
 
 
+[[step-1-select-the-app-to-restore]]
 == 第1步：选择要还原的应用程序
 
 执行工作流 link:wf_list_man_apps.html["列出应用程序"] 并选择要克隆的应用程序。用于还原应用程序的REST调用需要多个资源值。
 
 
 
+[[step-2-select-the-backup-to-use]]
 == 第2步：选择要使用的备份
 
 执行工作流 link:wf_list_backups.html["列出备份"] 并选择要使用的备份。
 
 
 
+[[step-3-restore-the-app]]
 == 第3步：还原应用程序
 
 执行以下 REST API 调用。您必须提供备份（如下所示）或快照的 ID 。

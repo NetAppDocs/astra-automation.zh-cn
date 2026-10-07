@@ -7,6 +7,7 @@ summary: 检索事件
 ---
 = 检索事件
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/events/{event_id}`#
@@ -15,6 +16,7 @@ summary: 检索事件
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -36,6 +38,7 @@ summary: 检索事件
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -336,6 +339,7 @@ JSON 字符串的 JSON 数组，每个字符串指示与事件关联的资源的
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -381,6 +385,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -431,6 +436,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -476,6 +482,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -521,11 +528,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[data]]
 [role="api-collapsible-fifth-title"]
 数据
 
@@ -549,6 +558,7 @@ JSON 字符串，指示横幅是否可关闭。定义的值为：
 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -564,6 +574,7 @@ JSON 字符串，指示横幅是否可关闭。定义的值为：
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata
 
@@ -596,6 +607,7 @@ type_astra_metadata
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

@@ -7,6 +7,7 @@ summary: 删除执行钩子覆盖资源
 ---
 = 删除执行钩子覆盖资源
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides/{executionHookOverride_id}`#
@@ -23,6 +24,7 @@ CAUTION: 此操作已弃用。
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -49,6 +51,7 @@ CAUTION: 此操作已弃用。
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -57,6 +60,7 @@ Status: 204, Indicates if the executionHookOverride resource was deleted.
 ----
 
 
+[[response]]
 == 响应
 
 [source]
@@ -102,6 +106,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -152,6 +157,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -197,6 +203,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -242,11 +249,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

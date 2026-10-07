@@ -18,6 +18,7 @@ summary: 在将 Astra 工作流用于实时部署之前，您应熟悉这些工�
 
 
 
+[[introduction]]
 == 简介
 
 _Workflow _ 是完成特定管理任务或目标所需的一个或多个步骤的序列。Astra Control 工作流中的每个步骤均为以下步骤之一：
@@ -34,6 +35,7 @@ NOTE: 一个工作流只能包含一个步骤。这些单步工作流的格式�
 
 
 
+[[workflow-categories]]
 == 工作流类别
 
 根据您的部署模式，有两大类 Astra 工作流可用。如果您使用的是 Astra 控制中心，则应先从基础架构工作流开始，然后再继续执行管理工作流。使用 Astra Control Service 时，通常可以直接转到管理工作流。
@@ -43,18 +45,21 @@ NOTE: 工作流中的cURL示例使用Astra Control Service的URL。在根据您�
 
 
 
+[[infrastructure-workflows]]
 === 基础架构工作流
 
 这些工作流用于处理 Astra 基础架构，包括凭据，存储分段和存储后端。Astra 控制中心需要使用这些控制器，但在大多数情况下，也可以与 Astra 控制服务一起使用。这些工作流侧重于建立和维护 Astra 受管集群所需的任务。
 
 
 
+[[management-workflows]]
 === 管理工作流
 
 设置受管集群后、您可以使用这些工作流。管理工作流侧重于应用程序保护和支持操作、例如备份、还原和克隆应用程序。
 
 
 
+[[common-input-parameters]]
 == 通用输入参数
 
 以下所述的输入参数对于用于说明 REST API 调用的所有 curl 示例通用。
@@ -64,6 +69,7 @@ NOTE: 由于这些输入参数是通用的要求，因此在各个工作流中�
 
 
 
+[[path-parameters]]
 === 路径参数
 
 每次 REST API 调用使用的端点路径都包括以下参数。另请参见 link:../rest-core/url_format.html["URL 格式"] 有关详细信息 ...
@@ -73,6 +79,7 @@ NOTE: 由于这些输入参数是通用的要求，因此在各个工作流中�
 
 
 
+[[request-headers]]
 === 请求标题
 
 根据 REST API 调用，您可能需要包含多个请求标头。
@@ -84,6 +91,7 @@ Authorization:: 工作流中的所有 API 调用都需要 API 令牌来标识用
 
 
 
+[[presentation-of-tokens-and-identifiers]]
 == 表示令牌和标识符
 
 在 curl 示例中使用的 API 令牌和其他 ID 值是不透明的，没有明显的含义。因此，为了提高示例的可读性，不会使用实际令牌和 ID 值。而是使用较小的保留关键字，它具有以下几个优势：
@@ -112,6 +120,7 @@ Authorization:: 工作流中的所有 API 调用都需要 API 令牌来标识用
 |===
 
 
+[[using-the-examples-with-bash]]
 == 将示例与Bash结合使用
 
 如果您直接使用工作流卷曲示例、则必须使用适合您环境的值更新其包含的变量。您可以手动编辑这些示例、也可以依靠bash shell为您执行替换、如下所述。

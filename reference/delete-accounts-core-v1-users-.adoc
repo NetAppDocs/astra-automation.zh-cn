@@ -7,6 +7,7 @@ summary: 删除用户
 ---
 = 删除用户
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-delete]#删除# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}`#
@@ -21,6 +22,7 @@ summary: 删除用户
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -42,6 +44,7 @@ summary: 删除用户
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -50,6 +53,7 @@ Status: 204, Indicates if the user resource was deleted.
 ----
 
 
+[[response]]
 == 响应
 
 [source]
@@ -95,6 +99,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -145,6 +150,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -190,6 +196,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -235,11 +242,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

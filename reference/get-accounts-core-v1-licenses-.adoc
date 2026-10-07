@@ -7,6 +7,7 @@ summary: 检索许可证
 ---
 = 检索许可证
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/licenses/{license_id}`#
@@ -15,6 +16,7 @@ summary: 检索许可证
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -36,6 +38,7 @@ summary: 检索许可证
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -233,6 +236,7 @@ Status: 200, Returns the stored License API resource in the JSON response body.
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -278,6 +282,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -328,6 +333,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -373,6 +379,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -418,11 +425,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[addons]]
 [role="api-collapsible-fifth-title"]
 插件
 
@@ -470,6 +479,7 @@ Status: 404, Not found
 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -485,6 +495,7 @@ Status: 404, Not found
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -517,6 +528,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

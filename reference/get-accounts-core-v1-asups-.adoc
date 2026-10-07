@@ -7,6 +7,7 @@ summary: 检索 ASUP 资源
 ---
 = 检索 ASUP 资源
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/asups/{asup_id}`#
@@ -15,6 +16,7 @@ summary: 检索 ASUP 资源
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -36,6 +38,7 @@ summary: 检索 ASUP 资源
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -177,6 +180,7 @@ JSON 字符串，包含指示 AutoSupport 捆绑包数据收集窗口结束时�
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -222,6 +226,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -272,6 +277,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -317,6 +323,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -362,14 +369,17 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[additionalDetails]]
 [role="api-collapsible-fifth-title"]
 additionalDetails
 
+[[type_astra_stateDetail]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateDetail
 
@@ -393,6 +403,7 @@ type_astra_stateDetail
 | additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -408,6 +419,7 @@ type_astra_stateDetail
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata
 
@@ -440,6 +452,7 @@ type_astra_metadata
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

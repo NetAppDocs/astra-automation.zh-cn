@@ -7,6 +7,7 @@ summary: 删除应用程序的 AppMirror 资源
 ---
 = 删除应用程序的 AppMirror 资源
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors/{appMirror_id}`#
@@ -24,6 +25,7 @@ summary: 删除应用程序的 AppMirror 资源
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -50,6 +52,7 @@ summary: 删除应用程序的 AppMirror 资源
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -58,6 +61,7 @@ Status: 204, Indicates if the appMirror resource was deleted.
 ----
 
 
+[[response]]
 == 响应
 
 [source]
@@ -103,6 +107,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -153,6 +158,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -198,6 +204,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -243,11 +250,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

@@ -7,6 +7,7 @@ summary: 创建新帐户
 ---
 = 创建新帐户
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts`#
@@ -15,6 +16,7 @@ summary: 创建新帐户
 
 
 
+[[request-body]]
 == 请求正文
 
 指示要创建的 Account API 资源的所需值。
@@ -71,6 +73,7 @@ summary: 创建新帐户
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -179,6 +182,7 @@ JSON 对象包含用户联系信息，用于在帐户激活时创建所有者用
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -224,6 +228,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -274,6 +279,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -324,6 +330,7 @@ Status: 409, Conflict
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -369,6 +376,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -414,11 +422,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -434,6 +444,7 @@ Status: 404, Not found
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -466,6 +477,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[postalAddress]]
 [role="api-collapsible-fifth-title"]
 postalAddress
 
@@ -529,6 +541,7 @@ postalAddress
 
 
 |===
+[[accountContact]]
 [role="api-collapsible-fifth-title"]
 accountContact
 
@@ -591,6 +604,7 @@ JSON 对象包含用户联系信息，用于在帐户激活时创建所有者用
 包含指定地址的 JSON 字符串集合的 JSON 对象。如果此键不存在，则表示未提供地址。如果此键存在，则所有六个包含的 JSON 字符串都将存在。如果不提供任何内容，字符串将为空。
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 
@@ -608,6 +622,7 @@ invalidParams
 查询参数无效的原因
 
 |===
+[[invalidFields]]
 [role="api-collapsible-fifth-title"]
 invalidFields
 

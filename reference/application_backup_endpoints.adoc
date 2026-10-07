@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) 应用备份端点'
 ---
 = Astra API (ACC) 应用备份端点
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 应用程序备份 API 使用户能够创建和查看托管应用程序的备份。

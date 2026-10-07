@@ -7,6 +7,7 @@ summary: 为应用创建新的执行挂钩
 ---
 = 为应用创建新的执行挂钩
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks`#
@@ -15,6 +16,7 @@ summary: 为应用创建新的执行挂钩
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -36,6 +38,7 @@ summary: 为应用创建新的执行挂钩
 |===
 
 
+[[request-body]]
 == 请求正文
 
 指示要创建的 Execution Hook API 资源的所需值。
@@ -187,6 +190,7 @@ JSON 字符串，指示操作期间将执行挂钩的阶段。定义的值为：
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -372,6 +376,7 @@ JSON 字符串，指示操作期间将执行挂钩的阶段。定义的值为：
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -417,6 +422,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -467,6 +473,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -512,6 +519,7 @@ Status: 409, Conflict
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -557,6 +565,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -602,11 +611,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[matchingCriteria]]
 [role="api-collapsible-fifth-title"]
 matchingCriteria
 
@@ -624,6 +635,7 @@ matchingCriteria
 包含用于匹配给定匹配类型的正则表达式的 JSON 字符串。正则表达式语法： https://github.com/google/re2/wiki/Syntax[]
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -639,6 +651,7 @@ matchingCriteria
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -671,6 +684,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[matchingCriteria]]
 [role="api-collapsible-fifth-title"]
 matchingCriteria
 
@@ -688,6 +702,7 @@ matchingCriteria
 包含用于匹配给定匹配类型的正则表达式的 JSON 字符串。正则表达式语法： https://github.com/google/re2/wiki/Syntax[]
 
 |===
+[[type_k8s_label]]
 [role="api-collapsible-fifth-title"]
 type_k8s_label
 
@@ -703,6 +718,7 @@ type_k8s_label
 | value | string | True  a| 
 
 |===
+[[matchingContainers]]
 [role="api-collapsible-fifth-title"]
 matchingContainers
 
@@ -735,6 +751,7 @@ matchingContainers
 匹配容器的 Pod 命名空间名称的 JSON 字符串。
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 
@@ -752,6 +769,7 @@ invalidParams
 查询参数无效的原因
 
 |===
+[[invalidFields]]
 [role="api-collapsible-fifth-title"]
 invalidFields
 

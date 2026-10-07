@@ -18,60 +18,70 @@ NetApp会定期更新Astra Control REST API、为您提供新功能、增强功�
 
 
 
+[[14-march-2024-24-02]]
 == 2024年3月14日(24.02)
 
 Astra Control Service和Astra Control Center均已更新为24.02版本。
 
 
 
+[[minor-bug-fixes]]
 === 小错误修复
 
 24.02版主要侧重于修复一些小错误。Asta Control API中未添加任何新资源类型。
 
 
 
+[[tech-preview-declarative-kubernetes-workflows]]
 === 技术预览：声明性Kubarnetes工作流
 
 Astra Control Center 24.02包含声明性Kubarnetes功能、可用于从本机Kubarnetes自定义资源(CR)执行数据管理。此功能尚未普遍提供。请参见 https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html["Astra 控制中心：新增功能"^] 了解更多信息(如果需要)。
 
 
 
+[[7-november-2023-23-10]]
 == 2023年11月7日(23.10)
 
 Astra Control Service和Astra Control Center均已更新为23.10版本。REST API有选择地进行了增强、以支持这些新功能。
 
 
 
+[[expanded-storage-backends]]
 === 扩展了存储后端
 
 您可以为启用备份和还原操作 `ontap-nas-economy` 存储后端。
 
 
 
+[[immutable-backups]]
 === 不可配置的备份
 
 Astra Control现在支持不可更改的只读备份、作为抵御恶意软件和其他威胁的额外安全层。
 
 
 
+[[enhanced-control-over-execution-hooks]]
 === 增强了对执行挂钩的控制
 
 从此版本开始、可以启用或禁用执行挂钩功能、以提高安全性(默认情况下、此功能处于禁用状态)。如果尚未创建用于Astra Control的执行挂钩、则需要启用执行挂钩功能才能开始创建挂钩。如果您在此版本之前创建了执行挂钩、则执行挂钩功能将保持启用状态、您可以像往常一样使用挂钩。
 
 
 
+[[27-july-2023-23-07]]
 == 2023年7月27日(23.07)
 
 此版本对REST API进行了选择性增强。Astra Control Service和Astra Control Center均已更新为23.07版本。
 
 
 
+[[clone-and-replication-operations]]
 === 克隆和复制操作
 
 现在、克隆操作仅支持实时克隆(受管应用程序的当前状态)。要从快照或备份克隆、您需要使用还原操作。此外、应用程序现在可以在同一个Kubnetes集群中的ONTAP存储后端之间进行复制。
 
 
 
+[[expanded-storage-backends]]
 === 扩展了存储后端
 
 Astra Control Center现在可以使用其他存储后端、包括：
@@ -82,108 +92,126 @@ Astra Control Center现在可以使用其他存储后端、包括：
 
 
 
+[[new-execution-hook-type]]
 === 新的执行挂钩类型
 
 Astra Control Center提供了新的执行挂钩类型*post-Failover。
 
 
 
+[[27-june-2023-23-06]]
 == 2023年6月27日(23.06)
 
 此版本包含对REST API的选择性更新。
 
 
 
+[[azure-marketplace]]
 === Azure Marketplace
 
 Azure Marketplace订阅现在按小时计费、而不是按分钟计费。另请参见 https://docs.netapp.com/us-en/astra-control-service/use/set-up-billing.html["设置计费"^]。
 
 
 
+[[restic-optimization]]
 === Restic优化
 
 您可以使用标志为restic备份启用性能优化 `useResticParallel` 在新中 `astra.datamover` 设置API资源。设置为时 `true`，的数量 `backendConnections` 将大型卷备份到Azure容器时、这种重新测试的使用量会增加。对于1 TB到4 TB的卷、将使用128个连接。对于大于4 TB的卷、将使用512个后端连接。
 
 
 
+[[30-may-2023-23-05]]
 == 2023年5月30日(23.05)
 
 此版本包含对REST API的选择性更新。
 
 
 
+[[selective-restore-operations]]
 === 选择性还原操作
 
 您可以在还原或克隆操作期间选择目标存储类。
 
 
 
+[[enable-dynamic-anf-pools-for-self-managed-clusters]]
 === 为自管理集群启用动态ANF池
 
 现在、在具有ANF存储后端的私有内部集群中备份托管应用程序时、您可以通过提供订阅ID来启用动态ANF池功能。请参见 link:../workflows_infra/wf_enable_anf_dyn_pools.html["启用动态ANF池"] 有关详细信息 ...
 
 
 
+[[25-april-2023-23-04]]
 == 2023年4月25日(23.04)
 
 此版本包含对REST API的选择性更新。
 
 
 
+[[selective-restore-operations]]
 === 选择性还原操作
 
 您可以在还原操作期间有选择地包括或排除应用程序资源。可以使用基于特定命名空间、名称、标签或GroupVersion Kind值的筛选器规则来完成此操作。
 
 
 
+[[support-for-data-only-applications]]
 === 支持纯数据应用程序
 
 对管理应用程序的支持已扩展到纯数据应用程序。
 
 
 
+[[17-january-2023-23-01]]
 == 2023年1月17日(23.01)
 
 此版本对REST API进行了少量更新。
 
 
 
+[[enhanced-execution-hooks-functionality-with-filters]]
 === 通过筛选器增强了执行挂钩功能
 
 现在、在使用执行挂钩时、您可以添加筛选器来控制挂钩要匹配的容器。如果为单个执行钩创建多个筛选器、则这些筛选器将与逻辑运算符和运算符结合使用。每个执行挂机最多可以定义10个活动筛选器。
 
 
 
+[[22-november-2022-22-11]]
 == 2022年11月22日(22.11)
 
 此版本包括对REST API的扩展和更新、以及增强的命名空间和LDAP支持。
 
 
 
+[[new-and-enhanced-astra-resources]]
 === 新增和增强的 Astra 资源
 
 添加了四种新的资源类型：* apiResource*、* ldapGroup*、* LDAP用户*和*任务*。此外、还对多个现有资源和端点进行了改进。
 
 
 
+[[monitoring-support-for-long-running-tasks]]
 === 监控对长期运行任务的支持
 
 新的任务端点可用于访问受管任务资源、并可用于显示内部长时间运行的任务的状态。
 
 
 
+[[enhanced-namespace-usage-scenarios]]
 === 增强的命名空间使用情形
 
 增加了对跨多个命名空间的应用程序以及与符合命名空间要求的资源关联的集群资源的支持。
 
 
 
+[[expanded-cloud-subscriptions]]
 === 扩展了云订阅
 
 现在、可以为每个云提供商添加多个帐户订阅。
 
 
 
+[[additional-workflows]]
 === 其他工作流
 
 添加了说明Astra Control REST API的其他工作流。请参见 link:../workflows_infra/workflows_infra_before.html["基础架构工作流"] 和 link:../workflows/workflows_before.html["管理工作流"] 有关详细信息 ...
@@ -194,24 +222,28 @@ Azure Marketplace订阅现在按小时计费、而不是按分钟计费。另请
 
 
 
+[[10-august-2022-22-08]]
 == 2022年8月10日(22.08)
 
 此版本包括对 REST API 的扩展和更新，以及增强的安全性和管理功能。
 
 
 
+[[new-and-enhanced-astra-resources]]
 === 新增和增强的 Astra 资源
 
 添加了三种新的资源类型：*证书*、*组*和*应用镜像*。此外、还更新了多个现有资源的版本。
 
 
 
+[[ldap-authentication]]
 === LDAP 身份验证
 
 您可以选择将Astra控制中心配置为与LDAP服务器集成、以便对选定的Astra用户进行身份验证。请参见 link:../workflows_infra/ldap_prepare.html["LDAP 配置"] 有关详细信息 ...
 
 
 
+[[enhanced-execution-hook]]
 === 增强的执行钩
 
 Astra Control 21.12版增加了对执行挂钩的支持。除了现有的预快照和后快照执行挂钩之外、您现在还可以在22.08版本中配置以下类型的执行挂钩：
@@ -225,6 +257,7 @@ Astra Control现在还允许将同一个脚本用于多个执行挂钩。
 
 
 
+[[application-replication-using-snapmirror]]
 === 使用SnapMirror进行应用程序复制
 
 现在、您可以使用NetApp SnapMirror技术在集群之间复制数据和应用程序更改。此增强功能可用于提高业务连续性和恢复能力。
@@ -235,36 +268,42 @@ Astra Control现在还允许将同一个脚本用于多个执行挂钩。
 
 
 
+[[26-april-2022-22-04]]
 == 2022 年 4 月 26 日（ 22.04 ）
 
 此版本包括对 REST API 的扩展和更新，以及增强的安全性和管理功能。
 
 
 
+[[new-and-enhanced-astra-resources]]
 === 新增和增强的 Astra 资源
 
 添加了两种新的资源类型： * 软件包 * 和 * 升级 * 。此外，已升级多个现有资源的版本。
 
 
 
+[[enhanced-rbac-with-namespace-granularity]]
 === 具有命名空间粒度的增强型 RBAC
 
 将角色绑定到关联用户时，您可以限制用户有权访问的命名空间。请参见 * 角色绑定 API" 参考和 link:../additional/rbac.html["RBAC 安全性"] 有关详细信息 ...
 
 
 
+[[bucket-removal]]
 === 删除存储分段
 
 您可以在不再需要某个存储分段或此存储分段无法正常运行时将其删除。
 
 
 
+[[support-for-cloud-volumes-ontap]]
 === 支持 Cloud Volumes ONTAP
 
 现在支持将 Cloud Volumes ONTAP 用作存储后端。
 
 
 
+[[additional-product-enhancements]]
 === 其他产品增强功能
 
 这两种 Astra Control 产品实施还有几项额外的增强功能，包括：
@@ -283,24 +322,28 @@ Astra Control现在还允许将同一个脚本用于多个执行挂钩。
 
 
 
+[[14-december-2021-21-12]]
 == 2021 年 12 月 14 日（ 21.12 ）
 
 此版本扩展了 REST API ，并对文档结构进行了更改，以便在未来的版本更新中更好地支持 Astra Control 的发展。
 
 
 
+[[separate-astra-automation-documentation-for-each-release-of-astra-control]]
 === 每个版本的 Astra Control 都有单独的 Astra Automation 文档
 
 每个版本的 Astra Control 都包含一个独特的 REST API ，该 API 已根据特定版本的功能进行了增强和定制。每个版本的 Astra Control REST API 的文档以及相关的 GitHub 内容存储库现在均可从其自己的专用网站上获得。主文档站点 https://docs.netapp.com/us-en/astra-automation/["Astra Control Automation"^] 始终包含最新版本的文档。请参见 link:../aa-earlier-versions.html["早期版本的 Astra Control Automation 文档"] 有关先前版本的信息。
 
 
 
+[[expansion-of-the-rest-resource-types]]
 === 扩展 REST 资源类型
 
 REST 资源类型的数量不断增加，重点是执行挂钩和存储后端。新资源包括：帐户，执行钩，钩源，执行钩覆盖，集群节点， 受管存储后端，命名空间，存储设备和存储节点。请参见 link:../endpoints/resources.html["Resources"] 有关详细信息 ...
 
 
 
+[[netapp-astra-control-python-sdk]]
 === NetApp Astra Control Python SDK
 
 NetApp Astra Control Python SDK 是一个开源软件包，可以更轻松地为您的 Astra Control 环境开发自动化代码。其核心是 Astra SDK ，其中包含一组类，用于抽象化 REST API 调用的复杂性。此外，还提供了一个工具包脚本，用于通过包装和抽象化 Python 类来执行特定管理任务。请参见 link:../python/astra_toolkits.html["NetApp Astra Control Python SDK"] 有关详细信息 ...
@@ -311,24 +354,28 @@ NetApp Astra Control Python SDK 是一个开源软件包，可以更轻松地为
 
 
 
+[[5-august-2021-21-08]]
 == 2021 年 8 月 5 日（ 21.08 ）
 
 此版本引入了新的 Astra 部署模式，并对 REST API 进行了重大扩展。
 
 
 
+[[astra-control-center-deployment-model]]
 === Astra 控制中心部署模式
 
 除了作为公有云服务提供的现有 Astra 控制服务之外，此版本还包括 Astra 控制中心内部部署模式。您可以在站点上安装 Astra 控制中心来管理本地 Kubernetes 环境。两种 Astra Control 部署模式共享同一个 REST API ，但文档中会根据需要指出一些细微的差异。
 
 
 
+[[expansion-of-the-rest-resource-types]]
 === 扩展 REST 资源类型
 
 通过 Astra Control REST API 访问的资源数量已大幅增加，许多新资源为内部 Astra Control Center 产品奠定了基础。新资源包括： ASUP ，授权，功能，许可证，设置， 订阅，存储分段，云，集群，受管集群， 存储后端和存储类。请参见 link:../endpoints/resources.html["Resources"] 有关详细信息 ...
 
 
 
+[[additional-endpoints-supporting-an-astra-deployment]]
 === 支持 Astra 部署的其他端点
 
 除了扩展的 REST 资源之外，还有其他几个新的 API 端点可用于支持 Astra Control 部署。
@@ -343,12 +390,14 @@ NetApp Astra Control Python SDK 是一个开源软件包，可以更轻松地为
 
 
 
+[[15-april-2021-21-04]]
 == 2021 年 4 月 15 日（ 21.04 ）
 
 此版本包含以下新增功能和增强功能：
 
 
 
+[[introduction-of-the-rest-api]]
 === 引入 REST API
 
 Astra Control REST API 可与 Astra Control Service 产品配合使用。它是基于 REST 技术和当前最佳实践创建的。API 为 Astra 部署的自动化奠定了基础，并具有以下功能和优势。

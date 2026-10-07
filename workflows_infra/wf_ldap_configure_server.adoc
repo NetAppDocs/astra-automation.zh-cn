@@ -18,6 +18,7 @@ summary: 您需要选择LDAP服务器并将Astra配置为使用该服务器作�
 
 
 
+[[step-1-add-a-ca-certificate]]
 == 第1步：添加CA证书
 
 执行以下REST API调用、将CA证书添加到Astra。
@@ -112,6 +113,7 @@ curl --request POST \
 ----
 
 
+[[step-2-add-the-bind-credentials]]
 == 第2步：添加绑定凭据
 
 执行以下REST API调用以添加绑定凭据。
@@ -177,6 +179,7 @@ curl --request POST \
 
 
 
+[[step-3-retrieve-the-uuid-of-the-ldap-setting]]
 == 第3步：检索LDAP设置的UUID
 
 执行以下REST API调用以检索Astra控制中心附带的`Astra.account.ldap`设置的UUID。
@@ -217,6 +220,7 @@ curl --request GET \
 ----
 
 
+[[step-4-update-the-ldap-setting]]
 == 第4步：更新LDAP设置
 
 执行以下REST API调用以更新LDAP设置并完成配置。使用上一个API调用中的`id`值作为以下URL路径中的`<setting_ID>`值。
@@ -276,6 +280,7 @@ curl --request PUT \
 
 
 
+[[step-5-retrieve-the-ldap-setting]]
 == 第5步：检索LDAP设置
 
 您可以选择执行以下REST API调用来检索LDAP设置并确认更新。

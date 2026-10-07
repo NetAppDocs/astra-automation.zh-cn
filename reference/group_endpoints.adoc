@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) 组端点'
 ---
 = Astra API (ACC) 组端点
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 Group API 提供对 Astra 组资源的访问。

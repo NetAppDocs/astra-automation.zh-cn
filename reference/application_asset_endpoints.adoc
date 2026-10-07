@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) 应用程序资产端点'
 ---
 = Astra API (ACC) 应用程序资产端点
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 Application Asset API 提供对用于管理应用程序的状态信息的内部集合的访问。

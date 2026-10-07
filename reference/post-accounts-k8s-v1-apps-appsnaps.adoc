@@ -7,6 +7,7 @@ summary: 为应用创建新的应用快照
 ---
 = 为应用创建新的应用快照
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps`#
@@ -15,6 +16,7 @@ summary: 为应用创建新的应用快照
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -36,6 +38,7 @@ summary: 为应用创建新的应用快照
 |===
 
 
+[[request-body]]
 == 请求正文
 
 指示要创建的 Application Snapshot API 资源的所需值。
@@ -103,6 +106,7 @@ summary: 为应用创建新的应用快照
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -256,6 +260,7 @@ JSON 对象的 JSON 数组，其中列出了有关"hookState"转换为"失败"�
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -301,6 +306,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -346,6 +352,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -391,6 +398,7 @@ Status: 409, Conflict
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -436,6 +444,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -481,11 +490,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -501,6 +512,7 @@ Status: 404, Not found
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata
 
@@ -533,9 +545,11 @@ type_astra_metadata
 | modifiedBy | string | False  a| 
 
 |===
+[[additionalDetails]]
 [role="api-collapsible-fifth-title"]
 additionalDetails
 
+[[type_astra_stateDetail]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateDetail
 
@@ -559,6 +573,7 @@ type_astra_stateDetail
 | additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 
@@ -576,6 +591,7 @@ invalidParams
 查询参数无效的原因
 
 |===
+[[invalidFields]]
 [role="api-collapsible-fifth-title"]
 invalidFields
 

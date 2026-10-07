@@ -7,6 +7,7 @@ summary: 删除证书
 ---
 = 删除证书
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/certificates/{certificate_id}`#
@@ -15,6 +16,7 @@ summary: 删除证书
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -36,6 +38,7 @@ summary: 删除证书
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -44,6 +47,7 @@ Status: 204, Indicates if the certificate resource was deleted.
 ----
 
 
+[[response]]
 == 响应
 
 [source]
@@ -89,6 +93,7 @@ Status: 503, Service unavailable
 ====
 
 
+[[error]]
 == 错误
 
 [source]

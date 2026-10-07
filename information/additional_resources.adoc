@@ -18,6 +18,7 @@ summary: 您可以访问其他资源来获取帮助并查找有关 NetApp 云服
 
 
 
+[[astra]]
 == Astra
 
 * https://docs.netapp.com/us-en/astra-control-center/["Astra 控制中心文档"^]
@@ -44,6 +45,7 @@ summary: 您可以访问其他资源来获取帮助并查找有关 NetApp 云服
 
 
 
+[[netapp-cloud-resources]]
 == NetApp 云资源
 
 * https://bluexp.netapp.com/["NetApp BlueXP"^]
@@ -62,6 +64,7 @@ NetApp 云解决方案的中央站点。
 
 
 
+[[rest-and-cloud-concepts]]
 == REST 和云概念
 
 * 博士 https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm["Dissertation"^] 由 Roy Fielding 主讲

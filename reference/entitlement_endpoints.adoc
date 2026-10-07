@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) 授权端点'
 ---
 = Astra API (ACC) 授权端点
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 Entitlement API 表示帐户活动的许可证和订阅启用了哪些功能或容量。

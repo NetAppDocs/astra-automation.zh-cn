@@ -7,6 +7,7 @@ summary: 删除软件包
 ---
 = 删除软件包
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/packages/{package_id}`#
@@ -15,6 +16,7 @@ summary: 删除软件包
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -36,6 +38,7 @@ summary: 删除软件包
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -44,6 +47,7 @@ Status: 204, Indicates if the package resource was deleted.
 ----
 
 
+[[response]]
 == 响应
 
 [source]
@@ -89,6 +93,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -139,6 +144,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -184,6 +190,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -229,11 +236,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

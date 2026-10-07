@@ -7,6 +7,7 @@ summary: 列出所有存储后端
 ---
 = 列出所有存储后端
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/storageBackends`#
@@ -15,6 +16,7 @@ summary: 列出所有存储后端
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -52,6 +54,7 @@ OpenAPI 示例："2"
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -101,6 +104,7 @@ Status: 200, Returns a JSON array of all matching resources in the collection. I
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -146,6 +150,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -196,6 +201,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -241,6 +247,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -286,11 +293,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[capabilities]]
 [role="api-collapsible-fifth-title"]
 功能
 
@@ -315,6 +324,7 @@ Status: 404, Not found
 JSON 字符串，指示此存储后端是否支持 s3。
 
 |===
+[[ontap]]
 [role="api-collapsible-fifth-title"]
 ONTAP
 
@@ -348,6 +358,7 @@ JSON 字符串的 JSON 数组，包含用于连接到此 ONTAP 集群的所有�
 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -363,6 +374,7 @@ JSON 字符串的 JSON 数组，包含用于连接到此 ONTAP 集群的所有�
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -395,6 +407,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[storageBackend_1_3_get_response_body]]
 [role="api-collapsible-fifth-title"]
 storageBackend_1.3_get_response_body
 
@@ -585,6 +598,7 @@ JSON 字符串的 JSON 数组，每个字符串指示保护策略不符合要求
 
 
 |===
+[[type_astra_metadata_list]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_list
 
@@ -620,6 +634,7 @@ type_astra_metadata_list
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

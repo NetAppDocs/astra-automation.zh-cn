@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) 角色绑定端点'
 ---
 = Astra API (ACC) 角色绑定端点
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 Role Binding API 描述了用户账户对或组账户对之间的关系，以及它们被授予的权限集（角色）。

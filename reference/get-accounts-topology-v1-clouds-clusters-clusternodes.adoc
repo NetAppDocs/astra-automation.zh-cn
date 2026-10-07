@@ -7,6 +7,7 @@ summary: 列出云的集群节点
 ---
 = 列出云的集群节点
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/clusterNodes`#
@@ -15,6 +16,7 @@ summary: 列出云的集群节点
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -62,6 +64,7 @@ OpenAPI 示例："2"
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -117,6 +120,7 @@ Status: 200, Returns a JSON array of all matching resources in the collection. I
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -162,6 +166,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -212,6 +217,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -257,6 +263,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -302,11 +309,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[labels]]
 [role="api-collapsible-fifth-title"]
 labels
 
@@ -334,6 +343,7 @@ labels
 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -349,6 +359,7 @@ labels
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata
 
@@ -381,6 +392,7 @@ type_astra_metadata
 | modifiedBy | string | False  a| 
 
 |===
+[[clusterNode_1_0_get_response_body]]
 [role="api-collapsible-fifth-title"]
 clusterNode_1.0_get_response_body
 
@@ -548,6 +560,7 @@ JSON 字符串包含一个值，该值指示分配给该节点的内存量。定
 
 
 |===
+[[type_astra_metadata_list]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_list
 
@@ -583,6 +596,7 @@ type_astra_metadata_list
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

@@ -7,6 +7,7 @@ summary: 检索账户的所有指标
 ---
 = 检索账户的所有指标
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/metrics`#
@@ -15,6 +16,7 @@ summary: 检索账户的所有指标
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -31,6 +33,7 @@ summary: 检索账户的所有指标
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -39,6 +42,7 @@ Status: 200, Returns a OpenMetrics text document containing all metrics for the 
 ----
 
 
+[[response]]
 == 响应
 
 [source]
@@ -84,6 +88,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]

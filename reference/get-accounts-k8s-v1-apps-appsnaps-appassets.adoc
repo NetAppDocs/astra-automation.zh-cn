@@ -7,6 +7,7 @@ summary: 列出应用程序快照的应用程序资产
 ---
 = 列出应用程序快照的应用程序资产
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}/appAssets`#
@@ -15,6 +16,7 @@ summary: 列出应用程序快照的应用程序资产
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -62,6 +64,7 @@ OpenAPI 示例："2"
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -117,6 +120,7 @@ Status: 200, Returns a JSON array of all matching resources in the collection. I
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -162,6 +166,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -207,6 +212,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -252,6 +258,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -297,11 +304,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[GVK]]
 [role="api-collapsible-fifth-title"]
 GVK
 
@@ -338,11 +347,13 @@ GVK
 
 
 |===
+[[type_json]]
 [role="api-collapsible-fifth-title"]
 type_json
 
 包含 Kubernetes 资源定义的全部内容的 JSON 对象。
 
+[[labels]]
 [role="api-collapsible-fifth-title"]
 labels
 
@@ -370,6 +381,7 @@ labels
 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -385,6 +397,7 @@ labels
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata
 
@@ -417,6 +430,7 @@ type_astra_metadata
 | modifiedBy | string | False  a| 
 
 |===
+[[appAsset_1_1_get_response_body]]
 [role="api-collapsible-fifth-title"]
 appAsset_1.1_get_response_body
 
@@ -518,6 +532,7 @@ JSON 对象的 JSON 数组，每个都包含与资产关联的 Kubernetes 标签
 
 
 |===
+[[type_astra_metadata_list]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_list
 
@@ -553,6 +568,7 @@ type_astra_metadata_list
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

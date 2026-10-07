@@ -7,6 +7,7 @@ summary: 修改设置
 ---
 = 修改设置
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/settings/{setting_id}`#
@@ -15,6 +16,7 @@ summary: 修改设置
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -36,6 +38,7 @@ summary: 修改设置
 |===
 
 
+[[request-body]]
 == 请求正文
 
 将整个存储资源替换为提供的 JSON 请求正文，同时保留不可由用户修改的键值。
@@ -140,6 +143,7 @@ JSON 字符串的 JSON 数组，每个字符串指示未成功应用设置的原
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -148,6 +152,7 @@ Status: 204, Indicates if the setting resource was updated.
 ----
 
 
+[[response]]
 == 响应
 
 [source]
@@ -193,6 +198,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -243,6 +249,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -293,6 +300,7 @@ Status: 409, Conflict
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -338,6 +346,7 @@ Status: 403, Forbidden
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -383,6 +392,7 @@ Status: 503, Service unavailable
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -428,24 +438,29 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[type_json]]
 [role="api-collapsible-fifth-title"]
 type_json
 
 包含构成此设置的当前配置的键和值的 JSON 对象。此对象的内容必须符合 configSchema 字段中包含的 JSON Schema。默认值由 configmap 提供。用户更改默认值后，它们将不会被覆盖。
 
+[[type_json]]
 [role="api-collapsible-fifth-title"]
 type_json
 
 JSON 对象包含组成此设置的请求配置的键和值。此对象的内容必须符合 configSchema 字段中包含的 JSON 架构。该对象在指定之前不存在。指定后，这将触发功能服务通知相应服务请求可以应用所需配置。然后，相应的服务可以执行验证并将所需配置应用于当前配置。
 
+[[properties]]
 [role="api-collapsible-fifth-title"]
 属性
 
+[[type_json_schema]]
 [role="api-collapsible-fifth-title"]
 类型_json_schema
 
@@ -475,6 +490,7 @@ JSON 对象包含组成此设置的请求配置的键和值。此对象的内容
 | 必填 | 数组[string] | True  a| 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -490,6 +506,7 @@ JSON 对象包含组成此设置的请求配置的键和值。此对象的内容
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -522,6 +539,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 
@@ -539,6 +557,7 @@ invalidParams
 查询参数无效的原因
 
 |===
+[[invalidFields]]
 [role="api-collapsible-fifth-title"]
 invalidFields
 

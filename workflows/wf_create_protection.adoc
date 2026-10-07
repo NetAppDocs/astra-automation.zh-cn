@@ -18,12 +18,14 @@ summary: 您可以根据一个或多个计划创建数据保护策略。
 
 
 
+[[step-1-select-the-app]]
 == 第1步：选择应用程序
 
 执行工作流 link:../workflows/wf_list_man_apps.html["列出应用程序"] 并选择所需的应用程序。
 
 
 
+[[step-2-create-the-protection]]
 == 第2步：创建保护
 
 执行以下REST API调用、为特定应用程序创建保护策略。

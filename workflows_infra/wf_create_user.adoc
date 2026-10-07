@@ -18,12 +18,14 @@ summary: 您可以使用特定凭据和预定义角色创建用户。您也可�
 
 
 
+[[step-1-select-a-user-name]]
 == 第1步：选择用户名
 
 执行工作流 link:../workflows_infra/wf_list_users.html["列出用户"] 并选择当前未使用的可用名称。
 
 
 
+[[step-2-create-the-user]]
 == 第2步：创建用户
 
 执行以下REST API调用以创建用户。成功完成调用后、新用户将无法使用。
@@ -96,12 +98,14 @@ curl --request POST \
 ----
 
 
+[[step-3-optionally-select-the-allowed-namespaces]]
 == 第3步：(可选)选择允许的名称空格
 
 执行工作流 link:../workflows/wf_list_namespaces.html["列出命名空间"] 并选择要限制访问的命名空间。
 
 
 
+[[step-4-bind-the-user-to-a-role]]
 == 第4步：将用户绑定到角色
 
 执行以下REST API调用以将用户绑定到角色。以下示例对命名空间访问没有任何限制。请参见 link:../additional/rbac.html#enhanced-rbac-with-namespace-granularity["具有命名空间粒度的增强型 RBAC"] 有关详细信息 ...
@@ -140,6 +144,7 @@ curl --request POST \
 ----
 
 
+[[step-5-create-a-credential]]
 == 第5步：创建凭据
 
 执行以下REST API调用以创建凭据并将其与用户关联。此示例使用作为base64值提供的密码。。 `name` 属性应包含上一步返回的用户的ID。输入属性 `change` 还必须在base64中进行编码、并确定用户是否必须在首次登录时更改其密码 (`true` 或 `false`）。

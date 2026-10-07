@@ -7,6 +7,7 @@ summary: 列出用户的未读通知
 ---
 = 列出用户的未读通知
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/unreadNotifications`#
@@ -15,6 +16,7 @@ summary: 列出用户的未读通知
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -118,6 +120,7 @@ OpenAPI 示例："+++<continue token="" from="" collection="" metadata="">+++</c
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -165,6 +168,7 @@ Status: 200, Returns a JSON array of all matching resources in the collection. I
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -210,6 +214,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -260,6 +265,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -305,6 +311,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -350,11 +357,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -370,6 +379,7 @@ Status: 404, Not found
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata
 
@@ -402,6 +412,7 @@ type_astra_metadata
 | modifiedBy | string | False  a| 
 
 |===
+[[unreadNotification_1_0_get_response_body]]
 [role="api-collapsible-fifth-title"]
 unreadNotification_1.0_get_response_body
 
@@ -466,6 +477,7 @@ unreadNotification_1.0_get_response_body
 
 
 |===
+[[type_astra_metadata_list]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_list
 
@@ -501,6 +513,7 @@ type_astra_metadata_list
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

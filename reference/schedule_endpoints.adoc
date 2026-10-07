@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) 计划端点'
 ---
 = Astra API (ACC) 计划端点
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 Schedule API 允许定义各种计划的数据保护操作。

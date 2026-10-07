@@ -7,6 +7,7 @@ summary: 列出受管集群的卷
 ---
 = 列出受管集群的卷
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/volumes`#
@@ -15,6 +16,7 @@ summary: 列出受管集群的卷
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -57,6 +59,7 @@ OpenAPI 示例："2"
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -108,6 +111,7 @@ Status: 200, Returns a JSON array of all matching resources in the collection. I
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -153,6 +157,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -203,6 +208,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -248,6 +254,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -293,14 +300,17 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[additionalDetails]]
 [role="api-collapsible-fifth-title"]
 additionalDetails
 
+[[type_astra_stateDetail]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateDetail
 
@@ -324,6 +334,7 @@ type_astra_stateDetail
 | additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -339,6 +350,7 @@ type_astra_stateDetail
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata
 
@@ -371,6 +383,7 @@ type_astra_metadata
 | modifiedBy | string | False  a| 
 
 |===
+[[volume_1_2_get_response_body]]
 [role="api-collapsible-fifth-title"]
 volume_1.2_get_response_body
 
@@ -557,6 +570,7 @@ JSON 对象的 JSON 数组，列出有关当前运行状况的其他详细信息
 
 
 |===
+[[type_astra_metadata_list]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_list
 
@@ -592,6 +606,7 @@ type_astra_metadata_list
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

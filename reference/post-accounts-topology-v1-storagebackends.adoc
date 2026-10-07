@@ -7,6 +7,7 @@ summary: 创建新存储后端
 ---
 = 创建新存储后端
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/storageBackends`#
@@ -15,6 +16,7 @@ summary: 创建新存储后端
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -31,6 +33,7 @@ summary: 创建新存储后端
 |===
 
 
+[[request-body]]
 == 请求正文
 
 指示要创建的 Storage Backend API 资源的所需值。
@@ -119,6 +122,7 @@ JSON 字符串，其中包含指示所表示的存储后端类型的值。定义
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -358,6 +362,7 @@ JSON 字符串的 JSON 数组，每个字符串指示保护策略不符合要求
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -403,6 +408,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -453,6 +459,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -503,6 +510,7 @@ Status: 409, Conflict
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -548,6 +556,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -593,11 +602,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -613,6 +624,7 @@ Status: 404, Not found
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -645,6 +657,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[capabilities]]
 [role="api-collapsible-fifth-title"]
 功能
 
@@ -669,6 +682,7 @@ type_astra_metadata_update
 JSON 字符串，指示此存储后端是否支持 s3。
 
 |===
+[[ontap]]
 [role="api-collapsible-fifth-title"]
 ONTAP
 
@@ -702,6 +716,7 @@ JSON 字符串的 JSON 数组，包含用于连接到此 ONTAP 集群的所有�
 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 
@@ -719,6 +734,7 @@ invalidParams
 查询参数无效的原因
 
 |===
+[[invalidFields]]
 [role="api-collapsible-fifth-title"]
 invalidFields
 

@@ -18,12 +18,14 @@ summary: 您可以为特定应用程序创建备份、然后使用此备份还�
 
 
 
+[[before-you-begin]]
 == 开始之前
 
 您必须具有要备份的应用程序的ID。如果需要，您可以使用此工作流 link:wf_list_man_apps.html["列出应用程序"] 以查找应用程序。
 
 
 
+[[create-a-backup]]
 == 创建备份
 
 执行以下 REST API 调用。

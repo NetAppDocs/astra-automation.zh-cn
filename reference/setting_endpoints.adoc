@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) 设置端点'
 ---
 = Astra API (ACC) 设置端点
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 帐户设置是对 Astra 帐户中已知功能很重要的键/值对的集合。Setting API 提供对有关帐户设置的重要信息的访问权限。

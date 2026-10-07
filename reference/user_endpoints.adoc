@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) 用户端点'
 ---
 = Astra API (ACC) 用户端点
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 User API 表示能够与系统交互的用户。

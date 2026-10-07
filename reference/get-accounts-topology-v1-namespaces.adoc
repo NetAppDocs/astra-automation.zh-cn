@@ -7,6 +7,7 @@ summary: 列出所有命名空间
 ---
 = 列出所有命名空间
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/namespaces`#
@@ -15,6 +16,7 @@ summary: 列出所有命名空间
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -68,6 +70,7 @@ OpenAPI 示例："field eq 'value'"
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -127,6 +130,7 @@ Status: 200, Returns a JSON array of all matching resources in the collection. I
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -172,6 +176,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -222,6 +227,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -267,6 +273,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -312,20 +319,25 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[targetSchema]]
 [role="api-collapsible-fifth-title"]
 targetSchema
 
+[[accept-post]]
 [role="api-collapsible-fifth-title"]
 接受发布
 
+[[accept-put]]
 [role="api-collapsible-fifth-title"]
 接受-put
 
+[[hints]]
 [role="api-collapsible-fifth-title"]
 提示
 
@@ -353,6 +365,7 @@ targetSchema
 | 接受-put | link:#accept-put["接受-put"] | False  a| 
 
 |===
+[[type_astra_link]]
 [role="api-collapsible-fifth-title"]
 type_astra_link
 
@@ -384,9 +397,11 @@ type_astra_link
 | 提示 | link:#hints["提示"] | False  a| 
 
 |===
+[[additionalDetails]]
 [role="api-collapsible-fifth-title"]
 additionalDetails
 
+[[type_astra_stateDetail]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateDetail
 
@@ -410,6 +425,7 @@ type_astra_stateDetail
 | additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -425,6 +441,7 @@ type_astra_stateDetail
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata
 
@@ -457,6 +474,7 @@ type_astra_metadata
 | modifiedBy | string | False  a| 
 
 |===
+[[namespace_1_2_get_response_body]]
 [role="api-collapsible-fifth-title"]
 namespace_1.2_get_response_body
 
@@ -562,6 +580,7 @@ JSON 对象的 JSON 数组，每个都包含与命名空间关联的 Kubernetes 
 
 
 |===
+[[type_astra_metadata_list]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_list
 
@@ -597,6 +616,7 @@ type_astra_metadata_list
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

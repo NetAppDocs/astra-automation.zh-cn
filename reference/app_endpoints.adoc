@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) 应用端点'
 ---
 = Astra API (ACC) 应用端点
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 App API 代表 Kubernetes 应用程序，包括那些未由 Astra 管理的应用程序。

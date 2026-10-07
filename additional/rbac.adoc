@@ -18,6 +18,7 @@ Astra REST API支持基于角色的访问控制(Role-Based Access Control、RBAC
 
 
 
+[[astra-roles]]
 == Astra 角色
 
 每个 Astra 用户都分配有一个角色，用于确定可执行的操作。这些角色按层次结构进行排列，如下表所述。
@@ -40,6 +41,7 @@ Astra REST API支持基于角色的访问控制(Role-Based Access Control、RBAC
 |===
 
 
+[[enhanced-rbac-with-namespace-granularity]]
 == 具有命名空间粒度的增强型 RBAC
 
 

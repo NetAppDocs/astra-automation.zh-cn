@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) LDAP 组端点'
 ---
 = Astra API (ACC) LDAP 组端点
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 LDAP 组 API 提供对配置的 LDAP 服务器内 LDAP 组的只读访问。

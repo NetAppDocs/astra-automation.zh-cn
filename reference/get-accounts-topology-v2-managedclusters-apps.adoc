@@ -7,6 +7,7 @@ summary: 列出受管集群的应用
 ---
 = 列出受管集群的应用
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps`#
@@ -15,6 +16,7 @@ summary: 列出受管集群的应用
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -73,6 +75,7 @@ OpenAPI 示例："field eq 'value'"
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -122,6 +125,7 @@ Status: 200, Returns a JSON array of all matching resources in the collection. I
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -167,6 +171,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -217,6 +222,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -262,6 +268,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -307,20 +314,25 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[targetSchema]]
 [role="api-collapsible-fifth-title"]
 targetSchema
 
+[[accept-post]]
 [role="api-collapsible-fifth-title"]
 接受发布
 
+[[accept-put]]
 [role="api-collapsible-fifth-title"]
 接受-put
 
+[[hints]]
 [role="api-collapsible-fifth-title"]
 提示
 
@@ -348,6 +360,7 @@ targetSchema
 | 接受-put | link:#accept-put["接受-put"] | False  a| 
 
 |===
+[[type_astra_link]]
 [role="api-collapsible-fifth-title"]
 type_astra_link
 
@@ -379,6 +392,7 @@ type_astra_link
 | 提示 | link:#hints["提示"] | False  a| 
 
 |===
+[[GVK]]
 [role="api-collapsible-fifth-title"]
 GVK
 
@@ -415,6 +429,7 @@ GVK
 
 
 |===
+[[clusterScopedResources]]
 [role="api-collapsible-fifth-title"]
 clusterScopedResources
 
@@ -438,6 +453,7 @@ JSON 字符串的 JSON 数组，表示集群内集群范围 GroupVersionKinds (G
 
 
 |===
+[[namespaceScopedResources]]
 [role="api-collapsible-fifth-title"]
 namespaceScopedResources
 
@@ -469,6 +485,7 @@ JSON 字符串的 JSON 数组，表示命名空间中的标签选择器。如果
 
 
 |===
+[[type_astra_stateTransition]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateTransition
 
@@ -484,9 +501,11 @@ type_astra_stateTransition
 | to | 数组[string] | True  a| 
 
 |===
+[[additionalDetails]]
 [role="api-collapsible-fifth-title"]
 additionalDetails
 
+[[type_astra_stateDetail]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateDetail
 
@@ -510,6 +529,7 @@ type_astra_stateDetail
 | additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
 
 |===
+[[namespaceMapping]]
 [role="api-collapsible-fifth-title"]
 namespaceMapping
 
@@ -537,6 +557,7 @@ namespaceMapping
 
 
 |===
+[[storageClassMapping]]
 [role="api-collapsible-fifth-title"]
 storageClassMapping
 
@@ -565,6 +586,7 @@ storageClassMapping
 
 
 |===
+[[GVKN]]
 [role="api-collapsible-fifth-title"]
 GVKN
 
@@ -624,6 +646,7 @@ JSON 字符串的 JSON 数组，描述要包括或排除在选择性恢复中的
 
 
 |===
+[[restoreFilter]]
 [role="api-collapsible-fifth-title"]
 restoreFilter
 
@@ -643,6 +666,7 @@ JSON 对象包含描述选择性还原操作中包括或排除的资源的筛选
 JSON 对象的 JSON 数组，用于描述在选择性还原期间要筛选的资源。如果所有指定的筛选器字段都匹配相应的资源字段，则资源将匹配单个 GVKN 筛选器元素。作为数组的筛选器字段（例如，命名空间和名称）如果其任何元素与相应的资源字段匹配，则匹配。labelSelectors 字段要求所有选择器匹配。与 GVKN 筛选器对象数组中的任何筛选器匹配的资源将根据 resourceSelectionCriteria 值包括在还原中或从还原中排除。指定空的 GVKN 对象会导致验证错误。
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -658,6 +682,7 @@ JSON 对象的 JSON 数组，用于描述在选择性还原期间要筛选的资
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -690,6 +715,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[app_2_2_get_response_body]]
 [role="api-collapsible-fifth-title"]
 app_2.2_get_response_body
 
@@ -923,6 +949,7 @@ JSON 对象包含描述选择性还原操作中包括或排除的资源的筛选
 
 
 |===
+[[type_astra_metadata_list]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_list
 
@@ -958,6 +985,7 @@ type_astra_metadata_list
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

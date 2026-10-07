@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) 包端点'
 ---
 = Astra API (ACC) 包端点
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 Package API 表示可安装的软件包。

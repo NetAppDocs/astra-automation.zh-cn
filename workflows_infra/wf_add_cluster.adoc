@@ -21,12 +21,14 @@ NOTE: 使用主要云提供商之一(AKS、EKS、GKE）提供的Kubernetes服务
 
 
 
+[[step-1-obtain-the-kubeconfig-file]]
 == 第1步：获取kubeconfig
 
 您需要从Kubernetes管理员或服务处获取一份* kubconfig*文件副本。
 
 
 
+[[step-2-prepare-the-kubeconfig-file]]
 == 第2步：准备kubeconfig
 
 在使用* kubeconfig*文件之前、应执行以下操作：
@@ -48,6 +50,7 @@ NOTE: 使用主要云提供商之一(AKS、EKS、GKE）提供的Kubernetes服务
 
 
 
+[[step-3-select-the-cloud]]
 == 第3步：选择云
 
 执行工作流 link:../workflows_infra/wf_list_clouds.html["列出云"] 并选择要添加集群的云。
@@ -57,6 +60,7 @@ NOTE: 您只能选择*私有*云。
 
 
 
+[[step-4-create-a-credential]]
 == 第4步：创建凭据
 
 执行以下REST API调用以使用kubeconfig文件创建凭据。
@@ -97,6 +101,7 @@ curl --request POST \
 ----
 
 
+[[step-5-add-the-cluster]]
 == 第5步：添加集群
 
 执行以下REST API调用以将集群添加到云。的值 `credentialID` 输入字段是从上一步中的REST API调用获取的。

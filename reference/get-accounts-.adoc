@@ -7,6 +7,7 @@ summary: 检索账户
 ---
 = 检索账户
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}`#
@@ -15,6 +16,7 @@ summary: 检索账户
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -31,6 +33,7 @@ summary: 检索账户
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -139,6 +142,7 @@ JSON 对象包含用户联系信息，用于在帐户激活时创建所有者用
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -184,6 +188,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -234,6 +239,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -279,6 +285,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -324,11 +331,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[postalAddress]]
 [role="api-collapsible-fifth-title"]
 postalAddress
 
@@ -392,6 +401,7 @@ postalAddress
 
 
 |===
+[[accountContact]]
 [role="api-collapsible-fifth-title"]
 accountContact
 
@@ -454,6 +464,7 @@ JSON 对象包含用户联系信息，用于在帐户激活时创建所有者用
 包含指定地址的 JSON 字符串集合的 JSON 对象。如果此键不存在，则表示未提供地址。如果此键存在，则所有六个包含的 JSON 字符串都将存在。如果不提供任何内容，字符串将为空。
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -469,6 +480,7 @@ JSON 对象包含用户联系信息，用于在帐户激活时创建所有者用
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -501,6 +513,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

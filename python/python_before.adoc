@@ -21,6 +21,7 @@ NOTE: 除了使用 Python 直接访问 Astra Control REST API 之外， NetApp �
 
 
 
+[[prepare-the-environment]]
 == 准备环境
 
 下面介绍了运行 Python 脚本的基本配置要求。
@@ -39,6 +40,7 @@ NOTE: 除了使用 Python 直接访问 Astra Control REST API 之外， NetApp �
 
 
 
+[[create-the-json-input-files]]
 == 创建 JSON 输入文件
 
 Python 脚本依赖于 JSON 输入文件中包含的配置信息。下面提供了示例文件。

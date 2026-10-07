@@ -18,12 +18,14 @@ summary: 您可以管理Kubernetes集群、以便执行数据保护操作。
 
 
 
+[[step-1-select-the-cluster-to-manage]]
 == 第1步：选择要管理的集群
 
 执行工作流 link:../workflows_infra/wf_list_clusters.html["列出集群"] 并选择所需的集群。属性 `managedState` 的集群必须为 `unmanaged`。
 
 
 
+[[step-2-optionally-select-the-storage-class]]
 == 第2步：(可选)选择存储类
 
 也可以执行工作流 link:../workflows_infra/wf_list_storage_classes.html["列出存储类"] 并选择所需的存储类。
@@ -33,6 +35,7 @@ NOTE: 如果在管理集群的调用中未提供存储类、则会使用默认�
 
 
 
+[[step-3-manage-the-cluster]]
 == 第3步：管理集群
 
 执行以下REST API调用以管理集群。

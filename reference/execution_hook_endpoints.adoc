@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) 执行挂钩端点'
 ---
 = Astra API (ACC) 执行挂钩端点
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 Execution Hook API 可实现对执行挂钩的简单管理。执行挂钩包含其他配置和对挂钩源资源的引用。

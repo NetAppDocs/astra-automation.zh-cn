@@ -7,6 +7,7 @@ summary: 列出云的集群
 ---
 = 列出云的集群
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters`#
@@ -15,6 +16,7 @@ summary: 列出云的集群
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -73,6 +75,7 @@ OpenAPI 示例："field eq 'value'"
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -122,6 +125,7 @@ Status: 200, Returns a JSON array of all matching resources in the collection. I
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -167,6 +171,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -217,6 +222,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -262,6 +268,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -307,14 +314,17 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[additionalDetails]]
 [role="api-collapsible-fifth-title"]
 additionalDetails
 
+[[type_astra_stateDetail]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateDetail
 
@@ -338,6 +348,7 @@ type_astra_stateDetail
 | additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -353,6 +364,7 @@ type_astra_stateDetail
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -385,6 +397,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[cluster_1_7_get_response_body]]
 [role="api-collapsible-fifth-title"]
 cluster_1.7_get_response_body
 
@@ -717,6 +730,7 @@ JSON 字符串包含一个值，该值指示包含集群的 kubeconfig 文件的
 
 
 |===
+[[type_astra_metadata_list]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_list
 
@@ -752,6 +766,7 @@ type_astra_metadata_list
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

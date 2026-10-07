@@ -7,6 +7,7 @@ summary: 修改升级
 ---
 = 修改升级
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/upgrades/{upgrade_id}`#
@@ -20,6 +21,7 @@ summary: 修改升级
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -41,6 +43,7 @@ summary: 修改升级
 |===
 
 
+[[request-body]]
 == 请求正文
 
 将整个存储资源替换为提供的 JSON 请求正文，同时保留不可由用户修改的键值。
@@ -184,6 +187,7 @@ JSON 对象的 JSON 数组，列出有关当前"状态"的其他详细信息。�
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -192,6 +196,7 @@ Status: 204, Indicates if the upgrade resource was updated.
 ----
 
 
+[[response]]
 == 响应
 
 [source]
@@ -237,6 +242,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -287,6 +293,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -337,6 +344,7 @@ Status: 409, Conflict
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -382,6 +390,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -427,14 +436,17 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[additionalDetails]]
 [role="api-collapsible-fifth-title"]
 additionalDetails
 
+[[type_astra_stateDetail]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateDetail
 
@@ -458,6 +470,7 @@ type_astra_stateDetail
 | additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -473,6 +486,7 @@ type_astra_stateDetail
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -505,6 +519,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 
@@ -522,6 +537,7 @@ invalidParams
 查询参数无效的原因
 
 |===
+[[invalidFields]]
 [role="api-collapsible-fifth-title"]
 invalidFields
 

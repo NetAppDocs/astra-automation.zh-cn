@@ -7,6 +7,7 @@ summary: 列出所有 LDAP 用户
 ---
 = 列出所有 LDAP 用户
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/ldapUsers`#
@@ -15,6 +16,7 @@ summary: 列出所有 LDAP 用户
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -77,6 +79,7 @@ OpenAPI 示例："+++<continue token="" from="" collection="" metadata="">+++</c
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -126,6 +129,7 @@ Status: 200, Returns a JSON array of JSON objects containing the results of the 
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -171,6 +175,7 @@ Status: 403, Forbidden
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -216,6 +221,7 @@ Status: 406, Not acceptable
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -261,6 +267,7 @@ Status: 500, Internal server error
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -311,11 +318,13 @@ Status: 400, Bad request
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -331,6 +340,7 @@ Status: 400, Bad request
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata
 
@@ -363,6 +373,7 @@ type_astra_metadata
 | modifiedBy | string | False  a| 
 
 |===
+[[ldapUser_1_0_get_response_body]]
 [role="api-collapsible-fifth-title"]
 ldapUser_1.0_get_response_body
 
@@ -446,6 +457,7 @@ ldapUser_1.0_get_response_body
 
 
 |===
+[[type_astra_metadata_list]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_list
 
@@ -481,6 +493,7 @@ type_astra_metadata_list
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

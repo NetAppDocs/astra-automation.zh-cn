@@ -7,6 +7,7 @@ summary: 创建新存储桶
 ---
 = 创建新存储桶
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/buckets`#
@@ -15,6 +16,7 @@ summary: 创建新存储桶
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -31,6 +33,7 @@ summary: 创建新存储桶
 |===
 
 
+[[request-body]]
 == 请求正文
 
 指示要创建的 Bucket API 资源的所需值。
@@ -121,6 +124,7 @@ JSON 字符串，表示可用于访问存储桶的存储桶协议。定义的值
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -267,6 +271,7 @@ JSON 字符串，表示可用于访问存储桶的存储桶协议。定义的值
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -312,6 +317,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -362,6 +368,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -412,6 +419,7 @@ Status: 409, Conflict
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -457,6 +465,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -502,11 +511,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[s3]]
 [role="api-collapsible-fifth-title"]
 s3
 
@@ -534,6 +545,7 @@ s3
 
 
 |===
+[[gcp]]
 [role="api-collapsible-fifth-title"]
 gcp
 
@@ -552,6 +564,7 @@ gcp
 
 
 |===
+[[azure]]
 [role="api-collapsible-fifth-title"]
 azure
 
@@ -579,6 +592,7 @@ azure
 
 
 |===
+[[bucketParameters]]
 [role="api-collapsible-fifth-title"]
 bucketParameters
 
@@ -603,6 +617,7 @@ bucketParameters
 提供 Azure 协议参数的 JSON 对象。
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -618,6 +633,7 @@ bucketParameters
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -650,9 +666,11 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[additionalDetails]]
 [role="api-collapsible-fifth-title"]
 additionalDetails
 
+[[type_astra_stateDetail]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateDetail
 
@@ -676,6 +694,7 @@ type_astra_stateDetail
 | additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 
@@ -693,6 +712,7 @@ invalidParams
 查询参数无效的原因
 
 |===
+[[invalidFields]]
 [role="api-collapsible-fifth-title"]
 invalidFields
 

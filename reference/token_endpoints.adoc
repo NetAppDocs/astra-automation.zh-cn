@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) 令牌端点'
 ---
 = Astra API (ACC) 令牌端点
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 Token API 使用户能够创建和管理 API 访问令牌。

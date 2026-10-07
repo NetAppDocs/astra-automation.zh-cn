@@ -27,12 +27,14 @@ NOTE: LDAP凭据以用户名作为电子邮件地址以及关联的LDAP密码的
 
 
 
+[[add-and-bind-an-individual-user]]
 == 添加并绑定单个用户
 
 您可以为每个Astra用户分配一个角色、该角色将在LDAP身份验证后使用。如果用户数量较少、并且每个用户的管理特征可能不同、则这种做法是合适的。
 
 
 
+[[step-1-add-a-user]]
 === 第1步：添加用户
 
 执行以下REST API调用、将用户添加到Astra并指示LDAP是身份验证提供程序。
@@ -123,6 +125,7 @@ curl --request POST \
 ----
 
 
+[[step-2-add-a-role-binding-for-the-user]]
 === 第2步：为用户添加角色绑定
 
 执行以下REST API调用以将用户绑定到特定角色。您需要具有上一步中创建的用户UUID。
@@ -193,12 +196,14 @@ curl --request POST \
 
 
 
+[[add-and-bind-a-group]]
 == 添加和绑定组
 
 您可以为Astra组分配一个角色、该角色将在LDAP身份验证后使用。如果用户数量很多、并且每个用户都可能具有类似的管理特征、则这种做法是合适的。
 
 
 
+[[step-1-add-a-group]]
 === 第1步：添加组
 
 执行以下REST API调用、将组添加到Astra并指示LDAP是身份验证提供程序。
@@ -265,6 +270,7 @@ curl --request POST \
 ----
 
 
+[[step-2-add-a-role-binding-for-the-group]]
 === 第2步：为组添加角色绑定
 
 执行以下REST API调用以将组绑定到特定角色。您需要具有上一步中创建的组的UUID。在LDAP执行身份验证后、属于组成员的用户将能够登录到Astra。

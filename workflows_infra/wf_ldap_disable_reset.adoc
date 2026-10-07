@@ -24,6 +24,7 @@ summary: 您可以根据需要为Astra控制中心部署执行两项可选的相
 
 
 
+[[disable-ldap-authentication]]
 == 禁用LDAP身份验证
 
 您可以执行以下REST API调用来全局禁用特定Astra部署的LDAP身份验证。此调用会更新`Astra.account.ldap`设置、并且`isenabled`值设置为`false`。
@@ -71,6 +72,7 @@ curl --request PUT \
 
 
 
+[[reset-the-ldap-authentication-configuration]]
 == 重置LDAP身份验证配置
 
 您可以执行以下REST API调用以断开Astra与LDAP服务器的连接、并在Astra中重置LDAP配置。此调用将更新`Astra.account.ldap`设置、并清除`connectionHost`的值。

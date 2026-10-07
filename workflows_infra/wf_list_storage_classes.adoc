@@ -18,18 +18,21 @@ summary: 您可以列出可用的存储类。
 
 
 
+[[step-1-select-the-cloud]]
 == 第1步：选择云
 
 执行工作流 link:../workflows_infra/wf_list_clouds.html["列出云"] 并选择要使用的云。
 
 
 
+[[step-2-select-the-cluster]]
 == 第2步：选择集群
 
 执行工作流 link:../workflows_infra/wf_list_clusters.html["列出集群"] 并选择集群。
 
 
 
+[[step-3-list-the-storage-classes-for-a-specific-cluster]]
 == 第3步：列出特定集群的存储类
 
 执行以下REST API调用以列出特定集群和云的存储类。

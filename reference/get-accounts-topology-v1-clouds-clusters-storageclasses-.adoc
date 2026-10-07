@@ -7,6 +7,7 @@ summary: 检索云的存储类
 ---
 = 检索云的存储类
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/storageClasses/{storageClass_id}`#
@@ -15,6 +16,7 @@ summary: 检索云的存储类
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -46,6 +48,7 @@ summary: 检索云的存储类
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -222,6 +225,7 @@ JSON 编号，以 MBps 表示性能服务级别目标 (SLO)。此信息附加到
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -267,6 +271,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -317,6 +322,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -362,6 +368,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -407,11 +414,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -427,6 +436,7 @@ Status: 404, Not found
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata
 
@@ -459,6 +469,7 @@ type_astra_metadata
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

@@ -7,6 +7,7 @@ summary: 列出所有订阅
 ---
 = 列出所有订阅
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/subscriptions`#
@@ -15,6 +16,7 @@ summary: 列出所有订阅
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -101,6 +103,7 @@ OpenAPI 示例："1"
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -194,6 +197,7 @@ Status: 200, Returns a JSON array of all matching resources in the collection. I
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -239,6 +243,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -289,6 +294,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -334,6 +340,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -379,11 +386,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -399,6 +408,7 @@ Status: 404, Not found
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -431,6 +441,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[subscription_1_2_get_response_body]]
 [role="api-collapsible-fifth-title"]
 subscription_1.2_get_response_body
 
@@ -591,6 +602,7 @@ JSON 字符串，指示客户入职的当前状态。有效值为 "not started"�
 
 
 |===
+[[type_astra_metadata_list]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_list
 
@@ -626,6 +638,7 @@ type_astra_metadata_list
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

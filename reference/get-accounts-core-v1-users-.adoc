@@ -7,6 +7,7 @@ summary: 检索用户
 ---
 = 检索用户
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}`#
@@ -15,6 +16,7 @@ summary: 检索用户
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -36,6 +38,7 @@ summary: 检索用户
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -225,6 +228,7 @@ JSON 对象包含指定地址的字段集合。如果此 key 不存在，则表�
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -270,6 +274,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -320,6 +325,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -365,6 +371,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -410,11 +417,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[postalAddress]]
 [role="api-collapsible-fifth-title"]
 postalAddress
 
@@ -478,6 +487,7 @@ JSON 对象包含指定地址的字段集合。如果此 key 不存在，则表�
 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -493,6 +503,7 @@ JSON 对象包含指定地址的字段集合。如果此 key 不存在，则表�
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -525,6 +536,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

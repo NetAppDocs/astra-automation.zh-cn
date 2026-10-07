@@ -7,6 +7,7 @@ summary: 删除组
 ---
 = 删除组
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}`#
@@ -21,6 +22,7 @@ summary: 删除组
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -42,6 +44,7 @@ summary: 删除组
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -50,6 +53,7 @@ Status: 204, Indicates if the group resource was deleted.
 ----
 
 
+[[response]]
 == 响应
 
 [source]
@@ -95,6 +99,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -140,6 +145,7 @@ Status: 500, Internal server error
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -185,11 +191,13 @@ Status: 403, Forbidden
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

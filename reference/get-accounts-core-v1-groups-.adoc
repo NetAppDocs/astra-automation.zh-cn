@@ -7,6 +7,7 @@ summary: 检索组
 ---
 = 检索组
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}`#
@@ -15,6 +16,7 @@ summary: 检索组
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -36,6 +38,7 @@ summary: 检索组
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -130,6 +133,7 @@ LDAP 组的可分辨名称 (DN)。定义的值为：
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -175,6 +179,7 @@ Status: 403, Forbidden
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -220,6 +225,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -265,6 +271,7 @@ Status: 500, Internal server error
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -310,11 +317,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -330,6 +339,7 @@ Status: 404, Not found
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -362,6 +372,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

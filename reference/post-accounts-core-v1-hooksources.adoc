@@ -7,6 +7,7 @@ summary: 创建新的 hook 源
 ---
 = 创建新的 hook 源
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/hookSources`#
@@ -15,6 +16,7 @@ summary: 创建新的 hook 源
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -31,6 +33,7 @@ summary: 创建新的 hook 源
 |===
 
 
+[[request-body]]
 == 请求正文
 
 指示要创建的 Hook Source API 资源的所需值。
@@ -116,6 +119,7 @@ summary: 创建新的 hook 源
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -247,6 +251,7 @@ JSON 字符串，指示源字段是在 API 中公开还是有意留空。定义�
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -292,6 +297,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -342,6 +348,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -392,6 +399,7 @@ Status: 409, Conflict
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -437,6 +445,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -482,11 +491,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -502,6 +513,7 @@ Status: 404, Not found
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -534,6 +546,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 
@@ -551,6 +564,7 @@ invalidParams
 查询参数无效的原因
 
 |===
+[[invalidFields]]
 [role="api-collapsible-fifth-title"]
 invalidFields
 

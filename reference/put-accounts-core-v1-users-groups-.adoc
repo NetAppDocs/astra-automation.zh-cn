@@ -7,6 +7,7 @@ summary: 为用户修改组
 ---
 = 为用户修改组
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}`#
@@ -15,6 +16,7 @@ summary: 为用户修改组
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -41,6 +43,7 @@ summary: 为用户修改组
 |===
 
 
+[[request-body]]
 == 请求正文
 
 将整个存储资源替换为提供的 JSON 请求正文，同时保留不可由用户修改的键值。
@@ -125,6 +128,7 @@ LDAP 组的可分辨名称 (DN)。定义的值为：
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -133,6 +137,7 @@ Status: 204, Indicates if the group resource was updated.
 ----
 
 
+[[response]]
 == 响应
 
 [source]
@@ -178,6 +183,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -223,6 +229,7 @@ Status: 403, Forbidden
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -268,6 +275,7 @@ Status: 500, Internal server error
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -313,11 +321,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -333,6 +343,7 @@ Status: 404, Not found
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_update
 
@@ -365,6 +376,7 @@ type_astra_metadata_update
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

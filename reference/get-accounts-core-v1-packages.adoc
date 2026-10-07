@@ -7,6 +7,7 @@ summary: 列出所有软件包
 ---
 = 列出所有软件包
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/packages`#
@@ -15,6 +16,7 @@ summary: 列出所有软件包
 
 
 
+[[parameters]]
 == 参数
 
 [cols="5*"]
@@ -77,6 +79,7 @@ OpenAPI 示例："2"
 |===
 
 
+[[response]]
 == 响应
 
 [source]
@@ -128,6 +131,7 @@ Status: 200, Returns a JSON array of all matching resources in the collection. I
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -173,6 +177,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -223,6 +228,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 响应
 
 [source]
@@ -268,6 +274,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 错误
 
 [source]
@@ -313,11 +320,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 定义
 
 .查看定义
 [%collapsible]
 ====
+[[type_astra_stateTransition]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateTransition
 
@@ -333,9 +342,11 @@ type_astra_stateTransition
 | to | 数组[string] | True  a| 
 
 |===
+[[additionalDetails]]
 [role="api-collapsible-fifth-title"]
 additionalDetails
 
+[[type_astra_stateDetail]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateDetail
 
@@ -359,6 +370,7 @@ type_astra_stateDetail
 | additionalDetails | link:#additionalDetails["additionalDetails"] | False  a| 
 
 |===
+[[dependsOnImages]]
 [role="api-collapsible-fifth-title"]
 dependsOnImages
 
@@ -393,6 +405,7 @@ dependsOnImages
 
 
 |===
+[[images]]
 [role="api-collapsible-fifth-title"]
 镜像
 
@@ -440,6 +453,7 @@ dependsOnImages
 JSON 对象的 JSON 数组，描述安装或升级当前映像所需的映像。
 
 |===
+[[dependsOnComponents]]
 [role="api-collapsible-fifth-title"]
 dependsOnComponents
 
@@ -463,6 +477,7 @@ dependsOnComponents
 JSON 字符串的 JSON 数组，定义安装当前映像所需的组件版本。
 
 |===
+[[artifacts]]
 [role="api-collapsible-fifth-title"]
 制品
 
@@ -512,6 +527,7 @@ JSON 字符串，包含从已知 Astra Control Center 数据存储/位置的根�
 JSON 对象的 JSON 数组，描述安装/升级当前映像所需的已安装组件。
 
 |===
+[[files]]
 [role="api-collapsible-fifth-title"]
 文件
 
@@ -554,6 +570,7 @@ JSON 对象的 JSON 数组，描述安装/升级当前映像所需的已安装�
 
 
 |===
+[[upgradableVersions]]
 [role="api-collapsible-fifth-title"]
 upgradableVersions
 
@@ -579,6 +596,7 @@ JSON 字符串，描述可以升级到包版本的最高版本。定义的值为
 
 
 |===
+[[dependencies]]
 [role="api-collapsible-fifth-title"]
 依赖项
 
@@ -613,6 +631,7 @@ JSON 字符串，描述可以升级到包版本的最高版本。定义的值为
 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 类型 Astra 标签
 
@@ -628,6 +647,7 @@ JSON 字符串，描述可以升级到包版本的最高版本。定义的值为
 | value | string | True  a| 
 
 |===
+[[type_astra_metadata]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata
 
@@ -660,6 +680,7 @@ type_astra_metadata
 | modifiedBy | string | False  a| 
 
 |===
+[[package_1_0_get_response_body]]
 [role="api-collapsible-fifth-title"]
 package_1.0_get_response_body
 
@@ -794,6 +815,7 @@ JSON 对象包含可以升级到包版本的最低和最高版本。
 
 
 |===
+[[type_astra_metadata_list]]
 [role="api-collapsible-fifth-title"]
 type_astra_metadata_list
 
@@ -829,6 +851,7 @@ type_astra_metadata_list
 | modifiedBy | string | False  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

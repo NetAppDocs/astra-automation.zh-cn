@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) 任务端点'
 ---
 = Astra API (ACC) 任务端点
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 Task App API 提供对托管任务资源的访问，以表示长期运行的任务。

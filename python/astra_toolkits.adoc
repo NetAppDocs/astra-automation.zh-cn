@@ -21,6 +21,7 @@ NOTE: 为了简单起见，本页其余部分将 NetApp Astra Control Python SDK
 
 
 
+[[two-related-software-tools]]
 == 两个相关软件工具
 
 SDK 包含两个不同但相关的工具，这些工具在访问 Astra Control REST API 时在不同的抽象级别运行。
@@ -38,6 +39,7 @@ NOTE: NetApp Astra Control Python SDK* （或仅 SDK ）是整个软件包的名
 
 
 
+[[how-to-access]]
 == 如何访问
 
 您可以通过以下方式访问 SDK 。
@@ -63,6 +65,7 @@ SDK 可从获取 https://pypi.org/["Python 软件包索引"^] 名称为* actoolk
 
 
 
+[[installation-and-basic-requirements]]
 == 安装和基本要求
 
 在安装软件包并准备使用该软件包时，需要考虑多个选项和要求。
@@ -85,6 +88,7 @@ SDK 具有与本地 Python 环境相关的几个前提条件。例如、您必�
 
 
 
+[[summary-of-helpful-resources]]
 == 有用资源摘要
 
 下面是您开始使用所需的一些资源。

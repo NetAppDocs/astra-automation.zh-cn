@@ -18,6 +18,7 @@ summary: 您可以通过从快照克隆新应用程序来创建该应用程序�
 
 
 
+[[before-you-begin]]
 == 开始之前
 
 请注意以下有关此工作流的信息：
@@ -31,18 +32,21 @@ NOTE: 要将应用程序克隆到其他集群，您需要根据环境需要更�
 
 
 
+[[step-1-select-the-app-to-clone]]
 == 第1步：选择要克隆的应用程序
 
 执行工作流 link:wf_list_man_apps.html["列出应用程序"] 并选择要克隆的应用程序。用于克隆应用程序的 REST 调用需要多个资源值。
 
 
 
+[[step-2-select-the-snapshot-to-use]]
 == 第2步：选择要使用的快照
 
 执行工作流 link:wf_list_snapshots.html["列出快照"] 并选择要使用的快照。
 
 
 
+[[step-3-clone-the-app]]
 == 第3步：克隆应用程序
 
 执行以下 REST API 调用。
