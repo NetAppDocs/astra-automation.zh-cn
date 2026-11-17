@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-topology-v1-clouds.html 
+keywords: account topology,cloud resources,collection fields,resource limit,resource filter 
 summary: 列出所有云 
 ---
 = 列出所有云
@@ -10,7 +11,20 @@ summary: 列出所有云
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索云资源列表。使用此选项可查看环境中的可用云。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回集合中所有匹配资源的 JSON 数组。如果在请求中指定了单个字段，则项目 JSON 数组将包含按指定顺序为每个匹配资源请求的字段。
 

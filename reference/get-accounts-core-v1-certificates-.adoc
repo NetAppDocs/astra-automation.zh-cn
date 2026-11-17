@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-certificates-.html 
+keywords: certificate resource,certificate collection,stored certificate,account certificate,certificate id 
 summary: 检索证书 
 ---
 = 检索证书
@@ -10,7 +11,20 @@ summary: 检索证书
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索证书以在响应中提供存储的证书 API 资源详细信息。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/certificates/{certificate_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 Certificate API 资源。
 

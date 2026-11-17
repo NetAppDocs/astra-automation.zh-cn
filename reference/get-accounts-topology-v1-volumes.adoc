@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-topology-v1-volumes.html 
+keywords: account topology,volume list,resource collection,field order,account resources 
 summary: 列出所有卷 
 ---
 = 列出所有卷
@@ -10,7 +11,20 @@ summary: 列出所有卷
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索卷列表，提供集合中每个卷的详细信息。使用此选项可查看所有匹配卷中的特定感兴趣字段。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/volumes`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回集合中所有匹配资源的 JSON 数组。如果在请求中指定了单个字段，则项目 JSON 数组将包含按指定顺序为每个匹配资源请求的字段。
 

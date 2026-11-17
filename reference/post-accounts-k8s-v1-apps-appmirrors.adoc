@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-k8s-v1-apps-appmirrors.html 
+keywords: appmirror,app mirrors,k8s apps,app resource,account resource 
 summary: 为应用创建新的 AppMirror 资源 
 ---
 = 为应用创建新的 AppMirror 资源
@@ -10,7 +11,20 @@ summary: 为应用创建新的 AppMirror 资源
 :imagesdir: ../media/
 
 
+[role="lead"]
+为应用程序创建 AppMirror 资源，指定镜像所需的配置值。使用此选项可根据应用程序的需求建立镜像设置。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 指示要创建的 AppMirror API 资源的所需值。
 

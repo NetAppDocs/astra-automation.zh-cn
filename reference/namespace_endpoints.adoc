@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/namespace_endpoints.html 
+keywords: namespaces,kubernetes namespaces,cluster namespaces,namespace details,read-only access 
 summary: 'Astra API (ACC) 命名空间端点' 
 ---
 = Astra API (ACC) 命名空间端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+查看属于集群的命名空间。这些端点是只读的。
 
 Namespace API 提供对命名空间资源的只读访问，以描述与给定集群相关联的命名空间。

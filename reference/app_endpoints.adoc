@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/app_endpoints.html 
+keywords: kubernetes applications,managed applications,unmanaged applications,application management,application discovery 
 summary: 'Astra API (ACC) 应用端点' 
 ---
 = Astra API (ACC) 应用端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+在集群上使用 Kubernetes 应用程序，包括 Astra Control 未管理的应用程序。
 
 App API 代表 Kubernetes 应用程序，包括那些未由 Astra 管理的应用程序。

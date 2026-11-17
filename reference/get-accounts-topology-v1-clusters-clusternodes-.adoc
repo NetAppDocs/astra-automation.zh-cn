@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-topology-v1-clusters-clusternodes-.html 
+keywords: cluster node,cluster topology,account cluster,cluster details,node resource,cluster node list 
 summary: 检索集群的集群节点 
 ---
 = 检索集群的集群节点
@@ -10,7 +11,20 @@ summary: 检索集群的集群节点
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索集群的集群节点，提供有关指定集群内的节点配置和状态的详细信息。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clusters/{cluster_id}/clusterNodes/{clusterNode_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 Cluster Node API 资源。
 

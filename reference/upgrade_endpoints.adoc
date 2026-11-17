@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/upgrade_endpoints.html 
+keywords: software upgrades,upgrade eligibility,component upgrades,upgrade initiation,upgrade packages 
 summary: 'Astra API (ACC) 升级端点' 
 ---
 = Astra API (ACC) 升级端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+查找符合升级条件的软件组件并开始升级。您注册的软件包决定了哪些升级可用。
 
 升级应用 API 提供对有资格升级的软件组件的访问权限，并启动升级。升级的可用性取决于在 Packages API 中注册的包。

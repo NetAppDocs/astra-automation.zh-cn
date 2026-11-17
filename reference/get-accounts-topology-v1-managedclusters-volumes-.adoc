@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-topology-v1-managedclusters-volumes-.html 
+keywords: volume resource,volume collection,managed cluster,account id,stored volume,volume json 
 summary: 检索受管集群的卷 
 ---
 = 检索受管集群的卷
@@ -10,7 +11,20 @@ summary: 检索受管集群的卷
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索受管集群的卷，提供对存储的卷信息的访问以进行进一步管理或分析。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/volumes/{volume_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 Volume API 资源。
 

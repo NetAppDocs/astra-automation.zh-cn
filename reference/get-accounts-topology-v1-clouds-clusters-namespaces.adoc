@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-topology-v1-clouds-clusters-namespaces.html 
+keywords: cloud topology,resource collection,namespace list,field filter,cluster resources 
 summary: 列出云的命名空间 
 ---
 = 列出云的命名空间
@@ -10,7 +11,20 @@ summary: 列出云的命名空间
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索云的命名空间，提供集合中所有可用匹配资源的列表。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/namespaces`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回集合中所有匹配资源的 JSON 数组。如果在请求中指定了单个字段，则项目 JSON 数组将包含按指定顺序为每个匹配资源请求的字段。
 

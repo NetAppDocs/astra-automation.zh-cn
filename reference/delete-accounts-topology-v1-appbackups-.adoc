@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-topology-v1-appbackups-.html 
+keywords: application backup,delete backup,backup removal,backup data delete,delete app backup 
 summary: 删除应用程序备份 
 ---
 = 删除应用程序备份
@@ -10,7 +11,20 @@ summary: 删除应用程序备份
 :imagesdir: ../media/
 
 
+[role="lead"]
+删除应用程序备份，删除指定的备份资源及其关联数据。使用此选项可管理存储空间或从应用程序资源中删除过时的备份。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/appBackups/{appBackup_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 删除指定的 Application Backup API 资源。正在进行的备份将被取消，然后删除。
 

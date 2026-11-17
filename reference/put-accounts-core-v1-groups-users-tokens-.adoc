@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/put-accounts-core-v1-groups-users-tokens-.html 
+keywords: replace resource,account group,user token,core group,user replace,token id 
 summary: 修改组中用户的令牌 
 ---
 = 修改组中用户的令牌
@@ -10,7 +11,20 @@ summary: 修改组中用户的令牌
 :imagesdir: ../media/
 
 
+[role="lead"]
+修改组中用户的令牌，根据提供的 JSON 请求正文更新存储的资源。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/tokens/{token_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 将整个存储资源替换为提供的 JSON 请求正文，同时保留不可由用户修改的键值。
 

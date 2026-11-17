@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/cluster_endpoints.html 
+keywords: unmanaged clusters,kubernetes clusters,cluster discovery,cluster management,cluster resources 
 summary: 'Astra API (ACC) 集群端点' 
 ---
 = Astra API (ACC) 集群端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+使用 Astra Control 尚未管理的 Kubernetes 集群。
 
 Cluster API 表示非托管的 Kubernetes 集群。

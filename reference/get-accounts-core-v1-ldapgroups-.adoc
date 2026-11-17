@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-ldapgroups-.html 
+keywords: ldap resource,ldap groups,account resource,ldap collection,ldap group id 
 summary: 检索 LDAP 组 
 ---
 = 检索 LDAP 组
@@ -10,7 +11,20 @@ summary: 检索 LDAP 组
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索 LDAP 组，提供存储的 LDAP 资源配置详细信息。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/ldapGroups/{ldapGroup_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回表示存储的 LDAP 资源的 JSON 对象。
 

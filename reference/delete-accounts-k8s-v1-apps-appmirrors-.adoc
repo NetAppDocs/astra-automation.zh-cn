@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-k8s-v1-apps-appmirrors-.html 
+keywords: appMirror removal,appMirror delete,resource deletion,source cluster,mirror relationship 
 summary: 删除应用程序的 AppMirror 资源 
 ---
 = 删除应用程序的 AppMirror 资源
@@ -10,7 +11,20 @@ summary: 删除应用程序的 AppMirror 资源
 :imagesdir: ../media/
 
 
+[role="lead"]
+删除应用程序的 AppMirror 资源，根据当前关系状态启动对源集群和目标集群上关联资源的删除。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors/{appMirror_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 删除指定的 AppMirror API 资源。启动一个进程以异步删除 AppMirror 资源，以及由于 AppMirror 关系而在源和目标集群上创建的任何资源。删除的资源取决于删除时关系的状态。
 

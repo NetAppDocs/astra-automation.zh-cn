@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/setting_endpoints.html 
+keywords: account settings,key value settings,feature settings,setting management,astra configuration 
 summary: 'Astra API (ACC) 设置端点' 
 ---
 = Astra API (ACC) 设置端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+管理帐户设置，这些设置是配置 Astra Control 帐户中功能的键/值对。
 
 帐户设置是对 Astra 帐户中已知功能很重要的键/值对的集合。Setting API 提供对有关帐户设置的重要信息的访问权限。

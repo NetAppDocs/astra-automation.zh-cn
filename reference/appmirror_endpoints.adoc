@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/appmirror_endpoints.html 
+keywords: appmirror,application mirroring,mirror relationships,relationship management,replication 
 summary: 'Astra API (ACC) AppMirror 端点' 
 ---
 = Astra API (ACC) AppMirror 端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+为您的应用程序管理 AppMirror 关系。
 
 AppMirror API 支持 AppMirror 关系管理。

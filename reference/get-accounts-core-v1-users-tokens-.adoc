@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-users-tokens-.html 
+keywords: account resource,token collection,user resource,stored token,json response 
 summary: 检索令牌 
 ---
 = 检索令牌
@@ -10,7 +11,20 @@ summary: 检索令牌
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索令牌，在响应中提供存储的 Token API 资源。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/tokens/{token_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 Token API 资源。
 

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-tasks-.html 
+keywords: tasks,task resource,account task,task collection,task details 
 summary: 检索任务 
 ---
 = 检索任务
@@ -10,7 +11,20 @@ summary: 检索任务
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索任务，提供有关用于监视和管理目的的已存储 Task API 资源的详细信息。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/tasks/{task_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 Task API 资源。
 

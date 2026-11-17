@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-.html 
+keywords: account id,account resource,stored account,account collection,json response 
 summary: 检索账户 
 ---
 = 检索账户
@@ -10,7 +11,20 @@ summary: 检索账户
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索帐户，在响应中返回存储的帐户资源详细信息。使用此功能访问帐户信息，以便进行管理或审核。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 Account API 资源。
 

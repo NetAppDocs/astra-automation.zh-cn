@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/put-accounts-core-v1-upgrades-.html 
+keywords: upgrade resource,replacing resource,schedule upgrade,run upgrade,desired state 
 summary: 修改升级 
 ---
 = 修改升级
@@ -10,7 +11,20 @@ summary: 修改升级
 :imagesdir: ../media/
 
 
+[role="lead"]
+通过将整个存储资源替换为提供的 JSON 请求正文来修改升级。使用此端点可根据所需状态安排或运行升级。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/upgrades/{upgrade_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 将整个存储资源替换为提供的 JSON 请求正文，同时保留不可由用户修改的键值。
 

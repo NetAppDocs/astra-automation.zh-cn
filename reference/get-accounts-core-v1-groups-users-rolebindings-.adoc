@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/get-accounts-core-v1-groups-users-rolebindings-.html 
+keywords: role binding,read role binding,group role binding,user role binding,role binding resource,role binding collection 
 summary: 检索组中用户的角色绑定 
 ---
 = 检索组中用户的角色绑定
@@ -10,7 +11,20 @@ summary: 检索组中用户的角色绑定
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索组中用户的角色绑定，提供特定于用户或组上下文的角色关联。使用此选项可查看分配给您帐户内用户或组的角色。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings/{roleBinding_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 Role Binding API 资源。如果请求针对 /accounts/\{account_id}/core/v1/users/\{user_id}/roleBindings endpoint，则仅允许读取用户 ID 与请求 URL 中的用户 ID 匹配的 roleBinding 资源。如果请求针对 /accounts/\{account_id}/core/v1/groups/\{group_id}/roleBindings，则只允许读取组 ID 与请求 URL 中的组 ID 匹配的 roleBinding 资源。
 

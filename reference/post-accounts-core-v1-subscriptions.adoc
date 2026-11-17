@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-core-v1-subscriptions.html 
+keywords: subscription,create subscription,account subscription,account id,subscription resource 
 summary: 创建新订阅 
 ---
 = 创建新订阅
@@ -10,7 +11,20 @@ summary: 创建新订阅
 :imagesdir: ../media/
 
 
+[role="lead"]
+创建新订阅，指定订阅 API 资源的所需值。使用此选项可通过根据您的要求定制的自定义设置启动订阅。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/subscriptions`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 指示要创建的 Subscription API 资源的所需值。
 

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-topology-v1-buckets.html 
+keywords: bucket creation,topology buckets,account resource,bucket values,ontap endpoint 
 summary: 创建新存储桶 
 ---
 = 创建新存储桶
@@ -10,7 +11,20 @@ summary: 创建新存储桶
 :imagesdir: ../media/
 
 
+[role="lead"]
+在 Astra API 中创建新存储桶，指定要建立的存储桶 API 资源的所需值。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/buckets`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 指示要创建的 Bucket API 资源的所需值。
 

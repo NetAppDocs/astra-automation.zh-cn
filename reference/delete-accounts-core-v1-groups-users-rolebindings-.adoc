@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/delete-accounts-core-v1-groups-users-rolebindings-.html 
+keywords: role binding,remove role,delete user,group resource,user role,account role 
 summary: 删除组中用户的角色绑定 
 ---
 = 删除组中用户的角色绑定
@@ -10,7 +11,20 @@ summary: 删除组中用户的角色绑定
 :imagesdir: ../media/
 
 
+[role="lead"]
+删除组中用户的角色绑定，从组中删除指定的角色绑定关联。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings/{roleBinding_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 删除指定的 Role Binding API 资源。
 

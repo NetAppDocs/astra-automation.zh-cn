@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/delete-accounts-core-v1-groups-users-.html 
+keywords: remove user,delete user,role bindings,user credentials,notification marks,password hash 
 summary: 为组删除用户 
 ---
 = 为组删除用户
@@ -10,7 +11,20 @@ summary: 为组删除用户
 :imagesdir: ../media/
 
 
+[role="lead"]
+删除组的用户，删除指定的用户 API 资源和相关资源，如通知标记、令牌和角色绑定。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 删除指定的用户 API 资源。
 

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-metrics.html 
+keywords: account metrics,metrics retrieval,account performance,account data,performance metrics 
 summary: 检索账户的所有指标 
 ---
 = 检索账户的所有指标
@@ -10,7 +11,20 @@ summary: 检索账户的所有指标
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索帐户的所有指标，提供对性能和利用率的见解。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/metrics`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回该帐户的所有指标
 

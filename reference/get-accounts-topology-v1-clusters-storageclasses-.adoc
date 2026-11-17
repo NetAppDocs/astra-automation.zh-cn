@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-topology-v1-clusters-storageclasses-.html 
+keywords: cluster storage,class resource,storage collection,account resource,storage class 
 summary: 检索集群的存储类 
 ---
 = 检索集群的存储类
@@ -10,7 +11,20 @@ summary: 检索集群的存储类
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索集群的存储类，提供用于管理集群内存储资源的存储配置详细信息。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clusters/{cluster_id}/storageClasses/{storageClass_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 Storage Class API 资源。
 

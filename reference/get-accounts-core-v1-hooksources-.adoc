@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-hooksources-.html 
+keywords: hook source,hook collection,account resource,stored resource,json response 
 summary: 检索挂钩源 
 ---
 = 检索挂钩源
@@ -10,7 +11,20 @@ summary: 检索挂钩源
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索挂钩源，在响应中返回存储的 Hook Source API 资源。使用此选项可以访问集成任务的特定挂钩源配置。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/hookSources/{hookSource_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 Hook Source API 资源。
 

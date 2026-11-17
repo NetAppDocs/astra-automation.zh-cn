@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-core-v1-licenses.html 
+keywords: license creation,account license,license resource,create license,license values 
 summary: 创建新许可证 
 ---
 = 创建新许可证
@@ -10,7 +11,20 @@ summary: 创建新许可证
 :imagesdir: ../media/
 
 
+[role="lead"]
+创建一个新许可证，指定许可证 API 资源的所需值。使用此端点可有效管理环境中的许可需求。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/licenses`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 指示要创建的 License API 资源的所需值。
 

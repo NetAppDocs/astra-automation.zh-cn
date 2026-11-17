@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-licenses-.html 
+keywords: license resource,license collection,account resource,license id,account id 
 summary: 检索许可证 
 ---
 = 检索许可证
@@ -10,7 +11,20 @@ summary: 检索许可证
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索许可证，提供存储的许可证 API 资源的详细信息。使用此选项可检查当前许可证配置并确保符合许可要求。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/licenses/{license_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 License API 资源。
 

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-core-v1-packages.html 
+keywords: package creation,core packages,account package,create package,package resource 
 summary: 创建新包 
 ---
 = 创建新包
@@ -10,7 +11,20 @@ summary: 创建新包
 :imagesdir: ../media/
 
 
+[role="lead"]
+在 Astra API 中创建包，为包 API 资源指定所需的值。使用此选项可定义包的属性和配置。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/packages`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 指示要创建的 Package API 资源的所需值。
 

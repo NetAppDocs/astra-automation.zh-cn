@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-topology-v1-managedclusters-.html 
+keywords: managed cluster,cluster resource,account resource,cluster topology,cluster collection 
 summary: 检索受管集群 
 ---
 = 检索受管集群
@@ -10,7 +11,20 @@ summary: 检索受管集群
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索托管集群，提供存储在托管集群 API 资源中的详细信息。使用此信息了解集群的当前配置和状态。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的托管群集 API 资源。
 

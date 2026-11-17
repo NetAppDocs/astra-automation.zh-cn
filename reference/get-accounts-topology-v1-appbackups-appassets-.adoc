@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/get-accounts-topology-v1-appbackups-appassets-.html 
+keywords: application asset,app asset,app backup,account resource,app asset collection 
 summary: 从应用程序备份中检索应用程序资产 
 ---
 = 从应用程序备份中检索应用程序资产
@@ -10,7 +11,20 @@ summary: 从应用程序备份中检索应用程序资产
 :imagesdir: ../media/
 
 
+[role="lead"]
+从应用程序备份中检索应用程序资产。用于访问存储的资产配置以进行恢复或分析。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/appBackups/{appBackup_id}/appAssets/{appAsset_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 Application Asset API 资源。
 

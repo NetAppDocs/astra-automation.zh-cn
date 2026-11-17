@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-topology-v1-clouds-clusters.html 
+keywords: account topology,cloud clusters,resource collection,field filtering,limit resources 
 summary: 列出云的集群 
 ---
 = 列出云的集群
@@ -10,7 +11,20 @@ summary: 列出云的集群
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索云的集群列表。使用此选项可查看指定云环境中可用的集群。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回集合中所有匹配资源的 JSON 数组。如果在请求中指定了单个字段，则项目 JSON 数组将包含按指定顺序为每个匹配资源请求的字段。
 

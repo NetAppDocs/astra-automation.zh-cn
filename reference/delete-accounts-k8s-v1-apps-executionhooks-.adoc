@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-k8s-v1-apps-executionhooks-.html 
+keywords: execution hook removal,delete execution hook,remove execution hook,kubernetes app,execution hook delete,execution hook actions 
 summary: 删除应用的执行挂钩 
 ---
 = 删除应用的执行挂钩
@@ -10,7 +11,20 @@ summary: 删除应用的执行挂钩
 :imagesdir: ../media/
 
 
+[role="lead"]
+删除应用的执行挂钩，防止其在以后的操作中运行。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks/{executionHook_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 删除指定的 Execution Hook API 资源。
 

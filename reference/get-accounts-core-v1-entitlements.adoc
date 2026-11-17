@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-entitlements.html 
+keywords: entitlements,account resources,field selection,resource collection,collection filtering,resource sorting 
 summary: 列出所有授权 
 ---
 = 列出所有授权
@@ -10,7 +11,20 @@ summary: 列出所有授权
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索授权列表，提供有关集合中所有匹配资源的信息。使用此选项可根据您的请求条件访问特定资源详细信息。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/entitlements`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回集合中所有匹配资源的 JSON 数组。如果在请求中指定了单个字段，则项目 JSON 数组将包含按指定顺序为每个匹配资源请求的字段。
 

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-core-v1-subscriptions-.html 
+keywords: subscription removal,delete subscription,subscription charges,account subscription,subscription deletion 
 summary: 删除订阅 
 ---
 = 删除订阅
@@ -10,7 +11,20 @@ summary: 删除订阅
 :imagesdir: ../media/
 
 
+[role="lead"]
+删除订阅，移除指定的订阅 API 资源以及所有相关费用。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-delete]#删除# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/subscriptions/{subscription_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 删除指定的 Subscription API 资源。
 

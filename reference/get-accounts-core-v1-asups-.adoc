@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-asups-.html 
+keywords: autosupport download,asup resource,autosupport bundle,creation state,asup collection 
 summary: 检索 ASUP 资源 
 ---
 = 检索 ASUP 资源
@@ -10,7 +11,20 @@ summary: 检索 ASUP 资源
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索 ASUP 资源，允许出于监控和诊断目的访问存储的 AutoSupport 数据。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/asups/{asup_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 ASUP API 资源。如果 AutoSupport 捆绑包"creationState"为"completed"或"partial"，则可以通过指定包含"*/*"或"application/gzip"的 Accept 标头来下载 AutoSupport 捆绑包。
 

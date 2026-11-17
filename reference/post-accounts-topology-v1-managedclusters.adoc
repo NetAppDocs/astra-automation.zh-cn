@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-topology-v1-managedclusters.html 
+keywords: managed clusters,create managed cluster,cluster topology,account cluster,cluster resource 
 summary: 创建新的托管集群 
 ---
 = 创建新的托管集群
@@ -10,7 +11,20 @@ summary: 创建新的托管集群
 :imagesdir: ../media/
 
 
+[role="lead"]
+创建托管群集，为托管群集 API 资源指定所需的值。使用此选项可配置和部署根据您的特定要求量身定制的群集。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 指示要创建的 Managed Cluster API 资源的所需值。
 

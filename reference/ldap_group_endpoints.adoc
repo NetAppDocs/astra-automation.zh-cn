@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/ldap_group_endpoints.html 
+keywords: ldap groups,directory groups,ldap server,read-only access,group lookup 
 summary: 'Astra API (ACC) LDAP 组端点' 
 ---
 = Astra API (ACC) LDAP 组端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+查看配置的轻型目录访问协议（LDAP）服务器上的组。这些端点是只读的。
 
 LDAP 组 API 提供对配置的 LDAP 服务器内 LDAP 组的只读访问。

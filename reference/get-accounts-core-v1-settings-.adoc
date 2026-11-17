@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-settings-.html 
+keywords: settings retrieval,account settings,stored settings,setting collection,resource settings 
 summary: 检索设置 
 ---
 = 检索设置
@@ -10,7 +11,20 @@ summary: 检索设置
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索设置，提供存储的配置详细信息以供参考或修改。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/settings/{setting_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 Setting API 资源。
 

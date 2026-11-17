@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/application_asset_endpoints.html 
+keywords: application assets,application state,state information,managed applications,asset collections 
 summary: 'Astra API (ACC) 应用程序资产端点' 
 ---
 = Astra API (ACC) 应用程序资产端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+访问 Astra Control 用于管理应用程序的状态信息的内部集合。
 
 Application Asset API 提供对用于管理应用程序的状态信息的内部集合的访问。

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-k8s-v1-apps-appbackups-.html 
+keywords: application backup,kubernetes apps,account resource,app collection,stored resource 
 summary: 检索应用的应用备份 
 ---
 = 检索应用的应用备份
@@ -10,7 +11,20 @@ summary: 检索应用的应用备份
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索应用程序的应用程序备份，在 JSON 响应正文中提供存储的备份资源信息。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 Application Backup API 资源。
 

@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/entitlement_endpoints.html 
+keywords: entitlements,licensed features,enabled capacities,active subscriptions,account entitlements 
 summary: 'Astra API (ACC) 授权端点' 
 ---
 = Astra API (ACC) 授权端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+检查活动许可证和订阅为您的帐户启用了哪些功能或容量。
 
 Entitlement API 表示帐户活动的许可证和订阅启用了哪些功能或容量。

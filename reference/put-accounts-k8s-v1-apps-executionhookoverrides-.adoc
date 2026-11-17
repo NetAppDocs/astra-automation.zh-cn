@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/put-accounts-k8s-v1-apps-executionhookoverrides-.html 
+keywords: execution hook,hook override,replace resource,app execution,netapp hook,execution enable 
 summary: 修改执行钩子覆盖资源 
 ---
 = 修改执行钩子覆盖资源
@@ -10,7 +11,20 @@ summary: 修改执行钩子覆盖资源
 :imagesdir: ../media/
 
 
+[role="lead"]
+通过使用提供的 JSON 请求正文替换整个存储资源来修改执行挂钩覆盖资源。使用此操作可更新应用于指定应用程序的执行挂钩。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides/{executionHookOverride_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 将整个存储资源替换为提供的 JSON 请求正文，同时保留不可由用户修改的键值。
 

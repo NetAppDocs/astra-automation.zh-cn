@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/event_endpoints.html 
+keywords: events,system events,event monitoring,activity tracking,event retrieval 
 summary: 'Astra API (ACC) 事件端点' 
 ---
 = Astra API (ACC) 事件端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+查看 Astra Control 中发生的事件以跟踪系统活动。
 
 Event API 提供对系统中发生的事件的访问。

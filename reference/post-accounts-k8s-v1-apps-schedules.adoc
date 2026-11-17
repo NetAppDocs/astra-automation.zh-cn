@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-k8s-v1-apps-schedules.html 
+keywords: account schedule,kubernetes app,app schedule,create schedule,account resource 
 summary: 为应用创建新计划 
 ---
 = 为应用创建新计划
@@ -10,7 +11,20 @@ summary: 为应用创建新计划
 :imagesdir: ../media/
 
 
+[role="lead"]
+为应用创建一个新计划，指定计划任务或事件所需的参数。使用此选项可根据定义的计划自动执行应用程序操作。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 指示要创建的 Schedule API 资源的所需值。
 

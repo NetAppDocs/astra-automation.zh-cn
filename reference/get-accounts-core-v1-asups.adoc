@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-asups.html 
+keywords: account resources,collection fields,resource list,account collection,resource limit 
 summary: 列出所有 ASUP 资源 
 ---
 = 列出所有 ASUP 资源
@@ -10,7 +11,20 @@ summary: 列出所有 ASUP 资源
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索 ASUP 资源列表，提供集合中每个资源的详细信息。您可以指定单个字段来根据需要定制输出。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/asups`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回集合中所有匹配资源的 JSON 数组。如果在请求中指定了单个字段，则项目 JSON 数组将包含按指定顺序为每个匹配资源请求的字段。
 

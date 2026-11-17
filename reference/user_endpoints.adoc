@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/user_endpoints.html 
+keywords: astra users,user management,user accounts,user creation,user removal 
 summary: 'Astra API (ACC) 用户端点' 
 ---
 = Astra API (ACC) 用户端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+管理可以与 Astra Control 交互的用户。
 
 User API 表示能够与系统交互的用户。

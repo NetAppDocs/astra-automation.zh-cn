@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-executionhooks-.html 
+keywords: execution hook,execution hook resource,matching containers,matching images,matching criteria,execution hook collection 
 summary: 检索执行挂钩 
 ---
 = 检索执行挂钩
@@ -10,7 +11,20 @@ summary: 检索执行挂钩
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索执行挂钩，提供存储的资源详细信息，并根据当前条件匹配容器和镜像信息。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/executionHooks/{executionHook_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 在 JSON 响应正文中返回已存储的 Execution Hook API 资源。还会根据当前的 matchingCriteria 和已定义的应用填充 matchingContainers 及 matchingImages。
 

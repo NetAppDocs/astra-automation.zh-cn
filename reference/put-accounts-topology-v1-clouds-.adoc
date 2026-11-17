@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/put-accounts-topology-v1-clouds-.html 
+keywords: replace resource,cloud topology,update rediscovery,sa cluster,stored resource 
 summary: 修改云 
 ---
 = 修改云
@@ -10,7 +11,20 @@ summary: 修改云
 :imagesdir: ../media/
 
 
+[role="lead"]
+通过将现有配置替换为提供的 JSON 请求正文，同时保留不可修改的键值，来修改云资源。使用此选项可启动存储阵列和集群的重新发现。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 将整个存储资源替换为提供的 JSON 请求正文，同时保留不可由用户修改的键值。
 

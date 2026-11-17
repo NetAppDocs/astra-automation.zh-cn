@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-topology-v1-managedclusters-apiresources-.html 
+keywords: account resource,managed cluster,api resource,resource collection,resource id 
 summary: 检索 K8s API 资源 
 ---
 = 检索 K8s API 资源
@@ -10,7 +11,20 @@ summary: 检索 K8s API 资源
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索 K8s API 资源，在 JSON 响应正文中提供特定资源以供进一步检查或集成。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apiResources/{apiResource_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中的特定 API 资源。
 

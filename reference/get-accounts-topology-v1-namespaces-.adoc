@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-topology-v1-namespaces-.html 
+keywords: namespace resource,namespace collection,stored namespace,account id,namespace id 
 summary: 检索命名空间 
 ---
 = 检索命名空间
@@ -10,7 +11,20 @@ summary: 检索命名空间
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索命名空间，提供对用于管理应用程序数据的存储命名空间 API 资源的访问权限。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/namespaces/{namespace_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 Namespace API 资源。
 

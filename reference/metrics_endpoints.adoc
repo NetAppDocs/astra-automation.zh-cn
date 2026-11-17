@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/metrics_endpoints.html 
+keywords: account metrics,usage metrics,astra control metrics,metrics retrieval,account monitoring 
 summary: 'Astra API (ACC) 指标端点' 
 ---
 = Astra API (ACC) 指标端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+检索 Astra Control 帐户的指标，以监控其活动和资源使用情况。
 
 Metrics API 表示与给定帐户关联的指标。

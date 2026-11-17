@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/subscription_endpoints.html 
+keywords: subscriptions,active subscriptions,account subscriptions,subscription resources,licensing 
 summary: 'Astra API (ACC) 订阅端点' 
 ---
 = Astra API (ACC) 订阅端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+查看您的 Astra Control 帐户的有效订阅。
 
 Subscription API 提供对订阅资源的访问，以表示活动订阅。

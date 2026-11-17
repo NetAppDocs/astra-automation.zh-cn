@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/get-accounts-core-v1-users-groups.html 
+keywords: account groups,users groups,user fields,resource collection,matching resources 
 summary: 为用户列出组 
 ---
 = 为用户列出组
@@ -10,7 +11,20 @@ summary: 为用户列出组
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索与用户关联的组列表，提供对用于管理或分析目的的详细组信息的访问权限。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/groups`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回集合中所有匹配资源的 JSON 数组。如果在请求中指定了单个字段，则项目 JSON 数组将包含按指定顺序为每个匹配资源请求的字段。
 

@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/feature_endpoints.html 
+keywords: feature flags,enabled features,disabled features,feature status,feature check 
 summary: 'Astra API (ACC) 功能端点' 
 ---
 = Astra API (ACC) 功能端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+通过读取功能标志检查启用或禁用了哪些 Astra Control 功能。
 
 Feature API 提供对功能标志资源的只读访问权限，以确定在系统中启用或禁用了哪些功能。

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-k8s-v1-apps-schedules-.html 
+keywords: account schedule,k8s schedule,app schedule,stored schedule,schedule listing 
 summary: 检索计划 
 ---
 = 检索计划
@@ -10,7 +11,20 @@ summary: 检索计划
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索存储的计划。使用此选项可访问和查看计划配置详细信息。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules/{schedule_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 Schedule API 资源。
 

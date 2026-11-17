@@ -3655,4 +3655,285 @@
   <block id="737bc377487d23f0154efaa2567b0ce5" category="sidebar">Kubernetes API 资源</block>
   <block id="f32c3edaacea72c0ddb30ecf0135c4de" category="sidebar">指标</block>
   <block id="0e67fb376700a4be55101af1471c0ad4" category="paragraph">= 允许访问任何云中任何集群中标记为 "dev" 的所有命名空间及其下的所有内容："roleConstraints": [ "namespaces:kubernetesLabels='dev.example.com/appname=dev'.*"]</block>
+  <block id="5f2270e824485ec1bd38768a5d041b21" category="paragraph">管理在多租户 Astra Control 环境中隔离租户的帐户。</block>
+  <block id="ad197c6ed47b4d0504d3028ccafc0f95" category="paragraph">在集群上使用 Kubernetes 应用程序，包括 Astra Control 未管理的应用程序。</block>
+  <block id="676a3c8165055525528a59fd78040aff" category="paragraph">访问 Astra Control 用于管理应用程序的状态信息的内部集合。</block>
+  <block id="1d1b6830e2682268cbf67ad6f45c58d1" category="paragraph">创建和查看托管应用程序的备份以保护其数据。</block>
+  <block id="9b98cd4fa4fcf577fb10ab4e57d0cc76" category="paragraph">创建和查看托管应用程序的快照。</block>
+  <block id="d8f57cd358396f606661f15842d9781b" category="paragraph">为您的应用程序管理 AppMirror 关系。</block>
+  <block id="6b844af24cd9dbe913750adb7bbce08b" category="paragraph">查找自动化 Astra Control 任务所需的端点、HTTP 方法、输入参数和响应。API 为您提供对 Astra Control 资源的创建、读取、更新和删除访问权限。</block>
+  <block id="934400adb425f95c96e7002f80a2b037" category="paragraph">创建 AutoSupport（ASUP）捆绑包，并可选择将其上传至 NetApp，以帮助排除故障。</block>
+  <block id="05b157594c762d627b8703135d135d7a" category="paragraph">管理 Astra Control 用于存储应用程序备份的存储桶。</block>
+  <block id="f7dc0ad0904e05696f0cd0e954126d50" category="paragraph">管理 Astra Control 用于建立传出连接的管理员信任的证书。</block>
+  <block id="84ea8d3a5c5951374fc324e4d7d5441f" category="paragraph">管理云资源，以便连接到特定云并管理其中的群集和应用程序。</block>
+  <block id="436b859dc1288380b7ad488bcb79672a" category="paragraph">使用 Astra Control 尚未管理的 Kubernetes 集群。</block>
+  <block id="135bd225d7d61e8c13d3c35437c66ce3" category="paragraph">查看属于集群的节点。</block>
+  <block id="407095c463222124f45afbd4f59c2bbc" category="paragraph">在 Astra Control 中安全地存储和管理包含敏感信息的对象。</block>
+  <block id="9b554b7394a86367d5d96fb7aabb16de" category="paragraph">删除帐户，从访问和操作中删除指定的帐户 API 资源。</block>
+  <block id="99a7b4bfcd6a852c028d5e28e6814502" category="paragraph">删除证书。使用此端点可在不再需要特定证书 API 资源时将其删除。</block>
+  <block id="6f49f9507fe3268a9e164889aa16b8bd" category="paragraph">删除凭据资源，删除与指定凭据关联的访问权限。当您需要吊销访问权限或从系统中删除过期的凭据时，此功能非常有用。</block>
+  <block id="886d9f4de5401f9b65f21a714c9b1f38" category="paragraph">删除执行挂钩，防止它在将来的操作中运行。</block>
+  <block id="00ab3db6af0492d35270432dcb7963d9" category="paragraph">删除指定的组资源。使用此选项可从系统中删除组及其关联的角色绑定。</block>
+  <block id="606e6094ec316a8498ce2e501c52e9dc" category="paragraph">删除组的角色绑定，删除组与 Astra API 环境中指定角色之间的关联。</block>
+  <block id="d76b28d3c03ac7933c17fd3a98a635d3" category="paragraph">删除组的用户，删除指定的用户 API 资源和相关资源，如通知标记、令牌和角色绑定。</block>
+  <block id="c3099cd9cba1e92b29693b470815a1eb" category="paragraph">删除组中用户的角色绑定，从组中删除指定的角色绑定关联。</block>
+  <block id="5692b0b1c111da3a9fd3859d52cf3ecd" category="paragraph">删除组中用户的令牌。此操作从服务中删除指定的令牌 API 资源及其关联凭据。</block>
+  <block id="76790843f314f12b882ee4da87a5f9af" category="paragraph">删除组中用户的未读通知。使用此功能来管理和维护组交互中的通知状态。</block>
+  <block id="b61576e26fc4c14daaacfea08f51508c" category="paragraph">删除钩子源，从系统中删除指定的资源。</block>
+  <block id="f64672f853c3d04024fceaa3f39e88fa" category="paragraph">从系统中删除指定的许可证。使用此端点可有效管理许可证授权。</block>
+  <block id="37d72510e687acdd71d9b3cd2572c794" category="paragraph">删除程序包，从系统中删除指定的 Package API 资源。</block>
+  <block id="99f073908a093f32b4c9c0fa7cea59fb" category="paragraph">删除角色绑定，从系统中删除指定的 API 资源。</block>
+  <block id="7e8eb4ae7c396f210294bd528b988f2f" category="paragraph">删除订阅，移除指定的订阅 API 资源以及所有相关费用。</block>
+  <block id="5591cff09eca3866398e77ca2bd37d73" category="paragraph">从 Astra API 中删除用户，删除相关资源，例如通知标记、令牌和角色绑定。</block>
+  <block id="c896f34b94a3e3bd5af16267e77eaeda" category="paragraph">删除用户的组，删除指定的组 API 资源。关联的资源（例如引用该组的角色绑定）也将被删除。</block>
+  <block id="30e125b83355a9a57ae3b91a12deae72" category="paragraph">删除与用户关联的组的角色绑定。使用此功能可有效管理系统内的访问和权限。</block>
+  <block id="7a58b5604eae261a234688607b29cfa4" category="paragraph">删除用户的角色绑定，删除指定的角色绑定 API 资源。</block>
+  <block id="3da46eb2373588de47de9f473f80fe28" category="paragraph">删除指定令牌，从凭据服务中删除其关联凭据。</block>
+  <block id="3ee4495deabdc53f0a0625224c1d7120" category="paragraph">删除未读通知，从通知列表中删除指定的通知资源。</block>
+  <block id="aefedf98a51ae26a685774a18424aec8" category="paragraph">删除 AppMirror 资源，启动源和目标集群上关联资源的删除。使用此端点清理链接到 AppMirror 关系的资源。</block>
+  <block id="74846561b1e59662c616b781a2ad2c0e" category="paragraph">删除应用的应用程序备份。使用此端点通过删除不必要或过时的备份来管理存储空间。</block>
+  <block id="f0eaa30b33656401478b8957412e1e79" category="paragraph">删除应用程序的 AppMirror 资源，根据当前关系状态启动对源集群和目标集群上关联资源的删除。</block>
+  <block id="274fa4c74ad079a3a90a0d2447a300ce" category="paragraph">删除应用程序快照，从资源中删除指定的快照数据。</block>
+  <block id="e3ef0fa78560b090f3e291bbf6595619" category="paragraph">删除执行挂钩覆盖资源。使用此选项可删除应用程序中执行挂钩的自定义配置。</block>
+  <block id="d3129062337f2ede14b8b7be9ba50117" category="paragraph">删除应用的执行挂钩，防止其在以后的操作中运行。</block>
+  <block id="ce1dbde5764523842b21be9613a0403f" category="paragraph">删除计划，从 Astra 中移除指定的 Schedule API 资源。</block>
+  <block id="26cf2a1515da2d8f83651afd74e0f4f2" category="paragraph">从 Astra 删除应用，移除指定的应用 API 资源并将其与管理分离。</block>
+  <block id="7b7c2bbe27daaafa78a4d8f1f820d130" category="paragraph">删除应用程序备份，删除指定的备份资源及其关联数据。使用此选项可管理存储空间或从应用程序资源中删除过时的备份。</block>
+  <block id="5170613550ad72353fbd4a06ec6d9ed1" category="paragraph">删除存储桶。使用此操作可从存储资源中删除不需要或过时的存储桶。</block>
+  <block id="139dd162a5411a206693f183fefd2bd3" category="paragraph">删除请求的云实例以及与其关联的任何非托管群集和卷。使用此操作可删除不再需要的云资源。</block>
+  <block id="0c0176a59fc5b8a3a63aff905c298dfc" category="paragraph">从云中删除集群。使用此操作可删除指定的 Cluster API 资源并清理内部数据结构。</block>
+  <block id="53eb65d51d4482d253c3b0e46ab4b640" category="paragraph">删除指定的集群，移除其关联的 API 资源并清理内部数据结构。</block>
+  <block id="4c1ba77d6d20c12c1c1886f0ff6fd5b1" category="paragraph">删除受管集群。使用此操作可删除指定的 API 资源并清理关联的内部数据结构。</block>
+  <block id="bbceaa3fc74f3c4007832931bdf1eb76" category="paragraph">删除存储后端。使用此操作可从系统中删除所有关联的 backendConfig 和 backendNode 资源。</block>
+  <block id="85bb930df7c4a2118c464d337a64949c" category="paragraph">删除受管集群的应用程序，将应用程序从管理以及计划和备份等相关资源中删除。</block>
+  <block id="82325f3a21c9944596e03cd1c77f580d" category="paragraph">检查活动许可证和订阅为您的帐户启用了哪些功能或容量。</block>
+  <block id="594638942f62c375e0c4ca619d598707" category="paragraph">查看 Astra Control 中发生的事件以跟踪系统活动。</block>
+  <block id="eb415a4d43b59ac04d56833902c6d7ce" category="paragraph">为您的应用程序创建和管理执行挂钩。每个挂钩都包含额外的配置，并引用一个挂钩源。</block>
+  <block id="4218cade04cbc176e4dec0af73db89b9" category="paragraph">禁用特定应用程序的预加载 NetApp 执行挂钩。在使用这些端点之前，请检查页面上的弃用信息。</block>
+  <block id="ec767ab8b556994bbe0fcab5d0cc8847" category="paragraph">通过读取功能标志检查启用或禁用了哪些 Astra Control 功能。</block>
+  <block id="09fcc0977043533fcff171dbcde44613" category="paragraph">检索帐户，在响应中返回存储的帐户资源详细信息。使用此功能访问帐户信息，以便进行管理或审核。</block>
+  <block id="447d96942e4ce00e00cc6a8aab62b237" category="paragraph">检索 ASUP 资源，允许出于监控和诊断目的访问存储的 AutoSupport 数据。</block>
+  <block id="7f8fa8decce735ee009f3bc2f1c08601" category="paragraph">检索 ASUP 资源列表，提供集合中每个资源的详细信息。您可以指定单个字段来根据需要定制输出。</block>
+  <block id="35a6efee813e1dd9fb008c5e8bd0005a" category="paragraph">检索证书以在响应中提供存储的证书 API 资源详细信息。</block>
+  <block id="c04843987d49abac5bf8915fcdbedd13" category="paragraph">检索所有证书，提供集合中证书资源的完整列表。使用此功能可有效查看和管理证书配置。</block>
+  <block id="37275ced0b32d35a8a9fc947999fdb6f" category="paragraph">检索凭据，在响应正文中提供存储的凭据信息。</block>
+  <block id="8c4ca3540d01bd7ea849c726f9249eef" category="paragraph">检索所有凭据的列表。使用此选项可查看集合中的可用凭据。</block>
+  <block id="e35ad40ce2255102c4137e62e140cee6" category="paragraph">检索授权，在 JSON 响应正文中提供存储的授权 API 资源。</block>
+  <block id="41086a5204b7232793f63f53f9baff61" category="paragraph">检索授权列表，提供有关集合中所有匹配资源的信息。使用此选项可根据您的请求条件访问特定资源详细信息。</block>
+  <block id="344267c3b1e6901c783c8d00a6ea61df" category="paragraph">检索事件，返回存储的事件资源以用于分析或监控目的。</block>
+  <block id="c034d1c69755c17a4261355a3638fc5a" category="paragraph">检索事件列表。使用此选项可根据指定条件查看集合中的所有匹配资源。</block>
+  <block id="911b8776a8cd4d125644bfbdfe02c021" category="paragraph">检索执行挂钩，提供存储的资源详细信息，并根据当前条件匹配容器和镜像信息。</block>
+  <block id="20ef6a37f469e0a849da0ba410809bb1" category="paragraph">检索所有执行挂钩，提供与指定条件匹配的资源 JSON 数组。用于查看有关集合中每个挂钩的详细信息。</block>
+  <block id="9af982557ed2eb76478c446b81456c92" category="paragraph">检索功能，提供存储的功能 API 资源以用于检查或集成目的。</block>
+  <block id="86fff7aac37293a466b1b062b6019c53" category="paragraph">检索 Astra API 中可用的所有功能，提供集合中资源的完整列表。使用此选项可以根据您的请求条件查看每个功能的特定字段。</block>
+  <block id="6aaf68e27346373ea36f5b7306391e52" category="paragraph">检索组，提供存储的组资源详细信息以供查看或集成。</block>
+  <block id="df3ba56a2f228f15aae70cd9f287b128" category="paragraph">检索组的角色绑定，提供与指定组 ID 关联的角色绑定的详细信息。请使用此选项检查 Astra API 中为组配置的权限和关联。</block>
+  <block id="92d0706125b0ccb3e861ab344a1c9ab4" category="paragraph">检索组的角色绑定，提供集合中匹配资源的列表。使用此选项可访问有关与组关联的特定角色绑定的详细信息。</block>
+  <block id="7067c5c4dc8b33261803cded0575dda9" category="paragraph">检索组的用户，提供对存储的用户 API 资源详细信息的访问权限。</block>
+  <block id="b854542a671dbdc0ae2494a254d6dea8" category="paragraph">检索组中用户的角色绑定，提供特定于用户或组上下文的角色关联。使用此选项可查看分配给您帐户内用户或组的角色。</block>
+  <block id="cc0f26e37380ea26342da02fd63591a9" category="paragraph">检索组内用户的角色绑定。使用此选项可查看分配给用户的角色并有效管理访问权限。</block>
+  <block id="9a2cb1c6a29abdb81e7837f22ba573e4" category="paragraph">检索组中用户的令牌，返回存储的 API 令牌资源。使用此功能可安全地对组特定资源进行身份验证和访问。</block>
+  <block id="fbcce173349c92fe42afe0e852f3e6d2" category="paragraph">检索与组中的用户关联的令牌，提供用于身份验证和授权目的的访问详细信息。</block>
+  <block id="40c20d2b6745ddd38a8d6562a1a7da85" category="paragraph">检索组中用户的未读通知，提供尚未确认的通知详细信息。</block>
+  <block id="bbfc34bdbcadd885604b8b1411fb7c35" category="paragraph">检索组中用户的未读通知，提供匹配资源的 JSON 数组。</block>
+  <block id="b8685521b000aad5f211f966772bf571" category="paragraph">检索组的用户，提供集合中所有匹配资源的 JSON 数组。</block>
+  <block id="65ed6ed8c41b4ccbb14818194d0b8fe8" category="paragraph">检索 Astra API 中的所有组，在集合中提供匹配资源的 JSON 数组。</block>
+  <block id="40c776400ab1dbed8725c9464a94d94a" category="paragraph">检索挂钩源，在响应中返回存储的 Hook Source API 资源。使用此选项可以访问集成任务的特定挂钩源配置。</block>
+  <block id="c1259c38c36ee67bf4e69446e8ecf352" category="paragraph">检索集合中的所有挂钩源。使用此选项可查看请求中指定的每个资源的可用字段。</block>
+  <block id="1940d75ee8662971a58f99a41140c5e5" category="paragraph">检索 LDAP 组，提供存储的 LDAP 资源配置详细信息。</block>
+  <block id="cf46fe52fa4e26fde5923c68a3892906" category="paragraph">检索 LDAP 组的列表，提供对用于管理和集成目的的组配置的访问。</block>
+  <block id="dce1fedb2ee5b5b59d910525cb27d058" category="paragraph">检索 LDAP 用户，为用户管理和身份验证任务提供存储的资源配置。</block>
+  <block id="72a8de2adbbfbb7722b270ae514e6483" category="paragraph">检索 LDAP 用户列表，提供 LDAP 目录中所有用户的全面视图。</block>
+  <block id="5d09241e46531a6f9531bef889d4b0e3" category="paragraph">检索许可证，提供存储的许可证 API 资源的详细信息。使用此选项可检查当前许可证配置并确保符合许可要求。</block>
+  <block id="eb40f655f4b6424a298cbcc8532fe6ed" category="paragraph">检索集合中的所有许可证，返回匹配资源的 JSON 数组。您可以在请求中指定单个字段，以自定义为每个许可证返回的信息。</block>
+  <block id="6e8f1eebf3d4290aa015118b46716358" category="paragraph">检索通知，在响应正文中提供存储的通知资源。使用此选项可以访问有关系统内特定通知的详细信息。</block>
+  <block id="ac27283d0644837f1b2195399df5bdf5" category="paragraph">检索通知列表。使用此功能可查看资源的所有相关警报和更新。</block>
+  <block id="d5e623875cf13c243ffcb8af5da2ce1a" category="paragraph">检索存储的包，提供对包的 API 资源详细信息的访问权限。</block>
+  <block id="eace94fe1e708c617fd08bb4077ca2e6" category="paragraph">检索集合中的所有包资源，提供每个匹配资源的详细信息。使用此选项可查看返回数据中感兴趣的特定字段。</block>
+  <block id="fe71956a17b2a90c43fec7e680444159" category="paragraph">检索角色绑定，提供对存储的角色绑定 API 资源详细信息的访问权限。使用此端点可查看与特定用户或组 ID 关联的角色绑定。</block>
+  <block id="e0ed3205f61379ef45e90a33b8e6a54d" category="paragraph">检索角色绑定列表，提供集合中的匹配资源。使用此选项可按请求的顺序查看每个资源的指定字段。</block>
+  <block id="0b5ba6a2ab41b7e92f76f63d0c24ccc6" category="paragraph">检索设置，提供存储的配置详细信息以供参考或修改。</block>
+  <block id="e4cb5a7db5f19c2e380fbac164e265ef" category="paragraph">检索 Astra API 中的设置列表，提供集合中每个资源的当前配置。</block>
+  <block id="9c823fbc5ad2d57150b68fda89baa814" category="paragraph">检索订阅，返回存储的订阅 API 资源以用于监控或管理目的。</block>
+  <block id="00038922d136232573904fd880dd8f50" category="paragraph">检索订阅列表，提供集合中每个订阅的详细信息。使用此功能可有效查看和管理您的订阅。</block>
+  <block id="d00d4eaccc22ec937ab5344521c9831a" category="paragraph">检索任务，提供有关用于监视和管理目的的已存储 Task API 资源的详细信息。</block>
+  <block id="19619ae1cfb12eacdcef949a3766fe7a" category="paragraph">检索集合中的所有任务，提供可用任务资源的完整视图。使用此功能可有效识别和管理工作流程中的任务。</block>
+  <block id="7d7276d31151bf6fa51c1f20ae389648" category="paragraph">检索升级资源，提供存储的升级配置以供查看或管理。</block>
+  <block id="35f847cbeef77c62d7e11e25a545fc7b" category="paragraph">检索升级列表，提供集合中所有匹配资源的详细信息。使用此选项可按指定的顺序访问每个资源的特定字段。</block>
+  <block id="e8c111ada0195464c2187fd52715a0de" category="paragraph">检索用户，在 JSON 响应正文中返回存储的用户 API 资源。使用此选项可访问用户详细信息，以便执行管理和集成任务。</block>
+  <block id="accb3e2d46120054034b5766b0940e91" category="paragraph">检索用户的组，以结构化格式提供存储的组信息。</block>
+  <block id="5a715626af19b6343ba3a9d1871f7815" category="paragraph">检索与用户关联的组的角色绑定，提供链接到指定组的角色绑定配置的详细信息。</block>
+  <block id="89ba1b6b731ac5de5a282530eefbcb49" category="paragraph">检索与用户关联的组的角色绑定，帮助您了解分配给该组的访问权限。</block>
+  <block id="a465512e162be1a91fb1807f7055e944" category="paragraph">检索与用户关联的组列表，提供对用于管理或分析目的的详细组信息的访问权限。</block>
+  <block id="60d7e32f640b68d018b1bd5dc0880782" category="paragraph">检索用户的角色绑定，提供与用户角色关联的特定权限。使用此选项可查看控制对帐户或组内资源的访问的角色分配。</block>
+  <block id="1f4ed9ee6075f5a61d844e628d2dfa91" category="paragraph">检索用户的角色绑定，为您提供有效管理用户权限所需的信息。</block>
+  <block id="b90218ecac7d75e881d5e1a1a70742f9" category="paragraph">检索令牌，在响应中提供存储的 Token API 资源。</block>
+  <block id="6aefda16cb063fa9aabaf43044229813" category="paragraph">检索用户的令牌列表，提供与用户帐户关联的可用令牌。</block>
+  <block id="a9e01d11aa3c19f577dd08272584352c" category="paragraph">检索未读通知，提供存储的通知详细信息以供审阅或操作。</block>
+  <block id="df12dcc1cb9ee8153ab6aa0d5255e84c" category="paragraph">检索用户的未读通知，为您提供需要注意的最新警报和更新。</block>
+  <block id="e10b7d3bb4e47841364b976c48a2fec2" category="paragraph">检索系统中所有用户的列表，提供对用户信息和配置的访问权限。使用此功能可有效查看或管理用户帐户。</block>
+  <block id="234540a7c1ed759de7ee45176407dd39" category="paragraph">检索 AppMirror 资源，为应用程序镜像活动提供存储的配置详细信息。</block>
+  <block id="7d843067d49b5d73356a9cb4bfca68a1" category="paragraph">检索 AppMirror 资源列表，为您的应用程序提供可用的资源配置。</block>
+  <block id="797c64c99efa0b188ae8c5346b423da5" category="paragraph">检索应用程序的应用程序资产，提供存储的资产详细信息以供进一步处理或分析。</block>
+  <block id="2f79051605031945e896a6894b69b9f3" category="paragraph">检索应用程序的资产，提供有关集合中可用资源的信息。使用此端点可根据需要查看每个资产的特定字段。</block>
+  <block id="253ec54ff5184b0e262ff25882ab51c8" category="paragraph">检索应用程序的应用程序备份，在 JSON 响应正文中提供存储的备份资源信息。</block>
+  <block id="47d6e889b20dcb552918871d2a20b1e0" category="paragraph">从应用程序备份中检索应用程序资产，在 JSON 响应正文中提供存储的资源。使用此端点访问特定资产以进行恢复或分析。</block>
+  <block id="772b24169bc798829d23fc84acbd94e9" category="paragraph">从应用程序备份检索应用程序资产。使用此选项可访问备份中包含的资源的详细信息。</block>
+  <block id="6aa110e780bdcbabd8225d74f4b1e061" category="paragraph">检索应用程序的应用程序备份。使用此选项可检查与应用程序关联的备份配置和状态。</block>
+  <block id="14b053ca14824fdd13b87cd198db8450" category="paragraph">检索应用程序的 AppMirror 资源，提供对应用程序镜像的存储配置详细信息的访问权限。</block>
+  <block id="6bcd82264e27dc6aac494e354b0e7510" category="paragraph">检索应用程序的 AppMirror 资源，返回集合中所有匹配资源的 JSON 数组。使用此选项可以访问应用程序环境中每个资源的特定字段。</block>
+  <block id="b94b7e57b4df36de8810f4705f7ccb45" category="paragraph">检索应用程序快照，提供存储的快照数据以供查看或分析。</block>
+  <block id="5004a3d78c4cc45ceb9b78f36b52e995" category="paragraph">检索应用程序快照的应用程序资产，在 JSON 响应正文中提供存储的资产详细信息。</block>
+  <block id="8fcca50a54ef18a790e7518f7cfeb1a1" category="paragraph">检索应用程序快照的应用程序资产，提供与快照关联的资源的详细视图。</block>
+  <block id="475fcd217a3ca8c6bdc886fa80388c3a" category="paragraph">检索应用程序的应用程序快照，提供应用程序可用快照的全面视图。</block>
+  <block id="dd4869971587082a81a81bf636cd4e1a" category="paragraph">检索执行挂钩覆盖资源，为集成和自动化工作流程提供存储的配置详细信息。</block>
+  <block id="d73f7c3c168427a3116000b5f687c03b" category="paragraph">检索应用的执行挂钩覆盖资源，提供对在特定操作期间修改应用程序行为的自定义配置的访问。</block>
+  <block id="a05d3d522f5f0f9b05e39818c34e0edf" category="paragraph">检索应用的执行挂钩。使用此选项可根据当前条件检查存储的执行挂钩资源及其关联的容器和镜像。</block>
+  <block id="f682a4a05dcd24e8bc407f656f78d80b" category="paragraph">检索应用程序的执行挂钩，提供集合中所有匹配资源的 JSON 数组。使用此选项可根据需要查看每个匹配资源的特定字段。</block>
+  <block id="f19b71252e530ed1d82da941acc298e0" category="paragraph">检索存储的计划。使用此选项可访问和查看计划配置详细信息。</block>
+  <block id="7bf520a77c86f0511bf2668e048dd188" category="paragraph">检索应用程序的计划列表。使用此选项可查看与应用程序关联的计划配置。</block>
+  <block id="f73487fe1de5688fbc3aac9ebc6cf4fa" category="paragraph">检索应用的卷，提供有关存储的卷资源的详细信息。</block>
+  <block id="e182a08d1c74df7c7ecaf5c8f3d327d2" category="paragraph">检索指定应用的卷列表。使用此选项可查看与应用关联的每个卷的详细配置和属性。</block>
+  <block id="1485b27862239c0db1ad1d4711a596f4" category="paragraph">从 Astra API 检索应用程序，提供存储的应用程序详细信息以供进一步分析或管理。</block>
+  <block id="6130686df7082b92fdf99a62cfd08b8c" category="paragraph">检索所有应用程序的列表，提供集合中每个匹配资源的详细信息。使用此选项可访问您感兴趣的应用程序的特定字段。</block>
+  <block id="32cf3744f85934b2570422c1ba381007" category="paragraph">检索帐户的所有指标，提供对性能和利用率的见解。</block>
+  <block id="8489b13dd24e9e0f65981df792d830ce" category="paragraph">检索应用程序备份，提供对存储的备份资源的访问权限，以便进一步检查或恢复。</block>
+  <block id="6c1793e89a2d3c6ec91d7fb2839a563e" category="paragraph">从应用程序备份中检索应用程序资产。用于访问存储的资产配置以进行恢复或分析。</block>
+  <block id="b71bd5828a63f414a686889dcd68cea9" category="paragraph">检索应用程序备份的应用程序资产，提供集合中所有匹配资源的 JSON 数组。使用此选项可按指定的顺序查看每个资源的特定字段。</block>
+  <block id="81c8d070dd9817e9fbfe35f1f7615ed7" category="paragraph">检索所有应用程序备份，提供集合中可用备份资源的完整列表。您可以在请求中指定单个字段，以定制返回的信息。</block>
+  <block id="d26688f5dc36664f724291631e0a8af5" category="paragraph">检索存储桶，在响应中提供存储的存储桶配置详细信息。</block>
+  <block id="82b476a70847bc6ee7d5c2833c98960d" category="paragraph">检索存储桶列表，提供集合中所有匹配资源的 JSON 数组。使用此选项可检查可用存储桶及其指定字段。</block>
+  <block id="d6726c4ec02755d98616317ad8b0d106" category="paragraph">检索云资源，为云管理任务提供存储的配置详细信息。</block>
+  <block id="e93a5a4e270e3dea5a1b80dc75faf7ab" category="paragraph">检索云的集群，提供对存储的集群 API 资源数据的访问。</block>
+  <block id="f2d53ffbe49fd18d10b3d2ebc1a8defd" category="paragraph">检索云的集群节点，提供对存储的节点配置的访问以进行云资源管理。</block>
+  <block id="abf572fb5ff8d37f2c3a15d4fa89e18f" category="paragraph">检索云的集群节点，提供指定云环境中可用节点的详细信息。</block>
+  <block id="4eec5a11fbd68cb26a62d1bdfe5bb4a8" category="paragraph">检索云的命名空间，为云操作提供存储的命名空间 API 资源。</block>
+  <block id="09291fcf503f2c62768aa4c6c9499df2" category="paragraph">检索云的命名空间，提供集合中所有可用匹配资源的列表。</block>
+  <block id="3f8ae2f69c26be5a367a062659cbbb79" category="paragraph">检索云的存储类，为存储资源提供可用的类配置。</block>
+  <block id="25f0a211882ccbd839e00af6907b343c" category="paragraph">检索云的存储类列表，提供有关云存储资源的可用配置的详细信息。</block>
+  <block id="c37dbad3a062492868759fec722668de" category="paragraph">检索云的集群列表。使用此选项可查看指定云环境中可用的集群。</block>
+  <block id="94e1b5d151d26be63c7f2903d651fec1" category="paragraph">检索云资源列表。使用此选项可查看环境中的可用云。</block>
+  <block id="b723bfe2a6875b25664ebd4e9dcffb7d" category="paragraph">检索存储的集群资源，为管理和操作任务提供集群详细信息。</block>
+  <block id="7642b4ce9c23ebce68ec6ea1e457a624" category="paragraph">检索集群的集群节点，提供有关指定集群内的节点配置和状态的详细信息。</block>
+  <block id="1d3b61d0cee2af22fd2b8b722aea95c8" category="paragraph">检索集群的集群节点。使用此选项可查看指定集群中的所有节点及其详细信息。</block>
+  <block id="da03be15b84c3c93b467166b59bb0503" category="paragraph">检索集群的命名空间，提供存储的命名空间 API 资源详细信息。</block>
+  <block id="2cfde5d36a21eb927c11cfad1d9d55e2" category="paragraph">检索集群的命名空间，提供集合中所有匹配资源的列表。使用此选项可根据需要查看每个资源的特定字段。</block>
+  <block id="c8b6aef5232c4c1ada524a8dda8c84d5" category="paragraph">检索集群的存储类，提供用于管理集群内存储资源的存储配置详细信息。</block>
+  <block id="46107727faf7ae683a9df5765049de79" category="paragraph">检索集群的存储类。使用此选项可访问有关指定集群内可用存储配置的详细信息。</block>
+  <block id="bfda47e5e0383fec40868fad03e7a712" category="paragraph">检索集群列表，提供集合中每个集群的详细信息。使用此选项可评估集群的当前配置和状态。</block>
+  <block id="9a3433451f80379229261b5c6c763fa7" category="paragraph">检索托管集群，提供存储在托管集群 API 资源中的详细信息。使用此信息了解集群的当前配置和状态。</block>
+  <block id="11786d995bbfb4a54d0ecf96ed1ca6cf" category="paragraph">检索 K8s API 资源，在 JSON 响应正文中提供特定资源以供进一步检查或集成。</block>
+  <block id="7fc83b9cc436a14bdd176b58b42c74d8" category="paragraph">检索受管集群的 Kubernetes API 资源列表。使用此选项可查看指定集群中的可用资源。</block>
+  <block id="c9d1103ecaba82f65ba4c0e60c86b315" category="paragraph">检索受管集群的应用程序资产，为管理任务提供对存储资源详细信息的访问权限。</block>
+  <block id="08e01ce657a8816b4922f77eef710b97" category="paragraph">检索受管集群的应用程序资产，提供与集群应用程序相关的资源列表。使用此选项可识别和访问受管集群中的特定应用程序资源。</block>
+  <block id="684293b470f5272c5a619541ae99b187" category="paragraph">检索受管集群的集群节点，提供有关该节点在集群中的配置和状态的详细信息。</block>
+  <block id="1b0b7bb181dc042b5910033e24538729" category="paragraph">检索受管集群的集群节点，提供集群内节点的详细视图。</block>
+  <block id="c0927160dda03e1225ffeadb410c08e9" category="paragraph">检索受管集群的命名空间，提供集群内命名空间资源的存储配置详细信息。</block>
+  <block id="145346ce0ef58d8d0c46a84105dabbe2" category="paragraph">检索受管集群的命名空间。使用此选项可查看与集群相关联的命名空间并有效管理它们。</block>
+  <block id="849203b8a8bb1f58fa75dedb8e8460ea" category="paragraph">检索受管集群的存储类，提供有关资源管理存储配置的详细信息。</block>
+  <block id="c86c6dc52dfce0ceb711d722b81a8d44" category="paragraph">检索受管集群的存储类，为集群内的存储资源提供可用配置。</block>
+  <block id="6d1c20943bfc933db8864b0dd36c7141" category="paragraph">检索受管集群的卷，提供对存储的卷信息的访问以进行进一步管理或分析。</block>
+  <block id="706188b8151901c1da1c779e9170264e" category="paragraph">检索受管集群的卷列表。使用此选项可查看集群中的可用存储资源。</block>
+  <block id="8aa5a145ffe5de042dfd9eda3b6f2931" category="paragraph">检索 Astra API 中的所有托管集群，提供符合指定条件的集群列表。使用此选项可查看和管理环境中的集群。</block>
+  <block id="b9b9fb888315bd44962102da44c9cbd2" category="paragraph">检索命名空间，提供对用于管理应用程序数据的存储命名空间 API 资源的访问权限。</block>
+  <block id="c1fa52550c9c303f8444caf7d0bd6d14" category="paragraph">检索集合中所有命名空间的列表。使用此选项可查看可用命名空间及其配置。</block>
+  <block id="279aa42d010ea177dedf5931ea600b68" category="paragraph">检索存储后端，为后端资源提供存储的配置详细信息。</block>
+  <block id="a1e4902236e4f912439c3f344092f037" category="paragraph">检索存储后端的卷，提供存储的卷 API 资源以供进一步检查或管理。</block>
+  <block id="0a802d395e522466e2e70a5241e8ff29" category="paragraph">检索存储后端的卷列表，提供对用于管理或分析的卷配置的访问权限。</block>
+  <block id="b965976d9b09025f82ff492a56bd7e23" category="paragraph">检索存储后端列表。使用此选项可查看用于管理和配置的所有可用存储资源。</block>
+  <block id="ce80209706677aaf2a4e45dd253b2ee7" category="paragraph">检索卷，提供指定卷资源的存储配置详细信息。使用此操作可检查存储环境中卷的当前状态。</block>
+  <block id="c14373c97c1f30ba28a7b08f8eb8f57e" category="paragraph">检索卷列表，提供集合中每个卷的详细信息。使用此选项可查看所有匹配卷中的特定感兴趣字段。</block>
+  <block id="9ad5e8e4900e3e2f635a3a686aa93710" category="paragraph">检索受管集群的应用程序，在 JSON 响应正文中提供存储的应用程序 API 资源详细信息。</block>
+  <block id="c310098c238573f71ab694081cb56945" category="paragraph">检索受管集群的应用程序列表。使用此选项可查看当前在集群环境中管理的应用程序。</block>
+  <block id="2ca0d7ff12e6d2e001d7c9bdc3cac82e" category="paragraph">检索 Astra API 中的所有帐户，返回集合中匹配资源的 JSON 数组。使用此选项可根据指定字段查看帐户详细信息。</block>
+  <block id="d1f539ad1e1bcff99839e3c7f7f5cb09" category="paragraph">在 Astra Control 中管理组，包括属于这些组的用户。</block>
+  <block id="175a88f639190e1a0965b33e765fdf68" category="paragraph">将挂钩源与执行挂钩分开管理，以便多个挂钩可以共享一个源。更新共享源将在其使用的任何地方应用更改。</block>
+  <block id="751f57226032c4320ca090547c033a21" category="paragraph">浏览集群上的 Kubernetes API 资源，查看 Astra Control 支持哪些资源。这些端点是只读的。</block>
+  <block id="5541f9a79c2d098ac32bc1d5e3385540" category="paragraph">查看配置的轻型目录访问协议（LDAP）服务器上的组。这些端点是只读的。</block>
+  <block id="fc07aeed833e63e692c103acd2eb44d0" category="paragraph">查看配置的轻型目录访问协议（LDAP）服务器上的用户。这些端点是只读的。</block>
+  <block id="91e677bbf80dfedda4c87aaccf87fc55" category="paragraph">管理加载到 Astra Control 帐户中的许可证。</block>
+  <block id="1b154832fbc0741725110c91c4d7211d" category="paragraph">管理 Astra Control 管理的 Kubernetes 集群。</block>
+  <block id="9ad9ef931c0e4d7206bd7dc8b9a7e121" category="paragraph">检索 Astra Control 帐户的指标，以监控其活动和资源使用情况。</block>
+  <block id="159b18de3ddee3bf73b0d73fb34b13e7" category="paragraph">查看属于集群的命名空间。这些端点是只读的。</block>
+  <block id="34a4ab485042d090e10acf97410d5efb" category="paragraph">查看路由到每个用户的通知目标的事件。</block>
+  <block id="1478d84ea1ae9cbae4a43b97413bb694" category="paragraph">管理在 Astra Control 中注册的可安装软件包。您注册的软件包决定了哪些升级可用。</block>
+  <block id="4bb6cb6f366362572f5cbc4a30f37693" category="paragraph">创建 ASUP 资源以指定自动支持上传所需的值。</block>
+  <block id="f8d2d916547b1e1a495bfa5c277b8a74" category="paragraph">为证书 API 资源创建一个新证书。使用此选项可指定安全通信所需的值。</block>
+  <block id="7944c61415a868000923fc776b1ceaed" category="paragraph">创建新凭据，指定凭据 API 资源的所需值。使用此功能可有效管理访问和身份验证设置。</block>
+  <block id="3e2af56b8b9206ceb0ed2295481a57fa" category="paragraph">创建一个新的执行挂钩，指定执行挂钩 API 资源的值。使用此选项可为您的工作流定义自定义自动化任务。</block>
+  <block id="5e297fdc47380601ece7d97f9af7391f" category="paragraph">为组创建新的角色绑定，为 Astra 环境中的组分配特定权限。使用此端点有效管理基于组的操作的访问控制。</block>
+  <block id="c892e470ebf4138e5aea6fba9b81eea4" category="paragraph">为组中的用户创建新的角色绑定，为用户建立在指定组上下文中执行操作的权限。</block>
+  <block id="a361f5584c3b8835946160c75fcb2ba0" category="paragraph">为组中的用户创建新令牌，指定所需的值以验证和授权组操作。</block>
+  <block id="d20680e03659d9c29c2b6a8b842619a2" category="paragraph">为组创建新用户。使用此功能可以有效地管理组成员和权限。</block>
+  <block id="992ff24466a3597494ac94a8b3f01ac4" category="paragraph">创建一个新组，定义 Group API 资源的所需值。使用此功能可以在您的环境中有效地组织和管理资源。</block>
+  <block id="3a239f0f5634b44aba1cce5533465589" category="paragraph">创建一个新的挂钩源，指定 Hook Source API 资源的值以启动创建过程。当您需要为自动化或集成任务建立挂钩源时，请使用此端点。</block>
+  <block id="e4cd1fa8dfb564f2e94207fa5783e77e" category="paragraph">创建一个新许可证，指定许可证 API 资源的所需值。使用此端点可有效管理环境中的许可需求。</block>
+  <block id="c13203a4e9870eb0076db65967e839fe" category="paragraph">在 Astra API 中创建包，为包 API 资源指定所需的值。使用此选项可定义包的属性和配置。</block>
+  <block id="b12d99f8ac40b6aafecc5516d738c819" category="paragraph">在 Astra API 中创建角色绑定，为角色绑定资源指定所需的值。使用此选项可为环境中的用户定义权限和访问控制。</block>
+  <block id="188ea0204b43b2f9c1c82941fa321968" category="paragraph">创建新订阅，指定订阅 API 资源的所需值。使用此选项可通过根据您的要求定制的自定义设置启动订阅。</block>
+  <block id="0a9bca0a16dd4a09ec36485213cf4653" category="paragraph">为与用户关联的组创建角色绑定。使用此选项可将特定权限分配给 Astra API 环境中的组。</block>
+  <block id="3320036f1d14586ebb44c057258ca03e" category="paragraph">为用户创建一个新组，指定组资源所需的值。使用此端点将用户组织成组，以便更好地进行管理和访问控制。</block>
+  <block id="648469fe15d4dc507664a3613ac234b1" category="paragraph">为用户创建角色绑定，为角色绑定 API 资源指定所需的值。使用此选项可为应用程序中的用户分配特定角色和权限。</block>
+  <block id="721a7cc7c8d010ddb61d6567adb1f4db" category="paragraph">为用户创建新令牌，指定 Token API 资源所需的值。当您需要安全地进行身份验证并访问 Astra API 服务时，请使用此选项。</block>
+  <block id="ef30a8d56ebb5bbe71d75ef2d285cbef" category="paragraph">在 Astra API 中创建新用户，指定用户 API 资源的所需值。使用此选项可以管理 Astra 环境中的用户访问和权限。</block>
+  <block id="616d7016f288ecebbbe6c9a60bfb68a5" category="paragraph">创建新的 AppMirror 资源，指定跨环境复制和同步应用程序所需的值。</block>
+  <block id="86123b4ad864a76964d143f861b48858" category="paragraph">为应用程序创建应用程序备份，指定备份资源所需的配置。使用此选项可保留应用程序的当前状态以供将来恢复或分析。</block>
+  <block id="c1c24e8eb886bffb6deb96f2f67cc7c4" category="paragraph">为应用程序创建 AppMirror 资源，指定镜像所需的配置值。使用此选项可根据应用程序的需求建立镜像设置。</block>
+  <block id="cf7e632d16b4800f978f31300a7cd480" category="paragraph">为应用程序创建新的应用程序快照，捕获应用程序的当前状态以用于备份或恢复目的。</block>
+  <block id="6446421264f76f6cd0ea1ee843a902c0" category="paragraph">为应用创建执行挂钩覆盖资源，指定所需的自定义值。使用此选项可根据特定应用程序要求定制执行挂钩。</block>
+  <block id="312bd5d6eaca7a4edc37487d6817ce59" category="paragraph">为应用创建新的执行挂钩，以指定自动化流程或集成的所需值。</block>
+  <block id="17ddafecf69640d8d868d29bfd65f005" category="paragraph">为应用创建一个新计划，指定计划任务或事件所需的参数。使用此选项可根据定义的计划自动执行应用程序操作。</block>
+  <block id="d59f9ce2491e277c51b434b3efff92d8" category="paragraph">在 Astra API 中创建一个新应用。使用此端点可指定 App API 资源的所需值，以支持应用程序的配置需求。</block>
+  <block id="93f6eb5bbb150f03db470c3fac0db3dc" category="paragraph">在 Astra API 中创建新存储桶，指定要建立的存储桶 API 资源的所需值。</block>
+  <block id="ba456e62316a192c05796a0b82d71ef4" category="paragraph">为云环境创建集群，指定 Cluster API 资源所需的配置。</block>
+  <block id="a66a58808d03a766f3b10ff0367c0b5d" category="paragraph">在 Astra API 中创建新的云资源。使用此选项可指定云配置所需的值。</block>
+  <block id="afaef3d1db4dc896dacac0f2ba16e73d" category="paragraph">创建托管群集，为托管群集 API 资源指定所需的值。使用此选项可配置和部署根据您的特定要求量身定制的群集。</block>
+  <block id="aecc679a6e06a8443aa8e866520e7b2f" category="paragraph">创建一个新的存储后端，指定所需的资源配置值。使用此端点设置一个根据您的需求量身定制的存储后端。</block>
+  <block id="a04727e82ca8d87e0e70fde4b587cdc1" category="paragraph">为受管集群创建新应用，指定应用 API 资源配置所需的值。使用此端点在受管集群环境中启动应用程序。</block>
+  <block id="ffc8331c131f79cd00894d0f0f64b76c" category="paragraph">创建一个新帐户，指定帐户 API 资源的所需值。使用此选项设置和配置用于访问服务的帐户详细信息。</block>
+  <block id="f70821e48837e9e613566c2bbe756ac5" category="paragraph">通过将存储的资源替换为提供的 JSON 请求正文来修改帐户，确保不可由用户修改的键值保持不变。</block>
+  <block id="344cd33ceb3f9ffd2132c086bb04d769" category="paragraph">修改证书，更新信任存储以反映证书状态或内容的更改。使用此端点可确保信任存储准确表示受信任和不受信任的证书。</block>
+  <block id="7beb16866741eb42b75bea445c272581" category="paragraph">通过将其存储的资源替换为提供的 JSON 请求正文来修改凭据，确保保留您无法修改的键值。</block>
+  <block id="1d11870d0058015a77cf11e3854756c5" category="paragraph">修改执行挂钩，以使用新的配置值更新其存储的资源。使用此选项可确保使用执行挂钩的应用程序的未来操作反映更新的设置。</block>
+  <block id="2299b4f4c324f31beafc1597b737ea3d" category="paragraph">通过将其存储的资源替换为提供的 JSON 请求正文来修改组，确保保留您无法更改的键值。</block>
+  <block id="3aabd2df5392b46af2d5f546811f60ee" category="paragraph">修改组的角色绑定。使用此选项可更新与环境中特定用户组关联的访问权限。</block>
+  <block id="d6e60d336cf51c0dc4637713f3417d1e" category="paragraph">通过用提供的 JSON 请求正文替换整个存储资源来修改组的用户。使用此端点可以更新用户详细信息，同时保留不可修改的键值。</block>
+  <block id="66cd18e1c7cff302457809145909930d" category="paragraph">修改组中用户的角色绑定，使用提供的详细信息更新存储的资源，同时保留不可由用户修改的键值。</block>
+  <block id="9016f4d56decc23f115a5ac322db52c6" category="paragraph">修改组中用户的令牌，根据提供的 JSON 请求正文更新存储的资源。</block>
+  <block id="ed17403ac1b309bf72f6f1c31ec476a6" category="paragraph">修改 Astra API 中的挂钩源。您可以使用此端点更新与应用程序快照关联的执行挂钩的源代码。</block>
+  <block id="7aaa87d5b14b550b8d7c06641b8f5b4e" category="paragraph">通过使用提供的信息替换存储的数据，同时保留某些关键值，来修改许可证资源。您可以使用此端点高效地更新许可证授权。</block>
+  <block id="1dad9dba705d10b88be6513c84f7e108" category="paragraph">修改角色绑定以根据提供的 JSON 请求正文更新其配置。</block>
+  <block id="aec253370adea93827ebac9fcf011ff0" category="paragraph">通过将存储的资源替换为提供的 JSON 请求正文来修改设置，同时保留不可由用户修改的键值。使用此端点可以在维护基本系统参数的同时高效地更新配置设置。</block>
+  <block id="74468d0b1dc3da392d72515523747e0c" category="paragraph">通过使用提供的 JSON 请求正文替换存储的资源来修改订阅，同时保留用户无法更改的键值。如果需要更新订阅详细信息，同时确保某些值保持不变，请使用此端点。</block>
+  <block id="dd267a4f898a33181d50e3e687b86bdc" category="paragraph">通过将整个存储资源替换为提供的 JSON 请求正文来修改升级。使用此端点可根据所需状态安排或运行升级。</block>
+  <block id="ddb408611429829cb2330e987e67ea72" category="paragraph">通过用提供的 JSON 请求正文替换整个存储资源来修改用户，同时保留不可由用户修改的键值。使用此端点可以高效地更新用户详细信息，而不会影响不可变属性。</block>
+  <block id="0935eca605303c0772ba8c4c440c26e3" category="paragraph">修改用户的组，根据提供的 JSON 请求正文更新组配置。</block>
+  <block id="424a32f38a590565715f0e28a6710dd4" category="paragraph">修改与用户关联的组的角色绑定。使用此选项可更新特定用户组的访问权限。</block>
+  <block id="f28d6cee6b4d0d4d1506729e641baaa3" category="paragraph">修改用户的角色绑定，根据提供的规范更新存储的资源。使用此端点可以在 Astra API 环境中调整用户权限。</block>
+  <block id="dfea3f1e049ca9e0809d0f38a3cb94d4" category="paragraph">通过将存储的资源替换为提供的 JSON 请求正文来修改令牌，同时保留用户无法修改的键值。</block>
+  <block id="848e3253f14d48218f737b78699ed4b0" category="paragraph">通过使用提供的 JSON 请求正文替换存储的资源来修改 AppMirror 资源，同时保留用户不可修改的键值。使用此端点可根据应用程序工作流的需要更新 AppMirror 的状态。</block>
+  <block id="853a3180fbc717117de8e96a739f576a" category="paragraph">修改应用程序的 AppMirror 资源，保留键值，同时用新数据替换资源的其余部分。当您需要更新 AppMirror 配置而不更改某些基础属性时，这非常有用。</block>
+  <block id="3fc3f70ccce31ca13809b019eacc189c" category="paragraph">通过使用提供的 JSON 请求正文替换整个存储资源来修改执行挂钩覆盖资源。使用此操作可更新应用于指定应用程序的执行挂钩。</block>
+  <block id="240694ef4f20ab3c895614dbb48c4e8b" category="paragraph">修改应用的执行挂钩，影响未来使用更新的挂钩的应用程序操作。</block>
+  <block id="c985ce62289959ac9372129c2c7d0cf9" category="paragraph">通过将存储的资源替换为提供的 JSON 请求正文来修改计划，同时保留不可由用户修改的键值。</block>
+  <block id="75e5ef1f644dc91e068295c5ab7a547c" category="paragraph">通过将整个存储资源替换为提供的 JSON 请求正文来修改应用。</block>
+  <block id="78d50b30d9794c8b6636a53a201658d8" category="paragraph">通过使用提供的 JSON 请求正文更新其存储的资源来修改存储桶，同时保留基本键值。使用此选项可确保存储桶的配置反映您所需的设置，同时保持系统完整性。</block>
+  <block id="fa7004fdea5ec4c0fcdf48ecab772b6d" category="paragraph">通过将现有配置替换为提供的 JSON 请求正文，同时保留不可修改的键值，来修改云资源。使用此选项可启动存储阵列和集群的重新发现。</block>
+  <block id="b5d52d49fcfd0312e4c52ecfdd751d44" category="paragraph">通过将存储的资源替换为提供的 JSON 请求正文来修改云集群。使用此选项可以更新集群配置，同时保持不可修改的键值。</block>
+  <block id="403e884a7992f12ee22897eefc5d9ba5" category="paragraph">通过将整个存储资源替换为提供的 JSON 请求正文来修改集群。如果集群处于托管状态，则对 credentialID 的任何更新最终都将触发收集集群的另一次尝试。</block>
+  <block id="f9046adae6cdc7592651ac9806243781" category="paragraph">通过将整个存储资源替换为提供的 JSON 请求正文来修改托管集群。此操作会保留不可由用户修改的关键值，确保在更新集群的其他方面时，基本配置保持不变。</block>
+  <block id="628b068633446831149cd0b18e754cdc" category="paragraph">通过将整个存储资源替换为提供的 JSON 请求正文来修改存储后端。此操作可能会导致特定于存储后端类型的配置更改，包括存储后端的初始安装。</block>
+  <block id="e6bd9c4b893337f402dfb4865c1ed4f9" category="paragraph">修改受管集群的应用，用提供的 JSON 请求正文替换整个存储资源。使用此选项可更新应用配置，同时保留不可由用户修改的键值。</block>
+  <block id="1d38b483dd82dc8580649c8108f8aca3" category="paragraph">管理向帐户中的用户或组授予权限的角色绑定。角色绑定会将用户或组链接到一个角色。</block>
+  <block id="7c254f27941388a2fad349812a69faa4" category="paragraph">定义应用程序上的数据保护操作计划。</block>
+  <block id="7c8bfb9dddaac0cfc0aa2a20c4d8afc1" category="paragraph">管理帐户设置，这些设置是配置 Astra Control 帐户中功能的键/值对。</block>
+  <block id="21e5bc54edcd4bb300a6abf35e9a04c5" category="paragraph">管理存储后端，它们是您的托管集群和应用程序可以使用的存储服务提供者。</block>
+  <block id="5fd966c29a06b25ca92a034f606515a1" category="paragraph">查看集群上可用的存储类。</block>
+  <block id="61d4ccbc4dfb7206bde389d6a96f191e" category="paragraph">查看您的 Astra Control 帐户的有效订阅。</block>
+  <block id="66a50cbb6f34903cc6d1a7c06240d83c" category="paragraph">查看 Astra Control 跟踪的长时间运行的任务，以便您可以监控其进度。</block>
+  <block id="7be5914c775d64c9281f6f407f20a5df" category="paragraph">创建并管理用于向 Astra Control 进行身份验证的 API 访问令牌。</block>
+  <block id="f33a98e0bcf87f81c38af0d73d9f4dfd" category="paragraph">查找用户尚未阅读的通知，并将其标记为已读。</block>
+  <block id="578c85a7741a81701b35e4b279b2576d" category="paragraph">查找符合升级条件的软件组件并开始升级。您注册的软件包决定了哪些升级可用。</block>
+  <block id="9f2bbb24a1a79ead62b62a22338574d7" category="paragraph">管理可以与 Astra Control 交互的用户。</block>
+  <block id="02e6a14a8cc55422260f470622c455df" category="paragraph">查看与应用程序关联的 Kubernetes 卷，以了解它们如何使用存储。</block>
 </blocks>

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-core-v1-groups-rolebindings.html 
+keywords: role binding,create role,group role,account role,role management 
 summary: 为组创建新角色绑定 
 ---
 = 为组创建新角色绑定
@@ -10,7 +11,20 @@ summary: 为组创建新角色绑定
 :imagesdir: ../media/
 
 
+[role="lead"]
+为组创建新的角色绑定，为 Astra 环境中的组分配特定权限。使用此端点有效管理基于组的操作的访问控制。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/roleBindings`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 指示要创建的 Role Binding API 资源的所需值。
 

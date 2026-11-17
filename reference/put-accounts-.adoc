@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/put-accounts-.html 
+keywords: replace resource,account collection,enabled timestamp,preserve key values,modify account 
 summary: 修改账户 
 ---
 = 修改账户
@@ -10,7 +11,20 @@ summary: 修改账户
 :imagesdir: ../media/
 
 
+[role="lead"]
+通过将存储的资源替换为提供的 JSON 请求正文来修改帐户，确保不可由用户修改的键值保持不变。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 将整个存储资源替换为提供的 JSON 请求正文，同时保留不可由用户修改的键值。
 

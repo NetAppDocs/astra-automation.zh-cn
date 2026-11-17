@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/execution_hook_endpoints.html 
+keywords: execution hooks,hook configuration,hook sources,application hooks,hook management 
 summary: 'Astra API (ACC) 执行挂钩端点' 
 ---
 = Astra API (ACC) 执行挂钩端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+为您的应用程序创建和管理执行挂钩。每个挂钩都包含额外的配置，并引用一个挂钩源。
 
 Execution Hook API 可实现对执行挂钩的简单管理。执行挂钩包含其他配置和对挂钩源资源的引用。

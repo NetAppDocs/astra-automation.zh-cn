@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-topology-v1-clusters-.html 
+keywords: remove cluster,cluster deletion,delete cluster resource,account cluster management,cluster cleanup 
 summary: 删除集群 
 ---
 = 删除集群
@@ -10,7 +11,20 @@ summary: 删除集群
 :imagesdir: ../media/
 
 
+[role="lead"]
+删除指定的集群，移除其关联的 API 资源并清理内部数据结构。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clusters/{cluster_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 删除指定的 Cluster API 资源。
 

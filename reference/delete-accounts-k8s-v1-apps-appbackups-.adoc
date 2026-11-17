@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-k8s-v1-apps-appbackups-.html 
+keywords: application backup,delete backup,container app,app backup removal,kubernetes app,backup data delete 
 summary: 删除应用程序的应用备份 
 ---
 = 删除应用程序的应用备份
@@ -10,7 +11,20 @@ summary: 删除应用程序的应用备份
 :imagesdir: ../media/
 
 
+[role="lead"]
+删除应用的应用程序备份。使用此端点通过删除不必要或过时的备份来管理存储空间。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 删除指定的 Application Backup API 资源。正在进行的备份将被取消，然后删除。
 

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-k8s-v2-apps.html 
+keywords: apps creation,k8s apps,kubernetes apps,account resource,app resource 
 summary: 创建新应用 
 ---
 = 创建新应用
@@ -10,7 +11,20 @@ summary: 创建新应用
 :imagesdir: ../media/
 
 
+[role="lead"]
+在 Astra API 中创建一个新应用。使用此端点可指定 App API 资源的所需值，以支持应用程序的配置需求。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v2/apps`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 指示要创建的 App API 资源的所需值。
 

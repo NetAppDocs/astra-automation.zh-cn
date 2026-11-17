@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-k8s-v1-apps-appsnaps-.html 
+keywords: application snapshot,delete snapshot,remove app snapshot,app snapshot removal,delete appSnap 
 summary: 删除应用程序快照 
 ---
 = 删除应用程序快照
@@ -10,7 +11,20 @@ summary: 删除应用程序快照
 :imagesdir: ../media/
 
 
+[role="lead"]
+删除应用程序快照，从资源中删除指定的快照数据。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 删除指定的 Application Snapshot API 资源。
 

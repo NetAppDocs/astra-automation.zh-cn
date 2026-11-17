@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-core-v1-users-tokens-.html 
+keywords: remove token,credential removal,delete token,token resource,remove credential 
 summary: 删除令牌 
 ---
 = 删除令牌
@@ -10,7 +11,20 @@ summary: 删除令牌
 :imagesdir: ../media/
 
 
+[role="lead"]
+删除指定令牌，从凭据服务中删除其关联凭据。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/tokens/{token_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 删除指定的 Token API 资源。
 

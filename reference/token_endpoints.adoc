@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/token_endpoints.html 
+keywords: api tokens,access tokens,token creation,token management,authentication 
 summary: 'Astra API (ACC) 令牌端点' 
 ---
 = Astra API (ACC) 令牌端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+创建并管理用于向 Astra Control 进行身份验证的 API 访问令牌。
 
 Token API 使用户能够创建和管理 API 访问令牌。

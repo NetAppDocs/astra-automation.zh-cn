@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/delete-accounts-core-v1-groups-users-tokens-.html 
+keywords: remove token,delete token,credential removal,token deletion,account token removal 
 summary: 为组中的用户删除令牌 
 ---
 = 为组中的用户删除令牌
@@ -10,7 +11,20 @@ summary: 为组中的用户删除令牌
 :imagesdir: ../media/
 
 
+[role="lead"]
+删除组中用户的令牌。此操作从服务中删除指定的令牌 API 资源及其关联凭据。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/tokens/{token_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 删除指定的 Token API 资源。
 

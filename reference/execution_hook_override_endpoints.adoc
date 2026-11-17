@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/execution_hook_override_endpoints.html 
+keywords: execution hook override,preloaded hooks,netapp hooks,hook disabling,application hooks,deprecation 
 summary: 'Astra API (ACC) 执行挂钩覆盖端点' 
 ---
 = Astra API (ACC) 执行挂钩覆盖端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+禁用特定应用程序的预加载 NetApp 执行挂钩。在使用这些端点之前，请检查页面上的弃用信息。
 
 Execution Hook Override API 允许用户为特定应用程序禁用预加载的"netapp"执行挂钩。(*注意以下 API DEPRECATIONS*)

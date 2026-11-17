@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-core-v1-licenses-.html 
+keywords: license removal,account license,license deletion,remove license,license entitlements,entitlement recalculation 
 summary: 删除许可证 
 ---
 = 删除许可证
@@ -10,7 +11,20 @@ summary: 删除许可证
 :imagesdir: ../media/
 
 
+[role="lead"]
+从系统中删除指定的许可证。使用此端点可有效管理许可证授权。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/licenses/{license_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 删除指定的许可证 API 资源。无法删除自动安装的评估许可证。
 

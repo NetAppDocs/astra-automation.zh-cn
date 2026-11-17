@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-core-v1-users-tokens.html 
+keywords: account token,create token,user token,core token,user identifier,account identifier 
 summary: 为用户创建新令牌 
 ---
 = 为用户创建新令牌
@@ -10,7 +11,20 @@ summary: 为用户创建新令牌
 :imagesdir: ../media/
 
 
+[role="lead"]
+为用户创建新令牌，指定 Token API 资源所需的值。当您需要安全地进行身份验证并访问 Astra API 服务时，请使用此选项。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/tokens`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 指示要创建的 Token API 资源的所需值。
 

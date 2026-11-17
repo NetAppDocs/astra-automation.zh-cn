@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/get-accounts-core-v1-users-groups-.html 
+keywords: account resource,user resource,group collection,stored group,group resource 
 summary: 检索用户的组 
 ---
 = 检索用户的组
@@ -10,7 +11,20 @@ summary: 检索用户的组
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索用户的组，以结构化格式提供存储的组信息。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 Group API 资源。
 

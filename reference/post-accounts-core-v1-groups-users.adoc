@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/post-accounts-core-v1-groups-users.html 
+keywords: create user,account management,group management,user resource,user creation,group access 
 summary: 为群组创建新用户 
 ---
 = 为群组创建新用户
@@ -10,7 +11,20 @@ summary: 为群组创建新用户
 :imagesdir: ../media/
 
 
+[role="lead"]
+为组创建新用户。使用此功能可以有效地管理组成员和权限。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 指示要创建的 User API 资源的所需值。
 

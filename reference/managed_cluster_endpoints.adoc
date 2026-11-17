@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/managed_cluster_endpoints.html 
+keywords: managed clusters,kubernetes clusters,cluster management,cluster onboarding,cluster removal 
 summary: 'Astra API (ACC) 受管集群端点' 
 ---
 = Astra API (ACC) 受管集群端点
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+管理 Astra Control 管理的 Kubernetes 集群。
 
 Managed Cluster API 表示托管的 Kubernetes 集群。

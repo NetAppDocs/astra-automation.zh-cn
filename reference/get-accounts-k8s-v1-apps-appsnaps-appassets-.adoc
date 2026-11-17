@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/get-accounts-k8s-v1-apps-appsnaps-appassets-.html 
+keywords: application asset,app resource,app snap,app asset,stored asset,k8s application 
 summary: 检索应用程序快照和 app 的应用程序资产 
 ---
 = 检索应用程序快照和 app 的应用程序资产
@@ -10,7 +11,20 @@ summary: 检索应用程序快照和 app 的应用程序资产
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索应用程序快照的应用程序资产，在 JSON 响应正文中提供存储的资产详细信息。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}/appAssets/{appAsset_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 Application Asset API 资源。
 

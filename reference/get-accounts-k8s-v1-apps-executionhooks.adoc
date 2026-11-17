@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-k8s-v1-apps-executionhooks.html 
+keywords: execution hooks,k8s apps,collection resources,app resource,account resource 
 summary: 列出应用程序的执行挂钩 
 ---
 = 列出应用程序的执行挂钩
@@ -10,7 +11,20 @@ summary: 列出应用程序的执行挂钩
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索应用程序的执行挂钩，提供集合中所有匹配资源的 JSON 数组。使用此选项可根据需要查看每个匹配资源的特定字段。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回集合中所有匹配资源的 JSON 数组。如果在请求中指定了单个字段，则项目 JSON 数组将包含按指定顺序为每个匹配资源请求的字段。
 

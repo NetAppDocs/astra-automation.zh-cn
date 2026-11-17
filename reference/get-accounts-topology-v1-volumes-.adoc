@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-topology-v1-volumes-.html 
+keywords: volume resource,volume collection,stored volume,account id,topology volumes 
 summary: 检索卷 
 ---
 = 检索卷
@@ -10,7 +11,20 @@ summary: 检索卷
 :imagesdir: ../media/
 
 
+[role="lead"]
+检索卷，提供指定卷资源的存储配置详细信息。使用此操作可检查存储环境中卷的当前状态。
+
+
+
+[[http-method-and-endpoint]]
+== HTTP方法和端点
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/volumes/{volume_id}`#
+
+
+
+[[usage-notes]]
+== 使用说明
 
 返回 JSON 响应正文中存储的 Volume API 资源。
 
